@@ -6,11 +6,12 @@
 -- * author: borisu
 -- ## TODO
 
-file = io.open('README.md','a+')
+file = io.open('README.md','w')
 
 file:write("# Borisu's Wiki Blog\n\n")
 file:write("* [wiki](wiki/index)\n")
 file:write("* [lua](wiki/lua)\n")
+file:close()
 
 if arg[1] == 'push' then
 	os.execute("git add . && git commit -m 'update files' && git push")
