@@ -8,9 +8,9 @@
 
 file = io.open('README.md','w')
 
-file:write("# Borisu's Wiki Blog\n\n")
 file:write("* [wiki](wiki/index)\n")
 file:write("* [lua](wiki/lua)\n")
+file:write("* [nvim](wiki/nvim)\n")
 file:close()
 
 if arg[1] == 'push' then
