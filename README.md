@@ -1,4 +1,7 @@
-# Borisu's Wiki Blog
 
+## wiki
 * [wiki](wiki/index)
+
+## programming
 * [lua](wiki/lua)
+
