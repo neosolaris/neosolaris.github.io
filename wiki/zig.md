@@ -23,9 +23,9 @@ $ doas apk add zig
 ```
 
 * 최신 리눅스 버전 설치
-- <https://ziglang.org/download/>
-- os와 아키텍쳐에 맞는 파일을 다운로드한다.
-- 압축을 푼 후 `PATH`를 설정해주면 바로 사용 가능하다.
+ - <https://ziglang.org/download/>
+ - os와 아키텍쳐에 맞는 파일을 다운로드한다.
+ - 압축을 푼 후 `PATH`를 설정해주면 바로 사용 가능하다.
 
 ```console
 $ tar xJf zig-linux-x86_64-0.12.0-dev.3212+40e64245f.tar.xz
