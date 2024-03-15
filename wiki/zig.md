@@ -10,7 +10,6 @@ categories: ['language']
 * a general-purpose programming language and toolchain for maintaining robust, optimal and reusable software.
 
 ## Install
-
 * Debian/Ubuntu
 ```console
 $ sudo apt install zig
