@@ -22,7 +22,6 @@ sudo apt install lua5.1
 * hello-world.lua
 ```lua
 #!/usr/bin/env lua
-
 print("Hello World!")
 ```
 * 실행
