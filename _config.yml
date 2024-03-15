@@ -1,6 +1,6 @@
 remote_theme: jekyll/minima
 title: Borisu's Wiki Blog
-description: linux, programming, etc
+description: Small is beautiful. - linux, programming, etc
 date_format: "%Y-%m-%d"
 plugins:
   - jekyll-feed
