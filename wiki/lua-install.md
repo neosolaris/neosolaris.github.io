@@ -9,6 +9,7 @@ categories: ["programming"]
 ## Install
 
 * 설치 - luaJit과의 호환을 위해 5.1로 설치.
+
 ```console
 sudo apt install lua5.1
 ```
@@ -20,17 +21,20 @@ sudo apt install lua5.1
 ## Hello World
 
 * hello-world.lua
+
 ```lua
 #!/usr/bin/env lua
 print("Hello World!")
 ```
 * 실행
+
 ```console
 chmod u+x hello-world.lua
 ./hello-world.lua
 ```
 
 ## Lua - Cli 인터프리터
+
 ```console
 $ lua
 Lua 5.1.5  Copyright (C) 1994-2012 Lua.org, PUC-Rio
