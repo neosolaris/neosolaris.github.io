@@ -8,13 +8,14 @@
 layout: home
 ---
 
-## Memu
-* [wiki](/wiki/index) - wiki index
-* [lua](/wiki/lua) - lua programming
-* [luajit](/wiki/luajit) - Luajit
+* Memu
 
-## Recent
-* 2024-03-13 - [zig](/wiki/zig.md)
+	- [wiki](/wiki/index) - wiki index
+	- [lua](/wiki/lua) - lua programming
+	- [luajit](/wiki/luajit) - Luajit
 
-## Update
-* 2024-03-13 - [zig](/wiki/zig.md)
+* Recent
+	- 2024-03-13 - [zig](/wiki/zig.md)
+
+* Update
+	- 2024-03-13 - [zig](/wiki/zig.md)
