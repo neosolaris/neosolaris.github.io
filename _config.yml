@@ -2,9 +2,12 @@ remote_theme: jekyll/minima
 title: Borisu's Wiki Blog
 description: linux, programming, etc
 date_format: "%Y-%m-%d"
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
 header_pages:
   - about.md
-  - wiki/index.md
+  - wiki
 show_downloads: false
 github:
   is_project_page: false
