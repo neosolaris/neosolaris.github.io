@@ -1,7 +1,6 @@
 ---
 title: Zig
 date: 2024-03-12T03:21:08+09:00
-lastmod:
 tags: ['zig','programming','language']
 categories: ['language']
 ---
@@ -10,12 +9,15 @@ categories: ['language']
 * a general-purpose programming language and toolchain for maintaining robust, optimal and reusable software.
 
 ## Install
+
 * Debian/Ubuntu
+
 ```console
 $ sudo apt install zig
 ```
 
-* Alpine
+* Alpine Linux
+
 ```console
 $ doas apk add zig
 ```

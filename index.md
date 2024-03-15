@@ -9,9 +9,9 @@ layout: home
 	- [zig](/wiki/zig) - Zig
 
 * Recent
+	- 03/16/24 03:02:53 - [zig](wiki/zig.md) Zig
 	- 03/16/24 02:57:37 - [lua-install](wiki/lua-install.md) Lua Install
 	- 03/16/24 00:39:30 - [zig-nvim](wiki/zig-nvim.md) Zig + Nvim 설정
-	- 03/16/24 00:38:42 - [zig](wiki/zig.md) Zig
 	- 03/14/24 17:47:43 - [rust](wiki/rust.md) Rust Programming Language
 	- 03/14/24 17:47:43 - [arduino](wiki/arduino.md) Arduino - 아두이노
 	- 03/14/24 17:47:43 - [nodemcu](wiki/nodemcu.md) NodeMCU
