@@ -26,20 +26,23 @@ categories: ['os']
 
 * 최신 버전으로 업그레이드 하는 방법을 정리한다.
 * alpine-wsl에서는 업그레이드가 되지만 버전정보는 그대로이다.
-* 아래 `setup-apkrepos` 명령은 vi가 기본 편집기로 사용된다.
-
 ```console
-$ cat /etc/alpine-release
-$ doas apk -U upgrade
-$ doas setup-apkrepos
+$ cat /etc/alpine-release   # Check Current Version
+$ su -
+# apk update && apk upgrade # update & upgrade current version
+OR
+# apk -U upgrade
+
+# sudo setup-apkrepos     # Enter `:e` for edit and change version what you want
 https://dl-cdn.alpinelinux.org/alpine/v3.18/main/
 https://dl-cdn.alpinelinux.org/alpine/v3.18/community/
 https://dl-cdn.alpinelinux.org/alpine/edge/testing/
+:wq
 
-$ sudo apk update
-$ sudo apk upgrade --available
-$ sync
-$ reboot
+# sudo apk update
+# sudo apk upgrade ---available
+# sync
+# reboot
 ...
 
 $ cat /etcalpine-release
@@ -52,5 +55,5 @@ $ uname -r
   설치
 
 ## REFERENCE
-* Alpine Install: <https://wiki.alpinelinux.org/wiki/Installation>
-* Alpine Tutorial and Howtos: <https://wiki.alpinelinux.org/wiki/Tutorials_and_Howtos>
+* Alpine Install: https://wiki.alpinelinux.org/wiki/Installation
+* Alpine Tutorial and Howtos: https://wiki.alpinelinux.org/wiki/Tutorials_and_Howtos
