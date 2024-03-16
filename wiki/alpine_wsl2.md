@@ -32,11 +32,13 @@ categories: ['alpine','linux']
     - 처음 실행시 user 및 password 입력: root는 설정해준 일반유저와 동일. ex) `$su -`
 
 * 설치 후 PowerShell에서 Default로 설정
+
 ```console
 wsl -s Alpine  # --set-default: wsl default set
 ```
 
 * Alpine WSL2 실행후 기본 정보 확인
+
 ```console
 $ passwd               # Password 설정
 $ cat /etc/os-release  # Os Version Check
@@ -45,6 +47,7 @@ $ df -Th /             # Disck Usage Check
 ```
 
 * 기본 최소 패키지 설치
+
 ```console
 $ su -        # Change to Root
 
@@ -60,6 +63,7 @@ EOF
 ```
 
 * doas (like sudo) 설정
+
 ```console
 # vi /etc/doas.d/doas.conf
 ...
@@ -81,6 +85,7 @@ permit nopass user01 as root
     - 이 때, 이미 Alpine이 이미 설치되어 있다면 충돌을 피하기위해 Apline4184.exe 등으로 변경하고 실행한다.
 
 * AlpineWSL 설치
+
 ```
 c:\WSL\Alpine> mv Alpine.exe Alpine4184.exe
 c:\WSL\Alpine> Alpine4184.exe
@@ -91,6 +96,7 @@ c:\WSL\Alpine> wsl                # execute alpine linux
 ```
 
 * alpine setup root, user
+
 ```
 # cat /etc/os-release  # check os version
 # apk update && apk upgrade  # package update, upgrade
@@ -108,6 +114,7 @@ c:\WSL\Alpine> wsl                # execute alpine linux
 * config alpine default login user
 	- `C:\> wsl -d Alpine4184 -u borisu`로 직접 실행 가능.
 	- 아래는 직접 설정을 해주고 `wsl -d Alpine318`을 실행 하는 방법이다.
+
 ```
 PS C:\wsl\Alpine> .\Alpine318.exe config --default-uid 1000
 PS C:\wsl\Alpine> .\Alpine318.exe config --default-user borisu
