@@ -1,5 +1,5 @@
 ---
-title: Zig
+title: Zig Programming Language
 date: 2024-03-12T03:21:08+09:00
 tags: ['zig','programming','language']
 categories: ['language']
