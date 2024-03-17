@@ -6,15 +6,15 @@ permalink: /archive/
 last updated: {{ "now" | date: "%Y-%m-%d %H:%M" }}
 total: 156
 
-* 2024-03 (3)
+* __2024-03__ (3)
 	- 2024/03/12 12:46 - [zig-nvim](wiki/zig-nvim.md) Zig + Nvim 설정
 	- 2024/03/12 12:21 - [zig](wiki/zig.md) Zig Programming Language
 	- 2024/03/01 21:32 - [아끼지-마세요](wiki/아끼지-마세요.md) 아끼지 마세요 - 나태주
 
-* 2024-01 (1)
+* __2024-01__ (1)
 	- 2024/01/01 11:08 - [redis](wiki/redis.md) Redis - Remote Dictionary Server
 
-* 2023-12 (9)
+* __2023-12__ (9)
 	- 2023/12/30 15:15 - [alpine_wsl2](wiki/alpine_wsl2.md) Windows WSL2 Alpine Install
 	- 2023/12/30 15:03 - [alpine_devel](wiki/alpine_devel.md) Alpine Devel - 알파인 개발 환경
 	- 2023/12/30 14:57 - [alpine_install](wiki/alpine_install.md) Alpine Linux Install
@@ -25,11 +25,11 @@ total: 156
 	- 2023/12/13 20:16 - [esp8266](wiki/esp8266.md) esp8266
 	- 2023/12/13 20:02 - [nodemcu](wiki/nodemcu.md) NodeMCU
 
-* 2023-10 (2)
+* __2023-10__ (2)
 	- 2023/10/31 03:50 - [arduino](wiki/arduino.md) Arduino - 아두이노
 	- 2023/10/31 00:55 - [arduino-cli](wiki/arduino-cli.md) Arduino-cli - 아두이노 명령라인 사용
 
-* 2023-09 (9)
+* __2023-09__ (9)
 	- 2023/09/28 01:25 - [docker-run-cmd-entrypoint](wiki/docker-run-cmd-entrypoint.md) Dockerfile - run, cmd, entrypoint 차이
 	- 2023/09/20 03:23 - [graphic-card](wiki/graphic-card.md) Graphic Card - 그래픽카드
 	- 2023/09/17 01:50 - [openresty](wiki/openresty.md) Openresty - Scalable Web Platform NGINX with Lua
@@ -40,7 +40,7 @@ total: 156
 	- 2023/09/09 00:13 - [edge](wiki/edge.md) Edge - 윈도우즈 브라우저
 	- 2023/09/07 20:49 - [nvim-scp](wiki/nvim-scp.md) nvim-scp - nvim으로 원격 파일 편집
 
-* 2023-08 (7)
+* __2023-08__ (7)
 	- 2023/08/28 07:36 - [git-crypt](wiki/git-crypt.md) Git-Crypt - github에 동기화할 때 자동 암호화
 	- 2023/08/27 02:26 - [vimium-c](wiki/vimium-c.md) vimium-c - Vim like Using firefox
 	- 2023/08/27 01:56 - [raspbian-update](wiki/raspbian-update.md) Update Raspbian from an Older Version to Buster - 라즈비안 업그레이드
@@ -49,7 +49,7 @@ total: 156
 	- 2023/08/09 00:58 - [alpine](wiki/alpine.md) Alpine Linux
 	- 2023/08/04 02:04 - [docker-windows](wiki/docker-windows.md) Docker on Windows - 윈도우즈에서 도커 설치 및 사용
 
-* 2023-02 (6)
+* __2023-02__ (6)
 	- 2023/02/20 17:44 - [수학의-확실성](wiki/수학의-확실성.md) 수학의 확실성 - 모리스 클라인
 	- 2023/02/11 23:23 - [수학은-진리의-학문인가](wiki/수학은-진리의-학문인가.md) 수학은 진리의 학문인가 - 모리스 클라인
 	- 2023/02/08 18:35 - [우주론의한계](wiki/우주론의한계.md) 우주론의 한계 - 박창범
@@ -57,13 +57,13 @@ total: 156
 	- 2023/02/02 16:05 - [우리글-바로쓰기](wiki/우리글-바로쓰기.md) 우리글 바로쓰기 - 이오덕
 	- 2023/02/02 00:58 - [gsl-shell](wiki/gsl-shell.md) gsl-shell - Luajit GNU Scientific Library Shell
 
-* 2023-01 (4)
+* __2023-01__ (4)
 	- 2023/01/12 15:26 - [gimp-quickies](wiki/gimp-quickies.md) Gimp - Quickies 사이즈 변경, 잘라내기, 회전, 뒤집기
 	- 2023/01/11 23:59 - [gimp-install](wiki/gimp-install.md) Gimp - Install
 	- 2023/01/11 23:42 - [gimp-setup](wiki/gimp-setup.md) Gimp Setup
 	- 2023/01/11 23:33 - [gimp](wiki/gimp.md) Gimp - Gnu Image Manipulation Program
 
-* 2022-12 (7)
+* __2022-12__ (7)
 	- 2022/12/28 16:20 - [과학적우주상](wiki/과학적우주상.md) 과학적 우주상
 	- 2022/12/18 22:36 - [tmux](wiki/tmux.md) tmux - 다중 터미널 관리 툴
 	- 2022/12/18 21:47 - [lynx](wiki/lynx.md) Lynx - 터미널 텍스트 브라우저
@@ -72,7 +72,7 @@ total: 156
 	- 2022/12/07 16:26 - [vis-sre](wiki/vis-sre.md) Vis - Structural Regular Expressions
 	- 2022/12/05 17:45 - [vis](wiki/vis.md) Vis - Combining Modal Editing with Structual Regular Expressions
 
-* 2022-11 (15)
+* __2022-11__ (15)
 	- 2022/11/22 00:46 - [docker-images-remove](wiki/docker-images-remove.md) Docker Images Remove - 도커 이미지 제거
 	- 2022/11/21 23:53 - [docker-busybox](wiki/docker-busybox.md) Docker-Busybox
 	- 2022/11/21 10:09 - [alpine-lua-language-server](wiki/alpine-lua-language-server.md) Alpine - Lua Language Server Install
@@ -89,7 +89,7 @@ total: 156
 	- 2022/11/03 00:15 - [정주성](wiki/정주성.md) 정주성 - 백석
 	- 2022/11/02 23:37 - [기본천분학](wiki/기본천분학.md) 기본 천문학 - Fundamental Astronomy
 
-* 2022-10 (14)
+* __2022-10__ (14)
 	- 2022/10/31 02:38 - [에피쿠로스의-역설](wiki/에피쿠로스의-역설.md) 에피쿠로스의 역설
 	- 2022/10/30 10:31 - [길가메쉬-서사시](wiki/길가메쉬-서사시.md) 최초의 신화 - 길가메쉬 서사시
 	- 2022/10/28 01:43 - [은하수를-여행하는-히치하이커를-위한-안내서](wiki/은하수를-여행하는-히치하이커를-위한-안내서.md) 은하수를 여행하는 히치하이커를 위한 안내서
@@ -105,7 +105,7 @@ total: 156
 	- 2022/10/10 03:12 - [fits](wiki/fits.md) FITS - Flexible Image Transport System
 	- 2022/10/10 03:00 - [fv](wiki/fv.md) FV - Fits file Viewer
 
-* 2022-09 (29)
+* __2022-09__ (29)
 	- 2022/09/30 02:51 - [simpleitk](wiki/simpleitk.md) SimpleITK - Open Source Multi-dimensional Image Analysis
 	- 2022/09/25 09:05 - [보헤미안](wiki/보헤미안.md) 보헤미안 - 김두수
 	- 2022/09/25 07:52 - [기다림설레임](wiki/기다림설레임.md) 기다림, 설레임 - 강허달림
