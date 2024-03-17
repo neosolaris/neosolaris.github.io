@@ -1,9 +1,9 @@
 ---
 layout: home
-date: Mon Mar 18 00:53:05 2024
+date: Mon Mar 18 01:02:05 2024
 ---
 
-last updated: {{ site.time| date: "%Y-%m-%d %H:%M" }}
+last updated: {{ "1710723725" | date: "%Y-%m-%d %H:%M" }}
 
 * __Project__
 	- [Wiki](/wiki/index) - Wiki Index
