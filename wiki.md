@@ -1,5 +1,5 @@
 ---
 lyaout: page
 title: Archive
-permalink: /index/
+permalink: /wiki/
 ---
