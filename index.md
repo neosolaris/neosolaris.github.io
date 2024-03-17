@@ -1,5 +1,14 @@
----layout: home---last updated: {{ "now" | date: "%Y-%m-%d %H:%M" }}
-* __Project__	- [Wiki](/wiki/index) - Wiki Index	- [Lua](/wiki/lua) - Lua Programming	- [Luajit](/wiki/luajit) - LuaJit	- [zig](/wiki/zig) - Zig
+---
+layout: home
+---
+
+last updated: {{ "now" | date: "%Y-%m-%d %H:%M" }}
+
+* __Project__
+	- [Wiki](/wiki/index) - Wiki Index
+	- [Lua](/wiki/lua) - Lua Programming
+	- [Luajit](/wiki/luajit) - LuaJit
+	- [zig](/wiki/zig) - Zig
 
 * __Recent__
 	- 2024/03/17 21:20 - [index](wiki/index.md) Wiki
