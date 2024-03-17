@@ -8,7 +8,7 @@ plugins:
 header_pages:
   - about.md
   - archive.md
-  - wiki/
+  - wiki/index.md
 show_downloads: false
 github:
   is_project_page: false

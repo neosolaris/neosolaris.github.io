@@ -1,7 +1,6 @@
 ---
-title: Wiki index
+title: Wiki
 date: 2022-08-23T18:35:04+09:00
-lastmod: 2023-12-26T06:58:31+09:00
 ---
 
 ## OS
