@@ -1,7 +1,6 @@
 ---
 title: Redis - Remote Dictionary Server
 date: 2024-01-01T02:08:34+09:00
-lastmod:
 tags: ['redis','dbms']
 categories: ['db']
 ---
@@ -27,7 +26,7 @@ rc-status
 redis-cli
 ```
 
-## REFERENCE
+## Links
 
 * Redis - <https://redis.io>
 * Install - <https://redis.io/docs/install>

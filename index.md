@@ -1,9 +1,9 @@
 ---
 layout: home
-date: Mon Mar 18 01:02:05 2024
+date: Mon Mar 18 01:27:12 2024
 ---
 
-last updated: {{ "1710723725" | date: "%Y-%m-%d %H:%M" }}
+last updated: {{ "1710725232" | date: "%Y-%m-%d %H:%M" }}
 
 * __Project__
 	- [Wiki](/wiki/index) - Wiki Index
@@ -12,7 +12,7 @@ last updated: {{ "1710723725" | date: "%Y-%m-%d %H:%M" }}
 	- [zig](/wiki/zig) - Zig
 
 * __Recent__
-	- 2024/03/18 00:22 - [redis](wiki/redis.md) Redis - Remote Dictionary Server
+	- 2024/03/18 01:26 - [redis](wiki/redis.md) Redis - Remote Dictionary Server
 	- 2024/03/17 21:20 - [index](wiki/index.md) Wiki
 	- 2024/03/17 00:59 - [alpine_wsl2](wiki/alpine_wsl2.md) Windows WSL2 Alpine Install
 	- 2024/03/17 00:51 - [zig](wiki/zig.md) Zig Programming Language
