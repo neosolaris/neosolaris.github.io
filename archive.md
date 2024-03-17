@@ -1,13 +1,8 @@
 ---
-
 lyaout: page
-
 title: Archive
-
 permalink: /archive/
-
 ---
-
 * 2024-03
 
 	- 2024/03/12 12:46:08 - [zig-nvim](wiki/zig-nvim.md) Zig + Nvim 설정
