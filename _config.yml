@@ -1,10 +1,10 @@
 remote_theme: jekyll/minima
 title: Borisu's Wiki Blog
 description: Small is beautiful. - linux, programming, etc
-date_format: "%c"
-plugins:
-  - jekyll-feed
-  - jekyll-seo-tag
+#date_format: "%c"
+#plugins:
+#  - jekyll-feed
+#  - jekyll-seo-tag
 header_pages:
   - about.md
   - archive.md
