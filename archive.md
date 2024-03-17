@@ -4,7 +4,7 @@ title: Archive
 permalink: /archive/
 ---
 
-last updated: {{ post.date | date: "%Y-%m-%d %H:%M" }}
+last updated: {{ "now" | date: "%Y-%m-%d %H:%M" }}
 
 total: 156
 
