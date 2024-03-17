@@ -2,7 +2,7 @@
 layout: home
 ---
 
-* Project
+last updated: {{ "now" | date: "%Y-%m-%d %H:%M" }}* Project
 	- [Wiki](/wiki/index) - Wiki Index
 	- [Lua](/wiki/lua) - Lua Programming
 	- [Luajit](/wiki/luajit) - LuaJit
