@@ -7,6 +7,7 @@ plugins:
   - jekyll-seo-tag
 header_pages:
   - about.md
+  - archive.md
   - wiki/index.md
 show_downloads: false
 github:
