@@ -1,9 +1,8 @@
 ---
 layout: home
-date: 2024-03-17T15:34:11+09:00
 ---
 
-last updated: {{ page.date | date: "%Y-%m-%d %H:%M" }}
+last updated: {{ site.date | date: "%Y-%m-%d %H:%M" }}
 
 * __Project__
 	- [Wiki](/wiki/index) - Wiki Index
@@ -12,6 +11,7 @@ last updated: {{ page.date | date: "%Y-%m-%d %H:%M" }}
 	- [zig](/wiki/zig) - Zig
 
 * __Recent__
+	- 2024/03/18 00:22 - [redis](wiki/redis.md) Redis - Remote Dictionary Server
 	- 2024/03/17 21:20 - [index](wiki/index.md) Wiki
 	- 2024/03/17 00:59 - [alpine_wsl2](wiki/alpine_wsl2.md) Windows WSL2 Alpine Install
 	- 2024/03/17 00:51 - [zig](wiki/zig.md) Zig Programming Language
@@ -22,5 +22,4 @@ last updated: {{ page.date | date: "%Y-%m-%d %H:%M" }}
 	- 2024/02/19 21:17 - [vis](wiki/vis.md) Vis - Combining Modal Editing with Structual Regular Expressions
 	- 2024/02/15 15:26 - [docker-busybox](wiki/docker-busybox.md) Docker-Busybox
 	- 2024/02/15 15:14 - [alpine](wiki/alpine.md) Alpine Linux
-	- 2024/01/01 11:22 - [redis](wiki/redis.md) Redis - Remote Dictionary Server
 	- 2023/12/30 17:48 - [alpine_install](wiki/alpine_install.md) Alpine Linux Install
