@@ -4,6 +4,7 @@ date: 2024-01-01T02:08:34+09:00
 tags: ['redis','dbms']
 categories: ['db']
 ---
+last updated: {{ "1710725585" | date: "%Y-%m-%d %H:%M" }}
 
 ## INTRO
 
