@@ -1,5 +1,6 @@
 ---
 layout: home
+date: 2024-03-17T15:34:11+09:00
 ---
 
 last updated: {{ page.date | date: "%Y-%m-%d %H:%M" }}
