@@ -2,7 +2,7 @@
 layout: home
 ---
 
-last updated: {{ post.date | date: "%Y-%m-%d %H:%M" }}
+last updated: {{ article.published_at | date: "%Y-%m-%d %H:%M" }}
 
 * __Project__
 	- [Wiki](/wiki/index) - Wiki Index
