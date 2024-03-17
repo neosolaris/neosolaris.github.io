@@ -5,17 +5,14 @@ permalink: /archive/
 ---
 
 * 2024-03
-
 	- 2024/03/12 12:46:08 - [zig-nvim](wiki/zig-nvim.md) Zig + Nvim 설정
 	- 2024/03/12 12:21:08 - [zig](wiki/zig.md) Zig Programming Language
 	- 2024/03/01 21:32:05 - [아끼지-마세요](wiki/아끼지-마세요.md) 아끼지 마세요 - 나태주
 
 * 2024-01
-
 	- 2024/01/01 11:08:34 - [redis](wiki/redis.md) Redis - Remote Dictionary Server
 
 * 2023-12
-
 	- 2023/12/30 15:15:32 - [alpine_wsl2](wiki/alpine_wsl2.md) Windows WSL2 Alpine Install
 	- 2023/12/30 15:03:08 - [alpine_devel](wiki/alpine_devel.md) Alpine Devel - 알파인 개발 환경
 	- 2023/12/30 14:57:18 - [alpine_install](wiki/alpine_install.md) Alpine Linux Install
@@ -27,12 +24,10 @@ permalink: /archive/
 	- 2023/12/13 20:02:31 - [nodemcu](wiki/nodemcu.md) NodeMCU
 
 * 2023-10
-
 	- 2023/10/31 03:50:44 - [arduino](wiki/arduino.md) Arduino - 아두이노
 	- 2023/10/31 00:55:50 - [arduino-cli](wiki/arduino-cli.md) Arduino-cli - 아두이노 명령라인 사용
 
 * 2023-09
-
 	- 2023/09/28 01:25:49 - [docker-run-cmd-entrypoint](wiki/docker-run-cmd-entrypoint.md) Dockerfile - run, cmd, entrypoint 차이
 	- 2023/09/20 03:23:49 - [graphic-card](wiki/graphic-card.md) Graphic Card - 그래픽카드
 	- 2023/09/17 01:50:04 - [openresty](wiki/openresty.md) Openresty - Scalable Web Platform NGINX with Lua
@@ -44,7 +39,6 @@ permalink: /archive/
 	- 2023/09/07 20:49:57 - [nvim-scp](wiki/nvim-scp.md) nvim-scp - nvim으로 원격 파일 편집
 
 * 2023-08
-
 	- 2023/08/28 07:36:46 - [git-crypt](wiki/git-crypt.md) Git-Crypt - github에 동기화할 때 자동 암호화
 	- 2023/08/27 02:26:57 - [vimium-c](wiki/vimium-c.md) vimium-c - Vim like Using firefox
 	- 2023/08/27 01:56:05 - [raspbian-update](wiki/raspbian-update.md) Update Raspbian from an Older Version to Buster - 라즈비안 업그레이드
@@ -54,7 +48,6 @@ permalink: /archive/
 	- 2023/08/04 02:04:47 - [docker-windows](wiki/docker-windows.md) Docker on Windows - 윈도우즈에서 도커 설치 및 사용
 
 * 2023-02
-
 	- 2023/02/20 17:44:46 - [수학의-확실성](wiki/수학의-확실성.md) 수학의 확실성 - 모리스 클라인
 	- 2023/02/11 23:23:43 - [수학은-진리의-학문인가](wiki/수학은-진리의-학문인가.md) 수학은 진리의 학문인가 - 모리스 클라인
 	- 2023/02/08 18:35:37 - [우주론의한계](wiki/우주론의한계.md) 우주론의 한계 - 박창범
@@ -63,14 +56,12 @@ permalink: /archive/
 	- 2023/02/02 00:58:52 - [gsl-shell](wiki/gsl-shell.md) gsl-shell - Luajit GNU Scientific Library Shell
 
 * 2023-01
-
 	- 2023/01/12 15:26:11 - [gimp-quickies](wiki/gimp-quickies.md) Gimp - Quickies 사이즈 변경, 잘라내기, 회전, 뒤집기
 	- 2023/01/11 23:59:32 - [gimp-install](wiki/gimp-install.md) Gimp - Install
 	- 2023/01/11 23:42:57 - [gimp-setup](wiki/gimp-setup.md) Gimp Setup
 	- 2023/01/11 23:33:14 - [gimp](wiki/gimp.md) Gimp - Gnu Image Manipulation Program
 
 * 2022-12
-
 	- 2022/12/28 16:20:16 - [과학적우주상](wiki/과학적우주상.md) 과학적 우주상
 	- 2022/12/18 22:36:04 - [tmux](wiki/tmux.md) tmux - 다중 터미널 관리 툴
 	- 2022/12/18 21:47:45 - [lynx](wiki/lynx.md) Lynx - 터미널 텍스트 브라우저
@@ -80,7 +71,6 @@ permalink: /archive/
 	- 2022/12/05 17:45:40 - [vis](wiki/vis.md) Vis - Combining Modal Editing with Structual Regular Expressions
 
 * 2022-11
-
 	- 2022/11/22 00:46:59 - [docker-images-remove](wiki/docker-images-remove.md) Docker Images Remove - 도커 이미지 제거
 	- 2022/11/21 23:53:47 - [docker-busybox](wiki/docker-busybox.md) Docker-Busybox
 	- 2022/11/21 10:09:54 - [alpine-lua-language-server](wiki/alpine-lua-language-server.md) Alpine - Lua Language Server Install
@@ -98,7 +88,6 @@ permalink: /archive/
 	- 2022/11/02 23:37:42 - [기본천분학](wiki/기본천분학.md) 기본 천문학 - Fundamental Astronomy
 
 * 2022-10
-
 	- 2022/10/31 02:38:04 - [에피쿠로스의-역설](wiki/에피쿠로스의-역설.md) 에피쿠로스의 역설
 	- 2022/10/30 10:31:11 - [길가메쉬-서사시](wiki/길가메쉬-서사시.md) 최초의 신화 - 길가메쉬 서사시
 	- 2022/10/28 01:43:48 - [은하수를-여행하는-히치하이커를-위한-안내서](wiki/은하수를-여행하는-히치하이커를-위한-안내서.md) 은하수를 여행하는 히치하이커를 위한 안내서
@@ -115,7 +104,6 @@ permalink: /archive/
 	- 2022/10/10 03:00:34 - [fv](wiki/fv.md) FV - Fits file Viewer
 
 * 2022-09
-
 	- 2022/09/30 02:51:54 - [simpleitk](wiki/simpleitk.md) SimpleITK - Open Source Multi-dimensional Image Analysis
 	- 2022/09/25 09:05:26 - [보헤미안](wiki/보헤미안.md) 보헤미안 - 김두수
 	- 2022/09/25 07:52:38 - [기다림설레임](wiki/기다림설레임.md) 기다림, 설레임 - 강허달림
@@ -147,7 +135,6 @@ permalink: /archive/
 	- 2022/09/01 01:50:25 - [rust-compile-size](wiki/rust-compile-size.md) Rust Compile시 용량 줄이기
 
 * 2022-08
-
 	- 2022/08/30 23:51:27 - [luajit](wiki/luajit.md) LuaJit - Lua Just in Time Compiler
 	- 2022/08/30 14:09:02 - [luarocks](wiki/luarocks.md) Luarocks - lua 패키지 관리
 	- 2022/08/30 13:57:48 - [luastatic](wiki/luastatic.md) Luastatic - lua 독립실행 바이너리 컴파일러
