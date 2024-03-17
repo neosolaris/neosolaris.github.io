@@ -1,6 +1,7 @@
 remote_theme: jekyll/minima
 title: Borisu's Wiki Blog
 description: Small is beautiful. - linux, programming, etc
+timezone: KST
 #date_format: "%c"
 #plugins:
 #  - jekyll-feed
