@@ -4,7 +4,7 @@ title: About
 date: Sun Mar 17 11:45:00 UTC 2024
 permalink: /about/
 ---
-updated: {{ "now" | date: "%Y-%m-%d %H:%M" }}.
+last updated: {{ "now" | date: "%Y-%m-%d %H:%M" }}
 
 ## 페이지 운영에 관하여
 

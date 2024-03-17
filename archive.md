@@ -3,16 +3,18 @@ lyaout: page
 title: Archive
 permalink: /archive/
 ---
+last updated: {{ "now" | date: "%Y-%m-%d %H:%M" }}
+total: 156
 
-* 2024-03
+* 2024-03 (3)
 	- 2024/03/12 12:46 - [zig-nvim](wiki/zig-nvim.md) Zig + Nvim 설정
 	- 2024/03/12 12:21 - [zig](wiki/zig.md) Zig Programming Language
 	- 2024/03/01 21:32 - [아끼지-마세요](wiki/아끼지-마세요.md) 아끼지 마세요 - 나태주
 
-* 2024-01
+* 2024-01 (1)
 	- 2024/01/01 11:08 - [redis](wiki/redis.md) Redis - Remote Dictionary Server
 
-* 2023-12
+* 2023-12 (9)
 	- 2023/12/30 15:15 - [alpine_wsl2](wiki/alpine_wsl2.md) Windows WSL2 Alpine Install
 	- 2023/12/30 15:03 - [alpine_devel](wiki/alpine_devel.md) Alpine Devel - 알파인 개발 환경
 	- 2023/12/30 14:57 - [alpine_install](wiki/alpine_install.md) Alpine Linux Install
@@ -23,11 +25,11 @@ permalink: /archive/
 	- 2023/12/13 20:16 - [esp8266](wiki/esp8266.md) esp8266
 	- 2023/12/13 20:02 - [nodemcu](wiki/nodemcu.md) NodeMCU
 
-* 2023-10
+* 2023-10 (2)
 	- 2023/10/31 03:50 - [arduino](wiki/arduino.md) Arduino - 아두이노
 	- 2023/10/31 00:55 - [arduino-cli](wiki/arduino-cli.md) Arduino-cli - 아두이노 명령라인 사용
 
-* 2023-09
+* 2023-09 (9)
 	- 2023/09/28 01:25 - [docker-run-cmd-entrypoint](wiki/docker-run-cmd-entrypoint.md) Dockerfile - run, cmd, entrypoint 차이
 	- 2023/09/20 03:23 - [graphic-card](wiki/graphic-card.md) Graphic Card - 그래픽카드
 	- 2023/09/17 01:50 - [openresty](wiki/openresty.md) Openresty - Scalable Web Platform NGINX with Lua
@@ -38,7 +40,7 @@ permalink: /archive/
 	- 2023/09/09 00:13 - [edge](wiki/edge.md) Edge - 윈도우즈 브라우저
 	- 2023/09/07 20:49 - [nvim-scp](wiki/nvim-scp.md) nvim-scp - nvim으로 원격 파일 편집
 
-* 2023-08
+* 2023-08 (7)
 	- 2023/08/28 07:36 - [git-crypt](wiki/git-crypt.md) Git-Crypt - github에 동기화할 때 자동 암호화
 	- 2023/08/27 02:26 - [vimium-c](wiki/vimium-c.md) vimium-c - Vim like Using firefox
 	- 2023/08/27 01:56 - [raspbian-update](wiki/raspbian-update.md) Update Raspbian from an Older Version to Buster - 라즈비안 업그레이드
@@ -47,7 +49,7 @@ permalink: /archive/
 	- 2023/08/09 00:58 - [alpine](wiki/alpine.md) Alpine Linux
 	- 2023/08/04 02:04 - [docker-windows](wiki/docker-windows.md) Docker on Windows - 윈도우즈에서 도커 설치 및 사용
 
-* 2023-02
+* 2023-02 (6)
 	- 2023/02/20 17:44 - [수학의-확실성](wiki/수학의-확실성.md) 수학의 확실성 - 모리스 클라인
 	- 2023/02/11 23:23 - [수학은-진리의-학문인가](wiki/수학은-진리의-학문인가.md) 수학은 진리의 학문인가 - 모리스 클라인
 	- 2023/02/08 18:35 - [우주론의한계](wiki/우주론의한계.md) 우주론의 한계 - 박창범
@@ -55,13 +57,13 @@ permalink: /archive/
 	- 2023/02/02 16:05 - [우리글-바로쓰기](wiki/우리글-바로쓰기.md) 우리글 바로쓰기 - 이오덕
 	- 2023/02/02 00:58 - [gsl-shell](wiki/gsl-shell.md) gsl-shell - Luajit GNU Scientific Library Shell
 
-* 2023-01
+* 2023-01 (4)
 	- 2023/01/12 15:26 - [gimp-quickies](wiki/gimp-quickies.md) Gimp - Quickies 사이즈 변경, 잘라내기, 회전, 뒤집기
 	- 2023/01/11 23:59 - [gimp-install](wiki/gimp-install.md) Gimp - Install
 	- 2023/01/11 23:42 - [gimp-setup](wiki/gimp-setup.md) Gimp Setup
 	- 2023/01/11 23:33 - [gimp](wiki/gimp.md) Gimp - Gnu Image Manipulation Program
 
-* 2022-12
+* 2022-12 (7)
 	- 2022/12/28 16:20 - [과학적우주상](wiki/과학적우주상.md) 과학적 우주상
 	- 2022/12/18 22:36 - [tmux](wiki/tmux.md) tmux - 다중 터미널 관리 툴
 	- 2022/12/18 21:47 - [lynx](wiki/lynx.md) Lynx - 터미널 텍스트 브라우저
@@ -70,7 +72,7 @@ permalink: /archive/
 	- 2022/12/07 16:26 - [vis-sre](wiki/vis-sre.md) Vis - Structural Regular Expressions
 	- 2022/12/05 17:45 - [vis](wiki/vis.md) Vis - Combining Modal Editing with Structual Regular Expressions
 
-* 2022-11
+* 2022-11 (15)
 	- 2022/11/22 00:46 - [docker-images-remove](wiki/docker-images-remove.md) Docker Images Remove - 도커 이미지 제거
 	- 2022/11/21 23:53 - [docker-busybox](wiki/docker-busybox.md) Docker-Busybox
 	- 2022/11/21 10:09 - [alpine-lua-language-server](wiki/alpine-lua-language-server.md) Alpine - Lua Language Server Install
@@ -87,7 +89,7 @@ permalink: /archive/
 	- 2022/11/03 00:15 - [정주성](wiki/정주성.md) 정주성 - 백석
 	- 2022/11/02 23:37 - [기본천분학](wiki/기본천분학.md) 기본 천문학 - Fundamental Astronomy
 
-* 2022-10
+* 2022-10 (14)
 	- 2022/10/31 02:38 - [에피쿠로스의-역설](wiki/에피쿠로스의-역설.md) 에피쿠로스의 역설
 	- 2022/10/30 10:31 - [길가메쉬-서사시](wiki/길가메쉬-서사시.md) 최초의 신화 - 길가메쉬 서사시
 	- 2022/10/28 01:43 - [은하수를-여행하는-히치하이커를-위한-안내서](wiki/은하수를-여행하는-히치하이커를-위한-안내서.md) 은하수를 여행하는 히치하이커를 위한 안내서
@@ -103,7 +105,7 @@ permalink: /archive/
 	- 2022/10/10 03:12 - [fits](wiki/fits.md) FITS - Flexible Image Transport System
 	- 2022/10/10 03:00 - [fv](wiki/fv.md) FV - Fits file Viewer
 
-* 2022-09
+* 2022-09 (29)
 	- 2022/09/30 02:51 - [simpleitk](wiki/simpleitk.md) SimpleITK - Open Source Multi-dimensional Image Analysis
 	- 2022/09/25 09:05 - [보헤미안](wiki/보헤미안.md) 보헤미안 - 김두수
 	- 2022/09/25 07:52 - [기다림설레임](wiki/기다림설레임.md) 기다림, 설레임 - 강허달림
@@ -133,55 +135,3 @@ permalink: /archive/
 	- 2022/09/01 02:56 - [rclone](wiki/rclone.md) Rclone 원격 백업 툴
 	- 2022/09/01 01:53 - [rust-install](wiki/rust-install.md) Rust Install and Setup
 	- 2022/09/01 01:50 - [rust-compile-size](wiki/rust-compile-size.md) Rust Compile시 용량 줄이기
-
-* 2022-08
-	- 2022/08/30 23:51 - [luajit](wiki/luajit.md) LuaJit - Lua Just in Time Compiler
-	- 2022/08/30 14:09 - [luarocks](wiki/luarocks.md) Luarocks - lua 패키지 관리
-	- 2022/08/30 13:57 - [luastatic](wiki/luastatic.md) Luastatic - lua 독립실행 바이너리 컴파일러
-	- 2022/08/30 13:54 - [lua-install](wiki/lua-install.md) Lua Install
-	- 2022/08/30 13:52 - [lua-intro](wiki/lua-intro.md) Lua Intro - 왜 lua인가
-	- 2022/08/30 03:15 - [sketchup-install](wiki/sketchup-install.md) Sketchup2017 Install and Setup in Ubuntu
-	- 2022/08/30 03:12 - [sketchup](wiki/sketchup.md) Sketchup
-	- 2022/08/30 03:02 - [blender-touchpad](wiki/blender-touchpad.md) Blender 노트북 터치패드 사용 및 설정
-	- 2022/08/30 02:59 - [blender-install](wiki/blender-install.md) How to Install Blender on Ubuntu 22.04 LTS
-	- 2022/08/30 02:53 - [blender](wiki/blender.md) Blender
-	- 2022/08/28 01:25 - [nvim-lua](wiki/nvim-lua.md) Getting started using Lua in Neovim
-	- 2022/08/27 23:20 - [lua](wiki/lua.md) lua
-	- 2022/08/27 07:43 - [bash-it](wiki/bash-it.md) bash-it
-	- 2022/08/27 06:54 - [bash-read-lines](wiki/bash-read-lines.md) Bash readlines how to
-	- 2022/08/27 06:54 - [bash](wiki/bash.md) Bash
-	- 2022/08/26 11:01 - [vim-devicons](wiki/vim-devicons.md) vim-devicons
-	- 2022/08/26 09:51 - [nerdtree](wiki/nerdtree.md) NerdTree
-	- 2022/08/25 13:28 - [nvim](wiki/nvim.md) Nvim neovim
-	- 2022/08/25 02:43 - [hugo-papermod](wiki/hugo-papermod.md) PaperMod - Hugo Theme
-	- 2022/08/24 11:35 - [todo](wiki/todo.md) TODO
-	- 2022/08/24 11:08 - [markdown](wiki/markdown.md) Markdown
-	- 2022/08/24 09:44 - [github.io](wiki/github.io.md) Github Page
-	- 2022/08/24 09:39 - [vimwiki-hugo-github](wiki/vimwiki-hugo-github.md) Vimwiki Hugo Github.io 연동하기
-	- 2022/08/24 03:35 - [startify](wiki/startify.md) Vim Startify
-	- 2022/08/24 03:35 - [ncmpcpp](wiki/ncmpcpp.md) NCMPCPP - NCurses Music Player Client (Plus Plus)
-	- 2022/08/24 03:35 - [rust](wiki/rust.md) Rust Programming Language
-	- 2022/08/24 03:35 - [raspberry-pi](wiki/raspberry-pi.md) Raspberry Pi 라즈베리파이
-	- 2022/08/24 03:35 - [vimwiki](wiki/vimwiki.md) Vimwiki
-	- 2022/08/24 03:35 - [jekyll](wiki/jekyll.md) Jekyll
-	- 2022/08/24 03:35 - [mpd](wiki/mpd.md) MPD Music Player Daemon
-	- 2022/08/24 03:35 - [ubuntu-install](wiki/ubuntu-install.md) Ubuntu install
-	- 2022/08/24 03:35 - [mmtc](wiki/mmtc.md) Mmtc
-	- 2022/08/24 03:35 - [github-ssh-key-인증](wiki/github-ssh-key-인증.md) GitHub에 SSH Key로 인증하기
-	- 2022/08/24 03:35 - [mpc](wiki/mpc.md) MPC - Music Player Deamon Client
-	- 2022/08/24 03:35 - [qna](wiki/qna.md) QnA
-	- 2022/08/24 03:35 - [netscape](wiki/netscape.md) Netscape
-	- 2022/08/24 03:35 - [minimal-mistakes](wiki/minimal-mistakes.md) Minimal mistakes
-	- 2022/08/24 03:35 - [zenbook14](wiki/zenbook14.md) Zenbook14
-	- 2022/08/24 03:35 - [index](wiki/index.md) Wiki
-	- 2022/08/24 03:35 - [markdown-viewer-webtext](wiki/markdown-viewer-webtext.md) Markdown Viewer Webext
-	- 2022/08/24 03:35 - [zsh](wiki/zsh.md) Zsh
-	- 2022/08/24 03:35 - [ubuntu-firefox](wiki/ubuntu-firefox.md) Ubuntu firefox
-	- 2022/08/24 03:35 - [github-사용하기](wiki/github-사용하기.md) Github 사용하기
-	- 2022/08/24 03:35 - [hugo](wiki/hugo.md) Hugo - Fast and flexible Static Site Generator written in Go
-	- 2022/08/24 03:35 - [ubuntu](wiki/ubuntu.md) Ubuntu
-	- 2022/08/24 03:35 - [vim](wiki/vim.md) Vim
-	- 2022/08/24 03:35 - [github-toc](wiki/github-toc.md) Github toc
-	- 2022/08/24 03:35 - [firefox](wiki/firefox.md) Firefox
-	- 2022/08/24 03:35 - [tree](wiki/tree.md) Tree Command
-	- 2022/08/24 03:35 - [kime](wiki/kime.md) KIME (Korean IME) 한글 입력기
