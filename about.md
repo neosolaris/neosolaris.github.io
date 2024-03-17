@@ -4,6 +4,7 @@ title: About
 date: Sun Mar 17 11:45:00 UTC 2024
 permalink: /about/
 ---
+{{ article.published_at | date: "%c" }}
 
 ## 페이지 운영에 관하여
 
