@@ -2,7 +2,7 @@
 layout: home
 ---
 
-last updated: {{ "now" | date: "%Y-%m-%d %H:%M" }}
+last updated: {{ page.date | date: "%Y-%m-%d %H:%M" }}
 
 * __Project__
 	- [Wiki](/wiki/index) - Wiki Index
