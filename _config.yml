@@ -4,18 +4,18 @@ description: Small is beautiful. - linux, programming, etc
 timezone: KST
 #date_format: "%c"
 
-plugins:
-    - jekyll-toc
+#plugins:
+#  - jekyll-toc
 #  - jekyll-feed
 #  - jekyll-seo-tag
 
 # TOC Settings
-toc:
- min_level: 1
- max_level: 3
- list_class: toc
- list_class: toc__list
- sublist_class: toc__sublist
+#toc:
+# min_level: 1
+# max_level: 3
+# list_class: toc
+# list_class: toc__list
+# sublist_class: toc__sublist
 
 header_pages:
   - about.md
