@@ -2,6 +2,8 @@
 title: Wiki
 date: 2022-08-23T18:35:04+09:00
 ---
+last updated: {{ "1710761362" | date: "%Y-%m-%d %H:%M" }}
+
 {{ content }}
 
 ## OS
