@@ -17,6 +17,10 @@ timezone: KST
 # list_class: toc__list
 # sublist_class: toc__sublist
 
+markdown: kramdown
+kramdown:
+	parse_block_html: true
+
 header_pages:
   - about.md
   - archive.md
