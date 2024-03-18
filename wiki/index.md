@@ -2,6 +2,7 @@
 title: Wiki
 date: 2022-08-23T18:35:04+09:00
 ---
+{{ content }}
 
 ## OS
 * [linux](linux) - 리눅스 일반
