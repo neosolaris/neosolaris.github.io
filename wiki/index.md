@@ -4,8 +4,6 @@ date: 2022-08-23T18:35:04+09:00
 layout: base
 ---
 
-{{ content }}
-
 last updated: {{ "1710761362" | date: "%Y-%m-%d %H:%M" }}
 
 ## OS
