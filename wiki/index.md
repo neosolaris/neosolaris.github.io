@@ -6,6 +6,8 @@ toc: true
 
 last updated: {{ "1710761362" | date: "%Y-%m-%d %H:%M" }}
 
+{:toc}
+
 ## OS
 * [linux](linux) - 리눅스 일반
 * [alpine](alpine) - busybox 기반의 작고 가볍고 빠른 리눅스
