@@ -5,6 +5,8 @@ tags: ['zig','nvim','lsp','language','server']
 categories: ['zig','nvim']
 ---
 
+last updated: {{ "1710903265" | date: "%Y-%m-%d %H:%M" }}
+
 ## Intro
 * neovim에서 zig 설정 방법을 설명한다.
 

@@ -5,7 +5,8 @@ tags: ['zig','programming','language']
 categories: ['language']
 ---
 
-last updated: {{ "1710902721" | date: "%Y-%m-%d %H:%M" }}
+last updated: {{ "1710903214" | date: "%Y-%m-%d %H:%M" }}
+
 
 ## Intro
 * a general-purpose programming language and toolchain for maintaining robust, optimal and reusable software.
@@ -43,8 +44,6 @@ $ ./zig help
 ```zig
 const std = @import("std");
 
-	
-
 pub fn main() !void {
     std.debug.print("Hello, World!\n", .{});
 }
@@ -71,6 +70,10 @@ $ zig build-exe --name hello-debug -O Debug hello.zig
 $ ls -l 
 $ ./hello-small
 ```
+
+## 관련 문서
+
+* [zig-nvim](./wiki/zig-nvim.md) - neovim에 zig 개발 환경 설정하기
 
 ## Links
 * home - <https://ziglang.org/>
