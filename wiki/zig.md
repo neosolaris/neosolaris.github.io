@@ -73,7 +73,7 @@ $ ./hello-small
 
 ## 관련 문서
 
-* [zig-nvim](./wiki/zig-nvim.md) - neovim에 zig 개발 환경 설정하기
+* [zig-nvim](zig-nvim.md) - neovim에 zig 개발 환경 설정하기
 
 ## Links
 * home - <https://ziglang.org/>
