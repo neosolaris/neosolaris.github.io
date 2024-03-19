@@ -15,8 +15,8 @@ last updated: {{ "1710903265" | date: "%Y-%m-%d %H:%M" }}
 * 설치하기
 
 ```console
-doas apk add zig zls neovim
-nvim ~/.local/nvim/init.lua
+$ doas apk add zig zls neovim
+$ nvim ~/.local/nvim/init.lua
     require 'lspconfig'.zls.setup{}
 ```
 
@@ -29,18 +29,18 @@ nvim ~/.local/nvim/init.lua
 ## Install zls from Source 
 
 * 소스를 컴파일하는 방법.
-* 최신 버전의 zig(현재 0.12)여야 git 소스로 컴파일 된다.
+* 최신 버전의 zig(현재 0.12)이어야 git 소스로 컴파일 된다.
 * zig 최신 버전은 zig 홈에서 다운로드할 수 있다.
 * 다음 절차에 따라 빌드한다.
 
 ```console
-git clone https://github.com/zigtools/zls
-cd zls
-zig build -Doptimize=ReleaseSafe
-mkdir ~/bin && cp zig-out/bin/zls ~/bin
-echo 'export PATH=$HOME/bin:$PATH' >> ~/.bash_profile
-source ~/.bash_profile
-zls --version
+$ git clone https://github.com/zigtools/zls
+$ cd zls
+$ zig build -Doptimize=ReleaseSafe
+$ mkdir ~/bin && cp zig-out/bin/zls ~/bin
+$ echo 'export PATH=$HOME/bin:$PATH' >> ~/.bash_profile
+$ source ~/.bash_profile
+$ zls --version
 ```
 
 ## Links

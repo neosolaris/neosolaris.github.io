@@ -35,6 +35,7 @@ $ doas apk add zig
 $ tar xJf zig-linux-x86_64-0.12.0-dev.3212+40e64245f.tar.xz
 $ ln -s zig-linux-x86_64-0.12.0-dev.3212+40e64245f/ zig
 $ cd zig; ls 
+$ ./zig version
 $ ./zig help
 ```
 ## Hello World
