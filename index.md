@@ -1,15 +1,16 @@
 ---
 layout: home
-date: Wed Mar 20 03:00:44 2024
+date: Wed Mar 20 03:04:41 2024
 ---
 
-last updated: {{ "1710903644" | date: "%Y-%m-%d %H:%M" }}
+last updated: {{ "1710903881" | date: "%Y-%m-%d %H:%M" }}
 
 * __Project__
 	- [Wiki](/wiki/index) - Wiki Index
 	- [Lua](/wiki/lua) - Lua Programming
 	- [Luajit](/wiki/luajit) - LuaJit
 	- [zig](/wiki/zig) - Zig
+
 
 * __Recent__
 	- 2024/03/20 02:54 - [zig-nvim](wiki/zig-nvim.md) Zig + Nvim 설정
