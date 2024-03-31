@@ -85,6 +85,7 @@ $ ./hello-small
 * reference - <https://ziglang.org/documentation/0.11.0/>
 * zig-by-example - <https://zig-by-example.com/>
 * zig std - <https://ziglang.org/documentation/master/std/>
+* exercises - <https://exercism.org/tracks/zig/exercises>
 
 ## Compile and Build
 * zig-cc - <https://andrewkelley.me/post/zig-cc-powerful-drop-in-replacement-gcc-clang.html>
