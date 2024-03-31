@@ -57,7 +57,7 @@ $ zig run hello-world.zig
 $ zig test hello-world.zig
 ```
 
-*  build (default=debug, small, fast, safe, debug)
+*  build (default=debug, small, fast, safe)
 
 ```console
 $ zig build-exe hello.zig
@@ -78,7 +78,14 @@ $ ./hello-small
 
 ## Links
 * home - <https://ziglang.org/>
+* awesome zig - <https://www.trackawesomelist.com/catdevnull/awesome-zig/readme/>
+
+## Study and Docs
 * zig-guide - <https://zig.guide/>
 * reference - <https://ziglang.org/documentation/0.11.0/>
 * zig-by-example - <https://zig-by-example.com/>
+* zig std - <https://ziglang.org/documentation/master/std/>
+
+## Compile and Build
 * zig-cc - <https://andrewkelley.me/post/zig-cc-powerful-drop-in-replacement-gcc-clang.html>
+* Zig Build System Internals - <https://mitchellh.com/zig/build-internals>

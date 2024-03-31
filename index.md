@@ -1,9 +1,9 @@
 ---
 layout: home
-date: Fri Mar 29 17:39:23 2024
+date: Mon Apr  1 02:25:09 2024
 ---
 
-last updated: {{ "1711733963" | date: "%Y-%m-%d %H:%M" }}
+last updated: {{ "1711938309" | date: "%Y-%m-%d %H:%M" }}
 
 * __Project__
 	- [Wiki](/wiki/index) - Wiki Index
@@ -27,10 +27,10 @@ last updated: {{ "1711733963" | date: "%Y-%m-%d %H:%M" }}
 	- 2023/12/13 20:16 - [esp32](wiki/esp32.md) esp32
 
 * __Updated__
+	- 2024/04/01 02:24 - [zig](wiki/zig.md) Zig Programming Language
 	- 2024/03/21 02:47 - [춘설](wiki/춘설.md) 춘설 - 황병기
 	- 2024/03/21 02:47 - [아리랑](wiki/아리랑.md) 아리랑 - Bruskers Guitar Duo
 	- 2024/03/20 03:24 - [zig-nvim](wiki/zig-nvim.md) Zig + Nvim 설정
-	- 2024/03/20 03:13 - [zig](wiki/zig.md) Zig Programming Language
 	- 2024/03/18 01:33 - [redis](wiki/redis.md) Redis - Remote Dictionary Server
 	- 2024/03/17 00:59 - [alpine_wsl2](wiki/alpine_wsl2.md) Windows WSL2 Alpine Install
 	- 2024/03/16 17:56 - [lua-install](wiki/lua-install.md) Lua Install
