@@ -15,6 +15,25 @@ last updated: {{ "1712181399" | date: "%Y-%m-%d %H:%M" }}
 * Linux, iOS, Windows 등 여러 OS 환경 지원.
 * x86, , x86-64, aarch64 등 아키텍처 지원
 
+## Target List
+
+* 다음 방법으로 원하는 플랫폼, 아키텍쳐를 먼저 찾는다.
+
+```console
+$ zig targets
+$ zig targets | grep x86
+$ zig targets | grep x86-64
+$ zig targets | grep aarch64
+$ zig targets | grep linux
+$ zig targets | grep windows
+$ zig targets | grep macos
+```
+- x86, x86_64 - intel 계열
+- aarch64 - arm 계열 (raspberrypi)
+- linux - Linux
+- windows - Ms Windows
+- macos - Mac OS
+
 ## Local Compile
 
 * dynamic: Alpine Linux (x86_64)
@@ -52,10 +71,10 @@ Windows c:> .\hello.exe
 Hello World!
 ```
 
-* For Linux Gnu
+* For Linux dynamic with Gnu Libs
 
 ```
-$ zig cc -o hello.exe hello.c -target x86_64-linux-gnu
+$ zig cc -o hello hello.c -target x86_64-linux-gnu
 $ file ./hello.exe
 ./hello: ELF 64-bit LSB executable, x86-64, version 1 (SYSV), dynamically linked, 
 interpreter /lib64/ld-linux-x86-64.so.2, for GNU/Linux 2.0.0, with debug_info,
