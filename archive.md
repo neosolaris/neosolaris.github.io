@@ -4,9 +4,12 @@ title: Archive
 permalink: /archive/
 ---
 
-last updated: {{ "1711944910" | date: "%Y-%m-%d %H:%M" }}
+last updated: {{ "1712169801" | date: "%Y-%m-%d %H:%M" }}
 
-total: 155
+total: 156
+
+* __2024-04 (1)__
+	- 2024/04/03 18:07 - [zig-cc](wiki/zig-cc.md) Zig로 gcc/clang 컴파일러 대체하기
 
 * __2024-03 (3)__
 	- 2024/03/12 12:46 - [zig-nvim](wiki/zig-nvim.md) Zig + Nvim 설정
@@ -23,8 +26,8 @@ total: 155
 	- 2023/12/19 21:23 - [esptool](wiki/esptool.md) esptool - esp firmware flash upload, erase, read
 	- 2023/12/17 15:50 - [esp8266-vs-esp32](wiki/esp8266-vs-esp32.md) ESP8266 vs ESP32
 	- 2023/12/13 20:49 - [fritzing](wiki/fritzing.md) Fritzing
-	- 2023/12/13 20:16 - [esp8266](wiki/esp8266.md) esp8266
 	- 2023/12/13 20:16 - [esp32](wiki/esp32.md) esp32
+	- 2023/12/13 20:16 - [esp8266](wiki/esp8266.md) esp8266
 	- 2023/12/13 20:02 - [nodemcu](wiki/nodemcu.md) NodeMCU
 
 * __2023-10 (2)__

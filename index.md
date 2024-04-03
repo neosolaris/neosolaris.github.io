@@ -1,9 +1,9 @@
 ---
 layout: home
-date: Mon Apr  1 04:15:10 2024
+date: Wed Apr  3 18:43:21 2024
 ---
 
-last updated: {{ "1711944910" | date: "%Y-%m-%d %H:%M" }}
+last updated: {{ "1712169801" | date: "%Y-%m-%d %H:%M" }}
 
 * __Project__
 	- [Wiki](/wiki/index) - Wiki Index
@@ -13,6 +13,7 @@ last updated: {{ "1711944910" | date: "%Y-%m-%d %H:%M" }}
 
 
 * __New__
+	- 2024/04/03 18:07 - [zig-cc](wiki/zig-cc.md) Zig로 gcc/clang 컴파일러 대체하기
 	- 2024/03/12 12:46 - [zig-nvim](wiki/zig-nvim.md) Zig + Nvim 설정
 	- 2024/03/12 12:21 - [zig](wiki/zig.md) Zig Programming Language
 	- 2024/03/01 21:32 - [아끼지-마세요](wiki/아끼지-마세요.md) 아끼지 마세요 - 나태주
@@ -23,10 +24,10 @@ last updated: {{ "1711944910" | date: "%Y-%m-%d %H:%M" }}
 	- 2023/12/19 21:23 - [esptool](wiki/esptool.md) esptool - esp firmware flash upload, erase, read
 	- 2023/12/17 15:50 - [esp8266-vs-esp32](wiki/esp8266-vs-esp32.md) ESP8266 vs ESP32
 	- 2023/12/13 20:49 - [fritzing](wiki/fritzing.md) Fritzing
-	- 2023/12/13 20:16 - [esp8266](wiki/esp8266.md) esp8266
 	- 2023/12/13 20:16 - [esp32](wiki/esp32.md) esp32
 
 * __Updated__
+	- 2024/04/03 18:41 - [zig-cc](wiki/zig-cc.md) Zig로 gcc/clang 컴파일러 대체하기
 	- 2024/04/01 04:15 - [zig](wiki/zig.md) Zig Programming Language
 	- 2024/03/21 02:47 - [춘설](wiki/춘설.md) 춘설 - 황병기
 	- 2024/03/21 02:47 - [아리랑](wiki/아리랑.md) 아리랑 - Bruskers Guitar Duo
@@ -38,4 +39,3 @@ last updated: {{ "1711944910" | date: "%Y-%m-%d %H:%M" }}
 	- 2024/02/23 17:11 - [docker-windows](wiki/docker-windows.md) Docker on Windows - 윈도우즈에서 도커 설치 및 사용
 	- 2024/02/19 21:17 - [vis](wiki/vis.md) Vis - Combining Modal Editing with Structual Regular Expressions
 	- 2024/02/15 15:26 - [docker-busybox](wiki/docker-busybox.md) Docker-Busybox
-	- 2024/02/15 15:14 - [alpine](wiki/alpine.md) Alpine Linux

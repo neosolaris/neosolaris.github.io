@@ -24,6 +24,7 @@ last updated: {{ "1710761362" | date: "%Y-%m-%d %H:%M" }}
 * [lua](lua) - 작고 가볍고 간결하고 빠른 스크립트 언어
 * [zig](zig) - c + rust?
     - [zig-nvim](zig-nvim) - zig nvim 설정
+    - [zig-cc](zig-cc) - zig cc 로 gcc/clang 대체하기
 * [rust](rust) - 나도 rustacean이 되고 싶다. 이 나이에...
 
 ## IoT
