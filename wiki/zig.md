@@ -5,7 +5,7 @@ tags: ['zig','programming','language']
 categories: ['language']
 ---
 
-last updated: {{ "1710903214" | date: "%Y-%m-%d %H:%M" }}
+last updated: {{ "1712182397" | date: "%Y-%m-%d %H:%M" }}
 
 
 ## Intro
@@ -72,9 +72,10 @@ $ ls -l
 $ ./hello-small
 ```
 
-## 관련 문서
+## More Docs
 
 * [zig-nvim](zig-nvim.md) - neovim에 zig 개발 환경 설정하기
+* [zig-cc](zig-cc.md) - Zig로 gcc/clang 컴파일러 대체하기
 
 ## Links
 * home - <https://ziglang.org/>
