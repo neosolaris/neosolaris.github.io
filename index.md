@@ -1,9 +1,9 @@
 ---
 layout: home
-date: Wed Apr  3 18:43:21 2024
+date: Wed Apr  3 21:57:58 2024
 ---
 
-last updated: {{ "1712169801" | date: "%Y-%m-%d %H:%M" }}
+last updated: {{ "1712181478" | date: "%Y-%m-%d %H:%M" }}
 
 * __Project__
 	- [Wiki](/wiki/index) - Wiki Index
@@ -27,7 +27,7 @@ last updated: {{ "1712169801" | date: "%Y-%m-%d %H:%M" }}
 	- 2023/12/13 20:16 - [esp32](wiki/esp32.md) esp32
 
 * __Updated__
-	- 2024/04/03 18:41 - [zig-cc](wiki/zig-cc.md) Zig로 gcc/clang 컴파일러 대체하기
+	- 2024/04/03 21:56 - [zig-cc](wiki/zig-cc.md) Zig로 gcc/clang 컴파일러 대체하기
 	- 2024/04/01 04:15 - [zig](wiki/zig.md) Zig Programming Language
 	- 2024/03/21 02:47 - [춘설](wiki/춘설.md) 춘설 - 황병기
 	- 2024/03/21 02:47 - [아리랑](wiki/아리랑.md) 아리랑 - Bruskers Guitar Duo
