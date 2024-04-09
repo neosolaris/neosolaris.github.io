@@ -5,7 +5,7 @@ tags: ['zig','cc','compile']
 categories: ['programming','zig']
 ---
 
-last updated: {{ "1712181399" | date: "%Y-%m-%d %H:%M" }}
+last updated: {{ "1712680347" | date: "%Y-%m-%d %H:%M" }}
 
 ## Intro
 
