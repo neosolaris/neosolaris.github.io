@@ -38,7 +38,7 @@ $ zig targets | grep macos
 
 * dynamic: Alpine Linux (x86_64)
 
-```
+```console
 $ zig cc -o hello_dynamic hello.c
 $ file hello_dynamic
 hello: ELF 64-bit LSB executable, x86-64, version 1 (SYSV), dynamically linked, 
@@ -49,7 +49,7 @@ Hello World!
 
 * static: Alpine Linux (x86_64)
 
-```
+```console
 $ zig cc -o hello hello.c -target x86_64-linux-musl
 $ file hello
 ./hello: ELF 64-bit LSB executable, x86-64, version 1 (SYSV), statically linked,
@@ -62,36 +62,36 @@ Hello World!
 
 * For windows
 
-```
+```console
 $ zig cc -o hello.exe hello.c -target x86_64-windows-gnu
 $ file ./hello.exe
 hello: PE32+ executable (console) x86-64, for MS Windows, 7 sections
-...
+
 Windows c:> .\hello.exe
 Hello World!
 ```
 
 * For Linux dynamic with Gnu Libs
 
-```
+```console
 $ zig cc -o hello hello.c -target x86_64-linux-gnu
 $ file ./hello.exe
 ./hello: ELF 64-bit LSB executable, x86-64, version 1 (SYSV), dynamically linked, 
 interpreter /lib64/ld-linux-x86-64.so.2, for GNU/Linux 2.0.0, with debug_info,
 not stripped
-...
+
 gnu-linux$ ./hello
 Hello World!
 ```
 
 * For Linux Static with musl
 
-```
+```console
 $ zig cc -o hello.exe hello.c -target x86_64-linux-gnu
 $ file ./hello.exe
 ./hello: ELF 64-bit LSB executable, x86-64, version 1 (SYSV), statically linked,
 with debug_info, not stripped
-...
+
 any-linux$ ./hello
 Hello World!
 ```

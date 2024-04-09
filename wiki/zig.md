@@ -5,7 +5,7 @@ tags: ['zig','programming','language']
 categories: ['language']
 ---
 
-last updated: {{ "1712182397" | date: "%Y-%m-%d %H:%M" }}
+last updated: {{ "1712202776" | date: "%Y-%m-%d %H:%M" }}
 
 
 ## Intro
@@ -87,6 +87,7 @@ $ ./hello-small
 * zig-by-example - <https://zig-by-example.com/>
 * zig std - <https://ziglang.org/documentation/master/std/>
 * exercises - <https://exercism.org/tracks/zig/exercises>
+* learn x in y minutes - <https://learnxinyminutes.com/docs/zig/>
 
 ## Compile and Build
 * zig-cc - <https://andrewkelley.me/post/zig-cc-powerful-drop-in-replacement-gcc-clang.html>
