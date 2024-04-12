@@ -77,11 +77,13 @@ https://github.com/naver/d2codingfon
 ### Alpine Init & Setup
 
 * 설치 후 PowerShell에서 Default로 설정
+
 ```console
 wsl -s Alpine  # --set-default: wsl default set
 ```
 
 * Alpine WSL2 실행후 기본 정보 확인
+
 ```console
 $ passwd               # Password 설정
 $ cat /etc/os-release  # Os Version Check
@@ -90,6 +92,7 @@ $ df -Th /             # Disck Usage Check
 ```
 
 * 기본 최소 패키지 설치
+
 ```console
 $ su -        # Change to Root
 
@@ -106,9 +109,10 @@ EOF
 
 
 * doas (like sudo) 설정
+
 ```console
 # vi /etc/doas.d/doas.conf
-...
+
 # user01 is username, root permition allowed, password once and cached
 #permit persist user01 as root 
 # user01 is username, root permition allowed, no password
@@ -117,11 +121,13 @@ permit nopass user01 as root
 ```
 
 ### Docker Setup
+
 * 다음 수행 후 alpine 종료 및 재실행
 * alpine에서 docker는 community repository에 있다. 추가한다.
 * 서비스에 등록하고 실행하기 위해 openrc를 설치하고 설정해 준다.
 * 서비스 등록은 한 번만 해주면 된다.
-``` console
+
+```console
 # rc-update add docker default  # add service docker 
 # rc-update                     # check docker is added the default run level
 # usermod -aG docker borisu     # Add group user borisu to docker
@@ -129,6 +135,7 @@ permit nopass user01 as root
 ```
   
 ### Alpine Docker Test
+
 * 아래 `openrc default` 명령은 윈도우즈 부팅 후 한 번만 수행해 준다. (docker 서비스 실행)
 * 이후 사용 중 여러개의 터미널을 띄울 수 있다.
 
@@ -142,12 +149,14 @@ $ exit                          # exit
 ```
 
 ### Git Setup
+
 * ssh-keygen으로 키를 만든다.
 * 자신의 깃허브 계정 홈에  `~/.ssh/id_ed25519.pub` 내용을 등록해준다.
+
 ```console
 $ ssh-keygen -t ed25519 -C "yourmail@mail.com"     # KEY GENERATE
 $ cat ~/.ssh/id_ed25519.pub                        # COPY PUB KEY, ADD to GITHUB
-...
+
 $ git config --global user.name <user_name>        # User name set
 $ git config --global user.email <user_email>      # User email set
 $ git clone git@github.com:user_name/user_project  # Clone my project form GITHUB
@@ -157,6 +166,7 @@ $ ls user_project
 ## Alpine WSL2 사용 팁
 
 * Alpine-WSL2 버전 업그레이드 후 network 문제 발생시
+
 ```console
 $ su -
 # touch /etc/network/interfaces
@@ -168,10 +178,11 @@ $ su -
   - 터미널의 설정에서 이미 설치한 Nerd Font 및 기타 설정을 한다.
 
 * PowerShell에서 실행
-  ```console
-  c:\> wsl -d Alpine [-u username]  # 실행
-  c:\> wsl -t Alpine                # 종료(terminate)
-  ```
+
+```console
+c:\> wsl -d Alpine [-u username]  # 실행
+c:\> wsl -t Alpine                # 종료(terminate)
+```
 
 * Visual Studio Code with WSL2
   - vim이 아닌 vscode 사용자는 플러그인을 사용하여 연동할 수 있다.
