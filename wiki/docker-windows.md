@@ -6,7 +6,7 @@ tags: ['docker','windows','alpine','wsl']
 categories: ['docker']
 ---
 
-- [X] 23-08-08: 오타 수정, Tip 수정
+last updated: {{ "1712974295" | date: "%Y-%m-%d %H:%M" }}
 
 ## 개요
 
@@ -48,19 +48,21 @@ https://github.com/naver/d2codingfon
 * 실행하기
   - Docker Desktop 실행
   - Git Bash 실행
-  ```console
-  $ docker --version        # version check
-  $ docker run hello-world  # run test
-  $ docker ps -a            # process check 
-  ```
+  
+```console
+$ docker --version        # version check
+$ docker run hello-world  # run test
+$ docker ps -a            # process check 
+```
 * 사용시 주의 사항
   - Git Bash 실행 터미널 설정: 자신에게 맞게, 위의 Nerd Font 설정
   - 경로 설정시 에러 및 해결 방법
-  ```console
-  $ docker run --rm -it -v $(pwd):/data docker_image_name  # Path Name Error
-  $ docker run --rm -it -v /$(pwd):/data docker_image_name  # Fixed, //c/User/user_name...
-  $ MSYS_NO_PATHCONV=1 docker run --rm -it -v $(pwd):/data docker_image_name  # Set Msys Env First
-  ```
+  
+```console
+$ docker run --rm -it -v $(pwd):/data docker_image_name  # Path Name Error
+$ docker run --rm -it -v /$(pwd):/data docker_image_name  # Fixed, //c/User/user_name...
+$ MSYS_NO_PATHCONV=1 docker run --rm -it -v $(pwd):/data docker_image_name  # Set Msys Env First
+```
   
 ## WSL2 + Alpine + Git + Docker
 
