@@ -65,6 +65,7 @@ last updated: {{ "1710761362" | date: "%Y-%m-%d %H:%M" }}
   - [Comment nvim](Comment.nvim)
   - [nvim scp](nvim-scp)] - (n)vim 원격 파일 편집
 * [vis](vis) - a modern, legacy-free, simple yet efficient editor
+* [nextvi](nextvi) - Small, Simple, UTF8 Support Vi
 
 ## SHELL
 * [bash](bash) - Bourn Again Shell

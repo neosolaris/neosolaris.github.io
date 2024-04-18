@@ -4,11 +4,12 @@ title: Archive
 permalink: /archive/
 ---
 
-last updated: {{ "1712974311" | date: "%Y-%m-%d %H:%M" }}
+last updated: {{ "1713463463" | date: "%Y-%m-%d %H:%M" }}
 
-total: 156
+total: 157
 
-* __2024-04 (1)__
+* __2024-04 (2)__
+	- 2024/04/18 - [nextvi](wiki/nextvi.md) Small and Simple Nextvi
 	- 2024/04/03 - [zig-cc](wiki/zig-cc.md) Zig로 gcc/clang 컴파일러 대체하기
 
 * __2024-03 (3)__
