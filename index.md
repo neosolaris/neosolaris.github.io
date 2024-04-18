@@ -1,9 +1,9 @@
 ---
 layout: home
-date: Thu Apr 18 18:04:23 2024
+date: Fri Apr 19 00:30:18 2024
 ---
 
-last updated: {{ "1713463463" | date: "%Y-%m-%d %H:%M" }}
+last updated: {{ "1713486618" | date: "%Y-%m-%d %H:%M" }}
 
 * __Project__
 	- [Wiki](/wiki/index) - Wiki Index
@@ -27,7 +27,7 @@ last updated: {{ "1713463463" | date: "%Y-%m-%d %H:%M" }}
 	- 2023/12/13 - [fritzing](wiki/fritzing.md) Fritzing
 
 * __Updated__
-	- 2024/04/18 - [nextvi](wiki/nextvi.md) Small and Simple Nextvi
+	- 2024/04/19 - [nextvi](wiki/nextvi.md) Small and Simple Nextvi
 	- 2024/04/18 - [gimp-install](wiki/gimp-install.md) Gimp - Install
 	- 2024/04/18 - [openresty](wiki/openresty.md) Openresty - Scalable Web Platform NGINX with Lua
 	- 2024/04/18 - [fits-liberator](wiki/fits-liberator.md) Fits-Liberator
