@@ -5,6 +5,8 @@ tags: ['wsl2','windows','alpine','install']
 categories: ['alpine','linux']
 ---  
 
+last updated: {{ "1718884488" | date: "%Y-%m-%d %H:%M" }}
+
 ## Intro
 
 * minimum 수동 설치 방법이 있으나 데몬 서비스, docker 설치 등에 어려움이 있다.
