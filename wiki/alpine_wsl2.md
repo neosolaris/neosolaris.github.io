@@ -1,7 +1,6 @@
 ---
 title: Windows WSL2 Alpine Install
 date: 2023-12-30T06:15:32+09:00
-lastmod: 2024-02-23:42:34+09:00
 tags: ['wsl2','windows','alpine','install']
 categories: ['alpine','linux']
 ---  
@@ -127,7 +126,7 @@ PS C:\wsl\Alpine> .\Alpine318.exe config --default-user borisu
     - 명령줄: `C:\WINDOWS\system32\wsl.exe -d Alpine318`
     - 기타 설정 후 저장
 
-## 이후 작법
+## 이후 작업
 * 필요한 패키지 설치
 * Alpine의 도커 설치는 [docker-windows](docker-windows) 참조.
 

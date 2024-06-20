@@ -4,7 +4,7 @@ title: Archive
 permalink: /archive/
 ---
 
-last updated: {{ "1714795128" | date: "%Y-%m-%d %H:%M" }}
+last updated: {{ "1718884378" | date: "%Y-%m-%d %H:%M" }}
 
 total: 157
 
@@ -27,8 +27,8 @@ total: 157
 	- 2023/12/19 - [esptool](wiki/esptool.md) esptool - esp firmware flash upload, erase, read
 	- 2023/12/17 - [esp8266-vs-esp32](wiki/esp8266-vs-esp32.md) ESP8266 vs ESP32
 	- 2023/12/13 - [fritzing](wiki/fritzing.md) Fritzing
-	- 2023/12/13 - [esp32](wiki/esp32.md) esp32
 	- 2023/12/13 - [esp8266](wiki/esp8266.md) esp8266
+	- 2023/12/13 - [esp32](wiki/esp32.md) esp32
 	- 2023/12/13 - [nodemcu](wiki/nodemcu.md) NodeMCU
 
 * __2023-10 (2)__
