@@ -1,10 +1,11 @@
 ---
 title: Alpine Linux
 date: 2023-08-08T15:58:42+09:00
-lastmod: 2023-12-30T06:01:10+09:00
 tags: ['linux','alpine']
 categories: ['linux']
 ---
+
+last updated: {{ "1718885075" | date: "%Y-%m-%d %H:%M" }}
 
 ## Intro
 * Docker에서 많이 사용되어 유명해졌다.
@@ -15,6 +16,7 @@ categories: ['linux']
 
 ## INSTALL
 * [alpine_install](alpine_install) - 설치
+* [alpine_upgrade](alpine_upgrade) - 업그레이드
 * [alpine_devel](alpine_devel) - 개발환경
 * [alpine_wsl2](alpine_wsl2) - 윈도우즈 WSL2에서 alpine 설치
 

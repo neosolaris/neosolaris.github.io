@@ -1,9 +1,9 @@
 ---
 layout: home
-date: Thu Jun 20 11:55:29 2024
+date: Thu Jun 20 12:24:07 2024
 ---
 
-last updated: {{ "1718884529" | date: "%Y-%m-%d %H:%M" }}
+last updated: {{ "1718886247" | date: "%Y-%m-%d %H:%M" }}
 
 * __Project__
 	- [Wiki](/wiki/index) - Wiki Index
@@ -13,6 +13,7 @@ last updated: {{ "1718884529" | date: "%Y-%m-%d %H:%M" }}
 
 
 * __New__
+	- 2024/06/20 - [alpine_upgrade](wiki/alpine_upgrade.md) Alpine Linux Upgrade
 	- 2024/04/18 - [nextvi](wiki/nextvi.md) Small and Simple Nextvi
 	- 2024/04/03 - [zig-cc](wiki/zig-cc.md) Zig로 gcc/clang 컴파일러 대체하기
 	- 2024/03/12 - [zig-nvim](wiki/zig-nvim.md) Zig + Nvim 설정
@@ -24,18 +25,17 @@ last updated: {{ "1718884529" | date: "%Y-%m-%d %H:%M" }}
 	- 2023/12/30 - [alpine_install](wiki/alpine_install.md) Alpine Linux Install
 	- 2023/12/19 - [esptool](wiki/esptool.md) esptool - esp firmware flash upload, erase, read
 	- 2023/12/17 - [esp8266-vs-esp32](wiki/esp8266-vs-esp32.md) ESP8266 vs ESP32
-	- 2023/12/13 - [fritzing](wiki/fritzing.md) Fritzing
 
 * __Updated__
+	- 2024/06/20 - [alpine_upgrade](wiki/alpine_upgrade.md) Alpine Linux Upgrade
+	- 2024/06/20 - [alpine](wiki/alpine.md) Alpine Linux
 	- 2024/06/20 - [alpine_wsl2](wiki/alpine_wsl2.md) Windows WSL2 Alpine Install
-	- 2024/05/23 - [arduino-cli](wiki/arduino-cli.md) Arduino-cli - 아두이노 명령라인 사용
-	- 2024/05/23 - [docker-busybox](wiki/docker-busybox.md) Docker-Busybox
 	- 2024/05/23 - [vim](wiki/vim.md) Vim
+	- 2024/05/23 - [arduino-cli](wiki/arduino-cli.md) Arduino-cli - 아두이노 명령라인 사용
 	- 2024/05/23 - [tree](wiki/tree.md) Tree Command
+	- 2024/05/23 - [docker-busybox](wiki/docker-busybox.md) Docker-Busybox
+	- 2024/05/23 - [github-toc](wiki/github-toc.md) Github toc
 	- 2024/05/23 - [sketchup-install](wiki/sketchup-install.md) Sketchup2017 Install and Setup in Ubuntu
 	- 2024/05/23 - [mpc](wiki/mpc.md) MPC - Music Player Deamon Client
-	- 2024/05/23 - [github-toc](wiki/github-toc.md) Github toc
-	- 2024/05/23 - [jekyll](wiki/jekyll.md) Jekyll
-	- 2024/05/23 - [기다림설레임](wiki/기다림설레임.md) 기다림, 설레임 - 강허달림
 	- 2024/05/23 - [netscape](wiki/netscape.md) Netscape
-	- 2024/05/23 - [ncmpcpp](wiki/ncmpcpp.md) NCMPCPP - NCurses Music Player Client (Plus Plus)
+	- 2024/05/23 - [은하수를-여행하는-히치하이커를-위한-안내서](wiki/은하수를-여행하는-히치하이커를-위한-안내서.md) 은하수를 여행하는 히치하이커를 위한 안내서
