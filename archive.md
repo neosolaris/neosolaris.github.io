@@ -4,9 +4,12 @@ title: Archive
 permalink: /archive/
 ---
 
-last updated: {{ "1718886284" | date: "%Y-%m-%d %H:%M" }}
+last updated: {{ "1733877870" | date: "%Y-%m-%d %H:%M" }}
 
-total: 158
+total: 159
+
+* __2024-12 (1)__
+	- 2024/12/10 - [hangang-novelprize](wiki/hangang-novelprize.md) 과거 현재 죽은 자 산 자 - 한강
 
 * __2024-06 (1)__
 	- 2024/06/20 - [alpine_upgrade](wiki/alpine_upgrade.md) Alpine Linux Upgrade
