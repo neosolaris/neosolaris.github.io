@@ -1,9 +1,9 @@
 ---
 layout: home
-date: Wed Dec 11 01:47:39 2024
+date: Sat Feb  8 09:45:57 2025
 ---
 
-last updated: {{ "1733881659" | date: "%Y-%m-%d %H:%M" }}
+last updated: {{ "1738975557" | date: "%Y-%m-%d %H:%M" }}
 
 * __Project__
 	- [Wiki](/wiki/index) - Wiki Index
@@ -27,8 +27,8 @@ last updated: {{ "1733881659" | date: "%Y-%m-%d %H:%M" }}
 	- 2023/12/19 - [esptool](wiki/esptool.md) esptool - esp firmware flash upload, erase, read
 
 * __Updated__
+	- 2025/01/08 - [luajit](wiki/luajit.md) LuaJit - Lua Just in Time Compiler
 	- 2024/12/11 - [hangang-novelprize](wiki/hangang-novelprize.md) 과거 현재 죽은 자 산 자 - 한강
-	- 2024/12/11 - [luajit](wiki/luajit.md) LuaJit - Lua Just in Time Compiler
 	- 2024/12/11 - [gimp-install](wiki/gimp-install.md) Gimp - Install
 	- 2024/12/11 - [fits-liberator](wiki/fits-liberator.md) Fits-Liberator
 	- 2024/12/11 - [은하수를-여행하는-히치하이커를-위한-안내서](wiki/은하수를-여행하는-히치하이커를-위한-안내서.md) 은하수를 여행하는 히치하이커를 위한 안내서

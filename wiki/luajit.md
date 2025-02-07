@@ -1,10 +1,12 @@
 ---
 title: LuaJit - Lua Just in Time Compiler
 date: 2022-08-30T14:51:27+09:00
-lastmod:
+lastmod: 
 tags: ["lua","lugjit"]
 categories: ["programming"]
 ---
+
+last updated: {{ "1736305941" | date: "%Y-%m-%d %H:%M" }}
 
 ## Intro
 
@@ -33,14 +35,35 @@ $ luajit -h
 ```
 
 ## Usage
-* `-b` 옵션은 컴파일 바이너리 코드를 생성한다.
-* `./luajit: unknown luaJIT command or jit.* modules not installed` 에러가
-  발생하는 경우는 $LUA_PATH 설정이 잘못되어 있는 경우이므로 `unset LUA_PATH`해주거나 $LUA_PATH에 luajit의 올바른 모듈경로를 추가해 준다.
+
+* 기본 사용법
+```console
+usage: luajit [options]... [script [args]...].
+Available options are:
+  -e chunk  Execute string 'chunk'.
+  -l name   Require library 'name'.
+  -b ...    Save or list bytecode.
+  -j cmd    Perform LuaJIT control command.
+  -O[opt]   Control LuaJIT optimizations.
+  -i        Enter interactive mode after executing 'script'.
+  -v        Show version information.
+  -E        Ignore environment variables.
+  --        Stop handling options.
+  -         Execute stdin and stop handling options.
+```
+
+* 바이트코드 컴파일
+	-  `-b` 옵션은 컴파일 바이너리 코드를 생성한다.
+	- lua에서는 소스를 먼저 바이트코드로 만들어 최적화한 후 인터프리터에서 처리한다.
+	- 소스코드가 용량이 큰 경우 바이트코드로 미리 컴파일해 두면 훨씬 빨라진다.
+	-  `./luajit: unknown luaJIT command or jit.* modules not installed` 에러가
+  발생하는 경우는 $LUA_PATH 설정이 잘못되어 있는 경우이므로 `unset LUA_PATH`해주거나
+  $LUA_PATH에 luajit의 올바른 모듈경로를 추가해 준다.
 
 ```console
-$ luajit -b test.lua test.out                 # Save bytecode to test.out
-$ luajit -bg test.lua test.out                # Keep debug info
-$ luajit -be "print('hello world')" test.out  # Save cmdline script
+$ luajit -b test.lua test.luac                # Save bytecode to test.out
+$ luajit -bg test.lua test.luac               # Keep debug info
+$ luajit -be "print('hello world')" test.luac # Save cmdline script
 
 $ luajit -bl test.lua                         # List to stdout
 $ luajit -bl test.lua test.txt                # List to test.txt
@@ -49,9 +72,23 @@ $ luajit -ble "print('hello world')"          # List cmdline script
 $ luajit -b test.lua test.obj                 # Generate object file
 $ # Link test.obj with your application and load it with require("test")
 ```
+	- 모듈의 경우에도 적용이 가능한데, 다음 두 가지 방법이 있다.
+	
+```console
+$ luajit -b mymodule.lua mymodule.luac
+$ luajit
+luajit> mymodule = assert(loadfile("module.luac"))()
 
-## FFI 사용례
-* LuaJIT는 C함수를 손쉽게 가져와 사용할 수 있다.
+$ luajit -b /path/to/mymodule.lua ./mymodule.lua
+$ luajit
+luajit> mymodule = require'mymodule'
+```
+
+## FFI(Foreign Function Interface) 
+
+* LuaJIT는 C 함수를 손쉽게 가져와 사용할 수 있다.
+* 아래 `ffi`모듈이 luajit의 내장된 기본 모듈이다. 
+
 ```console
 $ cat<<EOF > test-ffi.lua
 local ffi = require("ffi")
@@ -62,6 +99,8 @@ EOF
 $ luajit test-ffi.lua
 Hello wiki!
 ```
+* FFI Tutorial - <https://luajit.org/ext_ffi_tutorial.html>
+* lua-ffi-bindings - <https://github.com/thenumbernine/lua-ffi-bindings>
 
 ## Link
 * Lua Jit Introduction - 한글번역
