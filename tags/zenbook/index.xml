@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Zenbook on Borisu Wiki Home</title>
+    <link>https://neosolaris.github.io/tags/zenbook/</link>
+    <description>Recent content in Zenbook on Borisu Wiki Home</description>
+    <image>
+      <title>Borisu Wiki Home</title>
+      <url>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.147.2</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 24 Aug 2022 04:00:56 +0900</lastBuildDate>
+    <atom:link href="https://neosolaris.github.io/tags/zenbook/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Zenbook14</title>
+      <link>https://neosolaris.github.io/posts/zenbook14/</link>
+      <pubDate>Tue, 23 Aug 2022 18:35:04 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/zenbook14/</guid>
+      <description>&lt;h2 id=&#34;노트북-사양&#34;&gt;노트북 사양&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;ASUS 젠북 14 UM3402YA-KP095W&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;노트북 / 운영체제(OS) : 윈도우11홈 / 일반유통상품 / 용도 : 사무/인강용 , 휴대용 /
+화면정보 35.56cm(14인치) / 2560x1600(WQXGA) / sRGB : 100% / 400nit / IPS / 광시야각 / 슬림형 베젤 /
+프로세서 AMD / 라이젠7-4세대 / 바르셀로 / 5825U (2.0GHz) / 옥타코어 /
+메모리 LPDDR4x(온보드) / 메모리 용량 : 16GB / 메모리 교체: 불가능 /
+저장장치 M.2(NVMe) / 512GB /
+그래픽 내장그래픽 / Radeon Graphics /
+네트워크 무선랜: 802.11ax(Wi-Fi 6E) /
+영상입출력 HDMI 2.0 / 웹캠(HD) /
+단자 USB-C: 2개 / USB-A: 1개 / USB 3.2 / MicroSD카드 /
+부가기능 지문인식(전원버튼) / USB-PD / DP Alt Mode / MIL-STD / 리프트 힌지 /
+입력장치 키보드 라이트 / ㅗ형 방향키 /
+파워 배터리 : 75Wh / 어댑터 : 65W / 충전단자 : 타입C /
+주요제원 두께 : 16.9mm / 무게 : 1.39kg / 색상: 블랙
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;os-설치-환경&#34;&gt;OS 설치 환경&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;../windows11&#34;&gt;윈도우11&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../ubuntu&#34;&gt;우분투 22.04&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+  </channel>
+</rss>

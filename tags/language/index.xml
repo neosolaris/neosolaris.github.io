@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Language on Borisu Wiki Home</title>
+    <link>https://neosolaris.github.io/tags/language/</link>
+    <description>Recent content in Language on Borisu Wiki Home</description>
+    <image>
+      <title>Borisu Wiki Home</title>
+      <url>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.147.2</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 12 Mar 2024 03:46:08 +0900</lastBuildDate>
+    <atom:link href="https://neosolaris.github.io/tags/language/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Zig &#43; Nvim 설정</title>
+      <link>https://neosolaris.github.io/posts/zig-nvim/</link>
+      <pubDate>Tue, 12 Mar 2024 03:46:08 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/zig-nvim/</guid>
+      <description>&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;neovim에서 zig 설정 방법을 설명한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;install-on-alpine&#34;&gt;Install on Alpine&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;설치하기&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;doas apk add zig zls neovim
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;nvim ~/.local/nvim/init.lua
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;    require &amp;#39;lspconfig&amp;#39;.zls.setup{}
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;다른 어떤 언어보다도 간단하다.&lt;/li&gt;
+&lt;li&gt;zls는 zig language server&lt;/li&gt;
+&lt;li&gt;lspconfig는 neovim에 내장된 LSP 설정을 말한다.&lt;/li&gt;
+&lt;li&gt;nvim 설정 후 zig파일을 열고 코딩하면 도움말이 나타난다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;tab&lt;/code&gt;으로 이동하고 &lt;code&gt;Enter&lt;/code&gt;로 선택한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;install-zls-from-source-최신-버전-소스-컴파일&#34;&gt;Install zls from Source (최신 버전 소스 컴파일)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;최신 버전의 zig(현재 0.12)여야 git 소스로 컴파일 된다.&lt;/li&gt;
+&lt;li&gt;zig 최신 버전은 zig 홈에서 다운로드할 수 있다.&lt;/li&gt;
+&lt;li&gt;다음 절차에 따라 빌드한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;git clone https://github.com/zigtools/zls
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;cd zls
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;zig build -Doptimize=ReleaseSafe
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;mkdir ~/bin &amp;amp;&amp;amp; cp zig-out/bin/zls ~/bin
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;echo &amp;#39;export PATH=$HOME/bin:$PATH&amp;#39; &amp;gt;&amp;gt; ~/.bash_profile
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;source ~/.bash_profile
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;zls --version
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Neovim setup for Zig&lt;br&gt;
+&lt;a href=&#34;https://terminalprogrammer.com/neovim-setup-for-zig&#34;&gt;https://terminalprogrammer.com/neovim-setup-for-zig&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>Zig</title>
+      <link>https://neosolaris.github.io/posts/zig/</link>
+      <pubDate>Tue, 12 Mar 2024 03:21:08 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/zig/</guid>
+      <description>&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;a general-purpose programming language and toolchain for maintaining robust, optimal and reusable software.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;install&#34;&gt;Install&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Debian/Ubuntu&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo apt install zig
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Alpine&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; doas apk add zig
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;최신 리눅스 버전 설치&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://ziglang.org/download/&#34;&gt;https://ziglang.org/download/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;os와 아키텍쳐에 맞는 파일을 다운로드한다.&lt;/li&gt;
+&lt;li&gt;압축을 푼 후 &lt;code&gt;PATH&lt;/code&gt;를 설정해주면 바로 사용 가능하다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; tar xJf zig-linux-x86_64-0.12.0-dev.3212+40e64245f.tar.xz
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; ln -s zig-linux-x86_64-0.12.0-dev.3212+40e64245f/ zig
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; zig&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; ls 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; ./zig &lt;span class=&#34;nb&#34;&gt;help&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;home - &lt;a href=&#34;https://ziglang.org/&#34;&gt;https://ziglang.org/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;reference - &lt;a href=&#34;https://ziglang.org/documentation/0.11.0/&#34;&gt;https://ziglang.org/documentation/0.11.0/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>lua</title>
+      <link>https://neosolaris.github.io/posts/lua/</link>
+      <pubDate>Sat, 27 Aug 2022 14:20:46 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/lua/</guid>
+      <description>&lt;h2 id=&#34;basic&#34;&gt;Basic&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;../lua-intro&#34;&gt;lua intro&lt;/a&gt; - lua소개: 왜 lua인가&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../lua-install&#34;&gt;lua install&lt;/a&gt; - lua 설치하기, hello world&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../lua-interactive&#34;&gt;lua interactive&lt;/a&gt; - 루아 인터엑티브&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../lua-quick-quide&#34;&gt;lua quick quide&lt;/a&gt; - lua 기본 문법 가이드&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;lua-modules&#34;&gt;Lua Modules&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;../luarocks&#34;&gt;luarocks&lt;/a&gt; - lua 확장 모듈 패키지 관리&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../luastatic&#34;&gt;luastatic&lt;/a&gt; - lua 컴파일 단독 실행파일 만들기&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../lua-csv&#34;&gt;lua-csv&lt;/a&gt; - lua csv 모듈&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../lua-json&#34;&gt;lua-json&lt;/a&gt; - lua json 모듈&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;luajit&#34;&gt;LuaJit&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;../luajit&#34;&gt;luaJit&lt;/a&gt; - LuaJit, Just in Time Compiler&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../lfs-ffi&#34;&gt;luajit lfs-ffi&lt;/a&gt; - LuaJit lua file system 모듈&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../%ED%99%95%EC%9E%A5%EB%AA%A8%EB%93%88&#34;&gt;luafun&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;graphic--game&#34;&gt;Graphic &amp;amp; Game&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;../lua-love&#34;&gt;lua love&lt;/a&gt; - lua love 2D 게임 만들기&lt;/li&gt;
+&lt;li&gt;gimp-glua - gimp의 이미지 프로세싱 플러그인&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;iot&#34;&gt;IoT&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;../nodemcu&#34;&gt;nodemcu&lt;/a&gt; - Lua base firmware esp32, esp8266&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;science--math&#34;&gt;Science &amp;amp; Math&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;../gsl-shell&#34;&gt;gsl shell&lt;/a&gt; - Luajit GNU Scientific Library Shell&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;www&#34;&gt;WWW&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;../openresty&#34;&gt;openresty&lt;/a&gt; - 웹개발 인터페이스: luajit + nginx&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../luakit&#34;&gt;luakit&lt;/a&gt; - A fast, extensible, and customizable web browser&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;응용&#34;&gt;응용&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;../lua-pi&#34;&gt;lua pi&lt;/a&gt; - Raspberry Pi에서 Lua 개발 및 설치 환경 만들기&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../nvim-lua&#34;&gt;nvim lua&lt;/a&gt; - nvim을 lua로 설정 및 관리하기&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../alpine-lua-language-server&#34;&gt;alpine lua language server&lt;/a&gt; - Lua Language Server Install&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Lua Sample Code &lt;a href=&#34;https://lua-users.org/wiki/SampleCode&#34;&gt;https://lua-users.org/wiki/SampleCode&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Awesome Lua&lt;a href=&#34;https://github.com/LewisJEllis/awesome-lua&#34;&gt;https://github.com/LewisJEllis/awesome-lua&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Awesome Resty&lt;a href=&#34;https://github.com/LewisJEllis/awesome-lua&#34;&gt;https://github.com/LewisJEllis/awesome-lua&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>Rust Programming Language</title>
+      <link>https://neosolaris.github.io/posts/rust/</link>
+      <pubDate>Tue, 23 Aug 2022 18:35:04 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/rust/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;../rust-install&#34;&gt;rust install&lt;/a&gt; - 러스트 설치&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../rust-compile-size&#34;&gt;rust compile size&lt;/a&gt; - 컴파일 사이즈 줄이기&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Setup on Borisu Wiki Home</title>
+    <link>https://neosolaris.github.io/tags/setup/</link>
+    <description>Recent content in Setup on Borisu Wiki Home</description>
+    <image>
+      <title>Borisu Wiki Home</title>
+      <url>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.147.2</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 11 Jan 2023 14:42:57 +0900</lastBuildDate>
+    <atom:link href="https://neosolaris.github.io/tags/setup/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Gimp Setup</title>
+      <link>https://neosolaris.github.io/posts/gimp-setup/</link>
+      <pubDate>Wed, 11 Jan 2023 14:42:57 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/gimp-setup/</guid>
+      <description>&lt;h2 id=&#34;ui-font--icons-size&#34;&gt;UI Font &amp;amp; Icons Size&lt;/h2&gt;
+&lt;p&gt;우분투 환경에서 김프를 실행하면 메뉴와 아이콘 등이 매우 작게 표시되는 경우가 있다. 이를 바로 잡는 방법을 설명한다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Change Font Size&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;자신이 사용하는 OS와 테마에 따라 gtkrc파일이 다를 수 있다. 아래는 ubuntu 22.04, gimp 2.x, Dark 테마의 경우이다. 자신의 환경에 맞게 숫자 값을 적당히 조절한다.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo vi /usr/share/gimp/2.0/themes/Dark/gtkrc
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;...
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;&lt;/span&gt;&lt;span class=&#34;gp&#34;&gt;#&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;font_name&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Sans 11&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;  font_name = &amp;#34;Sans 10&amp;#34;  # 위 주석 아래에 다음을 추가하고 저장
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;... 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;&lt;/span&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; gimp &lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;# 김프 재실행&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Change Icons Size&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;폰트를 먼저 조정이 끝나면 다음으로 아이콘을 수정하는 것이 편리하다. 김프에서 다음의 설정으로 이동한다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Docker Setup - 설정</title>
+      <link>https://neosolaris.github.io/posts/docker-setup/</link>
+      <pubDate>Wed, 09 Nov 2022 22:57:27 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/docker-setup/</guid>
+      <description>&lt;h2 id=&#34;docker-데몬-서비스-설정&#34;&gt;Docker 데몬 서비스 설정&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;패키지를 설치할 경우 자동으로 등록되지만 실패할 경우 다음과 같다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo systemctl status docker  &lt;span class=&#34;c1&#34;&gt;# 서비스 Active 확인실패&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo systemctl &lt;span class=&#34;nb&#34;&gt;enable&lt;/span&gt; docker  &lt;span class=&#34;c1&#34;&gt;# 부팅시 서비스 자동 실행 설정&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo systemctl start docker  &lt;span class=&#34;c1&#34;&gt;# 서비스 실행&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo systemctl restart docker  &lt;span class=&#34;c1&#34;&gt;# 서비스 재실행&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo systemctl status docker  &lt;span class=&#34;c1&#34;&gt;# 서비스 동작확인&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;docker를-일반-사용자-권한으로-변경&#34;&gt;Docker를 일반 사용자 권한으로 변경&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;항상 docker를 사용할 때 &lt;code&gt;sudo&lt;/code&gt;를 사용하므로 번거롭다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo usermod -aG docker &lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;USER&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# 이후 로그아웃하거나 재부팅&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo reboot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; groups  &lt;span class=&#34;c1&#34;&gt;# 그룹에 docker가 있는 지 확인&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; docker ps -a  &lt;span class=&#34;c1&#34;&gt;# sudo 없이 명령 실행&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;docker-로컬-디렉토리-변경&#34;&gt;Docker 로컬 디렉토리 변경&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;/var/lib/docker&lt;/code&gt;가 기본 디렉토리이다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/var&lt;/code&gt;는 보통 root 파티션이므로 사용중 공간문제가 발생할 수 있다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/data/docker&lt;/code&gt;라는 충분한 공간으로 변경한다면 다음과 같다.&lt;/li&gt;
+&lt;li&gt;우분투나 데비안 기준이고 &lt;code&gt;docker 20.10.21&lt;/code&gt; 버전의 예이다.&lt;/li&gt;
+&lt;li&gt;이 설정은 docker 설치 초기에 해야한다. (그렇지 않다면 백업 필수)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo systemctl stop docker  &lt;span class=&#34;c1&#34;&gt;# 서비스 중지&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo systemctl status docker  &lt;span class=&#34;c1&#34;&gt;# 서비스 상태 확인&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo cat&amp;lt;&amp;lt;EOF &amp;gt; /etc/docker/daemon.json   
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;    &amp;#34;graph&amp;#34;: &amp;#34;/data/docker&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;EOF
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo rm -rf /var/lib/docker  &lt;span class=&#34;c1&#34;&gt;# 기존 디렉토리 제거&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo systemctl start  &lt;span class=&#34;c1&#34;&gt;# 서비스 실행&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; docker info &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; grep &lt;span class=&#34;s1&#34;&gt;&amp;#39;Docker Root Dir&amp;#39;&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# 디렉토리 변경 확인&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt; Docker Root Dir: /data/docker
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;&lt;/span&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; ln -s /data/docker /var/lib/docker  &lt;span class=&#34;c1&#34;&gt;# 호환을 위해 링크를 생성&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+  </channel>
+</rss>

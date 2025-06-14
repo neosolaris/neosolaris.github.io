@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Browser on Borisu Wiki Home</title>
+    <link>https://neosolaris.github.io/categories/browser/</link>
+    <description>Recent content in Browser on Borisu Wiki Home</description>
+    <image>
+      <title>Borisu Wiki Home</title>
+      <url>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.147.2</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 24 Dec 2022 07:56:42 +0900</lastBuildDate>
+    <atom:link href="https://neosolaris.github.io/categories/browser/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Luakit - lua 기반 웹브라우저</title>
+      <link>https://neosolaris.github.io/posts/luakit/</link>
+      <pubDate>Fri, 09 Dec 2022 07:07:46 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/luakit/</guid>
+      <description>&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
+&lt;p&gt;A fast, extensible, and customizable web browser&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;빠르고 다양한 확장과 설정이 가능한 웹 브라우저&lt;/li&gt;
+&lt;li&gt;Lua 기반 설정으로 개인환경을 구축하기에도 좋다.&lt;/li&gt;
+&lt;li&gt;vi(m)을 사용하는 데 익숙하다면 더욱 편리하게 사용할 수 있다.&lt;/li&gt;
+&lt;li&gt;가령, vi와 같이 normal, command line, insert mode를 제공한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;install&#34;&gt;Install&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Ubuntu, Debian&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo apt install luakit
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;build---ubuntudebian&#34;&gt;Build - Ubuntu/Debian&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Pre Requirement&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo apt install libgtk-3-dev libwebkit2gtk-4.0-dev libgstreamer1.0-dev
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Build&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;git clone https://github.com/luakit/luakit.git
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;cd luakit
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;make
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;sudo make install  # /usr/local/bin
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;quick-start-guide&#34;&gt;Quick-start Guide&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Using Luakit&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; luakit -h
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; luakit google.com
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;주요 명령어&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;i — insert mode.
+: — command mode.
+Ctrl-z — passthrough mode.
+o — open URL.
+t — open URL in new tab.
+w — open URL in new window.
+d/Ctrl-w — close tab.
+D/ZQ — close window.
+ZZ — save session and close window.
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;도움말 및 관련 문서 보기&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;F1&amp;gt;&lt;/code&gt; - normal mode&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;:help&lt;/code&gt; - command line mode&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;웹브라우징 - 사이트 열기 및 이동&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;:open URL&lt;/code&gt; - command line mode&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;o&lt;/code&gt; + URL입력 - normal mode (하단 command line에 입력)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;:tabopen URL&lt;/code&gt; - open URL in a new tab&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;:winopen URL&lt;/code&gt; - open URL in a new window&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;H&lt;/code&gt; - 이전 페이지로 이동&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;J&lt;/code&gt; - 이후 페이지로 이동&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;페이지 내 이동 및 페이지 키워드 검색&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;h&lt;/code&gt;,&lt;code&gt;j&lt;/code&gt;,&lt;code&gt;k&lt;/code&gt;,&lt;code&gt;l&lt;/code&gt; - 페이지 내 상하좌우 이동&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;space&amp;gt;&lt;/code&gt;, &lt;code&gt;&amp;lt;Ctrl-f&amp;gt;&lt;/code&gt; - 다음 화면 아래 이동&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;Ctrl-b&amp;gt;&lt;/code&gt; - 이전 화면 위로 이동&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;0&lt;/code&gt;, &lt;code&gt;gg&lt;/code&gt; - 페이지 맨 처음으로&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;G&lt;/code&gt; - 페이지 맨 끝으로&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/ Keyword&lt;/code&gt; - 페이지 내에서 Keyword 찾기&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;n&lt;/code&gt;,&lt;code&gt;N&lt;/code&gt; - 다음 Keyword, 이전 Keyword 이동&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;i&lt;/code&gt; - 입력(편집) 모드
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;Tab&amp;gt;&lt;/code&gt; - 페이지 내 아래로 링크이동&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;Shift-Tab&amp;gt;&lt;/code&gt; - 페이지 내 위로 링크이동&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;탭간 이동 및 제어&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;:tabopen URL&lt;/code&gt; - 새로운 탭으로 URL 열기&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;d&lt;/code&gt; - 현재 탭 닫기&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;u&lt;/code&gt; - 닫은 탭 다시 열기&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;J&lt;/code&gt; - 이전 탭으로 이동&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;K&lt;/code&gt; - 이후 탭으로 이동&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Bookmarks&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;B&lt;/code&gt; - 현재 페이지 북마크 추가&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;gb&lt;/code&gt; or &lt;code&gt;gB&lt;/code&gt; - 현재 탭 또는 새로운 탭에 북마크 페이지 열고 사이트 연결&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;configuration---설정&#34;&gt;Configuration - 설정&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Lua 설정 파일 우선 순위&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;luakit을 실행한 현재 디렉토리&lt;/li&gt;
+&lt;li&gt;lua 파일이 설치되어 있는 시스템 디렉토리: ex) &lt;code&gt;/usr/lib&lt;/code&gt;, &lt;code&gt;/usr/local/lib&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;luakit 설치 파일 위치: &lt;code&gt;/usr/share/luakit/lib/&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;luakit 사용자 디렉토리: &lt;code&gt;~/.config/luakit/&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;시스템 설정 디렉토리: &lt;code&gt;/etc/xdg/luakit/&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;위의 리스트를 확인하려면 luakit 브라우저에서 다음과 같이 확인할 수 있다.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

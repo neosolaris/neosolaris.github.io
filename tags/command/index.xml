@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Command on Borisu Wiki Home</title>
+    <link>https://neosolaris.github.io/tags/command/</link>
+    <description>Recent content in Command on Borisu Wiki Home</description>
+    <image>
+      <title>Borisu Wiki Home</title>
+      <url>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.147.2</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 24 Aug 2022 03:47:49 +0900</lastBuildDate>
+    <atom:link href="https://neosolaris.github.io/tags/command/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tree Command</title>
+      <link>https://neosolaris.github.io/posts/tree/</link>
+      <pubDate>Tue, 23 Aug 2022 18:35:04 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/tree/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;우분투에서는 기본설치가 아니므로 설치.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;install&#34;&gt;Install&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;sudo apt install tree
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;usage&#34;&gt;Usage&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;tree&lt;/code&gt; &amp;ndash; show folder and file tree current directory&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;tree dir-name&lt;/code&gt; &amp;ndash; show folder and file tree dir-name&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;tree -a&lt;/code&gt; &amp;ndash; show all dir and files (hidden dir also)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;tree -d&lt;/code&gt; &amp;ndash; show directory only&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;tree -f&lt;/code&gt; &amp;ndash; show path prefix&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;tree -o output.txt&lt;/code&gt; &amp;ndash; save result to output.txt&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;내용이 더 있는데 아래 참고해서 정리&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://linuxhint.com/tree-command-in-ubuntu/&#34;&gt;Waht is Tree Command in Ubuntu&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+  </channel>
+</rss>

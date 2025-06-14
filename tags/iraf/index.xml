@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Iraf on Borisu Wiki Home</title>
+    <link>https://neosolaris.github.io/tags/iraf/</link>
+    <description>Recent content in Iraf on Borisu Wiki Home</description>
+    <image>
+      <title>Borisu Wiki Home</title>
+      <url>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.147.2</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 30 Oct 2022 00:05:48 +0900</lastBuildDate>
+    <atom:link href="https://neosolaris.github.io/tags/iraf/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>IRAF - Image Reduction and Analysis Facility</title>
+      <link>https://neosolaris.github.io/posts/iraf/</link>
+      <pubDate>Wed, 12 Oct 2022 16:02:55 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/iraf/</guid>
+      <description>&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;../fits&#34;&gt;FITS&lt;/a&gt; 데이터 분석 및 이미지 처리 도구 집합&lt;/li&gt;
+&lt;li&gt;NOAO(National Optical astronomy Observatory)에서 개발&lt;/li&gt;
+&lt;li&gt;현재 오픈소스로 공개하여 &lt;a href=&#34;https://iraf-community.github.io&#34;&gt;iraf community&lt;/a&gt; 가 관리하고 있다.&lt;/li&gt;
+&lt;li&gt;주로 관측천문학 분야에서 활용되고 있다.&lt;/li&gt;
+&lt;li&gt;파이썬으로 랩핑한 &lt;a href=&#34;../pyraf&#34;&gt;pyraf&lt;/a&gt;가 있다.&lt;/li&gt;
+&lt;li&gt;컴파일과 패키지 설치 두 가지가 있다. (패키지 설치 권장)&lt;/li&gt;
+&lt;li&gt;현재 많은 소프트웨어들이 나와있으나 타언어로 랩핑하였거나 인터페이스만 바꾸어 라이브러리를 그대로 사용하고 있다.&lt;/li&gt;
+&lt;li&gt;일종의 고전이라고 볼 수 있겠다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;install-packages&#34;&gt;Install Packages&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Ubuntu18.x 이후부터 패키지 제공&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo apt install xterm xgterm &lt;span class=&#34;c1&#34;&gt;# terminal for iraf &lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo apt install saods9       &lt;span class=&#34;c1&#34;&gt;# ds9 FITS Viewer for iraf&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo apt install iraf iraf-dev iraf-noao iraf-noao-dev iraf-wcstools iraf-rvsao
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;install-from-source&#34;&gt;Install From Source&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/iraf-community/iraf/archive/refs/tags/v2.17.tar.gz&#34;&gt;Download Source&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Pyraf - Python iraf</title>
+      <link>https://neosolaris.github.io/posts/pyraf/</link>
+      <pubDate>Tue, 11 Oct 2022 18:19:29 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/pyraf/</guid>
+      <description>&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;pyraf는 &lt;a href=&#34;../iraf&#34;&gt;iraf&lt;/a&gt; 의 파이썬 커뮤니티 버전이다.&lt;/li&gt;
+&lt;li&gt;기존의 많은 사용자 인터페이스를 개선하고 파이썬 코드를 쓸수있다.&lt;/li&gt;
+&lt;li&gt;천문학자들은 &lt;code&gt;iraf -&amp;gt; pyraf -&amp;gt; astropy&lt;/code&gt; 로 옮겨가는 추세다.&lt;/li&gt;
+&lt;li&gt;전통적인 &lt;a href=&#34;../iraf&#34;&gt;iraf&lt;/a&gt; 사용자라면 pyraf가 개선된 환경이다.&lt;/li&gt;
+&lt;li&gt;새로운 입문자라면 &lt;a href=&#34;../astropy&#34;&gt;astropy&lt;/a&gt; 로 시작하는 것이 좋겠다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;install&#34;&gt;Install&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;요구사항: python3, iraf&lt;/li&gt;
+&lt;li&gt;Install Pre Packages&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo apt install iraf python3-pyraf
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;pyraf home:  &lt;a href=&#34;https://iraf-community.github.io/pyraf.html&#34;&gt;https://iraf-community.github.io/pyraf.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;tutorial: &lt;a href=&#34;https://pyraf.readthedocs.io/en/latest/&#34;&gt;https://pyraf.readthedocs.io/en/latest/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;github: &lt;a href=&#34;https://github.com/iraf-community/pyraf&#34;&gt;https://github.com/iraf-community/pyraf&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+  </channel>
+</rss>

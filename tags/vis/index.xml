@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Vis on Borisu Wiki Home</title>
+    <link>https://neosolaris.github.io/tags/vis/</link>
+    <description>Recent content in Vis on Borisu Wiki Home</description>
+    <image>
+      <title>Borisu Wiki Home</title>
+      <url>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.147.2</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 07 Dec 2022 07:26:00 +0900</lastBuildDate>
+    <atom:link href="https://neosolaris.github.io/tags/vis/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Vis - Structural Regular Expressions</title>
+      <link>https://neosolaris.github.io/posts/vis-sre/</link>
+      <pubDate>Wed, 07 Dec 2022 07:26:00 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/vis-sre/</guid>
+      <description>&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
+&lt;h2 id=&#34;tutorial-sam-command-language&#34;&gt;Tutorial Sam Command Language&lt;/h2&gt;
+&lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;sam structural regular expression &lt;a href=&#34;http://doc.cat-v.org/bell_labs/structural_regexps/se.pdf&#34;&gt;http://doc.cat-v.org/bell_labs/structural_regexps/se.pdf&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;sam command tutorial &lt;a href=&#34;http://doc.cat-v.org/bell_labs/sam_lang_tutorial/sam_tut.pdf&#34;&gt;http://doc.cat-v.org/bell_labs/sam_lang_tutorial/sam_tut.pdf&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>Vis - Combining Modal Editing with Structual Regular Expressions</title>
+      <link>https://neosolaris.github.io/posts/vis/</link>
+      <pubDate>Mon, 05 Dec 2022 08:45:40 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/vis/</guid>
+      <description>&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;vi를 계승하면서도 현재적이고 새로운 코드, 심플하면서도 효과적인 에디터를 지향&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://sam.cat-v.org/&#34;&gt;sam&lt;/a&gt; 과 structual regular expression 을 도입&lt;/li&gt;
+&lt;li&gt;효과적인 코드 하이라이팅 - Parsing Expression Grammars (Lua LPeg)&lt;/li&gt;
+&lt;li&gt;lua Api 제공으로 확장가능 - vim, &lt;a href=&#34;../nvim&#34;&gt;nvim&lt;/a&gt;과는 다르게 vim 설정법을 사용하지 않음&lt;/li&gt;
+&lt;li&gt;vimscipt 사용하지 않음, luajit도 사용하지 않음&lt;/li&gt;
+&lt;li&gt;설치 용량이 1MB 내외 (물론 lua5.3도 함께 설치해야한다.)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;장점과-단점&#34;&gt;장점과 단점&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;장점&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;가볍고 빠르다.&lt;/li&gt;
+&lt;li&gt;기본 명령은 vim의 확장 명령이 아닌 vi의 것을 사용한다.&lt;/li&gt;
+&lt;li&gt;Structual regular expression 지원&lt;/li&gt;
+&lt;li&gt;lua 확장 제공.&lt;/li&gt;
+&lt;li&gt;utf-8 지원&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;단점&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

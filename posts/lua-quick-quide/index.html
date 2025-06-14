@@ -1,0 +1,705 @@
+<!doctype html><html lang=en dir=auto><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>Lua Quick Guide - tutorialspoint | Borisu Wiki Home</title>
+<meta name=keywords content="lua,guide"><meta name=description content='Basic
+
+Tokens in Lua
+
+io.write("Hello world, from ",_VERSION,"!\n")
+
+Comments
+
+-- simple comment
+--[[ 
+block comments
+--]]
+
+identifiers - 변수명, 함수명 등 규칙
+
+mohd zera abc move_name a_123 myname50 _temp a23b9 retVal
+
+Keywords - 예약어
+
+and break do else elseif end false for function if in local
+nil not or repeat return then true until while
+Lua - Variables
+
+Global variables, Local bariables, Table fields
+Variable Example
+
+-- Variable definition:
+local a, b  --local
+g,l = 20,30 --global
+
+-- Initialization
+a = 10
+b = 30
+
+print("value of a:", a)
+print("value of b:", b)
+
+-- Swapping of variables
+b, a = a, b
+
+print("value of a:", a)
+print("value of b:", b)
+
+f = 70.0/3.0
+print("value of f", f)
+
+
+Data Types
+nil - no data
+boolean - ture, false
+number - read numbers
+string - array of characters
+function - method that is written in C or Lua
+userdata - C data
+thread - independent threads of execution
+table - arrays, symbol tables, sets, records, graphs, trees, etc'><meta name=author content="Me"><link rel=canonical href=https://neosolaris.github.io/posts/lua-quick-quide/><meta name=google-site-verification content="XYZabc"><meta name=yandex-verification content="XYZabc"><meta name=msvalidate.01 content="XYZabc"><link crossorigin=anonymous href=/assets/css/stylesheet.2211ca3164be7830024f6aad2b3a2e520843a64f8f048445c3401c1249aa051d.css integrity="sha256-IhHKMWS+eDACT2qtKzouUghDpk+PBIRFw0AcEkmqBR0=" rel="preload stylesheet" as=style><link rel=icon href=https://neosolaris.github.io/favicon.ico><link rel=icon type=image/png sizes=16x16 href=https://neosolaris.github.io/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=https://neosolaris.github.io/favicon-32x32.png><link rel=apple-touch-icon href=https://neosolaris.github.io/apple-touch-icon.png><link rel=mask-icon href=https://neosolaris.github.io/safari-pinned-tab.svg><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><link rel=alternate hreflang=en href=https://neosolaris.github.io/posts/lua-quick-quide/><noscript><style>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--code-block-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51)}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style></noscript><meta property="og:url" content="https://neosolaris.github.io/posts/lua-quick-quide/"><meta property="og:site_name" content="Borisu Wiki Home"><meta property="og:title" content="Lua Quick Guide - tutorialspoint"><meta property="og:description" content='Basic Tokens in Lua io.write("Hello world, from ",_VERSION,"!\n") Comments -- simple comment --[[ block comments --]] identifiers - 변수명, 함수명 등 규칙 mohd zera abc move_name a_123 myname50 _temp a23b9 retVal Keywords - 예약어 and break do else elseif end false for function if in local nil not or repeat return then true until while Lua - Variables Global variables, Local bariables, Table fields Variable Example -- Variable definition: local a, b --local g,l = 20,30 --global -- Initialization a = 10 b = 30 print("value of a:", a) print("value of b:", b) -- Swapping of variables b, a = a, b print("value of a:", a) print("value of b:", b) f = 70.0/3.0 print("value of f", f) Data Types nil - no data boolean - ture, false number - read numbers string - array of characters function - method that is written in C or Lua userdata - C data thread - independent threads of execution table - arrays, symbol tables, sets, records, graphs, trees, etc'><meta property="og:locale" content="en"><meta property="og:type" content="article"><meta property="article:section" content="posts"><meta property="article:published_time" content="2022-09-09T23:38:38+09:00"><meta property="article:modified_time" content="2022-09-09T23:39:19+09:00"><meta property="article:tag" content="Lua"><meta property="article:tag" content="Guide"><meta property="og:image" content="https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E"><meta name=twitter:title content="Lua Quick Guide - tutorialspoint"><meta name=twitter:description content='Basic
+
+Tokens in Lua
+
+io.write("Hello world, from ",_VERSION,"!\n")
+
+Comments
+
+-- simple comment
+--[[ 
+block comments
+--]]
+
+identifiers - 변수명, 함수명 등 규칙
+
+mohd zera abc move_name a_123 myname50 _temp a23b9 retVal
+
+Keywords - 예약어
+
+and break do else elseif end false for function if in local
+nil not or repeat return then true until while
+Lua - Variables
+
+Global variables, Local bariables, Table fields
+Variable Example
+
+-- Variable definition:
+local a, b  --local
+g,l = 20,30 --global
+
+-- Initialization
+a = 10
+b = 30
+
+print("value of a:", a)
+print("value of b:", b)
+
+-- Swapping of variables
+b, a = a, b
+
+print("value of a:", a)
+print("value of b:", b)
+
+f = 70.0/3.0
+print("value of f", f)
+
+
+Data Types
+nil - no data
+boolean - ture, false
+number - read numbers
+string - array of characters
+function - method that is written in C or Lua
+userdata - C data
+thread - independent threads of execution
+table - arrays, symbol tables, sets, records, graphs, trees, etc'><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://neosolaris.github.io/posts/"},{"@type":"ListItem","position":2,"name":"Lua Quick Guide - tutorialspoint","item":"https://neosolaris.github.io/posts/lua-quick-quide/"}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"Lua Quick Guide - tutorialspoint","name":"Lua Quick Guide - tutorialspoint","description":"Basic Tokens in Lua io.write(\u0026#34;Hello world, from \u0026#34;,_VERSION,\u0026#34;!\\n\u0026#34;) Comments -- simple comment --[[ block comments --]] identifiers - 변수명, 함수명 등 규칙 mohd zera abc move_name a_123 myname50 _temp a23b9 retVal Keywords - 예약어 and break do else elseif end false for function if in local nil not or repeat return then true until while Lua - Variables Global variables, Local bariables, Table fields Variable Example -- Variable definition: local a, b --local g,l = 20,30 --global -- Initialization a = 10 b = 30 print(\u0026#34;value of a:\u0026#34;, a) print(\u0026#34;value of b:\u0026#34;, b) -- Swapping of variables b, a = a, b print(\u0026#34;value of a:\u0026#34;, a) print(\u0026#34;value of b:\u0026#34;, b) f = 70.0/3.0 print(\u0026#34;value of f\u0026#34;, f) Data Types nil - no data boolean - ture, false number - read numbers string - array of characters function - method that is written in C or Lua userdata - C data thread - independent threads of execution table - arrays, symbol tables, sets, records, graphs, trees, etc\n","keywords":["lua","guide"],"articleBody":"Basic Tokens in Lua io.write(\"Hello world, from \",_VERSION,\"!\\n\") Comments -- simple comment --[[ block comments --]] identifiers - 변수명, 함수명 등 규칙 mohd zera abc move_name a_123 myname50 _temp a23b9 retVal Keywords - 예약어 and break do else elseif end false for function if in local nil not or repeat return then true until while Lua - Variables Global variables, Local bariables, Table fields Variable Example -- Variable definition: local a, b --local g,l = 20,30 --global -- Initialization a = 10 b = 30 print(\"value of a:\", a) print(\"value of b:\", b) -- Swapping of variables b, a = a, b print(\"value of a:\", a) print(\"value of b:\", b) f = 70.0/3.0 print(\"value of f\", f) Data Types nil - no data boolean - ture, false number - read numbers string - array of characters function - method that is written in C or Lua userdata - C data thread - independent threads of execution table - arrays, symbol tables, sets, records, graphs, trees, etc\nType Function\nprint(type(\"What is my type\")) -- string t = 10 print(type(5.8*t)) -- number print(type(print)) -- function print(type(nill)) -- nil print(type(type(ABC))) -- string Lua - Operators Arithmetic Operators (^는 A^2를 의미) + - * / % ^ - Relational Operators (~=은 !=을 의미) == ~= \u003e \u003c \u003e= \u003c= Logical Operators and or not Misc Operators .. - a=“Hello”, b=“World\"일때 a..b –\u003e “Hello World” # - string, table의 요소개수를 반환: #“Hello” –\u003e 5 Lua - Loop while loop - wile문\nfor loop - for문\nrepeat...until loop - repeat문\nnested loops - 중첩된 반복문\nLoop Control\nbreak - 빠져 나오기 : continue,goto가 5.1버전에는 없다.\nThe Infinite Loop\nwhile(true) do print(\"This loop will run forever.\") end Lua - Decision Making if statement if...else statement nested if...else statement Lua - Function function example --[[ function returning the max between two numbers --]] function max(num1, num2) if (num1 \u003e num2) then result = num1; else result = num2; end return result; end -- calling a function print(\"The maximum of the two numbers is \",max(10,4)) --\u003e 10 print(\"The maximum of the two numbers is \",max(5,6)) --\u003e 6 Assigning and Passing functions myprint = function(param) print(\"This is my print function - ##\",param,\"##\") end function add(num1,num2,functionPrint) --number,number,function result = num1 + num2 functionPrint(result) end myprint(10) add(2,5,myprint) Function with Variable Argument function average(...) -- Argument수를 정해 놓지 않고 정의 result = 0 local arg = {...} for i,v in ipairs(arg) do -- ipairs는 arg의 Index와 value를 넘김 result = result + v end return result/#arg -- result 나누기 #arg(arg수) end print(\"The average is\",average(10,5,3,4,5,6)) -- 필요한 만큼 넣어 줌 Lua - Strings example string1 = \"Lua\" --single quotes print(\"\\\"String 1 is\\\"\", string1) string2 = 'Tutorial' --double quotes print(\"String 2 is\", string2) string3 = [[\"Lua Tutorial\"]] --[[and]] : 여러 줄의 문자열을 사용할 때 print(\"String 3 is\", string3) Escape Sequence \\a \\b \\f \\n \\r \\t \\v \\\\ \\\" \\' \\[ \\] String Manipulation\nstring.upper(arg) - 대문자로 string.lower(arg) - 소문자로 string.gsub(mainstring,findstring,replacestring) - 문자열 대체 string.find(mainstring,findstring,optStartIndex,optEndIndex) - 문자열 찾기 string.reverse(arg) - 문자열 역순으로 string.format(...) - 문자열 포멧 설정 string.len(arg) - 문자열 길이 string.rep(string,n) - 문자열 N번 반복 출력 Case Manipulation - 대소문자 변환\nstring1 = \"Lua\"; print(string.upper(string1)) -- LUA print(string.lower(string1)) -- lua Replacing strings string = \"Lua Tutorial\" -- replacing strings newstring = string.gsub(string, \"Tutorial\",\"Language\") print(\"The new string is \"..newstring) -- The new string is Lua Language * Finding and Reversing ```lua string = \"Lua Tutorial\" -- find strings print(string.find(string,\"Tutorial\")) -- 5 12 (start end) reversedString = string.reverse(string) print(\"The new string is\", reversedString) -- The new string is lairotuT auL Formatting Strings string1 = \"Lua\" string2 = \"Tutorial\" number1 = 10 number2 = 20 -- Basic string formatting print(string.format(\"Basic formatting %s %s\", string1, string2)) -- Date formatting date = 2; month = 1; year = 2022 print(string.format(\"Date formatting %02d/%02d/%03d %s\", date, month, year)) -- Decimal formatting print(string.format(\"%.4f\", 1/3)) Character and Byte Representations -- Byte conversion -- First character print(string.byte(\"Lua\")) -- 76 -- Third character print(string.byte(\"Lua\",3)) -- 97 -- First character from last print(string.byte(\"Lua\",-1)) -- 97 -- Second character print(string.byte(\"Lua\",2)) -- 117 -- Second character from last print(string.byte(\"Lua\",-2)) -- 117 -- Internal Numeric ASCII Conversion print(string.char(97)) -- a Other Common Functions string1 = \"Lua\" string2 = \"Tutorial\" -- String Concatenations using .. print(\"Concatenated string\", string1..string2) -- LuaTutorial -- Length of string print(\"Length of string1 is \", string.len(string1)) -- 3 -- Repeating strings repeatedString = string.rep(string1,3) print(repeatedString) -- LuaLuaLua Lua - Arrays One-Dimensional Array array = {\"Lua\", \"Tutorial\"} -- lua에서는 array[0]은 nil이다. array[1]부터 시작한다. for i = 0, 2 do print(array[i]) end Multi-Dimensional Array -- Initializing the array array = {} for i=1,3 do array[i] = {} for j=1,3 do array[i][j] = i*j end end -- Accessing the array for i=1,3 do for j=1,3 do print(array[i][j]) end end Lua - Iterators Generic For Iterator array = {\"Lua\", \"Tutorial\"} -- ipairs를 사용하면 key는 1부터 index이고value는 배열요소를 사용할 수 있다. for key, value in ipairs(array) do print(key, value) end Stateless Iterators function square(iteratorMaxCount, currentNumber) if currentNumber \u003c iteratorMaxCount then currentNumber = currentNumber + 1 return currentNumber, currentNumber*currentNumber end end for i,n in square,3,0 do print(i,n) end Stateful Iterators array = {\"Lua\", \"Tutorial\"} function elementIterator(collection) local index = 0 local count = #collection -- The closure function is returned return function() index = index + 1 if index \u003c= count then --return the current element of the iterator return collection[index] end end end for element in elementIterator(array) do print(element) end 그냥 generic 방식 쓰자. Lua - Tables table은 array, dictionary, 함수, 기타 자료형의 모든 묶음이다.\nexample\n-- Simple empty table mytable = {} print(\"Type of mytable is \", type(mytable)) mytable[1] = \"Lua\" mytable[\"wow\"] = \"Tutorial\" print(\"mytable Element at index 1 is \", mytable [1]) print(\"mytable Element at index wow is \", mytable [\"wow\"]) -- alternatetable and mytable refers to same table alternatetable = mytable print(\"alternatetable Element at index 1 is \", alternatetable[1]) print(\"alternatetable Element at index wow is \", alternatetable[\"wow\"]) alternatetable[\"wow\"] = \"I changed it\" print(\"mytable Element at index wow is \", mytable[\"wow\"]) -- only variable released and and not table alternatetable = nil print(\"alternatetable is \", alternatetable) --\u003e alternatetable is nil -- mytable is still accessible print(\"mytable Element at index wow is \", mytable[\"wow\"]) mytable = nil print(\"mytable is \", mytable) --\u003e mytable is nil Table Concatenation (요소 결합) fruits = {\"banana\", \"orange\", \"apple\"} print(table.concat(fruits)) --\u003e bananaorangeapple print(table.concat(fruits, \", \")) --\u003e banana, orange, apple print(table.concat(fruits, \", \", 2,3)) --\u003e orange, apple Table Insert and Remove fruits = {\"banana\", \"orange\", \"apple\"} table.insert(fruits, \"mango\") -- 맨 뒤에 붙임 print(fruits[4]) --\u003e mango table.insert(fruits, 2, \"grapes\") -- index 2에 붙임 print(fruits[2]) --\u003e grape print(table.maxn(fruits)) --\u003e 5 print(fruits[5]) --\u003e mango table.remove(fruits) -- 모든 요소 제거 print(fruits[5]) --\u003e nil Sorting Tables fruits = {\"banana\", \"orange\", \"apple\", \"grapes\"} for k,v in ipairs(fruits) do print(k,v) end table.sort(fruits) print(\"sorted table\") for k,v in ipairs(fruits) do print(k,v) end Lua - Modules 외부 모듈을 사용하는 방법 -- Method 1 (매우 정직한, 그대로의) require \"printFormatter\" printFormatter.simpleFormat(\"test\") -- Method 2 (난 이 방법이 마음에 든다) local formatter = require \"printFormatter\" formatter.simpleFormat(\"test\") -- Method 3 (함수 하나만 뽑아 쓸 때) require \"printFormatter\" local formatterFunction = printFormatter.simpleFormat formatterFunction(\"test\") 모듈 작성하기 -- mymath.lua local mymath = {} function mymath.add(a,b) print(a+b) end function mymath.sub(a,b) print(a-b) end function mymath.mul(a,b) print(a*b) end function mymath.div(a,b) print(a/b) end return mymath 모듈 사용하기 -- main.lua mymath = require(\"mymath\") mymath.add(10,20) mymath.sub(30,20) mymath.mul(10,20) mymath.div(30,20) 주의 사항 mymath.lua 모듈파일과 main.lua는 같은 디렉토리에 있어야 한다. 모듈의 이름과 모듈파일의 이름은 같아야 한다. Lua - Metatables __index mytable = setmetatable({key1 = \"value1\"}, { __index = function(mytable, key) if key == \"key2\" then return \"metatablevalue\" else return mytable[key] end end }) -- simple version newtable = setmetatable({key1 = \"value1\"}, { __index = {key2 = \"metatablevalue\"}} ) print(mytable.key1, mytable.key2) --\u003e value1 metatablevalue print(newtable.key1, newtable.key2) --\u003e value1 metatablevalue __newindex mymetatable = {} mytable = setmetatable({key1 = \"value1\"}, { __newindex = mymetatable}) print(mytable.key1) mytable.newkey = \"new value 2\" print(mytable.newkey,mymetatable.newkey) mytable.key1 = \"new value 1\" print(mytable.key1,mymetatable.newkey1) __newindex another example mytable = setmetatable({key1 = \"value1\"}, { __newindex = function(mytable, key, value) rawset(mytable, key, \"\\\"\"..value..\"\\\"\") end }) mytable.key1 = \"new value\" mytable.key2 = 4 print(mytable.key1,mytable.key2) Adding Operator Behavior to Tables - 테이블끼리 더하기 mytable = setmetatable({ 1, 2, 3 }, { __add = function(mytable, newtable) for i = 1, table.maxn(newtable) do table.insert(mytable, table.maxn(mytable)+1,newtable[i]) end return mytable end }) secondtable = {4,5,6} mytable = mytable + secondtable for k,v in ipairs(mytable) do print(k,v) end Table operators\n__add - + __sub - - __mul - * __div - / __mod - % __unm - - __concat - .. __eq - == __lt - \u003c __le - \u003c= __call\nmytable = setmetatable({10}, { __call = function(mytable, newtable) sum = 0 for i = 1, table.maxn(mytable) do sum = sum + mytable[i] end for i = 1, table.maxn(newtable) do sum = sum + newtable[i] end return sum end }) newtable = {10,20,30} print(mytable(newtable)) --\u003e 70 __tostring mytable = setmetatable({ 10, 20, 30 }, { __tostring = function(mytable) sum = 0 for k, v in pairs(mytable) do sum = sum + v end return \"The sum of values in the table is \" .. sum end }) print(mytable) --\u003e The sum of values in the table is 60 Lua - Coroutines 코루틴 정의: 이해 못해서 넘어감 Coroutines are collaborative in nature, which allows two or more methods to execute in a controlled manner. With coroutines, at any given time, only one coroutine runs and this running coroutine only suspends its execution when it explicitly requests to be suspended.\nExample co = coroutine.create( function (value1, value2) local tempvar3 = 10 print(\"coroutine section 1\", value1, value2, tempvar3) local tempvar1 = coroutine.yield(value1+1, value2+1) tempvar3 = tempvar3 + value1 print(\"coroutine section 2\", tempvar1, tempvar2, tempvar3) local tempvar1, tempvar2 = coroutine.yield(value1+value2, value1-value2) tempvar3 = tempvar3 + value1 print(\"coroutine section 3\", tempvar1, tempvar2, tempvar3) return value2, \"end\" end ) print(\"main\", coroutine.resume(co, 3, 2) ) print(\"main\", coroutine.resume(co, 12, 14) ) print(\"main\", coroutine.resume(co, 5, 6) ) print(\"main\", coroutine.resume(co, 10, 20) ) Example2 function getNumber() local function getNumberHelper() co = coroutine.create(function () coroutine.yield(1) coroutine.yield(2) coroutine.yield(3) coroutine.yield(4) coroutine.yield(5) end) return co end if(numberHelper) then status, number = coroutine.resume(numberHelper); if coroutine.status(numberHelper) == \"dead\" then numberHelper = getNumberHelper() status, number = coroutine.resume(numberHelper); end return number else numberHelper = getNumberHelper() status, number = coroutine.resume(numberHelper); return number end end for index = 1, 10 do print(index, getNumber()) end Lua - File I/O Implicit File Descriptors -- opens a file in read file = io.open('test.lua', 'r') -- sets the default input file as test.lua io.input(file) -- prints the first line of the file print(io.read()) -- closes the open File io.close(fiel) -- Opens a file in append Modules file = io.open('test.lua','a') -- sets the default output file as test.lua io.output(file) -- appends a word test to the last line of the file io.write('-- End of the test.lua file') -- closes the open file io.close(file) Explicit File Descriptors -- Opens a file in read mode file = io.open('test.lua', 'r') -- prints the first line of the file print(file:read()) -- closes the opended file file:colse() -- Opens a file in append mode file = io.open('test.lua','a') -- appends a word test to the last line of the file file:write('--test') -- closes the open file file:colse() File Seek and read -- Opens a file in read file = io.open('test.lua', 'r') file:seek('end',-25) print(file:read('*a')) -- closes the opened file file:close() Lua - Error Handling Syntax Errors for a = 1,10 print(a) end lua: test2.lua:2: 'do' expected near 'print' Run Time Errors function add(a,b) return a_b end add(10) lua: test2.lua:2: attempt to perform arithmetic on local 'b' (a nil value) stack traceback: test2.lua:2: in function 'add' test2.lua:5: in main chunk [C]: ? Assert and Error Functions local function add(a,b) assert(type(a) == 'number', 'a is not a number') assert(type(b) == 'number', 'b is not a number') return a+b end add(10) lua: test2.lua:3: b is not a number stack traceback: [C]: in function 'assert' test2.lua:3: in function 'add' test2.lua:6: in main chunk [C]: ? pcall function myfunction () n = n/nil end if pcall(myfunction) then print(\"Success\") else print('failure') end failure xpcall function myfunction () n = n/nil end function myerrorhandler(err) print('Error:',err) end stutus = xpcall(myfunction, myerrorhandler) print(status) ERROR:\ttest2.lua:2: attempt to perform arithmetic on global 'n' (a nil value) false Lua - Debugging Debugging Example function myfunction() print(debug.traceback(\"Stack trace\")) print(debug.getinfo(1)) print(\"Stack trace end\") return 10 end myfunction() print(debug.getinfo(1)) Debugging Result Stack trace stack traceback: test2.lua:2: in function 'myfunction' test2.lua:8: in main chunk [C]: ? table: 0054C6C8 Stack trace end` Debugging Example2 function newCounter () local n = 0 local k = 0 return function () k = n n = n + 1 return n end end counter = newCounter () print(counter()) print(counter()) local i = 1 repeat name, val = debug.getupvalue(counter, i) if name then print (\"index\", i, name, \"=\", val) if(name == \"n\") then debug.setupvalue (counter,2,10) end i = i + 1 end -- if until not name print(counter()) Debugging Result2 1 2 index\t1\tk\t=\t1 index\t2\tn\t=\t2 11 Lua - Garbage Collection Example mytable = {\"apple\", \"orange\", \"banana\"} print(collectgarbage(\"count\")) mytable = nil print(collectgarbage(\"count\")) print(collectgarbage(\"collect\")) print(collectgarbage(\"count\")) Result 23.1455078125 149 23.2880859375 295 0 22.37109375 380 나머지 아래는 따로 독립적인 항목으로 분류하여 정리할 예정.\nLua - Debugging\nLua - Garbage Collection\nLua - Object Oriented\nLua - Web programming\nLua - Database Accessing\nLua - Game Programming\nLinks This quide https://www.tutorialspoint.com/lua/lua_quick_guide.htm Pattern Matching https://sodocumentation.net/lua/topic/5829/pattern-matching ","wordCount":"2184","inLanguage":"en","image":"https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E","datePublished":"2022-09-09T23:38:38+09:00","dateModified":"2022-09-09T23:39:19+09:00","author":{"@type":"Person","name":"Me"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://neosolaris.github.io/posts/lua-quick-quide/"},"publisher":{"@type":"Organization","name":"Borisu Wiki Home","logo":{"@type":"ImageObject","url":"https://neosolaris.github.io/favicon.ico"}}}</script></head><body id=top><script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add("dark"):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove("dark"):window.matchMedia("(prefers-color-scheme: dark)").matches&&document.body.classList.add("dark")</script><header class=header><nav class=nav><div class=logo><a href=https://neosolaris.github.io/ accesskey=h title="Home (Alt + H)"><img src=https://neosolaris.github.io/apple-touch-icon.png alt aria-label=logo height=35>Home</a><div class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)" aria-label="Toggle theme"><svg id="moon" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></div></div><ul id=menu><li><a href=https://neosolaris.github.io/posts/ title="🔨 Posts"><span>🔨 Posts</span></a></li><li><a href=https://neosolaris.github.io/categories/ title="🗃 Categories"><span>🗃 Categories</span></a></li><li><a href=https://neosolaris.github.io/archive/ title="🗄 Archive"><span>🗄 Archive</span></a></li><li><a href=https://neosolaris.github.io/posts/windex title=Index><span>Index</span></a></li><li><a href=https://neosolaris.github.io/search/ title="🔍 Search (Alt + /)" accesskey=/><span>🔍 Search</span></a></li><li><a href=https://neosolaris.github.io/about/ title="🪵 About"><span>🪵 About</span></a></li></ul></nav></header><main class=main><article class=post-single><header class=post-header><div class=breadcrumbs><a href=https://neosolaris.github.io/>Home</a>&nbsp;»&nbsp;<a href=https://neosolaris.github.io/posts/>Posts</a></div><h1 class="post-title entry-hint-parent">Lua Quick Guide - tutorialspoint</h1><div class=post-meta><span title='2022-09-09 23:38:38 +0900 KST'>2022-09-09</span>&nbsp;·&nbsp;11 min&nbsp;·&nbsp;2184 words&nbsp;·&nbsp;Me&nbsp;|&nbsp;<a href=https://github.com/%3cpath_to_repo%3e/content/posts/lua-quick-quide.md rel="noopener noreferrer edit" target=_blank>Suggest Changes</a></div></header><div class=post-content><h2 id=basic>Basic<a hidden class=anchor aria-hidden=true href=#basic>#</a></h2><ul><li>Tokens in Lua</li></ul><div class=highlight><pre tabindex=0 class=chroma><code class=language-lua data-lang=lua><span class=line><span class=cl><span class=n>io.write</span><span class=p>(</span><span class=s2>&#34;Hello world, from &#34;</span><span class=p>,</span><span class=n>_VERSION</span><span class=p>,</span><span class=s2>&#34;!</span><span class=se>\n</span><span class=s2>&#34;</span><span class=p>)</span>
+</span></span></code></pre></div><ul><li>Comments</li></ul><pre tabindex=0><code>-- simple comment
+--[[ 
+block comments
+--]]
+</code></pre><ul><li>identifiers - 변수명, 함수명 등 규칙</li></ul><div class=highlight><pre tabindex=0 class=chroma><code class=language-lua data-lang=lua><span class=line><span class=cl><span class=n>mohd</span> <span class=n>zera</span> <span class=n>abc</span> <span class=n>move_name</span> <span class=n>a_123</span> <span class=n>myname50</span> <span class=n>_temp</span> <span class=n>a23b9</span> <span class=n>retVal</span>
+</span></span></code></pre></div><ul><li>Keywords - 예약어</li></ul><div class=highlight><pre tabindex=0 class=chroma><code class=language-lua data-lang=lua><span class=line><span class=cl><span class=ow>and</span> <span class=kr>break</span> <span class=kr>do</span> <span class=kr>else</span> <span class=kr>elseif</span> <span class=kr>end</span> <span class=kc>false</span> <span class=kr>for</span> <span class=kr>function</span> <span class=nf>if</span> <span class=kr>in</span> <span class=kd>local</span>
+</span></span><span class=line><span class=cl><span class=kc>nil</span> <span class=ow>not</span> <span class=ow>or</span> <span class=kr>repeat</span> <span class=kr>return</span> <span class=kr>then</span> <span class=kc>true</span> <span class=kr>until</span> <span class=kr>while</span>
+</span></span></code></pre></div><h2 id=lua---variables>Lua - Variables<a hidden class=anchor aria-hidden=true href=#lua---variables>#</a></h2><ul><li>Global variables, Local bariables, Table fields</li><li>Variable Example</li></ul><div class=highlight><pre tabindex=0 class=chroma><code class=language-lua data-lang=lua><span class=line><span class=cl><span class=c1>-- Variable definition:</span>
+</span></span><span class=line><span class=cl><span class=kd>local</span> <span class=n>a</span><span class=p>,</span> <span class=n>b</span>  <span class=c1>--local</span>
+</span></span><span class=line><span class=cl><span class=n>g</span><span class=p>,</span><span class=n>l</span> <span class=o>=</span> <span class=mi>20</span><span class=p>,</span><span class=mi>30</span> <span class=c1>--global</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>-- Initialization</span>
+</span></span><span class=line><span class=cl><span class=n>a</span> <span class=o>=</span> <span class=mi>10</span>
+</span></span><span class=line><span class=cl><span class=n>b</span> <span class=o>=</span> <span class=mi>30</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>print</span><span class=p>(</span><span class=s2>&#34;value of a:&#34;</span><span class=p>,</span> <span class=n>a</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=n>print</span><span class=p>(</span><span class=s2>&#34;value of b:&#34;</span><span class=p>,</span> <span class=n>b</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>-- Swapping of variables</span>
+</span></span><span class=line><span class=cl><span class=n>b</span><span class=p>,</span> <span class=n>a</span> <span class=o>=</span> <span class=n>a</span><span class=p>,</span> <span class=n>b</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>print</span><span class=p>(</span><span class=s2>&#34;value of a:&#34;</span><span class=p>,</span> <span class=n>a</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=n>print</span><span class=p>(</span><span class=s2>&#34;value of b:&#34;</span><span class=p>,</span> <span class=n>b</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>f</span> <span class=o>=</span> <span class=mf>70.0</span><span class=o>/</span><span class=mf>3.0</span>
+</span></span><span class=line><span class=cl><span class=n>print</span><span class=p>(</span><span class=s2>&#34;value of f&#34;</span><span class=p>,</span> <span class=n>f</span><span class=p>)</span>
+</span></span></code></pre></div><ul><li><p>Data Types
+<code>nil</code> - no data
+<code>boolean</code> - ture, false
+<code>number</code> - read numbers
+<code>string</code> - array of characters
+<code>function</code> - method that is written in C or Lua
+<code>userdata</code> - C data
+<code>thread</code> - independent threads of execution
+<code>table</code> - arrays, symbol tables, sets, records, graphs, trees, etc</p></li><li><p>Type Function</p></li></ul><div class=highlight><pre tabindex=0 class=chroma><code class=language-lua data-lang=lua><span class=line><span class=cl><span class=n>print</span><span class=p>(</span><span class=n>type</span><span class=p>(</span><span class=s2>&#34;What is my type&#34;</span><span class=p>))</span>  <span class=c1>-- string</span>
+</span></span><span class=line><span class=cl><span class=n>t</span> <span class=o>=</span> <span class=mi>10</span>
+</span></span><span class=line><span class=cl><span class=n>print</span><span class=p>(</span><span class=n>type</span><span class=p>(</span><span class=mf>5.8</span><span class=o>*</span><span class=n>t</span><span class=p>))</span>              <span class=c1>-- number</span>
+</span></span><span class=line><span class=cl><span class=n>print</span><span class=p>(</span><span class=n>type</span><span class=p>(</span><span class=n>print</span><span class=p>))</span>              <span class=c1>-- function</span>
+</span></span><span class=line><span class=cl><span class=n>print</span><span class=p>(</span><span class=n>type</span><span class=p>(</span><span class=n>nill</span><span class=p>))</span>               <span class=c1>-- nil</span>
+</span></span><span class=line><span class=cl><span class=n>print</span><span class=p>(</span><span class=n>type</span><span class=p>(</span><span class=n>type</span><span class=p>(</span><span class=n>ABC</span><span class=p>)))</span>          <span class=c1>-- string   </span>
+</span></span></code></pre></div><h2 id=lua---operators>Lua - Operators<a hidden class=anchor aria-hidden=true href=#lua---operators>#</a></h2><ul><li>Arithmetic Operators (^는 A^2를 의미)</li></ul><div class=highlight><pre tabindex=0 class=chroma><code class=language-lua data-lang=lua><span class=line><span class=cl><span class=o>+</span> <span class=o>-</span> <span class=o>*</span> <span class=o>/</span> <span class=o>%</span> <span class=o>^</span> <span class=o>-</span>
+</span></span></code></pre></div><ul><li>Relational Operators (<code>~=</code>은 <code>!=</code>을 의미)</li></ul><div class=highlight><pre tabindex=0 class=chroma><code class=language-lua data-lang=lua><span class=line><span class=cl><span class=o>==</span> <span class=o>~=</span> <span class=o>&gt;</span> <span class=o>&lt;</span> <span class=o>&gt;=</span> <span class=o>&lt;=</span>
+</span></span></code></pre></div><ul><li>Logical Operators</li></ul><div class=highlight><pre tabindex=0 class=chroma><code class=language-lua data-lang=lua><span class=line><span class=cl><span class=ow>and</span> <span class=ow>or</span> <span class=ow>not</span>
+</span></span></code></pre></div><ul><li>Misc Operators<ul><li><code>..</code> - a=&ldquo;Hello&rdquo;, b=&ldquo;World"일때 a..b &ndash;> &ldquo;Hello World&rdquo;</li><li><code>#</code> - string, table의 요소개수를 반환: #&ldquo;Hello&rdquo; &ndash;> 5</li></ul></li></ul><h2 id=lua---loop>Lua - Loop<a hidden class=anchor aria-hidden=true href=#lua---loop>#</a></h2><ul><li><p><code>while loop</code> - wile문</p></li><li><p><code>for loop</code> - for문</p></li><li><p><code>repeat...until loop</code> - repeat문</p></li><li><p><code>nested loops</code> - 중첩된 반복문</p></li><li><p>Loop Control</p></li><li><p><code>break</code> - 빠져 나오기 : <code>continue</code>,<code>goto</code>가 5.1버전에는 없다.</p></li><li><p>The Infinite Loop</p></li></ul><div class=highlight><pre tabindex=0 class=chroma><code class=language-lua data-lang=lua><span class=line><span class=cl><span class=kr>while</span><span class=p>(</span><span class=kc>true</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=kr>do</span>
+</span></span><span class=line><span class=cl>    <span class=n>print</span><span class=p>(</span><span class=s2>&#34;This loop will run forever.&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=kr>end</span> 
+</span></span></code></pre></div><h2 id=lua---decision-making>Lua - Decision Making<a hidden class=anchor aria-hidden=true href=#lua---decision-making>#</a></h2><ul><li><code>if statement</code></li><li><code>if...else statement</code></li><li><code>nested if...else statement</code></li></ul><h2 id=lua---function>Lua - Function<a hidden class=anchor aria-hidden=true href=#lua---function>#</a></h2><ul><li>function example</li></ul><div class=highlight><pre tabindex=0 class=chroma><code class=language-lua data-lang=lua><span class=line><span class=cl><span class=cm>--[[ function returning the max between two numbers --]]</span>
+</span></span><span class=line><span class=cl><span class=kr>function</span> <span class=nf>max</span><span class=p>(</span><span class=n>num1</span><span class=p>,</span> <span class=n>num2</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>   <span class=kr>if</span> <span class=p>(</span><span class=n>num1</span> <span class=o>&gt;</span> <span class=n>num2</span><span class=p>)</span> <span class=kr>then</span>
+</span></span><span class=line><span class=cl>      <span class=n>result</span> <span class=o>=</span> <span class=n>num1</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>   <span class=kr>else</span>
+</span></span><span class=line><span class=cl>      <span class=n>result</span> <span class=o>=</span> <span class=n>num2</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>   <span class=kr>end</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>   <span class=kr>return</span> <span class=n>result</span><span class=p>;</span> 
+</span></span><span class=line><span class=cl><span class=kr>end</span>
+</span></span><span class=line><span class=cl><span class=c1>-- calling a function</span>
+</span></span><span class=line><span class=cl><span class=n>print</span><span class=p>(</span><span class=s2>&#34;The maximum of the two numbers is &#34;</span><span class=p>,</span><span class=n>max</span><span class=p>(</span><span class=mi>10</span><span class=p>,</span><span class=mi>4</span><span class=p>))</span>  <span class=c1>--&gt; 10</span>
+</span></span><span class=line><span class=cl><span class=n>print</span><span class=p>(</span><span class=s2>&#34;The maximum of the two numbers is &#34;</span><span class=p>,</span><span class=n>max</span><span class=p>(</span><span class=mi>5</span><span class=p>,</span><span class=mi>6</span><span class=p>))</span>   <span class=c1>--&gt; 6</span>
+</span></span></code></pre></div><ul><li>Assigning and Passing functions</li></ul><div class=highlight><pre tabindex=0 class=chroma><code class=language-lua data-lang=lua><span class=line><span class=cl><span class=n>myprint</span> <span class=o>=</span> <span class=kr>function</span><span class=p>(</span><span class=n>param</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>   <span class=n>print</span><span class=p>(</span><span class=s2>&#34;This is my print function -   ##&#34;</span><span class=p>,</span><span class=n>param</span><span class=p>,</span><span class=s2>&#34;##&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=kr>end</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kr>function</span> <span class=nf>add</span><span class=p>(</span><span class=n>num1</span><span class=p>,</span><span class=n>num2</span><span class=p>,</span><span class=n>functionPrint</span><span class=p>)</span> <span class=c1>--number,number,function</span>
+</span></span><span class=line><span class=cl>   <span class=n>result</span> <span class=o>=</span> <span class=n>num1</span> <span class=o>+</span> <span class=n>num2</span>
+</span></span><span class=line><span class=cl>   <span class=n>functionPrint</span><span class=p>(</span><span class=n>result</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=kr>end</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>myprint</span><span class=p>(</span><span class=mi>10</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=n>add</span><span class=p>(</span><span class=mi>2</span><span class=p>,</span><span class=mi>5</span><span class=p>,</span><span class=n>myprint</span><span class=p>)</span>
+</span></span></code></pre></div><ul><li>Function with Variable Argument</li></ul><div class=highlight><pre tabindex=0 class=chroma><code class=language-lua data-lang=lua><span class=line><span class=cl><span class=kr>function</span> <span class=nf>average</span><span class=p>(...)</span>  <span class=c1>-- Argument수를 정해 놓지 않고 정의</span>
+</span></span><span class=line><span class=cl>   <span class=n>result</span> <span class=o>=</span> <span class=mi>0</span>
+</span></span><span class=line><span class=cl>   <span class=kd>local</span> <span class=n>arg</span> <span class=o>=</span> <span class=p>{...}</span>
+</span></span><span class=line><span class=cl>   <span class=kr>for</span> <span class=n>i</span><span class=p>,</span><span class=n>v</span> <span class=kr>in</span> <span class=n>ipairs</span><span class=p>(</span><span class=n>arg</span><span class=p>)</span> <span class=kr>do</span>  <span class=c1>-- ipairs는 arg의 Index와 value를 넘김</span>
+</span></span><span class=line><span class=cl>      <span class=n>result</span> <span class=o>=</span> <span class=n>result</span> <span class=o>+</span> <span class=n>v</span>
+</span></span><span class=line><span class=cl>   <span class=kr>end</span>
+</span></span><span class=line><span class=cl>   <span class=kr>return</span> <span class=n>result</span><span class=o>/#</span><span class=n>arg</span>  <span class=c1>-- result 나누기 #arg(arg수)</span>
+</span></span><span class=line><span class=cl><span class=kr>end</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>print</span><span class=p>(</span><span class=s2>&#34;The average is&#34;</span><span class=p>,</span><span class=n>average</span><span class=p>(</span><span class=mi>10</span><span class=p>,</span><span class=mi>5</span><span class=p>,</span><span class=mi>3</span><span class=p>,</span><span class=mi>4</span><span class=p>,</span><span class=mi>5</span><span class=p>,</span><span class=mi>6</span><span class=p>))</span> <span class=c1>-- 필요한 만큼 넣어 줌</span>
+</span></span></code></pre></div><h2 id=lua---strings>Lua - Strings<a hidden class=anchor aria-hidden=true href=#lua---strings>#</a></h2><ul><li>example</li></ul><div class=highlight><pre tabindex=0 class=chroma><code class=language-lua data-lang=lua><span class=line><span class=cl><span class=n>string1</span> <span class=o>=</span> <span class=s2>&#34;Lua&#34;</span> <span class=c1>--single quotes</span>
+</span></span><span class=line><span class=cl><span class=n>print</span><span class=p>(</span><span class=s2>&#34;</span><span class=se>\&#34;</span><span class=s2>String 1 is</span><span class=se>\&#34;</span><span class=s2>&#34;</span><span class=p>,</span> <span class=n>string1</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>string2</span> <span class=o>=</span> <span class=s1>&#39;Tutorial&#39;</span> <span class=c1>--double quotes</span>
+</span></span><span class=line><span class=cl><span class=n>print</span><span class=p>(</span><span class=s2>&#34;String 2 is&#34;</span><span class=p>,</span> <span class=n>string2</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>string3</span> <span class=o>=</span> <span class=s>[[&#34;Lua Tutorial&#34;]]</span> <span class=cm>--[[and]]</span> <span class=p>:</span> <span class=err>여러</span> <span class=err>줄의</span> <span class=err>문자열을</span> <span class=err>사용할</span> <span class=err>때</span>
+</span></span><span class=line><span class=cl><span class=n>print</span><span class=p>(</span><span class=s2>&#34;String 3 is&#34;</span><span class=p>,</span> <span class=n>string3</span><span class=p>)</span>
+</span></span></code></pre></div><ul><li>Escape Sequence</li></ul><pre tabindex=0><code>\a \b \f \n \r \t \v \\ \&#34; \&#39; \[ \]
+</code></pre><ul><li><p>String Manipulation</p><ul><li><code>string.upper(arg)</code> - 대문자로</li><li><code>string.lower(arg)</code> - 소문자로</li><li><code>string.gsub(mainstring,findstring,replacestring)</code> - 문자열 대체</li><li><code>string.find(mainstring,findstring,optStartIndex,optEndIndex)</code> - 문자열 찾기</li><li><code>string.reverse(arg)</code> - 문자열 역순으로</li><li><code>string.format(...)</code> - 문자열 포멧 설정</li><li><code>string.len(arg)</code> - 문자열 길이</li><li><code>string.rep(string,n)</code> - 문자열 N번 반복 출력</li></ul></li><li><p>Case Manipulation - 대소문자 변환</p></li></ul><div class=highlight><pre tabindex=0 class=chroma><code class=language-lua data-lang=lua><span class=line><span class=cl><span class=n>string1</span> <span class=o>=</span> <span class=s2>&#34;Lua&#34;</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=n>print</span><span class=p>(</span><span class=n>string.upper</span><span class=p>(</span><span class=n>string1</span><span class=p>))</span>    <span class=c1>-- LUA</span>
+</span></span><span class=line><span class=cl><span class=n>print</span><span class=p>(</span><span class=n>string.lower</span><span class=p>(</span><span class=n>string1</span><span class=p>))</span>    <span class=c1>-- lua</span>
+</span></span></code></pre></div><ul><li>Replacing strings</li></ul><div class=highlight><pre tabindex=0 class=chroma><code class=language-lua data-lang=lua><span class=line><span class=cl><span class=n>string</span> <span class=o>=</span> <span class=s2>&#34;Lua Tutorial&#34;</span>
+</span></span><span class=line><span class=cl><span class=c1>-- replacing strings</span>
+</span></span><span class=line><span class=cl><span class=n>newstring</span> <span class=o>=</span> <span class=n>string.gsub</span><span class=p>(</span><span class=n>string</span><span class=p>,</span> <span class=s2>&#34;Tutorial&#34;</span><span class=p>,</span><span class=s2>&#34;Language&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=n>print</span><span class=p>(</span><span class=s2>&#34;The new string is &#34;</span><span class=o>..</span><span class=n>newstring</span><span class=p>)</span>  <span class=c1>-- The new string is Lua Language</span>
+</span></span><span class=line><span class=cl><span class=o>*</span> <span class=n>Finding</span> <span class=ow>and</span> <span class=n>Reversing</span>
+</span></span><span class=line><span class=cl><span class=err>```</span><span class=n>lua</span>
+</span></span><span class=line><span class=cl><span class=n>string</span> <span class=o>=</span> <span class=s2>&#34;Lua Tutorial&#34;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>-- find strings</span>
+</span></span><span class=line><span class=cl><span class=n>print</span><span class=p>(</span><span class=n>string.find</span><span class=p>(</span><span class=n>string</span><span class=p>,</span><span class=s2>&#34;Tutorial&#34;</span><span class=p>))</span>       <span class=c1>-- 5 12 (start end)</span>
+</span></span><span class=line><span class=cl><span class=n>reversedString</span> <span class=o>=</span> <span class=n>string.reverse</span><span class=p>(</span><span class=n>string</span><span class=p>)</span>     
+</span></span><span class=line><span class=cl><span class=n>print</span><span class=p>(</span><span class=s2>&#34;The new string is&#34;</span><span class=p>,</span> <span class=n>reversedString</span><span class=p>)</span>  <span class=c1>-- The new string is    lairotuT auL    </span>
+</span></span></code></pre></div><ul><li>Formatting Strings</li></ul><div class=highlight><pre tabindex=0 class=chroma><code class=language-lua data-lang=lua><span class=line><span class=cl><span class=n>string1</span> <span class=o>=</span> <span class=s2>&#34;Lua&#34;</span>
+</span></span><span class=line><span class=cl><span class=n>string2</span> <span class=o>=</span> <span class=s2>&#34;Tutorial&#34;</span>
+</span></span><span class=line><span class=cl><span class=n>number1</span> <span class=o>=</span> <span class=mi>10</span>
+</span></span><span class=line><span class=cl><span class=n>number2</span> <span class=o>=</span> <span class=mi>20</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>-- Basic string formatting</span>
+</span></span><span class=line><span class=cl><span class=n>print</span><span class=p>(</span><span class=n>string.format</span><span class=p>(</span><span class=s2>&#34;Basic formatting %s %s&#34;</span><span class=p>,</span> <span class=n>string1</span><span class=p>,</span> <span class=n>string2</span><span class=p>))</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>-- Date formatting</span>
+</span></span><span class=line><span class=cl><span class=n>date</span> <span class=o>=</span> <span class=mi>2</span><span class=p>;</span> <span class=n>month</span> <span class=o>=</span> <span class=mi>1</span><span class=p>;</span> <span class=n>year</span> <span class=o>=</span> <span class=mi>2022</span>
+</span></span><span class=line><span class=cl><span class=n>print</span><span class=p>(</span><span class=n>string.format</span><span class=p>(</span><span class=s2>&#34;Date formatting %02d/%02d/%03d %s&#34;</span><span class=p>,</span> <span class=n>date</span><span class=p>,</span> <span class=n>month</span><span class=p>,</span> <span class=n>year</span><span class=p>))</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>-- Decimal formatting</span>
+</span></span><span class=line><span class=cl><span class=n>print</span><span class=p>(</span><span class=n>string.format</span><span class=p>(</span><span class=s2>&#34;%.4f&#34;</span><span class=p>,</span> <span class=mi>1</span><span class=o>/</span><span class=mi>3</span><span class=p>))</span>
+</span></span></code></pre></div><ul><li>Character and Byte Representations</li></ul><div class=highlight><pre tabindex=0 class=chroma><code class=language-lua data-lang=lua><span class=line><span class=cl><span class=c1>-- Byte conversion</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>-- First character</span>
+</span></span><span class=line><span class=cl><span class=n>print</span><span class=p>(</span><span class=n>string.byte</span><span class=p>(</span><span class=s2>&#34;Lua&#34;</span><span class=p>))</span>       <span class=c1>-- 76</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>-- Third character</span>
+</span></span><span class=line><span class=cl><span class=n>print</span><span class=p>(</span><span class=n>string.byte</span><span class=p>(</span><span class=s2>&#34;Lua&#34;</span><span class=p>,</span><span class=mi>3</span><span class=p>))</span>     <span class=c1>-- 97</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>-- First character from last</span>
+</span></span><span class=line><span class=cl><span class=n>print</span><span class=p>(</span><span class=n>string.byte</span><span class=p>(</span><span class=s2>&#34;Lua&#34;</span><span class=p>,</span><span class=o>-</span><span class=mi>1</span><span class=p>))</span>    <span class=c1>-- 97</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>-- Second character</span>
+</span></span><span class=line><span class=cl><span class=n>print</span><span class=p>(</span><span class=n>string.byte</span><span class=p>(</span><span class=s2>&#34;Lua&#34;</span><span class=p>,</span><span class=mi>2</span><span class=p>))</span>     <span class=c1>-- 117</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>-- Second character from last</span>
+</span></span><span class=line><span class=cl><span class=n>print</span><span class=p>(</span><span class=n>string.byte</span><span class=p>(</span><span class=s2>&#34;Lua&#34;</span><span class=p>,</span><span class=o>-</span><span class=mi>2</span><span class=p>))</span>    <span class=c1>-- 117</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>-- Internal Numeric ASCII Conversion</span>
+</span></span><span class=line><span class=cl><span class=n>print</span><span class=p>(</span><span class=n>string.char</span><span class=p>(</span><span class=mi>97</span><span class=p>))</span>          <span class=c1>-- a</span>
+</span></span></code></pre></div><ul><li>Other Common Functions</li></ul><div class=highlight><pre tabindex=0 class=chroma><code class=language-lua data-lang=lua><span class=line><span class=cl><span class=n>string1</span> <span class=o>=</span> <span class=s2>&#34;Lua&#34;</span>
+</span></span><span class=line><span class=cl><span class=n>string2</span> <span class=o>=</span> <span class=s2>&#34;Tutorial&#34;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>-- String Concatenations using ..</span>
+</span></span><span class=line><span class=cl><span class=n>print</span><span class=p>(</span><span class=s2>&#34;Concatenated string&#34;</span><span class=p>,</span> <span class=n>string1</span><span class=o>..</span><span class=n>string2</span><span class=p>)</span>      <span class=c1>-- LuaTutorial</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>-- Length of string</span>
+</span></span><span class=line><span class=cl><span class=n>print</span><span class=p>(</span><span class=s2>&#34;Length of string1 is &#34;</span><span class=p>,</span> <span class=n>string.len</span><span class=p>(</span><span class=n>string1</span><span class=p>))</span> <span class=c1>-- 3</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>-- Repeating strings</span>
+</span></span><span class=line><span class=cl><span class=n>repeatedString</span> <span class=o>=</span> <span class=n>string.rep</span><span class=p>(</span><span class=n>string1</span><span class=p>,</span><span class=mi>3</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=n>print</span><span class=p>(</span><span class=n>repeatedString</span><span class=p>)</span>                               <span class=c1>-- LuaLuaLua</span>
+</span></span></code></pre></div><h2 id=lua---arrays>Lua - Arrays<a hidden class=anchor aria-hidden=true href=#lua---arrays>#</a></h2><ul><li>One-Dimensional Array</li></ul><div class=highlight><pre tabindex=0 class=chroma><code class=language-lua data-lang=lua><span class=line><span class=cl><span class=n>array</span> <span class=o>=</span> <span class=p>{</span><span class=s2>&#34;Lua&#34;</span><span class=p>,</span> <span class=s2>&#34;Tutorial&#34;</span><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>-- lua에서는 array[0]은 nil이다. array[1]부터 시작한다.</span>
+</span></span><span class=line><span class=cl><span class=kr>for</span> <span class=n>i</span> <span class=o>=</span> <span class=mi>0</span><span class=p>,</span> <span class=mi>2</span> <span class=kr>do</span>
+</span></span><span class=line><span class=cl>    <span class=n>print</span><span class=p>(</span><span class=n>array</span><span class=p>[</span><span class=n>i</span><span class=p>])</span>
+</span></span><span class=line><span class=cl><span class=kr>end</span>
+</span></span></code></pre></div><ul><li>Multi-Dimensional Array</li></ul><div class=highlight><pre tabindex=0 class=chroma><code class=language-lua data-lang=lua><span class=line><span class=cl><span class=c1>-- Initializing the array</span>
+</span></span><span class=line><span class=cl><span class=n>array</span> <span class=o>=</span> <span class=p>{}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kr>for</span> <span class=n>i</span><span class=o>=</span><span class=mi>1</span><span class=p>,</span><span class=mi>3</span> <span class=kr>do</span>
+</span></span><span class=line><span class=cl>    <span class=n>array</span><span class=p>[</span><span class=n>i</span><span class=p>]</span> <span class=o>=</span> <span class=p>{}</span>
+</span></span><span class=line><span class=cl>    <span class=kr>for</span> <span class=n>j</span><span class=o>=</span><span class=mi>1</span><span class=p>,</span><span class=mi>3</span> <span class=kr>do</span>
+</span></span><span class=line><span class=cl>        <span class=n>array</span><span class=p>[</span><span class=n>i</span><span class=p>][</span><span class=n>j</span><span class=p>]</span> <span class=o>=</span> <span class=n>i</span><span class=o>*</span><span class=n>j</span>
+</span></span><span class=line><span class=cl>    <span class=kr>end</span>
+</span></span><span class=line><span class=cl><span class=kr>end</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>-- Accessing the array</span>
+</span></span><span class=line><span class=cl><span class=kr>for</span> <span class=n>i</span><span class=o>=</span><span class=mi>1</span><span class=p>,</span><span class=mi>3</span> <span class=kr>do</span>
+</span></span><span class=line><span class=cl>    <span class=kr>for</span> <span class=n>j</span><span class=o>=</span><span class=mi>1</span><span class=p>,</span><span class=mi>3</span> <span class=kr>do</span>
+</span></span><span class=line><span class=cl>        <span class=n>print</span><span class=p>(</span><span class=n>array</span><span class=p>[</span><span class=n>i</span><span class=p>][</span><span class=n>j</span><span class=p>])</span>
+</span></span><span class=line><span class=cl>    <span class=kr>end</span>
+</span></span><span class=line><span class=cl><span class=kr>end</span>
+</span></span></code></pre></div><h2 id=lua---iterators>Lua - Iterators<a hidden class=anchor aria-hidden=true href=#lua---iterators>#</a></h2><ul><li>Generic For Iterator</li></ul><div class=highlight><pre tabindex=0 class=chroma><code class=language-lua data-lang=lua><span class=line><span class=cl><span class=n>array</span> <span class=o>=</span> <span class=p>{</span><span class=s2>&#34;Lua&#34;</span><span class=p>,</span> <span class=s2>&#34;Tutorial&#34;</span><span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=c1>-- ipairs를 사용하면 key는 1부터 index이고value는 배열요소를 사용할 수 있다.</span>
+</span></span><span class=line><span class=cl><span class=kr>for</span> <span class=n>key</span><span class=p>,</span> <span class=n>value</span> <span class=kr>in</span> <span class=n>ipairs</span><span class=p>(</span><span class=n>array</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=kr>do</span>
+</span></span><span class=line><span class=cl>    <span class=n>print</span><span class=p>(</span><span class=n>key</span><span class=p>,</span> <span class=n>value</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=kr>end</span>
+</span></span></code></pre></div><ul><li>Stateless Iterators</li></ul><div class=highlight><pre tabindex=0 class=chroma><code class=language-lua data-lang=lua><span class=line><span class=cl><span class=kr>function</span> <span class=nf>square</span><span class=p>(</span><span class=n>iteratorMaxCount</span><span class=p>,</span> <span class=n>currentNumber</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=kr>if</span> <span class=n>currentNumber</span> <span class=o>&lt;</span> <span class=n>iteratorMaxCount</span>
+</span></span><span class=line><span class=cl>    <span class=kr>then</span>
+</span></span><span class=line><span class=cl>        <span class=n>currentNumber</span> <span class=o>=</span> <span class=n>currentNumber</span> <span class=o>+</span> <span class=mi>1</span>
+</span></span><span class=line><span class=cl>        <span class=kr>return</span> <span class=n>currentNumber</span><span class=p>,</span> <span class=n>currentNumber</span><span class=o>*</span><span class=n>currentNumber</span>
+</span></span><span class=line><span class=cl>    <span class=kr>end</span>
+</span></span><span class=line><span class=cl><span class=kr>end</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kr>for</span> <span class=n>i</span><span class=p>,</span><span class=n>n</span> <span class=kr>in</span> <span class=n>square</span><span class=p>,</span><span class=mi>3</span><span class=p>,</span><span class=mi>0</span>
+</span></span><span class=line><span class=cl><span class=kr>do</span>
+</span></span><span class=line><span class=cl>    <span class=n>print</span><span class=p>(</span><span class=n>i</span><span class=p>,</span><span class=n>n</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=kr>end</span>
+</span></span></code></pre></div><ul><li>Stateful Iterators</li></ul><div class=highlight><pre tabindex=0 class=chroma><code class=language-lua data-lang=lua><span class=line><span class=cl><span class=n>array</span> <span class=o>=</span> <span class=p>{</span><span class=s2>&#34;Lua&#34;</span><span class=p>,</span> <span class=s2>&#34;Tutorial&#34;</span><span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=kr>function</span> <span class=nf>elementIterator</span><span class=p>(</span><span class=n>collection</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=kd>local</span> <span class=n>index</span> <span class=o>=</span> <span class=mi>0</span>
+</span></span><span class=line><span class=cl>    <span class=kd>local</span> <span class=n>count</span> <span class=o>=</span> <span class=o>#</span><span class=n>collection</span>
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>    <span class=c1>-- The closure function is returned</span>
+</span></span><span class=line><span class=cl>    <span class=kr>return</span> <span class=kr>function</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>        <span class=n>index</span> <span class=o>=</span> <span class=n>index</span> <span class=o>+</span> <span class=mi>1</span>
+</span></span><span class=line><span class=cl>        <span class=kr>if</span> <span class=n>index</span> <span class=o>&lt;=</span> <span class=n>count</span>
+</span></span><span class=line><span class=cl>        <span class=kr>then</span>
+</span></span><span class=line><span class=cl>            <span class=c1>--return the current element of the iterator</span>
+</span></span><span class=line><span class=cl>            <span class=kr>return</span> <span class=n>collection</span><span class=p>[</span><span class=n>index</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>        <span class=kr>end</span>
+</span></span><span class=line><span class=cl>    <span class=kr>end</span>
+</span></span><span class=line><span class=cl><span class=kr>end</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kr>for</span> <span class=n>element</span> <span class=kr>in</span> <span class=n>elementIterator</span><span class=p>(</span><span class=n>array</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=kr>do</span>
+</span></span><span class=line><span class=cl>    <span class=n>print</span><span class=p>(</span><span class=n>element</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=kr>end</span>
+</span></span></code></pre></div><ul><li>그냥 generic 방식 쓰자.</li></ul><h2 id=lua---tables>Lua - Tables<a hidden class=anchor aria-hidden=true href=#lua---tables>#</a></h2><ul><li><p>table은 array, dictionary, 함수, 기타 자료형의 모든 묶음이다.</p></li><li><p>example</p></li></ul><div class=highlight><pre tabindex=0 class=chroma><code class=language-lua data-lang=lua><span class=line><span class=cl><span class=c1>-- Simple empty table</span>
+</span></span><span class=line><span class=cl><span class=n>mytable</span> <span class=o>=</span> <span class=p>{}</span>
+</span></span><span class=line><span class=cl><span class=n>print</span><span class=p>(</span><span class=s2>&#34;Type of mytable is &#34;</span><span class=p>,</span> <span class=n>type</span><span class=p>(</span><span class=n>mytable</span><span class=p>))</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>mytable</span><span class=p>[</span><span class=mi>1</span><span class=p>]</span> <span class=o>=</span> <span class=s2>&#34;Lua&#34;</span>
+</span></span><span class=line><span class=cl><span class=n>mytable</span><span class=p>[</span><span class=s2>&#34;wow&#34;</span><span class=p>]</span> <span class=o>=</span> <span class=s2>&#34;Tutorial&#34;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>print</span><span class=p>(</span><span class=s2>&#34;mytable Element at index 1 is &#34;</span><span class=p>,</span> <span class=n>mytable</span> <span class=p>[</span><span class=mi>1</span><span class=p>])</span>
+</span></span><span class=line><span class=cl><span class=n>print</span><span class=p>(</span><span class=s2>&#34;mytable Element at index wow is &#34;</span><span class=p>,</span> <span class=n>mytable</span> <span class=p>[</span><span class=s2>&#34;wow&#34;</span><span class=p>])</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>-- alternatetable and mytable refers to same table</span>
+</span></span><span class=line><span class=cl><span class=n>alternatetable</span> <span class=o>=</span> <span class=n>mytable</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>print</span><span class=p>(</span><span class=s2>&#34;alternatetable Element at index 1 is &#34;</span><span class=p>,</span> <span class=n>alternatetable</span><span class=p>[</span><span class=mi>1</span><span class=p>])</span>
+</span></span><span class=line><span class=cl><span class=n>print</span><span class=p>(</span><span class=s2>&#34;alternatetable Element at index wow is &#34;</span><span class=p>,</span> <span class=n>alternatetable</span><span class=p>[</span><span class=s2>&#34;wow&#34;</span><span class=p>])</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>alternatetable</span><span class=p>[</span><span class=s2>&#34;wow&#34;</span><span class=p>]</span> <span class=o>=</span> <span class=s2>&#34;I changed it&#34;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>print</span><span class=p>(</span><span class=s2>&#34;mytable Element at index wow is &#34;</span><span class=p>,</span> <span class=n>mytable</span><span class=p>[</span><span class=s2>&#34;wow&#34;</span><span class=p>])</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>-- only variable released and and not table </span>
+</span></span><span class=line><span class=cl><span class=n>alternatetable</span> <span class=o>=</span> <span class=kc>nil</span>
+</span></span><span class=line><span class=cl><span class=n>print</span><span class=p>(</span><span class=s2>&#34;alternatetable is &#34;</span><span class=p>,</span> <span class=n>alternatetable</span><span class=p>)</span> <span class=c1>--&gt; alternatetable is nil</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>-- mytable is still accessible</span>
+</span></span><span class=line><span class=cl><span class=n>print</span><span class=p>(</span><span class=s2>&#34;mytable Element at index wow is &#34;</span><span class=p>,</span> <span class=n>mytable</span><span class=p>[</span><span class=s2>&#34;wow&#34;</span><span class=p>])</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>mytable</span> <span class=o>=</span> <span class=kc>nil</span>
+</span></span><span class=line><span class=cl><span class=n>print</span><span class=p>(</span><span class=s2>&#34;mytable is &#34;</span><span class=p>,</span> <span class=n>mytable</span><span class=p>)</span> <span class=c1>--&gt; mytable is nil</span>
+</span></span></code></pre></div><ul><li>Table Concatenation (요소 결합)</li></ul><div class=highlight><pre tabindex=0 class=chroma><code class=language-lua data-lang=lua><span class=line><span class=cl><span class=n>fruits</span> <span class=o>=</span> <span class=p>{</span><span class=s2>&#34;banana&#34;</span><span class=p>,</span> <span class=s2>&#34;orange&#34;</span><span class=p>,</span> <span class=s2>&#34;apple&#34;</span><span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=n>print</span><span class=p>(</span><span class=n>table.concat</span><span class=p>(</span><span class=n>fruits</span><span class=p>))</span> <span class=c1>--&gt; bananaorangeapple</span>
+</span></span><span class=line><span class=cl><span class=n>print</span><span class=p>(</span><span class=n>table.concat</span><span class=p>(</span><span class=n>fruits</span><span class=p>,</span> <span class=s2>&#34;, &#34;</span><span class=p>))</span> <span class=c1>--&gt; banana, orange, apple</span>
+</span></span><span class=line><span class=cl><span class=n>print</span><span class=p>(</span><span class=n>table.concat</span><span class=p>(</span><span class=n>fruits</span><span class=p>,</span> <span class=s2>&#34;, &#34;</span><span class=p>,</span> <span class=mi>2</span><span class=p>,</span><span class=mi>3</span><span class=p>))</span> <span class=c1>--&gt; orange, apple</span>
+</span></span></code></pre></div><ul><li>Table Insert and Remove</li></ul><div class=highlight><pre tabindex=0 class=chroma><code class=language-lua data-lang=lua><span class=line><span class=cl><span class=n>fruits</span> <span class=o>=</span> <span class=p>{</span><span class=s2>&#34;banana&#34;</span><span class=p>,</span> <span class=s2>&#34;orange&#34;</span><span class=p>,</span> <span class=s2>&#34;apple&#34;</span><span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=n>table.insert</span><span class=p>(</span><span class=n>fruits</span><span class=p>,</span> <span class=s2>&#34;mango&#34;</span><span class=p>)</span> <span class=c1>-- 맨 뒤에 붙임</span>
+</span></span><span class=line><span class=cl><span class=n>print</span><span class=p>(</span><span class=n>fruits</span><span class=p>[</span><span class=mi>4</span><span class=p>])</span> <span class=c1>--&gt; mango</span>
+</span></span><span class=line><span class=cl><span class=n>table.insert</span><span class=p>(</span><span class=n>fruits</span><span class=p>,</span> <span class=mi>2</span><span class=p>,</span> <span class=s2>&#34;grapes&#34;</span><span class=p>)</span> <span class=c1>-- index 2에 붙임</span>
+</span></span><span class=line><span class=cl><span class=n>print</span><span class=p>(</span><span class=n>fruits</span><span class=p>[</span><span class=mi>2</span><span class=p>])</span> <span class=c1>--&gt; grape</span>
+</span></span><span class=line><span class=cl><span class=n>print</span><span class=p>(</span><span class=n>table.maxn</span><span class=p>(</span><span class=n>fruits</span><span class=p>))</span>   <span class=c1>--&gt; 5</span>
+</span></span><span class=line><span class=cl><span class=n>print</span><span class=p>(</span><span class=n>fruits</span><span class=p>[</span><span class=mi>5</span><span class=p>])</span> <span class=c1>--&gt; mango</span>
+</span></span><span class=line><span class=cl><span class=n>table.remove</span><span class=p>(</span><span class=n>fruits</span><span class=p>)</span>    <span class=c1>-- 모든 요소 제거</span>
+</span></span><span class=line><span class=cl><span class=n>print</span><span class=p>(</span><span class=n>fruits</span><span class=p>[</span><span class=mi>5</span><span class=p>])</span> <span class=c1>--&gt; nil</span>
+</span></span></code></pre></div><ul><li>Sorting Tables</li></ul><div class=highlight><pre tabindex=0 class=chroma><code class=language-lua data-lang=lua><span class=line><span class=cl><span class=n>fruits</span> <span class=o>=</span> <span class=p>{</span><span class=s2>&#34;banana&#34;</span><span class=p>,</span> <span class=s2>&#34;orange&#34;</span><span class=p>,</span> <span class=s2>&#34;apple&#34;</span><span class=p>,</span> <span class=s2>&#34;grapes&#34;</span><span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=kr>for</span> <span class=n>k</span><span class=p>,</span><span class=n>v</span> <span class=kr>in</span> <span class=n>ipairs</span><span class=p>(</span><span class=n>fruits</span><span class=p>)</span> <span class=kr>do</span>
+</span></span><span class=line><span class=cl>    <span class=n>print</span><span class=p>(</span><span class=n>k</span><span class=p>,</span><span class=n>v</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=kr>end</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>table.sort</span><span class=p>(</span><span class=n>fruits</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=n>print</span><span class=p>(</span><span class=s2>&#34;sorted table&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kr>for</span> <span class=n>k</span><span class=p>,</span><span class=n>v</span> <span class=kr>in</span> <span class=n>ipairs</span><span class=p>(</span><span class=n>fruits</span><span class=p>)</span> <span class=kr>do</span>
+</span></span><span class=line><span class=cl>    <span class=n>print</span><span class=p>(</span><span class=n>k</span><span class=p>,</span><span class=n>v</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=kr>end</span>
+</span></span></code></pre></div><h2 id=lua---modules>Lua - Modules<a hidden class=anchor aria-hidden=true href=#lua---modules>#</a></h2><ul><li>외부 모듈을 사용하는 방법</li></ul><div class=highlight><pre tabindex=0 class=chroma><code class=language-lua data-lang=lua><span class=line><span class=cl><span class=c1>-- Method 1 (매우 정직한, 그대로의)</span>
+</span></span><span class=line><span class=cl><span class=n>require</span> <span class=s2>&#34;printFormatter&#34;</span>
+</span></span><span class=line><span class=cl><span class=n>printFormatter.simpleFormat</span><span class=p>(</span><span class=s2>&#34;test&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>-- Method 2 (난 이 방법이 마음에 든다)</span>
+</span></span><span class=line><span class=cl><span class=kd>local</span> <span class=n>formatter</span> <span class=o>=</span> <span class=n>require</span> <span class=s2>&#34;printFormatter&#34;</span>
+</span></span><span class=line><span class=cl><span class=n>formatter.simpleFormat</span><span class=p>(</span><span class=s2>&#34;test&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>-- Method 3 (함수 하나만 뽑아 쓸 때)</span>
+</span></span><span class=line><span class=cl><span class=n>require</span> <span class=s2>&#34;printFormatter&#34;</span>
+</span></span><span class=line><span class=cl><span class=kd>local</span> <span class=n>formatterFunction</span> <span class=o>=</span> <span class=n>printFormatter.simpleFormat</span>
+</span></span><span class=line><span class=cl><span class=n>formatterFunction</span><span class=p>(</span><span class=s2>&#34;test&#34;</span><span class=p>)</span>
+</span></span></code></pre></div><ul><li>모듈 작성하기</li></ul><div class=highlight><pre tabindex=0 class=chroma><code class=language-lua data-lang=lua><span class=line><span class=cl><span class=c1>-- mymath.lua</span>
+</span></span><span class=line><span class=cl><span class=kd>local</span> <span class=n>mymath</span> <span class=o>=</span> <span class=p>{}</span>
+</span></span><span class=line><span class=cl><span class=kr>function</span> <span class=nc>mymath</span><span class=p>.</span><span class=nf>add</span><span class=p>(</span><span class=n>a</span><span class=p>,</span><span class=n>b</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=n>print</span><span class=p>(</span><span class=n>a</span><span class=o>+</span><span class=n>b</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=kr>end</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kr>function</span> <span class=nc>mymath</span><span class=p>.</span><span class=nf>sub</span><span class=p>(</span><span class=n>a</span><span class=p>,</span><span class=n>b</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=n>print</span><span class=p>(</span><span class=n>a</span><span class=o>-</span><span class=n>b</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=kr>end</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kr>function</span> <span class=nc>mymath</span><span class=p>.</span><span class=nf>mul</span><span class=p>(</span><span class=n>a</span><span class=p>,</span><span class=n>b</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=n>print</span><span class=p>(</span><span class=n>a</span><span class=o>*</span><span class=n>b</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=kr>end</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kr>function</span> <span class=nc>mymath</span><span class=p>.</span><span class=nf>div</span><span class=p>(</span><span class=n>a</span><span class=p>,</span><span class=n>b</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=n>print</span><span class=p>(</span><span class=n>a</span><span class=o>/</span><span class=n>b</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=kr>end</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kr>return</span> <span class=n>mymath</span>
+</span></span></code></pre></div><ul><li>모듈 사용하기</li></ul><div class=highlight><pre tabindex=0 class=chroma><code class=language-lua data-lang=lua><span class=line><span class=cl><span class=c1>-- main.lua</span>
+</span></span><span class=line><span class=cl><span class=n>mymath</span> <span class=o>=</span> <span class=n>require</span><span class=p>(</span><span class=s2>&#34;mymath&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=n>mymath.add</span><span class=p>(</span><span class=mi>10</span><span class=p>,</span><span class=mi>20</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=n>mymath.sub</span><span class=p>(</span><span class=mi>30</span><span class=p>,</span><span class=mi>20</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=n>mymath.mul</span><span class=p>(</span><span class=mi>10</span><span class=p>,</span><span class=mi>20</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=n>mymath.div</span><span class=p>(</span><span class=mi>30</span><span class=p>,</span><span class=mi>20</span><span class=p>)</span>
+</span></span></code></pre></div><ul><li>주의 사항<ul><li><code>mymath.lua</code> 모듈파일과 <code>main.lua</code>는 같은 디렉토리에 있어야 한다.</li><li>모듈의 이름과 모듈파일의 이름은 같아야 한다.</li></ul></li></ul><h2 id=lua---metatables>Lua - Metatables<a hidden class=anchor aria-hidden=true href=#lua---metatables>#</a></h2><ul><li><code>__index</code></li></ul><div class=highlight><pre tabindex=0 class=chroma><code class=language-lua data-lang=lua><span class=line><span class=cl><span class=n>mytable</span> <span class=o>=</span> <span class=n>setmetatable</span><span class=p>({</span><span class=n>key1</span> <span class=o>=</span> <span class=s2>&#34;value1&#34;</span><span class=p>},</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=n>__index</span> <span class=o>=</span> <span class=kr>function</span><span class=p>(</span><span class=n>mytable</span><span class=p>,</span> <span class=n>key</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>        <span class=kr>if</span> <span class=n>key</span> <span class=o>==</span> <span class=s2>&#34;key2&#34;</span> <span class=kr>then</span>
+</span></span><span class=line><span class=cl>            <span class=kr>return</span> <span class=s2>&#34;metatablevalue&#34;</span>
+</span></span><span class=line><span class=cl>        <span class=kr>else</span>
+</span></span><span class=line><span class=cl>            <span class=kr>return</span> <span class=n>mytable</span><span class=p>[</span><span class=n>key</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>        <span class=kr>end</span>
+</span></span><span class=line><span class=cl>    <span class=kr>end</span>
+</span></span><span class=line><span class=cl><span class=p>})</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>-- simple version</span>
+</span></span><span class=line><span class=cl><span class=n>newtable</span> <span class=o>=</span> <span class=n>setmetatable</span><span class=p>({</span><span class=n>key1</span> <span class=o>=</span> <span class=s2>&#34;value1&#34;</span><span class=p>},</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span> <span class=n>__index</span> <span class=o>=</span> <span class=p>{</span><span class=n>key2</span> <span class=o>=</span> <span class=s2>&#34;metatablevalue&#34;</span><span class=p>}}</span> <span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>print</span><span class=p>(</span><span class=n>mytable.key1</span><span class=p>,</span> <span class=n>mytable.key2</span><span class=p>)</span>   <span class=c1>--&gt; value1 metatablevalue</span>
+</span></span><span class=line><span class=cl><span class=n>print</span><span class=p>(</span><span class=n>newtable.key1</span><span class=p>,</span> <span class=n>newtable.key2</span><span class=p>)</span>   <span class=c1>--&gt; value1 metatablevalue</span>
+</span></span></code></pre></div><ul><li><code>__newindex</code></li></ul><div class=highlight><pre tabindex=0 class=chroma><code class=language-lua data-lang=lua><span class=line><span class=cl><span class=n>mymetatable</span> <span class=o>=</span> <span class=p>{}</span>
+</span></span><span class=line><span class=cl><span class=n>mytable</span> <span class=o>=</span> <span class=n>setmetatable</span><span class=p>({</span><span class=n>key1</span> <span class=o>=</span> <span class=s2>&#34;value1&#34;</span><span class=p>},</span> <span class=p>{</span> <span class=n>__newindex</span> <span class=o>=</span> <span class=n>mymetatable</span><span class=p>})</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>print</span><span class=p>(</span><span class=n>mytable.key1</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>mytable.newkey</span> <span class=o>=</span> <span class=s2>&#34;new value 2&#34;</span>
+</span></span><span class=line><span class=cl><span class=n>print</span><span class=p>(</span><span class=n>mytable.newkey</span><span class=p>,</span><span class=n>mymetatable.newkey</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>mytable.key1</span> <span class=o>=</span> <span class=s2>&#34;new  value 1&#34;</span>
+</span></span><span class=line><span class=cl><span class=n>print</span><span class=p>(</span><span class=n>mytable.key1</span><span class=p>,</span><span class=n>mymetatable.newkey1</span><span class=p>)</span>
+</span></span></code></pre></div><ul><li><code>__newindex</code> another example</li></ul><div class=highlight><pre tabindex=0 class=chroma><code class=language-lua data-lang=lua><span class=line><span class=cl><span class=n>mytable</span> <span class=o>=</span> <span class=n>setmetatable</span><span class=p>({</span><span class=n>key1</span> <span class=o>=</span> <span class=s2>&#34;value1&#34;</span><span class=p>},</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>   <span class=n>__newindex</span> <span class=o>=</span> <span class=kr>function</span><span class=p>(</span><span class=n>mytable</span><span class=p>,</span> <span class=n>key</span><span class=p>,</span> <span class=n>value</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>      <span class=n>rawset</span><span class=p>(</span><span class=n>mytable</span><span class=p>,</span> <span class=n>key</span><span class=p>,</span> <span class=s2>&#34;</span><span class=se>\&#34;</span><span class=s2>&#34;</span><span class=o>..</span><span class=n>value</span><span class=o>..</span><span class=s2>&#34;</span><span class=se>\&#34;</span><span class=s2>&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>   <span class=kr>end</span>
+</span></span><span class=line><span class=cl><span class=p>})</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>mytable.key1</span> <span class=o>=</span> <span class=s2>&#34;new value&#34;</span>
+</span></span><span class=line><span class=cl><span class=n>mytable.key2</span> <span class=o>=</span> <span class=mi>4</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>print</span><span class=p>(</span><span class=n>mytable.key1</span><span class=p>,</span><span class=n>mytable.key2</span><span class=p>)</span>
+</span></span></code></pre></div><ul><li>Adding Operator Behavior to Tables - 테이블끼리 더하기</li></ul><div class=highlight><pre tabindex=0 class=chroma><code class=language-lua data-lang=lua><span class=line><span class=cl><span class=n>mytable</span> <span class=o>=</span> <span class=n>setmetatable</span><span class=p>({</span> <span class=mi>1</span><span class=p>,</span> <span class=mi>2</span><span class=p>,</span> <span class=mi>3</span> <span class=p>},</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>   <span class=n>__add</span> <span class=o>=</span> <span class=kr>function</span><span class=p>(</span><span class=n>mytable</span><span class=p>,</span> <span class=n>newtable</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>	
+</span></span><span class=line><span class=cl>      <span class=kr>for</span> <span class=n>i</span> <span class=o>=</span> <span class=mi>1</span><span class=p>,</span> <span class=n>table.maxn</span><span class=p>(</span><span class=n>newtable</span><span class=p>)</span> <span class=kr>do</span>
+</span></span><span class=line><span class=cl>         <span class=n>table.insert</span><span class=p>(</span><span class=n>mytable</span><span class=p>,</span> <span class=n>table.maxn</span><span class=p>(</span><span class=n>mytable</span><span class=p>)</span><span class=o>+</span><span class=mi>1</span><span class=p>,</span><span class=n>newtable</span><span class=p>[</span><span class=n>i</span><span class=p>])</span>
+</span></span><span class=line><span class=cl>      <span class=kr>end</span>
+</span></span><span class=line><span class=cl>      <span class=kr>return</span> <span class=n>mytable</span>
+</span></span><span class=line><span class=cl>   <span class=kr>end</span>
+</span></span><span class=line><span class=cl><span class=p>})</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>secondtable</span> <span class=o>=</span> <span class=p>{</span><span class=mi>4</span><span class=p>,</span><span class=mi>5</span><span class=p>,</span><span class=mi>6</span><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>mytable</span> <span class=o>=</span> <span class=n>mytable</span> <span class=o>+</span> <span class=n>secondtable</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kr>for</span> <span class=n>k</span><span class=p>,</span><span class=n>v</span> <span class=kr>in</span> <span class=n>ipairs</span><span class=p>(</span><span class=n>mytable</span><span class=p>)</span> <span class=kr>do</span>
+</span></span><span class=line><span class=cl>   <span class=n>print</span><span class=p>(</span><span class=n>k</span><span class=p>,</span><span class=n>v</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=kr>end</span>
+</span></span></code></pre></div><ul><li><p>Table operators</p><ul><li><code>__add</code> - <code>+</code></li><li><code>__sub</code> - <code>-</code></li><li><code>__mul</code> - <code>*</code></li><li><code>__div</code> - <code>/</code></li><li><code>__mod</code> - <code>%</code></li><li><code>__unm</code> - <code>-</code></li><li><code>__concat</code> - <code>..</code></li><li><code>__eq</code> - <code>==</code></li><li><code>__lt</code> - <code>&lt;</code></li><li><code>__le</code> - <code>&lt;=</code></li></ul></li><li><p><code>__call</code></p></li></ul><div class=highlight><pre tabindex=0 class=chroma><code class=language-lua data-lang=lua><span class=line><span class=cl><span class=n>mytable</span> <span class=o>=</span> <span class=n>setmetatable</span><span class=p>({</span><span class=mi>10</span><span class=p>},</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>   <span class=n>__call</span> <span class=o>=</span> <span class=kr>function</span><span class=p>(</span><span class=n>mytable</span><span class=p>,</span> <span class=n>newtable</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>   <span class=n>sum</span> <span class=o>=</span> <span class=mi>0</span>
+</span></span><span class=line><span class=cl>	
+</span></span><span class=line><span class=cl>      <span class=kr>for</span> <span class=n>i</span> <span class=o>=</span> <span class=mi>1</span><span class=p>,</span> <span class=n>table.maxn</span><span class=p>(</span><span class=n>mytable</span><span class=p>)</span> <span class=kr>do</span>
+</span></span><span class=line><span class=cl>         <span class=n>sum</span> <span class=o>=</span> <span class=n>sum</span> <span class=o>+</span> <span class=n>mytable</span><span class=p>[</span><span class=n>i</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>      <span class=kr>end</span>
+</span></span><span class=line><span class=cl>	
+</span></span><span class=line><span class=cl>      <span class=kr>for</span> <span class=n>i</span> <span class=o>=</span> <span class=mi>1</span><span class=p>,</span> <span class=n>table.maxn</span><span class=p>(</span><span class=n>newtable</span><span class=p>)</span> <span class=kr>do</span>
+</span></span><span class=line><span class=cl>         <span class=n>sum</span> <span class=o>=</span> <span class=n>sum</span> <span class=o>+</span> <span class=n>newtable</span><span class=p>[</span><span class=n>i</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>      <span class=kr>end</span>
+</span></span><span class=line><span class=cl>	
+</span></span><span class=line><span class=cl>      <span class=kr>return</span> <span class=n>sum</span>
+</span></span><span class=line><span class=cl>   <span class=kr>end</span>
+</span></span><span class=line><span class=cl><span class=p>})</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>newtable</span> <span class=o>=</span> <span class=p>{</span><span class=mi>10</span><span class=p>,</span><span class=mi>20</span><span class=p>,</span><span class=mi>30</span><span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=n>print</span><span class=p>(</span><span class=n>mytable</span><span class=p>(</span><span class=n>newtable</span><span class=p>))</span>    <span class=c1>--&gt; 70</span>
+</span></span></code></pre></div><ul><li><code>__tostring</code></li></ul><div class=highlight><pre tabindex=0 class=chroma><code class=language-lua data-lang=lua><span class=line><span class=cl><span class=n>mytable</span> <span class=o>=</span> <span class=n>setmetatable</span><span class=p>({</span> <span class=mi>10</span><span class=p>,</span> <span class=mi>20</span><span class=p>,</span> <span class=mi>30</span> <span class=p>},</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>   <span class=n>__tostring</span> <span class=o>=</span> <span class=kr>function</span><span class=p>(</span><span class=n>mytable</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>   <span class=n>sum</span> <span class=o>=</span> <span class=mi>0</span>
+</span></span><span class=line><span class=cl>	
+</span></span><span class=line><span class=cl>      <span class=kr>for</span> <span class=n>k</span><span class=p>,</span> <span class=n>v</span> <span class=kr>in</span> <span class=n>pairs</span><span class=p>(</span><span class=n>mytable</span><span class=p>)</span> <span class=kr>do</span>
+</span></span><span class=line><span class=cl>         <span class=n>sum</span> <span class=o>=</span> <span class=n>sum</span> <span class=o>+</span> <span class=n>v</span>
+</span></span><span class=line><span class=cl>      <span class=kr>end</span>
+</span></span><span class=line><span class=cl>		
+</span></span><span class=line><span class=cl>      <span class=kr>return</span> <span class=s2>&#34;The sum of values in the table is &#34;</span> <span class=o>..</span> <span class=n>sum</span>
+</span></span><span class=line><span class=cl>   <span class=kr>end</span>
+</span></span><span class=line><span class=cl><span class=p>})</span>
+</span></span><span class=line><span class=cl><span class=n>print</span><span class=p>(</span><span class=n>mytable</span><span class=p>)</span>  <span class=c1>--&gt; The sum of values in the table is 60</span>
+</span></span></code></pre></div><h2 id=lua---coroutines>Lua - Coroutines<a hidden class=anchor aria-hidden=true href=#lua---coroutines>#</a></h2><ul><li>코루틴 정의: 이해 못해서 넘어감</li></ul><blockquote><p>Coroutines are collaborative in nature, which allows two or more methods to execute in a controlled manner. With coroutines, at any given time, only one coroutine runs and this running coroutine only suspends its execution when it explicitly requests to be suspended.</p></blockquote><ul><li>Example</li></ul><div class=highlight><pre tabindex=0 class=chroma><code class=language-lua data-lang=lua><span class=line><span class=cl><span class=n>co</span> <span class=o>=</span> <span class=n>coroutine.create</span><span class=p>(</span>
+</span></span><span class=line><span class=cl>    <span class=kr>function</span> <span class=p>(</span><span class=n>value1</span><span class=p>,</span> <span class=n>value2</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>        <span class=kd>local</span> <span class=n>tempvar3</span> <span class=o>=</span> <span class=mi>10</span>
+</span></span><span class=line><span class=cl>        <span class=n>print</span><span class=p>(</span><span class=s2>&#34;coroutine section 1&#34;</span><span class=p>,</span> <span class=n>value1</span><span class=p>,</span> <span class=n>value2</span><span class=p>,</span> <span class=n>tempvar3</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>        
+</span></span><span class=line><span class=cl>        <span class=kd>local</span> <span class=n>tempvar1</span> <span class=o>=</span> <span class=n>coroutine.yield</span><span class=p>(</span><span class=n>value1</span><span class=o>+</span><span class=mi>1</span><span class=p>,</span> <span class=n>value2</span><span class=o>+</span><span class=mi>1</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>        <span class=n>tempvar3</span> <span class=o>=</span> <span class=n>tempvar3</span> <span class=o>+</span> <span class=n>value1</span>
+</span></span><span class=line><span class=cl>        <span class=n>print</span><span class=p>(</span><span class=s2>&#34;coroutine section 2&#34;</span><span class=p>,</span> <span class=n>tempvar1</span><span class=p>,</span> <span class=n>tempvar2</span><span class=p>,</span> <span class=n>tempvar3</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>        
+</span></span><span class=line><span class=cl>        <span class=kd>local</span> <span class=n>tempvar1</span><span class=p>,</span> <span class=n>tempvar2</span> <span class=o>=</span> <span class=n>coroutine.yield</span><span class=p>(</span><span class=n>value1</span><span class=o>+</span><span class=n>value2</span><span class=p>,</span> <span class=n>value1</span><span class=o>-</span><span class=n>value2</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>        <span class=n>tempvar3</span> <span class=o>=</span> <span class=n>tempvar3</span> <span class=o>+</span> <span class=n>value1</span>
+</span></span><span class=line><span class=cl>        <span class=n>print</span><span class=p>(</span><span class=s2>&#34;coroutine section 3&#34;</span><span class=p>,</span> <span class=n>tempvar1</span><span class=p>,</span> <span class=n>tempvar2</span><span class=p>,</span> <span class=n>tempvar3</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>        <span class=kr>return</span> <span class=n>value2</span><span class=p>,</span> <span class=s2>&#34;end&#34;</span>
+</span></span><span class=line><span class=cl>    <span class=kr>end</span>
+</span></span><span class=line><span class=cl><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>print</span><span class=p>(</span><span class=s2>&#34;main&#34;</span><span class=p>,</span> <span class=n>coroutine.resume</span><span class=p>(</span><span class=n>co</span><span class=p>,</span> <span class=mi>3</span><span class=p>,</span> <span class=mi>2</span><span class=p>)</span> <span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=n>print</span><span class=p>(</span><span class=s2>&#34;main&#34;</span><span class=p>,</span> <span class=n>coroutine.resume</span><span class=p>(</span><span class=n>co</span><span class=p>,</span> <span class=mi>12</span><span class=p>,</span> <span class=mi>14</span><span class=p>)</span> <span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=n>print</span><span class=p>(</span><span class=s2>&#34;main&#34;</span><span class=p>,</span> <span class=n>coroutine.resume</span><span class=p>(</span><span class=n>co</span><span class=p>,</span> <span class=mi>5</span><span class=p>,</span> <span class=mi>6</span><span class=p>)</span> <span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=n>print</span><span class=p>(</span><span class=s2>&#34;main&#34;</span><span class=p>,</span> <span class=n>coroutine.resume</span><span class=p>(</span><span class=n>co</span><span class=p>,</span> <span class=mi>10</span><span class=p>,</span> <span class=mi>20</span><span class=p>)</span> <span class=p>)</span>
+</span></span><span class=line><span class=cl>    
+</span></span></code></pre></div><ul><li>Example2</li></ul><div class=highlight><pre tabindex=0 class=chroma><code class=language-lua data-lang=lua><span class=line><span class=cl><span class=kr>function</span> <span class=nf>getNumber</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>   <span class=kd>local</span> <span class=kr>function</span> <span class=nf>getNumberHelper</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>      <span class=n>co</span> <span class=o>=</span> <span class=n>coroutine.create</span><span class=p>(</span><span class=kr>function</span> <span class=p>()</span>
+</span></span><span class=line><span class=cl>      <span class=n>coroutine.yield</span><span class=p>(</span><span class=mi>1</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>      <span class=n>coroutine.yield</span><span class=p>(</span><span class=mi>2</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>      <span class=n>coroutine.yield</span><span class=p>(</span><span class=mi>3</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>      <span class=n>coroutine.yield</span><span class=p>(</span><span class=mi>4</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>      <span class=n>coroutine.yield</span><span class=p>(</span><span class=mi>5</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>      <span class=kr>end</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>      <span class=kr>return</span> <span class=n>co</span>
+</span></span><span class=line><span class=cl>   <span class=kr>end</span>
+</span></span><span class=line><span class=cl>	
+</span></span><span class=line><span class=cl>   <span class=kr>if</span><span class=p>(</span><span class=n>numberHelper</span><span class=p>)</span> <span class=kr>then</span>
+</span></span><span class=line><span class=cl>      <span class=n>status</span><span class=p>,</span> <span class=n>number</span> <span class=o>=</span> <span class=n>coroutine.resume</span><span class=p>(</span><span class=n>numberHelper</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>		
+</span></span><span class=line><span class=cl>      <span class=kr>if</span> <span class=n>coroutine.status</span><span class=p>(</span><span class=n>numberHelper</span><span class=p>)</span> <span class=o>==</span> <span class=s2>&#34;dead&#34;</span> <span class=kr>then</span>
+</span></span><span class=line><span class=cl>         <span class=n>numberHelper</span> <span class=o>=</span> <span class=n>getNumberHelper</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>         <span class=n>status</span><span class=p>,</span> <span class=n>number</span> <span class=o>=</span> <span class=n>coroutine.resume</span><span class=p>(</span><span class=n>numberHelper</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>      <span class=kr>end</span>
+</span></span><span class=line><span class=cl>		
+</span></span><span class=line><span class=cl>      <span class=kr>return</span> <span class=n>number</span>
+</span></span><span class=line><span class=cl>   <span class=kr>else</span>
+</span></span><span class=line><span class=cl>      <span class=n>numberHelper</span> <span class=o>=</span> <span class=n>getNumberHelper</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>      <span class=n>status</span><span class=p>,</span> <span class=n>number</span> <span class=o>=</span> <span class=n>coroutine.resume</span><span class=p>(</span><span class=n>numberHelper</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>      <span class=kr>return</span> <span class=n>number</span>
+</span></span><span class=line><span class=cl>   <span class=kr>end</span>
+</span></span><span class=line><span class=cl>	
+</span></span><span class=line><span class=cl><span class=kr>end</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kr>for</span> <span class=n>index</span> <span class=o>=</span> <span class=mi>1</span><span class=p>,</span> <span class=mi>10</span> <span class=kr>do</span>
+</span></span><span class=line><span class=cl>   <span class=n>print</span><span class=p>(</span><span class=n>index</span><span class=p>,</span> <span class=n>getNumber</span><span class=p>())</span>
+</span></span><span class=line><span class=cl><span class=kr>end</span>
+</span></span></code></pre></div><h2 id=lua---file-io>Lua - File I/O<a hidden class=anchor aria-hidden=true href=#lua---file-io>#</a></h2><ul><li>Implicit File Descriptors</li></ul><div class=highlight><pre tabindex=0 class=chroma><code class=language-lua data-lang=lua><span class=line><span class=cl><span class=c1>-- opens a file in read</span>
+</span></span><span class=line><span class=cl><span class=n>file</span> <span class=o>=</span> <span class=n>io.open</span><span class=p>(</span><span class=s1>&#39;test.lua&#39;</span><span class=p>,</span> <span class=s1>&#39;r&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=c1>-- sets the default input file as test.lua</span>
+</span></span><span class=line><span class=cl><span class=n>io.input</span><span class=p>(</span><span class=n>file</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=c1>-- prints the first line of the file</span>
+</span></span><span class=line><span class=cl><span class=n>print</span><span class=p>(</span><span class=n>io.read</span><span class=p>())</span>
+</span></span><span class=line><span class=cl><span class=c1>-- closes the open File</span>
+</span></span><span class=line><span class=cl><span class=n>io.close</span><span class=p>(</span><span class=n>fiel</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=c1>-- Opens a file in append Modules</span>
+</span></span><span class=line><span class=cl><span class=n>file</span> <span class=o>=</span> <span class=n>io.open</span><span class=p>(</span><span class=s1>&#39;test.lua&#39;</span><span class=p>,</span><span class=s1>&#39;a&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=c1>-- sets the default output file as test.lua</span>
+</span></span><span class=line><span class=cl><span class=n>io.output</span><span class=p>(</span><span class=n>file</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=c1>-- appends a word test to the last line of the file</span>
+</span></span><span class=line><span class=cl><span class=n>io.write</span><span class=p>(</span><span class=s1>&#39;-- End of the test.lua file&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=c1>-- closes the open file</span>
+</span></span><span class=line><span class=cl><span class=n>io.close</span><span class=p>(</span><span class=n>file</span><span class=p>)</span>
+</span></span></code></pre></div><ul><li>Explicit File Descriptors</li></ul><div class=highlight><pre tabindex=0 class=chroma><code class=language-lua data-lang=lua><span class=line><span class=cl><span class=c1>-- Opens a file in read mode </span>
+</span></span><span class=line><span class=cl><span class=n>file</span> <span class=o>=</span> <span class=n>io.open</span><span class=p>(</span><span class=s1>&#39;test.lua&#39;</span><span class=p>,</span> <span class=s1>&#39;r&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=c1>-- prints the first line of the file </span>
+</span></span><span class=line><span class=cl><span class=n>print</span><span class=p>(</span><span class=n>file</span><span class=p>:</span><span class=n>read</span><span class=p>())</span>
+</span></span><span class=line><span class=cl><span class=c1>-- closes the opended file</span>
+</span></span><span class=line><span class=cl><span class=n>file</span><span class=p>:</span><span class=n>colse</span><span class=p>()</span>
+</span></span><span class=line><span class=cl><span class=c1>-- Opens a file in append mode</span>
+</span></span><span class=line><span class=cl><span class=n>file</span> <span class=o>=</span> <span class=n>io.open</span><span class=p>(</span><span class=s1>&#39;test.lua&#39;</span><span class=p>,</span><span class=s1>&#39;a&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=c1>-- appends a word test to the last line of the file</span>
+</span></span><span class=line><span class=cl><span class=n>file</span><span class=p>:</span><span class=n>write</span><span class=p>(</span><span class=s1>&#39;--test&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=c1>-- closes the open file</span>
+</span></span><span class=line><span class=cl><span class=n>file</span><span class=p>:</span><span class=n>colse</span><span class=p>()</span>
+</span></span></code></pre></div><ul><li>File Seek and read</li></ul><div class=highlight><pre tabindex=0 class=chroma><code class=language-lua data-lang=lua><span class=line><span class=cl><span class=c1>-- Opens a file in read</span>
+</span></span><span class=line><span class=cl><span class=n>file</span> <span class=o>=</span> <span class=n>io.open</span><span class=p>(</span><span class=s1>&#39;test.lua&#39;</span><span class=p>,</span> <span class=s1>&#39;r&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=n>file</span><span class=p>:</span><span class=n>seek</span><span class=p>(</span><span class=s1>&#39;end&#39;</span><span class=p>,</span><span class=o>-</span><span class=mi>25</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=n>print</span><span class=p>(</span><span class=n>file</span><span class=p>:</span><span class=n>read</span><span class=p>(</span><span class=s1>&#39;*a&#39;</span><span class=p>))</span>
+</span></span><span class=line><span class=cl><span class=c1>-- closes the opened file</span>
+</span></span><span class=line><span class=cl><span class=n>file</span><span class=p>:</span><span class=n>close</span><span class=p>()</span>
+</span></span></code></pre></div><h2 id=lua---error-handling>Lua - Error Handling<a hidden class=anchor aria-hidden=true href=#lua---error-handling>#</a></h2><ul><li>Syntax Errors</li></ul><div class=highlight><pre tabindex=0 class=chroma><code class=language-lua data-lang=lua><span class=line><span class=cl><span class=kr>for</span> <span class=n>a</span> <span class=o>=</span> <span class=mi>1</span><span class=p>,</span><span class=mi>10</span> 
+</span></span><span class=line><span class=cl>  <span class=n>print</span><span class=p>(</span><span class=n>a</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=kr>end</span>
+</span></span></code></pre></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-console data-lang=console><span class=line><span class=cl><span class=go>lua: test2.lua:2: &#39;do&#39; expected near &#39;print&#39;
+</span></span></span></code></pre></div><ul><li>Run Time Errors</li></ul><div class=highlight><pre tabindex=0 class=chroma><code class=language-lua data-lang=lua><span class=line><span class=cl><span class=kr>function</span> <span class=nf>add</span><span class=p>(</span><span class=n>a</span><span class=p>,</span><span class=n>b</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>  <span class=kr>return</span> <span class=n>a_b</span>
+</span></span><span class=line><span class=cl><span class=kr>end</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>add</span><span class=p>(</span><span class=mi>10</span><span class=p>)</span>
+</span></span></code></pre></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-console data-lang=console><span class=line><span class=cl><span class=go>lua: test2.lua:2: attempt to perform arithmetic on local &#39;b&#39; (a nil value)
+</span></span></span><span class=line><span class=cl><span class=go>stack traceback:
+</span></span></span><span class=line><span class=cl><span class=go>	test2.lua:2: in function &#39;add&#39;
+</span></span></span><span class=line><span class=cl><span class=go>	test2.lua:5: in main chunk
+</span></span></span><span class=line><span class=cl><span class=go>	[C]: ?
+</span></span></span></code></pre></div><ul><li>Assert and Error Functions</li></ul><div class=highlight><pre tabindex=0 class=chroma><code class=language-lua data-lang=lua><span class=line><span class=cl><span class=kd>local</span> <span class=kr>function</span> <span class=nf>add</span><span class=p>(</span><span class=n>a</span><span class=p>,</span><span class=n>b</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>  <span class=n>assert</span><span class=p>(</span><span class=n>type</span><span class=p>(</span><span class=n>a</span><span class=p>)</span> <span class=o>==</span> <span class=s1>&#39;number&#39;</span><span class=p>,</span> <span class=s1>&#39;a is not a number&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>  <span class=n>assert</span><span class=p>(</span><span class=n>type</span><span class=p>(</span><span class=n>b</span><span class=p>)</span> <span class=o>==</span> <span class=s1>&#39;number&#39;</span><span class=p>,</span> <span class=s1>&#39;b is not a number&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>  <span class=kr>return</span> <span class=n>a</span><span class=o>+</span><span class=n>b</span> 
+</span></span><span class=line><span class=cl><span class=kr>end</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>add</span><span class=p>(</span><span class=mi>10</span><span class=p>)</span>
+</span></span></code></pre></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-console data-lang=console><span class=line><span class=cl><span class=go>lua: test2.lua:3: b is not a number
+</span></span></span><span class=line><span class=cl><span class=go>stack traceback:
+</span></span></span><span class=line><span class=cl><span class=go>	[C]: in function &#39;assert&#39;
+</span></span></span><span class=line><span class=cl><span class=go>	test2.lua:3: in function &#39;add&#39;
+</span></span></span><span class=line><span class=cl><span class=go>	test2.lua:6: in main chunk
+</span></span></span><span class=line><span class=cl><span class=go>	[C]: ?
+</span></span></span></code></pre></div><ul><li>pcall</li></ul><div class=highlight><pre tabindex=0 class=chroma><code class=language-lua data-lang=lua><span class=line><span class=cl><span class=kr>function</span> <span class=nf>myfunction</span> <span class=p>()</span>
+</span></span><span class=line><span class=cl>  <span class=n>n</span> <span class=o>=</span> <span class=n>n</span><span class=o>/</span><span class=kc>nil</span>
+</span></span><span class=line><span class=cl><span class=kr>end</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kr>if</span> <span class=n>pcall</span><span class=p>(</span><span class=n>myfunction</span><span class=p>)</span> <span class=kr>then</span>
+</span></span><span class=line><span class=cl>  <span class=n>print</span><span class=p>(</span><span class=s2>&#34;Success&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=kr>else</span> 
+</span></span><span class=line><span class=cl>  <span class=n>print</span><span class=p>(</span><span class=s1>&#39;failure&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=kr>end</span>
+</span></span></code></pre></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-console data-lang=console><span class=line><span class=cl><span class=go>failure
+</span></span></span></code></pre></div><ul><li>xpcall</li></ul><div class=highlight><pre tabindex=0 class=chroma><code class=language-lua data-lang=lua><span class=line><span class=cl><span class=kr>function</span> <span class=nf>myfunction</span> <span class=p>()</span>
+</span></span><span class=line><span class=cl>  <span class=n>n</span> <span class=o>=</span> <span class=n>n</span><span class=o>/</span><span class=kc>nil</span>
+</span></span><span class=line><span class=cl><span class=kr>end</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kr>function</span> <span class=nf>myerrorhandler</span><span class=p>(</span><span class=n>err</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>  <span class=n>print</span><span class=p>(</span><span class=s1>&#39;Error:&#39;</span><span class=p>,</span><span class=n>err</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=kr>end</span>
+</span></span><span class=line><span class=cl><span class=n>stutus</span> <span class=o>=</span> <span class=n>xpcall</span><span class=p>(</span><span class=n>myfunction</span><span class=p>,</span> <span class=n>myerrorhandler</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=n>print</span><span class=p>(</span><span class=n>status</span><span class=p>)</span>
+</span></span></code></pre></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-console data-lang=console><span class=line><span class=cl><span class=go>ERROR:	test2.lua:2: attempt to perform arithmetic on global &#39;n&#39; (a nil value)
+</span></span></span><span class=line><span class=cl><span class=go>false
+</span></span></span></code></pre></div><h2 id=lua---debugging>Lua - Debugging<a hidden class=anchor aria-hidden=true href=#lua---debugging>#</a></h2><ul><li>Debugging Example</li></ul><div class=highlight><pre tabindex=0 class=chroma><code class=language-lua data-lang=lua><span class=line><span class=cl><span class=kr>function</span> <span class=nf>myfunction</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>  <span class=n>print</span><span class=p>(</span><span class=n>debug.traceback</span><span class=p>(</span><span class=s2>&#34;Stack trace&#34;</span><span class=p>))</span>
+</span></span><span class=line><span class=cl>  <span class=n>print</span><span class=p>(</span><span class=n>debug.getinfo</span><span class=p>(</span><span class=mi>1</span><span class=p>))</span>
+</span></span><span class=line><span class=cl>  <span class=n>print</span><span class=p>(</span><span class=s2>&#34;Stack trace end&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>  
+</span></span><span class=line><span class=cl>  <span class=kr>return</span> <span class=mi>10</span>
+</span></span><span class=line><span class=cl><span class=kr>end</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>myfunction</span><span class=p>()</span>
+</span></span><span class=line><span class=cl><span class=n>print</span><span class=p>(</span><span class=n>debug.getinfo</span><span class=p>(</span><span class=mi>1</span><span class=p>))</span>
+</span></span></code></pre></div><ul><li>Debugging Result</li></ul><pre tabindex=0><code>Stack trace
+stack traceback:
+	test2.lua:2: in function &#39;myfunction&#39;
+	test2.lua:8: in main chunk
+	[C]: ?
+table: 0054C6C8
+Stack trace end`
+</code></pre><ul><li>Debugging Example2</li></ul><div class=highlight><pre tabindex=0 class=chroma><code class=language-lua data-lang=lua><span class=line><span class=cl><span class=kr>function</span> <span class=nf>newCounter</span> <span class=p>()</span>
+</span></span><span class=line><span class=cl>   <span class=kd>local</span> <span class=n>n</span> <span class=o>=</span> <span class=mi>0</span>
+</span></span><span class=line><span class=cl>   <span class=kd>local</span> <span class=n>k</span> <span class=o>=</span> <span class=mi>0</span>
+</span></span><span class=line><span class=cl>	
+</span></span><span class=line><span class=cl>   <span class=kr>return</span> <span class=kr>function</span> <span class=p>()</span>
+</span></span><span class=line><span class=cl>      <span class=n>k</span> <span class=o>=</span> <span class=n>n</span>
+</span></span><span class=line><span class=cl>      <span class=n>n</span> <span class=o>=</span> <span class=n>n</span> <span class=o>+</span> <span class=mi>1</span>
+</span></span><span class=line><span class=cl>      <span class=kr>return</span> <span class=n>n</span>
+</span></span><span class=line><span class=cl>   <span class=kr>end</span>
+</span></span><span class=line><span class=cl>	
+</span></span><span class=line><span class=cl><span class=kr>end</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>counter</span> <span class=o>=</span> <span class=n>newCounter</span> <span class=p>()</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>print</span><span class=p>(</span><span class=n>counter</span><span class=p>())</span>
+</span></span><span class=line><span class=cl><span class=n>print</span><span class=p>(</span><span class=n>counter</span><span class=p>())</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kd>local</span> <span class=n>i</span> <span class=o>=</span> <span class=mi>1</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kr>repeat</span>
+</span></span><span class=line><span class=cl>   <span class=n>name</span><span class=p>,</span> <span class=n>val</span> <span class=o>=</span> <span class=n>debug.getupvalue</span><span class=p>(</span><span class=n>counter</span><span class=p>,</span> <span class=n>i</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>	
+</span></span><span class=line><span class=cl>   <span class=kr>if</span> <span class=n>name</span> <span class=kr>then</span>
+</span></span><span class=line><span class=cl>      <span class=n>print</span> <span class=p>(</span><span class=s2>&#34;index&#34;</span><span class=p>,</span> <span class=n>i</span><span class=p>,</span> <span class=n>name</span><span class=p>,</span> <span class=s2>&#34;=&#34;</span><span class=p>,</span> <span class=n>val</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>		
+</span></span><span class=line><span class=cl>      <span class=kr>if</span><span class=p>(</span><span class=n>name</span> <span class=o>==</span> <span class=s2>&#34;n&#34;</span><span class=p>)</span> <span class=kr>then</span>
+</span></span><span class=line><span class=cl>         <span class=n>debug.setupvalue</span> <span class=p>(</span><span class=n>counter</span><span class=p>,</span><span class=mi>2</span><span class=p>,</span><span class=mi>10</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>      <span class=kr>end</span>
+</span></span><span class=line><span class=cl>		
+</span></span><span class=line><span class=cl>      <span class=n>i</span> <span class=o>=</span> <span class=n>i</span> <span class=o>+</span> <span class=mi>1</span>
+</span></span><span class=line><span class=cl>   <span class=kr>end</span> <span class=c1>-- if</span>
+</span></span><span class=line><span class=cl>	
+</span></span><span class=line><span class=cl><span class=kr>until</span> <span class=ow>not</span> <span class=n>name</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>print</span><span class=p>(</span><span class=n>counter</span><span class=p>())</span>
+</span></span></code></pre></div><ul><li>Debugging Result2</li></ul><pre tabindex=0><code>1
+2
+index	1	k	=	1
+index	2	n	=	2
+11
+</code></pre><h2 id=lua---garbage-collection>Lua - Garbage Collection<a hidden class=anchor aria-hidden=true href=#lua---garbage-collection>#</a></h2><ul><li>Example</li></ul><div class=highlight><pre tabindex=0 class=chroma><code class=language-lua data-lang=lua><span class=line><span class=cl><span class=n>mytable</span> <span class=o>=</span> <span class=p>{</span><span class=s2>&#34;apple&#34;</span><span class=p>,</span> <span class=s2>&#34;orange&#34;</span><span class=p>,</span> <span class=s2>&#34;banana&#34;</span><span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=n>print</span><span class=p>(</span><span class=n>collectgarbage</span><span class=p>(</span><span class=s2>&#34;count&#34;</span><span class=p>))</span>
+</span></span><span class=line><span class=cl><span class=n>mytable</span> <span class=o>=</span> <span class=kc>nil</span>
+</span></span><span class=line><span class=cl><span class=n>print</span><span class=p>(</span><span class=n>collectgarbage</span><span class=p>(</span><span class=s2>&#34;count&#34;</span><span class=p>))</span>
+</span></span><span class=line><span class=cl><span class=n>print</span><span class=p>(</span><span class=n>collectgarbage</span><span class=p>(</span><span class=s2>&#34;collect&#34;</span><span class=p>))</span>
+</span></span><span class=line><span class=cl><span class=n>print</span><span class=p>(</span><span class=n>collectgarbage</span><span class=p>(</span><span class=s2>&#34;count&#34;</span><span class=p>))</span>
+</span></span></code></pre></div><ul><li>Result</li></ul><pre tabindex=0><code>23.1455078125   149
+23.2880859375   295
+0
+22.37109375     380
+</code></pre><h2 id=나머지>나머지<a hidden class=anchor aria-hidden=true href=#나머지>#</a></h2><ul><li><p>아래는 따로 독립적인 항목으로 분류하여 정리할 예정.</p></li><li><p>Lua - Debugging</p></li><li><p>Lua - Garbage Collection</p></li><li><p>Lua - Object Oriented</p></li><li><p>Lua - Web programming</p></li><li><p>Lua - Database Accessing</p></li><li><p>Lua - Game Programming</p></li></ul><h2 id=links>Links<a hidden class=anchor aria-hidden=true href=#links>#</a></h2><ul><li>This quide <a href=https://www.tutorialspoint.com/lua/lua_quick_guide.htm>https://www.tutorialspoint.com/lua/lua_quick_guide.htm</a></li><li>Pattern Matching <a href=https://sodocumentation.net/lua/topic/5829/pattern-matching>https://sodocumentation.net/lua/topic/5829/pattern-matching</a></li></ul></div><footer class=post-footer><ul class=post-tags><li><a href=https://neosolaris.github.io/tags/lua/>Lua</a></li><li><a href=https://neosolaris.github.io/tags/guide/>Guide</a></li></ul><nav class=paginav><a class=prev href=https://neosolaris.github.io/posts/nvim-tree/><span class=title>« Prev</span><br><span>nvim-tree - File Explorer</span>
+</a><a class=next href=https://neosolaris.github.io/posts/spacevim/><span class=title>Next »</span><br><span>SpaceVim - A community-driven vim distribution</span></a></nav><ul class=share-buttons><li><a target=_blank rel="noopener noreferrer" aria-label="share Lua Quick Guide - tutorialspoint on x" href="https://x.com/intent/tweet/?text=Lua%20Quick%20Guide%20-%20tutorialspoint&amp;url=https%3a%2f%2fneosolaris.github.io%2fposts%2flua-quick-quide%2f&amp;hashtags=lua%2cguide"><svg viewBox="0 0 512 512" height="30" width="30" fill="currentcolor"><path d="M512 62.554V449.446C512 483.97 483.97 512 449.446 512H62.554C28.03 512 0 483.97.0 449.446V62.554C0 28.03 28.029.0 62.554.0H449.446C483.971.0 512 28.03 512 62.554zM269.951 190.75 182.567 75.216H56L207.216 272.95 63.9 436.783h61.366L235.9 310.383l96.667 126.4H456L298.367 228.367l134-153.151H371.033zM127.633 110h36.468l219.38 290.065H349.5z"/></svg></a></li><li><a target=_blank rel="noopener noreferrer" aria-label="share Lua Quick Guide - tutorialspoint on linkedin" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fneosolaris.github.io%2fposts%2flua-quick-quide%2f&amp;title=Lua%20Quick%20Guide%20-%20tutorialspoint&amp;summary=Lua%20Quick%20Guide%20-%20tutorialspoint&amp;source=https%3a%2f%2fneosolaris.github.io%2fposts%2flua-quick-quide%2f"><svg viewBox="0 0 512 512" height="30" width="30" fill="currentcolor"><path d="M449.446.0C483.971.0 512 28.03 512 62.554v386.892C512 483.97 483.97 512 449.446 512H62.554c-34.524.0-62.554-28.03-62.554-62.554V62.554c0-34.524 28.029-62.554 62.554-62.554h386.892zM160.461 423.278V197.561h-75.04v225.717h75.04zm270.539.0V293.839c0-69.333-37.018-101.586-86.381-101.586-39.804.0-57.634 21.891-67.617 37.266v-31.958h-75.021c.995 21.181.0 225.717.0 225.717h75.02V297.222c0-6.748.486-13.492 2.474-18.315 5.414-13.475 17.767-27.434 38.494-27.434 27.135.0 38.007 20.707 38.007 51.037v120.768H431zM123.448 88.722C97.774 88.722 81 105.601 81 127.724c0 21.658 16.264 39.002 41.455 39.002h.484c26.165.0 42.452-17.344 42.452-39.002-.485-22.092-16.241-38.954-41.943-39.002z"/></svg></a></li><li><a target=_blank rel="noopener noreferrer" aria-label="share Lua Quick Guide - tutorialspoint on reddit" href="https://reddit.com/submit?url=https%3a%2f%2fneosolaris.github.io%2fposts%2flua-quick-quide%2f&title=Lua%20Quick%20Guide%20-%20tutorialspoint"><svg viewBox="0 0 512 512" height="30" width="30" fill="currentcolor"><path d="M449.446.0C483.971.0 512 28.03 512 62.554v386.892C512 483.97 483.97 512 449.446 512H62.554c-34.524.0-62.554-28.03-62.554-62.554V62.554c0-34.524 28.029-62.554 62.554-62.554h386.892zM446 265.638c0-22.964-18.616-41.58-41.58-41.58-11.211.0-21.361 4.457-28.841 11.666-28.424-20.508-67.586-33.757-111.204-35.278l18.941-89.121 61.884 13.157c.756 15.734 13.642 28.29 29.56 28.29 16.407.0 29.706-13.299 29.706-29.701.0-16.403-13.299-29.702-29.706-29.702-11.666.0-21.657 6.792-26.515 16.578l-69.105-14.69c-1.922-.418-3.939-.042-5.585 1.036-1.658 1.073-2.811 2.761-3.224 4.686l-21.152 99.438c-44.258 1.228-84.046 14.494-112.837 35.232-7.468-7.164-17.589-11.591-28.757-11.591-22.965.0-41.585 18.616-41.585 41.58.0 16.896 10.095 31.41 24.568 37.918-.639 4.135-.99 8.328-.99 12.576.0 63.977 74.469 115.836 166.33 115.836s166.334-51.859 166.334-115.836c0-4.218-.347-8.387-.977-12.493 14.564-6.47 24.735-21.034 24.735-38.001zM326.526 373.831c-20.27 20.241-59.115 21.816-70.534 21.816-11.428.0-50.277-1.575-70.522-21.82-3.007-3.008-3.007-7.882.0-10.889 3.003-2.999 7.882-3.003 10.885.0 12.777 12.781 40.11 17.317 59.637 17.317 19.522.0 46.86-4.536 59.657-17.321 3.016-2.999 7.886-2.995 10.885.008 3.008 3.011 3.003 7.882-.008 10.889zm-5.23-48.781c-16.373.0-29.701-13.324-29.701-29.698.0-16.381 13.328-29.714 29.701-29.714 16.378.0 29.706 13.333 29.706 29.714.0 16.374-13.328 29.698-29.706 29.698zM160.91 295.348c0-16.381 13.328-29.71 29.714-29.71 16.369.0 29.689 13.329 29.689 29.71.0 16.373-13.32 29.693-29.689 29.693-16.386.0-29.714-13.32-29.714-29.693z"/></svg></a></li><li><a target=_blank rel="noopener noreferrer" aria-label="share Lua Quick Guide - tutorialspoint on facebook" href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fneosolaris.github.io%2fposts%2flua-quick-quide%2f"><svg viewBox="0 0 512 512" height="30" width="30" fill="currentcolor"><path d="M449.446.0C483.971.0 512 28.03 512 62.554v386.892C512 483.97 483.97 512 449.446 512H342.978V319.085h66.6l12.672-82.621h-79.272v-53.617c0-22.603 11.073-44.636 46.58-44.636H425.6v-70.34s-32.71-5.582-63.982-5.582c-65.288.0-107.96 39.569-107.96 111.204v62.971h-72.573v82.621h72.573V512h-191.104c-34.524.0-62.554-28.03-62.554-62.554V62.554c0-34.524 28.029-62.554 62.554-62.554h386.892z"/></svg></a></li><li><a target=_blank rel="noopener noreferrer" aria-label="share Lua Quick Guide - tutorialspoint on whatsapp" href="https://api.whatsapp.com/send?text=Lua%20Quick%20Guide%20-%20tutorialspoint%20-%20https%3a%2f%2fneosolaris.github.io%2fposts%2flua-quick-quide%2f"><svg viewBox="0 0 512 512" height="30" width="30" fill="currentcolor"><path d="M449.446.0C483.971.0 512 28.03 512 62.554v386.892C512 483.97 483.97 512 449.446 512H62.554c-34.524.0-62.554-28.03-62.554-62.554V62.554c0-34.524 28.029-62.554 62.554-62.554h386.892zm-58.673 127.703c-33.842-33.881-78.847-52.548-126.798-52.568-98.799.0-179.21 80.405-179.249 179.234-.013 31.593 8.241 62.428 23.927 89.612l-25.429 92.884 95.021-24.925c26.181 14.28 55.659 21.807 85.658 21.816h.074c98.789.0 179.206-80.413 179.247-179.243.018-47.895-18.61-92.93-52.451-126.81zM263.976 403.485h-.06c-26.734-.01-52.954-7.193-75.828-20.767l-5.441-3.229-56.386 14.792 15.05-54.977-3.542-5.637c-14.913-23.72-22.791-51.136-22.779-79.287.033-82.142 66.867-148.971 149.046-148.971 39.793.014 77.199 15.531 105.329 43.692 28.128 28.16 43.609 65.592 43.594 105.4-.034 82.149-66.866 148.983-148.983 148.984zm81.721-111.581c-4.479-2.242-26.499-13.075-30.604-14.571-4.105-1.495-7.091-2.241-10.077 2.241-2.986 4.483-11.569 14.572-14.182 17.562-2.612 2.988-5.225 3.364-9.703 1.12-4.479-2.241-18.91-6.97-36.017-22.23C231.8 264.15 222.81 249.484 220.198 245s-.279-6.908 1.963-9.14c2.016-2.007 4.48-5.232 6.719-7.847 2.24-2.615 2.986-4.484 4.479-7.472 1.493-2.99.747-5.604-.374-7.846-1.119-2.241-10.077-24.288-13.809-33.256-3.635-8.733-7.327-7.55-10.077-7.688-2.609-.13-5.598-.158-8.583-.158-2.986.0-7.839 1.121-11.944 5.604-4.105 4.484-15.675 15.32-15.675 37.364.0 22.046 16.048 43.342 18.287 46.332 2.24 2.99 31.582 48.227 76.511 67.627 10.685 4.615 19.028 7.371 25.533 9.434 10.728 3.41 20.492 2.929 28.209 1.775 8.605-1.285 26.499-10.833 30.231-21.295 3.732-10.464 3.732-19.431 2.612-21.298-1.119-1.869-4.105-2.99-8.583-5.232z"/></svg></a></li><li><a target=_blank rel="noopener noreferrer" aria-label="share Lua Quick Guide - tutorialspoint on telegram" href="https://telegram.me/share/url?text=Lua%20Quick%20Guide%20-%20tutorialspoint&amp;url=https%3a%2f%2fneosolaris.github.io%2fposts%2flua-quick-quide%2f"><svg viewBox="2 2 28 28" height="30" width="30" fill="currentcolor"><path d="M26.49 29.86H5.5a3.37 3.37.0 01-2.47-1 3.35 3.35.0 01-1-2.47V5.48A3.36 3.36.0 013 3 3.37 3.37.0 015.5 2h21A3.38 3.38.0 0129 3a3.36 3.36.0 011 2.46V26.37a3.35 3.35.0 01-1 2.47 3.38 3.38.0 01-2.51 1.02zm-5.38-6.71a.79.79.0 00.85-.66L24.73 9.24a.55.55.0 00-.18-.46.62.62.0 00-.41-.17q-.08.0-16.53 6.11a.59.59.0 00-.41.59.57.57.0 00.43.52l4 1.24 1.61 4.83a.62.62.0 00.63.43.56.56.0 00.4-.17L16.54 20l4.09 3A.9.9.0 0021.11 23.15zM13.8 20.71l-1.21-4q8.72-5.55 8.78-5.55c.15.0.23.0.23.16a.18.18.0 010 .06s-2.51 2.3-7.52 6.8z"/></svg></a></li><li><a target=_blank rel="noopener noreferrer" aria-label="share Lua Quick Guide - tutorialspoint on ycombinator" href="https://news.ycombinator.com/submitlink?t=Lua%20Quick%20Guide%20-%20tutorialspoint&u=https%3a%2f%2fneosolaris.github.io%2fposts%2flua-quick-quide%2f"><svg width="30" height="30" viewBox="0 0 512 512" fill="currentcolor" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"><path d="M449.446.0C483.971.0 512 28.03 512 62.554V449.446C512 483.97 483.97 512 449.446 512H62.554C28.03 512 0 483.97.0 449.446V62.554C0 28.03 28.029.0 62.554.0H449.446zM183.8767 87.9921h-62.034L230.6673 292.4508V424.0079h50.6655V292.4508L390.1575 87.9921H328.1233L256 238.2489z"/></svg></a></li></ul></footer></article></main><footer class=footer><span>&copy; 2025 <a href=https://neosolaris.github.io/>Borisu Wiki Home</a></span> ·
+<span>Powered by
+<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
+        <a href=https://github.com/adityatelange/hugo-PaperMod/ rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg>
+</a><script>let menu=document.getElementById("menu");menu&&(menu.scrollLeft=localStorage.getItem("menu-scroll-position"),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}),document.querySelectorAll('a[href^="#"]').forEach(e=>{e.addEventListener("click",function(e){e.preventDefault();var t=this.getAttribute("href").substr(1);window.matchMedia("(prefers-reduced-motion: reduce)").matches?document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView({behavior:"smooth"}),t==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${t}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove("dark"),localStorage.setItem("pref-theme","light")):(document.body.classList.add("dark"),localStorage.setItem("pref-theme","dark"))})</script></body></html>

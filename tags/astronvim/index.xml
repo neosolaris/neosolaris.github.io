@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Astronvim on Borisu Wiki Home</title>
+    <link>https://neosolaris.github.io/tags/astronvim/</link>
+    <description>Recent content in Astronvim on Borisu Wiki Home</description>
+    <image>
+      <title>Borisu Wiki Home</title>
+      <url>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.147.2</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 03 Sep 2022 14:51:22 +0900</lastBuildDate>
+    <atom:link href="https://neosolaris.github.io/tags/astronvim/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AstroNvim</title>
+      <link>https://neosolaris.github.io/posts/astronvim/</link>
+      <pubDate>Sat, 03 Sep 2022 14:51:22 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/astronvim/</guid>
+      <description>&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;neovim(nvim)에 다양한 설정과 플러그인을 통하여 개발환경 IDE를 구성&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../lua&#34;&gt;Lua&lt;/a&gt; 를 기반으로 구성하였기 때문에 빠르고 쾌적하다.&lt;/li&gt;
+&lt;li&gt;자동완성, 파일탐색, 검색기능, snipet등 필요한 거의 모든 것이 기본 제공된다.&lt;/li&gt;
+&lt;li&gt;추가로 사용자 정의를 할 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;install&#34;&gt;Install&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; mv ~/.config/nvim ~/.config/nvim.bak  &lt;span class=&#34;c1&#34;&gt;# 기존 nvim 설정을 백업&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; mv ~/.local/share/nvim/site ~/.local/share/nvim/site.bak &lt;span class=&#34;c1&#34;&gt;# 기존 플러그인 백업&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; git clone https://github.com/AstroNvim/AstroNvim ~/.config/nvim &lt;span class=&#34;c1&#34;&gt;# 복사&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; nvim +PackerSync &lt;span class=&#34;c1&#34;&gt;# 설치&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;setup&#34;&gt;Setup&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Install LSP (Language Server Protocol) - 프로그래밍 언어 지원 설치&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;나중에 추가 설치시 &lt;code&gt;Space&lt;/code&gt; + &lt;code&gt;l&lt;/code&gt; + &lt;code&gt;I&lt;/code&gt; 맵키 사용&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;:LspInstall clangd&lt;/code&gt;                  - c, c++&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;:LspInstall rust-analyzer&lt;/code&gt;           - rust&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;:LspInstall luau-lsp&lt;/code&gt;                - lua&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;:LspInstall marksman&lt;/code&gt;                - markdown&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;:LspInstall jedi-language-server&lt;/code&gt;    - python3&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Install Language Parser&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

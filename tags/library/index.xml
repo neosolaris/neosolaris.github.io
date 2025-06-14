@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Library on Borisu Wiki Home</title>
+    <link>https://neosolaris.github.io/tags/library/</link>
+    <description>Recent content in Library on Borisu Wiki Home</description>
+    <image>
+      <title>Borisu Wiki Home</title>
+      <url>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.147.2</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 12 Oct 2022 17:27:21 +0900</lastBuildDate>
+    <atom:link href="https://neosolaris.github.io/tags/library/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>LuaFun - LuaJit Functional</title>
+      <link>https://neosolaris.github.io/posts/luafun/</link>
+      <pubDate>Wed, 12 Oct 2022 17:27:21 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/luafun/</guid>
+      <description>&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;LuaFun 정의 - LuaJit Hight Performance Functional Programming Library&lt;/li&gt;
+&lt;li&gt;luajit의 내장함수를 확장하여 다양한 프로그래밍을 돕는다.&lt;/li&gt;
+&lt;li&gt;하나씩 공부해서 활용하면 매우 강력한 툴이 될 것이다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;usage&#34;&gt;Usage&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;기본 사용법&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; git clone https://github.com/luafun/luafun.git
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; luafun
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; luajit -i 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;gp&#34;&gt;&amp;gt;&lt;/span&gt; -- Functional style
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;&amp;gt;&lt;/span&gt; require &lt;span class=&#34;s2&#34;&gt;&amp;#34;fun&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;&amp;gt;&lt;/span&gt; -- calculate sum&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;x &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; x^2 in 1..n&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;n&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;100&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;&amp;gt;&lt;/span&gt; print&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;reduce&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;operator.add, 0, map&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;function&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;x&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; x^2 end, range&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;n&lt;span class=&#34;o&#34;&gt;))))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;328350
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;gp&#34;&gt;&amp;gt;&lt;/span&gt; -- Object-oriented style
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;local&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;fun&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; require &lt;span class=&#34;s2&#34;&gt;&amp;#34;fun&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;&amp;gt;&lt;/span&gt; -- calculate sum&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;x &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; x^2 in 1..n&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;&amp;gt;&lt;/span&gt; print&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;fun.range&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;n&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;:map&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;function&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;x&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; x^2 end&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;:reduce&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;operator.add, 0&lt;span class=&#34;o&#34;&gt;))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;328350
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;using-the-library&#34;&gt;Using the Library&lt;/h2&gt;
+&lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;github &lt;a href=&#34;https://github.com/luafun/luafun&#34;&gt;https://github.com/luafun/luafun&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Document &lt;a href=&#34;https://luafun.github.io/&#34;&gt;https://luafun.github.io/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+  </channel>
+</rss>

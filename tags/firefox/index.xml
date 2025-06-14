@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Firefox on Borisu Wiki Home</title>
+    <link>https://neosolaris.github.io/tags/firefox/</link>
+    <description>Recent content in Firefox on Borisu Wiki Home</description>
+    <image>
+      <title>Borisu Wiki Home</title>
+      <url>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.147.2</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 26 Aug 2023 17:27:54 +0900</lastBuildDate>
+    <atom:link href="https://neosolaris.github.io/tags/firefox/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>vimium-c - Vim like Using firefox</title>
+      <link>https://neosolaris.github.io/posts/vimium-c/</link>
+      <pubDate>Sat, 26 Aug 2023 17:26:57 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/vimium-c/</guid>
+      <description>&lt;h2 id=&#34;설치&#34;&gt;설치&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;파이어폭스의 확장기능 검색 : vimium-c&lt;/li&gt;
+&lt;li&gt;플러그인 설치&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;사용법&#34;&gt;사용법&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;?&lt;/code&gt; : 도움말 보이기/숨기기&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Navigating the current Page:&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;?       show the help dialog for a list of all available keys
+h       scroll left
+j       scroll down
+k       scroll up
+l       scroll right
+gg      scroll to top of the page
+G       scroll to bottom of the page
+d       scroll down half a page
+u       scroll up half a page
+f       open a link in the current tab
+F       open a link in a new tab
+r       reload
+gs      view source
+i       enter insert mode -- all commands will be ignored until you hit Esc to exit
+yy      copy the current url to the clipboard
+yf      copy a link url to the clipboard
+gf      cycle forward to the next frame
+gF      focus the main/top frame
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;Navigating to new pages:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;o       Open URL, bookmark, or history entry, on an English letter &amp;#34;o&amp;#34;
+O       Open URL, bookmark, history entry in a new tab, on an English letter &amp;#34;O&amp;#34;
+b       Open bookmark
+B       Open bookmark in a new tab
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;Nvigating your history:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;H       go back in history
+L       go forward in history
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;Manipulating tabs:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;J, gT   go one tab left
+K, gt   go one tab right
+g0      go to the first tab. Use `ng0` to go to n-th tab, on `g` and a number character of `0`
+g$      go to the last tab
+^       visit the previously-visited tab
+t       create tab
+yt      duplicate current tab
+x       close current tab
+X       restore closed tab (i.e. unwind the `x` command)
+T       search through your open tabs
+W       move current tab to new window
+&amp;lt;a-p&amp;gt;   pin/unpin current tab
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;Using marks:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;ma, mA  set local mark &amp;#34;a&amp;#34; (global mark &amp;#34;A&amp;#34;)
+`a, `A  jump to local mark &amp;#34;a&amp;#34; (global mark &amp;#34;A&amp;#34;)
+``      jump back to the position before the previous jump
+          -- that is, before the previous gg, G, n, N, / or `a
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;Additional advanced browsing commands:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;]], [[  Follow the link labeled &amp;#34;next or &amp;#34;&amp;gt;&amp;#34; (&amp;#34;previous&amp;#34; or &amp;#34;&amp;lt;&amp;#34;&amp;gt;)
+          - helpful for browsing paginated sites
+&amp;lt;a-f&amp;gt;   open multiple links in a new tab
+gi      focus the first (or n-th) text input box on the page. Use &amp;lt;tab&amp;gt; to cycle through options.
+gu      go up one level in the URL hierarchy
+gU      go up to root of the URL hierarchy
+ge      edit the current URL
+gE      edit the current URL and open in a new tab
+zH      scroll all the way left
+zL      scroll all the way right
+v       enter visual mode; use p/P to paste-and-go, use y to yank
+V       enter visual line mode
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;reference&#34;&gt;REFERENCE&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;vimium - &lt;a href=&#34;https://github.com/gdh1995/vimium&#34;&gt;https://github.com/gdh1995/vimium&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>Firefox</title>
+      <link>https://neosolaris.github.io/posts/firefox/</link>
+      <pubDate>Tue, 23 Aug 2022 18:35:04 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/firefox/</guid>
+      <description>&lt;h2 id=&#34;install--setup&#34;&gt;Install &amp;amp; Setup&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;../ubuntu-firefox&#34;&gt;ubuntu firefox&lt;/a&gt; - 우분투에서 파이어폭스 설치&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;plugins&#34;&gt;Plugins&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;../markdown-viewer-webtext&#34;&gt;Markdown Viewer Webext&lt;/a&gt; - 로컬의 마크다운 파일을 html로 보기&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../vimium-c&#34;&gt;vimium c&lt;/a&gt; - vim 명령어 환경으로 파이어폭스 사용하기&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>Markdown Viewer Webext</title>
+      <link>https://neosolaris.github.io/posts/markdown-viewer-webtext/</link>
+      <pubDate>Tue, 23 Aug 2022 18:35:04 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/markdown-viewer-webtext/</guid>
+      <description>&lt;h1 id=&#34;firefox-markdown-viewer-플러그인&#34;&gt;firefox: markdown viewer 플러그인&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;../%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4&#34;&gt;firefox&lt;/a&gt;을 html 페이지로 보여준다.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4&#34;&gt;vim&lt;/a&gt;파일을 작성하고 실시간으로 볼 때 유용하다.&lt;/li&gt;
+&lt;li&gt;Laste Updated: 2022.08.11&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;설치-및-설정&#34;&gt;설치 및 설정&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;../firefox&#34;&gt;firefox&lt;/a&gt; plugin은 markdown viewer Webext 이다. 이를 설치.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;cat &amp;lt;&amp;lt;EOF &amp;gt; ~/.local/share/mime/packages/text-markdown.xml
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;&amp;lt;?xml version=&amp;#34;1.0&amp;#34;?&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;&amp;lt;mime-info xmlns=&amp;#39;http://www.freedesktop.org/standards/shared-mime-info&amp;#39;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;  &amp;lt;mime-type type=&amp;#34;text/plain&amp;#34;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;    &amp;lt;glob pattern=&amp;#34;*.md&amp;#34;/&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;    &amp;lt;glob pattern=&amp;#34;*.mkd&amp;#34;/&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;    &amp;lt;glob pattern=&amp;#34;*.mkdn&amp;#34;/&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;    &amp;lt;glob pattern=&amp;#34;*.mdwn&amp;#34;/&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;    &amp;lt;glob pattern=&amp;#34;*.mdown&amp;#34;/&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;    &amp;lt;glob pattern=&amp;#34;*.markdown&amp;#34;/&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;  &amp;lt;/mime-type&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;&amp;lt;/mime-info&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;EOF
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;go&#34;&gt;update-mime-database ~/.local/share/mime
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;확인-테스트&#34;&gt;확인 테스트&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;방법1) 브라우저에서 로컬에 있는 md 파일을 불러서 잘 동작하는 지 확인.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Ubuntu firefox</title>
+      <link>https://neosolaris.github.io/posts/ubuntu-firefox/</link>
+      <pubDate>Tue, 23 Aug 2022 18:35:04 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/ubuntu-firefox/</guid>
+      <description>&lt;h1 id=&#34;ubuntu-2204-lts-환경에서-firefox-재설치-및-설정&#34;&gt;Ubuntu 22.04 LTS 환경에서 Firefox 재설치 및 설정&lt;/h1&gt;
+&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;우분투 22.04에서 firefox는 snap으로 설치된다.&lt;/li&gt;
+&lt;li&gt;문제는 한글입력기 kime으로 설치했을때 snap firefox는 한글 입력이 안된다.&lt;/li&gt;
+&lt;li&gt;다른 문제는 우분투 윈도우 환경에서 top bar를 숨길 수 없다.&lt;/li&gt;
+&lt;li&gt;달리 말하면, gnome-shell을 설치하고 관련 플러그인을 모두 쓸 수 없다는 것.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;snap-firefox-uninstall&#34;&gt;snap firefox uninstall&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;sudo snap remove firefox
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;add-mozilla-team-ppa-and-install&#34;&gt;Add Mozilla Team PPA and Install&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;모질라팀 저장소를 추가한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;sudo add-apt-repository ppa:mozillateam/ppa
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;우선권을 주어 snap firefox가 설치되지 않도록 한다. (오타가 없도록 주의)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;sudo vim /etc/apt/preferences.d/mozillateamppa
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Package: firefox*
+Pin: release o=LP-PPA-mozillateam
+Pin-Priority: 501
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;apt update &amp;amp; install&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;sudo apt update
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;sudo apt install firefox
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;enable-top-panel-auto-hide&#34;&gt;Enable Top Panel Auto-Hide&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Install gnome-shell&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;sudo apt install chrome-gnome-shell gnome-shell-extension-prefs
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Install extension
+firefox 실행 후 gnome shell extension을 먼저 설치한다.
+extension &amp;gt; hide top bar 검색 후 설치(Click to change: ON)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;참고&#34;&gt;참고&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;kime dev pkg v2.5.6 설치 후 우분투윈도우 입력기를 kime으로 수정.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;settings&amp;gt; Region &amp;amp; Language&amp;gt; Manage Installed Languages &amp;gt; Keyboard input method system: kime
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;로그아웃 후 다시 로그인하면 터미널 및 firefox에 모두 한글 가능&lt;/li&gt;
+&lt;li&gt;top bar도 창이 접촉하면 자동으로 숨겨진다. 화면 공간이 더욱 여유가 생겼다.&lt;/li&gt;
+&lt;li&gt;ubuntu에서 업데이트 후 한글 입력이 안되는 경우
+&lt;ul&gt;
+&lt;li&gt;firefox가 snap으로 자동 업그레이드 된다. 이로 인해 많은 문제 발생&lt;/li&gt;
+&lt;li&gt;local 디렉토리 중 OS외의 파티션을 firefox에서 브라우징 할 수 없다.&lt;/li&gt;
+&lt;li&gt;한글 입력이 안된다.&lt;/li&gt;
+&lt;li&gt;snap remove 으로 firefox를 제거하고 ppa 저장소로 부터 재설치한다.&lt;/li&gt;
+&lt;li&gt;snap이 위의 ppa priority를 무시할 경우가 있으므로 사용하지 않는 경우 데몬을 중지시킨다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;$ sudo systemctl stop snapd&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Firefox install ubuntu-22.04
+&lt;a href=&#34;https://ubuntuhandbook.org/index.php/2022/04/install-firefox-deb-ubuntu-22-04/&#34;&gt;https://ubuntuhandbook.org/index.php/2022/04/install-firefox-deb-ubuntu-22-04/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Autohide Top-topbar ubuntu-22.04
+&lt;a href=&#34;https://ubuntuhandbook.org/index.php/2020/08/top-panel-auto-hide-ubuntu-20-04/&#34;&gt;https://ubuntuhandbook.org/index.php/2020/08/top-panel-auto-hide-ubuntu-20-04/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+  </channel>
+</rss>

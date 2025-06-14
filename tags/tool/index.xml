@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Tool on Borisu Wiki Home</title>
+    <link>https://neosolaris.github.io/tags/tool/</link>
+    <description>Recent content in Tool on Borisu Wiki Home</description>
+    <image>
+      <title>Borisu Wiki Home</title>
+      <url>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.147.2</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 11 Jan 2023 14:33:14 +0900</lastBuildDate>
+    <atom:link href="https://neosolaris.github.io/tags/tool/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Gimp - Gnu Image Manipulation Program</title>
+      <link>https://neosolaris.github.io/posts/gimp/</link>
+      <pubDate>Wed, 11 Jan 2023 14:33:14 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/gimp/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Install &amp;amp; Setup&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;../gimp-install&#34;&gt;gimp install&lt;/a&gt; - 프로그램 및 플러그인 설치&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../gimp-setup&#34;&gt;gimp setup&lt;/a&gt; - 설정&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Study&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;../flip&#34;&gt;gimp quickies&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;응용 및 기타&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;gimp-glua - gimp graphic processing plugin using lua&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Links&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Gimp Home - &lt;a href=&#34;https://www.gimp.org&#34;&gt;https://www.gimp.org&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Tutorials - &lt;a href=&#34;https://www.gimp.org/tutorials/&#34;&gt;https://www.gimp.org/tutorials/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+  </channel>
+</rss>

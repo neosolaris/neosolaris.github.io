@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Mpc on Borisu Wiki Home</title>
+    <link>https://neosolaris.github.io/tags/mpc/</link>
+    <description>Recent content in Mpc on Borisu Wiki Home</description>
+    <image>
+      <title>Borisu Wiki Home</title>
+      <url>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.147.2</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 24 Aug 2022 03:06:23 +0900</lastBuildDate>
+    <atom:link href="https://neosolaris.github.io/tags/mpc/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>MPC - Music Player Deamon Client</title>
+      <link>https://neosolaris.github.io/posts/mpc/</link>
+      <pubDate>Tue, 23 Aug 2022 18:35:04 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/mpc/</guid>
+      <description>&lt;h2 id=&#34;소개&#34;&gt;소개&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;../mpd&#34;&gt;mpd&lt;/a&gt;의 client 프로그램으로 간결하다.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../ncmpcpp&#34;&gt;mmtc&lt;/a&gt; 도 있으니 참고.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;사용법&#34;&gt;사용법&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;아래 환경변수는 &lt;code&gt;~.bashrc&lt;/code&gt;에 넣어두면 편리하다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;MPD_HOST&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;192.168.1.100
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;MPD_PORT&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;6600&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; man mpc		&lt;span class=&#34;c1&#34;&gt;# 도움말&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; mpc play	&lt;span class=&#34;c1&#34;&gt;# 현재 리스트를 플레이 &lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.musicpd.org/doc/mpc/html&#34;&gt;Mpc Manual&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+  </channel>
+</rss>

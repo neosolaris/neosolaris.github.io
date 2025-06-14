@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Language on Borisu Wiki Home</title>
+    <link>https://neosolaris.github.io/categories/language/</link>
+    <description>Recent content in Language on Borisu Wiki Home</description>
+    <image>
+      <title>Borisu Wiki Home</title>
+      <url>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.147.2</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 12 Mar 2024 03:21:08 +0900</lastBuildDate>
+    <atom:link href="https://neosolaris.github.io/categories/language/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Zig</title>
+      <link>https://neosolaris.github.io/posts/zig/</link>
+      <pubDate>Tue, 12 Mar 2024 03:21:08 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/zig/</guid>
+      <description>&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;a general-purpose programming language and toolchain for maintaining robust, optimal and reusable software.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;install&#34;&gt;Install&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Debian/Ubuntu&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo apt install zig
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Alpine&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; doas apk add zig
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;최신 리눅스 버전 설치&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://ziglang.org/download/&#34;&gt;https://ziglang.org/download/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;os와 아키텍쳐에 맞는 파일을 다운로드한다.&lt;/li&gt;
+&lt;li&gt;압축을 푼 후 &lt;code&gt;PATH&lt;/code&gt;를 설정해주면 바로 사용 가능하다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; tar xJf zig-linux-x86_64-0.12.0-dev.3212+40e64245f.tar.xz
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; ln -s zig-linux-x86_64-0.12.0-dev.3212+40e64245f/ zig
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; zig&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; ls 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; ./zig &lt;span class=&#34;nb&#34;&gt;help&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;home - &lt;a href=&#34;https://ziglang.org/&#34;&gt;https://ziglang.org/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;reference - &lt;a href=&#34;https://ziglang.org/documentation/0.11.0/&#34;&gt;https://ziglang.org/documentation/0.11.0/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>Rust Programming Language</title>
+      <link>https://neosolaris.github.io/posts/rust/</link>
+      <pubDate>Tue, 23 Aug 2022 18:35:04 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/rust/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;../rust-install&#34;&gt;rust install&lt;/a&gt; - 러스트 설치&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../rust-compile-size&#34;&gt;rust compile size&lt;/a&gt; - 컴파일 사이즈 줄이기&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+  </channel>
+</rss>

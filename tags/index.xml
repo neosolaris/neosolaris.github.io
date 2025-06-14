@@ -1,0 +1,1634 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Tags on Borisu Wiki Home</title>
+    <link>https://neosolaris.github.io/tags/</link>
+    <description>Recent content in Tags on Borisu Wiki Home</description>
+    <image>
+      <title>Borisu Wiki Home</title>
+      <url>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.147.2</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 14 Jun 2025 09:26:15 +0900</lastBuildDate>
+    <atom:link href="https://neosolaris.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Editor</title>
+      <link>https://neosolaris.github.io/tags/editor/</link>
+      <pubDate>Fri, 19 Apr 2024 07:19:18 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/editor/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Nextvi</title>
+      <link>https://neosolaris.github.io/tags/nextvi/</link>
+      <pubDate>Fri, 19 Apr 2024 07:19:18 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/nextvi/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Vi</title>
+      <link>https://neosolaris.github.io/tags/vi/</link>
+      <pubDate>Fri, 19 Apr 2024 07:19:18 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/vi/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Language</title>
+      <link>https://neosolaris.github.io/tags/language/</link>
+      <pubDate>Tue, 12 Mar 2024 03:46:08 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/language/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Lsp</title>
+      <link>https://neosolaris.github.io/tags/lsp/</link>
+      <pubDate>Tue, 12 Mar 2024 03:46:08 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/lsp/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Nvim</title>
+      <link>https://neosolaris.github.io/tags/nvim/</link>
+      <pubDate>Tue, 12 Mar 2024 03:46:08 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/nvim/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Server</title>
+      <link>https://neosolaris.github.io/tags/server/</link>
+      <pubDate>Tue, 12 Mar 2024 03:46:08 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/server/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Zig</title>
+      <link>https://neosolaris.github.io/tags/zig/</link>
+      <pubDate>Tue, 12 Mar 2024 03:46:08 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/zig/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Programming</title>
+      <link>https://neosolaris.github.io/tags/programming/</link>
+      <pubDate>Tue, 12 Mar 2024 03:21:08 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/programming/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>나태주</title>
+      <link>https://neosolaris.github.io/tags/%EB%82%98%ED%83%9C%EC%A3%BC/</link>
+      <pubDate>Fri, 01 Mar 2024 12:32:05 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/%EB%82%98%ED%83%9C%EC%A3%BC/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Dbms</title>
+      <link>https://neosolaris.github.io/tags/dbms/</link>
+      <pubDate>Mon, 01 Jan 2024 02:08:34 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/dbms/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Redis</title>
+      <link>https://neosolaris.github.io/tags/redis/</link>
+      <pubDate>Mon, 01 Jan 2024 02:08:34 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/redis/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Alpine</title>
+      <link>https://neosolaris.github.io/tags/alpine/</link>
+      <pubDate>Sat, 30 Dec 2023 06:15:32 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/alpine/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Install</title>
+      <link>https://neosolaris.github.io/tags/install/</link>
+      <pubDate>Sat, 30 Dec 2023 06:15:32 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/install/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Windows</title>
+      <link>https://neosolaris.github.io/tags/windows/</link>
+      <pubDate>Sat, 30 Dec 2023 06:15:32 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/windows/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Wsl2</title>
+      <link>https://neosolaris.github.io/tags/wsl2/</link>
+      <pubDate>Sat, 30 Dec 2023 06:15:32 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/wsl2/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Devel</title>
+      <link>https://neosolaris.github.io/tags/devel/</link>
+      <pubDate>Sat, 30 Dec 2023 06:03:08 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/devel/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tags</title>
+      <link>https://neosolaris.github.io/tags/tags/</link>
+      <pubDate>Tue, 19 Dec 2023 12:23:53 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/tags/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Esp32</title>
+      <link>https://neosolaris.github.io/tags/esp32/</link>
+      <pubDate>Sun, 17 Dec 2023 06:50:32 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/esp32/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Esp8266</title>
+      <link>https://neosolaris.github.io/tags/esp8266/</link>
+      <pubDate>Sun, 17 Dec 2023 06:50:32 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/esp8266/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Iot</title>
+      <link>https://neosolaris.github.io/tags/iot/</link>
+      <pubDate>Sun, 17 Dec 2023 06:50:32 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/iot/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Fritzing</title>
+      <link>https://neosolaris.github.io/tags/fritzing/</link>
+      <pubDate>Wed, 13 Dec 2023 11:49:32 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/fritzing/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tools</title>
+      <link>https://neosolaris.github.io/tags/tools/</link>
+      <pubDate>Wed, 13 Dec 2023 11:49:32 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/tools/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>회로도</title>
+      <link>https://neosolaris.github.io/tags/%ED%9A%8C%EB%A1%9C%EB%8F%84/</link>
+      <pubDate>Wed, 13 Dec 2023 11:49:32 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/%ED%9A%8C%EB%A1%9C%EB%8F%84/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Nodemcu</title>
+      <link>https://neosolaris.github.io/tags/nodemcu/</link>
+      <pubDate>Wed, 13 Dec 2023 11:16:22 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/nodemcu/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Hardware</title>
+      <link>https://neosolaris.github.io/tags/hardware/</link>
+      <pubDate>Wed, 13 Dec 2023 11:02:31 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/hardware/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Arduino</title>
+      <link>https://neosolaris.github.io/tags/arduino/</link>
+      <pubDate>Mon, 30 Oct 2023 18:50:44 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/arduino/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>아두이노</title>
+      <link>https://neosolaris.github.io/tags/%EC%95%84%EB%91%90%EC%9D%B4%EB%85%B8/</link>
+      <pubDate>Mon, 30 Oct 2023 18:50:44 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/%EC%95%84%EB%91%90%EC%9D%B4%EB%85%B8/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Arduino-Cli</title>
+      <link>https://neosolaris.github.io/tags/arduino-cli/</link>
+      <pubDate>Mon, 30 Oct 2023 15:55:50 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/arduino-cli/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Cli</title>
+      <link>https://neosolaris.github.io/tags/cli/</link>
+      <pubDate>Mon, 30 Oct 2023 15:55:50 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/cli/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Commandline</title>
+      <link>https://neosolaris.github.io/tags/commandline/</link>
+      <pubDate>Mon, 30 Oct 2023 15:55:50 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/commandline/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>명령줄</title>
+      <link>https://neosolaris.github.io/tags/%EB%AA%85%EB%A0%B9%EC%A4%84/</link>
+      <pubDate>Mon, 30 Oct 2023 15:55:50 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/%EB%AA%85%EB%A0%B9%EC%A4%84/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Cmd</title>
+      <link>https://neosolaris.github.io/tags/cmd/</link>
+      <pubDate>Wed, 27 Sep 2023 16:25:49 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/cmd/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Docker</title>
+      <link>https://neosolaris.github.io/tags/docker/</link>
+      <pubDate>Wed, 27 Sep 2023 16:25:49 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/docker/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Entrypoint</title>
+      <link>https://neosolaris.github.io/tags/entrypoint/</link>
+      <pubDate>Wed, 27 Sep 2023 16:25:49 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/entrypoint/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Run</title>
+      <link>https://neosolaris.github.io/tags/run/</link>
+      <pubDate>Wed, 27 Sep 2023 16:25:49 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/run/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Card</title>
+      <link>https://neosolaris.github.io/tags/card/</link>
+      <pubDate>Tue, 19 Sep 2023 18:23:49 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/card/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Graphic</title>
+      <link>https://neosolaris.github.io/tags/graphic/</link>
+      <pubDate>Tue, 19 Sep 2023 18:23:49 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/graphic/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Lua</title>
+      <link>https://neosolaris.github.io/tags/lua/</link>
+      <pubDate>Sat, 16 Sep 2023 16:50:04 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/lua/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Nginx</title>
+      <link>https://neosolaris.github.io/tags/nginx/</link>
+      <pubDate>Sat, 16 Sep 2023 16:50:04 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/nginx/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Openresty</title>
+      <link>https://neosolaris.github.io/tags/openresty/</link>
+      <pubDate>Sat, 16 Sep 2023 16:50:04 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/openresty/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Web</title>
+      <link>https://neosolaris.github.io/tags/web/</link>
+      <pubDate>Sat, 16 Sep 2023 16:50:04 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/web/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Minimal</title>
+      <link>https://neosolaris.github.io/tags/minimal/</link>
+      <pubDate>Sat, 16 Sep 2023 16:33:03 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/minimal/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Vim</title>
+      <link>https://neosolaris.github.io/tags/vim/</link>
+      <pubDate>Sat, 16 Sep 2023 16:33:03 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/vim/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Vimrc</title>
+      <link>https://neosolaris.github.io/tags/vimrc/</link>
+      <pubDate>Sat, 16 Sep 2023 16:33:03 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/vimrc/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Keyboard</title>
+      <link>https://neosolaris.github.io/tags/keyboard/</link>
+      <pubDate>Sun, 10 Sep 2023 18:04:26 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/keyboard/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>키보드</title>
+      <link>https://neosolaris.github.io/tags/%ED%82%A4%EB%B3%B4%EB%93%9C/</link>
+      <pubDate>Sun, 10 Sep 2023 18:04:26 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/%ED%82%A4%EB%B3%B4%EB%93%9C/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>자판배열</title>
+      <link>https://neosolaris.github.io/tags/%EC%9E%90%ED%8C%90%EB%B0%B0%EC%97%B4/</link>
+      <pubDate>Sun, 10 Sep 2023 17:38:58 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/%EC%9E%90%ED%8C%90%EB%B0%B0%EC%97%B4/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>한글</title>
+      <link>https://neosolaris.github.io/tags/%ED%95%9C%EA%B8%80/</link>
+      <pubDate>Sun, 10 Sep 2023 17:38:58 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/%ED%95%9C%EA%B8%80/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Gpg</title>
+      <link>https://neosolaris.github.io/tags/gpg/</link>
+      <pubDate>Sat, 09 Sep 2023 16:32:54 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/gpg/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Password</title>
+      <link>https://neosolaris.github.io/tags/password/</link>
+      <pubDate>Sat, 09 Sep 2023 16:32:54 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/password/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Security</title>
+      <link>https://neosolaris.github.io/tags/security/</link>
+      <pubDate>Sat, 09 Sep 2023 16:32:54 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/security/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Browser</title>
+      <link>https://neosolaris.github.io/tags/browser/</link>
+      <pubDate>Fri, 08 Sep 2023 15:13:16 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/browser/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Www</title>
+      <link>https://neosolaris.github.io/tags/www/</link>
+      <pubDate>Fri, 08 Sep 2023 15:13:16 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/www/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Remote</title>
+      <link>https://neosolaris.github.io/tags/remote/</link>
+      <pubDate>Thu, 07 Sep 2023 11:49:57 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/remote/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Scp</title>
+      <link>https://neosolaris.github.io/tags/scp/</link>
+      <pubDate>Thu, 07 Sep 2023 11:49:57 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/scp/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ssh</title>
+      <link>https://neosolaris.github.io/tags/ssh/</link>
+      <pubDate>Thu, 07 Sep 2023 11:49:57 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/ssh/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Git</title>
+      <link>https://neosolaris.github.io/tags/git/</link>
+      <pubDate>Sun, 27 Aug 2023 22:36:46 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/git/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Git-Crypt</title>
+      <link>https://neosolaris.github.io/tags/git-crypt/</link>
+      <pubDate>Sun, 27 Aug 2023 22:36:46 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/git-crypt/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Github</title>
+      <link>https://neosolaris.github.io/tags/github/</link>
+      <pubDate>Sun, 27 Aug 2023 22:36:46 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/github/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>암호화</title>
+      <link>https://neosolaris.github.io/tags/%EC%95%94%ED%98%B8%ED%99%94/</link>
+      <pubDate>Sun, 27 Aug 2023 22:36:46 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/%EC%95%94%ED%98%B8%ED%99%94/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Firefox</title>
+      <link>https://neosolaris.github.io/tags/firefox/</link>
+      <pubDate>Sat, 26 Aug 2023 17:26:57 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/firefox/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Plugin</title>
+      <link>https://neosolaris.github.io/tags/plugin/</link>
+      <pubDate>Sat, 26 Aug 2023 17:26:57 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/plugin/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Vimium-C</title>
+      <link>https://neosolaris.github.io/tags/vimium-c/</link>
+      <pubDate>Sat, 26 Aug 2023 17:26:57 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/vimium-c/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Raspberry-Pi</title>
+      <link>https://neosolaris.github.io/tags/raspberry-pi/</link>
+      <pubDate>Sat, 26 Aug 2023 16:56:05 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/raspberry-pi/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Raspbian</title>
+      <link>https://neosolaris.github.io/tags/raspbian/</link>
+      <pubDate>Sat, 26 Aug 2023 16:56:05 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/raspbian/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Update</title>
+      <link>https://neosolaris.github.io/tags/update/</link>
+      <pubDate>Sat, 26 Aug 2023 16:56:05 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/update/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Upgrade</title>
+      <link>https://neosolaris.github.io/tags/upgrade/</link>
+      <pubDate>Sat, 26 Aug 2023 16:56:05 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/upgrade/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Comment</title>
+      <link>https://neosolaris.github.io/tags/comment/</link>
+      <pubDate>Thu, 10 Aug 2023 17:50:37 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/comment/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Bash</title>
+      <link>https://neosolaris.github.io/tags/bash/</link>
+      <pubDate>Thu, 10 Aug 2023 17:03:38 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/bash/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Color</title>
+      <link>https://neosolaris.github.io/tags/color/</link>
+      <pubDate>Thu, 10 Aug 2023 17:03:38 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/color/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Prgramming</title>
+      <link>https://neosolaris.github.io/tags/prgramming/</link>
+      <pubDate>Thu, 10 Aug 2023 17:03:38 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/prgramming/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Linux</title>
+      <link>https://neosolaris.github.io/tags/linux/</link>
+      <pubDate>Tue, 08 Aug 2023 15:58:42 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/linux/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Wsl</title>
+      <link>https://neosolaris.github.io/tags/wsl/</link>
+      <pubDate>Thu, 03 Aug 2023 17:04:47 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/wsl/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>모리스</title>
+      <link>https://neosolaris.github.io/tags/%EB%AA%A8%EB%A6%AC%EC%8A%A4/</link>
+      <pubDate>Mon, 20 Feb 2023 08:44:46 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/%EB%AA%A8%EB%A6%AC%EC%8A%A4/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>수학</title>
+      <link>https://neosolaris.github.io/tags/%EC%88%98%ED%95%99/</link>
+      <pubDate>Mon, 20 Feb 2023 08:44:46 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/%EC%88%98%ED%95%99/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>클라인</title>
+      <link>https://neosolaris.github.io/tags/%ED%81%B4%EB%9D%BC%EC%9D%B8/</link>
+      <pubDate>Mon, 20 Feb 2023 08:44:46 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/%ED%81%B4%EB%9D%BC%EC%9D%B8/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>확실성</title>
+      <link>https://neosolaris.github.io/tags/%ED%99%95%EC%8B%A4%EC%84%B1/</link>
+      <pubDate>Mon, 20 Feb 2023 08:44:46 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/%ED%99%95%EC%8B%A4%EC%84%B1/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>거미</title>
+      <link>https://neosolaris.github.io/tags/%EA%B1%B0%EB%AF%B8/</link>
+      <pubDate>Sat, 11 Feb 2023 14:23:43 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/%EA%B1%B0%EB%AF%B8/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>진리</title>
+      <link>https://neosolaris.github.io/tags/%EC%A7%84%EB%A6%AC/</link>
+      <pubDate>Sat, 11 Feb 2023 14:23:43 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/%EC%A7%84%EB%A6%AC/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>박창범</title>
+      <link>https://neosolaris.github.io/tags/%EB%B0%95%EC%B0%BD%EB%B2%94/</link>
+      <pubDate>Wed, 08 Feb 2023 09:35:37 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/%EB%B0%95%EC%B0%BD%EB%B2%94/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>우주론</title>
+      <link>https://neosolaris.github.io/tags/%EC%9A%B0%EC%A3%BC%EB%A1%A0/</link>
+      <pubDate>Wed, 08 Feb 2023 09:35:37 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/%EC%9A%B0%EC%A3%BC%EB%A1%A0/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Animation</title>
+      <link>https://neosolaris.github.io/tags/animation/</link>
+      <pubDate>Sun, 05 Feb 2023 16:02:19 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/animation/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Engine</title>
+      <link>https://neosolaris.github.io/tags/engine/</link>
+      <pubDate>Sun, 05 Feb 2023 16:02:19 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/engine/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Math</title>
+      <link>https://neosolaris.github.io/tags/math/</link>
+      <pubDate>Sun, 05 Feb 2023 16:02:19 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/math/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Python</title>
+      <link>https://neosolaris.github.io/tags/python/</link>
+      <pubDate>Sun, 05 Feb 2023 16:02:19 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/python/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>쓰기</title>
+      <link>https://neosolaris.github.io/tags/%EC%93%B0%EA%B8%B0/</link>
+      <pubDate>Thu, 02 Feb 2023 07:05:03 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/%EC%93%B0%EA%B8%B0/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>우리글</title>
+      <link>https://neosolaris.github.io/tags/%EC%9A%B0%EB%A6%AC%EA%B8%80/</link>
+      <pubDate>Thu, 02 Feb 2023 07:05:03 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/%EC%9A%B0%EB%A6%AC%EA%B8%80/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>이오덕</title>
+      <link>https://neosolaris.github.io/tags/%EC%9D%B4%EC%98%A4%EB%8D%95/</link>
+      <pubDate>Thu, 02 Feb 2023 07:05:03 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/%EC%9D%B4%EC%98%A4%EB%8D%95/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Gsl</title>
+      <link>https://neosolaris.github.io/tags/gsl/</link>
+      <pubDate>Wed, 01 Feb 2023 15:58:52 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/gsl/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Luajit</title>
+      <link>https://neosolaris.github.io/tags/luajit/</link>
+      <pubDate>Wed, 01 Feb 2023 15:58:52 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/luajit/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Science</title>
+      <link>https://neosolaris.github.io/tags/science/</link>
+      <pubDate>Wed, 01 Feb 2023 15:58:52 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/science/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Flip</title>
+      <link>https://neosolaris.github.io/tags/flip/</link>
+      <pubDate>Thu, 12 Jan 2023 06:26:11 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/flip/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Gimp</title>
+      <link>https://neosolaris.github.io/tags/gimp/</link>
+      <pubDate>Thu, 12 Jan 2023 06:26:11 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/gimp/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Rotate</title>
+      <link>https://neosolaris.github.io/tags/rotate/</link>
+      <pubDate>Thu, 12 Jan 2023 06:26:11 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/rotate/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Size</title>
+      <link>https://neosolaris.github.io/tags/size/</link>
+      <pubDate>Thu, 12 Jan 2023 06:26:11 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/size/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Config</title>
+      <link>https://neosolaris.github.io/tags/config/</link>
+      <pubDate>Wed, 11 Jan 2023 14:42:57 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/config/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Setup</title>
+      <link>https://neosolaris.github.io/tags/setup/</link>
+      <pubDate>Wed, 11 Jan 2023 14:42:57 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/setup/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Photo</title>
+      <link>https://neosolaris.github.io/tags/photo/</link>
+      <pubDate>Wed, 11 Jan 2023 14:33:14 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/photo/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Picture</title>
+      <link>https://neosolaris.github.io/tags/picture/</link>
+      <pubDate>Wed, 11 Jan 2023 14:33:14 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/picture/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tool</title>
+      <link>https://neosolaris.github.io/tags/tool/</link>
+      <pubDate>Wed, 11 Jan 2023 14:33:14 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/tool/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Terminal</title>
+      <link>https://neosolaris.github.io/tags/terminal/</link>
+      <pubDate>Sun, 18 Dec 2022 13:36:04 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/terminal/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tmux</title>
+      <link>https://neosolaris.github.io/tags/tmux/</link>
+      <pubDate>Sun, 18 Dec 2022 13:36:04 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/tmux/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Lynx</title>
+      <link>https://neosolaris.github.io/tags/lynx/</link>
+      <pubDate>Sun, 18 Dec 2022 12:47:45 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/lynx/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Features</title>
+      <link>https://neosolaris.github.io/tags/features/</link>
+      <pubDate>Sat, 17 Dec 2022 05:56:20 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/features/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Luakit</title>
+      <link>https://neosolaris.github.io/tags/luakit/</link>
+      <pubDate>Fri, 09 Dec 2022 07:07:46 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/luakit/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Re</title>
+      <link>https://neosolaris.github.io/tags/re/</link>
+      <pubDate>Wed, 07 Dec 2022 07:26:00 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/re/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Vis</title>
+      <link>https://neosolaris.github.io/tags/vis/</link>
+      <pubDate>Wed, 07 Dec 2022 07:26:00 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/vis/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Images</title>
+      <link>https://neosolaris.github.io/tags/images/</link>
+      <pubDate>Mon, 21 Nov 2022 15:46:59 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/images/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Remove</title>
+      <link>https://neosolaris.github.io/tags/remove/</link>
+      <pubDate>Mon, 21 Nov 2022 15:46:59 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/remove/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Busybox</title>
+      <link>https://neosolaris.github.io/tags/busybox/</link>
+      <pubDate>Mon, 21 Nov 2022 14:53:47 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/busybox/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Language-Server</title>
+      <link>https://neosolaris.github.io/tags/language-server/</link>
+      <pubDate>Mon, 21 Nov 2022 01:09:54 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/language-server/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Dockerhub</title>
+      <link>https://neosolaris.github.io/tags/dockerhub/</link>
+      <pubDate>Sun, 13 Nov 2022 16:46:03 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/dockerhub/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Example</title>
+      <link>https://neosolaris.github.io/tags/example/</link>
+      <pubDate>Sun, 13 Nov 2022 16:46:03 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/example/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Build</title>
+      <link>https://neosolaris.github.io/tags/build/</link>
+      <pubDate>Wed, 09 Nov 2022 23:06:21 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/build/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Container</title>
+      <link>https://neosolaris.github.io/tags/container/</link>
+      <pubDate>Wed, 09 Nov 2022 22:32:02 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/container/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Json</title>
+      <link>https://neosolaris.github.io/tags/json/</link>
+      <pubDate>Mon, 07 Nov 2022 22:28:56 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/json/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Module</title>
+      <link>https://neosolaris.github.io/tags/module/</link>
+      <pubDate>Mon, 07 Nov 2022 22:28:56 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/module/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Csv</title>
+      <link>https://neosolaris.github.io/tags/csv/</link>
+      <pubDate>Mon, 07 Nov 2022 22:24:08 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/csv/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Db</title>
+      <link>https://neosolaris.github.io/tags/db/</link>
+      <pubDate>Mon, 07 Nov 2022 22:08:17 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/db/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Sqlite3</title>
+      <link>https://neosolaris.github.io/tags/sqlite3/</link>
+      <pubDate>Mon, 07 Nov 2022 22:08:17 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/sqlite3/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Cvs</title>
+      <link>https://neosolaris.github.io/tags/cvs/</link>
+      <pubDate>Mon, 07 Nov 2022 21:58:56 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/cvs/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Poem</title>
+      <link>https://neosolaris.github.io/tags/poem/</link>
+      <pubDate>Wed, 02 Nov 2022 15:15:24 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/poem/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>백석</title>
+      <link>https://neosolaris.github.io/tags/%EB%B0%B1%EC%84%9D/</link>
+      <pubDate>Wed, 02 Nov 2022 15:15:24 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/%EB%B0%B1%EC%84%9D/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>정주성</title>
+      <link>https://neosolaris.github.io/tags/%EC%A0%95%EC%A3%BC%EC%84%B1/</link>
+      <pubDate>Wed, 02 Nov 2022 15:15:24 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/%EC%A0%95%EC%A3%BC%EC%84%B1/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Astronomy</title>
+      <link>https://neosolaris.github.io/tags/astronomy/</link>
+      <pubDate>Wed, 02 Nov 2022 14:37:42 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/astronomy/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>천문학</title>
+      <link>https://neosolaris.github.io/tags/%EC%B2%9C%EB%AC%B8%ED%95%99/</link>
+      <pubDate>Wed, 02 Nov 2022 14:37:42 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/%EC%B2%9C%EB%AC%B8%ED%95%99/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>신</title>
+      <link>https://neosolaris.github.io/tags/%EC%8B%A0/</link>
+      <pubDate>Sun, 30 Oct 2022 17:38:04 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/%EC%8B%A0/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>에피쿠로스</title>
+      <link>https://neosolaris.github.io/tags/%EC%97%90%ED%94%BC%EC%BF%A0%EB%A1%9C%EC%8A%A4/</link>
+      <pubDate>Sun, 30 Oct 2022 17:38:04 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/%EC%97%90%ED%94%BC%EC%BF%A0%EB%A1%9C%EC%8A%A4/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>역설</title>
+      <link>https://neosolaris.github.io/tags/%EC%97%AD%EC%84%A4/</link>
+      <pubDate>Sun, 30 Oct 2022 17:38:04 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/%EC%97%AD%EC%84%A4/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>길가메쉬</title>
+      <link>https://neosolaris.github.io/tags/%EA%B8%B8%EA%B0%80%EB%A9%94%EC%89%AC/</link>
+      <pubDate>Sun, 30 Oct 2022 01:31:11 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/%EA%B8%B8%EA%B0%80%EB%A9%94%EC%89%AC/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>서사시</title>
+      <link>https://neosolaris.github.io/tags/%EC%84%9C%EC%82%AC%EC%8B%9C/</link>
+      <pubDate>Sun, 30 Oct 2022 01:31:11 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/%EC%84%9C%EC%82%AC%EC%8B%9C/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>신화</title>
+      <link>https://neosolaris.github.io/tags/%EC%8B%A0%ED%99%94/</link>
+      <pubDate>Sun, 30 Oct 2022 01:31:11 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/%EC%8B%A0%ED%99%94/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Galaxy</title>
+      <link>https://neosolaris.github.io/tags/galaxy/</link>
+      <pubDate>Thu, 27 Oct 2022 16:43:48 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/galaxy/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Hitchhiker</title>
+      <link>https://neosolaris.github.io/tags/hitchhiker/</link>
+      <pubDate>Thu, 27 Oct 2022 16:43:48 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/hitchhiker/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Sf</title>
+      <link>https://neosolaris.github.io/tags/sf/</link>
+      <pubDate>Thu, 27 Oct 2022 16:43:48 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/sf/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Rtorrent</title>
+      <link>https://neosolaris.github.io/tags/rtorrent/</link>
+      <pubDate>Wed, 26 Oct 2022 18:13:39 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/rtorrent/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Utils</title>
+      <link>https://neosolaris.github.io/tags/utils/</link>
+      <pubDate>Wed, 26 Oct 2022 18:13:39 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/utils/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Functions</title>
+      <link>https://neosolaris.github.io/tags/functions/</link>
+      <pubDate>Wed, 12 Oct 2022 17:27:21 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/functions/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Library</title>
+      <link>https://neosolaris.github.io/tags/library/</link>
+      <pubDate>Wed, 12 Oct 2022 17:27:21 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/library/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Luafun</title>
+      <link>https://neosolaris.github.io/tags/luafun/</link>
+      <pubDate>Wed, 12 Oct 2022 17:27:21 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/luafun/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ffi</title>
+      <link>https://neosolaris.github.io/tags/ffi/</link>
+      <pubDate>Wed, 12 Oct 2022 17:19:22 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/ffi/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Lfs</title>
+      <link>https://neosolaris.github.io/tags/lfs/</link>
+      <pubDate>Wed, 12 Oct 2022 17:19:22 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/lfs/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Astro</title>
+      <link>https://neosolaris.github.io/tags/astro/</link>
+      <pubDate>Wed, 12 Oct 2022 16:02:55 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/astro/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Fits</title>
+      <link>https://neosolaris.github.io/tags/fits/</link>
+      <pubDate>Wed, 12 Oct 2022 16:02:55 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/fits/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Image</title>
+      <link>https://neosolaris.github.io/tags/image/</link>
+      <pubDate>Wed, 12 Oct 2022 16:02:55 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/image/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Iraf</title>
+      <link>https://neosolaris.github.io/tags/iraf/</link>
+      <pubDate>Wed, 12 Oct 2022 16:02:55 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/iraf/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Astropy</title>
+      <link>https://neosolaris.github.io/tags/astropy/</link>
+      <pubDate>Tue, 11 Oct 2022 23:44:34 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/astropy/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Liberator</title>
+      <link>https://neosolaris.github.io/tags/liberator/</link>
+      <pubDate>Tue, 11 Oct 2022 23:13:33 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/liberator/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Pyraf</title>
+      <link>https://neosolaris.github.io/tags/pyraf/</link>
+      <pubDate>Tue, 11 Oct 2022 18:19:29 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/pyraf/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Clib</title>
+      <link>https://neosolaris.github.io/tags/clib/</link>
+      <pubDate>Tue, 11 Oct 2022 17:06:15 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/clib/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Fitsio</title>
+      <link>https://neosolaris.github.io/tags/fitsio/</link>
+      <pubDate>Tue, 11 Oct 2022 17:06:15 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/fitsio/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Format</title>
+      <link>https://neosolaris.github.io/tags/format/</link>
+      <pubDate>Sun, 09 Oct 2022 18:12:36 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/format/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Fv</title>
+      <link>https://neosolaris.github.io/tags/fv/</link>
+      <pubDate>Sun, 09 Oct 2022 18:00:34 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/fv/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Viewer</title>
+      <link>https://neosolaris.github.io/tags/viewer/</link>
+      <pubDate>Sun, 09 Oct 2022 18:00:34 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/viewer/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Processing</title>
+      <link>https://neosolaris.github.io/tags/processing/</link>
+      <pubDate>Thu, 29 Sep 2022 17:51:54 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/processing/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Simpleitk</title>
+      <link>https://neosolaris.github.io/tags/simpleitk/</link>
+      <pubDate>Thu, 29 Sep 2022 17:51:54 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/simpleitk/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>김두수</title>
+      <link>https://neosolaris.github.io/tags/%EA%B9%80%EB%91%90%EC%88%98/</link>
+      <pubDate>Sun, 25 Sep 2022 00:05:26 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/%EA%B9%80%EB%91%90%EC%88%98/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>보헤미안</title>
+      <link>https://neosolaris.github.io/tags/%EB%B3%B4%ED%97%A4%EB%AF%B8%EC%95%88/</link>
+      <pubDate>Sun, 25 Sep 2022 00:05:26 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/%EB%B3%B4%ED%97%A4%EB%AF%B8%EC%95%88/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>강허달림</title>
+      <link>https://neosolaris.github.io/tags/%EA%B0%95%ED%97%88%EB%8B%AC%EB%A6%BC/</link>
+      <pubDate>Sat, 24 Sep 2022 22:52:38 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/%EA%B0%95%ED%97%88%EB%8B%AC%EB%A6%BC/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>기다림</title>
+      <link>https://neosolaris.github.io/tags/%EA%B8%B0%EB%8B%A4%EB%A6%BC/</link>
+      <pubDate>Sat, 24 Sep 2022 22:52:38 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/%EA%B8%B0%EB%8B%A4%EB%A6%BC/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>가야금</title>
+      <link>https://neosolaris.github.io/tags/%EA%B0%80%EC%95%BC%EA%B8%88/</link>
+      <pubDate>Sat, 24 Sep 2022 22:27:34 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/%EA%B0%80%EC%95%BC%EA%B8%88/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>춘설</title>
+      <link>https://neosolaris.github.io/tags/%EC%B6%98%EC%84%A4/</link>
+      <pubDate>Sat, 24 Sep 2022 22:27:34 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/%EC%B6%98%EC%84%A4/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>황병기</title>
+      <link>https://neosolaris.github.io/tags/%ED%99%A9%EB%B3%91%EA%B8%B0/</link>
+      <pubDate>Sat, 24 Sep 2022 22:27:34 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/%ED%99%A9%EB%B3%91%EA%B8%B0/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Arirang</title>
+      <link>https://neosolaris.github.io/tags/arirang/</link>
+      <pubDate>Sat, 24 Sep 2022 22:18:16 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/arirang/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Bruskers</title>
+      <link>https://neosolaris.github.io/tags/bruskers/</link>
+      <pubDate>Sat, 24 Sep 2022 22:18:16 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/bruskers/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Guitar</title>
+      <link>https://neosolaris.github.io/tags/guitar/</link>
+      <pubDate>Sat, 24 Sep 2022 22:18:16 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/guitar/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>아리랑</title>
+      <link>https://neosolaris.github.io/tags/%EC%95%84%EB%A6%AC%EB%9E%91/</link>
+      <pubDate>Sat, 24 Sep 2022 22:18:16 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/%EC%95%84%EB%A6%AC%EB%9E%91/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Interactive</title>
+      <link>https://neosolaris.github.io/tags/interactive/</link>
+      <pubDate>Thu, 22 Sep 2022 15:08:09 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/interactive/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Readline</title>
+      <link>https://neosolaris.github.io/tags/readline/</link>
+      <pubDate>Thu, 22 Sep 2022 15:08:09 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/readline/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Rlwrap</title>
+      <link>https://neosolaris.github.io/tags/rlwrap/</link>
+      <pubDate>Thu, 22 Sep 2022 15:08:09 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/rlwrap/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>가곡</title>
+      <link>https://neosolaris.github.io/tags/%EA%B0%80%EA%B3%A1/</link>
+      <pubDate>Sun, 18 Sep 2022 00:14:15 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/%EA%B0%80%EA%B3%A1/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>얼굴</title>
+      <link>https://neosolaris.github.io/tags/%EC%96%BC%EA%B5%B4/</link>
+      <pubDate>Sun, 18 Sep 2022 00:14:15 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/%EC%96%BC%EA%B5%B4/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>가요</title>
+      <link>https://neosolaris.github.io/tags/%EA%B0%80%EC%9A%94/</link>
+      <pubDate>Sat, 17 Sep 2022 23:50:00 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/%EA%B0%80%EC%9A%94/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>음악</title>
+      <link>https://neosolaris.github.io/tags/%EC%9D%8C%EC%95%85/</link>
+      <pubDate>Sat, 17 Sep 2022 23:50:00 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/%EC%9D%8C%EC%95%85/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>장필순</title>
+      <link>https://neosolaris.github.io/tags/%EC%9E%A5%ED%95%84%EC%88%9C/</link>
+      <pubDate>Sat, 17 Sep 2022 23:50:00 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/%EC%9E%A5%ED%95%84%EC%88%9C/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Archlinux</title>
+      <link>https://neosolaris.github.io/tags/archlinux/</link>
+      <pubDate>Thu, 15 Sep 2022 21:46:46 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/archlinux/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Game</title>
+      <link>https://neosolaris.github.io/tags/game/</link>
+      <pubDate>Thu, 15 Sep 2022 00:09:14 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/game/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Love</title>
+      <link>https://neosolaris.github.io/tags/love/</link>
+      <pubDate>Thu, 15 Sep 2022 00:09:14 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/love/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>물리학</title>
+      <link>https://neosolaris.github.io/tags/%EB%AC%BC%EB%A6%AC%ED%95%99/</link>
+      <pubDate>Tue, 13 Sep 2022 21:53:36 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/%EB%AC%BC%EB%A6%AC%ED%95%99/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>우주</title>
+      <link>https://neosolaris.github.io/tags/%EC%9A%B0%EC%A3%BC/</link>
+      <pubDate>Tue, 13 Sep 2022 21:53:36 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/%EC%9A%B0%EC%A3%BC/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>인간</title>
+      <link>https://neosolaris.github.io/tags/%EC%9D%B8%EA%B0%84/</link>
+      <pubDate>Tue, 13 Sep 2022 21:53:36 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/%EC%9D%B8%EA%B0%84/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Luastatic</title>
+      <link>https://neosolaris.github.io/tags/luastatic/</link>
+      <pubDate>Tue, 13 Sep 2022 17:19:34 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/luastatic/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Nvim-Tree</title>
+      <link>https://neosolaris.github.io/tags/nvim-tree/</link>
+      <pubDate>Sat, 10 Sep 2022 23:52:46 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/nvim-tree/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Guide</title>
+      <link>https://neosolaris.github.io/tags/guide/</link>
+      <pubDate>Fri, 09 Sep 2022 23:38:38 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/guide/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Spacevim</title>
+      <link>https://neosolaris.github.io/tags/spacevim/</link>
+      <pubDate>Fri, 09 Sep 2022 12:09:09 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/spacevim/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Astronvim</title>
+      <link>https://neosolaris.github.io/tags/astronvim/</link>
+      <pubDate>Sat, 03 Sep 2022 14:51:22 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/astronvim/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>김기림</title>
+      <link>https://neosolaris.github.io/tags/%EA%B9%80%EA%B8%B0%EB%A6%BC/</link>
+      <pubDate>Fri, 02 Sep 2022 18:32:27 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/%EA%B9%80%EA%B8%B0%EB%A6%BC/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>수필</title>
+      <link>https://neosolaris.github.io/tags/%EC%88%98%ED%95%84/</link>
+      <pubDate>Fri, 02 Sep 2022 18:32:27 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/%EC%88%98%ED%95%84/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Zsh</title>
+      <link>https://neosolaris.github.io/tags/zsh/</link>
+      <pubDate>Fri, 02 Sep 2022 15:13:12 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/zsh/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ssh-Keygen</title>
+      <link>https://neosolaris.github.io/tags/ssh-keygen/</link>
+      <pubDate>Fri, 02 Sep 2022 15:09:16 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/ssh-keygen/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Sshd</title>
+      <link>https://neosolaris.github.io/tags/sshd/</link>
+      <pubDate>Fri, 02 Sep 2022 15:09:16 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/sshd/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Dotfiles</title>
+      <link>https://neosolaris.github.io/tags/dotfiles/</link>
+      <pubDate>Thu, 01 Sep 2022 16:55:30 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/dotfiles/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Yadm</title>
+      <link>https://neosolaris.github.io/tags/yadm/</link>
+      <pubDate>Thu, 01 Sep 2022 16:55:30 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/yadm/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Neovim</title>
+      <link>https://neosolaris.github.io/tags/neovim/</link>
+      <pubDate>Thu, 01 Sep 2022 14:57:43 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/neovim/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>고양이</title>
+      <link>https://neosolaris.github.io/tags/%EA%B3%A0%EC%96%91%EC%9D%B4/</link>
+      <pubDate>Thu, 01 Sep 2022 02:47:29 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/%EA%B3%A0%EC%96%91%EC%9D%B4/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>슈뢰딩거</title>
+      <link>https://neosolaris.github.io/tags/%EC%8A%88%EB%A2%B0%EB%94%A9%EA%B1%B0/</link>
+      <pubDate>Thu, 01 Sep 2022 02:47:29 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/%EC%8A%88%EB%A2%B0%EB%94%A9%EA%B1%B0/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>명언</title>
+      <link>https://neosolaris.github.io/tags/%EB%AA%85%EC%96%B8/</link>
+      <pubDate>Thu, 01 Sep 2022 02:21:45 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/%EB%AA%85%EC%96%B8/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>이소룡</title>
+      <link>https://neosolaris.github.io/tags/%EC%9D%B4%EC%86%8C%EB%A3%A1/</link>
+      <pubDate>Thu, 01 Sep 2022 02:21:45 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/%EC%9D%B4%EC%86%8C%EB%A3%A1/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Backup</title>
+      <link>https://neosolaris.github.io/tags/backup/</link>
+      <pubDate>Wed, 31 Aug 2022 17:56:35 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/backup/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Rclone</title>
+      <link>https://neosolaris.github.io/tags/rclone/</link>
+      <pubDate>Wed, 31 Aug 2022 17:56:35 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/rclone/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Rust</title>
+      <link>https://neosolaris.github.io/tags/rust/</link>
+      <pubDate>Wed, 31 Aug 2022 16:53:08 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/rust/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Compile</title>
+      <link>https://neosolaris.github.io/tags/compile/</link>
+      <pubDate>Wed, 31 Aug 2022 16:50:25 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/compile/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Lugjit</title>
+      <link>https://neosolaris.github.io/tags/lugjit/</link>
+      <pubDate>Tue, 30 Aug 2022 14:51:27 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/lugjit/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Sketchup</title>
+      <link>https://neosolaris.github.io/tags/sketchup/</link>
+      <pubDate>Mon, 29 Aug 2022 18:15:44 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/sketchup/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ubuntu</title>
+      <link>https://neosolaris.github.io/tags/ubuntu/</link>
+      <pubDate>Mon, 29 Aug 2022 18:15:44 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/ubuntu/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Wine</title>
+      <link>https://neosolaris.github.io/tags/wine/</link>
+      <pubDate>Mon, 29 Aug 2022 18:15:44 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/wine/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>스케치업</title>
+      <link>https://neosolaris.github.io/tags/%EC%8A%A4%EC%BC%80%EC%B9%98%EC%97%85/</link>
+      <pubDate>Mon, 29 Aug 2022 18:15:44 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/%EC%8A%A4%EC%BC%80%EC%B9%98%EC%97%85/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Blender</title>
+      <link>https://neosolaris.github.io/tags/blender/</link>
+      <pubDate>Mon, 29 Aug 2022 18:02:47 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/blender/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Touchpad</title>
+      <link>https://neosolaris.github.io/tags/touchpad/</link>
+      <pubDate>Mon, 29 Aug 2022 18:02:47 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/touchpad/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Read Lines</title>
+      <link>https://neosolaris.github.io/tags/read-lines/</link>
+      <pubDate>Fri, 26 Aug 2022 21:54:04 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/read-lines/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Shell</title>
+      <link>https://neosolaris.github.io/tags/shell/</link>
+      <pubDate>Fri, 26 Aug 2022 21:54:04 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/shell/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Devicons</title>
+      <link>https://neosolaris.github.io/tags/devicons/</link>
+      <pubDate>Fri, 26 Aug 2022 02:01:55 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/devicons/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Hugo</title>
+      <link>https://neosolaris.github.io/tags/hugo/</link>
+      <pubDate>Wed, 24 Aug 2022 17:43:38 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/hugo/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Papermod</title>
+      <link>https://neosolaris.github.io/tags/papermod/</link>
+      <pubDate>Wed, 24 Aug 2022 17:43:38 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/papermod/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Theme</title>
+      <link>https://neosolaris.github.io/tags/theme/</link>
+      <pubDate>Wed, 24 Aug 2022 17:43:38 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/theme/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Vimwiki</title>
+      <link>https://neosolaris.github.io/tags/vimwiki/</link>
+      <pubDate>Wed, 24 Aug 2022 00:39:08 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/vimwiki/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Command</title>
+      <link>https://neosolaris.github.io/tags/command/</link>
+      <pubDate>Tue, 23 Aug 2022 18:35:04 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/command/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Github.io</title>
+      <link>https://neosolaris.github.io/tags/github.io/</link>
+      <pubDate>Tue, 23 Aug 2022 18:35:04 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/github.io/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Jekyll</title>
+      <link>https://neosolaris.github.io/tags/jekyll/</link>
+      <pubDate>Tue, 23 Aug 2022 18:35:04 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/jekyll/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Kime</title>
+      <link>https://neosolaris.github.io/tags/kime/</link>
+      <pubDate>Tue, 23 Aug 2022 18:35:04 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/kime/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Markdown</title>
+      <link>https://neosolaris.github.io/tags/markdown/</link>
+      <pubDate>Tue, 23 Aug 2022 18:35:04 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/markdown/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Mpc</title>
+      <link>https://neosolaris.github.io/tags/mpc/</link>
+      <pubDate>Tue, 23 Aug 2022 18:35:04 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/mpc/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Mpd</title>
+      <link>https://neosolaris.github.io/tags/mpd/</link>
+      <pubDate>Tue, 23 Aug 2022 18:35:04 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/mpd/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Music</title>
+      <link>https://neosolaris.github.io/tags/music/</link>
+      <pubDate>Tue, 23 Aug 2022 18:35:04 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/music/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ncmpcpp</title>
+      <link>https://neosolaris.github.io/tags/ncmpcpp/</link>
+      <pubDate>Tue, 23 Aug 2022 18:35:04 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/ncmpcpp/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Notebook</title>
+      <link>https://neosolaris.github.io/tags/notebook/</link>
+      <pubDate>Tue, 23 Aug 2022 18:35:04 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/notebook/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Pi</title>
+      <link>https://neosolaris.github.io/tags/pi/</link>
+      <pubDate>Tue, 23 Aug 2022 18:35:04 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/pi/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Qna</title>
+      <link>https://neosolaris.github.io/tags/qna/</link>
+      <pubDate>Tue, 23 Aug 2022 18:35:04 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/qna/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tree</title>
+      <link>https://neosolaris.github.io/tags/tree/</link>
+      <pubDate>Tue, 23 Aug 2022 18:35:04 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/tree/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Zenbook</title>
+      <link>https://neosolaris.github.io/tags/zenbook/</link>
+      <pubDate>Tue, 23 Aug 2022 18:35:04 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/zenbook/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

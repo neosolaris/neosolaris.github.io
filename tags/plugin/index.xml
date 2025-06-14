@@ -1,0 +1,517 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Plugin on Borisu Wiki Home</title>
+    <link>https://neosolaris.github.io/tags/plugin/</link>
+    <description>Recent content in Plugin on Borisu Wiki Home</description>
+    <image>
+      <title>Borisu Wiki Home</title>
+      <url>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.147.2</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 01 Sep 2023 00:26:02 +0900</lastBuildDate>
+    <atom:link href="https://neosolaris.github.io/tags/plugin/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>vimium-c - Vim like Using firefox</title>
+      <link>https://neosolaris.github.io/posts/vimium-c/</link>
+      <pubDate>Sat, 26 Aug 2023 17:26:57 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/vimium-c/</guid>
+      <description>&lt;h2 id=&#34;설치&#34;&gt;설치&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;파이어폭스의 확장기능 검색 : vimium-c&lt;/li&gt;
+&lt;li&gt;플러그인 설치&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;사용법&#34;&gt;사용법&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;?&lt;/code&gt; : 도움말 보이기/숨기기&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Navigating the current Page:&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;?       show the help dialog for a list of all available keys
+h       scroll left
+j       scroll down
+k       scroll up
+l       scroll right
+gg      scroll to top of the page
+G       scroll to bottom of the page
+d       scroll down half a page
+u       scroll up half a page
+f       open a link in the current tab
+F       open a link in a new tab
+r       reload
+gs      view source
+i       enter insert mode -- all commands will be ignored until you hit Esc to exit
+yy      copy the current url to the clipboard
+yf      copy a link url to the clipboard
+gf      cycle forward to the next frame
+gF      focus the main/top frame
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;Navigating to new pages:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;o       Open URL, bookmark, or history entry, on an English letter &amp;#34;o&amp;#34;
+O       Open URL, bookmark, history entry in a new tab, on an English letter &amp;#34;O&amp;#34;
+b       Open bookmark
+B       Open bookmark in a new tab
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;Nvigating your history:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;H       go back in history
+L       go forward in history
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;Manipulating tabs:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;J, gT   go one tab left
+K, gt   go one tab right
+g0      go to the first tab. Use `ng0` to go to n-th tab, on `g` and a number character of `0`
+g$      go to the last tab
+^       visit the previously-visited tab
+t       create tab
+yt      duplicate current tab
+x       close current tab
+X       restore closed tab (i.e. unwind the `x` command)
+T       search through your open tabs
+W       move current tab to new window
+&amp;lt;a-p&amp;gt;   pin/unpin current tab
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;Using marks:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;ma, mA  set local mark &amp;#34;a&amp;#34; (global mark &amp;#34;A&amp;#34;)
+`a, `A  jump to local mark &amp;#34;a&amp;#34; (global mark &amp;#34;A&amp;#34;)
+``      jump back to the position before the previous jump
+          -- that is, before the previous gg, G, n, N, / or `a
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;Additional advanced browsing commands:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;]], [[  Follow the link labeled &amp;#34;next or &amp;#34;&amp;gt;&amp;#34; (&amp;#34;previous&amp;#34; or &amp;#34;&amp;lt;&amp;#34;&amp;gt;)
+          - helpful for browsing paginated sites
+&amp;lt;a-f&amp;gt;   open multiple links in a new tab
+gi      focus the first (or n-th) text input box on the page. Use &amp;lt;tab&amp;gt; to cycle through options.
+gu      go up one level in the URL hierarchy
+gU      go up to root of the URL hierarchy
+ge      edit the current URL
+gE      edit the current URL and open in a new tab
+zH      scroll all the way left
+zL      scroll all the way right
+v       enter visual mode; use p/P to paste-and-go, use y to yank
+V       enter visual line mode
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;reference&#34;&gt;REFERENCE&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;vimium - &lt;a href=&#34;https://github.com/gdh1995/vimium&#34;&gt;https://github.com/gdh1995/vimium&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>Comment.nvim - nvim 주석처리 프로그램</title>
+      <link>https://neosolaris.github.io/posts/comment.nvim/</link>
+      <pubDate>Thu, 10 Aug 2023 17:50:37 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/comment.nvim/</guid>
+      <description>&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;프로그래밍 환경에서 각 언어별 주석처리를 쉽게 추가 제거 할 수 있는 플러그인&lt;/li&gt;
+&lt;li&gt;관련 플러그인 중에 가장 인기가 많고 사용이 편리하다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;features&#34;&gt;Features&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Supports treesitter.&lt;/li&gt;
+&lt;li&gt;Supports commentstring. Read :h comment.commentstring&lt;/li&gt;
+&lt;li&gt;Supports line (&lt;code&gt;//&lt;/code&gt;) and block (&lt;code&gt;/* */&lt;/code&gt;) comments&lt;/li&gt;
+&lt;li&gt;Dot (&lt;code&gt;.&lt;/code&gt;) repeat support for &lt;code&gt;gcc&lt;/code&gt;, &lt;code&gt;gbc&lt;/code&gt; and friends&lt;/li&gt;
+&lt;li&gt;Count support for [count]gcc and [count]gbc&lt;/li&gt;
+&lt;li&gt;Left-right (&lt;code&gt;gcw&lt;/code&gt; &lt;code&gt;gc$&lt;/code&gt;) and Up-Down (&lt;code&gt;gc2j&lt;/code&gt; &lt;code&gt;gc4k&lt;/code&gt;) motions&lt;/li&gt;
+&lt;li&gt;Use with text-objects (&lt;code&gt;gci{&lt;/code&gt; &lt;code&gt;gbat&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;Supports pre and post hooks&lt;/li&gt;
+&lt;li&gt;Ignore certain lines, powered by Lua regex&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;install&#34;&gt;Install&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;With packer.nvim&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-lua&#34; data-lang=&#34;lua&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;use&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;s1&#34;&gt;&amp;#39;numToStr/Comment.nvim&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;config&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kr&#34;&gt;function&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;require&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;Comment&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;).&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;setup&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kr&#34;&gt;end&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Manual Install&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; ~/.local/share/nvim/site
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; git clone https://github.com/numToStr/Comment.nvim
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; cp Comment.nvim/plugin/Comment.lua plugin/
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; cp -r Comment.nvim/lua/Comment lua/
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; vi ~/.config/nvim/init.lua
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;...
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;lua require(&amp;#39;Comment&amp;#39;).setup()
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;:so %
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;refernce&#34;&gt;REFERNCE&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Comment.nvim Github: &lt;a href=&#34;https://github.com/numToStr/Comment.nvim&#34;&gt;https://github.com/numToStr/Comment.nvim&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>lua-dev.nvim - nvim에서 lua 개발 환경 구성 플러그인</title>
+      <link>https://neosolaris.github.io/posts/lua-dev.nvim/</link>
+      <pubDate>Mon, 12 Sep 2022 01:31:36 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/lua-dev.nvim/</guid>
+      <description>&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;lua로 프로그래밍을 할 때 함수나 자동완성을 도와주는 플러그인이다.&lt;/li&gt;
+&lt;li&gt;nvim의 lua 내장함수 및 api도 지원한다.&lt;/li&gt;
+&lt;li&gt;다른 lsp 서버의 설치와 설정보다 어려워서 많이 고생했다.&lt;/li&gt;
+&lt;li&gt;가장 중요한 것은 lua-language-server를 제대로 설치하는 것이다.&lt;/li&gt;
+&lt;li&gt;서버를 컴파일 하는 것보다는 바이너리를 다운 받아 쓰는 것을 권장한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;requirements&#34;&gt;Requirements&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;nvim-cmp :자동완성 플러그인&lt;/li&gt;
+&lt;li&gt;nvim-lsp :Language Server Protocol 플러그인&lt;/li&gt;
+&lt;li&gt;cmp-nvim-lsp : lsp 자동완성 지원 플러그인&lt;/li&gt;
+&lt;li&gt;sumneko lua-language-server : Lua lsp server 프로그램 (lua 5.1 ~ 5.4, luaJit 모두 지원)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;lua-language-server-install&#34;&gt;lua-language-server Install&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;아래에서 컴파일된 바이너리 다운로드 (리눅스 64bit기준)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/sumneko/lua-language-server/releases&#34;&gt;https://github.com/sumneko/lua-language-server/releases&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;적당한 위치에 설치&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; mkdir ~/data/lua-language-server &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; lua-language-server
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; tar xvfz ~/Download/lua-language-server-3.5.5.tar.gz .
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; cat &amp;lt;&amp;lt;EOF &amp;gt; ~/bin/lua-language-server  &lt;span class=&#34;c1&#34;&gt;# 실행스크립트 작성&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;#&lt;/span&gt;!/usr/bin/bash
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;exec &amp;#34;~/data/lua-language-server/bin/lua-language-server&amp;#34; &amp;#34;$@&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;EOF
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; chmod u+x ~/bin/lua-language-server &lt;span class=&#34;c1&#34;&gt;# ~/bin 이 PATH에 설정되어 있어야&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; lua-language-server --version       &lt;span class=&#34;c1&#34;&gt;# 에러 없이 버전이 출력되면 성공&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;lua-dev-install&#34;&gt;lua-dev Install&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;먼저 nvim-cmp nvim-lsp, cmp-nvim-lsp가 설치 및 설정되었다고 가정한다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>nvim-tree - File Explorer</title>
+      <link>https://neosolaris.github.io/posts/nvim-tree/</link>
+      <pubDate>Sat, 10 Sep 2022 23:52:46 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/nvim-tree/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Cut, copy, paste, rename, delete, create 사용법 추가&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Git Integration&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Diagnostic Integration (LSP, COC)&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Live Filtering&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 개인화 설정&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;소개&#34;&gt;소개&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;빠르고 사용이 편리하며 &lt;a href=&#34;../nvim&#34;&gt;nvim&lt;/a&gt;에서 NerdTree를 대체할 만한 플러그인이다.&lt;/li&gt;
+&lt;li&gt;기능이 아주 많다. 조금씩 공부해서 활용하자.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;설치&#34;&gt;설치&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Add plugin set to &lt;code&gt;~/.config/nvim/lua/plugins.lua&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-lua&#34; data-lang=&#34;lua&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;use&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;kyazdani42/nvim-web-devicons&amp;#39;&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;-- web-devicons (optional)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;use&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;kyazdani42/nvim-tree.lua&amp;#39;&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;-- file explorer&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Install Package in command line mode&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;:w 
+:luafile %
+:PackerInstall
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;Add nvim-tree setup to &lt;code&gt;~/.config/nvim/lua/settings.lua&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-lua&#34; data-lang=&#34;lua&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;-- nvim-tree 설정&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;require&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;nvim-tree&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;setup&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;-- 설정 로드 및 초기화&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;nmap&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;&amp;lt;F2&amp;gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;:NvimTreeToggle&amp;lt;CR&amp;gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;-- 토글 키맵 설정&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Source &lt;code&gt;settings.lua&lt;/code&gt; in command line mode&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;:w 
+:luafile %
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;기본-키매핑&#34;&gt;기본 키매핑&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;자주 쓰는 것만 요약하고 자세한 것은 아래 주소 참조.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>bash-it</title>
+      <link>https://neosolaris.github.io/posts/bash-it/</link>
+      <pubDate>Fri, 26 Aug 2022 22:43:57 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/bash-it/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;다음 링크 참조
+&lt;a href=&#34;https://www.linuxfordevices.com/tutorials/linux/fancify-bash-terminal-with-bash-it&#34;&gt;https://www.linuxfordevices.com/tutorials/linux/fancify-bash-terminal-with-bash-it&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>vim-devicons</title>
+      <link>https://neosolaris.github.io/posts/vim-devicons/</link>
+      <pubDate>Fri, 26 Aug 2022 02:01:55 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/vim-devicons/</guid>
+      <description>&lt;h2 id=&#34;소개&#34;&gt;소개&lt;/h2&gt;
+&lt;p&gt;vim이 터미널에서 동작하므로 아이콘을 표시하기가 좋지 않다. 색깔과 모양을 미려하게 바꾸어 준다. 개인적인 관점에서 보면 상당히 매력적이다. 삭막한 검은 배경에 글씨만 보이다가 꽃이 피고 그림이 여기 저기 있는 느낌이다. 거기에다 아름다우면서도 절제된 것이 작업 집중력을 결코 떨어 뜨리는 것도 아니다. 적극 추천한다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/ryanoasis/vim-devicons&#34;&gt;https://github.com/ryanoasis/vim-devicons&lt;/a&gt; 이 곳에 가면 샘플 사진과 설치법이 자세히 나와있다.&lt;/li&gt;
+&lt;li&gt;적용되는 플러그인: &lt;a href=&#34;../startify&#34;&gt;NERDTree&lt;/a&gt;, vimfiler, vim-buffet and flagship.&lt;/li&gt;
+&lt;li&gt;물론 폰트를 설치하면 zsh, bash 등에서도 프롬프트 표시를 지원한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;폰트-설치&#34;&gt;폰트 설치&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;vim-devicons를 설치하기 전에 먼저 Nerd Patched 폰트를 설치해야 한다.&lt;/li&gt;
+&lt;li&gt;폰트는 다양한데 모두 설치한다면 많은 용량을 차지하므로 여기에서는 &lt;code&gt;Noto Nerd Font&lt;/code&gt; 폰트만 설치했다.&lt;/li&gt;
+&lt;li&gt;참고로 폰트를 받을 수 있는 사이트이다. &lt;a href=&#34;https://www.nerdfonts.com/font-downloads&#34;&gt;nerd-fonts&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;깃허브 사이트와 설치 안내도 있다. &lt;a href=&#34;https://github.com/ryanoasis/nerd-fonts&#34;&gt;https://github.com/ryanoasis/nerd-fonts&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;모두 설치하면 용량이 약 1.2GB로 매우 크므로 다음 스크립트에서 Noto와 Hack만 설치한다.&lt;/li&gt;
+&lt;li&gt;실행하면 &lt;code&gt;~/.local/share/fonts&lt;/code&gt;에 설치된다.&lt;/li&gt;
+&lt;li&gt;설치 후 자신이 사용하는 터미널설정에서 폰트를 &lt;code&gt;Noto Nerd font&lt;/code&gt;로 설정해주면 준비가 완료된다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#!/bin/bash
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;declare&lt;/span&gt; -a &lt;span class=&#34;nv&#34;&gt;fonts&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=(&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    BitstreamVeraSansMono
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    CodeNewRoman
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    DroidSansMono
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    FiraCode
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    FiraMono
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    Go-Mono
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    Hack
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    Hermit
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    JetBrainsMono
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    Meslo
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    Noto
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    Overpass
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    ProggyClean
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    RobotoMono
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    SourceCodePro
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    SpaceMono
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    Ubuntu
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    UbuntuMono
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;version&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;2.1.0&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;fonts_dir&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;HOME&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;/.local/share/fonts&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[[&lt;/span&gt; ! -d &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$fonts_dir&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;]]&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;then&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    mkdir -p &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$fonts_dir&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;fi&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; font in &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;fonts&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[@]&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;do&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nv&#34;&gt;zip_file&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;font&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;.zip&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nv&#34;&gt;download_url&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;https://github.com/ryanoasis/nerd-fonts/releases/download/v&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;version&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;zip_file&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Downloading &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$download_url&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    wget &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$download_url&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    unzip &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$zip_file&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt; -d &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$fonts_dir&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    rm &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$zip_file&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;find &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$fonts_dir&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt; -name &lt;span class=&#34;s1&#34;&gt;&amp;#39;*Windows Compatible*&amp;#39;&lt;/span&gt; -delete
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;fc-cache -fv
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;설치-및-설정&#34;&gt;설치 및 설정&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;~/.vimrc&lt;/code&gt; 또는 &lt;code&gt;~/.config/nvim/init.vim&lt;/code&gt; 설정&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-vimrc&#34; data-lang=&#34;vimrc&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;Plug&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;ryanoasis/vim-devicons&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;...
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;encoding&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;UTF&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;-8&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;설치&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;nvim +plugInstall  +qall
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;터미널 설정에서 폰트를 &lt;code&gt;Noto Nerd Font&lt;/code&gt;를 설정해 주고 &lt;a href=&#34;../nvim&#34;&gt;vim&lt;/a&gt; 을 사용하면 된다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/ryanoasis/vim-devicons&#34;&gt;https://github.com/ryanoasis/vim-devicons&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.nerdfonts.com/font-downloads&#34;&gt;https://www.nerdfonts.com/font-downloads&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/ryanoasis/nerd-fonts&#34;&gt;https://github.com/ryanoasis/nerd-fonts&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>NerdTree</title>
+      <link>https://neosolaris.github.io/posts/nerdtree/</link>
+      <pubDate>Fri, 26 Aug 2022 00:51:41 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/nerdtree/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;2022.09.09 - tips 추가&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;소개&#34;&gt;소개&lt;/h2&gt;
+&lt;p&gt;The NERDTree is a file system explorer for the Vim editor.&lt;/p&gt;
+&lt;p&gt;vim 환경에서 사용할 수 있는 파일 시스템 탐색기이다.&lt;/p&gt;
+&lt;h2 id=&#34;설치&#34;&gt;설치&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;~/.vimrc&lt;/code&gt; 또는 &lt;code&gt;~/.config/nvim/init.vim&lt;/code&gt; 설정&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-vimrc&#34; data-lang=&#34;vimrc&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;Plug&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;scrooloose/nerdtree&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;vim&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;vim +PlugInstall +qall
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;nvim&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;nvim +PlugInstall +qall
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;설정-및-기능&#34;&gt;설정 및 기능&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;F8&lt;/code&gt;키로 열기/닫기&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-vimrc&#34; data-lang=&#34;vimrc&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c&#34;&gt;&amp;#34; nerdtree&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;nnoremap&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;F8&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt; :&lt;span class=&#34;nx&#34;&gt;NERDTreeToggle&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;CR&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;      &lt;span class=&#34;c&#34;&gt;&amp;#34;화면에 띄우기: F8키&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;let&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;g&lt;/span&gt;:&lt;span class=&#34;nx&#34;&gt;NERDTreeWinPos&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;right&amp;#34;&lt;/span&gt;         &lt;span class=&#34;c&#34;&gt;&amp;#34;화면 오른쪽에 띄우기&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;autocmd&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;BufEnter&lt;/span&gt; * &lt;span class=&#34;nx&#34;&gt;lcd&lt;/span&gt; %:&lt;span class=&#34;nx&#34;&gt;p&lt;/span&gt;:&lt;span class=&#34;nx&#34;&gt;h&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;autocmd&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;VimEnter&lt;/span&gt; * &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;!&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;argc&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;NERDTree&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;endif&lt;/span&gt; &lt;span class=&#34;c&#34;&gt;&amp;#34;vim 단독 실행시 실행시키기&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;h``j``k``l&lt;/code&gt; - 이동&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;enter&lt;/code&gt; - 폴더열기, 파일열기&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;q&lt;/code&gt; - 나가기&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;h&lt;/code&gt; - 도움말&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;c&lt;/code&gt; - 선택된 디렉토리를 root로 만들기&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;m&lt;/code&gt; - 메뉴&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;I&lt;/code&gt; - 숨은파일(hidden file/dir) 보이기&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;tips&#34;&gt;Tips&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;shift + i&lt;/code&gt; - show hidden dir and files
+&lt;code&gt;/&lt;/code&gt; - Search directories and files form cusor
+&lt;code&gt;s&lt;/code&gt; - open file to split vertically&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Vim Startify</title>
+      <link>https://neosolaris.github.io/posts/startify/</link>
+      <pubDate>Tue, 23 Aug 2022 18:35:04 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/startify/</guid>
+      <description>&lt;h2 id=&#34;install&#34;&gt;Install&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-vimrc&#34; data-lang=&#34;vimrc&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;Plug&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;mhinz/vim-startify&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;key-binding&#34;&gt;Key Binding&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-vimrc&#34; data-lang=&#34;vimrc&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c&#34;&gt;&amp;#34; `SPC l s` - save current session&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;nnoremap&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;leader&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;ls&lt;/span&gt; :&lt;span class=&#34;nx&#34;&gt;SSave&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;CR&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c&#34;&gt;&amp;#34; `SPC l l` - list sessions / switch to different project&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;nnoremap&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;leader&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;ll&lt;/span&gt; :&lt;span class=&#34;nx&#34;&gt;SClose&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;CR&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;extra-configuration&#34;&gt;Extra Configuration&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;아래 참조하여 더 정리&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;문제점&#34;&gt;문제점&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;../vimwiki&#34;&gt;vim&lt;/a&gt; 자동저장이 안되는 문제가 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/mhinz/vim-startify&#34;&gt;Github home&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://ricostacruz.com/til/project-switcher-using-startify&#34;&gt;Project Switcher Using Startify&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>Vimwiki</title>
+      <link>https://neosolaris.github.io/posts/vimwiki/</link>
+      <pubDate>Tue, 23 Aug 2022 18:35:04 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/vimwiki/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;2023-08-31: 오타 수정, &lt;code&gt;할일과 일기&lt;/code&gt; 항목 내용 추가&lt;/li&gt;
+&lt;li&gt;2023-08-04: nvim에서의 설정 추가, 오타 및 링크 수정&lt;/li&gt;
+&lt;li&gt;2022-09-12: vimwiki cheatsheet 링크 추가&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;vim에서-설치&#34;&gt;vim에서 설치&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;../vim&#34;&gt;vim&lt;/a&gt;의 vimwiki 플러그인을 설정 추가하고 설치한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;vim ~/.vimrc
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;설정 추가 내용&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-vimrc&#34; data-lang=&#34;vimrc&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c&#34;&gt;&amp;#34;vimwiki 플러그인&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;Plug&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;vimwiki/vimwiki&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; {&lt;span class=&#34;s1&#34;&gt;&amp;#39;branch&amp;#39;&lt;/span&gt;: &lt;span class=&#34;s1&#34;&gt;&amp;#39;dev&amp;#39;&lt;/span&gt;} 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c&#34;&gt;&amp;#34;vimwiki의 편한 시작을 위한 vim starter tool&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;Plug&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;mhinz/vim-startify&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;플러그인 설치&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; vim +PluginInstall +qall
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;vim에서-설정&#34;&gt;vim에서 설정&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; vim ~/.vimrc
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-vimrc&#34; data-lang=&#34;vimrc&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c&#34;&gt;&amp;#34; vimwiki 설정&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c&#34;&gt;&amp;#34; 공개용 위키(github와 연동), 개인용 위키 두개를 설정(gdrive, dropbox 연동)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;let&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;g&lt;/span&gt;:&lt;span class=&#34;nx&#34;&gt;vimwiki_list&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; [
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	\{
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	\   &lt;span class=&#34;s1&#34;&gt;&amp;#39;path&amp;#39;&lt;/span&gt;: &lt;span class=&#34;s1&#34;&gt;&amp;#39;/data/vimwiki/wiki&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	\   &lt;span class=&#34;s1&#34;&gt;&amp;#39;syntax&amp;#39;&lt;/span&gt; : &lt;span class=&#34;s1&#34;&gt;&amp;#39;markdown&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	\   &lt;span class=&#34;s1&#34;&gt;&amp;#39;ext&amp;#39;&lt;/span&gt; : &lt;span class=&#34;s1&#34;&gt;&amp;#39;.md&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	\   &lt;span class=&#34;s1&#34;&gt;&amp;#39;diary_rel_path&amp;#39;&lt;/span&gt;: &lt;span class=&#34;s1&#34;&gt;&amp;#39;.&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	\}&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	\{
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	\   &lt;span class=&#34;s1&#34;&gt;&amp;#39;path&amp;#39;&lt;/span&gt;: &lt;span class=&#34;s1&#34;&gt;&amp;#39;/data/vimwiki/mywiki&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	\   &lt;span class=&#34;s1&#34;&gt;&amp;#39;ext&amp;#39;&lt;/span&gt; : &lt;span class=&#34;s1&#34;&gt;&amp;#39;.md&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	\   &lt;span class=&#34;s1&#34;&gt;&amp;#39;diary_rel_path&amp;#39;&lt;/span&gt;: &lt;span class=&#34;s1&#34;&gt;&amp;#39;.&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	\}&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	\]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c&#34;&gt;&amp;#34; vimwiki의 conceallevel 을 끄는 것이 좋다&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;let&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;g&lt;/span&gt;:&lt;span class=&#34;nx&#34;&gt;vimwiki_conceallevel&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c&#34;&gt;&amp;#34; vimwiki 설정이 markdown 설정을 침투하지 않게 하기&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;let&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;g&lt;/span&gt;:&lt;span class=&#34;nx&#34;&gt;vimwiki_global_ext&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;neovim에서-설치&#34;&gt;Neovim에서 설치&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;플러그인 등록: &lt;code&gt;~/.config/nvim/lua/plugins.lua&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-lua&#34; data-lang=&#34;lua&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;use&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;vimwiki/vimwiki&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;플러그인 설치: nvim 내에서&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;:PackerInstall
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;플러그인 설치: shell 내에서&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; nvim +
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; nvim +PluginInstall +qall
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;neovim에서-설정&#34;&gt;Neovim에서 설정&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;설정: &lt;code&gt;~/.config/nvim/lua/settings.lua&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-lua&#34; data-lang=&#34;lua&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;-- vimwiki - https://github.com/vimwiki/vimwiki &lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;----------------------------------------------------------------&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;vim.cmd&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;[[
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s&#34;&gt;iabbr __email abcd@efgh.com
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s&#34;&gt;iabbr &amp;lt;expr&amp;gt; __time strftime(&amp;#34;%Y-%m-%d %H:%M:%S&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s&#34;&gt;iabbr &amp;lt;expr&amp;gt; __date strftime(&amp;#34;%FT%R:%S+09:00&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s&#34;&gt;iabbr &amp;lt;expr&amp;gt; __today strftime(&amp;#34;%F&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s&#34;&gt;iabbr &amp;lt;expr&amp;gt; __file expand(&amp;#39;%:p&amp;#39;)
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s&#34;&gt;iabbr &amp;lt;expr&amp;gt; __name expand(&amp;#39;%&amp;#39;)
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s&#34;&gt;iabbr &amp;lt;expr&amp;gt; __pwd expand(&amp;#39;%:p:h&amp;#39;)
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s&#34;&gt;iabbr &amp;lt;expr&amp;gt; __front system(&amp;#34;/home/borisu/bin/frontmatter.sh&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s&#34;&gt;iabbr &amp;lt;expr&amp;gt; __luajit &amp;#39;#!/usr/bin/env luajit&amp;#39;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s&#34;&gt;]]&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;-- Key Mapping&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;nmap&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;&amp;lt;C-l&amp;gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;:VimwikiToggleListItem&amp;lt;CR&amp;gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;-- Contol + Space is default&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;-- vim.g.vimwiki_autowriteall = true        -- automatically save a modified wiki buffer&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;-- vimwiki의 conceallevel 을 끔&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;vim.g&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;vimwiki_conceallevel&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;-- vimwiki 설정이 markdown 설정을 침투하지 않게 하기&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;vim.g&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;vimwiki_global_ext&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;                &lt;span class=&#34;c1&#34;&gt;-- 모든 마크다운에 대해 동작하지 않도록 함&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;vim.g&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;vimwiki_list&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;     &lt;span class=&#34;n&#34;&gt;path&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;$HOME/vimwiki/&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;     &lt;span class=&#34;n&#34;&gt;syntax&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;markdown&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;     &lt;span class=&#34;n&#34;&gt;ext&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;.md&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;     &lt;span class=&#34;n&#34;&gt;diary_rel_path&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;.&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;재인식&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;:luafile %  -- 또는
+:so %
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;기본-키정의&#34;&gt;기본 키정의&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;:h vimwiki-local-mappings&lt;/code&gt; &amp;ndash; See default key binding&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Qna on Borisu Wiki Home</title>
+    <link>https://neosolaris.github.io/categories/qna/</link>
+    <description>Recent content in Qna on Borisu Wiki Home</description>
+    <image>
+      <title>Borisu Wiki Home</title>
+      <url>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.147.2</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 15 Dec 2022 15:19:28 +0900</lastBuildDate>
+    <atom:link href="https://neosolaris.github.io/categories/qna/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>QnA</title>
+      <link>https://neosolaris.github.io/posts/qna/</link>
+      <pubDate>Tue, 23 Aug 2022 18:35:04 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/qna/</guid>
+      <description>&lt;h2 id=&#34;vis&#34;&gt;vis&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 간단한 루아스크립트를 어떻게 vis내에서 동작하게 하는가?
+&lt;ul&gt;
+&lt;li&gt;아직은 잘 모르겠으나 nvim처럼 초기화 파일에서 require하는 방식이다.&lt;/li&gt;
+&lt;li&gt;luajit이 아닌 lua 3.x 버전의 API를 제공한다. 튜토리얼이나 example이 없다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;vim--nvim&#34;&gt;vim / nvim&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; lsp - lua language server 의 3GB 넘는 메모리 사용과 CPU 오버로드는?
+&lt;ul&gt;
+&lt;li&gt;workspace를 한정하면 된다고 하는데 1GB로 줄었으나 노트북이 계속 헉헉댄다. nvim에서 lua로 코딩하는 이유가 심플하고 빠르고 적은 메모리 사용이 장점인데 개발 환경은 너무 지나치다.&lt;/li&gt;
+&lt;li&gt;최신 버전으로 업데이트 했으나 조금 나아졌을 뿐 여전하다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; nvim을 /usr/local에 빌드하고 기존 패키지를 지웠고 PATH도 잡았는데 실행이 안된다.
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;$ which nvim&lt;/code&gt; 경로가 &lt;code&gt;/usr/local/bin/nvim&lt;/code&gt;으로 나온다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;$ /usr/local/bin/nvim --verion&lt;/code&gt; 하면 실행도 잘 된다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;$ nvim&lt;/code&gt; 하면 &lt;code&gt;/usr/bin/nvim&lt;/code&gt;이 없다고 나온다.&lt;/li&gt;
+&lt;li&gt;재부팅해서 다시 로그인하면 해결된다.&lt;/li&gt;
+&lt;li&gt;옛날 Solaris에서는 이런 문제가 없었는데&amp;hellip;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 사용 중 80컬럼 이상 작성하면 자동으로 개행이 되는 문제
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;~/.config/nvim/init.lua&lt;/code&gt;에 다음 설정 &lt;code&gt;vim.wo.wrap = true&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 자동완성 기능에서 엔터가 아니라 탭으로 완성하려면
+&lt;ul&gt;
+&lt;li&gt;nvim-cmp 설정에서 mapping에 &lt;code&gt;[&amp;quot;&amp;lt;Tab&amp;gt;&amp;quot;]&lt;/code&gt;과 &lt;code&gt;[&amp;quot;&amp;lt;S+Tab&amp;gt;&amp;quot;]&lt;/code&gt;을 설정&lt;/li&gt;
+&lt;li&gt;자세한 사항은 &lt;a href=&#34;../nvim-cmp&#34;&gt;nvim cmp&lt;/a&gt; 자동완성 문서를 참조하거나 settings.lua참조&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; nvim에서 lua 플러그인과 설정 중 쏟아지는 에러는 어찌해야 하는가?
+&lt;ul&gt;
+&lt;li&gt;하나씩 공부해서 적용하고 테스트한다. 한 번에 많은 설정을 적용하지 않는다.&lt;/li&gt;
+&lt;li&gt;에러 메시지를 잘 읽어 보고 구글링 또는 해당 github의 issue 등을 참고한다.&lt;/li&gt;
+&lt;li&gt;nvim 버전과 플러그인 버전이 맞지 않는 경우가 많다. nvim을 최신버전으로 설치 또는 빌드하고 플러그인도 최신버전으로 업데이트 해주면 대부분 해결된다. 이것을 몰라 정말 개고생..&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; vim에서는 vimwiki 파일을 편집하며 넘나들어도 자동 저장이 되었는데 nvim에서는 동작하지 않았다. 왜?
+&lt;ul&gt;
+&lt;li&gt;vim에서 nvim으로 옮긴 후 vimwiki사용 시 이것이 많이 불편했다.&lt;/li&gt;
+&lt;li&gt;수 많은 사이트를 조사하고 알아 보았지만 똑같은 설정에도 불구하고 안됨.&lt;/li&gt;
+&lt;li&gt;해결: nvim을 최신 버전으로 업데이트하고 다음 설정을 해 주었다.&lt;/li&gt;
+&lt;li&gt;md 파일을 편집하고 버퍼를 나갈 때 이를 자동으로 저장한다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;init.lua&lt;/code&gt;: &lt;code&gt;vim.api.nvim_create_autocmd(&amp;quot;BufLeave&amp;quot;, {pattern = &amp;quot;*.md&amp;quot;, command = &amp;quot;silent! wall&amp;quot;})&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;만약에 내가 글을 쓰는 데 문장이 길어질 때가 있다. 그러나 내가 원하는 것은 화면 끝에 오면 자동으로 라인이 내려가는 것이다.&lt;/li&gt;
+&lt;li&gt;하지만 자동 줄바꿈이 되는 것을 원하는 것은 아니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;linux-일반&#34;&gt;Linux 일반&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 우분투에서 default shell을 &lt;a href=&#34;../kime&#34;&gt;zsh&lt;/a&gt;이 작동하지 않는다.&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 리눅스에서 폴더를 구조적 계층적으로 볼 수 있는 방법은?
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;../tree&#34;&gt;tree&lt;/a&gt; 명령어를 사용하면 된다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ls -R&lt;/code&gt;도 어느정도 가능&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;github&#34;&gt;github&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 잘 되던 github.io의 내 블로그가 갑자기 정상적으로 보여지지 않는가?&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

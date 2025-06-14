@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Readline on Borisu Wiki Home</title>
+    <link>https://neosolaris.github.io/tags/readline/</link>
+    <description>Recent content in Readline on Borisu Wiki Home</description>
+    <image>
+      <title>Borisu Wiki Home</title>
+      <url>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.147.2</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 11 Aug 2023 17:38:11 +0900</lastBuildDate>
+    <atom:link href="https://neosolaris.github.io/tags/readline/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Lua - Interactive Mode</title>
+      <link>https://neosolaris.github.io/posts/lua-interactive/</link>
+      <pubDate>Thu, 22 Sep 2022 15:08:09 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/lua-interactive/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 2023-08-11: rlwarp + readline을 활용한 키워드 완성 기능 추가&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;코딩을 하기 전 또는 빠른 확인을 위해 인터엑티브 모드를 사용&lt;/li&gt;
+&lt;li&gt;간단한 테스트나 몇가지 실험을 해보는 용도로서 좋다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ilua&lt;/code&gt;를 사용하면 jupyter console, notebook 등으로 확장할 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;execute-string&#34;&gt;Execute String&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; lua -e &lt;span class=&#34;s1&#34;&gt;&amp;#39;print(&amp;#34;hello world&amp;#34;)&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;hello world
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;interactive-mode&#34;&gt;Interactive Mode&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;lua -i&lt;/code&gt; 또는 &lt;code&gt;luajit -i&lt;/code&gt; 로 interactive mode로 진입&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-i&lt;/code&gt; 옵션이 없어도 진입 가능&lt;/li&gt;
+&lt;li&gt;local 변수가 다음 라인에서 인식되지 않는다. 사용할 때 주의&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-cosole&#34; data-lang=&#34;cosole&#34;&gt;$ lua -i                   -- 또는 luajit -i
+&amp;gt; local a = &amp;#39;hello world&amp;#39;  -- local 변수 설정
+&amp;gt; print(a)                 -- print
+nil                        -- 결과: nil
+
+&amp;gt; a = &amp;#39;hello world&amp;#39;        -- Global 변수 설정
+&amp;gt; print(a)                 -- print
+hello world                -- 결과: hello world
+
+&amp;gt; os.exit()                -- 종료: 또는 Ctrl+d, Ctrl+c
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;Opening Lua File&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;f&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; assert&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;loadfile&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;foo.lua&amp;#39;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;  -- lua파일 로드
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;&amp;gt;&lt;/span&gt; f&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt;                             -- 실행
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;gp&#34;&gt;&amp;gt;&lt;/span&gt; dofile&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;foo.lua&amp;#39;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;               -- 로드 및 실행
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;gp&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;m&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; require&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;mymodule&amp;#39;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;         -- mymodule.lua 모듈 로드
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;&amp;gt;&lt;/span&gt; m.parse&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt;                       -- 모듈내 함수 실행
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Load Libary Example&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-lua&#34; data-lang=&#34;lua&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;-- file &amp;#39;lib1.lua&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kr&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;norm&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;y&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;kd&#34;&gt;local&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;n2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;^&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;y&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;^&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;kr&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;math.sqrt&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;n2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kr&#34;&gt;end&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kr&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;twice&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;kr&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kr&#34;&gt;end&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;&amp;gt;&lt;/span&gt; dofile&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;lib1.lua&amp;#39;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;     -- load your library
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;n&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; norm&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;3.4, 1.0&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;     -- using lib1.lua functions
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;&amp;gt;&lt;/span&gt; print&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;twice&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;n&lt;span class=&#34;o&#34;&gt;))&lt;/span&gt;        -- using twice functions
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Command Line Arguments (&lt;code&gt;-- /dev/null&lt;/code&gt; 옵션 주목)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; lua -i -- /dev/null one two three
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;&amp;gt;&lt;/span&gt; print&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;arg&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;1&lt;span class=&#34;o&#34;&gt;])&lt;/span&gt; -- one
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;&amp;gt;&lt;/span&gt; print&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;arg&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;2&lt;span class=&#34;o&#34;&gt;])&lt;/span&gt; -- two
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;&amp;gt;&lt;/span&gt; print&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;arg&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;3&lt;span class=&#34;o&#34;&gt;])&lt;/span&gt; -- three
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;&amp;gt;&lt;/span&gt; print&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;arg&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;0&lt;span class=&#34;o&#34;&gt;])&lt;/span&gt; -- /dev/null
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;lua-luajit-line-completion-like-in-bash&#34;&gt;Lua, LuaJit line completion like in bash&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;bash에서 line completion과 유사한 기능을 구현&lt;/li&gt;
+&lt;li&gt;rlwrap 활용 - &lt;code&gt;-a:always-readline&lt;/code&gt;,&lt;code&gt;-c:complete-filenames&lt;/code&gt;,&lt;code&gt;-e:extra-char-after-completion&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo apt install rlwrap
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;alias&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;luajit&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;rlwrap -ac -e &amp;#34;&amp;#34; -pRed luajit&amp;#39;&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;# add this line to ~/.bashrc&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; luajit
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt; + &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;4
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;&lt;/span&gt;&lt;span class=&#34;gp&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt; + &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;  --&amp;gt; 화살키를 이용하여 상위 명령라인을 불러 올 수 있다.
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;rlwarp의 readline을 활용한 명령어 완성: Dictionary 파일을 만들고 사용.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;print local assert string ...&amp;#34;&lt;/span&gt; &amp;gt; ~/.luadict
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;alias&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;luajit&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;rlwrap -b &amp;#34;&amp;#34; -f $HOME/.luadic -pRed -ca -e &amp;#34;&amp;#34; luajit&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; luajit
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;&amp;gt;&lt;/span&gt; ass&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;-&amp;gt; Press Tab Key anc Check&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;ilua--with-jupyter&#34;&gt;iLua : with Jupyter&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Jupyter의 막강한 지원아래 콘솔형 인터엑티브를 사용할 수 있다.&lt;/li&gt;
+&lt;li&gt;코드완성 및 vi edit mode 그리고 변수를 직접 출력가능하다.&lt;/li&gt;
+&lt;li&gt;물론 특성상 local 변수는 역시 지원되지 않는다. 현재로서는 그렇다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;~/.local&lt;/code&gt; 이하에 jupyter 및 ilua가 설치된다.&lt;/li&gt;
+&lt;li&gt;아래처럼 &lt;code&gt;vi edit mode&lt;/code&gt;를 사용하면 더욱 편리하다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; pip install ilua
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;c.ZMQTerminalInteractiveShell.editing_mode=&amp;#39;vi&amp;#39;&amp;#34;&lt;/span&gt; &amp;gt; ~/.jupyter/jupyter_console_config.py
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; jupyter console -h             &lt;span class=&#34;c1&#34;&gt;# help&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; jupyter kernelspec list        &lt;span class=&#34;c1&#34;&gt;# 내장 커널 스펙 확인&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; ~/.local/bin/ilua -i lua&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;jit&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;# 실행&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;alias ilua=&amp;#39;ilua -i luajit&amp;#39;&amp;#34;&lt;/span&gt; &amp;gt;&amp;gt; ~/.bashrc  &lt;span class=&#34;c1&#34;&gt;# luajit 전용 alias&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;source&lt;/span&gt; ~/.bashrc
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; ilua
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.lua.org/pil/1.1.html&#34;&gt;https://www.lua.org/pil/1.1.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.tutorialspoint.com/command-line-arguments-in-lua&#34;&gt;https://www.tutorialspoint.com/command-line-arguments-in-lua&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://lua-users.org/wiki/InteractiveLua&#34;&gt;https://lua-users.org/wiki/InteractiveLua&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/guysv/ilua&#34;&gt;https://github.com/guysv/ilua&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://jupyter-console.readthedocs.io/en/latest/config_options.html&#34;&gt;https://jupyter-console.readthedocs.io/en/latest/config_options.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+  </channel>
+</rss>

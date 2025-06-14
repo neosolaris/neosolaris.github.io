@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Re on Borisu Wiki Home</title>
+    <link>https://neosolaris.github.io/tags/re/</link>
+    <description>Recent content in Re on Borisu Wiki Home</description>
+    <image>
+      <title>Borisu Wiki Home</title>
+      <url>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.147.2</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 07 Dec 2022 07:26:00 +0900</lastBuildDate>
+    <atom:link href="https://neosolaris.github.io/tags/re/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Vis - Structural Regular Expressions</title>
+      <link>https://neosolaris.github.io/posts/vis-sre/</link>
+      <pubDate>Wed, 07 Dec 2022 07:26:00 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/vis-sre/</guid>
+      <description>&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
+&lt;h2 id=&#34;tutorial-sam-command-language&#34;&gt;Tutorial Sam Command Language&lt;/h2&gt;
+&lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;sam structural regular expression &lt;a href=&#34;http://doc.cat-v.org/bell_labs/structural_regexps/se.pdf&#34;&gt;http://doc.cat-v.org/bell_labs/structural_regexps/se.pdf&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;sam command tutorial &lt;a href=&#34;http://doc.cat-v.org/bell_labs/sam_lang_tutorial/sam_tut.pdf&#34;&gt;http://doc.cat-v.org/bell_labs/sam_lang_tutorial/sam_tut.pdf&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+  </channel>
+</rss>

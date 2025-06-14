@@ -1,9 +1,0 @@
-remote_theme: jekyll/minima
-title: Borisu's WoodWork Homepage
-description: 나무와 함께 하는 삶
-date_format: "%Y-%m-%d"
-header_pages:
-  - about.md
-show_downloads: false
-github:
-  is_project_page: false

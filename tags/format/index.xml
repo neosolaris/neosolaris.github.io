@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Format on Borisu Wiki Home</title>
+    <link>https://neosolaris.github.io/tags/format/</link>
+    <description>Recent content in Format on Borisu Wiki Home</description>
+    <image>
+      <title>Borisu Wiki Home</title>
+      <url>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.147.2</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 11 Oct 2022 15:43:10 +0900</lastBuildDate>
+    <atom:link href="https://neosolaris.github.io/tags/format/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>FITS - Flexible Image Transport System</title>
+      <link>https://neosolaris.github.io/posts/fits/</link>
+      <pubDate>Sun, 09 Oct 2022 18:12:36 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/fits/</guid>
+      <description>&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;FITS는 Flexible Image Transport System로 오픈 표준 디지털 파일 포맷이다.&lt;/li&gt;
+&lt;li&gt;주로 천문사진에 사용되는 포맷이다.&lt;/li&gt;
+&lt;li&gt;천문관측 사진을 직접 촬영하고 편집해도 된다.&lt;/li&gt;
+&lt;li&gt;그러나 FITS는 개인의 비용과 노력으로 얻을 수 없는 고사양 고품질의 사진과 포맷을 제공한다.&lt;/li&gt;
+&lt;li&gt;천문사진에 관심이 있다면 FITS 포맷을 잘 알아야 하는 이유가 있다.&lt;/li&gt;
+&lt;li&gt;천체를 연구하고 공개된 데이터를 이용하여 은하를 시각적으로 완성하는 일&lt;/li&gt;
+&lt;li&gt;이를 위해 FITS에 대해 알아보고 어떻게 다루어야 하는지를 정리한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;파일-포맷&#34;&gt;파일 포맷&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;단순한 이미지만을 다루는 포맷이 아니라 여러 정보를 함께 넣을 수 있다.&lt;/li&gt;
+&lt;li&gt;기본 구조는 &lt;code&gt;Primary Header&lt;/code&gt; + &lt;code&gt;SCI(header:data)&lt;/code&gt; + &lt;code&gt;ERR(header:data) DQ(header:data)&lt;/code&gt; 로 되어 있다.&lt;/li&gt;
+&lt;li&gt;하나의 파일에 여러 종류의 데이터를 담을 수 있다.&lt;/li&gt;
+&lt;li&gt;스펙트럼이나 광도곡선, 데이터 큐브 등의 관련 정보를 담을 수 있다.&lt;/li&gt;
+&lt;li&gt;즉, 하나의 천체를 관측하면 하나의 파일에 여러개의 프레임으로 데이터를 저장할 수 있다.&lt;/li&gt;
+&lt;li&gt;Header: 천체의 관측기, 관측날짜, 노출시간, CCD의 사양 등&lt;/li&gt;
+&lt;li&gt;Data: 이미지 픽셀값, 천체의 flux값, 관측시간, 관측 파장 등&lt;/li&gt;
+&lt;li&gt;비유를 들자면 어떤 천체를 관측할 때 한 종이에 그림을 그리고 좌표나 기타 정보를 같이 기록해 두는 것과 같다.&lt;/li&gt;
+&lt;li&gt;확장자: &lt;code&gt;.fits&lt;/code&gt;, &lt;code&gt;.fit&lt;/code&gt;, &lt;code&gt;.fts&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;편집-소프트웨어&#34;&gt;편집 소프트웨어&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;../siril&#34;&gt;siril&lt;/a&gt; - FITS Edit: 천문사진 전처리 또는 이미지 프로세싱 소프트웨어&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../NOAO&#34;&gt;iraf&lt;/a&gt;의 천문사진 프로세싱: clang&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../gimp&#34;&gt;gimp&lt;/a&gt; - 그래픽툴, FITS 편집 가능&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../photoshop&#34;&gt;photoshop&lt;/a&gt; - 그래픽툴, FITS 편집 가능, 유료, 윈도우즈 전용&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../imagej&#34;&gt;imagej&lt;/a&gt; - FIT 편집 통합 툴&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../ubuntu:libfitsio&#34;&gt;fits liberator&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;fits-library&#34;&gt;FITS LIBRARY&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;../astropy&#34;&gt;astropy&lt;/a&gt; - pyfits 포함 천문관측 모듈: anaconda 기본 모듈&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../NOAO&#34;&gt;pyraf&lt;/a&gt;의 천문사진 프로세싱: python&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../pyfits&#34;&gt;pyfits&lt;/a&gt; - fits 편집 모듈: python&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../fitsio&#34;&gt;fitsio&lt;/a&gt; - fits 라이브러리: clang&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;보기-소프트웨어&#34;&gt;보기 소프트웨어&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;../fv&#34;&gt;fv&lt;/a&gt; - FITS Viewer: 오래된 툴, 조금 촌스럽다.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../gimp&#34;&gt;gimp&lt;/a&gt; - 그래픽툴, 파일보기 및 다른 포맷 변환&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../ubuntu:saods9&#34;&gt;ds9&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;guides&#34;&gt;Guides&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Here&amp;rsquo;s how to edit James Webb Space Telescope images: Judy Schmidt 인터뷰
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.space.com/james-webb-space-telescope-image-editing&#34;&gt;https://www.space.com/james-webb-space-telescope-image-editing&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;FITS Liberator User Guide
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://esahubble.org/static/projects/fits_liberator/v301files/userguide.pdf&#34;&gt;https://esahubble.org/static/projects/fits_liberator/v301files/userguide.pdf&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;NEW IRAF ABC (IRAF를 이용한 측광 자료 전처리)
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://astro.kias.re.kr/~hshwang/NEW_IRAF_ABC.pdf&#34;&gt;https://astro.kias.re.kr/~hshwang/NEW_IRAF_ABC.pdf&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;FITS HOME - &lt;a href=&#34;https://fits.gsfc.nasa.gov/&#34;&gt;https://fits.gsfc.nasa.gov/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;FITS i/o libraries - &lt;a href=&#34;https://fits.gsfc.nasa.gov/fits_libraries.html&#34;&gt;https://fits.gsfc.nasa.gov/fits_libraries.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;위키백과 FITS - &lt;a href=&#34;https://en.wikipedia.org/wiki/FITS&#34;&gt;https://en.wikipedia.org/wiki/FITS&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Fits 관련 소프트웨어 리스트 - &lt;a href=&#34;https://fits.gsfc.nasa.gov/fits_viewer.html&#34;&gt;https://fits.gsfc.nasa.gov/fits_viewer.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Short Introduction of Image Processing &lt;a href=&#34;https://noirlab.edu/public/media/archives/techdocs/pdf/techdoc027.pdf&#34;&gt;https://noirlab.edu/public/media/archives/techdocs/pdf/techdoc027.pdf&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+  </channel>
+</rss>

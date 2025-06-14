@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Processing on Borisu Wiki Home</title>
+    <link>https://neosolaris.github.io/tags/processing/</link>
+    <description>Recent content in Processing on Borisu Wiki Home</description>
+    <image>
+      <title>Borisu Wiki Home</title>
+      <url>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.147.2</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 29 Sep 2022 17:51:54 +0900</lastBuildDate>
+    <atom:link href="https://neosolaris.github.io/tags/processing/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SimpleITK - Open Source Multi-dimensional Image Analysis</title>
+      <link>https://neosolaris.github.io/posts/simpleitk/</link>
+      <pubDate>Thu, 29 Sep 2022 17:51:54 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/simpleitk/</guid>
+      <description>&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;simpleitk는 오픈소스로서 주로 의료, 천문에서 사진을 프로세싱하는 툴킷이다.&lt;/li&gt;
+&lt;li&gt;주로 python을 사용하는데 설치와 사용이 너무 지저분하고 번거롭다.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../lua&#34;&gt;lua&lt;/a&gt;를 사용하는 방법을 알아 보았다.&lt;/li&gt;
+&lt;li&gt;설치는 &lt;a href=&#34;../luarocks&#34;&gt;luarocks&lt;/a&gt; 패키지 매니저를 사용하였고 api형태로 컴파일해서
+사용한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;install&#34;&gt;Install&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Python Package Install&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; pip install SimpleITK
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; pip install SimpleITK-SimpleElastix
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; vim test.py
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;SimpleITK&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;as&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;sitk&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Lua Package Install : version 2.2.0&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; luarocks search simpleitk           &lt;span class=&#34;c1&#34;&gt;# 패키지 검색&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; luarocks install --local simpleitk  &lt;span class=&#34;c1&#34;&gt;# 로컬`~/.luarocks`에 설치&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; vim test.lua
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-lua&#34; data-lang=&#34;lua&#34;&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Quick Start: &lt;a href=&#34;https://simpleitk.readthedocs.io/en/master/gettingStarted.html&#34;&gt;https://simpleitk.readthedocs.io/en/master/gettingStarted.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Github Page: &lt;a href=&#34;https://github.com/SimpleITK/SimpleITKLuaRock&#34;&gt;https://github.com/SimpleITK/SimpleITKLuaRock&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Python SimpleITK Howto: &lt;a href=&#34;https://bo-10000.tistory.com/61&#34;&gt;https://bo-10000.tistory.com/61&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Sshd on Borisu Wiki Home</title>
+    <link>https://neosolaris.github.io/tags/sshd/</link>
+    <description>Recent content in Sshd on Borisu Wiki Home</description>
+    <image>
+      <title>Borisu Wiki Home</title>
+      <url>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.147.2</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 02 Sep 2022 15:09:16 +0900</lastBuildDate>
+    <atom:link href="https://neosolaris.github.io/tags/sshd/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ssh-keygen 으로 인증하기</title>
+      <link>https://neosolaris.github.io/posts/ssh-keygen/</link>
+      <pubDate>Fri, 02 Sep 2022 15:09:16 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/ssh-keygen/</guid>
+      <description>&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;remote: authorized_keys 인증 허가&lt;/li&gt;
+&lt;li&gt;local: ssh-keygen으로 키를 생성&lt;/li&gt;
+&lt;li&gt;local: ssh-copy-id로 remote에 복사&lt;/li&gt;
+&lt;li&gt;local: ssh로 패스워드 없이 로그인확인&lt;/li&gt;
+&lt;li&gt;remote: Password로 로그인 불허가 설정&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;remote-authorized_keys-인증허가-되어있다면-다음으로&#34;&gt;remote: authorized_keys 인증허가 (되어있다면 다음으로)&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo vi /etc/ssh/sshd_config
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;...
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;PermitRootLogin no #root로 로그인불가
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;go&#34;&gt;RSAAuthentication yes
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;PubkeyAuthentication yes
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;AuthorizedKeysFile      %h/.ssh/authorized_keys 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;...
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo systemctl restart ssh
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;local-ssh-keygen-보안키-생성하기--t-type--c-comment&#34;&gt;local: ssh-keygen 보안키 생성하기 (-t: type, -C: Comment)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;passphrase는 그냥 엔터 2번&lt;/li&gt;
+&lt;li&gt;생성위치는 ~/.ssh/id_ed25519{.pub}&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; ssh-keygen -t ed25519 -C &lt;span class=&#34;s2&#34;&gt;&amp;#34;batutah@gmail.com&amp;#34;&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;local-ssh-copy-id로-public-key를-remote에-복사&#34;&gt;local: ssh-copy-id로 public key를 remote에 복사&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;local: ~/.ssh/id_ed25519.pub -&amp;gt; remote: ~/.ssh/authorized_keys&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; ssh-copy-id -p81 borisu@192.168.1.101 &lt;span class=&#34;c1&#34;&gt;#remote 패스워드 입력&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;local-ssh로-패스워드-없이-로그인-확인&#34;&gt;local: ssh로 패스워드 없이 로그인 확인&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; ssh -p81 borisu@192.168.1.101
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;remote-sshd에서-패스워드인증-허가를-막기&#34;&gt;remote: sshd에서 패스워드인증 허가를 막기&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;키인증으로 로그인이 가능하므로 패스워드 인증을 막아줌&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo vi /etc/ssh/sshd_config
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;...
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;PasswordAuthentication no
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;...
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo systemctl restart ssh
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys-on-ubuntu-20-04&#34;&gt;https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys-on-ubuntu-20-04&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.answertopia.com/ubuntu/configuring-ssh-key-based-authentication-on-ubuntu/&#34;&gt;https://www.answertopia.com/ubuntu/configuring-ssh-key-based-authentication-on-ubuntu/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>SSH - Secure Shell</title>
+      <link>https://neosolaris.github.io/posts/ssh/</link>
+      <pubDate>Fri, 02 Sep 2022 15:04:36 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/ssh/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;../ssh-keygen&#34;&gt;ssh keygen&lt;/a&gt; - ssh-keygen으로 인증하여 로그인하기&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+  </channel>
+</rss>

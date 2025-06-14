@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Container on Borisu Wiki Home</title>
+    <link>https://neosolaris.github.io/tags/container/</link>
+    <description>Recent content in Container on Borisu Wiki Home</description>
+    <image>
+      <title>Borisu Wiki Home</title>
+      <url>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.147.2</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 03 Aug 2023 17:00:25 +0900</lastBuildDate>
+    <atom:link href="https://neosolaris.github.io/tags/container/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Docker - 소프트웨어 개발 플랫폼</title>
+      <link>https://neosolaris.github.io/posts/docker/</link>
+      <pubDate>Wed, 09 Nov 2022 22:32:02 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/docker/</guid>
+      <description>&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;docker는 응용프로그램 개발을 위한 소프트웨어 플랫폼이다.&lt;/li&gt;
+&lt;li&gt;Linux 기반에서 독립된 컨테이너(하나의 프로세스) 형태로 동작한다.&lt;/li&gt;
+&lt;li&gt;go 언어로 개발되었다.&lt;/li&gt;
+&lt;li&gt;가상OS와는 다르게 가볍고 빠르다.&lt;/li&gt;
+&lt;li&gt;빌드된 이미지를 언제 어디에서는 docker를 통해 문제 없이 실행할 수 있다.&lt;/li&gt;
+&lt;li&gt;자신만의 개발환경을 이미지로 구축해 놓으면 개발 컴퓨터가 달라져도 동일한 환경에서 개발할 수 있다.&lt;/li&gt;
+&lt;li&gt;실행환경을 이미지로 만들어 놓으면 사용자가 동일한 환경에서 문제없이 실행할 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;docker-설치-및-기본-사용법&#34;&gt;Docker 설치 및 기본 사용법&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;../docker-install&#34;&gt;docker install&lt;/a&gt; - Docker 설치&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../docker-setup&#34;&gt;docker setup&lt;/a&gt; - Docker 설정&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../docker-build&#34;&gt;docker build&lt;/a&gt; - Dockerfile 작성&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../dockerhub&#34;&gt;dockerhub&lt;/a&gt; - Docker Hub와 회원 가입&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../docker-example&#34;&gt;docker example&lt;/a&gt; - Docker Example: 사용례&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;docker-tips&#34;&gt;Docker Tips&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;../docker-run-cmd-entrypoint&#34;&gt;docker run cmd entrypoint&lt;/a&gt; - Docker run, cmd, entrypoint 차이&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../docker-images-remove&#34;&gt;docker images remove&lt;/a&gt; - Docker Image 제거&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;docker-응용&#34;&gt;Docker 응용&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;../docker-busybox&#34;&gt;docker busybox&lt;/a&gt; - 도커 busybox 활용&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../docker-windows&#34;&gt;docker windows&lt;/a&gt; - 윈도우즈에서 도커 설치 및 사용&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://hub.docker.com/&#34;&gt;https://hub.docker.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.sobyte.net/post/2022-04/docker-copy/&#34;&gt;https://www.sobyte.net/post/2022-04/docker-copy/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.docker.com/engine/reference/builder/&#34;&gt;https://docs.docker.com/engine/reference/builder/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+  </channel>
+</rss>

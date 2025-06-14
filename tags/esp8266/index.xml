@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Esp8266 on Borisu Wiki Home</title>
+    <link>https://neosolaris.github.io/tags/esp8266/</link>
+    <description>Recent content in Esp8266 on Borisu Wiki Home</description>
+    <image>
+      <title>Borisu Wiki Home</title>
+      <url>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.147.2</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 19 Dec 2023 06:08:04 +0900</lastBuildDate>
+    <atom:link href="https://neosolaris.github.io/tags/esp8266/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ESP8266 vs ESP32</title>
+      <link>https://neosolaris.github.io/posts/esp8266-vs-esp32/</link>
+      <pubDate>Sun, 17 Dec 2023 06:50:32 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/esp8266-vs-esp32/</guid>
+      <description>&lt;h2 id=&#34;비교표&#34;&gt;비교표&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;아래 링크를 참조한다. 보다 자세하고 충분한 설명이 있다.
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://makeradvisor.com/esp32-vs-esp8266/&#34;&gt;https://makeradvisor.com/esp32-vs-esp8266/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;내용&lt;/th&gt;
+          &lt;th&gt;ESP8266&lt;/th&gt;
+          &lt;th&gt;ESP32&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;MCU&lt;/td&gt;
+          &lt;td&gt;Xtensa Single-core 32-bit L106&lt;/td&gt;
+          &lt;td&gt;Xtensa Dual-Core 32-bit LX6 with 600 DMIPS&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;802.11 b/g/n Wi-Fi&lt;/td&gt;
+          &lt;td&gt;HT20&lt;/td&gt;
+          &lt;td&gt;HT40&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Bluetooth&lt;/td&gt;
+          &lt;td&gt;X&lt;/td&gt;
+          &lt;td&gt;Bluetooth 4.2 and BLE&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Typical Frequency&lt;/td&gt;
+          &lt;td&gt;80 MHz&lt;/td&gt;
+          &lt;td&gt;160 MHz&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;SRAM&lt;/td&gt;
+          &lt;td&gt;X&lt;/td&gt;
+          &lt;td&gt;✓&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Flash&lt;/td&gt;
+          &lt;td&gt;X&lt;/td&gt;
+          &lt;td&gt;✓&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;GPIO&lt;/td&gt;
+          &lt;td&gt;17&lt;/td&gt;
+          &lt;td&gt;36&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Hardware /Software PWM&lt;/td&gt;
+          &lt;td&gt;None / 8 channels&lt;/td&gt;
+          &lt;td&gt;None / 16 channels&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;SPI/I2C/I2S/UART&lt;/td&gt;
+          &lt;td&gt;2/1/2/2&lt;/td&gt;
+          &lt;td&gt;4/2/2/2&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;ADC&lt;/td&gt;
+          &lt;td&gt;10-bit&lt;/td&gt;
+          &lt;td&gt;12-bit&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;CAN&lt;/td&gt;
+          &lt;td&gt;X&lt;/td&gt;
+          &lt;td&gt;✓&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Ethernet MAC Interface&lt;/td&gt;
+          &lt;td&gt;X&lt;/td&gt;
+          &lt;td&gt;✓&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Touch Sensor&lt;/td&gt;
+          &lt;td&gt;X&lt;/td&gt;
+          &lt;td&gt;✓&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Temperature Sensor&lt;/td&gt;
+          &lt;td&gt;X&lt;/td&gt;
+          &lt;td&gt;✓(old versions)&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Working Temperature&lt;/td&gt;
+          &lt;td&gt;-40ºC to 125ºC&lt;/td&gt;
+          &lt;td&gt;-40ºC to 125ºC&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Hall effect sensor&lt;/td&gt;
+          &lt;td&gt;X&lt;/td&gt;
+          &lt;td&gt;✓&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Price	$&lt;/td&gt;
+          &lt;td&gt;(3$ – $6)&lt;/td&gt;
+          &lt;td&gt;($6 – $12)&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;개발보드&#34;&gt;개발보드&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;ESP32
+&lt;img alt=&#34;ESP32&#34; loading=&#34;lazy&#34; src=&#34;https://makeradvisor.com/wp-content/uploads/2018/04/ESP32-DOIT-DEVKIT-V1-Board-Pinout-36-GPIOs-Copy.jpg&#34;&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>esp8266</title>
+      <link>https://neosolaris.github.io/posts/esp8266/</link>
+      <pubDate>Wed, 13 Dec 2023 11:16:22 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/esp8266/</guid>
+      <description>&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;기본 정보
+&lt;ul&gt;
+&lt;li&gt;Espressif Systems 제조, 2014 출시&lt;/li&gt;
+&lt;li&gt;Wi-Fi 무선 통신 기능을 탑재한 저전력 마이크로컨트롤러&lt;/li&gt;
+&lt;li&gt;저렴한 가격, IoT구현을 위한 최적의 컨트롤러&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;스펙
+&lt;ul&gt;
+&lt;li&gt;CPU - Tensilica Xtensa® L106(Diamond Standard 106Micro) @80/160MHz (32-bit RISC)&lt;/li&gt;
+&lt;li&gt;동작전압 - 2.7V~3.6V&lt;/li&gt;
+&lt;li&gt;WIFI - 802.11 b/g/n(HT20) 프로토콜&lt;/li&gt;
+&lt;li&gt;IO(pinout) - 17&lt;/li&gt;
+&lt;li&gt;RAM - 160KB(iRAM64KB,dRAM96KB)&lt;/li&gt;
+&lt;li&gt;SRAM - 1KB&lt;/li&gt;
+&lt;li&gt;외장플래쉬 - 512KB(최소사양),OTA(on the air)최소사양(1MB)~16MB까지 지원&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;개발을 위한 준비물
+&lt;ul&gt;
+&lt;li&gt;esp8266 개발 컨트롤러 (인터넷에서 구매)&lt;/li&gt;
+&lt;li&gt;nodemcu firmware - 직접 build하거나 만들어진 이미지를 다운 받는다.&lt;/li&gt;
+&lt;li&gt;firmware upload tool - esptool, NodeMCU-PyFlasher&lt;/li&gt;
+&lt;li&gt;Esplorer - Java로 만든 GUI 개발 툴 (오픈소스, 여러 OS에 독립 실행)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;esp8266 개발보드 비교 - &lt;a href=&#34;https://frightanic.com/iot/comparison-of-esp8266-nodemcu-development-boards/&#34;&gt;https://frightanic.com/iot/comparison-of-esp8266-nodemcu-development-boards/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;개발방법은 아두이노IDE를 통한 개발(C언어)과 nodemcu + Esplorer를 통한 개발(Lua언어)이 있다.&lt;/li&gt;
+&lt;li&gt;전자는 인터넷에 많은 자료와 예제가 있으므로 이를 참조한다.&lt;/li&gt;
+&lt;li&gt;여기에서는 nodemcu(Lua base Firmware) + Esplorer(GUI Dev Tool)에 집중한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;step01-하드웨어-준비-nodemcu-esp8266-dev-kit&#34;&gt;STEP01. 하드웨어 준비: nodemcu esp8266 dev kit&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;usb serial driver install - CP210x_Universal_Windows_Driver
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers&#34;&gt;https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;장치 연결 확인
+&lt;ul&gt;
+&lt;li&gt;Windows - 장치관리자 &amp;gt; usb com serial port 확인&lt;/li&gt;
+&lt;li&gt;Linux - &lt;code&gt;lsusb&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img alt=&#34;ESP8266&#34; loading=&#34;lazy&#34; src=&#34;https://makeradvisor.com/wp-content/uploads/2020/05/ESP8266-NodeMCU-kit-12-E-pinout-gpio-pin.png&#34;&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

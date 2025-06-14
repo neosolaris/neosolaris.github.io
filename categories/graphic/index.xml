@@ -1,0 +1,513 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Graphic on Borisu Wiki Home</title>
+    <link>https://neosolaris.github.io/categories/graphic/</link>
+    <description>Recent content in Graphic on Borisu Wiki Home</description>
+    <image>
+      <title>Borisu Wiki Home</title>
+      <url>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.147.2</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 06 Feb 2023 19:45:13 +0900</lastBuildDate>
+    <atom:link href="https://neosolaris.github.io/categories/graphic/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Manim - Animation engine for explanatory math videos</title>
+      <link>https://neosolaris.github.io/posts/manim/</link>
+      <pubDate>Sun, 05 Feb 2023 16:02:19 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/manim/</guid>
+      <description>&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;정의: Animation engine for explanatory math videos&lt;/li&gt;
+&lt;li&gt;유튜브에서 유명한 3Blue1Brown의 수학 애니메이션을 만들 수 있는 엔진이다.&lt;/li&gt;
+&lt;li&gt;너무 편하고 쉽게 그래프를 애니매이션으로 만들 수 있다.&lt;/li&gt;
+&lt;li&gt;아래 유튜브를 보면서 공부하면 바로 그 진가를 알아보자.&lt;/li&gt;
+&lt;li&gt;manim은 커뮤니티 버전, manimgl은 3b1b의 최신버전.&lt;/li&gt;
+&lt;li&gt;커뮤니티 버전을 권장.&lt;/li&gt;
+&lt;li&gt;Docker, conda, local, jupyter notebook 모두 지원한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;install&#34;&gt;Install&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;requirements: ffmpeg, python3.7이상&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ sudo apt update
+$ sudo apt install build-essential python3-dev libcairo2-dev libpango1.0-dev ffmpeg
+
+$ pip3 install manim
+$ manim --help
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;vscode-addon-setup&#34;&gt;vscode addon setup&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;python addon 설치 : 파이썬 코딩 지원&lt;/li&gt;
+&lt;li&gt;manim addon 설치 : manim 라이브러리 및 함수 지원&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;howto&#34;&gt;Howto&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;아래 Links의 관련 하우투 유튜브를 참조한다.&lt;/li&gt;
+&lt;li&gt;자세한 사용방법은 추후 정리.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;홈페이지
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/3b1b/manim&#34;&gt;https://github.com/3b1b/manim&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Linux Install
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.manim.community/&#34;&gt;https://docs.manim.community/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.manim.community/en/stable/installation/linux.html&#34;&gt;https://docs.manim.community/en/stable/installation/linux.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Tutorial
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.manim.community/en/stable/tutorials/index.html&#34;&gt;https://docs.manim.community/en/stable/tutorials/index.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/malhotra5/Manim-Tutorial&#34;&gt;https://github.com/malhotra5/Manim-Tutorial&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;관련 하우투 유튜브
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=rUsUrbWb2D4&#34;&gt;https://www.youtube.com/watch?v=rUsUrbWb2D4&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://hub-binder.mybinder.ovh/user/behackl-manim-with-ease-0xvmyqyg/doc/tree/E01%20-%20introduction.ipynb&#34;&gt;https://hub-binder.mybinder.ovh/user/behackl-manim-with-ease-0xvmyqyg/doc/tree/E01%20-%20introduction.ipynb&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>Gimp - Quickies 사이즈 변경, 잘라내기, 회전, 뒤집기</title>
+      <link>https://neosolaris.github.io/posts/gimp-quickies/</link>
+      <pubDate>Thu, 12 Jan 2023 06:26:11 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/gimp-quickies/</guid>
+      <description>&lt;h2 id=&#34;이미지-기본-용어&#34;&gt;이미지 기본 용어&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;dpi(Dot per Inch) - 가로 세로 1 인치 당 점(Dot:둥근점)의 수, 인쇄에서 주로 사용&lt;/li&gt;
+&lt;li&gt;ppi(Pixel per Inch) - 가로 세로 1 인치 당 픽셀(Pixel:화소,사각점)의 수, 모니터에서 주로 사용&lt;/li&gt;
+&lt;li&gt;1 Inch - 2.54Cm&lt;/li&gt;
+&lt;li&gt;DPI 해상도별 용도
+&lt;ul&gt;
+&lt;li&gt;사진 출력: 400 dpi&lt;/li&gt;
+&lt;li&gt;책, 포스터: 300 dpi&lt;/li&gt;
+&lt;li&gt;웹, 홈페이지: 72 dpi&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;이미지-사이즈-변경&#34;&gt;이미지 사이즈 변경&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;[APOD](../The Horsehead Nebula in Infrared) 사진을 받아온다. &lt;a href=&#34;https://apod.nasa.gov/apod/ap130422.html&#34;&gt;https://apod.nasa.gov/apod/ap130422.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;파일을 열고 정보를 확인한 다음 필요한 사이즈로 변경한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;파일 열기 - &lt;code&gt;File &amp;gt; Open&lt;/code&gt; sRGB 유형 선택&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;keep&lt;/code&gt; 기존 - sRGB IEC61966-2.1&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;convert&lt;/code&gt; 변경 - Gimp built-in sRGB&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;파일정보 보기 (Image Properties)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Alt + Enter&lt;/code&gt; : &lt;code&gt;Image &amp;gt; Image Properties&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;사이즈 변경 (Scale Image)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Image &amp;gt; Scale Image&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;width 를 1225 -&amp;gt; 600 으로 조정 (자동 비례 조정)&lt;/li&gt;
+&lt;li&gt;pixels, percent&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Scale&lt;/code&gt; 클릭&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;변경된 파일 정보를 보기 (Image Properties)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Alt + Enter&lt;/code&gt; : &lt;code&gt;Image &amp;gt; Image Properties&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;저장하기&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Ctrl + E&lt;/code&gt; : &lt;code&gt;File &amp;gt; Export to 파일명.jpg&lt;/code&gt; - jpg로 저장&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Shift + Ctrl + E&lt;/code&gt; : &lt;code&gt;File &amp;gt; Export as...&lt;/code&gt; - 다른 포맷으로 저장&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;jpeg로-저장&#34;&gt;JPEG로 저장&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;JPEG: Lossy compression Algorithm&lt;/li&gt;
+&lt;li&gt;용량은 효율적 알고리즘으로 줄일 수 있으나 품질에 손실을 준다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;이미지-잘라내기---crop-an-image&#34;&gt;이미지 잘라내기 - Crop an Image&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;원본 이미지를 불러와 필요한 영역으로 잘라내는 것.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Gimp - Install</title>
+      <link>https://neosolaris.github.io/posts/gimp-install/</link>
+      <pubDate>Wed, 11 Jan 2023 14:59:32 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/gimp-install/</guid>
+      <description>&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;그림파일 및 사진 편집 프로그램.&lt;/li&gt;
+&lt;li&gt;무료지만 전문가도 사용하는 훌륭한 그래픽 편집 툴.&lt;/li&gt;
+&lt;li&gt;다양한 플러그인 지원&lt;/li&gt;
+&lt;li&gt;RAW 무손실 사진 편집 지원&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;install&#34;&gt;Install&lt;/h2&gt;
+&lt;p&gt;우분투 22.04를 기준으로 설명한다. 한글 입력 문제 등으로 snap 설치는 권장하지 않는다. Flatpak 방식이 더 좋겠으나 역시 한글을 사용하려면 문제가 된다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;기본 패키지 설치&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo apt install gimp
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;PPA 최신 패키지 설치&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo add-apt-repository ppa:savoury1/gimp -y
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo apt-get update
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo apt install gimp -y
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;플러그인-설치&#34;&gt;플러그인 설치&lt;/h2&gt;
+&lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;gimp install in ubuntu &lt;a href=&#34;https://www.linuxcapable.com/how-to-install-gimp-on-ubuntu-22-04-lts/&#34;&gt;https://www.linuxcapable.com/how-to-install-gimp-on-ubuntu-22-04-lts/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>Gimp Setup</title>
+      <link>https://neosolaris.github.io/posts/gimp-setup/</link>
+      <pubDate>Wed, 11 Jan 2023 14:42:57 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/gimp-setup/</guid>
+      <description>&lt;h2 id=&#34;ui-font--icons-size&#34;&gt;UI Font &amp;amp; Icons Size&lt;/h2&gt;
+&lt;p&gt;우분투 환경에서 김프를 실행하면 메뉴와 아이콘 등이 매우 작게 표시되는 경우가 있다. 이를 바로 잡는 방법을 설명한다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Change Font Size&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;자신이 사용하는 OS와 테마에 따라 gtkrc파일이 다를 수 있다. 아래는 ubuntu 22.04, gimp 2.x, Dark 테마의 경우이다. 자신의 환경에 맞게 숫자 값을 적당히 조절한다.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo vi /usr/share/gimp/2.0/themes/Dark/gtkrc
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;...
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;&lt;/span&gt;&lt;span class=&#34;gp&#34;&gt;#&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;font_name&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Sans 11&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;  font_name = &amp;#34;Sans 10&amp;#34;  # 위 주석 아래에 다음을 추가하고 저장
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;... 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;&lt;/span&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; gimp &lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;# 김프 재실행&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Change Icons Size&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;폰트를 먼저 조정이 끝나면 다음으로 아이콘을 수정하는 것이 편리하다. 김프에서 다음의 설정으로 이동한다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Gimp - Gnu Image Manipulation Program</title>
+      <link>https://neosolaris.github.io/posts/gimp/</link>
+      <pubDate>Wed, 11 Jan 2023 14:33:14 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/gimp/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Install &amp;amp; Setup&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;../gimp-install&#34;&gt;gimp install&lt;/a&gt; - 프로그램 및 플러그인 설치&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../gimp-setup&#34;&gt;gimp setup&lt;/a&gt; - 설정&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Study&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;../flip&#34;&gt;gimp quickies&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;응용 및 기타&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;gimp-glua - gimp graphic processing plugin using lua&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Links&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Gimp Home - &lt;a href=&#34;https://www.gimp.org&#34;&gt;https://www.gimp.org&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Tutorials - &lt;a href=&#34;https://www.gimp.org/tutorials/&#34;&gt;https://www.gimp.org/tutorials/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>IRAF - Image Reduction and Analysis Facility</title>
+      <link>https://neosolaris.github.io/posts/iraf/</link>
+      <pubDate>Wed, 12 Oct 2022 16:02:55 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/iraf/</guid>
+      <description>&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;../fits&#34;&gt;FITS&lt;/a&gt; 데이터 분석 및 이미지 처리 도구 집합&lt;/li&gt;
+&lt;li&gt;NOAO(National Optical astronomy Observatory)에서 개발&lt;/li&gt;
+&lt;li&gt;현재 오픈소스로 공개하여 &lt;a href=&#34;https://iraf-community.github.io&#34;&gt;iraf community&lt;/a&gt; 가 관리하고 있다.&lt;/li&gt;
+&lt;li&gt;주로 관측천문학 분야에서 활용되고 있다.&lt;/li&gt;
+&lt;li&gt;파이썬으로 랩핑한 &lt;a href=&#34;../pyraf&#34;&gt;pyraf&lt;/a&gt;가 있다.&lt;/li&gt;
+&lt;li&gt;컴파일과 패키지 설치 두 가지가 있다. (패키지 설치 권장)&lt;/li&gt;
+&lt;li&gt;현재 많은 소프트웨어들이 나와있으나 타언어로 랩핑하였거나 인터페이스만 바꾸어 라이브러리를 그대로 사용하고 있다.&lt;/li&gt;
+&lt;li&gt;일종의 고전이라고 볼 수 있겠다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;install-packages&#34;&gt;Install Packages&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Ubuntu18.x 이후부터 패키지 제공&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo apt install xterm xgterm &lt;span class=&#34;c1&#34;&gt;# terminal for iraf &lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo apt install saods9       &lt;span class=&#34;c1&#34;&gt;# ds9 FITS Viewer for iraf&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo apt install iraf iraf-dev iraf-noao iraf-noao-dev iraf-wcstools iraf-rvsao
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;install-from-source&#34;&gt;Install From Source&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/iraf-community/iraf/archive/refs/tags/v2.17.tar.gz&#34;&gt;Download Source&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Astropy - 파이썬 천문학 모듈</title>
+      <link>https://neosolaris.github.io/posts/astropy/</link>
+      <pubDate>Tue, 11 Oct 2022 23:44:34 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/astropy/</guid>
+      <description>&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;그간 과학자들이 사용해왔던 fits 관련 툴들을 바이딩하고 통합한 모듈이다.&lt;/li&gt;
+&lt;li&gt;anaconda에서 기본 설치된다.&lt;/li&gt;
+&lt;li&gt;이를 이용하는 것이 의존성을 신경 쓰지 않고 쉽게 사용하는 방법이다.&lt;/li&gt;
+&lt;li&gt;그러나 anaconda는 1.6기가 정도 된다. 엄청나다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://himbopsa.tistory.com/33&#34;&gt;천문학 데이터 파일 형식 FITS 파일형식 다루기&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>Fits-Liberator</title>
+      <link>https://neosolaris.github.io/posts/fits-liberator/</link>
+      <pubDate>Tue, 11 Oct 2022 23:13:33 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/fits-liberator/</guid>
+      <description>&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;천문사진 주로 FITS 전처리 프로그램&lt;/li&gt;
+&lt;li&gt;version 4 부터 리눅스를 지원한다.&lt;/li&gt;
+&lt;li&gt;입문자가 쉽게 사용할 수 있도록 만들었다.&lt;/li&gt;
+&lt;li&gt;GUI 뿐만 아니라 자동화를 위한 CLI가 제공된다.&lt;/li&gt;
+&lt;li&gt;내부 사용 라이브러리는 &lt;a href=&#34;../fitsio&#34;&gt;fitsio&lt;/a&gt;가 사용된다.&lt;/li&gt;
+&lt;li&gt;Judy Schmidt도 전처리 프로그램으로 이것을 쓴다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;install&#34;&gt;Install&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://noirlab.edu/public/products/fitsliberator&#34;&gt;홈페이지&lt;/a&gt;에서 다운로드 및 설치 가능하다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Ubuntu, Debian&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo apt install libvips  &lt;span class=&#34;c1&#34;&gt;#cfitsio도 필요하나 의존성으로 깔린다.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo dpkg -i fitsliberator_4.x.x_amd64.deb
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;PATH&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$PATH&lt;/span&gt;:/opt/FITS&lt;span class=&#34;se&#34;&gt;\ &lt;/span&gt;Liberator/fitscli/linux/
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;usage&#34;&gt;Usage&lt;/h2&gt;
+&lt;p&gt;다음을 우선적으로 공부하고 나머지는 홈페이지를 방문하자.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Quick Start Guide v4
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://noirlab.edu/public/media/archives/techdocs/pdf/techdoc024.pdf&#34;&gt;https://noirlab.edu/public/media/archives/techdocs/pdf/techdoc024.pdf&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Home &lt;a href=&#34;https://noirlab.edu/public/products/fitsliberator/&#34;&gt;https://noirlab.edu/public/products/fitsliberator/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;FITS Liberator CLI &lt;a href=&#34;https://gitlab.com/noirlab/fits-liberator-cli&#34;&gt;https://gitlab.com/noirlab/fits-liberator-cli&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;FITS Liberator GUI &lt;a href=&#34;https://gitlab.com/noirlab/fits-liberator-gui&#34;&gt;https://gitlab.com/noirlab/fits-liberator-gui&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>Pyraf - Python iraf</title>
+      <link>https://neosolaris.github.io/posts/pyraf/</link>
+      <pubDate>Tue, 11 Oct 2022 18:19:29 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/pyraf/</guid>
+      <description>&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;pyraf는 &lt;a href=&#34;../iraf&#34;&gt;iraf&lt;/a&gt; 의 파이썬 커뮤니티 버전이다.&lt;/li&gt;
+&lt;li&gt;기존의 많은 사용자 인터페이스를 개선하고 파이썬 코드를 쓸수있다.&lt;/li&gt;
+&lt;li&gt;천문학자들은 &lt;code&gt;iraf -&amp;gt; pyraf -&amp;gt; astropy&lt;/code&gt; 로 옮겨가는 추세다.&lt;/li&gt;
+&lt;li&gt;전통적인 &lt;a href=&#34;../iraf&#34;&gt;iraf&lt;/a&gt; 사용자라면 pyraf가 개선된 환경이다.&lt;/li&gt;
+&lt;li&gt;새로운 입문자라면 &lt;a href=&#34;../astropy&#34;&gt;astropy&lt;/a&gt; 로 시작하는 것이 좋겠다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;install&#34;&gt;Install&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;요구사항: python3, iraf&lt;/li&gt;
+&lt;li&gt;Install Pre Packages&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo apt install iraf python3-pyraf
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;pyraf home:  &lt;a href=&#34;https://iraf-community.github.io/pyraf.html&#34;&gt;https://iraf-community.github.io/pyraf.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;tutorial: &lt;a href=&#34;https://pyraf.readthedocs.io/en/latest/&#34;&gt;https://pyraf.readthedocs.io/en/latest/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;github: &lt;a href=&#34;https://github.com/iraf-community/pyraf&#34;&gt;https://github.com/iraf-community/pyraf&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>fitsio - FITS IO C Library</title>
+      <link>https://neosolaris.github.io/posts/fitsio/</link>
+      <pubDate>Tue, 11 Oct 2022 17:06:15 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/fitsio/</guid>
+      <description>&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;fits를 편집하기 위한 C 라이브러리 모음&lt;/li&gt;
+&lt;li&gt;python, ruby, perl, lua 등의 wrapper가 다양하게 존재한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;lua-ffi-bindings-fitsiolua&#34;&gt;Lua-ffi-bindings: fitsio.lua&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;깃허브: &lt;a href=&#34;https://github.com/thenumbernine/lua-ffi-bindings&#34;&gt;https://github.com/thenumbernine/lua-ffi-bindings&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;요구사항: Luajit, fitsio library&lt;/li&gt;
+&lt;li&gt;사용법: 아래 quick start quide 참고&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo apt install libfitsio-dev
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; git clone https://github.com/thenumbernine/lua-ffi-bindings.git
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; lua-ffi-bindings
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;그런데 너무 오래된 소스이다. 2009&lt;/li&gt;
+&lt;li&gt;거기다 ffi-binding해서 사용하는 예제도 없다.&lt;/li&gt;
+&lt;li&gt;pfits는 역시 오래 되었고, pyfits도 astropy로 통합되었다.&lt;/li&gt;
+&lt;li&gt;이런 것이 있었다 하고 넘어가자.&lt;/li&gt;
+&lt;li&gt;파이썬 사용자라면 astropy를 사용하는 것이 좋겠다.&lt;/li&gt;
+&lt;li&gt;아 루아로는 갈길이 멀다.&lt;/li&gt;
+&lt;li&gt;하지만 현재 &lt;a href=&#34;../fits-liberator&#34;&gt;astropy&lt;/a&gt;도 내부에는 이 라이브러리를 쓴다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Home: &lt;a href=&#34;https://heasarc.gsfc.nasa.gov/fitsio/&#34;&gt;https://heasarc.gsfc.nasa.gov/fitsio/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;quick start guide &lt;a href=&#34;https://heasarc.gsfc.nasa.gov/docs/software/fitsio/quick/quick.html&#34;&gt;https://heasarc.gsfc.nasa.gov/docs/software/fitsio/quick/quick.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>FITS - Flexible Image Transport System</title>
+      <link>https://neosolaris.github.io/posts/fits/</link>
+      <pubDate>Sun, 09 Oct 2022 18:12:36 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/fits/</guid>
+      <description>&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;FITS는 Flexible Image Transport System로 오픈 표준 디지털 파일 포맷이다.&lt;/li&gt;
+&lt;li&gt;주로 천문사진에 사용되는 포맷이다.&lt;/li&gt;
+&lt;li&gt;천문관측 사진을 직접 촬영하고 편집해도 된다.&lt;/li&gt;
+&lt;li&gt;그러나 FITS는 개인의 비용과 노력으로 얻을 수 없는 고사양 고품질의 사진과 포맷을 제공한다.&lt;/li&gt;
+&lt;li&gt;천문사진에 관심이 있다면 FITS 포맷을 잘 알아야 하는 이유가 있다.&lt;/li&gt;
+&lt;li&gt;천체를 연구하고 공개된 데이터를 이용하여 은하를 시각적으로 완성하는 일&lt;/li&gt;
+&lt;li&gt;이를 위해 FITS에 대해 알아보고 어떻게 다루어야 하는지를 정리한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;파일-포맷&#34;&gt;파일 포맷&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;단순한 이미지만을 다루는 포맷이 아니라 여러 정보를 함께 넣을 수 있다.&lt;/li&gt;
+&lt;li&gt;기본 구조는 &lt;code&gt;Primary Header&lt;/code&gt; + &lt;code&gt;SCI(header:data)&lt;/code&gt; + &lt;code&gt;ERR(header:data) DQ(header:data)&lt;/code&gt; 로 되어 있다.&lt;/li&gt;
+&lt;li&gt;하나의 파일에 여러 종류의 데이터를 담을 수 있다.&lt;/li&gt;
+&lt;li&gt;스펙트럼이나 광도곡선, 데이터 큐브 등의 관련 정보를 담을 수 있다.&lt;/li&gt;
+&lt;li&gt;즉, 하나의 천체를 관측하면 하나의 파일에 여러개의 프레임으로 데이터를 저장할 수 있다.&lt;/li&gt;
+&lt;li&gt;Header: 천체의 관측기, 관측날짜, 노출시간, CCD의 사양 등&lt;/li&gt;
+&lt;li&gt;Data: 이미지 픽셀값, 천체의 flux값, 관측시간, 관측 파장 등&lt;/li&gt;
+&lt;li&gt;비유를 들자면 어떤 천체를 관측할 때 한 종이에 그림을 그리고 좌표나 기타 정보를 같이 기록해 두는 것과 같다.&lt;/li&gt;
+&lt;li&gt;확장자: &lt;code&gt;.fits&lt;/code&gt;, &lt;code&gt;.fit&lt;/code&gt;, &lt;code&gt;.fts&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;편집-소프트웨어&#34;&gt;편집 소프트웨어&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;../siril&#34;&gt;siril&lt;/a&gt; - FITS Edit: 천문사진 전처리 또는 이미지 프로세싱 소프트웨어&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../NOAO&#34;&gt;iraf&lt;/a&gt;의 천문사진 프로세싱: clang&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../gimp&#34;&gt;gimp&lt;/a&gt; - 그래픽툴, FITS 편집 가능&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../photoshop&#34;&gt;photoshop&lt;/a&gt; - 그래픽툴, FITS 편집 가능, 유료, 윈도우즈 전용&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../imagej&#34;&gt;imagej&lt;/a&gt; - FIT 편집 통합 툴&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../ubuntu:libfitsio&#34;&gt;fits liberator&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;fits-library&#34;&gt;FITS LIBRARY&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;../astropy&#34;&gt;astropy&lt;/a&gt; - pyfits 포함 천문관측 모듈: anaconda 기본 모듈&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../NOAO&#34;&gt;pyraf&lt;/a&gt;의 천문사진 프로세싱: python&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../pyfits&#34;&gt;pyfits&lt;/a&gt; - fits 편집 모듈: python&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../fitsio&#34;&gt;fitsio&lt;/a&gt; - fits 라이브러리: clang&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;보기-소프트웨어&#34;&gt;보기 소프트웨어&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;../fv&#34;&gt;fv&lt;/a&gt; - FITS Viewer: 오래된 툴, 조금 촌스럽다.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../gimp&#34;&gt;gimp&lt;/a&gt; - 그래픽툴, 파일보기 및 다른 포맷 변환&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../ubuntu:saods9&#34;&gt;ds9&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;guides&#34;&gt;Guides&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Here&amp;rsquo;s how to edit James Webb Space Telescope images: Judy Schmidt 인터뷰
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.space.com/james-webb-space-telescope-image-editing&#34;&gt;https://www.space.com/james-webb-space-telescope-image-editing&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;FITS Liberator User Guide
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://esahubble.org/static/projects/fits_liberator/v301files/userguide.pdf&#34;&gt;https://esahubble.org/static/projects/fits_liberator/v301files/userguide.pdf&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;NEW IRAF ABC (IRAF를 이용한 측광 자료 전처리)
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://astro.kias.re.kr/~hshwang/NEW_IRAF_ABC.pdf&#34;&gt;https://astro.kias.re.kr/~hshwang/NEW_IRAF_ABC.pdf&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;FITS HOME - &lt;a href=&#34;https://fits.gsfc.nasa.gov/&#34;&gt;https://fits.gsfc.nasa.gov/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;FITS i/o libraries - &lt;a href=&#34;https://fits.gsfc.nasa.gov/fits_libraries.html&#34;&gt;https://fits.gsfc.nasa.gov/fits_libraries.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;위키백과 FITS - &lt;a href=&#34;https://en.wikipedia.org/wiki/FITS&#34;&gt;https://en.wikipedia.org/wiki/FITS&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Fits 관련 소프트웨어 리스트 - &lt;a href=&#34;https://fits.gsfc.nasa.gov/fits_viewer.html&#34;&gt;https://fits.gsfc.nasa.gov/fits_viewer.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Short Introduction of Image Processing &lt;a href=&#34;https://noirlab.edu/public/media/archives/techdocs/pdf/techdoc027.pdf&#34;&gt;https://noirlab.edu/public/media/archives/techdocs/pdf/techdoc027.pdf&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>FV - Fits file Viewer</title>
+      <link>https://neosolaris.github.io/posts/fv/</link>
+      <pubDate>Sun, 09 Oct 2022 18:00:34 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/fv/</guid>
+      <description>&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;[FITS](../Flexible Image Transport System) 파일 포맷을 보거나 편집할 수 있는 프로그램&lt;/li&gt;
+&lt;li&gt;fits 포맷은 주로 천문사진에서 사용되는 포맷이다.&lt;/li&gt;
+&lt;li&gt;리눅스의 경우 직접 다운로드 받는 것보다 패키지로 설치하는 것이 좋다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;install&#34;&gt;Install&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;ubuntu install&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo apt install wish ftools-fv 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; fv
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Fits 파일 포맷을 보거나 편집 가능한 모든 프로그램을 소개하고 있다.&lt;/li&gt;
+&lt;li&gt;NASA FITS : &lt;a href=&#34;https://fits.gsfc.nasa.gov/fits_viewer.html&#34;&gt;https://fits.gsfc.nasa.gov/fits_viewer.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>SimpleITK - Open Source Multi-dimensional Image Analysis</title>
+      <link>https://neosolaris.github.io/posts/simpleitk/</link>
+      <pubDate>Thu, 29 Sep 2022 17:51:54 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/simpleitk/</guid>
+      <description>&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;simpleitk는 오픈소스로서 주로 의료, 천문에서 사진을 프로세싱하는 툴킷이다.&lt;/li&gt;
+&lt;li&gt;주로 python을 사용하는데 설치와 사용이 너무 지저분하고 번거롭다.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../lua&#34;&gt;lua&lt;/a&gt;를 사용하는 방법을 알아 보았다.&lt;/li&gt;
+&lt;li&gt;설치는 &lt;a href=&#34;../luarocks&#34;&gt;luarocks&lt;/a&gt; 패키지 매니저를 사용하였고 api형태로 컴파일해서
+사용한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;install&#34;&gt;Install&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Python Package Install&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; pip install SimpleITK
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; pip install SimpleITK-SimpleElastix
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; vim test.py
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;SimpleITK&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;as&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;sitk&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Lua Package Install : version 2.2.0&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; luarocks search simpleitk           &lt;span class=&#34;c1&#34;&gt;# 패키지 검색&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; luarocks install --local simpleitk  &lt;span class=&#34;c1&#34;&gt;# 로컬`~/.luarocks`에 설치&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; vim test.lua
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-lua&#34; data-lang=&#34;lua&#34;&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Quick Start: &lt;a href=&#34;https://simpleitk.readthedocs.io/en/master/gettingStarted.html&#34;&gt;https://simpleitk.readthedocs.io/en/master/gettingStarted.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Github Page: &lt;a href=&#34;https://github.com/SimpleITK/SimpleITKLuaRock&#34;&gt;https://github.com/SimpleITK/SimpleITKLuaRock&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Python SimpleITK Howto: &lt;a href=&#34;https://bo-10000.tistory.com/61&#34;&gt;https://bo-10000.tistory.com/61&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+  </channel>
+</rss>

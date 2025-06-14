@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>키보드 on Borisu Wiki Home</title>
+    <link>https://neosolaris.github.io/tags/%ED%82%A4%EB%B3%B4%EB%93%9C/</link>
+    <description>Recent content in 키보드 on Borisu Wiki Home</description>
+    <image>
+      <title>Borisu Wiki Home</title>
+      <url>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.147.2</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 12 Sep 2023 18:05:55 +0900</lastBuildDate>
+    <atom:link href="https://neosolaris.github.io/tags/%ED%82%A4%EB%B3%B4%EB%93%9C/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>keyboard - 키보드</title>
+      <link>https://neosolaris.github.io/posts/keyboard/</link>
+      <pubDate>Sun, 10 Sep 2023 18:04:26 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/keyboard/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;키보드는 사람이 컴퓨터에게 지시하는 유일한 통로이다.&lt;/li&gt;
+&lt;li&gt;물론 마우스 등이 있지만 키보드가 가장 먼저이면서 오래되었고 또한 상세하게 명령을 전달할 수 있는 도구이다.&lt;/li&gt;
+&lt;li&gt;사람이 직접적으로 활동하는 매체가 키보드이기 때문에 좀 더 특별하기도 하다.&lt;/li&gt;
+&lt;li&gt;또한 접촉하는 매체로서 건강과 느낌이 많이 작용하는 것이 키보드이기도 하다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;글-싣는-순서&#34;&gt;글 싣는 순서&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;한글키보드 입력방식.&lt;/li&gt;
+&lt;li&gt;영문키보드 입력방식.&lt;/li&gt;
+&lt;li&gt;손에 무리를 주지 않으면서 효율적인 키보드 입력 방식은 무엇인가.&lt;/li&gt;
+&lt;li&gt;아두이노를 활용한 분리형 키보드 만들기.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;키보드-연습&#34;&gt;키보드 연습&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;타이핑웍스 - 한,영 지원, 깔끔한 환경과 디자인, 웹: &lt;a href=&#34;https://typing.works/&#34;&gt;https://typing.works/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;monkeytype - 한글,영문 및 다국어 지원, 통계: &lt;a href=&#34;https://monkeytype.com/&#34;&gt;https://monkeytype.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;keybr.com - 영문 연습, 한글 미지원, 통계, qwerty,dvorak,workman,colmak: &lt;a href=&#34;https://www.keybr.com&#34;&gt;https://www.keybr.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;typeracer.com - 게임식 타자 연습 (자동차 경주)&lt;/li&gt;
+&lt;li&gt;colemak club - colemak, colemak-dh 연습: &lt;a href=&#34;https://gnusenpai.net/colemakclub/&#34;&gt;https://gnusenpai.net/colemakclub/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;한글-자판-배열&#34;&gt;한글 자판 배열&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;두벌식&lt;/li&gt;
+&lt;li&gt;세벌식: https://세벌식.kr/
+&lt;ul&gt;
+&lt;li&gt;타자 연습 프로그램
+&lt;ul&gt;
+&lt;li&gt;한컴 타자연습 (웹, 윈도우즈) : &lt;a href=&#34;https://www.hancomtaja.com/&#34;&gt;https://www.hancomtaja.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;날개셋 타자연습 (윈도우즈)&lt;/li&gt;
+&lt;li&gt;열린타자 (윈도우즈)&lt;/li&gt;
+&lt;li&gt;Taza (macOS)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;속기타자: 세벌식 (cas, sorijava) - 두 개 모두 자판 배열이 다르다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;영문-자판-배열&#34;&gt;영문 자판 배열&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;qwerty - 타자기의 원형, 사실상의 표준&lt;/li&gt;
+&lt;li&gt;dvorak - 또 다른 표준&lt;/li&gt;
+&lt;li&gt;colmak - 가장 효율적이면서 qwerty와 유사해서 적응도 빠르다.
+&lt;ul&gt;
+&lt;li&gt;colemak home: &lt;a href=&#34;https://colemak.com/&#34;&gt;https://colemak.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Learn : &lt;a href=&#34;https://colemak.com/Learn&#34;&gt;https://colemak.com/Learn&lt;/a&gt; (우측 하단 keyboard Mapping: on으로)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;workman&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;키보드-배열&#34;&gt;키보드 배열&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Staggered: 행마다 절반씩 엇갈려 배치&lt;/li&gt;
+&lt;li&gt;Ortholinear: 행마다 똑같이 배치&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;hardware&#34;&gt;HARDWARE&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Key caps&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>세벌식</title>
+      <link>https://neosolaris.github.io/posts/%EC%84%B8%EB%B2%8C%EC%8B%9D/</link>
+      <pubDate>Sun, 10 Sep 2023 17:38:58 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/%EC%84%B8%EB%B2%8C%EC%8B%9D/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;키보드와 자판 배열에 관심을 갖게된 이유: 손목 터널 증후군, 오십견, 능률&lt;/li&gt;
+&lt;li&gt;앞으로 한글과 영문에 대해 조금씩 조사하고 연구할 생각이다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;좀 더 편안하고 자연스러운 자판 입력 방법을 찾아 보았다.&lt;/li&gt;
+&lt;li&gt;과거 10여년 전에 시도를 한 적이 있으나 몇 번 해보고 흐지브지 되어 버렸다.&lt;/li&gt;
+&lt;li&gt;세벌식이 좋은 이유: 빠르다, 편안하다. 오타가 덜 난다.&lt;/li&gt;
+&lt;li&gt;종류는 대표적으로 &lt;code&gt;세벌식 390&lt;/code&gt;, &lt;code&gt;세벌식 최종&lt;/code&gt;의 두 가지가 있다.&lt;/li&gt;
+&lt;li&gt;다른 것으로는 아래 REFERENCE를 참고한다.&lt;/li&gt;
+&lt;li&gt;코딩을 하는 사용자라면 특수문자와 배열이 거의 일치하는 390을 선택하는 것이 좋겠다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;시작하기&#34;&gt;시작하기&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;아래한글 사용자는 한컴타자연습 프로그램을 이용한다.&lt;/li&gt;
+&lt;li&gt;설정에서 한글/세벌식390 으로 설정하면 별도의 설정이나 프로그램 없이 세벌식 연습이 가능하다.&lt;/li&gt;
+&lt;li&gt;날개셋 타자연습 프로그램은 다음을 참고한다.  &lt;a href=&#34;http://moogi.new21.org/prg5.html&#34;&gt;http://moogi.new21.org/prg5.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;하루에 매일 시간을 정해 놓고 연습을 하고 그 경과를 기록해 보기로 한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;세벌식-한글입력기&#34;&gt;세벌식 한글입력기&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;윈도우즈&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

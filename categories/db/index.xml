@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Db on Borisu Wiki Home</title>
+    <link>https://neosolaris.github.io/categories/db/</link>
+    <description>Recent content in Db on Borisu Wiki Home</description>
+    <image>
+      <title>Borisu Wiki Home</title>
+      <url>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.147.2</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 01 Jan 2024 02:08:34 +0900</lastBuildDate>
+    <atom:link href="https://neosolaris.github.io/categories/db/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Redis - Remote Dictionary Server</title>
+      <link>https://neosolaris.github.io/posts/redis/</link>
+      <pubDate>Mon, 01 Jan 2024 02:08:34 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/redis/</guid>
+      <description>&lt;h1 id=&#34;intro&#34;&gt;INTRO&lt;/h1&gt;
+&lt;p&gt;레디스(Redis)는 Remote Dictionary Server의 약자로서[4], &amp;ldquo;키-값&amp;rdquo; 구조의 비정형 데이터를 저장하고 관리하기 위한 오픈 소스 기반의 비관계형 데이터베이스 관리 시스템(DBMS)이다. 2009년 살바토르 산필리포(Salvatore Sanfilippo)가 처음 개발했다. 2015년부터 Redis Labs가 지원하고 있다. 모든 데이터를 메모리로 불러와서 처리하는 메모리 기반 DBMS이다. BSD 라이선스를 따른다. DB-Engines.com의 월간 랭킹에 따르면, 레디스는 가장 인기 있는 키-값 저장소이다.&lt;/p&gt;
+&lt;h2 id=&#34;install---alpine-linux&#34;&gt;INSTALL - alpine linux&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;#&lt;/span&gt; Install Redis
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;doas apk add redis redis-openrc
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;gp&#34;&gt;#&lt;/span&gt; Add Openrc 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;doas rc-update add redis default
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;gp&#34;&gt;#&lt;/span&gt; Run redis server
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;doas openrc default
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;rc-status
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;gp&#34;&gt;#&lt;/span&gt; Connect to redis
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;redis-cli
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;reference&#34;&gt;REFERENCE&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Redis - &lt;a href=&#34;https://redis.io&#34;&gt;https://redis.io&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Install - &lt;a href=&#34;https://redis.io/docs/install&#34;&gt;https://redis.io/docs/install&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Docs - &lt;a href=&#34;https://redis.io/docs&#34;&gt;https://redis.io/docs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;command ref - &lt;a href=&#34;https://redis.io/commands/&#34;&gt;https://redis.io/commands/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;redis lua - &lt;a href=&#34;https://www.freecodecamp.org/news/a-quick-guide-to-redis-lua-scripting/&#34;&gt;https://www.freecodecamp.org/news/a-quick-guide-to-redis-lua-scripting/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+  </channel>
+</rss>

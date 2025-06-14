@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Neovim on Borisu Wiki Home</title>
+    <link>https://neosolaris.github.io/tags/neovim/</link>
+    <description>Recent content in Neovim on Borisu Wiki Home</description>
+    <image>
+      <title>Borisu Wiki Home</title>
+      <url>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.147.2</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 08 Aug 2023 15:37:35 +0900</lastBuildDate>
+    <atom:link href="https://neosolaris.github.io/tags/neovim/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Neovim 설치 및 설정</title>
+      <link>https://neosolaris.github.io/posts/nvim-install/</link>
+      <pubDate>Thu, 01 Sep 2022 14:57:43 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/nvim-install/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 20-08-08: alpine 설치 추가&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;개요&#34;&gt;개요&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/neovim/neovim/releases&#34;&gt;https://github.com/neovim/neovim/releases&lt;/a&gt; 에서 최신 안정 버전을 다운로드&lt;/li&gt;
+&lt;li&gt;그간 많은 변화가 있었기 때문에 여러 설치 및 에러를 방지하려면 neovim v0.7 이상을 설치한다.&lt;/li&gt;
+&lt;li&gt;아래 내용은 우분투 22.04를 기준으로 한다.&lt;/li&gt;
+&lt;li&gt;우분투 PPA 패키지로 현재 neovim은 v0.7.2이다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;nvim의-특징&#34;&gt;NVIM의 특징&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;../luaJIT&#34;&gt;luaJIT&lt;/a&gt;이 기본 내장되어 lua를 설정에서 모듈까지 쉽게 확장 가능.&lt;/li&gt;
+&lt;li&gt;terminal 기능이 있어 바로 사용가능하다. &lt;code&gt;:terminal&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;커서 스타일, 포커스 이벤트, 괄호에 붙여 넣기 기본 지원&lt;/li&gt;
+&lt;li&gt;자동완성, 맞춤법 검사, 탭, 구문 색상지정, 정규표현식으로 검색 및 바꾸기 등&lt;/li&gt;
+&lt;li&gt;Asynchronous Plugin Architecture를 지원, 재컴파일 없이 모듈 장착 가능&lt;/li&gt;
+&lt;li&gt;Parallel installation/update of plugins - 병렬식으로 플러그인 설치가 매우 빠름&lt;/li&gt;
+&lt;li&gt;Post-update hook - 플러그인 설치 후에 해야 할 일을 지정해 놓으면 알아서 수행&lt;/li&gt;
+&lt;li&gt;플러그인의 버전 관리, 종속성 관리가 편리하다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;패키지-설치&#34;&gt;패키지 설치&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Ubuntu 설치&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;appimage&lt;/code&gt;를 직접 다운로드해서 설치&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; wget https://github.com/neovim/neovim/releases/download/v0.6.1/nvim.appimage
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; mv nvim.appimage ~/bin/nvim
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; chmod u+x ~/bin/nvim
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Ubuntu ppa 최신패키지 설치&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo apt install software-properties-common -y
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo add-apt-repository ppa:neovim-ppa/stable -y
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo apt update
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo apt install neovim -y
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; nvim --version
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;Alpine 설치&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; doas apk update
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; doas apk add neovim    &lt;span class=&#34;c1&#34;&gt;# nvim Install&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; apk search nvim-*      &lt;span class=&#34;c1&#34;&gt;# Plugin check&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; apk nvim-lualine nvim-treesitter    &lt;span class=&#34;c1&#34;&gt;# Plugin: lualine install&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; nvim --version
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;gp&#34;&gt;#&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# 소스 빌드 - Debian, Ubuntu&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;go&#34;&gt;* Requirements
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;```console
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;&lt;/span&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo apt install build-essencial cmake ninja luarocks5.1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo luarocks5.1 install lpeg
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo luarocks5.1 install mpack
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Build&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; git clone https://github.com/neovim/neovim
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; neovim 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; git checkout stable
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; make &lt;span class=&#34;nv&#34;&gt;CMAKE_BUILD_TYPE&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;RelWithDebInfo  &lt;span class=&#34;c1&#34;&gt;# or CMAKE_BUILD_TYPE=Release&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo make install
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; strip /usr/local/bin/nvim
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; /usr/local/bin/nvim --version
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;소스-빌드---alpine&#34;&gt;소스 빌드 - Alpine&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Requirements&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;#&lt;/span&gt; apk add build-base cmake automake autoconf libtool pkgconf coreutils curl unzip gettext-tiny-dev
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Build&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;#&lt;/span&gt; git clone https://github.com/neovim/neovim
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;#&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; neovim 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;#&lt;/span&gt; git checkout stable
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;#&lt;/span&gt; make &lt;span class=&#34;nv&#34;&gt;CMAKE_BUILD_TYPE&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;RelWithDebInfo  &lt;span class=&#34;c1&#34;&gt;# or CMAKE_BUILD_TYPE=Release&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;#&lt;/span&gt; sudo make install
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;#&lt;/span&gt; strip /usr/local/bin/nvim
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;#&lt;/span&gt; /usr/local/bin/nvim --version
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;소스-빌드---raspbian-2023-09-17&#34;&gt;소스 빌드 - Raspbian (2023-09-17)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;라즈베리파이의 neovim 버전이 매우 낮다.&lt;/li&gt;
+&lt;li&gt;현재로서는 컴파일해서 사용하는 것이 최신버전을 쓰는 제일 좋은 방법으로 보인다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;# Install latest CMake https://stackoverflow.com/a/56690743/13411047
+sudo apt update
+sudo apt install -y libssl-dev
+wget -O /tmp/cmake.tar.gz &amp;#34;https://cmake.org/files/v3.19/cmake-3.19.1.tar.gz&amp;#34;
+tar -xvzf cmake.tar.gz
+rm cmake.tar.gz
+cd cmake-3.19.1/
+cmake .
+make
+sudo make install
+
+# Requirements Install
+sudo apt-get install git
+sudo apt-get install libtool libtool-bin autoconf automake cmake g++ pkg-config unzip
+
+# source download
+git clone https://github.com/neovim/neovim.git
+cd neovim
+
+# compile &amp;amp; Install
+make CMAKE_BUILD_TYPE=RelWithDebInfo
+sudo make install
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;주요-설정파일&#34;&gt;주요 설정파일&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;vimscript 설정 기준&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;~/.config/nvim/init.vim
+~/.local/share/nvim/site/autoload/plug.vim
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;lua 설정 기준&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;~/.config/nvim/init.lua
+~/.config/nvim/lua/
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;neovim home: &lt;a href=&#34;https://neovim.io/&#34;&gt;https://neovim.io/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;building noevim: &lt;a href=&#34;https://github.com/neovim/neovim/wiki/Building-Neovim&#34;&gt;https://github.com/neovim/neovim/wiki/Building-Neovim&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>Nvim neovim</title>
+      <link>https://neosolaris.github.io/posts/nvim/</link>
+      <pubDate>Thu, 25 Aug 2022 04:28:11 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/nvim/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Start&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;../nvim-install&#34;&gt;nvim install&lt;/a&gt; - nvim 최신버전 설치&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../nvim-features&#34;&gt;nvim features&lt;/a&gt; - nvim 기본 제공 기능들&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../nvim-lua&#34;&gt;nvim lua&lt;/a&gt; - nvim에 기본 내장된 luaJIT 활용과 설정하기&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../astronvim&#34;&gt;astronvim&lt;/a&gt; - 빠른 시작, nvim에 플러그인과 설정을 추가하여 IDE환경 제공&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Plugins - Common&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;packer.nvim &amp;ndash; 플러그인 패키지 관리&lt;/li&gt;
+&lt;li&gt;gruvbox.nvim &amp;ndash; colorscheme&lt;/li&gt;
+&lt;li&gt;alpha-nvim&amp;rsquo; &amp;ndash; 시작화면 (startify 대체)&lt;/li&gt;
+&lt;li&gt;nvim-web-devicons &amp;ndash; 파일이나 폴더를 이쁘게 표시해주는 플러그인&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../nvim-tree&#34;&gt;nvim-tree&lt;/a&gt; - lua로 만든 파일 탐색기: NerdTree 대체&lt;/li&gt;
+&lt;li&gt;luatab.nvim - tab 표시 및 관리 (tabline 대체)&lt;/li&gt;
+&lt;li&gt;lualine.nvim - 하단부 라인 표시(airline, powerline 대체)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../Comment.nvim&#34;&gt;Comment nvim&lt;/a&gt; - 프로그래밍 언어별 주석 처리&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Plugins - Development 개발환경 구성&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

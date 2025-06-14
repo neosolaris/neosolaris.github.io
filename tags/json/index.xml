@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Json on Borisu Wiki Home</title>
+    <link>https://neosolaris.github.io/tags/json/</link>
+    <description>Recent content in Json on Borisu Wiki Home</description>
+    <image>
+      <title>Borisu Wiki Home</title>
+      <url>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.147.2</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 07 Nov 2022 22:28:56 +0900</lastBuildDate>
+    <atom:link href="https://neosolaris.github.io/tags/json/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>JSON - Lua Module</title>
+      <link>https://neosolaris.github.io/posts/lua-json/</link>
+      <pubDate>Mon, 07 Nov 2022 22:28:56 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/lua-json/</guid>
+      <description>&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;결론은 lua cjson이 가장 빠르다. 그 다음이 lunajson&lt;/li&gt;
+&lt;li&gt;dkjson은 순수 lua파일이고 단일 파일이다.&lt;/li&gt;
+&lt;li&gt;또 다른 하나는 json.lua 이다. 빠르다고 하는데&amp;hellip; 비교적 최신이다.&lt;/li&gt;
+&lt;li&gt;cjson은 빠르나 모듈 컴파일이 필요하고&lt;/li&gt;
+&lt;li&gt;lunajson은 다음으로 빠르고 순수 lua파일이지만 여러 개의 파일로 분리되어 있다.&lt;/li&gt;
+&lt;li&gt;dkjson은 셋 중 가장 퍼포먼스가 낮으나 단일 파일이다.&lt;/li&gt;
+&lt;li&gt;상황에 따라 적절히 사용하다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/grafi-tt/lunajson&#34;&gt;https://github.com/grafi-tt/lunajson&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://dkolf.de/src/dkjson-lua.fsl/home&#34;&gt;http://dkolf.de/src/dkjson-lua.fsl/home&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/rxi/json.lua&#34;&gt;https://github.com/rxi/json.lua&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://somedudesays.com/2019/12/using-json-with-lua&#34;&gt;https://somedudesays.com/2019/12/using-json-with-lua&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>Json to sqlite3 import howto</title>
+      <link>https://neosolaris.github.io/posts/json-to-csv-to-sqlite3/</link>
+      <pubDate>Mon, 07 Nov 2022 22:08:17 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/json-to-csv-to-sqlite3/</guid>
+      <description>&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;json파일을 sqlite3에 import하는 방법&lt;/li&gt;
+&lt;li&gt;json -&amp;gt; csv -&amp;gt; sqlite3 순서로 진행한다.&lt;/li&gt;
+&lt;li&gt;jq, sqlite3가 사전에 설치되어 있어야 한다.&lt;/li&gt;
+&lt;li&gt;jq는 경량 명령라인 json 관리 프로그램이다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;requirement&#34;&gt;Requirement&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo apt install sqlite3
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo apt install jq
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;getting-the-csv&#34;&gt;Getting the CSV&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; cat data.json
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;{&amp;#34;uri&amp;#34;:&amp;#34;/&amp;#34;,&amp;#34;user_agent&amp;#34;:&amp;#34;example1&amp;#34;}
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;{&amp;#34;uri&amp;#34;:&amp;#34;/foobar&amp;#34;,&amp;#34;user_agent&amp;#34;:&amp;#34;example1&amp;#34;}
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;{&amp;#34;uri&amp;#34;:&amp;#34;/&amp;#34;,&amp;#34;user_agent&amp;#34;:&amp;#34;example2&amp;#34;}
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;{&amp;#34;uri&amp;#34;:&amp;#34;/foobar&amp;#34;,&amp;#34;user_agent&amp;#34;:&amp;#34;example3&amp;#34;}
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; head -1 data.json &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; jq -r &lt;span class=&#34;s1&#34;&gt;&amp;#39;keys | @csv&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;&amp;#34;uri&amp;#34;,&amp;#34;user_agent&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; jq -r &lt;span class=&#34;s1&#34;&gt;&amp;#39;map(tostring) | @csv&amp;#39;&lt;/span&gt; &amp;lt; data.json
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;&amp;#34;/&amp;#34;,&amp;#34;example1&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;&amp;#34;/foobar&amp;#34;,&amp;#34;example1&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;&amp;#34;/&amp;#34;,&amp;#34;example2&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;&amp;#34;/foobar&amp;#34;,&amp;#34;example3&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; % &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;head -1 data.json &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; jq -r &lt;span class=&#34;s1&#34;&gt;&amp;#39;keys | @csv&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; jq -r &lt;span class=&#34;s1&#34;&gt;&amp;#39;map(tostring) | @csv&amp;#39;&lt;/span&gt; &amp;lt; data.json&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &amp;gt; data.csv
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;loading-it-into-sqlite3&#34;&gt;Loading it into sqlite3&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sqlite3 somedata.db
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;sqlite&amp;gt; .mode csv
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;sqlite&amp;gt; .import data.csv my_table
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;sqlite&amp;gt; select * from my_table where ...
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://stackoverflow.com/questions/46407770/how-to-convert-a-json-file-to-an-sqlite-database&#34;&gt;https://stackoverflow.com/questions/46407770/how-to-convert-a-json-file-to-an-sqlite-database&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

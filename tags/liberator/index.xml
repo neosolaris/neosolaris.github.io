@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Liberator on Borisu Wiki Home</title>
+    <link>https://neosolaris.github.io/tags/liberator/</link>
+    <description>Recent content in Liberator on Borisu Wiki Home</description>
+    <image>
+      <title>Borisu Wiki Home</title>
+      <url>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.147.2</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 11 Oct 2022 23:13:33 +0900</lastBuildDate>
+    <atom:link href="https://neosolaris.github.io/tags/liberator/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fits-Liberator</title>
+      <link>https://neosolaris.github.io/posts/fits-liberator/</link>
+      <pubDate>Tue, 11 Oct 2022 23:13:33 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/fits-liberator/</guid>
+      <description>&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;천문사진 주로 FITS 전처리 프로그램&lt;/li&gt;
+&lt;li&gt;version 4 부터 리눅스를 지원한다.&lt;/li&gt;
+&lt;li&gt;입문자가 쉽게 사용할 수 있도록 만들었다.&lt;/li&gt;
+&lt;li&gt;GUI 뿐만 아니라 자동화를 위한 CLI가 제공된다.&lt;/li&gt;
+&lt;li&gt;내부 사용 라이브러리는 &lt;a href=&#34;../fitsio&#34;&gt;fitsio&lt;/a&gt;가 사용된다.&lt;/li&gt;
+&lt;li&gt;Judy Schmidt도 전처리 프로그램으로 이것을 쓴다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;install&#34;&gt;Install&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://noirlab.edu/public/products/fitsliberator&#34;&gt;홈페이지&lt;/a&gt;에서 다운로드 및 설치 가능하다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Ubuntu, Debian&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo apt install libvips  &lt;span class=&#34;c1&#34;&gt;#cfitsio도 필요하나 의존성으로 깔린다.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo dpkg -i fitsliberator_4.x.x_amd64.deb
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;PATH&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$PATH&lt;/span&gt;:/opt/FITS&lt;span class=&#34;se&#34;&gt;\ &lt;/span&gt;Liberator/fitscli/linux/
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;usage&#34;&gt;Usage&lt;/h2&gt;
+&lt;p&gt;다음을 우선적으로 공부하고 나머지는 홈페이지를 방문하자.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Quick Start Guide v4
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://noirlab.edu/public/media/archives/techdocs/pdf/techdoc024.pdf&#34;&gt;https://noirlab.edu/public/media/archives/techdocs/pdf/techdoc024.pdf&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Home &lt;a href=&#34;https://noirlab.edu/public/products/fitsliberator/&#34;&gt;https://noirlab.edu/public/products/fitsliberator/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;FITS Liberator CLI &lt;a href=&#34;https://gitlab.com/noirlab/fits-liberator-cli&#34;&gt;https://gitlab.com/noirlab/fits-liberator-cli&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;FITS Liberator GUI &lt;a href=&#34;https://gitlab.com/noirlab/fits-liberator-gui&#34;&gt;https://gitlab.com/noirlab/fits-liberator-gui&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+  </channel>
+</rss>

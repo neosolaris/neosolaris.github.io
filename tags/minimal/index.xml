@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Minimal on Borisu Wiki Home</title>
+    <link>https://neosolaris.github.io/tags/minimal/</link>
+    <description>Recent content in Minimal on Borisu Wiki Home</description>
+    <image>
+      <title>Borisu Wiki Home</title>
+      <url>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.147.2</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 16 Sep 2023 16:33:33 +0900</lastBuildDate>
+    <atom:link href="https://neosolaris.github.io/tags/minimal/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>플러그인 없이 vim을 최소 설정으로 사용하기</title>
+      <link>https://neosolaris.github.io/posts/vim-minimal/</link>
+      <pubDate>Sat, 16 Sep 2023 16:33:03 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/vim-minimal/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;원격지에서 vi(m)을 사용할 때 간단한 편집은 괜찮으나 코드를 수정하거나 할 때에는 불편하다.&lt;/li&gt;
+&lt;li&gt;하지만 플러그인과 많은 설정을 할 경우 번거롭기도 하고 무거워지기도 한다.&lt;/li&gt;
+&lt;li&gt;한가지 방법은 로컬의 환경에서 scp를 이용해 편집하는 방법이다. &lt;a href=&#34;../nvim-scp&#34;&gt;nvim scp&lt;/a&gt; 참조.&lt;/li&gt;
+&lt;li&gt;또 다른 방법은 아주 불편하지 않는 선에서 환경을 설정하고 사용하는 방법이다.&lt;/li&gt;
+&lt;li&gt;이 경우 플러그인 사용을 하지 않고, 최소한의 설정만 하는 것이다.&lt;/li&gt;
+&lt;li&gt;장점은 가볍고 빠르면서 환경설정도 최소한으로 할 수 있어 편리하다.&lt;/li&gt;
+&lt;li&gt;특히 원격지가 저사양 컴퓨터이거나 라즈베리파이 등일 때 적당하다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;setup&#34;&gt;Setup&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;how to setup&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;# Install vim or nvim
+sudo apt install vim
+
+# Setup for (v)vim
+vi ~/.vimrc
+
+# Use
+vi ~/myproject/myfile.c
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;.vimrc&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;&amp;#34;
+&amp;#34; minimal vimrc with no (extra) plugins
+&amp;#34;
+
+&amp;#34;load system defaults
+if filereadable(expand(&amp;#39;$VIMRUNTIME/defaults.vim&amp;#39;))
+	unlet! g:skip_defaults_vim
+	source $VIMRUNTIME/defaults.vim
+endif
+
+&amp;#34;regular settings
+&amp;#34;----------------
+&amp;#34; ui
+set number
+set ruler
+set wildmenu
+set showcmd
+set showmatch
+
+&amp;#34; encoding/format
+set encoding=utf-8
+set fileformats=unix,dos,mac
+
+&amp;#34; searching
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase
+
+&amp;#34; indent
+set shiftwidth=4
+set tabstop=4
+set softtabstop=4
+set autoindent
+
+&amp;#34; key timeout values
+set esckeys
+set ttimeoutlen=20
+set timeoutlen=1000
+
+&amp;#34; allow syntax and filetype plugins
+syntax enable
+filetype plugin indent on
+runtime macros/matchit.vim
+
+&amp;#34; autocmds
+&amp;#34;---------
+augroup general
+    autocmd!
+    &amp;#34;keep equal proportions when windows resized
+    autocmd VimResized * wincmd =
+    &amp;#34;save cursor position in a file
+    autocmd BufReadPost * if line(&amp;#34;&amp;#39;\&amp;#34;&amp;#34;) &amp;gt; 1 &amp;amp;&amp;amp; line(&amp;#34;&amp;#39;\&amp;#34;&amp;#34;)
+                \ &amp;lt;= line(&amp;#34;$&amp;#34;) | exe &amp;#34;normal! g&amp;#39;\&amp;#34;&amp;#34; | endif
+augroup END
+
+augroup languages
+    autocmd!
+    autocmd BufNewFile,BufRead *.bash set syntax=sh
+    autocmd FileType python xnoremap &amp;lt;leader&amp;gt;r &amp;lt;esc&amp;gt;:&amp;#39;&amp;lt;,&amp;#39;&amp;gt;:w !python3&amp;lt;CR&amp;gt;
+    autocmd FileType go set noexpandtab
+    autocmd FileType html :syntax sync fromstart
+    autocmd FileType html,javascript,css,json,yaml,sh
+                \ setlocal ts=2 sts=2 sw=2 expandtab
+augroup END
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;reference&#34;&gt;REFERENCE&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;A minimal Vimrc - &lt;a href=&#34;https://madjam.dev/posts/a-minimal-vimrc/&#34;&gt;https://madjam.dev/posts/a-minimal-vimrc/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+  </channel>
+</rss>

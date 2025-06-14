@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Remove on Borisu Wiki Home</title>
+    <link>https://neosolaris.github.io/tags/remove/</link>
+    <description>Recent content in Remove on Borisu Wiki Home</description>
+    <image>
+      <title>Borisu Wiki Home</title>
+      <url>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.147.2</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 21 Nov 2022 15:46:59 +0900</lastBuildDate>
+    <atom:link href="https://neosolaris.github.io/tags/remove/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Docker Images Remove - 도커 이미지 제거</title>
+      <link>https://neosolaris.github.io/posts/docker-images-remove/</link>
+      <pubDate>Mon, 21 Nov 2022 15:46:59 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/docker-images-remove/</guid>
+      <description>&lt;h2 id=&#34;기본-사용법&#34;&gt;기본 사용법&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; docker images  &lt;span class=&#34;c1&#34;&gt;# 도커 이미지 리스트 확인&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; docker images -all  &lt;span class=&#34;c1&#34;&gt;# 히든 이미지까지 모두 보기&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; docker rmi &amp;lt;ID&amp;gt;  &lt;span class=&#34;c1&#34;&gt;# image ID로 제거&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; docker rmi -f &amp;lt;ID&amp;gt;  &lt;span class=&#34;c1&#34;&gt;# image ID로 강제로 제거&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;docker-none-image-정리하기&#34;&gt;Docker none image 정리하기&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; docker container prune  &lt;span class=&#34;c1&#34;&gt;# 컨테이너 모두 종료&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; docker image prune   &lt;span class=&#34;c1&#34;&gt;# &amp;lt;none&amp;gt; 이미지 모두 제거&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;&lt;/span&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; docker system pruen  &lt;span class=&#34;c1&#34;&gt;# 한 번에 처리&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+  </channel>
+</rss>

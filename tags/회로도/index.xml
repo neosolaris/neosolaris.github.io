@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>회로도 on Borisu Wiki Home</title>
+    <link>https://neosolaris.github.io/tags/%ED%9A%8C%EB%A1%9C%EB%8F%84/</link>
+    <description>Recent content in 회로도 on Borisu Wiki Home</description>
+    <image>
+      <title>Borisu Wiki Home</title>
+      <url>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.147.2</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 13 Dec 2023 11:49:32 +0900</lastBuildDate>
+    <atom:link href="https://neosolaris.github.io/tags/%ED%9A%8C%EB%A1%9C%EB%8F%84/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fritzing</title>
+      <link>https://neosolaris.github.io/posts/fritzing/</link>
+      <pubDate>Wed, 13 Dec 2023 11:49:32 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/fritzing/</guid>
+      <description>&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;nodemcu나 arduino를 이용한 회로 설계에 활용&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;install&#34;&gt;Install&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;깃허브 개발용을 설치
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/fritzing/fritzing-app/releases&#34;&gt;https://github.com/fritzing/fritzing-app/releases&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;자신의 OS에 맞는 것을 선택 (ex. Windows: fritzing-xxx-develop-548.windows.64.zip)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;압축을 풀고 적당한 곳에 옮긴 후 실행파일을 바탕화면에 링크복사&lt;/li&gt;
+&lt;li&gt;실행
+&lt;ul&gt;
+&lt;li&gt;parts관련 업데이트 창: clean parts선택 후 업데이트&lt;/li&gt;
+&lt;li&gt;windows User Files Folder: &lt;code&gt;C:\Users\사용자명\OneDrive\문서\Fritzing&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;nodemcu-parts-등록하기&#34;&gt;Nodemcu parts 등록하기&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;기본 설치시 esp32, esp8266이 없으므로 사용자 등록을 해준다.&lt;/li&gt;
+&lt;li&gt;[esp32-parts]
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://forum.fritzing.org/uploads/default/original/2X/8/8d99adbb2e8f966178bdb46f5cffa7bd72ce2c2a.fzpz&#34;&gt;https://forum.fritzing.org/uploads/default/original/2X/8/8d99adbb2e8f966178bdb46f5cffa7bd72ce2c2a.fzpz&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;[esp8266-parts]
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://blog-cms.tasnimzotder.com/content/files/2022/01/NodeMCU-V1.0-1.fzpz&#34;&gt;https://blog-cms.tasnimzotder.com/content/files/2022/01/NodeMCU-V1.0-1.fzpz&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;다운받은 파일을 우측상단 Parts 패널의 &lt;code&gt;부메뉴&amp;gt;import&lt;/code&gt;를 클릭하여 로드한다.&lt;/li&gt;
+&lt;li&gt;Parts 패널에 &lt;code&gt;Mine&amp;gt;My parts&lt;/code&gt;에 등록된 것을 확인한다.&lt;/li&gt;
+&lt;li&gt;import하여 등록한 parts는 &lt;code&gt;C:\Users\사용자명\OneDrive\문서\Fritzing&lt;/code&gt; 이하에 저장된다.&lt;/li&gt;
+&lt;li&gt;따라서 이를 백업해두면 나중에 쉽게 자신의 환경을 복원할 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;reference&#34;&gt;REFERENCE&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Fritzing Home: &lt;a href=&#34;https://fritzing.org/&#34;&gt;https://fritzing.org/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Fritzing Github: &lt;a href=&#34;https://github.com/fritzing/fritzing-app&#34;&gt;https://github.com/fritzing/fritzing-app&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;learning Fritzing: &lt;a href=&#34;https://fritzing.org/learning/&#34;&gt;https://fritzing.org/learning/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+  </channel>
+</rss>

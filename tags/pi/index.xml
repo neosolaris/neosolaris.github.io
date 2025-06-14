@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Pi on Borisu Wiki Home</title>
+    <link>https://neosolaris.github.io/tags/pi/</link>
+    <description>Recent content in Pi on Borisu Wiki Home</description>
+    <image>
+      <title>Borisu Wiki Home</title>
+      <url>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.147.2</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 26 Aug 2023 16:54:31 +0900</lastBuildDate>
+    <atom:link href="https://neosolaris.github.io/tags/pi/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Raspberry Pi 라즈베리파이</title>
+      <link>https://neosolaris.github.io/posts/raspberry-pi/</link>
+      <pubDate>Tue, 23 Aug 2022 18:35:04 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/raspberry-pi/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;../raspbian-update&#34;&gt;raspbian update&lt;/a&gt; - Update Raspbian from an Older Version to Buster&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+  </channel>
+</rss>

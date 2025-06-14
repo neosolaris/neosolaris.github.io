@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Rtorrent on Borisu Wiki Home</title>
+    <link>https://neosolaris.github.io/tags/rtorrent/</link>
+    <description>Recent content in Rtorrent on Borisu Wiki Home</description>
+    <image>
+      <title>Borisu Wiki Home</title>
+      <url>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.147.2</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 26 Oct 2022 18:13:39 +0900</lastBuildDate>
+    <atom:link href="https://neosolaris.github.io/tags/rtorrent/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Rtorrent - 설치 및 사용법</title>
+      <link>https://neosolaris.github.io/posts/rtorrent/</link>
+      <pubDate>Wed, 26 Oct 2022 18:13:39 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/rtorrent/</guid>
+      <description>&lt;h2 id=&#34;install&#34;&gt;Install&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo apt install rtorrent
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;usage&#34;&gt;Usage&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; ~/Downloads   &lt;span class=&#34;c1&#34;&gt;# 현재 폴더로 다운로드됨&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; rtorrent &amp;lt;torrent_filename&amp;gt;.torrent  &lt;span class=&#34;c1&#34;&gt;# 다운로드&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;Control + q        # 종료
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.usessionbuddy.com/post/How-to-setup-and-use-rtorrent-on-Linux/&#34;&gt;https://www.usessionbuddy.com/post/How-to-setup-and-use-rtorrent-on-Linux/&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

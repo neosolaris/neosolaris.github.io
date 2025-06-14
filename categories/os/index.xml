@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Os on Borisu Wiki Home</title>
+    <link>https://neosolaris.github.io/categories/os/</link>
+    <description>Recent content in Os on Borisu Wiki Home</description>
+    <image>
+      <title>Borisu Wiki Home</title>
+      <url>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.147.2</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 30 Dec 2023 05:57:18 +0900</lastBuildDate>
+    <atom:link href="https://neosolaris.github.io/categories/os/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Alpine Linux Install</title>
+      <link>https://neosolaris.github.io/posts/alpine_install/</link>
+      <pubDate>Sat, 30 Dec 2023 05:57:18 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/alpine_install/</guid>
+      <description>&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;설치에는 크게 일반적인 설치 방법과 Windows WSL에 올리는 방법이 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;일반-설치&#34;&gt;일반 설치&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;ISO 이미지를 부팅용 USB로 작성&lt;/li&gt;
+&lt;li&gt;usb 부팅 및 설치&lt;/li&gt;
+&lt;li&gt;패키지 설치 및 설정&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;윈도우즈-설치--wsl2--alpine-&#34;&gt;윈도우즈 설치 ( WSL2 + Alpine )&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;윈도우즈 10, 11 기반, WSL2 설치 또는 업그레이드: &lt;code&gt;c:&amp;gt; wsl --update&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Alpine-Wsl 설치 (Microsoft Store)&lt;/li&gt;
+&lt;li&gt;설치 후 실행 아이콘 실행&lt;/li&gt;
+&lt;li&gt;자세한 내용은 다음 문서 참조: &lt;a href=&#34;../docker-windows&#34;&gt;docker windows&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;upgrade&#34;&gt;Upgrade&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;최신 버전으로 업그레이드 하는 방법을 정리한다.&lt;/li&gt;
+&lt;li&gt;alpine-wsl에서는 업그레이드가 되지만 버전정보는 그대로이다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; cat /etc/alpine-release   &lt;span class=&#34;c1&#34;&gt;# Check Current Version&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; su -
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;#&lt;/span&gt; apk update &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; apk upgrade &lt;span class=&#34;c1&#34;&gt;# update &amp;amp; upgrade current version&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;OR
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;&lt;/span&gt;&lt;span class=&#34;gp&#34;&gt;#&lt;/span&gt; apk -U upgrade
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;gp&#34;&gt;#&lt;/span&gt; sudo setup-apkrepos     &lt;span class=&#34;c1&#34;&gt;# Enter `:e` for edit and change version what you want&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;https://dl-cdn.alpinelinux.org/alpine/v3.18/main/
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;https://dl-cdn.alpinelinux.org/alpine/v3.18/community/
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;https://dl-cdn.alpinelinux.org/alpine/edge/testing/
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;:wq
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;gp&#34;&gt;#&lt;/span&gt; sudo apk update
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;#&lt;/span&gt; sudo apk upgrade ---available
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;#&lt;/span&gt; sync
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;#&lt;/span&gt; reboot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;...
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; cat /etcalpine-release
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; uname -r
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;관련-문서&#34;&gt;관련 문서&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;lua-language-server 설치: &lt;a href=&#34;../alpine-lua-language-server&#34;&gt;alpine lua language server&lt;/a&gt;
+설치&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;reference&#34;&gt;REFERENCE&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Alpine Install: &lt;a href=&#34;https://wiki.alpinelinux.org/wiki/Installation&#34;&gt;https://wiki.alpinelinux.org/wiki/Installation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Alpine Tutorial and Howtos: &lt;a href=&#34;https://wiki.alpinelinux.org/wiki/Tutorials_and_Howtos&#34;&gt;https://wiki.alpinelinux.org/wiki/Tutorials_and_Howtos&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+  </channel>
+</rss>

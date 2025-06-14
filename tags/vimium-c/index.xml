@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Vimium-C on Borisu Wiki Home</title>
+    <link>https://neosolaris.github.io/tags/vimium-c/</link>
+    <description>Recent content in Vimium-C on Borisu Wiki Home</description>
+    <image>
+      <title>Borisu Wiki Home</title>
+      <url>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.147.2</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 26 Aug 2023 17:27:54 +0900</lastBuildDate>
+    <atom:link href="https://neosolaris.github.io/tags/vimium-c/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>vimium-c - Vim like Using firefox</title>
+      <link>https://neosolaris.github.io/posts/vimium-c/</link>
+      <pubDate>Sat, 26 Aug 2023 17:26:57 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/vimium-c/</guid>
+      <description>&lt;h2 id=&#34;설치&#34;&gt;설치&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;파이어폭스의 확장기능 검색 : vimium-c&lt;/li&gt;
+&lt;li&gt;플러그인 설치&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;사용법&#34;&gt;사용법&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;?&lt;/code&gt; : 도움말 보이기/숨기기&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Navigating the current Page:&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;?       show the help dialog for a list of all available keys
+h       scroll left
+j       scroll down
+k       scroll up
+l       scroll right
+gg      scroll to top of the page
+G       scroll to bottom of the page
+d       scroll down half a page
+u       scroll up half a page
+f       open a link in the current tab
+F       open a link in a new tab
+r       reload
+gs      view source
+i       enter insert mode -- all commands will be ignored until you hit Esc to exit
+yy      copy the current url to the clipboard
+yf      copy a link url to the clipboard
+gf      cycle forward to the next frame
+gF      focus the main/top frame
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;Navigating to new pages:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;o       Open URL, bookmark, or history entry, on an English letter &amp;#34;o&amp;#34;
+O       Open URL, bookmark, history entry in a new tab, on an English letter &amp;#34;O&amp;#34;
+b       Open bookmark
+B       Open bookmark in a new tab
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;Nvigating your history:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;H       go back in history
+L       go forward in history
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;Manipulating tabs:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;J, gT   go one tab left
+K, gt   go one tab right
+g0      go to the first tab. Use `ng0` to go to n-th tab, on `g` and a number character of `0`
+g$      go to the last tab
+^       visit the previously-visited tab
+t       create tab
+yt      duplicate current tab
+x       close current tab
+X       restore closed tab (i.e. unwind the `x` command)
+T       search through your open tabs
+W       move current tab to new window
+&amp;lt;a-p&amp;gt;   pin/unpin current tab
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;Using marks:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;ma, mA  set local mark &amp;#34;a&amp;#34; (global mark &amp;#34;A&amp;#34;)
+`a, `A  jump to local mark &amp;#34;a&amp;#34; (global mark &amp;#34;A&amp;#34;)
+``      jump back to the position before the previous jump
+          -- that is, before the previous gg, G, n, N, / or `a
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;Additional advanced browsing commands:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;]], [[  Follow the link labeled &amp;#34;next or &amp;#34;&amp;gt;&amp;#34; (&amp;#34;previous&amp;#34; or &amp;#34;&amp;lt;&amp;#34;&amp;gt;)
+          - helpful for browsing paginated sites
+&amp;lt;a-f&amp;gt;   open multiple links in a new tab
+gi      focus the first (or n-th) text input box on the page. Use &amp;lt;tab&amp;gt; to cycle through options.
+gu      go up one level in the URL hierarchy
+gU      go up to root of the URL hierarchy
+ge      edit the current URL
+gE      edit the current URL and open in a new tab
+zH      scroll all the way left
+zL      scroll all the way right
+v       enter visual mode; use p/P to paste-and-go, use y to yank
+V       enter visual line mode
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;reference&#34;&gt;REFERENCE&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;vimium - &lt;a href=&#34;https://github.com/gdh1995/vimium&#34;&gt;https://github.com/gdh1995/vimium&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+  </channel>
+</rss>

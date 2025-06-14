@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Image on Borisu Wiki Home</title>
+    <link>https://neosolaris.github.io/tags/image/</link>
+    <description>Recent content in Image on Borisu Wiki Home</description>
+    <image>
+      <title>Borisu Wiki Home</title>
+      <url>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.147.2</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 30 Oct 2022 00:05:48 +0900</lastBuildDate>
+    <atom:link href="https://neosolaris.github.io/tags/image/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>IRAF - Image Reduction and Analysis Facility</title>
+      <link>https://neosolaris.github.io/posts/iraf/</link>
+      <pubDate>Wed, 12 Oct 2022 16:02:55 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/iraf/</guid>
+      <description>&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;../fits&#34;&gt;FITS&lt;/a&gt; 데이터 분석 및 이미지 처리 도구 집합&lt;/li&gt;
+&lt;li&gt;NOAO(National Optical astronomy Observatory)에서 개발&lt;/li&gt;
+&lt;li&gt;현재 오픈소스로 공개하여 &lt;a href=&#34;https://iraf-community.github.io&#34;&gt;iraf community&lt;/a&gt; 가 관리하고 있다.&lt;/li&gt;
+&lt;li&gt;주로 관측천문학 분야에서 활용되고 있다.&lt;/li&gt;
+&lt;li&gt;파이썬으로 랩핑한 &lt;a href=&#34;../pyraf&#34;&gt;pyraf&lt;/a&gt;가 있다.&lt;/li&gt;
+&lt;li&gt;컴파일과 패키지 설치 두 가지가 있다. (패키지 설치 권장)&lt;/li&gt;
+&lt;li&gt;현재 많은 소프트웨어들이 나와있으나 타언어로 랩핑하였거나 인터페이스만 바꾸어 라이브러리를 그대로 사용하고 있다.&lt;/li&gt;
+&lt;li&gt;일종의 고전이라고 볼 수 있겠다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;install-packages&#34;&gt;Install Packages&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Ubuntu18.x 이후부터 패키지 제공&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo apt install xterm xgterm &lt;span class=&#34;c1&#34;&gt;# terminal for iraf &lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo apt install saods9       &lt;span class=&#34;c1&#34;&gt;# ds9 FITS Viewer for iraf&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo apt install iraf iraf-dev iraf-noao iraf-noao-dev iraf-wcstools iraf-rvsao
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;install-from-source&#34;&gt;Install From Source&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/iraf-community/iraf/archive/refs/tags/v2.17.tar.gz&#34;&gt;Download Source&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>SimpleITK - Open Source Multi-dimensional Image Analysis</title>
+      <link>https://neosolaris.github.io/posts/simpleitk/</link>
+      <pubDate>Thu, 29 Sep 2022 17:51:54 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/simpleitk/</guid>
+      <description>&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;simpleitk는 오픈소스로서 주로 의료, 천문에서 사진을 프로세싱하는 툴킷이다.&lt;/li&gt;
+&lt;li&gt;주로 python을 사용하는데 설치와 사용이 너무 지저분하고 번거롭다.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../lua&#34;&gt;lua&lt;/a&gt;를 사용하는 방법을 알아 보았다.&lt;/li&gt;
+&lt;li&gt;설치는 &lt;a href=&#34;../luarocks&#34;&gt;luarocks&lt;/a&gt; 패키지 매니저를 사용하였고 api형태로 컴파일해서
+사용한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;install&#34;&gt;Install&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Python Package Install&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; pip install SimpleITK
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; pip install SimpleITK-SimpleElastix
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; vim test.py
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;SimpleITK&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;as&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;sitk&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Lua Package Install : version 2.2.0&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; luarocks search simpleitk           &lt;span class=&#34;c1&#34;&gt;# 패키지 검색&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; luarocks install --local simpleitk  &lt;span class=&#34;c1&#34;&gt;# 로컬`~/.luarocks`에 설치&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; vim test.lua
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-lua&#34; data-lang=&#34;lua&#34;&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Quick Start: &lt;a href=&#34;https://simpleitk.readthedocs.io/en/master/gettingStarted.html&#34;&gt;https://simpleitk.readthedocs.io/en/master/gettingStarted.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Github Page: &lt;a href=&#34;https://github.com/SimpleITK/SimpleITKLuaRock&#34;&gt;https://github.com/SimpleITK/SimpleITKLuaRock&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Python SimpleITK Howto: &lt;a href=&#34;https://bo-10000.tistory.com/61&#34;&gt;https://bo-10000.tistory.com/61&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+  </channel>
+</rss>

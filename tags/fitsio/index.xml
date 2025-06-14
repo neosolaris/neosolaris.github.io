@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Fitsio on Borisu Wiki Home</title>
+    <link>https://neosolaris.github.io/tags/fitsio/</link>
+    <description>Recent content in Fitsio on Borisu Wiki Home</description>
+    <image>
+      <title>Borisu Wiki Home</title>
+      <url>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.147.2</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 11 Oct 2022 17:06:15 +0900</lastBuildDate>
+    <atom:link href="https://neosolaris.github.io/tags/fitsio/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>fitsio - FITS IO C Library</title>
+      <link>https://neosolaris.github.io/posts/fitsio/</link>
+      <pubDate>Tue, 11 Oct 2022 17:06:15 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/fitsio/</guid>
+      <description>&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;fits를 편집하기 위한 C 라이브러리 모음&lt;/li&gt;
+&lt;li&gt;python, ruby, perl, lua 등의 wrapper가 다양하게 존재한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;lua-ffi-bindings-fitsiolua&#34;&gt;Lua-ffi-bindings: fitsio.lua&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;깃허브: &lt;a href=&#34;https://github.com/thenumbernine/lua-ffi-bindings&#34;&gt;https://github.com/thenumbernine/lua-ffi-bindings&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;요구사항: Luajit, fitsio library&lt;/li&gt;
+&lt;li&gt;사용법: 아래 quick start quide 참고&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo apt install libfitsio-dev
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; git clone https://github.com/thenumbernine/lua-ffi-bindings.git
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; lua-ffi-bindings
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;그런데 너무 오래된 소스이다. 2009&lt;/li&gt;
+&lt;li&gt;거기다 ffi-binding해서 사용하는 예제도 없다.&lt;/li&gt;
+&lt;li&gt;pfits는 역시 오래 되었고, pyfits도 astropy로 통합되었다.&lt;/li&gt;
+&lt;li&gt;이런 것이 있었다 하고 넘어가자.&lt;/li&gt;
+&lt;li&gt;파이썬 사용자라면 astropy를 사용하는 것이 좋겠다.&lt;/li&gt;
+&lt;li&gt;아 루아로는 갈길이 멀다.&lt;/li&gt;
+&lt;li&gt;하지만 현재 &lt;a href=&#34;../fits-liberator&#34;&gt;astropy&lt;/a&gt;도 내부에는 이 라이브러리를 쓴다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Home: &lt;a href=&#34;https://heasarc.gsfc.nasa.gov/fitsio/&#34;&gt;https://heasarc.gsfc.nasa.gov/fitsio/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;quick start guide &lt;a href=&#34;https://heasarc.gsfc.nasa.gov/docs/software/fitsio/quick/quick.html&#34;&gt;https://heasarc.gsfc.nasa.gov/docs/software/fitsio/quick/quick.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+  </channel>
+</rss>

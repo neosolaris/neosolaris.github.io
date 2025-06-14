@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Run on Borisu Wiki Home</title>
+    <link>https://neosolaris.github.io/tags/run/</link>
+    <description>Recent content in Run on Borisu Wiki Home</description>
+    <image>
+      <title>Borisu Wiki Home</title>
+      <url>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.147.2</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 13 Oct 2023 17:43:29 +0900</lastBuildDate>
+    <atom:link href="https://neosolaris.github.io/tags/run/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Dockerfile - run, cmd, entrypoint 차이</title>
+      <link>https://neosolaris.github.io/posts/docker-run-cmd-entrypoint/</link>
+      <pubDate>Wed, 27 Sep 2023 16:25:49 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/docker-run-cmd-entrypoint/</guid>
+      <description>&lt;h2 id=&#34;dockerfile-에서-run-cmd-entrypoint--차이&#34;&gt;Dockerfile 에서 RUN, CMD, ENTRYPOINT  차이&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;RUN - 도커이미지 생성시 동작&lt;/li&gt;
+&lt;li&gt;CMD - 도커이미지 실행시 동작 (대체 가능)&lt;/li&gt;
+&lt;li&gt;ENTRYPOINT - CMD와 같으나 실행시 반드시 동작&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;dockerfile---run&#34;&gt;Dockerfile - RUN&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;# create log script
+vi log-event.sh
+...
+#!/bin/sh
+echo `date` $@ &amp;gt;&amp;gt; log.txt
+cat log.txt
+...
+chmod u+x log-event.sh
+
+# create Docker Image
+vi Dockerfile
+...
+FROM alpine
+ADD log-event.sh /
+RUN [&amp;#34;/log-event.sh&amp;#34;,&amp;#34;image created&amp;#34;] # 생성시 동작
+CMD [&amp;#34;/log-event.sh&amp;#34;,&amp;#34;container started&amp;#34;] # 실행시 동작
+...
+docker build -t myimage .
+
+# Run Docker Image - RUN은 이미지 생성시에 동작했음을 알 수 있다.
+docker run myimage
+Wed Sep 27 07:10:26 UTC 2023 image created
+Wed Sep 27 07:36:10 UTC 2023 container started
+
+docker run myimage
+Wed Sep 27 07:10:26 UTC 2023 image created
+Wed Sep 27 07:36:21 UTC 2023 container started
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;dockerfile---cmd-entrypoint&#34;&gt;Dockerfile - CMD, ENTRYPOINT&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;여러개의 CMD&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;# Create Docker Image
+vi Dockerfile
+...
+FROM alpine
+ADD log-event.sh /
+RUN [&amp;#34;/log-event.sh&amp;#34;,&amp;#34;image created&amp;#34;] # 생성시 동작
+CMD [&amp;#34;/log-event.sh&amp;#34;,&amp;#34;container started&amp;#34;] # 실행시 동작 (무시됨)
+CMD [&amp;#34;/log-event.sh&amp;#34;,&amp;#34;container running&amp;#34;] # 실행시 동작 (마지막CMD처리)
+...
+docker build -t myimage .
+
+# Run Docker Image
+docker run myimage
+Wed Sep 27 07:10:26 UTC 2023 image created
+Wed Sep 27 07:23:09 UTC 2023 container running
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;CMD와 ENTRYPOINT&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;# Create Docker Image
+vi Dockerfile
+...
+FROM alpine
+ADD log-event.sh /
+RUN [&amp;#34;/log-event.sh&amp;#34;,&amp;#34;image created&amp;#34;] # 생성시 동작
+ENTRYPOINT [&amp;#34;/log-event.sh&amp;#34;] # 실행시 동작
+CMD [&amp;#34;container started&amp;#34;]    # 실행시 동작
+...
+docker build -t myimage .
+
+# Run Docker Image
+docker run myimage
+Wed Sep 27 07:10:26 UTC 2023 image created
+Wed Sep 27 07:23:09 UTC 2023 container started
+
+# Run Docker Image with argument
+docker run myimage custom event
+Wed Sep 27 07:10:26 UTC 2023 image created
+Wed Sep 27 07:24:31 UTC 2023 custom event
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;reference&#34;&gt;REFERENCE&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Difference Between run, cmd and entrypoint in a Dockerfile - &lt;a href=&#34;https://www.baeldung.com/ops/dockerfile-run-cmd-entrypoint&#34;&gt;https://www.baeldung.com/ops/dockerfile-run-cmd-entrypoint&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Entrypoint vs cmd - &lt;a href=&#34;https://bluese05.tistory.com/77&#34;&gt;https://bluese05.tistory.com/77&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+  </channel>
+</rss>

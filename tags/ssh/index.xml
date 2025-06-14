@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Ssh on Borisu Wiki Home</title>
+    <link>https://neosolaris.github.io/tags/ssh/</link>
+    <description>Recent content in Ssh on Borisu Wiki Home</description>
+    <image>
+      <title>Borisu Wiki Home</title>
+      <url>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.147.2</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 08 Sep 2023 14:32:57 +0900</lastBuildDate>
+    <atom:link href="https://neosolaris.github.io/tags/ssh/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>nvim-scp - nvim으로 원격 파일 편집</title>
+      <link>https://neosolaris.github.io/posts/nvim-scp/</link>
+      <pubDate>Thu, 07 Sep 2023 11:49:57 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/nvim-scp/</guid>
+      <description>&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;원격지에 직접 로그인해서 편집할 경우 그 곳의 vim 또는 nvim 을 설치, 설정을 해주어야 편하게 쓸 수 있다.&lt;/li&gt;
+&lt;li&gt;간단히 수정하는 정도면 기본적인 vi 정도가 있으므로 그것으로 해결하면 된다.&lt;/li&gt;
+&lt;li&gt;그러나 좀 더 자세한 수정 또는 코딩을 하는 경우에는 불편하다.&lt;/li&gt;
+&lt;li&gt;로컬에서 자신이 설정해 놓은 (n)vim으로 원격지 파일을 수정하는 간단하고 쉬운 방법이다.&lt;/li&gt;
+&lt;li&gt;조사한 결과 여러가지 방법이 많은데 scp를 이용하여 복잡하지 않고 간단하게 쓰기 좋다.&lt;/li&gt;
+&lt;li&gt;그 밖의 방법으로 nvim server/client mode를 이용하는 방법, rsync, tmux, distant.nvim 등이 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;howto&#34;&gt;Howto&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;먼저 로컬에 ssh, scp 등이 설치되어 있어야 한다.&lt;/li&gt;
+&lt;li&gt;당연히 로컬에 자신의 환경에 맞게 설치 설정된 (n)vim도 있어야 한다.&lt;/li&gt;
+&lt;li&gt;원격지에 ssh로 접속할 수 있는 환경도 필요하다.&lt;/li&gt;
+&lt;li&gt;ssh원격로그인을 키인증으로 해 놓으면 더욱 편리하다. (ssh-keygen으로 생성, local:id_rsa.pub -&amp;gt; remmote:authorized_keys 추가)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; vim scp://user@server-name&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;:port&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;//path-to-file.txt
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;또는 (n)vim에서 다음과 같이 할 수도 있다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>ssh-keygen 으로 인증하기</title>
+      <link>https://neosolaris.github.io/posts/ssh-keygen/</link>
+      <pubDate>Fri, 02 Sep 2022 15:09:16 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/ssh-keygen/</guid>
+      <description>&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;remote: authorized_keys 인증 허가&lt;/li&gt;
+&lt;li&gt;local: ssh-keygen으로 키를 생성&lt;/li&gt;
+&lt;li&gt;local: ssh-copy-id로 remote에 복사&lt;/li&gt;
+&lt;li&gt;local: ssh로 패스워드 없이 로그인확인&lt;/li&gt;
+&lt;li&gt;remote: Password로 로그인 불허가 설정&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;remote-authorized_keys-인증허가-되어있다면-다음으로&#34;&gt;remote: authorized_keys 인증허가 (되어있다면 다음으로)&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo vi /etc/ssh/sshd_config
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;...
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;PermitRootLogin no #root로 로그인불가
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;go&#34;&gt;RSAAuthentication yes
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;PubkeyAuthentication yes
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;AuthorizedKeysFile      %h/.ssh/authorized_keys 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;...
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo systemctl restart ssh
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;local-ssh-keygen-보안키-생성하기--t-type--c-comment&#34;&gt;local: ssh-keygen 보안키 생성하기 (-t: type, -C: Comment)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;passphrase는 그냥 엔터 2번&lt;/li&gt;
+&lt;li&gt;생성위치는 ~/.ssh/id_ed25519{.pub}&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; ssh-keygen -t ed25519 -C &lt;span class=&#34;s2&#34;&gt;&amp;#34;batutah@gmail.com&amp;#34;&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;local-ssh-copy-id로-public-key를-remote에-복사&#34;&gt;local: ssh-copy-id로 public key를 remote에 복사&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;local: ~/.ssh/id_ed25519.pub -&amp;gt; remote: ~/.ssh/authorized_keys&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; ssh-copy-id -p81 borisu@192.168.1.101 &lt;span class=&#34;c1&#34;&gt;#remote 패스워드 입력&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;local-ssh로-패스워드-없이-로그인-확인&#34;&gt;local: ssh로 패스워드 없이 로그인 확인&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; ssh -p81 borisu@192.168.1.101
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;remote-sshd에서-패스워드인증-허가를-막기&#34;&gt;remote: sshd에서 패스워드인증 허가를 막기&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;키인증으로 로그인이 가능하므로 패스워드 인증을 막아줌&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo vi /etc/ssh/sshd_config
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;...
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;PasswordAuthentication no
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;...
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo systemctl restart ssh
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys-on-ubuntu-20-04&#34;&gt;https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys-on-ubuntu-20-04&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.answertopia.com/ubuntu/configuring-ssh-key-based-authentication-on-ubuntu/&#34;&gt;https://www.answertopia.com/ubuntu/configuring-ssh-key-based-authentication-on-ubuntu/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>SSH - Secure Shell</title>
+      <link>https://neosolaris.github.io/posts/ssh/</link>
+      <pubDate>Fri, 02 Sep 2022 15:04:36 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/ssh/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;../ssh-keygen&#34;&gt;ssh keygen&lt;/a&gt; - ssh-keygen으로 인증하여 로그인하기&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>GitHub에 SSH Key로 인증하기</title>
+      <link>https://neosolaris.github.io/posts/github-ssh-key-%EC%9D%B8%EC%A6%9D/</link>
+      <pubDate>Tue, 23 Aug 2022 18:35:04 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/github-ssh-key-%EC%9D%B8%EC%A6%9D/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;Laste Updated: 2022.08.17&lt;/li&gt;
+&lt;li&gt;깃허브에서 정책이 변경되어 비밀번호로 인증을 더이상 지원하지 않는다.&lt;/li&gt;
+&lt;li&gt;다른 인증 방법은 github의 보안키 발급과 ssh key를 등록하는 방법이 있다.&lt;/li&gt;
+&lt;li&gt;여기에서는 ssh key를 만들어 github에 등록하여 사용하는 방법이다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;create-ssh-key-enter-enter-enter&#34;&gt;CREATE SSH KEY: enter, enter, enter&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;../rsa&#34;&gt;rsa&lt;/a&gt;로 키를 만들 경우&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;ssh-keygen -t rsa -b 4096 -C $email
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;ls ~/.ssh/id_rsa      #private key
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;ls ~/.ssh/id_rsa.pub  #public key
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;[ed25519](../추천: 보다 간결하고 강화된 방식)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;ssh-keygen -t ed25519 -C “yourmail@mail.com”
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;ls ~/.ssh/id_ed25519      #private key
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;ls ~/.ssh/id_ed25519.pub  #public key
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;생성한-pub-키를-github에-등록하기&#34;&gt;생성한 pub 키를 GitHub에 등록하기&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;생성한 키 중 pub키를 복사한다.&lt;/li&gt;
+&lt;li&gt;깃허브에 로그인하여 다음 메뉴를 찾아 클릭.
+|Github Home &amp;gt; Settings &amp;gt; SSH and GPG Keys &amp;gt; New SSH Key&lt;/li&gt;
+&lt;li&gt;Title에 제목을 입력하고 &amp;ldquo;Add SSH Key&amp;quot;를 눌러 등록 완료.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;터미널에서-새로운-프로토콜ssh-인증방식으로-연결&#34;&gt;터미널에서 새로운 프로토콜(SSH 인증방식)으로 연결&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;깃허브에 성공적으로 연결되는 지 확인&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;ssh -T git@github.com
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;깃허브에 연결 및 저장소 등록&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;git remote set-url origin git@github.com:user_name/repo_name.git
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;comment&#34;&gt;Comment&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;이 방식은 https방식보다 간결한 URL과 편리한 사용법이 좋다.&lt;/li&gt;
+&lt;li&gt;또한 깃허브로부터 인증키를 받는 방식은 기간제한이 있다.&lt;/li&gt;
+&lt;li&gt;다른 컴퓨터에서 연결할 경우 ssh 키를 만들어 pub키를 깃허브에 추가해주면 된다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://medium.com/ntust-aivc/instruction-for-adding-an-ssh-key-to-your-github-account-ubuntu20-04-3-lts-f9f7802ed734&#34;&gt;https://medium.com/ntust-aivc/instruction-for-adding-an-ssh-key-to-your-github-account-ubuntu20-04-3-lts-f9f7802ed734&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+  </channel>
+</rss>

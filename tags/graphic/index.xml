@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Graphic on Borisu Wiki Home</title>
+    <link>https://neosolaris.github.io/tags/graphic/</link>
+    <description>Recent content in Graphic on Borisu Wiki Home</description>
+    <image>
+      <title>Borisu Wiki Home</title>
+      <url>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.147.2</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 19 Sep 2023 18:23:49 +0900</lastBuildDate>
+    <atom:link href="https://neosolaris.github.io/tags/graphic/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Graphic Card - 그래픽카드</title>
+      <link>https://neosolaris.github.io/posts/graphic-card/</link>
+      <pubDate>Tue, 19 Sep 2023 18:23:49 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/graphic-card/</guid>
+      <description>&lt;h2 id=&#34;nvidia-quadro-5000&#34;&gt;Nvidia Quadro 5000&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;최신 드라이버 설치: windows 10, 11&lt;/li&gt;
+&lt;li&gt;dp 연결: 그래픽 출력의 최적은 현재로서는 dp이다.
+&lt;ul&gt;
+&lt;li&gt;dp선을 연결&lt;/li&gt;
+&lt;li&gt;다른 선이 있을 경우 제거하면 디폴트로 화면 출력이 된다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+  </channel>
+</rss>

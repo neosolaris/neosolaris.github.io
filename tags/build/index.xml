@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Build on Borisu Wiki Home</title>
+    <link>https://neosolaris.github.io/tags/build/</link>
+    <description>Recent content in Build on Borisu Wiki Home</description>
+    <image>
+      <title>Borisu Wiki Home</title>
+      <url>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.147.2</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 09 Nov 2022 23:06:21 +0900</lastBuildDate>
+    <atom:link href="https://neosolaris.github.io/tags/build/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>docker-build 도커이미지 빌드</title>
+      <link>https://neosolaris.github.io/posts/docker-build/</link>
+      <pubDate>Wed, 09 Nov 2022 23:06:21 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/docker-build/</guid>
+      <description>&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;프로젝트폴더를 만들고 개발&lt;/li&gt;
+&lt;li&gt;Dockerfile을 해당 프로젝트에 작성한다.&lt;/li&gt;
+&lt;li&gt;한라인씩 확인하며 이미지를 빌드한다.&lt;/li&gt;
+&lt;li&gt;빌드한 이미지를 컨테이너를 실행해서 확인한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;example-lemo-apps-for-luajit&#34;&gt;Example Lemo Apps for Luajit&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;프로젝트 폴더를 만들고 Dockerfile을 생성한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; mkdir myproject &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; myproject
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; vim Dockerfile
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;생성된 Dockerfile&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;FROM nickblah/luajit:2.1.0-beta3-buster
+
+## Default root Env Setup First
+WORKDIR /root
+RUN \
+  echo &amp;#39;set -o vi&amp;#39; &amp;gt;&amp;gt; .bashrc
+
+## LEMO Program Set
+WORKDIR /usr/local
+COPY lemo ./lemo
+RUN \
+  echo &amp;#39;exec &amp;#34;/usr/local/lemo/lib/main.lua&amp;#34; &amp;#34;$@&amp;#34;&amp;#39; &amp;gt; ./bin/lemo &amp;amp;&amp;amp;\
+  chmod 755 ./bin/lemo
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;image-build&#34;&gt;Image Build&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; docker build -t buster:lemo .  &lt;span class=&#34;c1&#34;&gt;# 빌드&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; docker images  &lt;span class=&#34;c1&#34;&gt;# 빌드한 이미지 확인&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; docker run --rm -it buster:lemo bash  &lt;span class=&#34;c1&#34;&gt;# 이미지를 컨테이너 실행 및 테스트&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.docker.com/engine/reference/builder&#34;&gt;https://docs.docker.com/engine/reference/builder&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.44bits.io/ko/post/easy-deploy-with-docker&#34;&gt;https://www.44bits.io/ko/post/easy-deploy-with-docker&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+  </channel>
+</rss>

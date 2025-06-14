@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Flip on Borisu Wiki Home</title>
+    <link>https://neosolaris.github.io/tags/flip/</link>
+    <description>Recent content in Flip on Borisu Wiki Home</description>
+    <image>
+      <title>Borisu Wiki Home</title>
+      <url>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.147.2</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 12 Jan 2023 06:26:11 +0900</lastBuildDate>
+    <atom:link href="https://neosolaris.github.io/tags/flip/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Gimp - Quickies 사이즈 변경, 잘라내기, 회전, 뒤집기</title>
+      <link>https://neosolaris.github.io/posts/gimp-quickies/</link>
+      <pubDate>Thu, 12 Jan 2023 06:26:11 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/gimp-quickies/</guid>
+      <description>&lt;h2 id=&#34;이미지-기본-용어&#34;&gt;이미지 기본 용어&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;dpi(Dot per Inch) - 가로 세로 1 인치 당 점(Dot:둥근점)의 수, 인쇄에서 주로 사용&lt;/li&gt;
+&lt;li&gt;ppi(Pixel per Inch) - 가로 세로 1 인치 당 픽셀(Pixel:화소,사각점)의 수, 모니터에서 주로 사용&lt;/li&gt;
+&lt;li&gt;1 Inch - 2.54Cm&lt;/li&gt;
+&lt;li&gt;DPI 해상도별 용도
+&lt;ul&gt;
+&lt;li&gt;사진 출력: 400 dpi&lt;/li&gt;
+&lt;li&gt;책, 포스터: 300 dpi&lt;/li&gt;
+&lt;li&gt;웹, 홈페이지: 72 dpi&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;이미지-사이즈-변경&#34;&gt;이미지 사이즈 변경&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;[APOD](../The Horsehead Nebula in Infrared) 사진을 받아온다. &lt;a href=&#34;https://apod.nasa.gov/apod/ap130422.html&#34;&gt;https://apod.nasa.gov/apod/ap130422.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;파일을 열고 정보를 확인한 다음 필요한 사이즈로 변경한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;파일 열기 - &lt;code&gt;File &amp;gt; Open&lt;/code&gt; sRGB 유형 선택&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;keep&lt;/code&gt; 기존 - sRGB IEC61966-2.1&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;convert&lt;/code&gt; 변경 - Gimp built-in sRGB&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;파일정보 보기 (Image Properties)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Alt + Enter&lt;/code&gt; : &lt;code&gt;Image &amp;gt; Image Properties&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;사이즈 변경 (Scale Image)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Image &amp;gt; Scale Image&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;width 를 1225 -&amp;gt; 600 으로 조정 (자동 비례 조정)&lt;/li&gt;
+&lt;li&gt;pixels, percent&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Scale&lt;/code&gt; 클릭&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;변경된 파일 정보를 보기 (Image Properties)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Alt + Enter&lt;/code&gt; : &lt;code&gt;Image &amp;gt; Image Properties&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;저장하기&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Ctrl + E&lt;/code&gt; : &lt;code&gt;File &amp;gt; Export to 파일명.jpg&lt;/code&gt; - jpg로 저장&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Shift + Ctrl + E&lt;/code&gt; : &lt;code&gt;File &amp;gt; Export as...&lt;/code&gt; - 다른 포맷으로 저장&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;jpeg로-저장&#34;&gt;JPEG로 저장&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;JPEG: Lossy compression Algorithm&lt;/li&gt;
+&lt;li&gt;용량은 효율적 알고리즘으로 줄일 수 있으나 품질에 손실을 준다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;이미지-잘라내기---crop-an-image&#34;&gt;이미지 잘라내기 - Crop an Image&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;원본 이미지를 불러와 필요한 영역으로 잘라내는 것.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

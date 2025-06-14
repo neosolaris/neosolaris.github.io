@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Astronomy on Borisu Wiki Home</title>
+    <link>https://neosolaris.github.io/tags/astronomy/</link>
+    <description>Recent content in Astronomy on Borisu Wiki Home</description>
+    <image>
+      <title>Borisu Wiki Home</title>
+      <url>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.147.2</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 02 Nov 2022 14:37:42 +0900</lastBuildDate>
+    <atom:link href="https://neosolaris.github.io/tags/astronomy/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>기본 천문학 - Fundamental Astronomy</title>
+      <link>https://neosolaris.github.io/posts/%EA%B8%B0%EB%B3%B8%EC%B2%9C%EB%B6%84%ED%95%99/</link>
+      <pubDate>Wed, 02 Nov 2022 14:37:42 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/%EA%B8%B0%EB%B3%B8%EC%B2%9C%EB%B6%84%ED%95%99/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;언제 완독할 지 모르겠으나 오랜 숙원인 천문학의 첫걸음을 내딛는다.&lt;/li&gt;
+&lt;li&gt;무엇인가 구현해 볼려해도 개념이 부족하니 역시 공부가 필요하다.&lt;/li&gt;
+&lt;li&gt;밤하늘의 별을 보는 것도 좋지만 사연을 알고 보는 것이 좋을 것 같다.&lt;/li&gt;
+&lt;li&gt;우리는 모두 별에서 왔다는 말에 공감하면서&amp;hellip;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;서론&#34;&gt;서론&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;천체&lt;/li&gt;
+&lt;li&gt;천문학의 역할&lt;/li&gt;
+&lt;li&gt;천문학의 연구대상 천체&lt;/li&gt;
+&lt;li&gt;우주의 크기&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;구면-천문학&#34;&gt;구면 천문학&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;구면 삼각법&lt;/li&gt;
+&lt;li&gt;지구&lt;/li&gt;
+&lt;li&gt;천구&lt;/li&gt;
+&lt;li&gt;지평좌표계&lt;/li&gt;
+&lt;li&gt;적도좌표계&lt;/li&gt;
+&lt;li&gt;천체의 뜨고 지는 시간&lt;/li&gt;
+&lt;li&gt;황도좌표계&lt;/li&gt;
+&lt;li&gt;은하좌표계&lt;/li&gt;
+&lt;li&gt;좌표의 섭동&lt;/li&gt;
+&lt;li&gt;위치 천문학&lt;/li&gt;
+&lt;li&gt;별자리(星座)&lt;/li&gt;
+&lt;li&gt;성표와 성도&lt;/li&gt;
+&lt;li&gt;항성시과 태양시&lt;/li&gt;
+&lt;li&gt;천문학적인 시간계&lt;/li&gt;
+&lt;li&gt;역서&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;관측과-기기&#34;&gt;관측과 기기&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;대기를 통한 관측&lt;/li&gt;
+&lt;li&gt;광학망원경&lt;/li&gt;
+&lt;li&gt;검출기와 천문기기&lt;/li&gt;
+&lt;li&gt;전파망원경&lt;/li&gt;
+&lt;li&gt;다른 파장 영역&lt;/li&gt;
+&lt;li&gt;에너지의 다른 형태&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;측광의-개념과-등급&#34;&gt;측광의 개념과 등급&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;강도, 플럭스밀도와 광도&lt;/li&gt;
+&lt;li&gt;겉보기등급&lt;/li&gt;
+&lt;li&gt;등급계&lt;/li&gt;
+&lt;li&gt;절대등급&lt;/li&gt;
+&lt;li&gt;소광과 광학적 두계&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;복사-기작&#34;&gt;복사 기작&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;원자와 분자의 복사&lt;/li&gt;
+&lt;li&gt;수소원자&lt;/li&gt;
+&lt;li&gt;선윤곽&lt;/li&gt;
+&lt;li&gt;양자수, 선택규칙, 원자의 준위에 따른 개수분포&lt;/li&gt;
+&lt;li&gt;분자 스펙트럼&lt;/li&gt;
+&lt;li&gt;연속 스펙트럼&lt;/li&gt;
+&lt;li&gt;흑체복사&lt;/li&gt;
+&lt;li&gt;온도&lt;/li&gt;
+&lt;li&gt;다른 복사 기작들&lt;/li&gt;
+&lt;li&gt;복사전달&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;천체역학&#34;&gt;천체역학&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;운동방정식&lt;/li&gt;
+&lt;li&gt;운동방적식의 해&lt;/li&gt;
+&lt;li&gt;궤도방정식과 케플러의 제1법칙&lt;/li&gt;
+&lt;li&gt;궤도요소&lt;/li&gt;
+&lt;li&gt;케플러 제2법칙 및 제3법칙&lt;/li&gt;
+&lt;li&gt;여러 천체로 이루어진 계&lt;/li&gt;
+&lt;li&gt;궤도결정&lt;/li&gt;
+&lt;li&gt;궤도상에서의 위치&lt;/li&gt;
+&lt;li&gt;탈출속도&lt;/li&gt;
+&lt;li&gt;비리알 정리&lt;/li&gt;
+&lt;li&gt;진스한계&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;태양계&#34;&gt;태양계&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;태양계 천체의 분류&lt;/li&gt;
+&lt;li&gt;행성의 배치&lt;/li&gt;
+&lt;li&gt;지구의 궤도와 태양의 가시성&lt;/li&gt;
+&lt;li&gt;달의 궤도&lt;/li&gt;
+&lt;li&gt;일식과 엄폐&lt;/li&gt;
+&lt;li&gt;행성의 구조 및 표면&lt;/li&gt;
+&lt;li&gt;대기와 자기권&lt;/li&gt;
+&lt;li&gt;반사율&lt;/li&gt;
+&lt;li&gt;행성의 측광, 편광 및 분광&lt;/li&gt;
+&lt;li&gt;행성의 열복사&lt;/li&gt;
+&lt;li&gt;태양계의 기원&lt;/li&gt;
+&lt;li&gt;니스 모형&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;태양계-천체&#34;&gt;태양계 천체&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;수성&lt;/li&gt;
+&lt;li&gt;금성&lt;/li&gt;
+&lt;li&gt;지구와 달&lt;/li&gt;
+&lt;li&gt;목성&lt;/li&gt;
+&lt;li&gt;토성&lt;/li&gt;
+&lt;li&gt;천왕성&lt;/li&gt;
+&lt;li&gt;해왕성&lt;/li&gt;
+&lt;li&gt;왜소항성&lt;/li&gt;
+&lt;li&gt;태양계의 소천체&lt;/li&gt;
+&lt;li&gt;소행성&lt;/li&gt;
+&lt;li&gt;혜성&lt;/li&gt;
+&lt;li&gt;유성체&lt;/li&gt;
+&lt;li&gt;행성간 먼지 및 다른 입장&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;항성의-스펙트럼&#34;&gt;항성의 스펙트럼&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;스펙트럼의 측정&lt;/li&gt;
+&lt;li&gt;하버드 분광분류&lt;/li&gt;
+&lt;li&gt;여키스 분광분류&lt;/li&gt;
+&lt;li&gt;특이 스펙트럼&lt;/li&gt;
+&lt;li&gt;헤르츠스프룽-러셀도&lt;/li&gt;
+&lt;li&gt;모형대기&lt;/li&gt;
+&lt;li&gt;관측은 무엇을 제공하는가?&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;쌍성계와-항성의-질량&#34;&gt;쌍성계와 항성의 질량&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;안시쌍성&lt;/li&gt;
+&lt;li&gt;측성쌍성&lt;/li&gt;
+&lt;li&gt;분광쌍성&lt;/li&gt;
+&lt;li&gt;측광쌍성&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;항성-내부-구조&#34;&gt;항성 내부 구조&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;내부 평형조건&lt;/li&gt;
+&lt;li&gt;기체의 물리적 상태&lt;/li&gt;
+&lt;li&gt;항성의 에너지원&lt;/li&gt;
+&lt;li&gt;항성 모형&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;항성의-진화&#34;&gt;항성의 진화&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;진화의 시간척도&lt;/li&gt;
+&lt;li&gt;주계열로 수축&lt;/li&gt;
+&lt;li&gt;주계열 단계&lt;/li&gt;
+&lt;li&gt;거성 단계&lt;/li&gt;
+&lt;li&gt;진화의 죄종단계&lt;/li&gt;
+&lt;li&gt;근접쌍성의 진화&lt;/li&gt;
+&lt;li&gt;관측과 비교&lt;/li&gt;
+&lt;li&gt;원소의 기원&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;태양&#34;&gt;태양&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;내부 구조&lt;/li&gt;
+&lt;li&gt;태양 대기&lt;/li&gt;
+&lt;li&gt;태양활동&lt;/li&gt;
+&lt;li&gt;태양풍과 우주 기상&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;변광성&#34;&gt;변광성&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;분류&lt;/li&gt;
+&lt;li&gt;맥동변광성&lt;/li&gt;
+&lt;li&gt;폴발변광성&lt;/li&gt;
+&lt;li&gt;초신성&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;밀집성&#34;&gt;밀집성&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;백색왜성&lt;/li&gt;
+&lt;li&gt;중성자별&lt;/li&gt;
+&lt;li&gt;블랙홀&lt;/li&gt;
+&lt;li&gt;X-선 쌍성계&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;성간물질&#34;&gt;성간물질&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;성간티끌&lt;/li&gt;
+&lt;li&gt;성간가스&lt;/li&gt;
+&lt;li&gt;성간분자&lt;/li&gt;
+&lt;li&gt;원시성의 형성&lt;/li&gt;
+&lt;li&gt;행성상성운&lt;/li&gt;
+&lt;li&gt;초신성 잔해&lt;/li&gt;
+&lt;li&gt;우리은하의 뜨거운 코로나&lt;/li&gt;
+&lt;li&gt;우주선과 성간자기장&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;성단과-성협&#34;&gt;성단과 성협&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;성협&lt;/li&gt;
+&lt;li&gt;산개성단&lt;/li&gt;
+&lt;li&gt;구상성단&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;우리은하&#34;&gt;우리은하&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;거리 측정 방법&lt;/li&gt;
+&lt;li&gt;별의 통계학&lt;/li&gt;
+&lt;li&gt;우리은하의 회전&lt;/li&gt;
+&lt;li&gt;우리은하의 구조를 이루는 성분&lt;/li&gt;
+&lt;li&gt;우리은하의 형성과 진화&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;은하&#34;&gt;은하&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;은하의 분류&lt;/li&gt;
+&lt;li&gt;광도와 질량&lt;/li&gt;
+&lt;li&gt;은하의 구조&lt;/li&gt;
+&lt;li&gt;은하 역학&lt;/li&gt;
+&lt;li&gt;별의 나이와 은하의 원소함량비&lt;/li&gt;
+&lt;li&gt;은하의 시스템&lt;/li&gt;
+&lt;li&gt;활동은하와 퀘이사&lt;/li&gt;
+&lt;li&gt;은하의 기원과 진화&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;우주론&#34;&gt;우주론&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;우주론적 관측 사실&lt;/li&gt;
+&lt;li&gt;우주론원리&lt;/li&gt;
+&lt;li&gt;균질-등방 우주의 모형&lt;/li&gt;
+&lt;li&gt;프리드만 모형&lt;/li&gt;
+&lt;li&gt;우주론 검증법&lt;/li&gt;
+&lt;li&gt;우주의 역사&lt;/li&gt;
+&lt;li&gt;구조의 형성&lt;/li&gt;
+&lt;li&gt;우주의 미래&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;천문생물학&#34;&gt;천문생물학&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;생명이란 무엇인가&lt;/li&gt;
+&lt;li&gt;생명의 화학&lt;/li&gt;
+&lt;li&gt;생명의 필수 요건&lt;/li&gt;
+&lt;li&gt;위험 요소&lt;/li&gt;
+&lt;li&gt;생명의 기원&lt;/li&gt;
+&lt;li&gt;우리가 화성인이란 말인가&lt;/li&gt;
+&lt;li&gt;태양계의 생명&lt;/li&gt;
+&lt;li&gt;외계 생명 탐지&lt;/li&gt;
+&lt;li&gt;SETI-외계지적생명체 탐사&lt;/li&gt;
+&lt;li&gt;외계 문명권의 수&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;외계행성&#34;&gt;외계행성&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;외계행성계&lt;/li&gt;
+&lt;li&gt;관찰 방법&lt;/li&gt;
+&lt;li&gt;외계행성의 성질&lt;/li&gt;
+&lt;/ol&gt;</description>
+    </item>
+    <item>
+      <title>FITS - Flexible Image Transport System</title>
+      <link>https://neosolaris.github.io/posts/fits/</link>
+      <pubDate>Sun, 09 Oct 2022 18:12:36 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/fits/</guid>
+      <description>&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;FITS는 Flexible Image Transport System로 오픈 표준 디지털 파일 포맷이다.&lt;/li&gt;
+&lt;li&gt;주로 천문사진에 사용되는 포맷이다.&lt;/li&gt;
+&lt;li&gt;천문관측 사진을 직접 촬영하고 편집해도 된다.&lt;/li&gt;
+&lt;li&gt;그러나 FITS는 개인의 비용과 노력으로 얻을 수 없는 고사양 고품질의 사진과 포맷을 제공한다.&lt;/li&gt;
+&lt;li&gt;천문사진에 관심이 있다면 FITS 포맷을 잘 알아야 하는 이유가 있다.&lt;/li&gt;
+&lt;li&gt;천체를 연구하고 공개된 데이터를 이용하여 은하를 시각적으로 완성하는 일&lt;/li&gt;
+&lt;li&gt;이를 위해 FITS에 대해 알아보고 어떻게 다루어야 하는지를 정리한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;파일-포맷&#34;&gt;파일 포맷&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;단순한 이미지만을 다루는 포맷이 아니라 여러 정보를 함께 넣을 수 있다.&lt;/li&gt;
+&lt;li&gt;기본 구조는 &lt;code&gt;Primary Header&lt;/code&gt; + &lt;code&gt;SCI(header:data)&lt;/code&gt; + &lt;code&gt;ERR(header:data) DQ(header:data)&lt;/code&gt; 로 되어 있다.&lt;/li&gt;
+&lt;li&gt;하나의 파일에 여러 종류의 데이터를 담을 수 있다.&lt;/li&gt;
+&lt;li&gt;스펙트럼이나 광도곡선, 데이터 큐브 등의 관련 정보를 담을 수 있다.&lt;/li&gt;
+&lt;li&gt;즉, 하나의 천체를 관측하면 하나의 파일에 여러개의 프레임으로 데이터를 저장할 수 있다.&lt;/li&gt;
+&lt;li&gt;Header: 천체의 관측기, 관측날짜, 노출시간, CCD의 사양 등&lt;/li&gt;
+&lt;li&gt;Data: 이미지 픽셀값, 천체의 flux값, 관측시간, 관측 파장 등&lt;/li&gt;
+&lt;li&gt;비유를 들자면 어떤 천체를 관측할 때 한 종이에 그림을 그리고 좌표나 기타 정보를 같이 기록해 두는 것과 같다.&lt;/li&gt;
+&lt;li&gt;확장자: &lt;code&gt;.fits&lt;/code&gt;, &lt;code&gt;.fit&lt;/code&gt;, &lt;code&gt;.fts&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;편집-소프트웨어&#34;&gt;편집 소프트웨어&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;../siril&#34;&gt;siril&lt;/a&gt; - FITS Edit: 천문사진 전처리 또는 이미지 프로세싱 소프트웨어&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../NOAO&#34;&gt;iraf&lt;/a&gt;의 천문사진 프로세싱: clang&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../gimp&#34;&gt;gimp&lt;/a&gt; - 그래픽툴, FITS 편집 가능&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../photoshop&#34;&gt;photoshop&lt;/a&gt; - 그래픽툴, FITS 편집 가능, 유료, 윈도우즈 전용&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../imagej&#34;&gt;imagej&lt;/a&gt; - FIT 편집 통합 툴&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../ubuntu:libfitsio&#34;&gt;fits liberator&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;fits-library&#34;&gt;FITS LIBRARY&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;../astropy&#34;&gt;astropy&lt;/a&gt; - pyfits 포함 천문관측 모듈: anaconda 기본 모듈&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../NOAO&#34;&gt;pyraf&lt;/a&gt;의 천문사진 프로세싱: python&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../pyfits&#34;&gt;pyfits&lt;/a&gt; - fits 편집 모듈: python&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../fitsio&#34;&gt;fitsio&lt;/a&gt; - fits 라이브러리: clang&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;보기-소프트웨어&#34;&gt;보기 소프트웨어&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;../fv&#34;&gt;fv&lt;/a&gt; - FITS Viewer: 오래된 툴, 조금 촌스럽다.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../gimp&#34;&gt;gimp&lt;/a&gt; - 그래픽툴, 파일보기 및 다른 포맷 변환&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../ubuntu:saods9&#34;&gt;ds9&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;guides&#34;&gt;Guides&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Here&amp;rsquo;s how to edit James Webb Space Telescope images: Judy Schmidt 인터뷰
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.space.com/james-webb-space-telescope-image-editing&#34;&gt;https://www.space.com/james-webb-space-telescope-image-editing&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;FITS Liberator User Guide
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://esahubble.org/static/projects/fits_liberator/v301files/userguide.pdf&#34;&gt;https://esahubble.org/static/projects/fits_liberator/v301files/userguide.pdf&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;NEW IRAF ABC (IRAF를 이용한 측광 자료 전처리)
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://astro.kias.re.kr/~hshwang/NEW_IRAF_ABC.pdf&#34;&gt;https://astro.kias.re.kr/~hshwang/NEW_IRAF_ABC.pdf&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;FITS HOME - &lt;a href=&#34;https://fits.gsfc.nasa.gov/&#34;&gt;https://fits.gsfc.nasa.gov/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;FITS i/o libraries - &lt;a href=&#34;https://fits.gsfc.nasa.gov/fits_libraries.html&#34;&gt;https://fits.gsfc.nasa.gov/fits_libraries.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;위키백과 FITS - &lt;a href=&#34;https://en.wikipedia.org/wiki/FITS&#34;&gt;https://en.wikipedia.org/wiki/FITS&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Fits 관련 소프트웨어 리스트 - &lt;a href=&#34;https://fits.gsfc.nasa.gov/fits_viewer.html&#34;&gt;https://fits.gsfc.nasa.gov/fits_viewer.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Short Introduction of Image Processing &lt;a href=&#34;https://noirlab.edu/public/media/archives/techdocs/pdf/techdoc027.pdf&#34;&gt;https://noirlab.edu/public/media/archives/techdocs/pdf/techdoc027.pdf&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>이소룡 on Borisu Wiki Home</title>
+    <link>https://neosolaris.github.io/tags/%EC%9D%B4%EC%86%8C%EB%A3%A1/</link>
+    <description>Recent content in 이소룡 on Borisu Wiki Home</description>
+    <image>
+      <title>Borisu Wiki Home</title>
+      <url>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.147.2</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 01 Sep 2022 02:21:45 +0900</lastBuildDate>
+    <atom:link href="https://neosolaris.github.io/tags/%EC%9D%B4%EC%86%8C%EB%A3%A1/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>만가지 동작</title>
+      <link>https://neosolaris.github.io/posts/%EB%A7%8C%EA%B0%80%EC%A7%80-%EB%8F%99%EC%9E%91/</link>
+      <pubDate>Thu, 01 Sep 2022 02:21:45 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/%EB%A7%8C%EA%B0%80%EC%A7%80-%EB%8F%99%EC%9E%91/</guid>
+      <description>&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;만가지의 킥 동작을 한 번씩 연습한 사람이 두려운 게 아니라
+한가지의 동작을 만 번 연습한 사람이 두렵다
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;code&gt;- 이소룡 (Bruce Lee)&lt;/code&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

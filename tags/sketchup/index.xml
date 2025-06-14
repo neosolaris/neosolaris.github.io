@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Sketchup on Borisu Wiki Home</title>
+    <link>https://neosolaris.github.io/tags/sketchup/</link>
+    <description>Recent content in Sketchup on Borisu Wiki Home</description>
+    <image>
+      <title>Borisu Wiki Home</title>
+      <url>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.147.2</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 01 Nov 2023 16:42:26 +0900</lastBuildDate>
+    <atom:link href="https://neosolaris.github.io/tags/sketchup/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Sketchup2017 Install and Setup in Ubuntu</title>
+      <link>https://neosolaris.github.io/posts/sketchup-install/</link>
+      <pubDate>Mon, 29 Aug 2022 18:15:44 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/sketchup-install/</guid>
+      <description>&lt;h2 id=&#34;설치시-고려사항&#34;&gt;설치시 고려사항&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;설치환경&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Ubuntu 22.04
+SketchupMake2017 version
+OpenGL 3.X 이상
+WineHQ 최신버전
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;윈도우를 전혀 사용하지 않거나 꺼려지데 sketchup을 쓰고 싶다면 참고한다.&lt;/li&gt;
+&lt;li&gt;루비 플러그인이 오작동 없이 사용 가능한 버전인가.&lt;/li&gt;
+&lt;li&gt;OpenGL 버전을 만족하는 그래픽 카드를 가지고 있는가.&lt;/li&gt;
+&lt;li&gt;한글 입출력이 문제가 없는가.&lt;/li&gt;
+&lt;li&gt;무료 버전 중 가장 최근의 sketchup은 무엇인가.&lt;/li&gt;
+&lt;li&gt;결론: &lt;code&gt;SketchupMake2017 + winehq + linux&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;우분투, 데비안에서 설치 테스트 완료 &lt;code&gt;debian Jessie 8.11&lt;/code&gt;, &lt;code&gt;ubuntu jammy 22.04&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;기존 wine 패키지 버전 6.x에서는 실패, winehq 최신 버전으로 성공&lt;/li&gt;
+&lt;li&gt;winehq: &lt;code&gt;staging 7.14&lt;/code&gt; version&lt;/li&gt;
+&lt;li&gt;스케치업버전은 2017 이상으로 해야 플러그인 설치 및 활용가능&lt;/li&gt;
+&lt;li&gt;스케치업2017까지가 마지막 Free 버전(SketchupMake-2017)이므로 이를 선택&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;sketchup: 2017 make version: 2018.08.25 release&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;한글입출력문제: winehq설치 후 &lt;code&gt;gulim.ttc&lt;/code&gt; 파일을 추가해준다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;winehq-install&#34;&gt;Winehq Install&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;add repository first, staging version 7.14 success&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;sudo dpkg --add-architecture i386
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;wget -nc https://dl.winehq.org/wine-builds/winehq.key
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;sudo apt-key add winehq.key
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;sudo add-apt-repository &amp;#39;deb https://dl.winehq.org/wine-builds/ubuntu/ jammy main&amp;#39;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;sudo apt-get update
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;sudo apt install --install-recommends winehq-staging
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;wine --version
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;winetricks-version20220411-install&#34;&gt;Winetricks (version:20220411) Install&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;winetricks 최신버전을 다운로드한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;wget https://raw.githubusercontent.com/Winetricks/winetricks/master/src/winetricks
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;chmod u+x winetricks
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;mv winetricks ~/bin
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;winetricks --version
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;sketchup2017-install&#34;&gt;Sketchup2017 Install&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;winetricks를 이용하여 CLI환경에서 자동으로 설치할 수 있다.&lt;/li&gt;
+&lt;li&gt;그러나 중간 중간 라이센스 동의 후 설치확인을 해 주어야한다.&lt;/li&gt;
+&lt;li&gt;dotnet 설치과정에서 reboot할 거냐고 물으면 later로 해준다.&lt;/li&gt;
+&lt;li&gt;설치전 반드시 환경변수를 &lt;code&gt;~/.bashrc&lt;/code&gt;에 등록해주고 반드시 리로드해준다.&lt;/li&gt;
+&lt;li&gt;현재로선 한글을 위해 baekmuk폰트를 설치했으나 한글입출력에 문제 발생&lt;/li&gt;
+&lt;li&gt;아래 한글문제 해결 참조&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;sudo apt-get install cabextract #winetricks required
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;echo &amp;#34;export WINEARCH=win64&amp;#34; &amp;gt;&amp;gt; ~/.bashrc
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;echo &amp;#34;export WINEPREFIX=/home/borisu/.sketchup2017&amp;#34; &amp;gt;&amp;gt; ~/.bashrc
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;. ~/.bashrc
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;&lt;/span&gt;&lt;span class=&#34;gp&#34;&gt;#&lt;/span&gt;first run: mono,gecko install? -&amp;gt; yes
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;#&lt;/span&gt;dotnet46: reboot? -&amp;gt; later click
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;winetricks corefonts &amp;amp;&amp;amp; \ 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;winetricks tahoma &amp;amp;&amp;amp; \
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;winetricks baekmuk &amp;amp;&amp;amp; \
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;winetricks riched30 &amp;amp;&amp;amp; \
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;winetricks richtx32 &amp;amp;&amp;amp; \
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;winetricks vcrun2015 &amp;amp;&amp;amp; \
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;winetricks dotnet46 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;install-sketchup&#34;&gt;Install Sketchup&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;winetricks &amp;gt; winecfg &amp;gt; Graphics &amp;gt; r192dpi&lt;/code&gt; 설정&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;winetricks &amp;gt; Explorer &amp;gt; sketchup2017make.exe&lt;/code&gt; 실행&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;winetricks 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;또는 CLI 에서 winetricks로 직접 실행 가능&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Sketchup</title>
+      <link>https://neosolaris.github.io/posts/sketchup/</link>
+      <pubDate>Mon, 29 Aug 2022 18:12:46 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/sketchup/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;../sketchup-install&#34;&gt;sketchup install&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+  </channel>
+</rss>

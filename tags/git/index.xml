@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Git on Borisu Wiki Home</title>
+    <link>https://neosolaris.github.io/tags/git/</link>
+    <description>Recent content in Git on Borisu Wiki Home</description>
+    <image>
+      <title>Borisu Wiki Home</title>
+      <url>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.147.2</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 27 Aug 2023 22:38:00 +0900</lastBuildDate>
+    <atom:link href="https://neosolaris.github.io/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Git-Crypt - github에 동기화할 때 자동 암호화</title>
+      <link>https://neosolaris.github.io/posts/git-crypt/</link>
+      <pubDate>Sun, 27 Aug 2023 22:36:46 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/git-crypt/</guid>
+      <description>&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Github에 소스코드를 올릴 때 암호화 할 수 있는 툴&lt;/li&gt;
+&lt;li&gt;올릴 때에는 암호화해서 올리고 다운로드 시에는 복호화 해준다.&lt;/li&gt;
+&lt;li&gt;보안키나 패스워드, 중요 설정 정보 등이 공개용 뿐만 아니라  비공개용 저장소에 올릴 때에도 유용하다.&lt;/li&gt;
+&lt;li&gt;아울러 vimwiki나 지극히 개인적인 문서를 저장할 때 github를 이용할 경우에도 매우 유용하다.&lt;/li&gt;
+&lt;li&gt;Github 자체가 해킹되는 경우도 있고, github의 자료는 모두 깃허브의 재산이므로 내 자료를 보호할 필요가 있다.&lt;/li&gt;
+&lt;li&gt;아무리 비공개용이라 할지라도 꺼림직하기는 마찬가지다.&lt;/li&gt;
+&lt;li&gt;이렇게 해 두면 좋은 점은 PC가 바뀌어도 작업 장소가 바뀌어도 모두 안전하게 개인자료를 동기화할 수 있다.&lt;/li&gt;
+&lt;li&gt;물론 개인자료를 에버노트나 구글계정에 저장해도 되겠지만 이곳도 근본적으로 보안상태는 마찬가지이다.&lt;/li&gt;
+&lt;li&gt;또한 개발자, 작가 등은 손쉽게 github를 통해 저장소를 두고 작업을 하는 것이 편리하다.&lt;/li&gt;
+&lt;li&gt;그렇기에 작고 가볍고 의존성도 없는 git-crypt를 활용하게 된 것이다.&lt;/li&gt;
+&lt;li&gt;아래 상술하겠으나 저장소를 여러 개 쓸 경우 그 만큼 관리할 키가 늘어나고 따로 보관해야 하는 문제가 생긴다.&lt;/li&gt;
+&lt;li&gt;암호화가 필요한 파일은 가급적 한 저장소에 모으고 하나의 키만 따로 USB나 기타 장소에 보관해 두는 것이 좋겠다.&lt;/li&gt;
+&lt;li&gt;만약 git-crypt에 의해 생긴 키도 깃허브에 저장한다면 자기 모순에 빠지므로 별도로 백업 보관해야 한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;install&#34;&gt;Install&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ sudo apt install git-crypt  # Ubuntu, Debian
+$ doas apk add git-crypt      # Alpine
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;using-git-crypt&#34;&gt;Using git-crypt&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;주의사항: git-crypt를 적용하기 전의 데이터는 암호화 할 수 없다.&lt;/li&gt;
+&lt;li&gt;따라서 github에서 새로운 저장소를 만들고 아래 절차를 진행해야 한다.&lt;/li&gt;
+&lt;li&gt;아래 your_secret_file 과 your_secret_directory는 저장소 내의 암호화할 파일 또는 폴더.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ git clone git@github.com:&amp;lt;github_user&amp;gt;/&amp;lt;your_progject_name&amp;gt;
+$ cd &amp;lt;your_project_name&amp;gt;
+$ git-crypt init
+
+$ cat &amp;lt;&amp;lt;EOF  &amp;gt; .gitattributes
+your_secret_file_name filter=git-crypt diff=git-crypt
+*.key filter=git-crypt diff=git-crypt
+your_secret_dir/** filter=git-crypt diff=git-crypt
+EOF
+
+$ echo &amp;#34;hello world&amp;#34; &amp;gt; your_secret_file
+$ echo &amp;#34;hello world&amp;#34; &amp;gt; your_secret_dir/file1
+
+$ git add . &amp;amp;&amp;amp; git commit &amp;#34;update files&amp;#34; &amp;amp;&amp;amp; git push
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;자신의 깃허브 저정소에 가서 올린 파일이 암호와 되었는지 로그인해서 확인한다.&lt;/li&gt;
+&lt;li&gt;보통의 경우 위 설정이 잘 되었으면 평상시 대로 git을 사용하면 저장소 관리가 된다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;생성된-암호키-관리&#34;&gt;생성된 암호키 관리&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;위의 &lt;code&gt;git-crypt init&lt;/code&gt; 명령을 수행하면 &lt;code&gt;.git/git-crypt/keys&lt;/code&gt;로 초기화되고 키가 생성, 보관된다.&lt;/li&gt;
+&lt;li&gt;Symmetric Mode: 생성된 키는 로컬에만 존재하므로 이 키를 USB 등에 저장해 두었다가 다른 곳에서 깃허브 저장소를 다운 받은 후 이를 사용하면 된다.&lt;/li&gt;
+&lt;li&gt;GPG Mode: 또한 다른 사용자의 키를 추가시켜 그 사용자가 저장소에 접근할 수 있도록 할 수 있다. (자신 포함)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;GPG Mode -  자신 또는 다른 사용자의 키를 추가하는 경우&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ git-crypt add-gpg-user &amp;lt;USER_ID&amp;gt;  # 주 사용자모드: USER_ID is Public GPG key ID
+...
+$ git clone git@github.com:&amp;lt;github_user&amp;gt;/&amp;lt;your_progject_name&amp;gt;  # 허락받은 사용자모드
+$ cd &amp;lt;your_project_name&amp;gt;
+$ git-crypt unlock
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;Symmetric Mode - 키를 가지고 있는 사용자(보통 자기자신)이 저장소를 사용할 수 있는 방법&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ git-crypt export-key &amp;lt;path_to_your_keyfile&amp;gt;  # 주 사용자가 키를 백업하기
+...
+$ git clone git@github.com:&amp;lt;github_user&amp;gt;/&amp;lt;your_progject_name&amp;gt;  # 다른 곳에서 복호화 하기
+$ cd &amp;lt;your_project_name&amp;gt;
+$ git-crypt unlock &amp;lt;path_to_your_keyfile&amp;gt;   # 백업해둔 키파일을 이용해 복호화하기
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;참고사항&#34;&gt;참고사항&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;.gitattributes&lt;/code&gt; 파일 자신은 암호화되서는 안된다고 메뉴얼에 나와 있다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;.gitattributes&lt;/code&gt; 파일에 &lt;code&gt;dir/**&lt;/code&gt;에서 &lt;code&gt;**&lt;/code&gt;이 두 개인 이유는 이하 서브 디렉토리에서도 적용시킬 수 있기 때문이다.&lt;/li&gt;
+&lt;li&gt;상당히 많은 파일이나 폴더에 적용하는 것은 좋지 않다.&lt;/li&gt;
+&lt;li&gt;소스파일이나 텍스트 파일을 암호화 하는 데 적합하고 이진파일이나 데이터 파일에는 그리 적합하지 않다.&lt;/li&gt;
+&lt;li&gt;파일이름이나 파일에 대한 메타정보는 암호화하지 못한다. 즉 파일의 내용을 암호화 한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;reference&#34;&gt;REFERENCE&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Git-Crypt Home - &lt;a href=&#34;https://www.agwa.name/projects/git-crypt/&#34;&gt;https://www.agwa.name/projects/git-crypt/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;git-crypt github - &lt;a href=&#34;https://github.com/AGWA/git-crypt&#34;&gt;https://github.com/AGWA/git-crypt&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;managing secrets with git crypt - &lt;a href=&#34;https://dzone.com/articles/managing-secrets-with-git-crypt&#34;&gt;https://dzone.com/articles/managing-secrets-with-git-crypt&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>Github Page</title>
+      <link>https://neosolaris.github.io/posts/github.io/</link>
+      <pubDate>Wed, 24 Aug 2022 00:44:36 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/github.io/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;../github&#34;&gt;github&lt;/a&gt;에서 무료로 제공하는 개발자용 홈페이지이다.&lt;/li&gt;
+&lt;li&gt;예를 들어 &lt;code&gt;github.com/user_name&lt;/code&gt;의 계정을 가지고 있다면 &lt;code&gt;https://user_name.github.io&lt;/code&gt;의 도메인 이름으로 자신의 홈페이지를 개설할 수 있다.&lt;/li&gt;
+&lt;li&gt;github에 &lt;code&gt;user_name.github.io&lt;/code&gt;라는 저장소를 새로 생성하고 공개(public)하면 바로 사용할 수 있다.&lt;/li&gt;
+&lt;li&gt;README.md &amp;lt; index.md &amp;lt; index.html 우선권 순서로 동작한다.&lt;/li&gt;
+&lt;li&gt;처음 테스트 파일을 깃허브에 올린 후 브라우저에서 2-3분 후 확인 가능하다.&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>Github 사용하기</title>
+      <link>https://neosolaris.github.io/posts/github-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0/</link>
+      <pubDate>Tue, 23 Aug 2022 18:35:04 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/github-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;2023-08-26: TIP 추가: gitignore&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;깃허브-가입과-설정&#34;&gt;깃허브 가입과 설정&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com&#34;&gt;GitHub Home&lt;/a&gt; 에 가입한다.&lt;/li&gt;
+&lt;li&gt;새로운 저장소(Repository)를 만든다.&lt;/li&gt;
+&lt;li&gt;저장소의 주소를 확인한다.(Code 아이콘를 클릭)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;github-제약사항&#34;&gt;Github 제약사항&lt;/h2&gt;
+&lt;p&gt;비공개 저장소(Private Repository): 유료에서 무료로 변경 (협업 3명까지)
+Github 가격페이지 (개인용플랜 Free, 유료플랜 Pro)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Pro의 장점&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;비공개 저장소에 대한 페이지와 위키 제공&lt;/li&gt;
+&lt;li&gt;비공개 저장소에 대한 공동작업자 무제한&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;2019.1월 기준으로 모든 Repository 및 파일 무제한
+단, 다음을 권장&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;모든 Repository의 갯수는 무제한&lt;/li&gt;
+&lt;li&gt;각 Repository를 1GB가 넘지 않도록 한다.(100GB Hard Limit)&lt;/li&gt;
+&lt;li&gt;각 파일은 100MB를 넘지 않는다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;github-등록&#34;&gt;Github 등록&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;username, email address
+neosolaris/batutah@gmail.com
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;git-설치&#34;&gt;git 설치&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;sudo apt install git
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;create-repository&#34;&gt;Create Repository&lt;/h2&gt;
+&lt;p&gt;Repository Name: cmdTree
+Security Stat: Private
+initialize this repository with a README
+Add .gitignore: 깃허브로 올리지 않을 파일 선택
+Add a license: 저장소 생성과 함께 라이센스 파일의 설치가 자동 수행
+My Address: &lt;a href=&#34;https://github.com/neosolaris/cmdTree&#34;&gt;https://github.com/neosolaris/cmdTree&lt;/a&gt;
+Readme를 생성하지 말고&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>GitHub에 SSH Key로 인증하기</title>
+      <link>https://neosolaris.github.io/posts/github-ssh-key-%EC%9D%B8%EC%A6%9D/</link>
+      <pubDate>Tue, 23 Aug 2022 18:35:04 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/github-ssh-key-%EC%9D%B8%EC%A6%9D/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;Laste Updated: 2022.08.17&lt;/li&gt;
+&lt;li&gt;깃허브에서 정책이 변경되어 비밀번호로 인증을 더이상 지원하지 않는다.&lt;/li&gt;
+&lt;li&gt;다른 인증 방법은 github의 보안키 발급과 ssh key를 등록하는 방법이 있다.&lt;/li&gt;
+&lt;li&gt;여기에서는 ssh key를 만들어 github에 등록하여 사용하는 방법이다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;create-ssh-key-enter-enter-enter&#34;&gt;CREATE SSH KEY: enter, enter, enter&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;../rsa&#34;&gt;rsa&lt;/a&gt;로 키를 만들 경우&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;ssh-keygen -t rsa -b 4096 -C $email
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;ls ~/.ssh/id_rsa      #private key
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;ls ~/.ssh/id_rsa.pub  #public key
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;[ed25519](../추천: 보다 간결하고 강화된 방식)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;ssh-keygen -t ed25519 -C “yourmail@mail.com”
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;ls ~/.ssh/id_ed25519      #private key
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;ls ~/.ssh/id_ed25519.pub  #public key
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;생성한-pub-키를-github에-등록하기&#34;&gt;생성한 pub 키를 GitHub에 등록하기&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;생성한 키 중 pub키를 복사한다.&lt;/li&gt;
+&lt;li&gt;깃허브에 로그인하여 다음 메뉴를 찾아 클릭.
+|Github Home &amp;gt; Settings &amp;gt; SSH and GPG Keys &amp;gt; New SSH Key&lt;/li&gt;
+&lt;li&gt;Title에 제목을 입력하고 &amp;ldquo;Add SSH Key&amp;quot;를 눌러 등록 완료.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;터미널에서-새로운-프로토콜ssh-인증방식으로-연결&#34;&gt;터미널에서 새로운 프로토콜(SSH 인증방식)으로 연결&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;깃허브에 성공적으로 연결되는 지 확인&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;ssh -T git@github.com
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;깃허브에 연결 및 저장소 등록&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;git remote set-url origin git@github.com:user_name/repo_name.git
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;comment&#34;&gt;Comment&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;이 방식은 https방식보다 간결한 URL과 편리한 사용법이 좋다.&lt;/li&gt;
+&lt;li&gt;또한 깃허브로부터 인증키를 받는 방식은 기간제한이 있다.&lt;/li&gt;
+&lt;li&gt;다른 컴퓨터에서 연결할 경우 ssh 키를 만들어 pub키를 깃허브에 추가해주면 된다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://medium.com/ntust-aivc/instruction-for-adding-an-ssh-key-to-your-github-account-ubuntu20-04-3-lts-f9f7802ed734&#34;&gt;https://medium.com/ntust-aivc/instruction-for-adding-an-ssh-key-to-your-github-account-ubuntu20-04-3-lts-f9f7802ed734&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+  </channel>
+</rss>

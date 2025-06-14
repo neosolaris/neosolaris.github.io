@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Luastatic on Borisu Wiki Home</title>
+    <link>https://neosolaris.github.io/tags/luastatic/</link>
+    <description>Recent content in Luastatic on Borisu Wiki Home</description>
+    <image>
+      <title>Borisu Wiki Home</title>
+      <url>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.147.2</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 29 Nov 2022 16:15:16 +0900</lastBuildDate>
+    <atom:link href="https://neosolaris.github.io/tags/luastatic/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Raspberry-Pi에서 lua 개발 환경 설치</title>
+      <link>https://neosolaris.github.io/posts/lua-pi/</link>
+      <pubDate>Tue, 13 Sep 2022 17:19:34 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/lua-pi/</guid>
+      <description>&lt;h2 id=&#34;install&#34;&gt;Install&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;../luarocks&#34;&gt;luarocks&lt;/a&gt; 를 이용하지 않고 필요한 모듈만 설치해서 사용하고자 할 때&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo apt update &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; sudo apt upgrade
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; apt install git build-essensial       &lt;span class=&#34;c1&#34;&gt;#git, gcc, make 환경 필요&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; apt install lua5.1.0 liblua5.1.0      &lt;span class=&#34;c1&#34;&gt;#lua module 컴파일시 liblua 필요&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; git clone https://github.com/lunarmodules/luafilesystem.git &lt;span class=&#34;c1&#34;&gt;#luafilesystem 소스 복사&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; luafilesystem
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; make      &lt;span class=&#34;c1&#34;&gt;# gcc, make, liblua5.1.x 필요 조건&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; cp src/lfs.so  your_devel_directory/
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; your_devel_directory/
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; vim myprogram.lua
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;require&amp;#39;lfs&amp;#39;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;...
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;luastatic-설치&#34;&gt;LuaStatic 설치&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;방법1: &lt;code&gt;luastatic.lua&lt;/code&gt; 자신을 컴파일해서 바이너리로 사용&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; git clone https://github.com/ers35/luastatic.git
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; luastatic/
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; uastatic.lua luastatic.lua /usr/lib/arm-linux-gnueabihf/liblua5.1.a -I/usr/include/lua5.1/
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; ./luastatic  &lt;span class=&#34;c1&#34;&gt;# 바이너리 실행 및 버전 확인&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;방법2: &lt;code&gt;luastatic.lua&lt;/code&gt;를 그대로 사용&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; git clone https://github.com/ers35/luastatic.git
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; luastatic/
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; ./luastatic.lua  &lt;span class=&#34;c1&#34;&gt;# 스크립트 실행 및 버전 확인&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;모듈과-합쳐서-바이너리로-컴파일-하기&#34;&gt;모듈과 합쳐서 바이너리로 컴파일 하기&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;luastatic.lua&lt;/code&gt; 자신은 의존성이 없으므로 ~/bin 등에 옮긴 후 사용해도 된다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;myprogram.lua&lt;/code&gt;가 같은 폴더에 있는 모듈을 사용한다면 자동으로 포함해서 컴파일된다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; cp luastatic.lua ~/bin
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; luastatic.lua myprogram.lua /usr/lib/arm-linux-gnueabihf/liblua5.1.a -I/usr/include/lua5.1/
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;고려-사항&#34;&gt;고려 사항&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;위의 예제처럼 컴파일 환경을 만들고 모듈을 만들어 &lt;code&gt;require&lt;/code&gt;해서 사용.&lt;/li&gt;
+&lt;li&gt;여러 모듈과 &lt;code&gt;main.lua&lt;/code&gt;가 있을 경우 이를 하나로 합쳐 바이너리로 만든다.&lt;/li&gt;
+&lt;li&gt;또는 파일을 설치하고 실행환경을 만들어 준다. 이에 대해서는 나중에 추가할 예정.&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>Luarocks - lua 패키지 관리</title>
+      <link>https://neosolaris.github.io/posts/luarocks/</link>
+      <pubDate>Tue, 30 Aug 2022 05:09:02 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/luarocks/</guid>
+      <description>&lt;h2 id=&#34;intro&#34;&gt;INTRO&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;lua의 확장 패키지를 설치하고 관리하는 프로그램이다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;install-and-setup&#34;&gt;INSTALL and SETUP&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Install System-Wide : &lt;code&gt;/usr/local/&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo apt install luarocks     &lt;span class=&#34;c1&#34;&gt;# luarocks 설치&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo luarocks install stdlib  &lt;span class=&#34;c1&#34;&gt;# 표준 라이브러리 설치&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo chmod a+r /usr/local/share/lua/5.1/* &lt;span class=&#34;c1&#34;&gt;# 일반사용자 읽기 권한 부여&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo luarocks install package_name &lt;span class=&#34;c1&#34;&gt;# 패키지 설치&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Install User Base : &lt;code&gt;$HOME/.luarocks&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo apt install luarocks     &lt;span class=&#34;c1&#34;&gt;# luarocks 설치&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;PATH=$PATH:$HOME/.luarocks/bin&amp;#39;&lt;/span&gt; &amp;gt;&amp;gt; ~/.bashrc &lt;span class=&#34;c1&#34;&gt;# add luarock bin path&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;eval &amp;#34;$(luarocks path --bin)&amp;#34;&amp;#39;&lt;/span&gt; &amp;gt;&amp;gt; ~/.bashrc  &lt;span class=&#34;c1&#34;&gt;# add LUA_PATH, LUA_CPATH&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; . ~/.bashrc
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; luarocks install --local package_name   &lt;span class=&#34;c1&#34;&gt;# 패키지 설치 (--local)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Rcoktree Structure: 기본 설치 구조&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt; {base}                (base rocks tree directory)
+  ├── bin              (deployment of command line scripts)
+  ├── lib
+  │    ├── luarocks
+  │    │    └── rocks  (contains manifest and sub-dirs with rocks)
+  │    │
+  │    └── lua
+  │         └── 5.1    (deployment of binary modules)
+  │
+  └── share
+       └── lua
+            └── 5.1    (deployment of Lua modules)
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;usage&#34;&gt;Usage&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; luarocks                      &lt;span class=&#34;c1&#34;&gt;# show help and usage&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; luarocks list                 &lt;span class=&#34;c1&#34;&gt;# show installed packages&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; luarocks search pack_name     &lt;span class=&#34;c1&#34;&gt;# search packages&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; luarocks install pack_name    &lt;span class=&#34;c1&#34;&gt;# remove installed packages&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; luarocks show pack_name       &lt;span class=&#34;c1&#34;&gt;# show info installed packages&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; luarocks remove pack_name     &lt;span class=&#34;c1&#34;&gt;# remove installed packages&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;패키지-설치-및-사용례&#34;&gt;패키지 설치 및 사용례&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;패키지는 &lt;a href=&#34;http://luarocks.org&#34;&gt;http://luarocks.org&lt;/a&gt; 참조 - 각 모듈 다운로드 순위도 참고&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Luastatic - lua 독립실행 바이너리 컴파일러</title>
+      <link>https://neosolaris.github.io/posts/luastatic/</link>
+      <pubDate>Tue, 30 Aug 2022 04:57:48 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/luastatic/</guid>
+      <description>&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;lua 스크립트를 단독 실행 파일로 만들어 주는 프로그램 (gcc로 컴파일)&lt;/li&gt;
+&lt;li&gt;코드를 숨기고 빠른 단독 실행 프로그램으로 바꾸고자 하는 경우에 유용&lt;/li&gt;
+&lt;li&gt;또는 개발시 여러개의 루아파일을 require로 사용할 경우 하나로 합치고자 할 때&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../luarocks&#34;&gt;luarocks&lt;/a&gt;로 설치한다.&lt;/li&gt;
+&lt;li&gt;luarocks로 설치된 모듈은 &lt;code&gt;~/.bashrc&lt;/code&gt;에 &lt;code&gt;eval &amp;quot;$(luarocks path --bin)&amp;quot;&lt;/code&gt;로 설정했기 때문에 자동으로 포함된다.&lt;/li&gt;
+&lt;li&gt;문제는 같은 리눅스라도 버전간 배포판간에 glibc 호환이 되지 않는다는 점이다.&lt;/li&gt;
+&lt;li&gt;거의 동일한 환경에서만 배포 가능하다고 본다.&lt;/li&gt;
+&lt;li&gt;단, alpine linux의 경우에는 glibc 버전 문제가 없고, 용량도 작다.&lt;/li&gt;
+&lt;li&gt;debian 계열 요구사항: build-essential(gcc), lua, luastatic&lt;/li&gt;
+&lt;li&gt;alpine Linux 요구사항: build-base, clang, luajit, luastatic&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;install-and-howto&#34;&gt;Install and Howto&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Install&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; luarocks install --local luastatic    &lt;span class=&#34;c1&#34;&gt;# install luastatic&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;PATH&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$PATH&lt;/span&gt;:&lt;span class=&#34;nv&#34;&gt;$HOME&lt;/span&gt;/.luarocks/bin &lt;span class=&#34;c1&#34;&gt;# set PATH for luarocks bin&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; luastatic                             &lt;span class=&#34;c1&#34;&gt;# show version and usage&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Compile Single Lua file&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; luastatic myprogram.lua &lt;span class=&#34;se&#34;&gt;\ &lt;/span&gt;        
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;    /usr/lib/x86_64-linux-gnu/liblua5.1.a \
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;    -I /usr/include/lua5.1
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;&lt;/span&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; ./myprogram
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Embed library.lua for require(&amp;ldquo;library&amp;rdquo;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; luastatic myprogram.lua &lt;span class=&#34;se&#34;&gt;\ &lt;/span&gt;        
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;    myprogram.lua \
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;    library.lua \
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;    /usr/lib/x86_64-linux-gnu/liblua5.1.a \
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;    -I /usr/include/lua5.1
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;C library containing luaopen_()&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; luastatic myprogram.lua &lt;span class=&#34;se&#34;&gt;\ &lt;/span&gt;        
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;    library.a \
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;    /usr/lib/x86_64-linux-gnu/liblua5.1.a \
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;    -I /usr/include/lua5.1
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;LuaJit on Ubuntu - 우분투에서 LuaJit 사용&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo apt install luajit               &lt;span class=&#34;c1&#34;&gt;# install luajit - 2.1.0&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo apt install libluajit-5.1-dev    &lt;span class=&#34;c1&#34;&gt;# install libluajit dev - 5.1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; luastatic myprogram.lua &lt;span class=&#34;se&#34;&gt;\ &lt;/span&gt;        
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;    /usr/lib/x86_64-linux-gnu/libluajit-5.1.a \
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;    -I /usr/include/luajit-2.1 \
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;    -no-pie
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;LuaJit on Alpine - LuaJit, clang with musl lib static compile&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;#&lt;/span&gt; apk add luajit luajit-dev  &lt;span class=&#34;c1&#34;&gt;# install luajit - 2.1.0&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;#&lt;/span&gt; apk add build-base clang make    &lt;span class=&#34;c1&#34;&gt;# install build base and clang&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;#&lt;/span&gt; env &lt;span class=&#34;nv&#34;&gt;CC&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;clang luastatic myprogram.lua &lt;span class=&#34;se&#34;&gt;\ &lt;/span&gt;        
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;    /usr/lib/x86_64-linux-gnu/libluajit-5.1.a \
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;    -I /usr/include/luajit-2.1 \
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;    -no-pie
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;좀 더 자세한 내용은 아래 링크를 참조&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/ers35/luastatic&#34;&gt;https://github.com/ers35/luastatic&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Security on Borisu Wiki Home</title>
+    <link>https://neosolaris.github.io/tags/security/</link>
+    <description>Recent content in Security on Borisu Wiki Home</description>
+    <image>
+      <title>Borisu Wiki Home</title>
+      <url>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.147.2</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 09 Sep 2023 16:32:54 +0900</lastBuildDate>
+    <atom:link href="https://neosolaris.github.io/tags/security/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>GPG - GNU Privacy Guard</title>
+      <link>https://neosolaris.github.io/posts/gpg/</link>
+      <pubDate>Sat, 09 Sep 2023 16:32:54 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/gpg/</guid>
+      <description>&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;GNU Privacy Guard, is a public key cryptography implementation.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;install&#34;&gt;Install&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Alpine&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ doas apk add gpg gpg-agent
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;Ubuntu/Debian&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ sudo apt-get install gnupg
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;setup&#34;&gt;Setup&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;gpg 키생성: default로 진행: Real name과 Email 입력: 비밀번호 입력&lt;/li&gt;
+&lt;li&gt;암호화방식: 최신의 ECC(ed25519) 방식 사용&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ gpg --full-gen-key
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;create-a-revocation-certificate&#34;&gt;Create a Revocation Certificate&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;무효화 인증키 생성 (보안키분실시 사용, 따로 잘 보관)&lt;/li&gt;
+&lt;li&gt;파일모드가 600인지 확인&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ gpg --output ~/revocation.crt --gen-revoke your_email@address.com
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;how-to-import-other-users-public-keys&#34;&gt;How To Import Other Users’ Public Keys&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ gpg --import name_of_pub_key_file
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;how-to-verify-and-sign-keys&#34;&gt;How To Verify and Sign Keys&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ gpg --fingerprint your_email@address.com 
+$ gpg --list-keys       # 키리스트 확인
+$ gpg --armor --export  # public key 확인
+
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+
+mDMEZPwe2hYJwKYBBAHaRw8BAQdATXg1HK+wZW/sZlDXfs7KEJeEyX6YRKx9a60c
+P5pj4mwtAPwP2wq1ACEdj+V6VOH/1ZE5KlH7L8UkYlJ8lK+ZdZBK+wEAlknNS5O7
+...
+-----END PGP PUBLIC KEY BLOCK-----
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;encrypt-and-decrypt-messages-with-gpg&#34;&gt;Encrypt and Decrypt Messages with GPG&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Encrypt Messages&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ gpg --encrypt --sing --armor -r &amp;lt;your_email@address.com&amp;gt; &amp;lt;name_of_file&amp;gt;
+$ ls
+$ &amp;lt;name_of_file&amp;gt;.asc
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;Decrypt Messages&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ gpg &amp;lt;name_of_file&amp;gt;.asc
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;key-maintenance&#34;&gt;Key Maintenance&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ gpg --list-keys    # list available GPG keys
+$ gpg --refresh-keys # update the key information
+$ gpg --keyserver &amp;lt;key_server&amp;gt; --refresh-keys  # pull information from a specific key server
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;bakcup--restore&#34;&gt;Bakcup &amp;amp; Restore&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;backup (사용중인 PC)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;# tree로 ~/.gnupg 확인
+tree ~/.gnupg
+
+# 현재 사용중인 키 확인
+gpg --list-secret-keys --keyid-format LONG
+
+# 백업
+mkdir ~/gpg-backup
+gpg --export --export-options backup --output ~/gpg-backup/public-key.gpg
+gpg --export-secret-keys --export-options backup --output ~/gpg-backup/private-key.gpg
+gpg --export-ownertrust &amp;gt; ~/gpg-backup/trust_key.gpg
+tar cvf &amp;lt;USB-mount-path&amp;gt;/gpg-backup.tar gpg-backup
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;restore (다른 PC)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;# USB mount
+tar xvf &amp;lt;USB-mount-path&amp;gt;/gpg-backup.tar
+cd gpg-backup/
+
+# 키 복원
+gpg --import public-key.gpg
+gpg --import private-key.gpg
+gpg --import-ownertrust trust-key.gpg
+
+# 키 확인
+gpg --list-secret-keys --keyid-format LONG
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;passthe-standard-unix-password-manager-with-gpg&#34;&gt;PASS(The Standard Unix Password Manager) with gpg&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;pass는 유닉스에서 개인의 패스워드를 관리하는 표준 툴이다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>ssh-keygen 으로 인증하기</title>
+      <link>https://neosolaris.github.io/posts/ssh-keygen/</link>
+      <pubDate>Fri, 02 Sep 2022 15:09:16 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/ssh-keygen/</guid>
+      <description>&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;remote: authorized_keys 인증 허가&lt;/li&gt;
+&lt;li&gt;local: ssh-keygen으로 키를 생성&lt;/li&gt;
+&lt;li&gt;local: ssh-copy-id로 remote에 복사&lt;/li&gt;
+&lt;li&gt;local: ssh로 패스워드 없이 로그인확인&lt;/li&gt;
+&lt;li&gt;remote: Password로 로그인 불허가 설정&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;remote-authorized_keys-인증허가-되어있다면-다음으로&#34;&gt;remote: authorized_keys 인증허가 (되어있다면 다음으로)&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo vi /etc/ssh/sshd_config
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;...
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;PermitRootLogin no #root로 로그인불가
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;go&#34;&gt;RSAAuthentication yes
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;PubkeyAuthentication yes
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;AuthorizedKeysFile      %h/.ssh/authorized_keys 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;...
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo systemctl restart ssh
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;local-ssh-keygen-보안키-생성하기--t-type--c-comment&#34;&gt;local: ssh-keygen 보안키 생성하기 (-t: type, -C: Comment)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;passphrase는 그냥 엔터 2번&lt;/li&gt;
+&lt;li&gt;생성위치는 ~/.ssh/id_ed25519{.pub}&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; ssh-keygen -t ed25519 -C &lt;span class=&#34;s2&#34;&gt;&amp;#34;batutah@gmail.com&amp;#34;&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;local-ssh-copy-id로-public-key를-remote에-복사&#34;&gt;local: ssh-copy-id로 public key를 remote에 복사&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;local: ~/.ssh/id_ed25519.pub -&amp;gt; remote: ~/.ssh/authorized_keys&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; ssh-copy-id -p81 borisu@192.168.1.101 &lt;span class=&#34;c1&#34;&gt;#remote 패스워드 입력&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;local-ssh로-패스워드-없이-로그인-확인&#34;&gt;local: ssh로 패스워드 없이 로그인 확인&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; ssh -p81 borisu@192.168.1.101
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;remote-sshd에서-패스워드인증-허가를-막기&#34;&gt;remote: sshd에서 패스워드인증 허가를 막기&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;키인증으로 로그인이 가능하므로 패스워드 인증을 막아줌&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo vi /etc/ssh/sshd_config
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;...
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;PasswordAuthentication no
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;...
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo systemctl restart ssh
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys-on-ubuntu-20-04&#34;&gt;https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys-on-ubuntu-20-04&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.answertopia.com/ubuntu/configuring-ssh-key-based-authentication-on-ubuntu/&#34;&gt;https://www.answertopia.com/ubuntu/configuring-ssh-key-based-authentication-on-ubuntu/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>SSH - Secure Shell</title>
+      <link>https://neosolaris.github.io/posts/ssh/</link>
+      <pubDate>Fri, 02 Sep 2022 15:04:36 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/ssh/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;../ssh-keygen&#34;&gt;ssh keygen&lt;/a&gt; - ssh-keygen으로 인증하여 로그인하기&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+  </channel>
+</rss>

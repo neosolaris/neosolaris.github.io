@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Fv on Borisu Wiki Home</title>
+    <link>https://neosolaris.github.io/tags/fv/</link>
+    <description>Recent content in Fv on Borisu Wiki Home</description>
+    <image>
+      <title>Borisu Wiki Home</title>
+      <url>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.147.2</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 09 Oct 2022 18:00:34 +0900</lastBuildDate>
+    <atom:link href="https://neosolaris.github.io/tags/fv/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>FV - Fits file Viewer</title>
+      <link>https://neosolaris.github.io/posts/fv/</link>
+      <pubDate>Sun, 09 Oct 2022 18:00:34 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/fv/</guid>
+      <description>&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;[FITS](../Flexible Image Transport System) 파일 포맷을 보거나 편집할 수 있는 프로그램&lt;/li&gt;
+&lt;li&gt;fits 포맷은 주로 천문사진에서 사용되는 포맷이다.&lt;/li&gt;
+&lt;li&gt;리눅스의 경우 직접 다운로드 받는 것보다 패키지로 설치하는 것이 좋다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;install&#34;&gt;Install&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;ubuntu install&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo apt install wish ftools-fv 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; fv
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Fits 파일 포맷을 보거나 편집 가능한 모든 프로그램을 소개하고 있다.&lt;/li&gt;
+&lt;li&gt;NASA FITS : &lt;a href=&#34;https://fits.gsfc.nasa.gov/fits_viewer.html&#34;&gt;https://fits.gsfc.nasa.gov/fits_viewer.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+  </channel>
+</rss>

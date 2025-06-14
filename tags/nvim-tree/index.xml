@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Nvim-Tree on Borisu Wiki Home</title>
+    <link>https://neosolaris.github.io/tags/nvim-tree/</link>
+    <description>Recent content in Nvim-Tree on Borisu Wiki Home</description>
+    <image>
+      <title>Borisu Wiki Home</title>
+      <url>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.147.2</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 10 Sep 2022 23:52:46 +0900</lastBuildDate>
+    <atom:link href="https://neosolaris.github.io/tags/nvim-tree/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>nvim-tree - File Explorer</title>
+      <link>https://neosolaris.github.io/posts/nvim-tree/</link>
+      <pubDate>Sat, 10 Sep 2022 23:52:46 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/nvim-tree/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Cut, copy, paste, rename, delete, create 사용법 추가&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Git Integration&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Diagnostic Integration (LSP, COC)&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Live Filtering&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 개인화 설정&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;소개&#34;&gt;소개&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;빠르고 사용이 편리하며 &lt;a href=&#34;../nvim&#34;&gt;nvim&lt;/a&gt;에서 NerdTree를 대체할 만한 플러그인이다.&lt;/li&gt;
+&lt;li&gt;기능이 아주 많다. 조금씩 공부해서 활용하자.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;설치&#34;&gt;설치&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Add plugin set to &lt;code&gt;~/.config/nvim/lua/plugins.lua&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-lua&#34; data-lang=&#34;lua&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;use&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;kyazdani42/nvim-web-devicons&amp;#39;&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;-- web-devicons (optional)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;use&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;kyazdani42/nvim-tree.lua&amp;#39;&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;-- file explorer&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Install Package in command line mode&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;:w 
+:luafile %
+:PackerInstall
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;Add nvim-tree setup to &lt;code&gt;~/.config/nvim/lua/settings.lua&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-lua&#34; data-lang=&#34;lua&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;-- nvim-tree 설정&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;require&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;nvim-tree&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;setup&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;-- 설정 로드 및 초기화&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;nmap&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;&amp;lt;F2&amp;gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;:NvimTreeToggle&amp;lt;CR&amp;gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;-- 토글 키맵 설정&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Source &lt;code&gt;settings.lua&lt;/code&gt; in command line mode&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;:w 
+:luafile %
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;기본-키매핑&#34;&gt;기본 키매핑&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;자주 쓰는 것만 요약하고 자세한 것은 아래 주소 참조.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Editor on Borisu Wiki Home</title>
+    <link>https://neosolaris.github.io/tags/editor/</link>
+    <description>Recent content in Editor on Borisu Wiki Home</description>
+    <image>
+      <title>Borisu Wiki Home</title>
+      <url>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.147.2</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 14 Jun 2025 09:26:15 +0900</lastBuildDate>
+    <atom:link href="https://neosolaris.github.io/tags/editor/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Nextvi - Small and Simple Editor</title>
+      <link>https://neosolaris.github.io/posts/nextvi/</link>
+      <pubDate>Fri, 19 Apr 2024 07:19:18 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/nextvi/</guid>
+      <description>&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;vi는 배우는 것이 아니라 몸으로 익히는 것이다.
+vi는 단순하고 일관성이 있다.
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;장점
+&lt;ul&gt;
+&lt;li&gt;vi의 기본 명령을 제공한다.&lt;/li&gt;
+&lt;li&gt;단순하고 용량이 작아 임베디드 환경 및 원격지에서 사용하기에 좋다.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../neatvi&#34;&gt;neatvi&lt;/a&gt;로 부터 여러 기능이 추가되었다.&lt;/li&gt;
+&lt;li&gt;vim, nvim과는 다르게 간단한 설정과 빠른 동작이 장점이다.&lt;/li&gt;
+&lt;li&gt;utf-8을 지원한다. 한글 입출력 가능.&lt;/li&gt;
+&lt;li&gt;쉘명령 출력을 ex-mode(명령라인)에서 터미널 깨짐 없이 불러올 수 있다.&lt;/li&gt;
+&lt;li&gt;각종 플러그인이 없는 대신 ex-mode에서 터미널 툴과 상호 작용할 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;개인적으로 vim보다는 nvim을 더 선호한다. lua와 결합된 플러그인과의 연결이 정말 좋기
+때문이다. 하지만 단점도 많다. lua를 공부해야하고 또 설정에 적응하려면 많은 시간과 노력이
+필요하다. 더군다나 수많은 플러그인을 장착하게 되면 느려지고 무거워진다. 설정이 잘 못
+되면 바로 잡느라 삽질을 해야한다. 물론 자신만의 설정을 잘 만들어서 백업해 두었다가
+재사용하면 좋다. 하지만 nvim 자체의 패키지 사이즈와 수 많은 플러그인의 사이즈를 생각하면
+작고 가볍게라는 말이 무색해진다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Vis - Combining Modal Editing with Structual Regular Expressions</title>
+      <link>https://neosolaris.github.io/posts/vis/</link>
+      <pubDate>Mon, 05 Dec 2022 08:45:40 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/vis/</guid>
+      <description>&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;vi를 계승하면서도 현재적이고 새로운 코드, 심플하면서도 효과적인 에디터를 지향&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://sam.cat-v.org/&#34;&gt;sam&lt;/a&gt; 과 structual regular expression 을 도입&lt;/li&gt;
+&lt;li&gt;효과적인 코드 하이라이팅 - Parsing Expression Grammars (Lua LPeg)&lt;/li&gt;
+&lt;li&gt;lua Api 제공으로 확장가능 - vim, &lt;a href=&#34;../nvim&#34;&gt;nvim&lt;/a&gt;과는 다르게 vim 설정법을 사용하지 않음&lt;/li&gt;
+&lt;li&gt;vimscipt 사용하지 않음, luajit도 사용하지 않음&lt;/li&gt;
+&lt;li&gt;설치 용량이 1MB 내외 (물론 lua5.3도 함께 설치해야한다.)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;장점과-단점&#34;&gt;장점과 단점&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;장점&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;가볍고 빠르다.&lt;/li&gt;
+&lt;li&gt;기본 명령은 vim의 확장 명령이 아닌 vi의 것을 사용한다.&lt;/li&gt;
+&lt;li&gt;Structual regular expression 지원&lt;/li&gt;
+&lt;li&gt;lua 확장 제공.&lt;/li&gt;
+&lt;li&gt;utf-8 지원&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;단점&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Vim</title>
+      <link>https://neosolaris.github.io/posts/vim/</link>
+      <pubDate>Tue, 23 Aug 2022 18:35:04 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/vim/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;../vim-minimal&#34;&gt;vim minimal&lt;/a&gt; - 플러그인 없이 최소한으로 사용하기&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Plugins&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;../vimwiki&#34;&gt;vimwiki&lt;/a&gt; &amp;ndash; 위키 플러그인&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../startify&#34;&gt;startify&lt;/a&gt; &amp;ndash; 시작화면 플러그인&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../nerdtree&#34;&gt;nerdtree&lt;/a&gt; &amp;ndash; 파일 탐색 플러그인&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../vim-devicons&#34;&gt;vim devicons&lt;/a&gt; &amp;ndash; 아이콘 확장 플러그인&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;../spacevim&#34;&gt;spacevim&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Links&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;vim guide commands &lt;a href=&#34;https://vimguide.readthedocs.io/en/latest/vim.html&#34;&gt;https://vimguide.readthedocs.io/en/latest/vim.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+  </channel>
+</rss>

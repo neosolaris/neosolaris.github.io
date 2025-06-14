@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Hardware on Borisu Wiki Home</title>
+    <link>https://neosolaris.github.io/categories/hardware/</link>
+    <description>Recent content in Hardware on Borisu Wiki Home</description>
+    <image>
+      <title>Borisu Wiki Home</title>
+      <url>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.147.2</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 19 Sep 2023 18:23:49 +0900</lastBuildDate>
+    <atom:link href="https://neosolaris.github.io/categories/hardware/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Graphic Card - 그래픽카드</title>
+      <link>https://neosolaris.github.io/posts/graphic-card/</link>
+      <pubDate>Tue, 19 Sep 2023 18:23:49 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/graphic-card/</guid>
+      <description>&lt;h2 id=&#34;nvidia-quadro-5000&#34;&gt;Nvidia Quadro 5000&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;최신 드라이버 설치: windows 10, 11&lt;/li&gt;
+&lt;li&gt;dp 연결: 그래픽 출력의 최적은 현재로서는 dp이다.
+&lt;ul&gt;
+&lt;li&gt;dp선을 연결&lt;/li&gt;
+&lt;li&gt;다른 선이 있을 경우 제거하면 디폴트로 화면 출력이 된다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>keyboard - 키보드</title>
+      <link>https://neosolaris.github.io/posts/keyboard/</link>
+      <pubDate>Sun, 10 Sep 2023 18:04:26 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/keyboard/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;키보드는 사람이 컴퓨터에게 지시하는 유일한 통로이다.&lt;/li&gt;
+&lt;li&gt;물론 마우스 등이 있지만 키보드가 가장 먼저이면서 오래되었고 또한 상세하게 명령을 전달할 수 있는 도구이다.&lt;/li&gt;
+&lt;li&gt;사람이 직접적으로 활동하는 매체가 키보드이기 때문에 좀 더 특별하기도 하다.&lt;/li&gt;
+&lt;li&gt;또한 접촉하는 매체로서 건강과 느낌이 많이 작용하는 것이 키보드이기도 하다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;글-싣는-순서&#34;&gt;글 싣는 순서&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;한글키보드 입력방식.&lt;/li&gt;
+&lt;li&gt;영문키보드 입력방식.&lt;/li&gt;
+&lt;li&gt;손에 무리를 주지 않으면서 효율적인 키보드 입력 방식은 무엇인가.&lt;/li&gt;
+&lt;li&gt;아두이노를 활용한 분리형 키보드 만들기.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;키보드-연습&#34;&gt;키보드 연습&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;타이핑웍스 - 한,영 지원, 깔끔한 환경과 디자인, 웹: &lt;a href=&#34;https://typing.works/&#34;&gt;https://typing.works/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;monkeytype - 한글,영문 및 다국어 지원, 통계: &lt;a href=&#34;https://monkeytype.com/&#34;&gt;https://monkeytype.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;keybr.com - 영문 연습, 한글 미지원, 통계, qwerty,dvorak,workman,colmak: &lt;a href=&#34;https://www.keybr.com&#34;&gt;https://www.keybr.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;typeracer.com - 게임식 타자 연습 (자동차 경주)&lt;/li&gt;
+&lt;li&gt;colemak club - colemak, colemak-dh 연습: &lt;a href=&#34;https://gnusenpai.net/colemakclub/&#34;&gt;https://gnusenpai.net/colemakclub/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;한글-자판-배열&#34;&gt;한글 자판 배열&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;두벌식&lt;/li&gt;
+&lt;li&gt;세벌식: https://세벌식.kr/
+&lt;ul&gt;
+&lt;li&gt;타자 연습 프로그램
+&lt;ul&gt;
+&lt;li&gt;한컴 타자연습 (웹, 윈도우즈) : &lt;a href=&#34;https://www.hancomtaja.com/&#34;&gt;https://www.hancomtaja.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;날개셋 타자연습 (윈도우즈)&lt;/li&gt;
+&lt;li&gt;열린타자 (윈도우즈)&lt;/li&gt;
+&lt;li&gt;Taza (macOS)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;속기타자: 세벌식 (cas, sorijava) - 두 개 모두 자판 배열이 다르다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;영문-자판-배열&#34;&gt;영문 자판 배열&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;qwerty - 타자기의 원형, 사실상의 표준&lt;/li&gt;
+&lt;li&gt;dvorak - 또 다른 표준&lt;/li&gt;
+&lt;li&gt;colmak - 가장 효율적이면서 qwerty와 유사해서 적응도 빠르다.
+&lt;ul&gt;
+&lt;li&gt;colemak home: &lt;a href=&#34;https://colemak.com/&#34;&gt;https://colemak.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Learn : &lt;a href=&#34;https://colemak.com/Learn&#34;&gt;https://colemak.com/Learn&lt;/a&gt; (우측 하단 keyboard Mapping: on으로)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;workman&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;키보드-배열&#34;&gt;키보드 배열&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Staggered: 행마다 절반씩 엇갈려 배치&lt;/li&gt;
+&lt;li&gt;Ortholinear: 행마다 똑같이 배치&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;hardware&#34;&gt;HARDWARE&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Key caps&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Raspberry Pi 라즈베리파이</title>
+      <link>https://neosolaris.github.io/posts/raspberry-pi/</link>
+      <pubDate>Tue, 23 Aug 2022 18:35:04 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/raspberry-pi/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;../raspbian-update&#34;&gt;raspbian update&lt;/a&gt; - Update Raspbian from an Older Version to Buster&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>Zenbook14</title>
+      <link>https://neosolaris.github.io/posts/zenbook14/</link>
+      <pubDate>Tue, 23 Aug 2022 18:35:04 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/zenbook14/</guid>
+      <description>&lt;h2 id=&#34;노트북-사양&#34;&gt;노트북 사양&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;ASUS 젠북 14 UM3402YA-KP095W&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;노트북 / 운영체제(OS) : 윈도우11홈 / 일반유통상품 / 용도 : 사무/인강용 , 휴대용 /
+화면정보 35.56cm(14인치) / 2560x1600(WQXGA) / sRGB : 100% / 400nit / IPS / 광시야각 / 슬림형 베젤 /
+프로세서 AMD / 라이젠7-4세대 / 바르셀로 / 5825U (2.0GHz) / 옥타코어 /
+메모리 LPDDR4x(온보드) / 메모리 용량 : 16GB / 메모리 교체: 불가능 /
+저장장치 M.2(NVMe) / 512GB /
+그래픽 내장그래픽 / Radeon Graphics /
+네트워크 무선랜: 802.11ax(Wi-Fi 6E) /
+영상입출력 HDMI 2.0 / 웹캠(HD) /
+단자 USB-C: 2개 / USB-A: 1개 / USB 3.2 / MicroSD카드 /
+부가기능 지문인식(전원버튼) / USB-PD / DP Alt Mode / MIL-STD / 리프트 힌지 /
+입력장치 키보드 라이트 / ㅗ형 방향키 /
+파워 배터리 : 75Wh / 어댑터 : 65W / 충전단자 : 타입C /
+주요제원 두께 : 16.9mm / 무게 : 1.39kg / 색상: 블랙
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;os-설치-환경&#34;&gt;OS 설치 환경&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;../windows11&#34;&gt;윈도우11&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../ubuntu&#34;&gt;우분투 22.04&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Blender on Borisu Wiki Home</title>
+    <link>https://neosolaris.github.io/tags/blender/</link>
+    <description>Recent content in Blender on Borisu Wiki Home</description>
+    <image>
+      <title>Borisu Wiki Home</title>
+      <url>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.147.2</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 29 Aug 2022 18:02:47 +0900</lastBuildDate>
+    <atom:link href="https://neosolaris.github.io/tags/blender/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Blender 노트북 터치패드 사용 및 설정</title>
+      <link>https://neosolaris.github.io/posts/blender-touchpad/</link>
+      <pubDate>Mon, 29 Aug 2022 18:02:47 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/blender-touchpad/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;우분투 리눅스 기준에서 설명 (Mac,Windows 모두 다르다)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;설정&#34;&gt;설정&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;블렌더 설정창에 다음을 체크&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;edit &amp;gt; preferences &amp;gt; input &amp;gt; [v] Emulate Numpad
+                             [v] Emulate 3 Button Mouse
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;사용법&#34;&gt;사용법&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;* Scroll (with 2 fingers) 위/아래: 화면 축소/확대
+* Alt +  2Touch + Scroll (with 1 fingers) : 화면 회전
+* Alt + Shift +  2Touch + Scroll (with 1 fingers) : 화면 이동
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.versluis.com/2019/07/using-blender-on-a-laptop-with-a-trackpad/&#34;&gt;https://www.versluis.com/2019/07/using-blender-on-a-laptop-with-a-trackpad/&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How to Install Blender on Ubuntu 22.04 LTS</title>
+      <link>https://neosolaris.github.io/posts/blender-install/</link>
+      <pubDate>Mon, 29 Aug 2022 17:59:40 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/blender-install/</guid>
+      <description>&lt;h2 id=&#34;기존-설치-제거&#34;&gt;기존 설치 제거&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;apt version&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;if [ &amp;#34;$(which blender)&amp;#34; == &amp;#34;/usr/bin/blender&amp;#34; ];then
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;	sudo apt autoremove blender
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;fi
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;snap version&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;if [ &amp;#34;$(which blender)&amp;#34; == &amp;#34;/snap/bin/blender&amp;#34; ];then
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;	sudo snap remove blender
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;fi
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;add-repository-ppa-apt&#34;&gt;Add Repository PPA APT&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;sudo add-apt-repository ppa:savoury1/blender -y
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;sudo add-apt-repository ppa:savoury1/ffmpeg4 -y
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;sudo add-apt-repository ppa:savoury1/ffmpeg5 -y
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;sudo add-apt-repository ppa:savoury1/graphics -y
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;sudo add-apt-repository ppa:savoury1/display -y
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;apt-update-and-blender-install&#34;&gt;Apt Update and Blender Install&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;sudo apt update
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;sudo apt upgrade
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;sudo apt install blender -y
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.linuxcapable.com/how-to-install-blender-on-ubuntu-22-04-lts&#34;&gt;https://www.linuxcapable.com/how-to-install-blender-on-ubuntu-22-04-lts&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>Blender</title>
+      <link>https://neosolaris.github.io/posts/blender/</link>
+      <pubDate>Mon, 29 Aug 2022 17:53:06 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/blender/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;../blender-install&#34;&gt;blender install&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../blender-touchpad&#34;&gt;blender touchpad&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+  </channel>
+</rss>

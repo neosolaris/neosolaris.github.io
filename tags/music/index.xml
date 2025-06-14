@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Music on Borisu Wiki Home</title>
+    <link>https://neosolaris.github.io/tags/music/</link>
+    <description>Recent content in Music on Borisu Wiki Home</description>
+    <image>
+      <title>Borisu Wiki Home</title>
+      <url>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.147.2</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 24 Aug 2022 03:53:45 +0900</lastBuildDate>
+    <atom:link href="https://neosolaris.github.io/tags/music/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>MPD Music Player Daemon</title>
+      <link>https://neosolaris.github.io/posts/mpd/</link>
+      <pubDate>Tue, 23 Aug 2022 18:35:04 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/mpd/</guid>
+      <description>&lt;h2 id=&#34;mpd-clients-cli&#34;&gt;Mpd Clients CLI&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;../mpc&#34;&gt;mpc&lt;/a&gt; : 가장 간단한 프로그램&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../rust&#34;&gt;mmtc&lt;/a&gt; 로 작성된 심플한 프로그램&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../ncmpc&#34;&gt;ncmpc&lt;/a&gt; : c++로 작성, ncurse를 이용한 프로그램&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../ncmpcpp&#34;&gt;ncmpcpp&lt;/a&gt; : ncmpc를 더욱 발전시킴, 제일 기능이 많고 편하고 마음에 든다.&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>NCMPCPP - NCurses Music Player Client (Plus Plus)</title>
+      <link>https://neosolaris.github.io/posts/ncmpcpp/</link>
+      <pubDate>Tue, 23 Aug 2022 18:35:04 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/ncmpcpp/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;2023-08-25: 문서 수정, 사용법 Usage 추가&lt;/li&gt;
+&lt;li&gt;설치하고 기본설정으로 사용하여도 무난하다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;install&#34;&gt;Install&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;sudo apt install ncmpcpp
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;ncmpcpp --version
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;setup&#34;&gt;Setup&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;설정파일 편집&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;vim ~/.config/ncmpcpp/config
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;설정파일 내용&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;mpd_host = 192.168.1.100
+mpd_port = 6600
+
+# Enabling visualization (mpd 호스트 내에서만 동작가능)
+visualizer_data_source = &amp;#34;/tmp/mpd.fifo&amp;#34;
+visualizer_output_name = &amp;#34;my_fifo&amp;#34;
+visualizer_in_stereo = &amp;#34;yes&amp;#34;
+visualizer_type = &amp;#34;spectrum&amp;#34;
+visualizer_look = &amp;#34;+|&amp;#34;
+visualizer_look = &amp;#34;●▮&amp;#34;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;설정에 관한 보다 자세한 예시&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;/usr/share/doc/ncmpcpp/example/config&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;enableing-visualization&#34;&gt;Enableing Visualization&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;음악감상시 비주얼한 음변화를 볼 수 있는 기능&lt;/li&gt;
+&lt;li&gt;이 기능을 위해 위의 주석을 제거하고 실행한다.&lt;/li&gt;
+&lt;li&gt;단, mpd와 동일한 시스템에서 가능하다.&lt;/li&gt;
+&lt;li&gt;/etc/mpd.conf 에 다음과 같이 설정하고 mpd를 재실행한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;audio_output {
+    type                    &amp;#34;fifo&amp;#34;
+    name                    &amp;#34;my_fifo&amp;#34;
+    path                    &amp;#34;/tmp/mpd.fifo&amp;#34;
+    format                  &amp;#34;44100:16:2&amp;#34;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;usage&#34;&gt;Usage&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ ncmpcpp
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;F1&lt;/code&gt; : show help&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;1&lt;/code&gt; : show playlist ;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;2&lt;/code&gt; : show directory browser&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;3&lt;/code&gt; : show search&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;4&lt;/code&gt; : show library&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;5&lt;/code&gt; : playlist editor&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;6&lt;/code&gt; : tags editor&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;8&lt;/code&gt; : visualizer&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;p&lt;/code&gt; : toggle play/pause&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;a&lt;/code&gt; : add selection to playlist&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;gt;&lt;/code&gt; : play next track&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;&lt;/code&gt; :play previous track&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://wiki.archlinux.org/title/Ncmpcpp&#34;&gt;AchiLinux Ncmpcpp Wiki&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/ncmpcpp/ncmpcpp&#34;&gt;Ncmpcpp GitHub&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Ffi on Borisu Wiki Home</title>
+    <link>https://neosolaris.github.io/tags/ffi/</link>
+    <description>Recent content in Ffi on Borisu Wiki Home</description>
+    <image>
+      <title>Borisu Wiki Home</title>
+      <url>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.147.2</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 12 Oct 2022 17:19:22 +0900</lastBuildDate>
+    <atom:link href="https://neosolaris.github.io/tags/ffi/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Lfs-ffi - LuaJit FFI Lua File System</title>
+      <link>https://neosolaris.github.io/posts/lfs-ffi/</link>
+      <pubDate>Wed, 12 Oct 2022 17:19:22 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/lfs-ffi/</guid>
+      <description>&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;luaJit용 Lua File System 모듈&lt;/li&gt;
+&lt;li&gt;ffi를 이용한 lfs이며 lua의 lfs 모듈과 똑같다.&lt;/li&gt;
+&lt;li&gt;파일시스템을 다루는 확장 모듈이다.&lt;/li&gt;
+&lt;li&gt;리눅스 전용이다. 윈도우즈용은 아래 깃허브에 가면 안내가 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;설치&#34;&gt;설치&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;../luarocks&#34;&gt;luarocks&lt;/a&gt;를 사용하거나 직접 다운로드하여 사용&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Github &lt;a href=&#34;https://github.com/spacewander/luafilesystem&#34;&gt;https://github.com/spacewander/luafilesystem&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+  </channel>
+</rss>

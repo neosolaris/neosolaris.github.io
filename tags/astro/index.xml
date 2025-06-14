@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Astro on Borisu Wiki Home</title>
+    <link>https://neosolaris.github.io/tags/astro/</link>
+    <description>Recent content in Astro on Borisu Wiki Home</description>
+    <image>
+      <title>Borisu Wiki Home</title>
+      <url>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.147.2</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 30 Oct 2022 00:05:48 +0900</lastBuildDate>
+    <atom:link href="https://neosolaris.github.io/tags/astro/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>IRAF - Image Reduction and Analysis Facility</title>
+      <link>https://neosolaris.github.io/posts/iraf/</link>
+      <pubDate>Wed, 12 Oct 2022 16:02:55 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/iraf/</guid>
+      <description>&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;../fits&#34;&gt;FITS&lt;/a&gt; 데이터 분석 및 이미지 처리 도구 집합&lt;/li&gt;
+&lt;li&gt;NOAO(National Optical astronomy Observatory)에서 개발&lt;/li&gt;
+&lt;li&gt;현재 오픈소스로 공개하여 &lt;a href=&#34;https://iraf-community.github.io&#34;&gt;iraf community&lt;/a&gt; 가 관리하고 있다.&lt;/li&gt;
+&lt;li&gt;주로 관측천문학 분야에서 활용되고 있다.&lt;/li&gt;
+&lt;li&gt;파이썬으로 랩핑한 &lt;a href=&#34;../pyraf&#34;&gt;pyraf&lt;/a&gt;가 있다.&lt;/li&gt;
+&lt;li&gt;컴파일과 패키지 설치 두 가지가 있다. (패키지 설치 권장)&lt;/li&gt;
+&lt;li&gt;현재 많은 소프트웨어들이 나와있으나 타언어로 랩핑하였거나 인터페이스만 바꾸어 라이브러리를 그대로 사용하고 있다.&lt;/li&gt;
+&lt;li&gt;일종의 고전이라고 볼 수 있겠다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;install-packages&#34;&gt;Install Packages&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Ubuntu18.x 이후부터 패키지 제공&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo apt install xterm xgterm &lt;span class=&#34;c1&#34;&gt;# terminal for iraf &lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo apt install saods9       &lt;span class=&#34;c1&#34;&gt;# ds9 FITS Viewer for iraf&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo apt install iraf iraf-dev iraf-noao iraf-noao-dev iraf-wcstools iraf-rvsao
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;install-from-source&#34;&gt;Install From Source&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/iraf-community/iraf/archive/refs/tags/v2.17.tar.gz&#34;&gt;Download Source&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Fits-Liberator</title>
+      <link>https://neosolaris.github.io/posts/fits-liberator/</link>
+      <pubDate>Tue, 11 Oct 2022 23:13:33 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/fits-liberator/</guid>
+      <description>&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;천문사진 주로 FITS 전처리 프로그램&lt;/li&gt;
+&lt;li&gt;version 4 부터 리눅스를 지원한다.&lt;/li&gt;
+&lt;li&gt;입문자가 쉽게 사용할 수 있도록 만들었다.&lt;/li&gt;
+&lt;li&gt;GUI 뿐만 아니라 자동화를 위한 CLI가 제공된다.&lt;/li&gt;
+&lt;li&gt;내부 사용 라이브러리는 &lt;a href=&#34;../fitsio&#34;&gt;fitsio&lt;/a&gt;가 사용된다.&lt;/li&gt;
+&lt;li&gt;Judy Schmidt도 전처리 프로그램으로 이것을 쓴다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;install&#34;&gt;Install&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://noirlab.edu/public/products/fitsliberator&#34;&gt;홈페이지&lt;/a&gt;에서 다운로드 및 설치 가능하다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Ubuntu, Debian&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo apt install libvips  &lt;span class=&#34;c1&#34;&gt;#cfitsio도 필요하나 의존성으로 깔린다.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo dpkg -i fitsliberator_4.x.x_amd64.deb
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;PATH&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$PATH&lt;/span&gt;:/opt/FITS&lt;span class=&#34;se&#34;&gt;\ &lt;/span&gt;Liberator/fitscli/linux/
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;usage&#34;&gt;Usage&lt;/h2&gt;
+&lt;p&gt;다음을 우선적으로 공부하고 나머지는 홈페이지를 방문하자.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Quick Start Guide v4
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://noirlab.edu/public/media/archives/techdocs/pdf/techdoc024.pdf&#34;&gt;https://noirlab.edu/public/media/archives/techdocs/pdf/techdoc024.pdf&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Home &lt;a href=&#34;https://noirlab.edu/public/products/fitsliberator/&#34;&gt;https://noirlab.edu/public/products/fitsliberator/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;FITS Liberator CLI &lt;a href=&#34;https://gitlab.com/noirlab/fits-liberator-cli&#34;&gt;https://gitlab.com/noirlab/fits-liberator-cli&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;FITS Liberator GUI &lt;a href=&#34;https://gitlab.com/noirlab/fits-liberator-gui&#34;&gt;https://gitlab.com/noirlab/fits-liberator-gui&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>fitsio - FITS IO C Library</title>
+      <link>https://neosolaris.github.io/posts/fitsio/</link>
+      <pubDate>Tue, 11 Oct 2022 17:06:15 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/fitsio/</guid>
+      <description>&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;fits를 편집하기 위한 C 라이브러리 모음&lt;/li&gt;
+&lt;li&gt;python, ruby, perl, lua 등의 wrapper가 다양하게 존재한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;lua-ffi-bindings-fitsiolua&#34;&gt;Lua-ffi-bindings: fitsio.lua&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;깃허브: &lt;a href=&#34;https://github.com/thenumbernine/lua-ffi-bindings&#34;&gt;https://github.com/thenumbernine/lua-ffi-bindings&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;요구사항: Luajit, fitsio library&lt;/li&gt;
+&lt;li&gt;사용법: 아래 quick start quide 참고&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo apt install libfitsio-dev
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; git clone https://github.com/thenumbernine/lua-ffi-bindings.git
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; lua-ffi-bindings
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;그런데 너무 오래된 소스이다. 2009&lt;/li&gt;
+&lt;li&gt;거기다 ffi-binding해서 사용하는 예제도 없다.&lt;/li&gt;
+&lt;li&gt;pfits는 역시 오래 되었고, pyfits도 astropy로 통합되었다.&lt;/li&gt;
+&lt;li&gt;이런 것이 있었다 하고 넘어가자.&lt;/li&gt;
+&lt;li&gt;파이썬 사용자라면 astropy를 사용하는 것이 좋겠다.&lt;/li&gt;
+&lt;li&gt;아 루아로는 갈길이 멀다.&lt;/li&gt;
+&lt;li&gt;하지만 현재 &lt;a href=&#34;../fits-liberator&#34;&gt;astropy&lt;/a&gt;도 내부에는 이 라이브러리를 쓴다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Home: &lt;a href=&#34;https://heasarc.gsfc.nasa.gov/fitsio/&#34;&gt;https://heasarc.gsfc.nasa.gov/fitsio/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;quick start guide &lt;a href=&#34;https://heasarc.gsfc.nasa.gov/docs/software/fitsio/quick/quick.html&#34;&gt;https://heasarc.gsfc.nasa.gov/docs/software/fitsio/quick/quick.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Programming on Borisu Wiki Home</title>
+    <link>https://neosolaris.github.io/tags/programming/</link>
+    <description>Recent content in Programming on Borisu Wiki Home</description>
+    <image>
+      <title>Borisu Wiki Home</title>
+      <url>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.147.2</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 12 Mar 2024 03:21:08 +0900</lastBuildDate>
+    <atom:link href="https://neosolaris.github.io/tags/programming/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Zig</title>
+      <link>https://neosolaris.github.io/posts/zig/</link>
+      <pubDate>Tue, 12 Mar 2024 03:21:08 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/zig/</guid>
+      <description>&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;a general-purpose programming language and toolchain for maintaining robust, optimal and reusable software.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;install&#34;&gt;Install&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Debian/Ubuntu&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo apt install zig
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Alpine&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; doas apk add zig
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;최신 리눅스 버전 설치&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://ziglang.org/download/&#34;&gt;https://ziglang.org/download/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;os와 아키텍쳐에 맞는 파일을 다운로드한다.&lt;/li&gt;
+&lt;li&gt;압축을 푼 후 &lt;code&gt;PATH&lt;/code&gt;를 설정해주면 바로 사용 가능하다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; tar xJf zig-linux-x86_64-0.12.0-dev.3212+40e64245f.tar.xz
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; ln -s zig-linux-x86_64-0.12.0-dev.3212+40e64245f/ zig
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; zig&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; ls 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; ./zig &lt;span class=&#34;nb&#34;&gt;help&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;home - &lt;a href=&#34;https://ziglang.org/&#34;&gt;https://ziglang.org/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;reference - &lt;a href=&#34;https://ziglang.org/documentation/0.11.0/&#34;&gt;https://ziglang.org/documentation/0.11.0/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>Openresty - Scalable Web Platform NGINX with Lua</title>
+      <link>https://neosolaris.github.io/posts/openresty/</link>
+      <pubDate>Sat, 16 Sep 2023 16:50:04 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/openresty/</guid>
+      <description>&lt;h2 id=&#34;intro&#34;&gt;INTRO&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;openresty는 nginx와 lua 기반의 웹개발 플랫폼이다.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../luajit&#34;&gt;lua&lt;/a&gt; 을 사용하고 엔진이 포함되어 있다.&lt;/li&gt;
+&lt;li&gt;서버에서 동작한다.&lt;/li&gt;
+&lt;li&gt;대부분의 리눅스 배포판은 패키지를 지원한다.&lt;/li&gt;
+&lt;li&gt;여기에서는 &lt;a href=&#34;../docker&#34;&gt;docker&lt;/a&gt; 이미지로 설치하고 사용하는 방법을 정리한다.&lt;/li&gt;
+&lt;li&gt;System Info: RaspberryPi 3 Model B Rev 1.2&lt;/li&gt;
+&lt;li&gt;OS: Raspbian (Debian 11, Bullseye)&lt;/li&gt;
+&lt;li&gt;Docker: version 24.0.5&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;getting-started&#34;&gt;Getting Started&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Hello World&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;# Install Docker and Relogin after exit
+
+curl -sSL https://get.docker.com | sh
+sudo usermod -aG docker $usermod
+exit
+...
+docker run hello-world
+
+# Docker Image get
+docker pull openresty/openresty:alpine
+
+# Setup
+mkdir ~/www
+cd ~/www
+mkdir conf html
+vi conf/nginx.conf
+...
+worker_processes 1;
+error_log error.log;
+events {
+    worker_connections 1024;
+}
+http {
+    server {
+        listen 8000;
+        location / {
+            default_type text/html;
+            content_by_lua &amp;#39;
+                ngx.say(&amp;#34;&amp;lt;p&amp;gt;hello world!&amp;lt;/p&amp;gt;&amp;#34;)
+            &amp;#39;;
+        }
+    }
+}
+...
+
+# Run openresty docker image
+docker run --name mresty --rm --volume `pwd`/conf/:/usr/local/openresty/nginx/conf/ \
+    -p 127.0.0.1:8000:8000 openresty/openresty:alpine
+
+# docker process check
+docker ps
+
+# openresty web server test
+curl localhost:8000
+&amp;lt;p&amp;gt;hello world!&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;openresty-comandline-utility&#34;&gt;Openresty Comandline Utility&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;# version check
+resty -v
+
+# Hello World
+resty -e &amp;#39;print(&amp;#34;Hello World&amp;#34;)&amp;#39;
+echo &amp;#39;print(&amp;#34;Hello World&amp;#34;)&amp;#39; &amp;gt; hello.lua
+resty hello.lua
+
+# resty ngx module test
+time resty -e &amp;#39;gnx.sleep(1) ngx.say(&amp;#34;done&amp;#34;)&amp;#39;
+resty -e &amp;#39;local sock = ngx.socket.tcp() print(socke:connect(&amp;#34;openresty.com&amp;#34;,443))&amp;#39;
+resty -e &amp;#39;ngx.thread.wait(ngx.thread.spawn(function () print(&amp;#34;in thread!&amp;#34;) end))&amp;#39;
+
+mkdir lua/
+vim lua/test.lua
+...
+local _M = {}
+function _M.hello() print(&amp;#34;Hello&amp;#34;) end
+return _M
+...
+resty -e &amp;#39;require &amp;#34;test&amp;#34;.hello()&amp;#39;  # Error
+resty -I lua/ -e &amp;#39;require &amp;#34;test&amp;#34;.hello()&amp;#39;  # Hello
+
+resty -e &amp;#39;local ok, stdout = require &amp;#34;resty.shell&amp;#34;.run([[echo ok]]) print(stdout)&amp;#39; # ok
+resty --shdict &amp;#39;dogs 10m&amp;#39; -e &amp;#39;print(ngx.shared.dogs:set(&amp;#34;age&amp;#34;,11))&amp;#39; # truenilfalse
+resty --shdict &amp;#39;dogs 7m&amp;#39; --shdict &amp;#39;cats 5m&amp;#39; -e &amp;#39;print(ngx.shared.dogs, &amp;#34; &amp;#34;, ngx.shared.cats)&amp;#39; 
+
+resty --http-conf &amp;#39;lua_regex_match_limit 102400;&amp;#39; -e &amp;#39;print &amp;#34;ok&amp;#34;&amp;#39;
+
+# Bench Test
+echo &amp;#39;local a = 0 for 1, 1e8 do a = a+1 end print(a)&amp;#39; &amp;gt; bench.lua
+time resty -joff bench.lua  # without Jit Compiler
+time resty bench.lua        # with Jit Compiler (Fast)
+resty -jv bench.lua
+resty -jdump bench.lua | less
+
+# Help
+resty -h | less  # See Help
+restydoc resty-cli  # See Document
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;structure-and-lua-module&#34;&gt;Structure and Lua Module&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Create Project Folder and Modules&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;mkdir test-module
+cd test-module
+mkdir logs conf lua
+
+vim lua/hello.lua
+...
+local _M = {}
+function _M.greet(name)
+    ngx.say(&amp;#34;Greetings from &amp;#34;, name)
+end
+return _M
+...
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;Setup nginx.conf&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;vim conf/nginx.conf
+...
+worker_processes 1;
+events {
+    worker_connections 1024;
+}
+http {
+    # Lua module Preload for performance and Cache
+    init_by_lua_block {
+        require &amp;#34;hello&amp;#34;
+    }
+    # add module path to lua package path: $prefix means nginx -p option value
+    lua_package_path &amp;#34;$prefix/lua/?.lua;;&amp;#34;
+    # Server Setup: port, lua block...
+    server {
+        listen 8080 reuseport;
+        location / {
+        content_by_lua_block {
+            local hello = require &amp;#34;hello&amp;#34;
+            hello.greet(&amp;#34;a Lua module&amp;#34;)
+            }
+        }
+    }
+}
+...
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;Server start and Test&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;# server configuration test
+nginx -p $PWD/ -t 
+
+# server start
+nginx -p $PWD/
+
+# Chech Error Log
+tail logs/error.log 
+
+# client request test : Browser also available
+curl &amp;#39;http://127.0.0.1:8080&amp;#39;
+Greetins from a Lua module
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;Server Admin&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;# check server process
+ps aux | grep nginx | grep -v /tmp/
+pgrep -l nginx
+
+# Edit nginx.conf
+vim conf/nginx.conf
+
+# Server Restart (After editting of nginx.conf)
+kill -HUP `cat logs/nginx.pid`
+
+# client request again
+curl &amp;#39;http://127.0.0.1:8080&amp;#39;
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;build-develop-environment&#34;&gt;Build Develop Environment&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Makefile을 만들고 도커이미지를 제어하고 로그 등을 확인할 수 있는 환경을 만든다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Makefile&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;conf/nginx.conf&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Test&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;reference&#34;&gt;REFERENCE&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;awesome-resty - &lt;a href=&#34;https://github.com/bungle/awesome-resty&#34;&gt;https://github.com/bungle/awesome-resty&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>DockerHub - 도커허브 소개 및 활용</title>
+      <link>https://neosolaris.github.io/posts/dockerhub/</link>
+      <pubDate>Sun, 13 Nov 2022 16:01:19 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/dockerhub/</guid>
+      <description>&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;도커 이미지 원격 저장소&lt;/li&gt;
+&lt;li&gt;만들어 놓은 이미지를 업로드 및 다운로드 활용&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;회원가입&#34;&gt;회원가입&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://hub.docker.com&#34;&gt;https://hub.docker.com&lt;/a&gt; - 계정 및 이메일 등록 : 공개용(개인)은 무료&lt;/li&gt;
+&lt;li&gt;hub.docker.com 접속 후 회원가입&lt;/li&gt;
+&lt;li&gt;Email Confirm (자신의 이메일에서 인증)&lt;/li&gt;
+&lt;li&gt;도커허브 로그인&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;저장소-생성하고-로컬에서-빌드한-이미지-올리기&#34;&gt;저장소 생성하고 로컬에서 빌드한 이미지 올리기&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;로그인 후 Repository 생성
+&lt;ul&gt;
+&lt;li&gt;ex) 사용자명/저장소명:태그명 neosolaris/mdev:debian-luajit&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;doocker client(my local pc)에서 다음과 같이 올린다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; docker login  &lt;span class=&#34;c1&#34;&gt;# hub에 회원가입한 id, password 등록&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; docker images &lt;span class=&#34;c1&#34;&gt;# 내 이미지 확인 (mdev:debian-luajit이라 가정)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; docker tag mdev:debian-luajit  neosolaris/mdev:debian-luajit
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; docker push neosolaris/mdev:debian-luajit  &lt;span class=&#34;c1&#34;&gt;#사용자명/저장소명:태그명&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;hub.docker.com 접속 후 repository 확인&lt;/li&gt;
+&lt;li&gt;위 과정 중 도커허브에서 저장소를 직접 만들지 않아도 local에서 로그인되어 있다면 &lt;code&gt;docker push&lt;/code&gt;로 가능하다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;이미지-다운로드&#34;&gt;이미지 다운로드&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;도커허브에서 자신이 원하는 이미지 또는 자신이 만든 이미지를 다운받는다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; docker pull gcc:bullseye   &lt;span class=&#34;c1&#34;&gt;# 공식 debian-bullseye-gcc 환경 이미지&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; docker neosolaris/mdev:debian-luajit  &lt;span class=&#34;c1&#34;&gt;# 내 프로젝트 이미지&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://hub.docker.com&#34;&gt;https://hub.docker.com&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>Bash readlines how to</title>
+      <link>https://neosolaris.github.io/posts/bash-read-lines/</link>
+      <pubDate>Fri, 26 Aug 2022 21:54:04 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/bash-read-lines/</guid>
+      <description>&lt;h2 id=&#34;method-1&#34;&gt;Method 1&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;read&lt;/span&gt; -r line 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;do&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$line&lt;/span&gt;	
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;done&lt;/span&gt; &amp;lt; input_file.txt &amp;gt; out_file.txt
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;method-1-1&#34;&gt;Method 1&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;file&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;cat input_file.txt&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; line in  &lt;span class=&#34;nv&#34;&gt;$file&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;do&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$line&lt;/span&gt;	
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;done&lt;/span&gt; &amp;lt; input_file.txt &amp;gt; out_file.txt
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.geeksforgeeks.org/bash-scripting-how-to-read-a-file-line-by-line/&#34;&gt;https://www.geeksforgeeks.org/bash-scripting-how-to-read-a-file-line-by-line/&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Kime on Borisu Wiki Home</title>
+    <link>https://neosolaris.github.io/tags/kime/</link>
+    <description>Recent content in Kime on Borisu Wiki Home</description>
+    <image>
+      <title>Borisu Wiki Home</title>
+      <url>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.147.2</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 24 Aug 2022 03:59:21 +0900</lastBuildDate>
+    <atom:link href="https://neosolaris.github.io/tags/kime/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>KIME (Korean IME) 한글 입력기</title>
+      <link>https://neosolaris.github.io/posts/kime/</link>
+      <pubDate>Tue, 23 Aug 2022 18:35:04 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/kime/</guid>
+      <description>&lt;h2 id=&#34;설치-및-설정&#34;&gt;설치 및 설정&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;아래한글 한컴오피스는 리눅스용 2020 베타버전이 나와있다.&lt;/li&gt;
+&lt;li&gt;그러나 기존 한글입력기로는 한글입력에 많은 문제가 있다.&lt;/li&gt;
+&lt;li&gt;kime은 이 뿐만 아니라 wine등에서 한글입력 문제 등을 해결할 수 있는 방법이다.&lt;/li&gt;
+&lt;li&gt;kime의 장점은 매우 간결하고 심플하다는 데 있다.&lt;/li&gt;
+&lt;li&gt;또 다른 장점은 vim 사용시 입력모드에서 한글 사용 중 &lt;code&gt;esc&lt;/code&gt;로 명령모드로 들어가게 되면 영문으로 자동 변환된다. 한영 전환의 수고가 줄어든다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;#&lt;/span&gt; install
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;sudo dpkg -i kime_debian-buster_v2.5.3_amd64.deb
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;gp&#34;&gt;#&lt;/span&gt; setup
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;sudo mkdir -p /etc/dpkg/kime
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;sudo cp /usr/share/doc/kime/default_config.yaml /etc/xdg/kime/config.yaml
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;sudo vim /etc/xdg/kime/config.yaml
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;&lt;/span&gt;&lt;span class=&#34;gp&#34;&gt;#&lt;/span&gt;...
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;#&lt;/span&gt;golbal_hotkeys:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;#&lt;/span&gt;   Super-Space &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;이하여섯줄 복사해서 바로 위에 붙이고 S-Space로 수정&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;go&#34;&gt;im-config -n kime
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;sudo reboot # 재부팅 후 로그인
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;&lt;/span&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; kime-check
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;한컴오피스-2020-베타-리눅스-버전-한글입력을-위한-설정&#34;&gt;한컴오피스 2020 베타 리눅스 버전 한글입력을 위한 설정&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ wget https://github.com/Riey/kime/releases/download/v2.5.2/libkime-qt-5.11.3.so
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ sudo cp libkime-qt-5.11.3.so /opt/hnc/hoffice11/Bin/qt/plugins/platforminputcontexts/
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;참고&#34;&gt;참고&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;한글이 안되어 이것저것 만지다보면 문제가 생긴다.&lt;/li&gt;
+&lt;li&gt;다음의 순서대로 설정한다. OS 언어환경을 en으로 유지하는 것이 가장 좋다.
+&lt;ol&gt;
+&lt;li&gt;ubuntu 설치를 한글로 진행하면 필요한 폰트나 입력설정이 된다.&lt;/li&gt;
+&lt;li&gt;최초 로그인해서 설정&amp;gt;지역&amp;amp;언어로 들어가면 안내하는 필요패키지를 설치한다.&lt;/li&gt;
+&lt;li&gt;kime 패키지를 설치한다. (sudo dpkg -i kime-xxx.deb)&lt;/li&gt;
+&lt;li&gt;settings&amp;gt; keybord &amp;gt; input sources에는 English(US)와 Korean만 등록해둔다.&lt;/li&gt;
+&lt;li&gt;settings&amp;gt; Region&amp;amp;Language &amp;gt; Manage Installed Languages &amp;gt; kime으로 변경&lt;/li&gt;
+&lt;li&gt;reboot후 확인&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;위에서 키보드에서 Korean을 설정해주어야 indicator 아이콘이 보인다.&lt;/li&gt;
+&lt;li&gt;kime으로 변경하면 firefox snap에서 동작하지 않으므로 firefox 재설치 작업&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;reference&#34;&gt;REFERENCE&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/Riey/kime&#34;&gt;Github Kime&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://shanepark.tistory.com/318&#34;&gt;설치&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.linuxcapable.com/how-to-install-wine-on-debian-11-bullseye&#34;&gt;설치2&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://dawoum.tistory.com/88&#34;&gt;설치3&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://no1linux.org/board_WEnl84/39530&#34;&gt;설치4&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+  </channel>
+</rss>

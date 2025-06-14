@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Iot on Borisu Wiki Home</title>
+    <link>https://neosolaris.github.io/categories/iot/</link>
+    <description>Recent content in Iot on Borisu Wiki Home</description>
+    <image>
+      <title>Borisu Wiki Home</title>
+      <url>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.147.2</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 17 Dec 2023 08:31:03 +0900</lastBuildDate>
+    <atom:link href="https://neosolaris.github.io/categories/iot/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>NodeMCU</title>
+      <link>https://neosolaris.github.io/posts/nodemcu/</link>
+      <pubDate>Wed, 13 Dec 2023 11:02:31 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/nodemcu/</guid>
+      <description>&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;a low-cost open source IoT platform&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../arduino&#34;&gt;arduino&lt;/a&gt;와 달리 와이파이 및 블루투스 모듈 탑재&lt;/li&gt;
+&lt;li&gt;사물인터넷(IoT)용 MCU 장치를 개발하는데 적합&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;종류&#34;&gt;종류&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;../esp8266&#34;&gt;esp8266&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../esp32&#34;&gt;esp32&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../esp8266-vs-esp32&#34;&gt;esp8266-vs-esp32&lt;/a&gt; - 비교&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;개발환경&#34;&gt;개발환경&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;아두이노 IDE (Linux, Windows, Mac)&lt;/li&gt;
+&lt;li&gt;Esplorer (Linux, Windows, Mac - Java)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;tools&#34;&gt;TOOLS&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;../esptool&#34;&gt;esptool&lt;/a&gt; - esp firmware upload, read tool&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;etc&#34;&gt;ETC&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;../fritzing&#34;&gt;fritzing&lt;/a&gt;을 이용하여 프로젝트를 설계하고 회로도를 그릴 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;reference&#34;&gt;REFERENCE&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;주의 - &lt;a href=&#34;https://www.nodemcu.com&#34;&gt;www.nodemcu.com&lt;/a&gt;의 example은 오래되었으므로 아래 docs를 참고한다.&lt;/li&gt;
+&lt;li&gt;esp칩 제조사 - &lt;a href=&#34;https://www.espressif.com/&#34;&gt;https://www.espressif.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;nodemcu home - &lt;a href=&#34;http://www.nodemcu.com&#34;&gt;http://www.nodemcu.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;docs esp8266 - &lt;a href=&#34;https://nodemcu.readthedocs.io/en&#34;&gt;https://nodemcu.readthedocs.io/en&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;docs esp32 - &lt;a href=&#34;https://nodemcu.readthedocs.io/en/dev-esp32/&#34;&gt;https://nodemcu.readthedocs.io/en/dev-esp32/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;faqs - &lt;a href=&#34;https://nodemcu.readthedocs.io/en/dev-esp32/lua-developer-faq/&#34;&gt;https://nodemcu.readthedocs.io/en/dev-esp32/lua-developer-faq/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+  </channel>
+</rss>

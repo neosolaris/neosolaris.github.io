@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Spacevim on Borisu Wiki Home</title>
+    <link>https://neosolaris.github.io/tags/spacevim/</link>
+    <description>Recent content in Spacevim on Borisu Wiki Home</description>
+    <image>
+      <title>Borisu Wiki Home</title>
+      <url>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.147.2</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 09 Sep 2022 12:09:09 +0900</lastBuildDate>
+    <atom:link href="https://neosolaris.github.io/tags/spacevim/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SpaceVim - A community-driven vim distribution</title>
+      <link>https://neosolaris.github.io/posts/spacevim/</link>
+      <pubDate>Fri, 09 Sep 2022 12:09:09 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/spacevim/</guid>
+      <description>&lt;h2 id=&#34;설치&#34;&gt;설치&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;vim 또는 neovim을 먼저 설치한다.&lt;/li&gt;
+&lt;li&gt;둘 다 설치되어 있는 경우 하나만 동작하도록 아래 명령어로 설치한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;   $ curl -sLf https://spacevim.org/install.sh | bash -s -- --install vim
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;   $ curl -sLf https://spacevim.org/install.sh | bash -s -- --install neovim
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;   $ vim ~/.config/nvim
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;아래 레퍼런스를 참고한다.&lt;/li&gt;
+&lt;li&gt;사용하는 코딩 언어를 layer로 등록해주면 거의 모든 것이 해결된다.&lt;/li&gt;
+&lt;li&gt;아울러 각 언어에 대한 설정법도 참고 (단축키도 정리)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;vimproc-error&#34;&gt;vimproc Error&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;neovim으로 spacevim을 설치하고 실행했는데 위 에러가 나는 경우&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;   $ cd ~/.SpaceVim/bundle/vimproc.vim
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;   $ make
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;   $ nvim
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Quick Start Guide
+&lt;a href=&#34;https://spacevim.org/quick-start-guide/&#34;&gt;https://spacevim.org/quick-start-guide/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Python Set
+&lt;a href=&#34;https://spacevim.org/use-vim-as-a-python-ide/&#34;&gt;https://spacevim.org/use-vim-as-a-python-ide/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Rust Set
+&lt;a href=&#34;https://spacevim.org/use-vim-as-a-rust-ide/&#34;&gt;https://spacevim.org/use-vim-as-a-rust-ide/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Touchpad on Borisu Wiki Home</title>
+    <link>https://neosolaris.github.io/tags/touchpad/</link>
+    <description>Recent content in Touchpad on Borisu Wiki Home</description>
+    <image>
+      <title>Borisu Wiki Home</title>
+      <url>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.147.2</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 29 Aug 2022 18:02:47 +0900</lastBuildDate>
+    <atom:link href="https://neosolaris.github.io/tags/touchpad/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Blender 노트북 터치패드 사용 및 설정</title>
+      <link>https://neosolaris.github.io/posts/blender-touchpad/</link>
+      <pubDate>Mon, 29 Aug 2022 18:02:47 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/blender-touchpad/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;우분투 리눅스 기준에서 설명 (Mac,Windows 모두 다르다)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;설정&#34;&gt;설정&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;블렌더 설정창에 다음을 체크&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;edit &amp;gt; preferences &amp;gt; input &amp;gt; [v] Emulate Numpad
+                             [v] Emulate 3 Button Mouse
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;사용법&#34;&gt;사용법&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;* Scroll (with 2 fingers) 위/아래: 화면 축소/확대
+* Alt +  2Touch + Scroll (with 1 fingers) : 화면 회전
+* Alt + Shift +  2Touch + Scroll (with 1 fingers) : 화면 이동
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.versluis.com/2019/07/using-blender-on-a-laptop-with-a-trackpad/&#34;&gt;https://www.versluis.com/2019/07/using-blender-on-a-laptop-with-a-trackpad/&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

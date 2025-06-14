@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Nginx on Borisu Wiki Home</title>
+    <link>https://neosolaris.github.io/tags/nginx/</link>
+    <description>Recent content in Nginx on Borisu Wiki Home</description>
+    <image>
+      <title>Borisu Wiki Home</title>
+      <url>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.147.2</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 27 Sep 2023 18:06:49 +0900</lastBuildDate>
+    <atom:link href="https://neosolaris.github.io/tags/nginx/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Openresty - Scalable Web Platform NGINX with Lua</title>
+      <link>https://neosolaris.github.io/posts/openresty/</link>
+      <pubDate>Sat, 16 Sep 2023 16:50:04 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/openresty/</guid>
+      <description>&lt;h2 id=&#34;intro&#34;&gt;INTRO&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;openresty는 nginx와 lua 기반의 웹개발 플랫폼이다.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../luajit&#34;&gt;lua&lt;/a&gt; 을 사용하고 엔진이 포함되어 있다.&lt;/li&gt;
+&lt;li&gt;서버에서 동작한다.&lt;/li&gt;
+&lt;li&gt;대부분의 리눅스 배포판은 패키지를 지원한다.&lt;/li&gt;
+&lt;li&gt;여기에서는 &lt;a href=&#34;../docker&#34;&gt;docker&lt;/a&gt; 이미지로 설치하고 사용하는 방법을 정리한다.&lt;/li&gt;
+&lt;li&gt;System Info: RaspberryPi 3 Model B Rev 1.2&lt;/li&gt;
+&lt;li&gt;OS: Raspbian (Debian 11, Bullseye)&lt;/li&gt;
+&lt;li&gt;Docker: version 24.0.5&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;getting-started&#34;&gt;Getting Started&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Hello World&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;# Install Docker and Relogin after exit
+
+curl -sSL https://get.docker.com | sh
+sudo usermod -aG docker $usermod
+exit
+...
+docker run hello-world
+
+# Docker Image get
+docker pull openresty/openresty:alpine
+
+# Setup
+mkdir ~/www
+cd ~/www
+mkdir conf html
+vi conf/nginx.conf
+...
+worker_processes 1;
+error_log error.log;
+events {
+    worker_connections 1024;
+}
+http {
+    server {
+        listen 8000;
+        location / {
+            default_type text/html;
+            content_by_lua &amp;#39;
+                ngx.say(&amp;#34;&amp;lt;p&amp;gt;hello world!&amp;lt;/p&amp;gt;&amp;#34;)
+            &amp;#39;;
+        }
+    }
+}
+...
+
+# Run openresty docker image
+docker run --name mresty --rm --volume `pwd`/conf/:/usr/local/openresty/nginx/conf/ \
+    -p 127.0.0.1:8000:8000 openresty/openresty:alpine
+
+# docker process check
+docker ps
+
+# openresty web server test
+curl localhost:8000
+&amp;lt;p&amp;gt;hello world!&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;openresty-comandline-utility&#34;&gt;Openresty Comandline Utility&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;# version check
+resty -v
+
+# Hello World
+resty -e &amp;#39;print(&amp;#34;Hello World&amp;#34;)&amp;#39;
+echo &amp;#39;print(&amp;#34;Hello World&amp;#34;)&amp;#39; &amp;gt; hello.lua
+resty hello.lua
+
+# resty ngx module test
+time resty -e &amp;#39;gnx.sleep(1) ngx.say(&amp;#34;done&amp;#34;)&amp;#39;
+resty -e &amp;#39;local sock = ngx.socket.tcp() print(socke:connect(&amp;#34;openresty.com&amp;#34;,443))&amp;#39;
+resty -e &amp;#39;ngx.thread.wait(ngx.thread.spawn(function () print(&amp;#34;in thread!&amp;#34;) end))&amp;#39;
+
+mkdir lua/
+vim lua/test.lua
+...
+local _M = {}
+function _M.hello() print(&amp;#34;Hello&amp;#34;) end
+return _M
+...
+resty -e &amp;#39;require &amp;#34;test&amp;#34;.hello()&amp;#39;  # Error
+resty -I lua/ -e &amp;#39;require &amp;#34;test&amp;#34;.hello()&amp;#39;  # Hello
+
+resty -e &amp;#39;local ok, stdout = require &amp;#34;resty.shell&amp;#34;.run([[echo ok]]) print(stdout)&amp;#39; # ok
+resty --shdict &amp;#39;dogs 10m&amp;#39; -e &amp;#39;print(ngx.shared.dogs:set(&amp;#34;age&amp;#34;,11))&amp;#39; # truenilfalse
+resty --shdict &amp;#39;dogs 7m&amp;#39; --shdict &amp;#39;cats 5m&amp;#39; -e &amp;#39;print(ngx.shared.dogs, &amp;#34; &amp;#34;, ngx.shared.cats)&amp;#39; 
+
+resty --http-conf &amp;#39;lua_regex_match_limit 102400;&amp;#39; -e &amp;#39;print &amp;#34;ok&amp;#34;&amp;#39;
+
+# Bench Test
+echo &amp;#39;local a = 0 for 1, 1e8 do a = a+1 end print(a)&amp;#39; &amp;gt; bench.lua
+time resty -joff bench.lua  # without Jit Compiler
+time resty bench.lua        # with Jit Compiler (Fast)
+resty -jv bench.lua
+resty -jdump bench.lua | less
+
+# Help
+resty -h | less  # See Help
+restydoc resty-cli  # See Document
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;structure-and-lua-module&#34;&gt;Structure and Lua Module&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Create Project Folder and Modules&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;mkdir test-module
+cd test-module
+mkdir logs conf lua
+
+vim lua/hello.lua
+...
+local _M = {}
+function _M.greet(name)
+    ngx.say(&amp;#34;Greetings from &amp;#34;, name)
+end
+return _M
+...
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;Setup nginx.conf&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;vim conf/nginx.conf
+...
+worker_processes 1;
+events {
+    worker_connections 1024;
+}
+http {
+    # Lua module Preload for performance and Cache
+    init_by_lua_block {
+        require &amp;#34;hello&amp;#34;
+    }
+    # add module path to lua package path: $prefix means nginx -p option value
+    lua_package_path &amp;#34;$prefix/lua/?.lua;;&amp;#34;
+    # Server Setup: port, lua block...
+    server {
+        listen 8080 reuseport;
+        location / {
+        content_by_lua_block {
+            local hello = require &amp;#34;hello&amp;#34;
+            hello.greet(&amp;#34;a Lua module&amp;#34;)
+            }
+        }
+    }
+}
+...
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;Server start and Test&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;# server configuration test
+nginx -p $PWD/ -t 
+
+# server start
+nginx -p $PWD/
+
+# Chech Error Log
+tail logs/error.log 
+
+# client request test : Browser also available
+curl &amp;#39;http://127.0.0.1:8080&amp;#39;
+Greetins from a Lua module
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;Server Admin&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;# check server process
+ps aux | grep nginx | grep -v /tmp/
+pgrep -l nginx
+
+# Edit nginx.conf
+vim conf/nginx.conf
+
+# Server Restart (After editting of nginx.conf)
+kill -HUP `cat logs/nginx.pid`
+
+# client request again
+curl &amp;#39;http://127.0.0.1:8080&amp;#39;
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;build-develop-environment&#34;&gt;Build Develop Environment&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Makefile을 만들고 도커이미지를 제어하고 로그 등을 확인할 수 있는 환경을 만든다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Makefile&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;conf/nginx.conf&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Test&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;reference&#34;&gt;REFERENCE&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;awesome-resty - &lt;a href=&#34;https://github.com/bungle/awesome-resty&#34;&gt;https://github.com/bungle/awesome-resty&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Docker on Borisu Wiki Home</title>
+    <link>https://neosolaris.github.io/tags/docker/</link>
+    <description>Recent content in Docker on Borisu Wiki Home</description>
+    <image>
+      <title>Borisu Wiki Home</title>
+      <url>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.147.2</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 15 Feb 2024 15:15:47 +0900</lastBuildDate>
+    <atom:link href="https://neosolaris.github.io/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Dockerfile - run, cmd, entrypoint 차이</title>
+      <link>https://neosolaris.github.io/posts/docker-run-cmd-entrypoint/</link>
+      <pubDate>Wed, 27 Sep 2023 16:25:49 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/docker-run-cmd-entrypoint/</guid>
+      <description>&lt;h2 id=&#34;dockerfile-에서-run-cmd-entrypoint--차이&#34;&gt;Dockerfile 에서 RUN, CMD, ENTRYPOINT  차이&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;RUN - 도커이미지 생성시 동작&lt;/li&gt;
+&lt;li&gt;CMD - 도커이미지 실행시 동작 (대체 가능)&lt;/li&gt;
+&lt;li&gt;ENTRYPOINT - CMD와 같으나 실행시 반드시 동작&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;dockerfile---run&#34;&gt;Dockerfile - RUN&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;# create log script
+vi log-event.sh
+...
+#!/bin/sh
+echo `date` $@ &amp;gt;&amp;gt; log.txt
+cat log.txt
+...
+chmod u+x log-event.sh
+
+# create Docker Image
+vi Dockerfile
+...
+FROM alpine
+ADD log-event.sh /
+RUN [&amp;#34;/log-event.sh&amp;#34;,&amp;#34;image created&amp;#34;] # 생성시 동작
+CMD [&amp;#34;/log-event.sh&amp;#34;,&amp;#34;container started&amp;#34;] # 실행시 동작
+...
+docker build -t myimage .
+
+# Run Docker Image - RUN은 이미지 생성시에 동작했음을 알 수 있다.
+docker run myimage
+Wed Sep 27 07:10:26 UTC 2023 image created
+Wed Sep 27 07:36:10 UTC 2023 container started
+
+docker run myimage
+Wed Sep 27 07:10:26 UTC 2023 image created
+Wed Sep 27 07:36:21 UTC 2023 container started
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;dockerfile---cmd-entrypoint&#34;&gt;Dockerfile - CMD, ENTRYPOINT&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;여러개의 CMD&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;# Create Docker Image
+vi Dockerfile
+...
+FROM alpine
+ADD log-event.sh /
+RUN [&amp;#34;/log-event.sh&amp;#34;,&amp;#34;image created&amp;#34;] # 생성시 동작
+CMD [&amp;#34;/log-event.sh&amp;#34;,&amp;#34;container started&amp;#34;] # 실행시 동작 (무시됨)
+CMD [&amp;#34;/log-event.sh&amp;#34;,&amp;#34;container running&amp;#34;] # 실행시 동작 (마지막CMD처리)
+...
+docker build -t myimage .
+
+# Run Docker Image
+docker run myimage
+Wed Sep 27 07:10:26 UTC 2023 image created
+Wed Sep 27 07:23:09 UTC 2023 container running
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;CMD와 ENTRYPOINT&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;# Create Docker Image
+vi Dockerfile
+...
+FROM alpine
+ADD log-event.sh /
+RUN [&amp;#34;/log-event.sh&amp;#34;,&amp;#34;image created&amp;#34;] # 생성시 동작
+ENTRYPOINT [&amp;#34;/log-event.sh&amp;#34;] # 실행시 동작
+CMD [&amp;#34;container started&amp;#34;]    # 실행시 동작
+...
+docker build -t myimage .
+
+# Run Docker Image
+docker run myimage
+Wed Sep 27 07:10:26 UTC 2023 image created
+Wed Sep 27 07:23:09 UTC 2023 container started
+
+# Run Docker Image with argument
+docker run myimage custom event
+Wed Sep 27 07:10:26 UTC 2023 image created
+Wed Sep 27 07:24:31 UTC 2023 custom event
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;reference&#34;&gt;REFERENCE&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Difference Between run, cmd and entrypoint in a Dockerfile - &lt;a href=&#34;https://www.baeldung.com/ops/dockerfile-run-cmd-entrypoint&#34;&gt;https://www.baeldung.com/ops/dockerfile-run-cmd-entrypoint&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Entrypoint vs cmd - &lt;a href=&#34;https://bluese05.tistory.com/77&#34;&gt;https://bluese05.tistory.com/77&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>Docker on Windows - 윈도우즈에서 도커 설치 및 사용</title>
+      <link>https://neosolaris.github.io/posts/docker-windows/</link>
+      <pubDate>Thu, 03 Aug 2023 17:04:47 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/docker-windows/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 23-08-08: 오타 수정, Tip 수정&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;개요&#34;&gt;개요&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;윈도우즈에서 도커를 사용하는 방법을 설명한다.&lt;/li&gt;
+&lt;li&gt;이것으로써 윈도우, 리눅스의 모든 환경에서 도커의 범용성과 안정성이 확보된다.&lt;/li&gt;
+&lt;li&gt;즉, 개발환경, 테스트환경, 실행환경의 일관성을 갖게 된다.&lt;/li&gt;
+&lt;li&gt;첫째는 &lt;code&gt;WSL2 + Git Bash + Docker Desktop&lt;/code&gt;를 결합하여 사용하는 방법이다.&lt;/li&gt;
+&lt;li&gt;둘째는 &lt;code&gt;WSL2 + Alpine&lt;/code&gt;를 설치하고 알파인 리눅스에서 &lt;code&gt;git + docker&lt;/code&gt;의 형태로 사용하는 방법이다.&lt;/li&gt;
+&lt;li&gt;두번째 방법이 조금 복잡해 보이긴 하나 훨씬 처리가 간결하고 적은 리소스와 빠른 실행 속도가 돋보인다.&lt;/li&gt;
+&lt;li&gt;또한 리눅스 기반이므로 파일시스템 문제, 퍼미션 문제, 경로 처리 문제 등에서 훨씬 쉽고 편한 환경이므로 두번째 방법에 대해서 상술한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;windows-wsl2-공통-기반-설정&#34;&gt;Windows WSL2 공통 기반 설정&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;설치환경: Windows 11&lt;/li&gt;
+&lt;li&gt;Bios 설정: 바이오스에서 가상머신 지원(Virtual Machine Support) 여부를 선택한다.&lt;/li&gt;
+&lt;li&gt;WSL2를 확인하고 필요하면 업데이트한다. (PowerShell:관리자권한으로)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;&amp;gt;&lt;/span&gt; wsl -l -v    &lt;span class=&#34;c1&#34;&gt;# Version Check&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;&amp;gt;&lt;/span&gt; wsl --update &lt;span class=&#34;c1&#34;&gt;# wsl2 upgrade or update&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;nerd-font-설치&#34;&gt;Nerd Font 설치&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;터미널에서 아이콘 등 nerd font가 표시되고 코딩시 가독성을 높이기 위해서 설치&lt;/li&gt;
+&lt;li&gt;MeslsLGS NF Install
+&lt;a href=&#34;https://github.com/fontmgr/MesloLGSNF&#34;&gt;https://github.com/fontmgr/MesloLGSNF&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;D2Coding (코딩용 영문 한글 지원: 하지만 이것은 Nerd Font가 아니다.)
+&lt;a href=&#34;https://github.com/naver/d2codingfon&#34;&gt;https://github.com/naver/d2codingfon&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;wsl2--git-bash--docker-desktop&#34;&gt;WSL2 + Git Bash + Docker Desktop&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Docker Desktop&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Docker Images Remove - 도커 이미지 제거</title>
+      <link>https://neosolaris.github.io/posts/docker-images-remove/</link>
+      <pubDate>Mon, 21 Nov 2022 15:46:59 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/docker-images-remove/</guid>
+      <description>&lt;h2 id=&#34;기본-사용법&#34;&gt;기본 사용법&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; docker images  &lt;span class=&#34;c1&#34;&gt;# 도커 이미지 리스트 확인&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; docker images -all  &lt;span class=&#34;c1&#34;&gt;# 히든 이미지까지 모두 보기&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; docker rmi &amp;lt;ID&amp;gt;  &lt;span class=&#34;c1&#34;&gt;# image ID로 제거&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; docker rmi -f &amp;lt;ID&amp;gt;  &lt;span class=&#34;c1&#34;&gt;# image ID로 강제로 제거&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;docker-none-image-정리하기&#34;&gt;Docker none image 정리하기&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; docker container prune  &lt;span class=&#34;c1&#34;&gt;# 컨테이너 모두 종료&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; docker image prune   &lt;span class=&#34;c1&#34;&gt;# &amp;lt;none&amp;gt; 이미지 모두 제거&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;&lt;/span&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; docker system pruen  &lt;span class=&#34;c1&#34;&gt;# 한 번에 처리&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    <item>
+      <title>Docker-Busybox</title>
+      <link>https://neosolaris.github.io/posts/docker-busybox/</link>
+      <pubDate>Mon, 21 Nov 2022 14:53:47 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/docker-busybox/</guid>
+      <description>&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;../busybox&#34;&gt;busybox&lt;/a&gt;는 작고 가볍고 빠른 POSIX 표준 유틸 모음이다.&lt;/li&gt;
+&lt;li&gt;docker에서 여러 가지로 응용해서 사용할 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;응용&#34;&gt;응용&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;임베디드 시스템에 빌드하기&lt;/li&gt;
+&lt;li&gt;Kubernates에 init container로 사용하기&lt;/li&gt;
+&lt;li&gt;HTTP 웹서버로 돌리기&lt;/li&gt;
+&lt;li&gt;가상컨테이너 볼륨서버(스토리지)로 사용하기&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;기본-사용례&#34;&gt;기본 사용례&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;busybox 최신버전 이미지 받고 실행&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; docker run -it --rm busybox
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;busybox + myapp : myapp은 리눅스환경에서 정적컴파일한 바이너리&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; cat Dockerfile  &lt;span class=&#34;c1&#34;&gt;# Write Dockerfile&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;FROM busybox
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;COPY ./my-static-binary /my-static-binary
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;CMD [&amp;#34;/my-static-binary&amp;#34;]
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; docker build -t busybox-myapp .  &lt;span class=&#34;c1&#34;&gt;# Build Image&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; docker run -t --rm busybox-myapp  &lt;span class=&#34;c1&#34;&gt;# Run Container&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;busybox + httpserver : 웹서버동작(httpserver는 static compile binary)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; cat Dockerfile  &lt;span class=&#34;c1&#34;&gt;# Write Dockerfile&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;FROM busybox
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;COPY ./httpserver /home/
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;CMD /home/httpserver
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; docker build -t go-server .  &lt;span class=&#34;c1&#34;&gt;# Build Image&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; docker run -p 8080:8080 --rm -it go-server &lt;span class=&#34;c1&#34;&gt;# Run Container&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; curl -v http://localhost:8080/  &lt;span class=&#34;c1&#34;&gt;# Test&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;busybox에-관하여&#34;&gt;Busybox에 관하여&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;놀랍게도 busybox는 httpd를 내장하고 있다. 물론 대규모 처리는 곤란하다.&lt;/li&gt;
+&lt;li&gt;내장된 grep도 기본 기능만 있다. 대용량 파일 검색을 써야한다면 효율이 좋지 않으므로 gnu grep을 얹어서 사용하는 것이 좋다.&lt;/li&gt;
+&lt;li&gt;busybox는 glibc, musl 등을 지원하는 버전이 있다.&lt;/li&gt;
+&lt;li&gt;이를 활용하면 여러개의 프로그램을 넣어야할 때 공유라이브러리를 활용할 수 있어 효율적이다.&lt;/li&gt;
+&lt;li&gt;alpine 리눅스가 busybox + musl + os env 이므로 자신만의 이미지를 제작하는 것도 가능하다.&lt;/li&gt;
+&lt;li&gt;기본적인 utf-8이 지원되지만 출력만 문제가 없는 것으로 보인다.&lt;/li&gt;
+&lt;li&gt;sh, echo, vi 도 가볍게 쓰기는 좋으나 utf-8 한글입력이 안된다.&lt;/li&gt;
+&lt;li&gt;이를 보완하기 위해서는 bash, echo, vi를 정적컴파일 바이너리로 대체&lt;/li&gt;
+&lt;li&gt;또는 도커허브(DockerHub)의 toybox를 사용하는 것이다. utf-8 입출력을 모두 지원한다. 심지어 사이즈가 더 작다.&lt;/li&gt;
+&lt;li&gt;utf-8의 입출력 환경이 모두 필요하다면 toybox를 사용하는 것이 더 낫다.&lt;/li&gt;
+&lt;li&gt;busybox(약1.2MB)나 toybox(약764K)는 정말 가볍게 실행하고 배포할 수 있는 환경이다.&lt;/li&gt;
+&lt;li&gt;결론적으로 이것에 대한 활용은 개발환경이나 큰규모의 실행환경보다는 작고 가벼운 환경에서 효율적인 운용이 필요할 때 사용하면 좋을 것 같다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;How to Use th Busybox Docker Official Image
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.docker.com/blog/use-cases-and-tips-for-using-the-busybox-docker-official-image/&#34;&gt;https://www.docker.com/blog/use-cases-and-tips-for-using-the-busybox-docker-official-image/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Using the BusyBox Docker Image for Building Applications : A Complete Guide
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.sohamkamani.com/docker/busybox-guide/&#34;&gt;https://www.sohamkamani.com/docker/busybox-guide/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>Docker Example - 사용례</title>
+      <link>https://neosolaris.github.io/posts/docker-example/</link>
+      <pubDate>Sun, 13 Nov 2022 16:46:03 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/docker-example/</guid>
+      <description>&lt;h2 id=&#34;intro&#34;&gt;INTRO&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Requirement: Docker Hub registration&lt;/li&gt;
+&lt;li&gt;Requirement: Docker install on local&lt;/li&gt;
+&lt;li&gt;login and create and push images to docker hub&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;docker-login&#34;&gt;Docker Login&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; docker login
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;Username: neosolaris
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;Password: xxxxxxx
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;Login Succeeded
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;create-sample-image&#34;&gt;Create Sample image&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;create project dir and files&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; mkdir myproject &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; myproject
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; vim server.js
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; vim Dockerfile
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;server.js&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;var&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;http&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;require&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;http&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;var&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;handleRequest&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;function&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;request&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;response&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nx&#34;&gt;console&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;Received request for URL: &amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;request&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;url&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nx&#34;&gt;response&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;writeHead&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;200&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nx&#34;&gt;response&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;end&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;Hello World!&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;};&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;var&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;www&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;http&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;createServer&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;handleRequest&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;www&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;listen&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;8080&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Dockerfile&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;FROM node:6.9.2
+EXPOSE 8080
+COPY server.js .
+CMD node server.js
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;이미지-빌드&#34;&gt;이미지 빌드&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;명령 실행 후 브라우저에서 &lt;a href=&#34;http://localhost:8080&#34;&gt;http://localhost:8080&lt;/a&gt; 확인&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; docker build -t neosolaris/hello-nodejs:v1 .  &lt;span class=&#34;c1&#34;&gt;#사용자명/저장소명:태그명&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; docker images  &lt;span class=&#34;c1&#34;&gt;# 빌드이미지 확인&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; docker run -d -p 8080:8080 -t neosolaris/hello-nodejs:v1  &lt;span class=&#34;c1&#34;&gt;# 테스트&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;컨테이너 종료&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; docker ps  &lt;span class=&#34;c1&#34;&gt;# 현재 컨테이너들 확인&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; docker stop &amp;lt;Container ID&amp;gt;  &lt;span class=&#34;c1&#34;&gt;# 해당 컨테이너 종료&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;이미지-업로드&#34;&gt;이미지 업로드&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; docker push neosolaris/hello-nodejs:v1  &lt;span class=&#34;c1&#34;&gt;#사용자명/저장소명:태그명&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Image 업로드는 도커허브에서 확인: &lt;a href=&#34;https://hub.docker.com/u/neosolaris&#34;&gt;https://hub.docker.com/u/neosolaris&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://snowdeer.github.io/docker/2018/02/14/docker-push-image-to-docker-hub/&#34;&gt;https://snowdeer.github.io/docker/2018/02/14/docker-push-image-to-docker-hub/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>DockerHub - 도커허브 소개 및 활용</title>
+      <link>https://neosolaris.github.io/posts/dockerhub/</link>
+      <pubDate>Sun, 13 Nov 2022 16:01:19 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/dockerhub/</guid>
+      <description>&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;도커 이미지 원격 저장소&lt;/li&gt;
+&lt;li&gt;만들어 놓은 이미지를 업로드 및 다운로드 활용&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;회원가입&#34;&gt;회원가입&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://hub.docker.com&#34;&gt;https://hub.docker.com&lt;/a&gt; - 계정 및 이메일 등록 : 공개용(개인)은 무료&lt;/li&gt;
+&lt;li&gt;hub.docker.com 접속 후 회원가입&lt;/li&gt;
+&lt;li&gt;Email Confirm (자신의 이메일에서 인증)&lt;/li&gt;
+&lt;li&gt;도커허브 로그인&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;저장소-생성하고-로컬에서-빌드한-이미지-올리기&#34;&gt;저장소 생성하고 로컬에서 빌드한 이미지 올리기&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;로그인 후 Repository 생성
+&lt;ul&gt;
+&lt;li&gt;ex) 사용자명/저장소명:태그명 neosolaris/mdev:debian-luajit&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;doocker client(my local pc)에서 다음과 같이 올린다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; docker login  &lt;span class=&#34;c1&#34;&gt;# hub에 회원가입한 id, password 등록&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; docker images &lt;span class=&#34;c1&#34;&gt;# 내 이미지 확인 (mdev:debian-luajit이라 가정)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; docker tag mdev:debian-luajit  neosolaris/mdev:debian-luajit
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; docker push neosolaris/mdev:debian-luajit  &lt;span class=&#34;c1&#34;&gt;#사용자명/저장소명:태그명&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;hub.docker.com 접속 후 repository 확인&lt;/li&gt;
+&lt;li&gt;위 과정 중 도커허브에서 저장소를 직접 만들지 않아도 local에서 로그인되어 있다면 &lt;code&gt;docker push&lt;/code&gt;로 가능하다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;이미지-다운로드&#34;&gt;이미지 다운로드&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;도커허브에서 자신이 원하는 이미지 또는 자신이 만든 이미지를 다운받는다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; docker pull gcc:bullseye   &lt;span class=&#34;c1&#34;&gt;# 공식 debian-bullseye-gcc 환경 이미지&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; docker neosolaris/mdev:debian-luajit  &lt;span class=&#34;c1&#34;&gt;# 내 프로젝트 이미지&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://hub.docker.com&#34;&gt;https://hub.docker.com&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>docker-build 도커이미지 빌드</title>
+      <link>https://neosolaris.github.io/posts/docker-build/</link>
+      <pubDate>Wed, 09 Nov 2022 23:06:21 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/docker-build/</guid>
+      <description>&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;프로젝트폴더를 만들고 개발&lt;/li&gt;
+&lt;li&gt;Dockerfile을 해당 프로젝트에 작성한다.&lt;/li&gt;
+&lt;li&gt;한라인씩 확인하며 이미지를 빌드한다.&lt;/li&gt;
+&lt;li&gt;빌드한 이미지를 컨테이너를 실행해서 확인한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;example-lemo-apps-for-luajit&#34;&gt;Example Lemo Apps for Luajit&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;프로젝트 폴더를 만들고 Dockerfile을 생성한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; mkdir myproject &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; myproject
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; vim Dockerfile
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;생성된 Dockerfile&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;FROM nickblah/luajit:2.1.0-beta3-buster
+
+## Default root Env Setup First
+WORKDIR /root
+RUN \
+  echo &amp;#39;set -o vi&amp;#39; &amp;gt;&amp;gt; .bashrc
+
+## LEMO Program Set
+WORKDIR /usr/local
+COPY lemo ./lemo
+RUN \
+  echo &amp;#39;exec &amp;#34;/usr/local/lemo/lib/main.lua&amp;#34; &amp;#34;$@&amp;#34;&amp;#39; &amp;gt; ./bin/lemo &amp;amp;&amp;amp;\
+  chmod 755 ./bin/lemo
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;image-build&#34;&gt;Image Build&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; docker build -t buster:lemo .  &lt;span class=&#34;c1&#34;&gt;# 빌드&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; docker images  &lt;span class=&#34;c1&#34;&gt;# 빌드한 이미지 확인&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; docker run --rm -it buster:lemo bash  &lt;span class=&#34;c1&#34;&gt;# 이미지를 컨테이너 실행 및 테스트&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.docker.com/engine/reference/builder&#34;&gt;https://docs.docker.com/engine/reference/builder&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.44bits.io/ko/post/easy-deploy-with-docker&#34;&gt;https://www.44bits.io/ko/post/easy-deploy-with-docker&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>Docker Setup - 설정</title>
+      <link>https://neosolaris.github.io/posts/docker-setup/</link>
+      <pubDate>Wed, 09 Nov 2022 22:57:27 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/docker-setup/</guid>
+      <description>&lt;h2 id=&#34;docker-데몬-서비스-설정&#34;&gt;Docker 데몬 서비스 설정&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;패키지를 설치할 경우 자동으로 등록되지만 실패할 경우 다음과 같다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo systemctl status docker  &lt;span class=&#34;c1&#34;&gt;# 서비스 Active 확인실패&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo systemctl &lt;span class=&#34;nb&#34;&gt;enable&lt;/span&gt; docker  &lt;span class=&#34;c1&#34;&gt;# 부팅시 서비스 자동 실행 설정&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo systemctl start docker  &lt;span class=&#34;c1&#34;&gt;# 서비스 실행&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo systemctl restart docker  &lt;span class=&#34;c1&#34;&gt;# 서비스 재실행&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo systemctl status docker  &lt;span class=&#34;c1&#34;&gt;# 서비스 동작확인&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;docker를-일반-사용자-권한으로-변경&#34;&gt;Docker를 일반 사용자 권한으로 변경&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;항상 docker를 사용할 때 &lt;code&gt;sudo&lt;/code&gt;를 사용하므로 번거롭다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo usermod -aG docker &lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;USER&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# 이후 로그아웃하거나 재부팅&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo reboot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; groups  &lt;span class=&#34;c1&#34;&gt;# 그룹에 docker가 있는 지 확인&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; docker ps -a  &lt;span class=&#34;c1&#34;&gt;# sudo 없이 명령 실행&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;docker-로컬-디렉토리-변경&#34;&gt;Docker 로컬 디렉토리 변경&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;/var/lib/docker&lt;/code&gt;가 기본 디렉토리이다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/var&lt;/code&gt;는 보통 root 파티션이므로 사용중 공간문제가 발생할 수 있다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/data/docker&lt;/code&gt;라는 충분한 공간으로 변경한다면 다음과 같다.&lt;/li&gt;
+&lt;li&gt;우분투나 데비안 기준이고 &lt;code&gt;docker 20.10.21&lt;/code&gt; 버전의 예이다.&lt;/li&gt;
+&lt;li&gt;이 설정은 docker 설치 초기에 해야한다. (그렇지 않다면 백업 필수)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo systemctl stop docker  &lt;span class=&#34;c1&#34;&gt;# 서비스 중지&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo systemctl status docker  &lt;span class=&#34;c1&#34;&gt;# 서비스 상태 확인&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo cat&amp;lt;&amp;lt;EOF &amp;gt; /etc/docker/daemon.json   
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;    &amp;#34;graph&amp;#34;: &amp;#34;/data/docker&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;EOF
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo rm -rf /var/lib/docker  &lt;span class=&#34;c1&#34;&gt;# 기존 디렉토리 제거&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo systemctl start  &lt;span class=&#34;c1&#34;&gt;# 서비스 실행&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; docker info &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; grep &lt;span class=&#34;s1&#34;&gt;&amp;#39;Docker Root Dir&amp;#39;&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# 디렉토리 변경 확인&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt; Docker Root Dir: /data/docker
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;&lt;/span&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; ln -s /data/docker /var/lib/docker  &lt;span class=&#34;c1&#34;&gt;# 호환을 위해 링크를 생성&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    <item>
+      <title>Docker Install</title>
+      <link>https://neosolaris.github.io/posts/docker-install/</link>
+      <pubDate>Wed, 09 Nov 2022 22:37:49 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/docker-install/</guid>
+      <description>&lt;h2 id=&#34;ubuntu-2204-install&#34;&gt;Ubuntu 22.04 Install&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;기존 패키지로 설치 - 낮은 버전(1.5-2)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo apt update
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo apt install docker docker-engine docker.io containerd runc
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;저장소로 최신 버전 설치 (20.10.21) - &lt;code&gt;docker-ce&lt;/code&gt;만 설치해도 된다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo apt update
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo apt install ca-certificates curl gnupg lsb-release -y
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo mkdir -p /etc/apt/keyrings
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; curl -fsSL https://download.docker.com/linux/ubuntu/gpg &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;&lt;span class=&#34;go&#34;&gt;  &amp;#34;deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;  $(lsb_release -cs) stable&amp;#34; | sudo tee /etc/apt/sources.list.d/docker.list &amp;gt; /dev/null
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;&lt;/span&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo apt update
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin -y
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;script-install&#34;&gt;Script Install&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; curl -fsSL https://get.docker.com -o get-docker.sh
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;DRY_RUN&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; sudo sh ./get-docker.sh
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;test&#34;&gt;Test&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo docker --version  &lt;span class=&#34;c1&#34;&gt;# 버전 확인&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo systemctl status docker  &lt;span class=&#34;c1&#34;&gt;# 서비스 Active 확인&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo docker run hello-world  &lt;span class=&#34;c1&#34;&gt;# 테스트&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo docker ps -a  &lt;span class=&#34;c1&#34;&gt;# 프로세스 fhrm ghkrdls&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;uninstall&#34;&gt;Uninstall&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo apt-get purge docker-ce docker-ce-cli containerd.io docker-compose-plugin -y
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.docker.com/engine/reference/builder&#34;&gt;https://docs.docker.com/engine/reference/builder&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://linuxhint.com/install-docker-ubuntu-22-04&#34;&gt;https://linuxhint.com/install-docker-ubuntu-22-04&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-22-04&#34;&gt;https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-22-04&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>Docker - 소프트웨어 개발 플랫폼</title>
+      <link>https://neosolaris.github.io/posts/docker/</link>
+      <pubDate>Wed, 09 Nov 2022 22:32:02 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/docker/</guid>
+      <description>&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;docker는 응용프로그램 개발을 위한 소프트웨어 플랫폼이다.&lt;/li&gt;
+&lt;li&gt;Linux 기반에서 독립된 컨테이너(하나의 프로세스) 형태로 동작한다.&lt;/li&gt;
+&lt;li&gt;go 언어로 개발되었다.&lt;/li&gt;
+&lt;li&gt;가상OS와는 다르게 가볍고 빠르다.&lt;/li&gt;
+&lt;li&gt;빌드된 이미지를 언제 어디에서는 docker를 통해 문제 없이 실행할 수 있다.&lt;/li&gt;
+&lt;li&gt;자신만의 개발환경을 이미지로 구축해 놓으면 개발 컴퓨터가 달라져도 동일한 환경에서 개발할 수 있다.&lt;/li&gt;
+&lt;li&gt;실행환경을 이미지로 만들어 놓으면 사용자가 동일한 환경에서 문제없이 실행할 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;docker-설치-및-기본-사용법&#34;&gt;Docker 설치 및 기본 사용법&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;../docker-install&#34;&gt;docker install&lt;/a&gt; - Docker 설치&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../docker-setup&#34;&gt;docker setup&lt;/a&gt; - Docker 설정&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../docker-build&#34;&gt;docker build&lt;/a&gt; - Dockerfile 작성&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../dockerhub&#34;&gt;dockerhub&lt;/a&gt; - Docker Hub와 회원 가입&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../docker-example&#34;&gt;docker example&lt;/a&gt; - Docker Example: 사용례&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;docker-tips&#34;&gt;Docker Tips&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;../docker-run-cmd-entrypoint&#34;&gt;docker run cmd entrypoint&lt;/a&gt; - Docker run, cmd, entrypoint 차이&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../docker-images-remove&#34;&gt;docker images remove&lt;/a&gt; - Docker Image 제거&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;docker-응용&#34;&gt;Docker 응용&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;../docker-busybox&#34;&gt;docker busybox&lt;/a&gt; - 도커 busybox 활용&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../docker-windows&#34;&gt;docker windows&lt;/a&gt; - 윈도우즈에서 도커 설치 및 사용&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://hub.docker.com/&#34;&gt;https://hub.docker.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.sobyte.net/post/2022-04/docker-copy/&#34;&gt;https://www.sobyte.net/post/2022-04/docker-copy/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.docker.com/engine/reference/builder/&#34;&gt;https://docs.docker.com/engine/reference/builder/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+  </channel>
+</rss>

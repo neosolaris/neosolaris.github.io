@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Browser on Borisu Wiki Home</title>
+    <link>https://neosolaris.github.io/tags/browser/</link>
+    <description>Recent content in Browser on Borisu Wiki Home</description>
+    <image>
+      <title>Borisu Wiki Home</title>
+      <url>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.147.2</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 08 Sep 2023 15:13:16 +0900</lastBuildDate>
+    <atom:link href="https://neosolaris.github.io/tags/browser/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Edge - 윈도우즈 브라우저</title>
+      <link>https://neosolaris.github.io/posts/edge/</link>
+      <pubDate>Fri, 08 Sep 2023 15:13:16 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/edge/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;이것을 사용하는 이유는 어쩔 수 없이 관공서나 금융권 때문이다.&lt;/li&gt;
+&lt;li&gt;한국의 후진적인 공인인증서제도와 윈도우즈 중심 사용으로 인한 폐해가 아닐까 한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;다크모드-dark-mode-변경&#34;&gt;다크모드 Dark mode 변경&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;모양변경: 설정 &amp;gt; 브라우저 디스플레이&amp;gt; 모양 사용자 지정 &amp;gt; 어둡게&lt;/li&gt;
+&lt;li&gt;웹페이지변경: 브라우저 창에 다음과 같이 입력 후 재실행&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;edge://flags/#enable-force-dark
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    <item>
+      <title>Lynx - 터미널 텍스트 브라우저</title>
+      <link>https://neosolaris.github.io/posts/lynx/</link>
+      <pubDate>Sun, 18 Dec 2022 12:47:45 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/lynx/</guid>
+      <description>&lt;h2 id=&#34;intro&#34;&gt;INTRO&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;예전에 터미널 상에서 웹문서를 참고하기 위해 사용.&lt;/li&gt;
+&lt;li&gt;현재 utf-8지원 및 컬러 지원, vi key binding 지원 등 다양한 기능 보유.&lt;/li&gt;
+&lt;li&gt;광고나 현란한 그림들, 그리고 하얀 화면으로부터 눈을 보호하자.&lt;/li&gt;
+&lt;li&gt;기술문서나 신문기사 또는 문서 위주의 작업을 주로 할 때 빠르고 간결.&lt;/li&gt;
+&lt;li&gt;CPU와 MEMORY를 타 브라우저 보다 적게 사용하는 그야말로 친환경 브라우저.&lt;/li&gt;
+&lt;li&gt;tmux에서 vim과 함께 사용하면 환상의 궁합이라 말할 수 있겠다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;install&#34;&gt;INSTALL&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Debian, Ubuntu&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo apt install lynx
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; lynx --version
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; lynx duckduckgo.com
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Alpine&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; doas apk add lynx
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;setup&#34;&gt;SETUP&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Vi Key 설정 - 화면 이동을 hjkl로 변경&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;1. 실행 후 `o` 명령으로 옵션 설정
+2. VI keys -&amp;gt; [ON] 으로
+3. Line edit style -&amp;gt; [Bash-like Bindings] 로 설정
+4. 화면 상단에 Save options to disk: [x] 표시
+5. 화면 가장 윗줄에 Accept Changes 클릭
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;usage&#34;&gt;Usage&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;화살키 &amp;lt;- 이전 웹페이지로 이동 
+화살키 -&amp;gt; 이후 웹페이지로 이동
+화살키 up 페이지 상단으로 이동
+화살키 down 페이지 하단으로 이동
+
+h 도움말
+o 옵션
+p 프린트
+g 입력한 사이트로 이동
+m 메인으로
+q 종료
+/= 검색
+delete= 히스토리 리스트
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;tmux home: &lt;a href=&#34;https://lynx.browser.org&#34;&gt;https://lynx.browser.org&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>Luakit - lua 기반 웹브라우저</title>
+      <link>https://neosolaris.github.io/posts/luakit/</link>
+      <pubDate>Fri, 09 Dec 2022 07:07:46 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/luakit/</guid>
+      <description>&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
+&lt;p&gt;A fast, extensible, and customizable web browser&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;빠르고 다양한 확장과 설정이 가능한 웹 브라우저&lt;/li&gt;
+&lt;li&gt;Lua 기반 설정으로 개인환경을 구축하기에도 좋다.&lt;/li&gt;
+&lt;li&gt;vi(m)을 사용하는 데 익숙하다면 더욱 편리하게 사용할 수 있다.&lt;/li&gt;
+&lt;li&gt;가령, vi와 같이 normal, command line, insert mode를 제공한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;install&#34;&gt;Install&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Ubuntu, Debian&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo apt install luakit
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;build---ubuntudebian&#34;&gt;Build - Ubuntu/Debian&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Pre Requirement&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo apt install libgtk-3-dev libwebkit2gtk-4.0-dev libgstreamer1.0-dev
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Build&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;git clone https://github.com/luakit/luakit.git
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;cd luakit
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;make
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;sudo make install  # /usr/local/bin
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;quick-start-guide&#34;&gt;Quick-start Guide&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Using Luakit&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; luakit -h
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; luakit google.com
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;주요 명령어&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;i — insert mode.
+: — command mode.
+Ctrl-z — passthrough mode.
+o — open URL.
+t — open URL in new tab.
+w — open URL in new window.
+d/Ctrl-w — close tab.
+D/ZQ — close window.
+ZZ — save session and close window.
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;도움말 및 관련 문서 보기&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;F1&amp;gt;&lt;/code&gt; - normal mode&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;:help&lt;/code&gt; - command line mode&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;웹브라우징 - 사이트 열기 및 이동&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;:open URL&lt;/code&gt; - command line mode&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;o&lt;/code&gt; + URL입력 - normal mode (하단 command line에 입력)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;:tabopen URL&lt;/code&gt; - open URL in a new tab&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;:winopen URL&lt;/code&gt; - open URL in a new window&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;H&lt;/code&gt; - 이전 페이지로 이동&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;J&lt;/code&gt; - 이후 페이지로 이동&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;페이지 내 이동 및 페이지 키워드 검색&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;h&lt;/code&gt;,&lt;code&gt;j&lt;/code&gt;,&lt;code&gt;k&lt;/code&gt;,&lt;code&gt;l&lt;/code&gt; - 페이지 내 상하좌우 이동&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;space&amp;gt;&lt;/code&gt;, &lt;code&gt;&amp;lt;Ctrl-f&amp;gt;&lt;/code&gt; - 다음 화면 아래 이동&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;Ctrl-b&amp;gt;&lt;/code&gt; - 이전 화면 위로 이동&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;0&lt;/code&gt;, &lt;code&gt;gg&lt;/code&gt; - 페이지 맨 처음으로&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;G&lt;/code&gt; - 페이지 맨 끝으로&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/ Keyword&lt;/code&gt; - 페이지 내에서 Keyword 찾기&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;n&lt;/code&gt;,&lt;code&gt;N&lt;/code&gt; - 다음 Keyword, 이전 Keyword 이동&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;i&lt;/code&gt; - 입력(편집) 모드
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;Tab&amp;gt;&lt;/code&gt; - 페이지 내 아래로 링크이동&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;Shift-Tab&amp;gt;&lt;/code&gt; - 페이지 내 위로 링크이동&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;탭간 이동 및 제어&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;:tabopen URL&lt;/code&gt; - 새로운 탭으로 URL 열기&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;d&lt;/code&gt; - 현재 탭 닫기&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;u&lt;/code&gt; - 닫은 탭 다시 열기&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;J&lt;/code&gt; - 이전 탭으로 이동&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;K&lt;/code&gt; - 이후 탭으로 이동&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Bookmarks&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;B&lt;/code&gt; - 현재 페이지 북마크 추가&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;gb&lt;/code&gt; or &lt;code&gt;gB&lt;/code&gt; - 현재 탭 또는 새로운 탭에 북마크 페이지 열고 사이트 연결&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;configuration---설정&#34;&gt;Configuration - 설정&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Lua 설정 파일 우선 순위&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;luakit을 실행한 현재 디렉토리&lt;/li&gt;
+&lt;li&gt;lua 파일이 설치되어 있는 시스템 디렉토리: ex) &lt;code&gt;/usr/lib&lt;/code&gt;, &lt;code&gt;/usr/local/lib&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;luakit 설치 파일 위치: &lt;code&gt;/usr/share/luakit/lib/&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;luakit 사용자 디렉토리: &lt;code&gt;~/.config/luakit/&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;시스템 설정 디렉토리: &lt;code&gt;/etc/xdg/luakit/&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;위의 리스트를 확인하려면 luakit 브라우저에서 다음과 같이 확인할 수 있다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Firefox</title>
+      <link>https://neosolaris.github.io/posts/firefox/</link>
+      <pubDate>Tue, 23 Aug 2022 18:35:04 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/firefox/</guid>
+      <description>&lt;h2 id=&#34;install--setup&#34;&gt;Install &amp;amp; Setup&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;../ubuntu-firefox&#34;&gt;ubuntu firefox&lt;/a&gt; - 우분투에서 파이어폭스 설치&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;plugins&#34;&gt;Plugins&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;../markdown-viewer-webtext&#34;&gt;Markdown Viewer Webext&lt;/a&gt; - 로컬의 마크다운 파일을 html로 보기&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../vimium-c&#34;&gt;vimium c&lt;/a&gt; - vim 명령어 환경으로 파이어폭스 사용하기&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+  </channel>
+</rss>

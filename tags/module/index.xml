@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Module on Borisu Wiki Home</title>
+    <link>https://neosolaris.github.io/tags/module/</link>
+    <description>Recent content in Module on Borisu Wiki Home</description>
+    <image>
+      <title>Borisu Wiki Home</title>
+      <url>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.147.2</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 07 Nov 2022 22:28:56 +0900</lastBuildDate>
+    <atom:link href="https://neosolaris.github.io/tags/module/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>JSON - Lua Module</title>
+      <link>https://neosolaris.github.io/posts/lua-json/</link>
+      <pubDate>Mon, 07 Nov 2022 22:28:56 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/lua-json/</guid>
+      <description>&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;결론은 lua cjson이 가장 빠르다. 그 다음이 lunajson&lt;/li&gt;
+&lt;li&gt;dkjson은 순수 lua파일이고 단일 파일이다.&lt;/li&gt;
+&lt;li&gt;또 다른 하나는 json.lua 이다. 빠르다고 하는데&amp;hellip; 비교적 최신이다.&lt;/li&gt;
+&lt;li&gt;cjson은 빠르나 모듈 컴파일이 필요하고&lt;/li&gt;
+&lt;li&gt;lunajson은 다음으로 빠르고 순수 lua파일이지만 여러 개의 파일로 분리되어 있다.&lt;/li&gt;
+&lt;li&gt;dkjson은 셋 중 가장 퍼포먼스가 낮으나 단일 파일이다.&lt;/li&gt;
+&lt;li&gt;상황에 따라 적절히 사용하다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/grafi-tt/lunajson&#34;&gt;https://github.com/grafi-tt/lunajson&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://dkolf.de/src/dkjson-lua.fsl/home&#34;&gt;http://dkolf.de/src/dkjson-lua.fsl/home&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/rxi/json.lua&#34;&gt;https://github.com/rxi/json.lua&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://somedudesays.com/2019/12/using-json-with-lua&#34;&gt;https://somedudesays.com/2019/12/using-json-with-lua&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>CSV - Lua Module</title>
+      <link>https://neosolaris.github.io/posts/lua-csv/</link>
+      <pubDate>Mon, 07 Nov 2022 22:24:08 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/lua-csv/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;ftcsv 추천&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+  </channel>
+</rss>

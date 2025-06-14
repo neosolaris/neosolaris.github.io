@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Zsh on Borisu Wiki Home</title>
+    <link>https://neosolaris.github.io/tags/zsh/</link>
+    <description>Recent content in Zsh on Borisu Wiki Home</description>
+    <image>
+      <title>Borisu Wiki Home</title>
+      <url>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.147.2</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 02 Sep 2022 15:13:12 +0900</lastBuildDate>
+    <atom:link href="https://neosolaris.github.io/tags/zsh/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>zsh install and setup</title>
+      <link>https://neosolaris.github.io/posts/zsh-install/</link>
+      <pubDate>Fri, 02 Sep 2022 15:13:12 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/zsh-install/</guid>
+      <description>&lt;h2 id=&#34;zsh-설치&#34;&gt;zsh 설치&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo apt install zsh
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;기본쉘-변경&#34;&gt;기본쉘 변경&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; chsh -s /usr/bin/zsh
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;oh-my-zsh-설치&#34;&gt;Oh-My-Zsh 설치&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sh -c &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;테마변경&#34;&gt;테마변경&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; vim ~/.zshrc
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;source&lt;/span&gt; ~/.zsh
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;.zshrc&lt;/code&gt; 설정 변경&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;ZSH_THEME=&amp;#34;agnoster&amp;#34;
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;해결되지-않은-문제&#34;&gt;해결되지 않은 문제&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;기본쉘을 zsh로 했을 때 한글 입력이 되지 않는다.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../bash&#34;&gt;bash&lt;/a&gt;의 서브쉘로 실행했을 때는 한글 입력이 잘 된다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Ubuntu/Linux Oh my zsh 세팅
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://polarcompass.tistory.com/142&#34;&gt;https://polarcompass.tistory.com/142&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/powerline/fonts&#34;&gt;https://github.com/powerline/fonts&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>Zsh</title>
+      <link>https://neosolaris.github.io/posts/zsh/</link>
+      <pubDate>Tue, 23 Aug 2022 18:35:04 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/zsh/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;../zsh-install&#34;&gt;zsh install&lt;/a&gt; - zsh 설치 및 설정&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+  </channel>
+</rss>

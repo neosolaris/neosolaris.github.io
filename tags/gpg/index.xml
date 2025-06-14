@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Gpg on Borisu Wiki Home</title>
+    <link>https://neosolaris.github.io/tags/gpg/</link>
+    <description>Recent content in Gpg on Borisu Wiki Home</description>
+    <image>
+      <title>Borisu Wiki Home</title>
+      <url>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.147.2</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 09 Sep 2023 16:32:54 +0900</lastBuildDate>
+    <atom:link href="https://neosolaris.github.io/tags/gpg/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>GPG - GNU Privacy Guard</title>
+      <link>https://neosolaris.github.io/posts/gpg/</link>
+      <pubDate>Sat, 09 Sep 2023 16:32:54 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/gpg/</guid>
+      <description>&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;GNU Privacy Guard, is a public key cryptography implementation.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;install&#34;&gt;Install&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Alpine&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ doas apk add gpg gpg-agent
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;Ubuntu/Debian&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ sudo apt-get install gnupg
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;setup&#34;&gt;Setup&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;gpg 키생성: default로 진행: Real name과 Email 입력: 비밀번호 입력&lt;/li&gt;
+&lt;li&gt;암호화방식: 최신의 ECC(ed25519) 방식 사용&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ gpg --full-gen-key
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;create-a-revocation-certificate&#34;&gt;Create a Revocation Certificate&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;무효화 인증키 생성 (보안키분실시 사용, 따로 잘 보관)&lt;/li&gt;
+&lt;li&gt;파일모드가 600인지 확인&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ gpg --output ~/revocation.crt --gen-revoke your_email@address.com
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;how-to-import-other-users-public-keys&#34;&gt;How To Import Other Users’ Public Keys&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ gpg --import name_of_pub_key_file
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;how-to-verify-and-sign-keys&#34;&gt;How To Verify and Sign Keys&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ gpg --fingerprint your_email@address.com 
+$ gpg --list-keys       # 키리스트 확인
+$ gpg --armor --export  # public key 확인
+
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+
+mDMEZPwe2hYJwKYBBAHaRw8BAQdATXg1HK+wZW/sZlDXfs7KEJeEyX6YRKx9a60c
+P5pj4mwtAPwP2wq1ACEdj+V6VOH/1ZE5KlH7L8UkYlJ8lK+ZdZBK+wEAlknNS5O7
+...
+-----END PGP PUBLIC KEY BLOCK-----
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;encrypt-and-decrypt-messages-with-gpg&#34;&gt;Encrypt and Decrypt Messages with GPG&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Encrypt Messages&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ gpg --encrypt --sing --armor -r &amp;lt;your_email@address.com&amp;gt; &amp;lt;name_of_file&amp;gt;
+$ ls
+$ &amp;lt;name_of_file&amp;gt;.asc
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;Decrypt Messages&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ gpg &amp;lt;name_of_file&amp;gt;.asc
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;key-maintenance&#34;&gt;Key Maintenance&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ gpg --list-keys    # list available GPG keys
+$ gpg --refresh-keys # update the key information
+$ gpg --keyserver &amp;lt;key_server&amp;gt; --refresh-keys  # pull information from a specific key server
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;bakcup--restore&#34;&gt;Bakcup &amp;amp; Restore&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;backup (사용중인 PC)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;# tree로 ~/.gnupg 확인
+tree ~/.gnupg
+
+# 현재 사용중인 키 확인
+gpg --list-secret-keys --keyid-format LONG
+
+# 백업
+mkdir ~/gpg-backup
+gpg --export --export-options backup --output ~/gpg-backup/public-key.gpg
+gpg --export-secret-keys --export-options backup --output ~/gpg-backup/private-key.gpg
+gpg --export-ownertrust &amp;gt; ~/gpg-backup/trust_key.gpg
+tar cvf &amp;lt;USB-mount-path&amp;gt;/gpg-backup.tar gpg-backup
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;restore (다른 PC)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;# USB mount
+tar xvf &amp;lt;USB-mount-path&amp;gt;/gpg-backup.tar
+cd gpg-backup/
+
+# 키 복원
+gpg --import public-key.gpg
+gpg --import private-key.gpg
+gpg --import-ownertrust trust-key.gpg
+
+# 키 확인
+gpg --list-secret-keys --keyid-format LONG
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;passthe-standard-unix-password-manager-with-gpg&#34;&gt;PASS(The Standard Unix Password Manager) with gpg&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;pass는 유닉스에서 개인의 패스워드를 관리하는 표준 툴이다.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

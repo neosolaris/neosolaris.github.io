@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Config on Borisu Wiki Home</title>
+    <link>https://neosolaris.github.io/tags/config/</link>
+    <description>Recent content in Config on Borisu Wiki Home</description>
+    <image>
+      <title>Borisu Wiki Home</title>
+      <url>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.147.2</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 11 Jan 2023 14:42:57 +0900</lastBuildDate>
+    <atom:link href="https://neosolaris.github.io/tags/config/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Gimp Setup</title>
+      <link>https://neosolaris.github.io/posts/gimp-setup/</link>
+      <pubDate>Wed, 11 Jan 2023 14:42:57 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/gimp-setup/</guid>
+      <description>&lt;h2 id=&#34;ui-font--icons-size&#34;&gt;UI Font &amp;amp; Icons Size&lt;/h2&gt;
+&lt;p&gt;우분투 환경에서 김프를 실행하면 메뉴와 아이콘 등이 매우 작게 표시되는 경우가 있다. 이를 바로 잡는 방법을 설명한다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Change Font Size&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;자신이 사용하는 OS와 테마에 따라 gtkrc파일이 다를 수 있다. 아래는 ubuntu 22.04, gimp 2.x, Dark 테마의 경우이다. 자신의 환경에 맞게 숫자 값을 적당히 조절한다.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo vi /usr/share/gimp/2.0/themes/Dark/gtkrc
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;...
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;&lt;/span&gt;&lt;span class=&#34;gp&#34;&gt;#&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;font_name&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Sans 11&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;  font_name = &amp;#34;Sans 10&amp;#34;  # 위 주석 아래에 다음을 추가하고 저장
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;... 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;&lt;/span&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; gimp &lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;# 김프 재실행&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Change Icons Size&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;폰트를 먼저 조정이 끝나면 다음으로 아이콘을 수정하는 것이 편리하다. 김프에서 다음의 설정으로 이동한다.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

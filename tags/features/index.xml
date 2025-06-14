@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Features on Borisu Wiki Home</title>
+    <link>https://neosolaris.github.io/tags/features/</link>
+    <description>Recent content in Features on Borisu Wiki Home</description>
+    <image>
+      <title>Borisu Wiki Home</title>
+      <url>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.147.2</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 17 Dec 2022 05:56:20 +0900</lastBuildDate>
+    <atom:link href="https://neosolaris.github.io/tags/features/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>nvim 기본 제공 기능들</title>
+      <link>https://neosolaris.github.io/posts/nvim-features/</link>
+      <pubDate>Sat, 17 Dec 2022 05:56:20 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/nvim-features/</guid>
+      <description>&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;이문서는 현재 최신 버전 nvim 0.8.1을 기준으로 한다.&lt;/li&gt;
+&lt;li&gt;nvim의 기본 내장 기능으로도 매우 훌륭한 많은 것들이 제공된다.&lt;/li&gt;
+&lt;li&gt;중요한 플러그인과 기능이 내장된 것들도 많다.&lt;/li&gt;
+&lt;li&gt;중복되거나 불필요한 플러그인을 많이 설치하기보다는 기본 제공 기능을 충분히 살펴보고 가볍고 효율적으로 사용하는 것이 좋을 듯.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;features&#34;&gt;Features&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;lsp(Language Server Protocol) 내장&lt;/li&gt;
+&lt;li&gt;treesitter 내장&lt;/li&gt;
+&lt;li&gt;맨페이지와 터미널에뮬레이터: &lt;code&gt;:Man&lt;/code&gt;, &lt;code&gt;:terminal&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;vim과 차이 비교: &lt;code&gt;:help nvim-from-vim&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;훌륭한 defaults 기능들(아래 Defaults 섹션 참조)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;defaults&#34;&gt;Defaults&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;help로 확인&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;:help defaults
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;command-line highlighting&lt;/li&gt;
+&lt;li&gt;commands:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;:checkhealth   nvim의 상태 검사
+:dr[op] {file} Edit the first {file} in a window 
+:Man {name}    manpage view
+:match         can be invoked before highlight group is defined
+:source        reset config works with lua
+:write         with ++p flag creates parent directories
+:terminal      terminal support
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;맨페이지 보기 - &lt;code&gt;man.lua&lt;/code&gt;로 동작한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;:Man printf           printf() 함수 맨페이지 보기(수평)
+:vertical Man printf  창 수직분할 보기
+:Man {sect} {name}    섹션 지정 맨페이지
+:help Man             관련 도움말 보기
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;neovim.io &lt;a href=&#34;https://neovim.io/&#34;&gt;https://neovim.io/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+  </channel>
+</rss>

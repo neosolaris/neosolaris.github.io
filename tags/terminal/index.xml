@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Terminal on Borisu Wiki Home</title>
+    <link>https://neosolaris.github.io/tags/terminal/</link>
+    <description>Recent content in Terminal on Borisu Wiki Home</description>
+    <image>
+      <title>Borisu Wiki Home</title>
+      <url>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.147.2</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 18 Dec 2022 13:36:04 +0900</lastBuildDate>
+    <atom:link href="https://neosolaris.github.io/tags/terminal/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>tmux - 다중 터미널 관리 툴</title>
+      <link>https://neosolaris.github.io/posts/tmux/</link>
+      <pubDate>Sun, 18 Dec 2022 13:36:04 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/tmux/</guid>
+      <description>&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;다중 터미널 관리 프로그램&lt;/li&gt;
+&lt;li&gt;원격지에서 다양한 세션과 윈도우와 pane을 만들어 유지 관리.&lt;/li&gt;
+&lt;li&gt;다중 작업을 한 터미널 화면을 통해 구현할 수 있다.&lt;/li&gt;
+&lt;li&gt;세션을 유지하며 필요시 화면에 바로 띄울 수 있다.&lt;/li&gt;
+&lt;li&gt;터미널을 꺼도 세션이 살아있고 다시 연결할 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;install&#34;&gt;Install&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Debian, Ubuntu&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo apt install tmux
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Alpine&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; doas apk add tmux
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;usage&#34;&gt;Usage&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;기본 명령&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; tmux     &lt;span class=&#34;c1&#34;&gt;# 실행&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; tmux ls  &lt;span class=&#34;c1&#34;&gt;# 세션, 윈도우 등 확인  &lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; tmux a   &lt;span class=&#34;c1&#34;&gt;# detatch된 세션을 다시 attatch 하기&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;기본키(이하 생략) - &lt;code&gt;Ctrl&lt;/code&gt;+&lt;code&gt;b&lt;/code&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Lynx - 터미널 텍스트 브라우저</title>
+      <link>https://neosolaris.github.io/posts/lynx/</link>
+      <pubDate>Sun, 18 Dec 2022 12:47:45 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/lynx/</guid>
+      <description>&lt;h2 id=&#34;intro&#34;&gt;INTRO&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;예전에 터미널 상에서 웹문서를 참고하기 위해 사용.&lt;/li&gt;
+&lt;li&gt;현재 utf-8지원 및 컬러 지원, vi key binding 지원 등 다양한 기능 보유.&lt;/li&gt;
+&lt;li&gt;광고나 현란한 그림들, 그리고 하얀 화면으로부터 눈을 보호하자.&lt;/li&gt;
+&lt;li&gt;기술문서나 신문기사 또는 문서 위주의 작업을 주로 할 때 빠르고 간결.&lt;/li&gt;
+&lt;li&gt;CPU와 MEMORY를 타 브라우저 보다 적게 사용하는 그야말로 친환경 브라우저.&lt;/li&gt;
+&lt;li&gt;tmux에서 vim과 함께 사용하면 환상의 궁합이라 말할 수 있겠다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;install&#34;&gt;INSTALL&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Debian, Ubuntu&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo apt install lynx
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; lynx --version
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; lynx duckduckgo.com
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Alpine&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; doas apk add lynx
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;setup&#34;&gt;SETUP&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Vi Key 설정 - 화면 이동을 hjkl로 변경&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;1. 실행 후 `o` 명령으로 옵션 설정
+2. VI keys -&amp;gt; [ON] 으로
+3. Line edit style -&amp;gt; [Bash-like Bindings] 로 설정
+4. 화면 상단에 Save options to disk: [x] 표시
+5. 화면 가장 윗줄에 Accept Changes 클릭
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;usage&#34;&gt;Usage&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;화살키 &amp;lt;- 이전 웹페이지로 이동 
+화살키 -&amp;gt; 이후 웹페이지로 이동
+화살키 up 페이지 상단으로 이동
+화살키 down 페이지 하단으로 이동
+
+h 도움말
+o 옵션
+p 프린트
+g 입력한 사이트로 이동
+m 메인으로
+q 종료
+/= 검색
+delete= 히스토리 리스트
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;tmux home: &lt;a href=&#34;https://lynx.browser.org&#34;&gt;https://lynx.browser.org&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+  </channel>
+</rss>
