@@ -11,7 +11,7 @@
     </image>
     <generator>Hugo -- 0.147.2</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 14 Jun 2025 09:26:15 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 15 Jun 2025 09:15:01 +0900</lastBuildDate>
     <atom:link href="https://neosolaris.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About</title>
@@ -26,6 +26,29 @@
 &lt;li&gt;최종 목표는 손쉬운 문서 작성과 관리를 단순화 하는 것.&lt;/li&gt;
 &lt;li&gt;문서는 시간이 지날 수록 완성되고 조직화될 것이다.&lt;/li&gt;
 &lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>과거 현재 죽은 자 산 자 - 한강</title>
+      <link>https://neosolaris.github.io/posts/hangang-novelprize/</link>
+      <pubDate>Tue, 10 Dec 2024 14:46:16 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/hangang-novelprize/</guid>
+      <description>&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;세계는 왜 이토록 폭력적이고 고통스러운가?
+동시에
+세계는 어떻게 이렇게 아름다운가?
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;한강-작가의-노벨문학상-수상-인터뷰-중에서&#34;&gt;한강 작가의 노벨문학상 수상 인터뷰 중에서&lt;/h2&gt;
+&lt;p&gt;그렇게 자료 작업을 하던 시기에 내가 떠올리곤 했던 두 개의 질문이 있다.
+이십대 중반에 일기장을 바꿀 때마다 맨 앞페이지에 적었던 문장들이다.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;현재가 과거를 도울 수 있는가?
+산 자가 죽은 자를 구할 수 있는가?
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;자료을 읽을수록 이 질문들은 불가능한 것으로 판명되는 듯했다. 인간성의 가장
+어두운 부분들을 지속적으로 접하며, 오래 전에 금기 갔다고 생각했던 인간성에 대한
+믿음이 마저 깨어지고 부서지는 경험을 했기 때문이다. 이 소설을 쓰는 일을 더이상
+진척할 수 없겠다고 거의 체념했을 때 한 젊은 야학 교사의 일기를 읽었다.
+1980년 오월 당시 광주에서 군인들이 잠시 물러간 뒤 열흘 동안 이루어졌던
+시민자치의 절대공동체에 참여했으며, 군인들이 되돌아오기로 예고된 새벽까지
+도청 옆 YMCA에 남아 있다 살해되었던, 수줍은 성격의 조용한 사람이었다는 박용준은
+마지막 밤에 이렇게 썼다. &amp;ldquo;하느님, 왜 저에게는 양심이 있어 이렇게 저를 찌르고
+아프게 하는 것입니까? 저는 살고 싶습니다.&amp;rdquo;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Nextvi - Small and Simple Editor</title>
@@ -5763,7 +5786,12 @@ WineHQ 최신버전
 &lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 아이콘 표시 및 구조 파악해서 이를 적용하기&lt;/li&gt;
 &lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 2022-09-08 - 내용 수정, 그림파일 링크 관련 추가&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img alt=&#34;Papermod Screen Shot&#34; loading=&#34;lazy&#34; src=&#34;../../images/papermod.png&#34;&gt;&lt;/p&gt;
+&lt;figure&gt;
+    &lt;img loading=&#34;lazy&#34; src=&#34;https://user-images.githubusercontent.com/21258296/114303440-bfc0ae80-9aeb-11eb-8cfa-48a4bb385a6d.png&#34;/&gt; &lt;figcaption&gt;
+            PaperMod screen shot
+        &lt;/figcaption&gt;
+&lt;/figure&gt;
+
 &lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;hugo의 테마 중에 가장 간결하고 안정적이며 많은 사람들이 사용하고 있다.&lt;/li&gt;
@@ -6922,13 +6950,17 @@ extension &amp;gt; hide top bar 검색 후 설치(Click to change: ON)&lt;/li&gt
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;../edge&#34;&gt;edge&lt;/a&gt; - 윈도우즈 브라우저&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;../firefox&#34;&gt;firefox&lt;/a&gt; - 브라우저는 역시 파이어폭스&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../hugo&#34;&gt;hugo&lt;/a&gt; - 개인 블로그를 만들 수 있는 html 웹개발 툴, go로 만듦&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../hugo&#34;&gt;hugo&lt;/a&gt; - 개인 블로그를 만들 수 있는 html 웹개발 툴, go로 만듦
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;../hugo-papermod&#34;&gt;hugo-papermod&lt;/a&gt; - Hugo Theme, Simple clean charm&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../vimwiki-hugo-github&#34;&gt;vimwiki hugo github&lt;/a&gt; - vi에서 위키를 만들고 웹으로 변환해서 블로그홈에 올리는 방법&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;../jekyll&#34;&gt;jekyll&lt;/a&gt; - 위와 같음, ruby로 만듦&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;../luakit&#34;&gt;luakit&lt;/a&gt; - 가볍고 빠른 브라우저, 루아로 설정가능, vi 스타일의 명령 제어&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;../lynx&#34;&gt;lynx&lt;/a&gt; - 터미널 텍스트 브라우저&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;../openresty&#34;&gt;openresty&lt;/a&gt; - 웹개발 인터페이스: luajit + nginx&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;../vimwiki&#34;&gt;vimwiki&lt;/a&gt; - vim에서 wiki 문서 작성 및 관리하기&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../vimwiki-hugo-github&#34;&gt;vimwiki hugo github&lt;/a&gt; - vi에서 위키를 만들고 웹으로 변환해서 블로그홈에 올리는 방법&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;programming&#34;&gt;PROGRAMMING&lt;/h2&gt;
 &lt;ul&gt;

@@ -11,7 +11,7 @@
     </image>
     <generator>Hugo -- 0.147.2</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 06 Oct 2022 00:52:29 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 13 Jun 2025 18:26:21 +0900</lastBuildDate>
     <atom:link href="https://neosolaris.github.io/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>PaperMod - Hugo Theme</title>
@@ -23,7 +23,12 @@
 &lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 아이콘 표시 및 구조 파악해서 이를 적용하기&lt;/li&gt;
 &lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 2022-09-08 - 내용 수정, 그림파일 링크 관련 추가&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img alt=&#34;Papermod Screen Shot&#34; loading=&#34;lazy&#34; src=&#34;../../images/papermod.png&#34;&gt;&lt;/p&gt;
+&lt;figure&gt;
+    &lt;img loading=&#34;lazy&#34; src=&#34;https://user-images.githubusercontent.com/21258296/114303440-bfc0ae80-9aeb-11eb-8cfa-48a4bb385a6d.png&#34;/&gt; &lt;figcaption&gt;
+            PaperMod screen shot
+        &lt;/figcaption&gt;
+&lt;/figure&gt;
+
 &lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;hugo의 테마 중에 가장 간결하고 안정적이며 많은 사람들이 사용하고 있다.&lt;/li&gt;
