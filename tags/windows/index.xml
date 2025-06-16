@@ -64,9 +64,7 @@
       <link>https://neosolaris.github.io/posts/docker-windows/</link>
       <pubDate>Thu, 03 Aug 2023 17:04:47 +0900</pubDate>
       <guid>https://neosolaris.github.io/posts/docker-windows/</guid>
-      <description>&lt;ul&gt;
-&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 23-08-08: 오타 수정, Tip 수정&lt;/li&gt;
-&lt;/ul&gt;
+      <description>&lt;p&gt;last updated: {{ &amp;ldquo;1712974295&amp;rdquo; | date: &amp;ldquo;%Y-%m-%d %H:%M&amp;rdquo; }}&lt;/p&gt;
 &lt;h2 id=&#34;개요&#34;&gt;개요&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;윈도우즈에서 도커를 사용하는 방법을 설명한다.&lt;/li&gt;
