@@ -68,7 +68,8 @@ make --version
       <link>https://neosolaris.github.io/posts/alpine/</link>
       <pubDate>Tue, 08 Aug 2023 15:58:42 +0900</pubDate>
       <guid>https://neosolaris.github.io/posts/alpine/</guid>
-      <description>&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
+      <description>&lt;p&gt;last updated: {{ &amp;ldquo;1718885075&amp;rdquo; | date: &amp;ldquo;%Y-%m-%d %H:%M&amp;rdquo; }}&lt;/p&gt;
+&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Docker에서 많이 사용되어 유명해졌다.&lt;/li&gt;
 &lt;li&gt;다음은 알파인 리눅스의 세가지 특징이자 철학이다.
@@ -82,6 +83,7 @@ make --version
 &lt;h2 id=&#34;install&#34;&gt;INSTALL&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;../alpine_install&#34;&gt;alpine_install&lt;/a&gt; - 설치&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../alpine_upgrade&#34;&gt;alpine_upgrade&lt;/a&gt; - 업그레이드&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;../alpine_devel&#34;&gt;alpine_devel&lt;/a&gt; - 개발환경&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;../alpine_wsl2&#34;&gt;alpine_wsl2&lt;/a&gt; - 윈도우즈 WSL2에서 alpine 설치&lt;/li&gt;
 &lt;/ul&gt;

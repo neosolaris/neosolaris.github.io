@@ -11,8 +11,51 @@
     </image>
     <generator>Hugo -- 0.147.2</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 13 Jun 2025 18:26:21 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 16 Jun 2025 03:16:18 +0900</lastBuildDate>
     <atom:link href="https://neosolaris.github.io/tags/alpine/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Alpine Linux Upgrade</title>
+      <link>https://neosolaris.github.io/posts/alpine_upgrade/</link>
+      <pubDate>Thu, 20 Jun 2024 03:06:58 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/alpine_upgrade/</guid>
+      <description>&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
+&lt;p&gt;알파인 리눅스에서 패키지만 업그레이드 하거나 OS 자체를 업그레이드 하는 방법을 설명한다.&lt;/p&gt;
+&lt;h2 id=&#34;패키지-업그레이드&#34;&gt;패키지 업그레이드&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;# apk update 
+# apk upgrade
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;os-업그레이드&#34;&gt;OS 업그레이드&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;기존 패키지 업그레이드&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;# apk update
+# apk upgrade
+&lt;/code&gt;&lt;/pre&gt;&lt;ol&gt;
+&lt;li&gt;저장소 설정 파일 수정 (ex. 3.18 -&amp;gt; 3.19)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;# vi /etc/apk/repositories
+&lt;/code&gt;&lt;/pre&gt;&lt;ol&gt;
+&lt;li&gt;인덱스 업데이트 및 os 업그레이드&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;# apk update
+# apk upgrade --available &amp;amp;&amp;amp; sync
+# reboot
+&lt;/code&gt;&lt;/pre&gt;&lt;ol&gt;
+&lt;li&gt;릴리즈 정보 업그레이드&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;# rm /etc/alpine-release
+# apk upgrade --no-self-upgrade --available --simulate
+# apk upgrade --available
+# sync
+# reboot
+...
+# cat /etc/alpine-release
+# cat /etc/issue
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;reference&#34;&gt;REFERENCE&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;How to upgrade Alpine Linux 3.19 to 3.20&lt;br&gt;
+&lt;a href=&#34;https://www.cyberciti.biz/faq/how-to-upgrade-alpine-linux-3-4-to-3-5-xx/&#34;&gt;https://www.cyberciti.biz/faq/how-to-upgrade-alpine-linux-3-4-to-3-5-xx/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
     <item>
       <title>Windows WSL2 Alpine Install</title>
       <link>https://neosolaris.github.io/posts/alpine_wsl2/</link>
@@ -126,7 +169,8 @@ make --version
       <link>https://neosolaris.github.io/posts/alpine/</link>
       <pubDate>Tue, 08 Aug 2023 15:58:42 +0900</pubDate>
       <guid>https://neosolaris.github.io/posts/alpine/</guid>
-      <description>&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
+      <description>&lt;p&gt;last updated: {{ &amp;ldquo;1718885075&amp;rdquo; | date: &amp;ldquo;%Y-%m-%d %H:%M&amp;rdquo; }}&lt;/p&gt;
+&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Docker에서 많이 사용되어 유명해졌다.&lt;/li&gt;
 &lt;li&gt;다음은 알파인 리눅스의 세가지 특징이자 철학이다.
@@ -140,6 +184,7 @@ make --version
 &lt;h2 id=&#34;install&#34;&gt;INSTALL&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;../alpine_install&#34;&gt;alpine_install&lt;/a&gt; - 설치&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../alpine_upgrade&#34;&gt;alpine_upgrade&lt;/a&gt; - 업그레이드&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;../alpine_devel&#34;&gt;alpine_devel&lt;/a&gt; - 개발환경&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;../alpine_wsl2&#34;&gt;alpine_wsl2&lt;/a&gt; - 윈도우즈 WSL2에서 alpine 설치&lt;/li&gt;
 &lt;/ul&gt;
