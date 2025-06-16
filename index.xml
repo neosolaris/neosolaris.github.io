@@ -11,8 +11,39 @@
     </image>
     <generator>Hugo -- 0.147.2</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 16 Jun 2025 03:16:18 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 16 Jun 2025 16:27:08 +0900</lastBuildDate>
     <atom:link href="https://neosolaris.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Wezterm - Terminal Emulator</title>
+      <link>https://neosolaris.github.io/posts/wezterm/</link>
+      <pubDate>Mon, 16 Jun 2025 16:27:08 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/wezterm/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;WezTerm&lt;/strong&gt;은 GPU 가속을 지원하는 고성능 터미널 에뮬레이터로, Windows, macOS, Linux 등 다양한 운영체제에서 사용할 수 있다.
+개인적으로 더욱 좋은 것은 Lua 기반의 설정을 제공한다는 것이다.
+탭/분할 창, 이미지 표시, SSH 멀티플렉싱 등 현대적인 다양한 기능을 제공합니다.&lt;/p&gt;
+&lt;h2 id=&#34;소개-이유&#34;&gt;소개 이유&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;빠른 화면 속도&lt;/li&gt;
+&lt;li&gt;Lua로 설정&lt;/li&gt;
+&lt;li&gt;tmux를 대체할 수 있고 오히려 더 편리한 사용성&lt;/li&gt;
+&lt;li&gt;터미널 내 복사, 붙여넣기, 검색 등의 편리함&lt;/li&gt;
+&lt;li&gt;다양한 테마와 Nerd Font 기본 지원, 폰트 별도 설치 불필요&lt;/li&gt;
+&lt;li&gt;왜 그동안 이걸 몰랐을까? 정말 모던하고 깔끔하고 안정적이고 풍부한 기능 제공&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;주요-기능&#34;&gt;&lt;strong&gt;주요 기능&lt;/strong&gt;&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;크로스 플랫폼 지원&lt;/strong&gt;: Windows, macOS, Linux.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;GPU 가속&lt;/strong&gt;: 부드러운 렌더링 성능.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;탭/분할 창&lt;/strong&gt;: 다중 작업 환경 지원.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Lua 설정&lt;/strong&gt;: 사용자 정의 가능한 테마, 키 바인딩, 동작.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;이미지/폰트 지원&lt;/strong&gt;: Sixel, Iterm2 이미지 및 Nerd Fonts.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;SSH 멀티플렉싱&lt;/strong&gt;: 단일 연결로 다중 세션 관리.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;설치&#34;&gt;설치&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;다음 링크에 여러 플랫폼 별 설치법이 나와 있다.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>About</title>
       <link>https://neosolaris.github.io/about/</link>
@@ -7044,13 +7075,14 @@ extension &amp;gt; hide top bar 검색 후 설치(Click to change: ON)&lt;/li&gt
 &lt;/ul&gt;
 &lt;h2 id=&#34;tools&#34;&gt;Tools&lt;/h2&gt;
 &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;../git-crypt&#34;&gt;git crypt&lt;/a&gt; - Git Crypt: 깃허브에 업로드시에 자동 암호화하고 다운로드시에 복호화해주는 툴&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;../gpg&#34;&gt;gpg&lt;/a&gt; - Gnu Privacy Guard/ GNU 개인 보호&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;../rclone&#34;&gt;rclone&lt;/a&gt; - remote clone, 지역과 원격지간의 데이터 복사, 동기화 툴&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;../rtorrent&#34;&gt;rtorrent&lt;/a&gt; - Command line Torrent client&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;../tmux&#34;&gt;tmux&lt;/a&gt; - 다중 터미널 관리 툴&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;../tree&#34;&gt;tree&lt;/a&gt; - 폴더와 파일을 나무구조로 보여주는 명령어&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../wezterm&#34;&gt;wezterm&lt;/a&gt; - new powerful terminal emulator&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;../yadm&#34;&gt;yadm&lt;/a&gt; - Yet Another Dotfiles Manager: &lt;code&gt;.foo&lt;/code&gt; 형식의 주요 설정파일을 git으로 쉽게 관리하는 툴&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../git-crypt&#34;&gt;git crypt&lt;/a&gt; - Git Crypt: 깃허브에 업로드시에 자동 암호화하고 다운로드시에 복호화해주는 툴&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;editor&#34;&gt;Editor&lt;/h2&gt;
 &lt;ul&gt;

@@ -2,53 +2,65 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://neosolaris.github.io/</loc>
+    <lastmod>2025-06-16T16:27:08+09:00</lastmod>
+  </url><url>
+    <loc>https://neosolaris.github.io/categories/</loc>
+    <lastmod>2025-06-16T16:27:08+09:00</lastmod>
+  </url><url>
+    <loc>https://neosolaris.github.io/posts/</loc>
+    <lastmod>2025-06-16T16:27:08+09:00</lastmod>
+  </url><url>
+    <loc>https://neosolaris.github.io/tags/program/</loc>
+    <lastmod>2025-06-16T16:27:08+09:00</lastmod>
+  </url><url>
+    <loc>https://neosolaris.github.io/tags/</loc>
+    <lastmod>2025-06-16T16:27:08+09:00</lastmod>
+  </url><url>
+    <loc>https://neosolaris.github.io/tags/terminal/</loc>
+    <lastmod>2025-06-16T16:27:08+09:00</lastmod>
+  </url><url>
+    <loc>https://neosolaris.github.io/categories/tools/</loc>
+    <lastmod>2025-06-16T16:27:08+09:00</lastmod>
+  </url><url>
+    <loc>https://neosolaris.github.io/posts/wezterm/</loc>
+    <lastmod>2025-06-16T16:27:08+09:00</lastmod>
+  </url><url>
     <loc>https://neosolaris.github.io/about/</loc>
     <lastmod>2025-06-13T18:26:21+09:00</lastmod>
   </url><url>
-    <loc>https://neosolaris.github.io/</loc>
-    <lastmod>2025-06-16T03:16:18+09:00</lastmod>
-  </url><url>
-    <loc>https://neosolaris.github.io/categories/</loc>
-    <lastmod>2025-06-16T03:16:18+09:00</lastmod>
-  </url><url>
     <loc>https://neosolaris.github.io/tags/hangang/</loc>
-    <lastmod>2025-06-15T18:16:48+09:00</lastmod>
+    <lastmod>2025-06-16T12:17:23+09:00</lastmod>
   </url><url>
     <loc>https://neosolaris.github.io/tags/novel/</loc>
-    <lastmod>2025-06-15T18:16:48+09:00</lastmod>
-  </url><url>
-    <loc>https://neosolaris.github.io/posts/</loc>
-    <lastmod>2025-06-16T03:16:18+09:00</lastmod>
-  </url><url>
-    <loc>https://neosolaris.github.io/tags/</loc>
-    <lastmod>2025-06-16T03:16:18+09:00</lastmod>
+    <lastmod>2025-06-16T12:17:23+09:00</lastmod>
   </url><url>
     <loc>https://neosolaris.github.io/posts/hangang-novelprize/</loc>
-    <lastmod>2025-06-15T18:16:48+09:00</lastmod>
+    <lastmod>2025-06-16T12:17:23+09:00</lastmod>
   </url><url>
     <loc>https://neosolaris.github.io/tags/%EB%85%B8%EB%B2%A8%EC%83%81/</loc>
-    <lastmod>2025-06-15T18:16:48+09:00</lastmod>
+    <lastmod>2025-06-16T12:17:23+09:00</lastmod>
   </url><url>
     <loc>https://neosolaris.github.io/categories/%EC%83%9D%EA%B0%81%ED%95%98%EA%B8%B0/</loc>
-    <lastmod>2025-06-15T18:16:48+09:00</lastmod>
+    <lastmod>2025-06-16T12:17:23+09:00</lastmod>
   </url><url>
     <loc>https://neosolaris.github.io/tags/%ED%95%9C%EA%B0%95/</loc>
-    <lastmod>2025-06-15T18:16:48+09:00</lastmod>
+    <lastmod>2025-06-16T12:17:23+09:00</lastmod>
   </url><url>
     <loc>https://neosolaris.github.io/categories/alpine/</loc>
-    <lastmod>2025-06-16T03:16:18+09:00</lastmod>
+    <lastmod>2025-06-16T12:17:23+09:00</lastmod>
   </url><url>
     <loc>https://neosolaris.github.io/tags/alpine/</loc>
-    <lastmod>2025-06-16T03:16:18+09:00</lastmod>
+    <lastmod>2025-06-16T12:17:23+09:00</lastmod>
   </url><url>
     <loc>https://neosolaris.github.io/posts/alpine_upgrade/</loc>
-    <lastmod>2025-06-16T03:16:18+09:00</lastmod>
+    <lastmod>2025-06-16T12:17:23+09:00</lastmod>
   </url><url>
     <loc>https://neosolaris.github.io/tags/linux/</loc>
-    <lastmod>2025-06-16T03:16:18+09:00</lastmod>
+    <lastmod>2025-06-16T12:17:23+09:00</lastmod>
   </url><url>
     <loc>https://neosolaris.github.io/tags/upgrade/</loc>
-    <lastmod>2025-06-16T03:16:18+09:00</lastmod>
+    <lastmod>2025-06-16T12:17:23+09:00</lastmod>
   </url><url>
     <loc>https://neosolaris.github.io/categories/editor/</loc>
     <lastmod>2025-06-15T23:33:11+09:00</lastmod>
@@ -123,7 +135,7 @@
     <lastmod>2025-06-13T18:26:21+09:00</lastmod>
   </url><url>
     <loc>https://neosolaris.github.io/categories/linux/</loc>
-    <lastmod>2025-06-13T18:26:21+09:00</lastmod>
+    <lastmod>2025-06-16T12:17:23+09:00</lastmod>
   </url><url>
     <loc>https://neosolaris.github.io/tags/windows/</loc>
     <lastmod>2025-06-13T18:26:21+09:00</lastmod>
@@ -174,9 +186,6 @@
     <lastmod>2025-06-13T18:26:21+09:00</lastmod>
   </url><url>
     <loc>https://neosolaris.github.io/tags/fritzing/</loc>
-    <lastmod>2025-06-13T18:26:21+09:00</lastmod>
-  </url><url>
-    <loc>https://neosolaris.github.io/categories/tools/</loc>
     <lastmod>2025-06-13T18:26:21+09:00</lastmod>
   </url><url>
     <loc>https://neosolaris.github.io/tags/tools/</loc>
@@ -414,7 +423,7 @@
     <lastmod>2025-06-13T18:26:21+09:00</lastmod>
   </url><url>
     <loc>https://neosolaris.github.io/posts/alpine/</loc>
-    <lastmod>2025-06-13T18:26:21+09:00</lastmod>
+    <lastmod>2025-06-16T12:17:23+09:00</lastmod>
   </url><url>
     <loc>https://neosolaris.github.io/categories/docker/</loc>
     <lastmod>2025-06-13T18:26:21+09:00</lastmod>
@@ -550,9 +559,6 @@
   </url><url>
     <loc>https://neosolaris.github.io/posts/%EA%B3%BC%ED%95%99%EC%A0%81%EC%9A%B0%EC%A3%BC%EC%83%81/</loc>
     <lastmod>2022-12-28T07:20:16+09:00</lastmod>
-  </url><url>
-    <loc>https://neosolaris.github.io/tags/terminal/</loc>
-    <lastmod>2025-06-13T18:26:21+09:00</lastmod>
   </url><url>
     <loc>https://neosolaris.github.io/tags/tmux/</loc>
     <lastmod>2025-06-13T18:26:21+09:00</lastmod>
@@ -1302,7 +1308,7 @@
     <lastmod>2025-06-13T18:26:21+09:00</lastmod>
   </url><url>
     <loc>https://neosolaris.github.io/posts/windex/</loc>
-    <lastmod>2025-06-15T23:33:11+09:00</lastmod>
+    <lastmod>2025-06-16T12:17:23+09:00</lastmod>
   </url><url>
     <loc>https://neosolaris.github.io/tags/zenbook/</loc>
     <lastmod>2025-06-13T18:26:21+09:00</lastmod>
