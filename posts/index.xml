@@ -19,7 +19,7 @@
       <pubDate>Tue, 17 Jun 2025 23:40:39 +0900</pubDate>
       <guid>https://neosolaris.github.io/posts/the-windmills-of-your-mind/</guid>
       <description>&lt;p&gt;이곡을 알게 된 계기는 세브란스:단절 시즌 2 마지막 장면에서이다. 상황과 잘 들어 맞는 것 같다. 노래 가사나 가수의 목소리, 감정들과 무언가 무상한 인생사 등 여러가지가 마음 속에서 출렁거리게 한다.&lt;/p&gt;
-&lt;h2 id=&#34;hahahugoshortcode112s0hbhb&#34;&gt;&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+&lt;h2 id=&#34;hahahugoshortcode122s0hbhb&#34;&gt;&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
       &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/Wc-V5-EVKc4?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;
     &lt;/div&gt;
 &lt;/h2&gt;
@@ -5984,6 +5984,132 @@ WineHQ 최신버전
 &lt;p&gt;그러나 실제로 적용해도 페이지는 변화하지 않는다.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>PaperMod - Hugo Theme</title>
+      <link>https://neosolaris.github.io/posts/hugo_papermod/</link>
+      <pubDate>Wed, 24 Aug 2022 17:43:38 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/hugo_papermod/</guid>
+      <description>&lt;h2 id=&#34;todo&#34;&gt;TODO&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 2022-09-08 - 내용 수정, 그림파일 링크 관련 추가&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure&gt;
+    &lt;img loading=&#34;lazy&#34; src=&#34;https://user-images.githubusercontent.com/21258296/114303440-bfc0ae80-9aeb-11eb-8cfa-48a4bb385a6d.png&#34;/&gt; &lt;figcaption&gt;
+            PaperMod screen shot
+        &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;hugo의 테마 중에 가장 간결하고 안정적이며 많은 사람들이 사용하고 있다.&lt;/li&gt;
+&lt;li&gt;hugo 프로젝트는 &lt;code&gt;~/www&lt;/code&gt;로 가정한다.&lt;/li&gt;
+&lt;li&gt;주의할 것은 hugo의 구조가 &lt;code&gt;~/www/contents/&lt;/code&gt;이하에 markdown 파일을 넣어주어야 하고, 이하 폴더는 적절히 만들되 &lt;code&gt;index.md&lt;/code&gt;파일은 만들면 웹페이지 메인 화면에 내용이 뜨질 않는다는 점이다.&lt;/li&gt;
+&lt;li&gt;설정은 &lt;code&gt;~/www/config.yml&lt;/code&gt;이다.&lt;/li&gt;
+&lt;li&gt;설정을 변경하면 &lt;code&gt;hugo -D server&lt;/code&gt; 동작시 자동으로 반영된다.&lt;/li&gt;
+&lt;li&gt;만약 설정 변경 사항이 브라우저에서 보이지 않으면 서버를 재실행 한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;install-and-update&#34;&gt;Install and Update&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Install&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; ~/www
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; git clone https://github.com/adityatelange/hugo-PaperMod themes/PaperMod --depth&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Update&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; themes/PaperMod
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; git pull
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;setup-관련-링크&#34;&gt;Setup 관련 링크&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;아래 사이트에 &lt;code&gt;config.yml&lt;/code&gt; 및 &lt;code&gt;post.md&lt;/code&gt; 샘플이 있으니 참고한다.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://adityatelange.github.io/hugo-PaperMod/posts/papermod/papermod-installation/&#34;&gt;https://adityatelange.github.io/hugo-PaperMod/posts/papermod/papermod-installation/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;테마-설정&#34;&gt;테마 설정&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;papermod 의 테마는 light/dark/auto 가 있다.&lt;/li&gt;
+&lt;li&gt;홈화면 좌측 상단에 해/달 아이콘 클릭&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yml&#34; data-lang=&#34;yml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;baseURL&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;https://your_idname.github.io/&amp;#34;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# 자신의 깃페이지 URL&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;title&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;My Blog and wiki&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# 블로그홈 제목&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;paginate&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;             &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# 홈에서 보여줄 블로그 표시 갯수&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;theme&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;PaperMod&amp;#34;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;       &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# 테마 PaperMod로 지정&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;params&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# defaultTheme: light&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# defaultTheme: light&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;defaultTheme&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;auto   &lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# auto로 설정하면 사용자가 바꿀 수 있다.&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# disableThemeToggle: true  # 해/달 아이콘을 보이지 않게 하기&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;메뉴설정&#34;&gt;메뉴설정&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;홈 우측 상단 메뉴를 다음과 같이 추가한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yml&#34; data-lang=&#34;yml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;menu&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;- &lt;span class=&#34;nt&#34;&gt;identifier&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;categories   &lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# 블로그 카테고리 메뉴&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;categories&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;url&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;/categories/&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;weight&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;- &lt;span class=&#34;nt&#34;&gt;identifier&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;search       &lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# 블로그 검색 메뉴&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;Search&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;url&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;/search&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;weight&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;30&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;- &lt;span class=&#34;nt&#34;&gt;identifier&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;tags         &lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# 블로그 태그 메뉴&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;tags&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;url&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;/tags/&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;weight&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;20&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;- &lt;span class=&#34;nt&#34;&gt;identifier&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;archives         &lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# 블로그 태그 메뉴&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;tags&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;url&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;/tags/&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;weight&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;20&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Archive Page - 아카이브 페이지, 날짜별로 올린 포스트문서가 정리됨&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; cat &amp;lt;&amp;lt; EOF &amp;gt; ~/www/content/archives.md
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;---
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;title: &amp;#34;Archive&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;layout: &amp;#34;archives&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;&lt;/span&gt;&lt;span class=&#34;gp&#34;&gt;#&lt;/span&gt; url: &lt;span class=&#34;s2&#34;&gt;&amp;#34;/archives&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;summary: &amp;#34;archives&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;---
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;EOF
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Search Page - 검색페이지, 퍼지 스타일의 빠른 검색&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; cat &amp;lt;&amp;lt; EOF &amp;gt; ~/www/content/search.md
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;---
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;title: &amp;#34;Search&amp;#34; # in any language you want
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;layout: &amp;#34;search&amp;#34; # is necessary
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;&lt;/span&gt;&lt;span class=&#34;gp&#34;&gt;#&lt;/span&gt; url: &lt;span class=&#34;s2&#34;&gt;&amp;#34;/archive&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;#&lt;/span&gt; description: &lt;span class=&#34;s2&#34;&gt;&amp;#34;Description for Search&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;summary: &amp;#34;search&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;placeholder: &amp;#34;검색어를 입력하세요&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;---
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;EOF
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;tags와 categories는 올릴 포스트문서 &lt;code&gt;post.md&lt;/code&gt; 등의 frontmatter에 기록하면 자동으로 분류되고 홈 상단 메뉴에서 볼 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;post-cover-image&#34;&gt;Post Cover Image&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;~/www/config.yml&lt;/code&gt;에 설정해주고 아래 설명대로 포스트문서에 링크를 걸어주면 된다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yml&#34; data-lang=&#34;yml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;cover&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;image&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;lt;image path/url&amp;gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# can also paste direct link from external site&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# ex. https://i.ibb.co/K0HVPBd/paper-mod-profilemode.png&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;alt&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;lt;alt text&amp;gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;caption&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;lt;text&amp;gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;relative&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;false&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# To use relative path for cover image, used in hugo Page-bundles&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;이미지 사이즈를 줄이고 처리속도를 높이려면 아래 설정 추가&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yml&#34; data-lang=&#34;yml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;params&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;cover&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;responsiveImages&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;false&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;그러나 실제로 적용해도 페이지는 변화하지 않는다.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>Markdown</title>
       <link>https://neosolaris.github.io/posts/markdown/</link>
       <pubDate>Wed, 24 Aug 2022 02:08:51 +0900</pubDate>
@@ -6002,6 +6128,27 @@ WineHQ 최신버전
 &lt;li&gt;README.md &amp;lt; index.md &amp;lt; index.html 우선권 순서로 동작한다.&lt;/li&gt;
 &lt;li&gt;처음 테스트 파일을 깃허브에 올린 후 브라우저에서 2-3분 후 확인 가능하다.&lt;/li&gt;
 &lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>Vimwiki Hugo Github.io 연동하기</title>
+      <link>https://neosolaris.github.io/posts/vimwik_hugo_github/</link>
+      <pubDate>Wed, 24 Aug 2022 00:39:08 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/vimwik_hugo_github/</guid>
+      <description>&lt;h2 id=&#34;소개&#34;&gt;소개&lt;/h2&gt;
+&lt;p&gt;마크다운 문서를 vimwiki로 작성하여 간단한 메모에서 부터 블로그, 리포트, 기술 문서에 이르기까지 손쉽게 만들 수 있다. 이를 기반으로 하여 깃허브에서 제공하는 무료 웹사이트에 올리는 방법을 설명하고자 한다. 아래는 간략한 개요이다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;vimwiki + hugo + github.io&lt;/code&gt; 를 연결하는 프로젝트이다.&lt;/li&gt;
+&lt;li&gt;vim의 vimwiki 플러그인을 사용하여 위키문서를 작성한다.&lt;/li&gt;
+&lt;li&gt;위키문서의 작성은 마크다운(&lt;a href=&#34;../markdown&#34;&gt;markdown&lt;/a&gt;) 문법으로 한다.&lt;/li&gt;
+&lt;li&gt;hugo를 사용하여 임시 로컬웹서버를 띄우고 위키문서를 html로 변환하고 브라우저에서 확인한다.&lt;/li&gt;
+&lt;li&gt;변환된 정적 html 문서를 깃허브에 올린다.&lt;/li&gt;
+&lt;li&gt;깃허브 페이지에서 이를 확인한다.&lt;/li&gt;
+&lt;li&gt;UTF-8인코딩이라면 한글도 특별히 문제가 없고 잘 된다. 다만 마크다운 파일명에 공백이 들어가면 관리가 좋지 않으니 &lt;code&gt;-&lt;/code&gt;등으로 연결해서 쓴다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;설치-환경&#34;&gt;설치 환경&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;OS 및 프로그램 버전&lt;/p&gt;</description>
     </item>
     <item>
       <title>Vimwiki Hugo Github.io 연동하기</title>
@@ -7015,157 +7162,6 @@ extension &amp;gt; hide top bar 검색 후 설치(Click to change: ON)&lt;/li&gt
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;code&gt;:h vimwiki-local-mappings&lt;/code&gt; &amp;ndash; See default key binding&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Wiki Index</title>
-      <link>https://neosolaris.github.io/posts/windex/</link>
-      <pubDate>Tue, 23 Aug 2022 18:35:04 +0900</pubDate>
-      <guid>https://neosolaris.github.io/posts/windex/</guid>
-      <description>&lt;h2 id=&#34;os&#34;&gt;OS&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;../linux&#34;&gt;linux&lt;/a&gt; - 리눅스 일반&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../alpine&#34;&gt;alpine&lt;/a&gt; - busybox 기반의 작고 가볍고 빠른 리눅스
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;../alpine_upgrade&#34;&gt;alpine_upgrade&lt;/a&gt; - 업그레이드&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;www&#34;&gt;WWW&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;../edge&#34;&gt;edge&lt;/a&gt; - 윈도우즈 브라우저&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../firefox&#34;&gt;firefox&lt;/a&gt; - 브라우저는 역시 파이어폭스&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../hugo&#34;&gt;hugo&lt;/a&gt; - 개인 블로그를 만들 수 있는 html 웹개발 툴, go로 만듦
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;../hugo-papermod&#34;&gt;hugo-papermod&lt;/a&gt; - Hugo Theme, Simple clean charm&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../vimwiki-hugo-github&#34;&gt;vimwiki hugo github&lt;/a&gt; - vi에서 위키를 만들고 웹으로 변환해서 블로그홈에 올리는 방법&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../jekyll&#34;&gt;jekyll&lt;/a&gt; - 위와 같음, ruby로 만듦&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../luakit&#34;&gt;luakit&lt;/a&gt; - 가볍고 빠른 브라우저, 루아로 설정가능, vi 스타일의 명령 제어&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../lynx&#34;&gt;lynx&lt;/a&gt; - 터미널 텍스트 브라우저&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../openresty&#34;&gt;openresty&lt;/a&gt; - 웹개발 인터페이스: luajit + nginx&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../vimwiki&#34;&gt;vimwiki&lt;/a&gt; - vim에서 wiki 문서 작성 및 관리하기&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;programming&#34;&gt;PROGRAMMING&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;../lua&#34;&gt;lua&lt;/a&gt; - 작고 가볍고 간결하고 빠른 스크립트 언어&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../zig&#34;&gt;zig&lt;/a&gt; - c + rust?
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;../zig-nvim&#34;&gt;zig-nvim&lt;/a&gt; - zig nvim 설정&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../zig-cc&#34;&gt;zig-cc&lt;/a&gt; - zig cc 로 gcc/clang 대체하기&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../rust&#34;&gt;rust&lt;/a&gt; - 나도 rustacean이 되고 싶다. 이 나이에&amp;hellip;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;iot&#34;&gt;IoT&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;../arduino&#34;&gt;arduino&lt;/a&gt; - 아두이노&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../nodemcu&#34;&gt;nodemcu&lt;/a&gt; - a low-cost open source IoT platform&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../raspberry-pi&#34;&gt;raspberry pi&lt;/a&gt; - 라즈베리 파이&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../fritzing&#34;&gt;fritzing&lt;/a&gt; - 회로 설계 및 도안 툴&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;graphic&#34;&gt;GRAPHIC&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;../fits&#34;&gt;FITS&lt;/a&gt; - Flexible Image Transport System&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../blender&#34;&gt;blender&lt;/a&gt; - 3D 모델링 프로그램&lt;/li&gt;
-&lt;li&gt;darktable&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../fv&#34;&gt;fv&lt;/a&gt; - FITS File Viwer, Editer&lt;/li&gt;
-&lt;li&gt;freecad&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../gimp&#34;&gt;gimp&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../manim&#34;&gt;manim&lt;/a&gt; - Python Math Graphic Animation Engine&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../simpleitk&#34;&gt;simpleitk&lt;/a&gt; - 이미지 프로세싱 툴킷&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../siril&#34;&gt;siril&lt;/a&gt; - 천문사진 이미지 프로세싱 툴&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../sketchup&#34;&gt;sketchup&lt;/a&gt; - 3D 모델링 프로그램&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;tools&#34;&gt;Tools&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;../git-crypt&#34;&gt;git crypt&lt;/a&gt; - Git Crypt: 깃허브에 업로드시에 자동 암호화하고 다운로드시에 복호화해주는 툴&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../gpg&#34;&gt;gpg&lt;/a&gt; - Gnu Privacy Guard/ GNU 개인 보호&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../rclone&#34;&gt;rclone&lt;/a&gt; - remote clone, 지역과 원격지간의 데이터 복사, 동기화 툴&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../rtorrent&#34;&gt;rtorrent&lt;/a&gt; - Command line Torrent client&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../tmux&#34;&gt;tmux&lt;/a&gt; - 다중 터미널 관리 툴&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../tree&#34;&gt;tree&lt;/a&gt; - 폴더와 파일을 나무구조로 보여주는 명령어&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../wezterm&#34;&gt;wezterm&lt;/a&gt; - new powerful terminal emulator&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../yadm&#34;&gt;yadm&lt;/a&gt; - Yet Another Dotfiles Manager: &lt;code&gt;.foo&lt;/code&gt; 형식의 주요 설정파일을 git으로 쉽게 관리하는 툴&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;editor&#34;&gt;Editor&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;../vim&#34;&gt;vim&lt;/a&gt; - 리눅스, 유닉스 등에서 사용되고 사랑받는 편집기&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../nvim&#34;&gt;nvim&lt;/a&gt; - 일명 Neovim, vim의 새로운 버전
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;../nvim-install&#34;&gt;nvim install&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../nvim-features&#34;&gt;nvim features&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../nvim-lua&#34;&gt;nvim lua&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../nvim-tree&#34;&gt;nvim tree&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../astronvim&#34;&gt;astronvim&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../Comment.nvim&#34;&gt;Comment nvim&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../nvim-scp&#34;&gt;nvim scp&lt;/a&gt;] - (n)vim 원격 파일 편집&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../vis&#34;&gt;vis&lt;/a&gt; - a modern, legacy-free, simple yet efficient editor&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../nextvi&#34;&gt;nextvi&lt;/a&gt; - Small, Simple, UTF8 Support Vi&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;shell&#34;&gt;SHELL&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;../bash&#34;&gt;bash&lt;/a&gt; - Bourn Again Shell&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../ssh&#34;&gt;ssh&lt;/a&gt; - Secure Shell&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../zsh&#34;&gt;zsh&lt;/a&gt; - Z Shell&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;music-on-linux&#34;&gt;Music on Linux&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;../mpd&#34;&gt;mpd&lt;/a&gt; - Music Player Deamon: 음악을 듣는 새로운 패러다임&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../mpc&#34;&gt;mpc&lt;/a&gt; - Music Player Client&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../ncmpcpp&#34;&gt;ncmpcpp&lt;/a&gt; - mpd의 또다른 클라이언트, 화려한 터미널 환경&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;devel&#34;&gt;Devel&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;../csv-to-sqlite3&#34;&gt;csv to sqlite3&lt;/a&gt; - csv 파일을 sqlite3에 import하기&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../docker&#34;&gt;docker&lt;/a&gt; - 소프트웨어 개발 플랫폼&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../github-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0&#34;&gt;Github 사용하기&lt;/a&gt; - 모든 개발자들이 소스를 올리는 곳, 글쟁이들에게도 좋을 듯.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../github-ssh-key-%EC%9D%B8%EC%A6%9D&#34;&gt;Github ssh key 인증&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../json-to-csv-to-sqlite3&#34;&gt;json to csv to sqlite3&lt;/a&gt; - Json파일을 sqlite3에 import하기&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../redis&#34;&gt;redis&lt;/a&gt; - Redis 설치 및 설정&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;한글&#34;&gt;한글&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;../kime&#34;&gt;kime&lt;/a&gt; - 심플하고 오류적고 빠른 한글 입력기, vim에서 &lt;code&gt;esc&lt;/code&gt;누르면 영문으로 자동 전환&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../%EC%84%B8%EB%B2%8C%EC%8B%9D&#34;&gt;세벌식&lt;/a&gt; - 세벌식 한글 배열&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;hardware&#34;&gt;Hardware&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;../keyboard&#34;&gt;keyboard&lt;/a&gt; - 키보드 관련&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../graphic-card&#34;&gt;graphic card&lt;/a&gt; - 그래픽카드&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../zenbook14&#34;&gt;zenbook14&lt;/a&gt; - 현재 나의 노트북, 매우 만족&amp;hellip;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../t5500&#34;&gt;t5500&lt;/a&gt; - Dell Precision T5500 Workstation (오랜 동반자)&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../raspberry-pi&#34;&gt;raspberry pi&lt;/a&gt; - 라즈베리 파이, 이 작은 컴퓨터가 세계를 놀라게 하고 있다. &lt;code&gt;미스터 로봇&lt;/code&gt;에도 나온다.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../arduino&#34;&gt;arduino&lt;/a&gt; - 아두이노&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;생각하기&#34;&gt;생각하기&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;../hangang-novelprize&#34;&gt;과거 현재 죽은 자 산 자&lt;/a&gt; - 한강&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../%EC%88%98%ED%95%99%EC%9D%80-%EC%A7%84%EB%A6%AC%EC%9D%98-%ED%95%99%EB%AC%B8%EC%9D%B8%EA%B0%80&#34;&gt;수학은 진리의 학문인가&lt;/a&gt; - 모리스 클라인&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../%EC%97%90%ED%94%BC%EC%BF%A0%EB%A1%9C%EC%8A%A4%EC%9D%98-%EC%97%AD%EC%84%A4&#34;&gt;에피쿠로스의 역설&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../%EB%96%A8%EB%A6%BC%EA%B3%BC-%EC%9A%B8%EB%A6%BC&#34;&gt;떨림과 울림&lt;/a&gt; - 김상욱&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../%EB%A7%8C%EA%B0%80%EC%A7%80-%EB%8F%99%EC%9E%91&#34;&gt;만가지 동작&lt;/a&gt; - 이소룡&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../%EC%9A%B0%EC%A3%BC%EA%B0%80-%EC%8B%A4%EC%A0%9C%EB%A1%9C-%EC%A1%B4%EC%9E%AC%ED%95%98%EA%B8%B0-%EC%9C%84%ED%95%B4%EC%84%9C%EB%8A%94&#34;&gt;우주가 실제로 존재하기 위해서는&lt;/a&gt; - 유진 위그너&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../%EB%8B%A8%EB%85%90&#34;&gt;단념&lt;/a&gt; - 김기림&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;books&#34;&gt;BOOKS&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;../%EC%88%98%ED%95%99%EC%9D%98-%ED%99%95%EC%8B%A4%EC%84%B1&#34;&gt;수학의 확실성&lt;/a&gt; - 모리스 클라인&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../%EA%B8%B8%EA%B0%80%EB%A9%94%EC%89%AC-%EC%84%9C%EC%82%AC%EC%8B%9C&#34;&gt;최초의 신화 길가메쉬 서사시&lt;/a&gt; - 김산해&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../%EC%9D%80%ED%95%98%EC%88%98%EB%A5%BC-%EC%97%AC%ED%96%89%ED%95%98%EB%8A%94-%ED%9E%88%EC%B9%98%ED%95%98%EC%9D%B4%EC%BB%A4%EB%A5%BC-%EC%9C%84%ED%95%9C-%EC%95%88%EB%82%B4%EC%84%9C&#34;&gt;은하수를 여행하는 히치하이커를 위한 안내서&lt;/a&gt; - 더글러스 애덤스&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../%EC%9A%B0%EB%A6%AC%EA%B8%80-%EB%B0%94%EB%A1%9C%EC%93%B0%EA%B8%B0&#34;&gt;우리글 바로쓰기&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;poem---시와-시인&#34;&gt;POEM - 시와 시인&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;../%EC%A0%95%EC%A3%BC%EC%84%B1&#34;&gt;정주성&lt;/a&gt; - 백석&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../%EC%95%84%EB%81%BC%EC%A7%80-%EB%A7%88%EC%84%B8%EC%9A%94&#34;&gt;아끼지 마세요&lt;/a&gt; - 나태주&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;음악이야기-music&#34;&gt;음악이야기: Music&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&#34;../The-Windmills-Of-Your-Mind&#34;&gt;The Windmills Of Your Mind&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Zenbook14</title>
