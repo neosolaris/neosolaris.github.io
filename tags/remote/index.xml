@@ -11,7 +11,7 @@
     </image>
     <generator>Hugo -- 0.147.2</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 13 Jun 2025 18:26:21 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 08 Sep 2023 14:32:57 +0900</lastBuildDate>
     <atom:link href="https://neosolaris.github.io/tags/remote/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>nvim-scp - nvim으로 원격 파일 편집</title>
