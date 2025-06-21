@@ -126,7 +126,7 @@
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;ESP32
-&lt;img alt=&#34;ESP32&#34; loading=&#34;lazy&#34; src=&#34;https://makeradvisor.com/wp-content/uploads/2018/04/ESP32-DOIT-DEVKIT-V1-Board-Pinout-36-GPIOs-Copy.jpg&#34;&gt;&lt;/p&gt;</description>
+&lt;img alt=&#34;ESP32&#34; loading=&#34;lazy&#34; src=&#34;../https://makeradvisor.com/wp-content/uploads/2018/04/ESP32-DOIT-DEVKIT-V1-Board-Pinout-36-GPIOs-Copy.jpg&#34;&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Fritzing</title>
@@ -271,7 +271,7 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img alt=&#34;ESP8266&#34; loading=&#34;lazy&#34; src=&#34;https://makeradvisor.com/wp-content/uploads/2020/05/ESP8266-NodeMCU-kit-12-E-pinout-gpio-pin.png&#34;&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;img alt=&#34;ESP8266&#34; loading=&#34;lazy&#34; src=&#34;../https://makeradvisor.com/wp-content/uploads/2020/05/ESP8266-NodeMCU-kit-12-E-pinout-gpio-pin.png&#34;&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>NodeMCU</title>

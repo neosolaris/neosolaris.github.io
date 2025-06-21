@@ -18,7 +18,8 @@
       <link>https://neosolaris.github.io/posts/redis/</link>
       <pubDate>Mon, 01 Jan 2024 02:08:34 +0900</pubDate>
       <guid>https://neosolaris.github.io/posts/redis/</guid>
-      <description>&lt;h1 id=&#34;intro&#34;&gt;INTRO&lt;/h1&gt;
+      <description>&lt;p&gt;last updated: {{ &amp;ldquo;1710725585&amp;rdquo; | date: &amp;ldquo;%Y-%m-%d %H:%M&amp;rdquo; }}&lt;/p&gt;
+&lt;h2 id=&#34;intro&#34;&gt;INTRO&lt;/h2&gt;
 &lt;p&gt;레디스(Redis)는 Remote Dictionary Server의 약자로서[4], &amp;ldquo;키-값&amp;rdquo; 구조의 비정형 데이터를 저장하고 관리하기 위한 오픈 소스 기반의 비관계형 데이터베이스 관리 시스템(DBMS)이다. 2009년 살바토르 산필리포(Salvatore Sanfilippo)가 처음 개발했다. 2015년부터 Redis Labs가 지원하고 있다. 모든 데이터를 메모리로 불러와서 처리하는 메모리 기반 DBMS이다. BSD 라이선스를 따른다. DB-Engines.com의 월간 랭킹에 따르면, 레디스는 가장 인기 있는 키-값 저장소이다.&lt;/p&gt;
 &lt;h2 id=&#34;install---alpine-linux&#34;&gt;INSTALL - alpine linux&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;#&lt;/span&gt; Install Redis
@@ -33,7 +34,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;gp&#34;&gt;#&lt;/span&gt; Connect to redis
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;redis-cli
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;reference&#34;&gt;REFERENCE&lt;/h2&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Redis - &lt;a href=&#34;https://redis.io&#34;&gt;https://redis.io&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Install - &lt;a href=&#34;https://redis.io/docs/install&#34;&gt;https://redis.io/docs/install&lt;/a&gt;&lt;/li&gt;

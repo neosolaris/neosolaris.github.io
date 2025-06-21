@@ -58,7 +58,7 @@ Linino One                       arduino:avr:one
 &lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;소프트웨어-설치&#34;&gt;소프트웨어 설치&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;arduino-ide - 아두이노 홈페이지에 OS별로 다운로드 및 설치 가능&lt;/li&gt;
-&lt;li&gt;[arduino cli](../Linux, Win용)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../arduino-cli&#34;&gt;arduino cli&lt;/a&gt; - Command Line Interface (Linux, Win용)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;reference&#34;&gt;REFERENCE&lt;/h2&gt;
 &lt;ul&gt;

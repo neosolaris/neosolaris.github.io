@@ -39,7 +39,7 @@
 &lt;li&gt;이런 것이 있었다 하고 넘어가자.&lt;/li&gt;
 &lt;li&gt;파이썬 사용자라면 astropy를 사용하는 것이 좋겠다.&lt;/li&gt;
 &lt;li&gt;아 루아로는 갈길이 멀다.&lt;/li&gt;
-&lt;li&gt;하지만 현재 &lt;a href=&#34;../fits-liberator&#34;&gt;astropy&lt;/a&gt;도 내부에는 이 라이브러리를 쓴다.&lt;/li&gt;
+&lt;li&gt;하지만 현재 &lt;a href=&#34;../astropy&#34;&gt;astropy&lt;/a&gt;나 &lt;a href=&#34;../fits-liberator&#34;&gt;fits liberator&lt;/a&gt;도 내부에는 이 라이브러리를 쓴다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;
 &lt;ul&gt;

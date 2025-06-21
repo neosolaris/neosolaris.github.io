@@ -14,11 +14,12 @@
     <lastBuildDate>Tue, 12 Mar 2024 03:21:08 +0900</lastBuildDate>
     <atom:link href="https://neosolaris.github.io/tags/programming/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Zig</title>
+      <title>Zig Programming Language</title>
       <link>https://neosolaris.github.io/posts/zig/</link>
       <pubDate>Tue, 12 Mar 2024 03:21:08 +0900</pubDate>
       <guid>https://neosolaris.github.io/posts/zig/</guid>
-      <description>&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
+      <description>&lt;p&gt;last updated: {{ &amp;ldquo;1712202776&amp;rdquo; | date: &amp;ldquo;%Y-%m-%d %H:%M&amp;rdquo; }}&lt;/p&gt;
+&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;a general-purpose programming language and toolchain for maintaining robust, optimal and reusable software.&lt;/li&gt;
 &lt;/ul&gt;
@@ -28,25 +29,74 @@
 &lt;/ul&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo apt install zig
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
-&lt;li&gt;Alpine&lt;/li&gt;
+&lt;li&gt;Alpine Linux&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; doas apk add zig
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
-&lt;li&gt;최신 리눅스 버전 설치&lt;/li&gt;
-&lt;/ul&gt;
+&lt;li&gt;최신 리눅스 버전 설치
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://ziglang.org/download/&#34;&gt;https://ziglang.org/download/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;os와 아키텍쳐에 맞는 파일을 다운로드한다.&lt;/li&gt;
 &lt;li&gt;압축을 푼 후 &lt;code&gt;PATH&lt;/code&gt;를 설정해주면 바로 사용 가능하다.&lt;/li&gt;
+&lt;li&gt;현재 사용 버전: 0.12&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; tar xJf zig-linux-x86_64-0.12.0-dev.3212+40e64245f.tar.xz
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; ln -s zig-linux-x86_64-0.12.0-dev.3212+40e64245f/ zig
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; zig&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; ls 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; ./zig version
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; ./zig &lt;span class=&#34;nb&#34;&gt;help&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;hello-world&#34;&gt;Hello World&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;hello-world.zig&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-zig&#34; data-lang=&#34;zig&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kr&#34;&gt;const&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;std&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;@import&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;std&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;kr&#34;&gt;pub&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;fn&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;!&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;std&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;debug&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Hello, World!&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.{});&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;run / test&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; zig run hello-world.zig
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; zig &lt;span class=&#34;nb&#34;&gt;test&lt;/span&gt; hello-world.zig
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;build (default=debug, small, fast, safe)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; zig build-exe hello.zig
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; ./hello
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; zig build-exe --name hello-small -O ReleaseSmall hello.zig
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; zig build-exe --name hello-fast -O ReleaseFast hello.zig
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; zig build-exe --name hello-safe -O ReleaseSafe hello.zig
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; zig build-exe --name hello-debug -O Debug hello.zig
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; ls -l 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; ./hello-small
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;more-docs&#34;&gt;More Docs&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;../zig-nvim.md&#34;&gt;zig-nvim&lt;/a&gt; - neovim에 zig 개발 환경 설정하기&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../zig-cc.md&#34;&gt;zig-cc&lt;/a&gt; - Zig로 gcc/clang 컴파일러 대체하기&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;home - &lt;a href=&#34;https://ziglang.org/&#34;&gt;https://ziglang.org/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;awesome zig - &lt;a href=&#34;https://www.trackawesomelist.com/catdevnull/awesome-zig/readme/&#34;&gt;https://www.trackawesomelist.com/catdevnull/awesome-zig/readme/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;study-and-docs&#34;&gt;Study and Docs&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;zig-guide - &lt;a href=&#34;https://zig.guide/&#34;&gt;https://zig.guide/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;reference - &lt;a href=&#34;https://ziglang.org/documentation/0.11.0/&#34;&gt;https://ziglang.org/documentation/0.11.0/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;zig-by-example - &lt;a href=&#34;https://zig-by-example.com/&#34;&gt;https://zig-by-example.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;zig std - &lt;a href=&#34;https://ziglang.org/documentation/master/std/&#34;&gt;https://ziglang.org/documentation/master/std/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;exercises - &lt;a href=&#34;https://exercism.org/tracks/zig/exercises&#34;&gt;https://exercism.org/tracks/zig/exercises&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;learn x in y minutes - &lt;a href=&#34;https://learnxinyminutes.com/docs/zig/&#34;&gt;https://learnxinyminutes.com/docs/zig/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;compile-and-build&#34;&gt;Compile and Build&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;zig-cc - &lt;a href=&#34;https://andrewkelley.me/post/zig-cc-powerful-drop-in-replacement-gcc-clang.html&#34;&gt;https://andrewkelley.me/post/zig-cc-powerful-drop-in-replacement-gcc-clang.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Zig Build System Internals - &lt;a href=&#34;https://mitchellh.com/zig/build-internals&#34;&gt;https://mitchellh.com/zig/build-internals&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
     <item>
@@ -57,7 +107,7 @@
       <description>&lt;h2 id=&#34;intro&#34;&gt;INTRO&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;openresty는 nginx와 lua 기반의 웹개발 플랫폼이다.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../luajit&#34;&gt;lua&lt;/a&gt; 을 사용하고 엔진이 포함되어 있다.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../lua&#34;&gt;lua&lt;/a&gt;는 &lt;a href=&#34;../luajit&#34;&gt;luajit&lt;/a&gt; 을 사용하고 엔진이 포함되어 있다.&lt;/li&gt;
 &lt;li&gt;서버에서 동작한다.&lt;/li&gt;
 &lt;li&gt;대부분의 리눅스 배포판은 패키지를 지원한다.&lt;/li&gt;
 &lt;li&gt;여기에서는 &lt;a href=&#34;../docker&#34;&gt;docker&lt;/a&gt; 이미지로 설치하고 사용하는 방법을 정리한다.&lt;/li&gt;

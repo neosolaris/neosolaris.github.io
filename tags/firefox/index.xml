@@ -126,8 +126,8 @@ V       enter visual line mode
       <guid>https://neosolaris.github.io/posts/markdown-viewer-webtext/</guid>
       <description>&lt;h1 id=&#34;firefox-markdown-viewer-플러그인&#34;&gt;firefox: markdown viewer 플러그인&lt;/h1&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;../%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4&#34;&gt;firefox&lt;/a&gt;을 html 페이지로 보여준다.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4&#34;&gt;vim&lt;/a&gt;파일을 작성하고 실시간으로 볼 때 유용하다.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../firefox&#34;&gt;firefox&lt;/a&gt;의 플러그인으로 로컬내에서 &lt;a href=&#34;../%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4&#34;&gt;마크다운&lt;/a&gt;을 html 페이지로 보여준다.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../vim&#34;&gt;vim&lt;/a&gt;과 연동하여 &lt;a href=&#34;../%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4&#34;&gt;마크다운&lt;/a&gt;파일을 작성하고 실시간으로 볼 때 유용하다.&lt;/li&gt;
 &lt;li&gt;Laste Updated: 2022.08.11&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;설치-및-설정&#34;&gt;설치 및 설정&lt;/h2&gt;

@@ -76,7 +76,7 @@
 &lt;/ul&gt;
 &lt;h2 id=&#34;linux-일반&#34;&gt;Linux 일반&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 우분투에서 default shell을 &lt;a href=&#34;../kime&#34;&gt;zsh&lt;/a&gt;이 작동하지 않는다.&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 우분투에서 default shell을 &lt;a href=&#34;../zsh&#34;&gt;zsh&lt;/a&gt;로 바꾼 후 한글입력(kime)이 작동하지 않는다.&lt;/li&gt;
 &lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 리눅스에서 폴더를 구조적 계층적으로 볼 수 있는 방법은?
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;../tree&#34;&gt;tree&lt;/a&gt; 명령어를 사용하면 된다.&lt;/li&gt;

@@ -277,16 +277,16 @@
 &lt;h2 id=&#34;편집-소프트웨어&#34;&gt;편집 소프트웨어&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;../siril&#34;&gt;siril&lt;/a&gt; - FITS Edit: 천문사진 전처리 또는 이미지 프로세싱 소프트웨어&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../NOAO&#34;&gt;iraf&lt;/a&gt;의 천문사진 프로세싱: clang&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../iraf&#34;&gt;iraf&lt;/a&gt;, - 미국 천문관측기관(NOAO)의 천문사진 프로세싱: clang&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;../gimp&#34;&gt;gimp&lt;/a&gt; - 그래픽툴, FITS 편집 가능&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;../photoshop&#34;&gt;photoshop&lt;/a&gt; - 그래픽툴, FITS 편집 가능, 유료, 윈도우즈 전용&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;../imagej&#34;&gt;imagej&lt;/a&gt; - FIT 편집 통합 툴&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../ubuntu:libfitsio&#34;&gt;fits liberator&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../fits-liberator&#34;&gt;fits liberator&lt;/a&gt; - 유럽, 나사에서 사용하는 전처리 툴(ubuntu:libfitsio)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;fits-library&#34;&gt;FITS LIBRARY&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;../astropy&#34;&gt;astropy&lt;/a&gt; - pyfits 포함 천문관측 모듈: anaconda 기본 모듈&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../NOAO&#34;&gt;pyraf&lt;/a&gt;의 천문사진 프로세싱: python&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../pyraf&#34;&gt;pyraf&lt;/a&gt; - 미국 천문관측기관(NOAO)의 천문사진 프로세싱: python&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;../pyfits&#34;&gt;pyfits&lt;/a&gt; - fits 편집 모듈: python&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;../fitsio&#34;&gt;fitsio&lt;/a&gt; - fits 라이브러리: clang&lt;/li&gt;
 &lt;/ul&gt;
@@ -294,7 +294,7 @@
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;../fv&#34;&gt;fv&lt;/a&gt; - FITS Viewer: 오래된 툴, 조금 촌스럽다.&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;../gimp&#34;&gt;gimp&lt;/a&gt; - 그래픽툴, 파일보기 및 다른 포맷 변환&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../ubuntu:saods9&#34;&gt;ds9&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../ds9&#34;&gt;ds9&lt;/a&gt; - FITS Viewer (ubuntu:saods9)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;guides&#34;&gt;Guides&lt;/h2&gt;
 &lt;ul&gt;

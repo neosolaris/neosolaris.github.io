@@ -11,8 +11,104 @@
     </image>
     <generator>Hugo -- 0.147.2</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 27 Aug 2023 22:38:00 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 03 Apr 2024 09:07:32 +0900</lastBuildDate>
     <atom:link href="https://neosolaris.github.io/categories/programming/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Zig로 gcc/clang 컴파일러 대체하기</title>
+      <link>https://neosolaris.github.io/posts/zig-cc/</link>
+      <pubDate>Wed, 03 Apr 2024 09:07:32 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/zig-cc/</guid>
+      <description>&lt;p&gt;last updated: {{ &amp;ldquo;1712680347&amp;rdquo; | date: &amp;ldquo;%Y-%m-%d %H:%M&amp;rdquo; }}&lt;/p&gt;
+&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;zig로 c 소스를 컴파일할 수 있다.&lt;/li&gt;
+&lt;li&gt;zig의 장점은 여러 플랫폼과 아키텍처용 컴파일이 가능하다는 것이다.&lt;/li&gt;
+&lt;li&gt;static, dynamic 모두 가능하다.&lt;/li&gt;
+&lt;li&gt;Linux, iOS, Windows 등 여러 OS 환경 지원.&lt;/li&gt;
+&lt;li&gt;x86, , x86-64, aarch64 등 아키텍처 지원&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;target-list&#34;&gt;Target List&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;다음 방법으로 원하는 플랫폼, 아키텍쳐를 먼저 찾는다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; zig targets
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; zig targets &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; grep x86
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; zig targets &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; grep x86-64
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; zig targets &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; grep aarch64
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; zig targets &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; grep linux
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; zig targets &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; grep windows
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; zig targets &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; grep macos
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;x86, x86_64 - intel 계열&lt;/li&gt;
+&lt;li&gt;aarch64 - arm 계열 (raspberrypi)&lt;/li&gt;
+&lt;li&gt;linux - Linux&lt;/li&gt;
+&lt;li&gt;windows - Ms Windows&lt;/li&gt;
+&lt;li&gt;macos - Mac OS&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;local-compile&#34;&gt;Local Compile&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;dynamic: Alpine Linux (x86_64)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; zig cc -o hello_dynamic hello.c
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; file hello_dynamic
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;hello: ELF 64-bit LSB executable, x86-64, version 1 (SYSV), dynamically linked, 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;interpreter /lib/ld-musl-x86_64.so.1, with debug_info, not stripped
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;&lt;/span&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; ./hello
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;Hello World!
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;static: Alpine Linux (x86_64)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; zig cc -o hello hello.c -target x86_64-linux-musl
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; file hello
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;./hello: ELF 64-bit LSB executable, x86-64, version 1 (SYSV), statically linked,
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;with debug_info, not stripped
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;&lt;/span&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; ./hello
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;Hello World!
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;cross-compile&#34;&gt;Cross Compile&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;For windows&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; zig cc -o hello.exe hello.c -target x86_64-windows-gnu
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; file ./hello.exe
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;hello: PE32+ executable (console) x86-64, for MS Windows, 7 sections
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;go&#34;&gt;Windows c:&amp;gt; .\hello.exe
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;Hello World!
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;For Linux dynamic with Gnu Libs&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; zig cc -o hello hello.c -target x86_64-linux-gnu
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; file ./hello.exe
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;./hello: ELF 64-bit LSB executable, x86-64, version 1 (SYSV), dynamically linked, 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;interpreter /lib64/ld-linux-x86-64.so.2, for GNU/Linux 2.0.0, with debug_info,
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;not stripped
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;go&#34;&gt;gnu-linux$ ./hello
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;Hello World!
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;For Linux Static with musl&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; zig cc -o hello.exe hello.c -target x86_64-linux-gnu
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; file ./hello.exe
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;./hello: ELF 64-bit LSB executable, x86-64, version 1 (SYSV), statically linked,
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;with debug_info, not stripped
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;go&#34;&gt;any-linux$ ./hello
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;Hello World!
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;makefile-or-buildsh&#34;&gt;Makefile or Build.sh&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;해당 파일에서 gcc, clang 부분을 &lt;code&gt;zig cc&lt;/code&gt;로 수정한다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;make&lt;/code&gt; 또는 &lt;code&gt;./Build.sh&lt;/code&gt; 실행&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;zig cc&lt;/code&gt;: a Powerful Drop-In Replacement for GCC/Clang
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://andrewkelley.me/post/zig-cc-powerful-drop-in-replacement-gcc-clang.html&#34;&gt;https://andrewkelley.me/post/zig-cc-powerful-drop-in-replacement-gcc-clang.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
     <item>
       <title>Git-Crypt - github에 동기화할 때 자동 암호화</title>
       <link>https://neosolaris.github.io/posts/git-crypt/</link>
@@ -162,7 +258,7 @@ local level = 2
 &lt;h2 id=&#34;문서작성시-수학식-표현&#34;&gt;문서작성시 수학식 표현&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;관련 프로그램(스크립트)를 작성한 후 도움말이나 문서를 작성할 때 가장 좋은 방법은 마크다운(markdown) 문서에 latex 문법으로 작성하는 것이다.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions&#34;&gt;사용방법&lt;/a&gt;을 참조한다.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions&#34;&gt;사용방법&lt;/a&gt;을 참조한다.&lt;/li&gt;
 &lt;li&gt;즉, 문장 중에는 &lt;code&gt;$수식$&lt;/code&gt; 으로 표현하고 독립적인 수식은 &lt;code&gt;$$수식$$&lt;/code&gt;으로 표현하는 것이다.&lt;/li&gt;
 &lt;li&gt;깃허브나 기타 웹페이지에서 이를 잘 지원한다.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;vscode&lt;/code&gt;에서는 &lt;code&gt;markdown all in one&lt;/code&gt; 플러그인을 설치하면 미리보기로 실시간으로 확인할 수 있다. 물론 수학표현식도 지원한다.&lt;/li&gt;
@@ -634,7 +730,8 @@ block comments
       <link>https://neosolaris.github.io/posts/luajit/</link>
       <pubDate>Tue, 30 Aug 2022 14:51:27 +0900</pubDate>
       <guid>https://neosolaris.github.io/posts/luajit/</guid>
-      <description>&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
+      <description>&lt;p&gt;last updated: {{ &amp;ldquo;1736305941&amp;rdquo; | date: &amp;ldquo;%Y-%m-%d %H:%M&amp;rdquo; }}&lt;/p&gt;
+&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;함수들이 처음 실행 될 때 필요에 의해 컴파일된다.&lt;/p&gt;
@@ -655,67 +752,7 @@ block comments
 &lt;p&gt;네이티브에 견줄만큼 속도가 빠르고, 메모리 사용량이 매우 적다.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;nginx에 LuaJIT을 포함시켜서 커스터마이징을 한 OpenResty 웹 서버도 있다.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;lua vs luaJIT&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;* PUC Lua (the &amp;#34;normal interpreter&amp;#34;) is more stable, i.e. bugs are more frequently found in LuaJIT.
-* PUC Lua is smaller, i.e. it takes less memory.
-* PUC Lua is much easier to understand if you want to customize it.
-* PUC Lua has been ported to way more platforms and is easier to port.
-* Like @lhf said, LuaJIT does not support all of Lua 5.2 features yet.
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;install&#34;&gt;Install&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo apt update
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo apt install luajit
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; luajit -h
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;usage&#34;&gt;Usage&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;-b&lt;/code&gt; 옵션은 컴파일 바이너리 코드를 생성한다.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;./luajit: unknown luaJIT command or jit.* modules not installed&lt;/code&gt; 에러가
-발생하는 경우는 $LUA_PATH 설정이 잘못되어 있는 경우이므로 &lt;code&gt;unset LUA_PATH&lt;/code&gt;해주거나 $LUA_PATH에 luajit의 올바른 모듈경로를 추가해 준다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; luajit -b test.lua test.out                 &lt;span class=&#34;c1&#34;&gt;# Save bytecode to test.out&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; luajit -bg test.lua test.out                &lt;span class=&#34;c1&#34;&gt;# Keep debug info&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; luajit -be &lt;span class=&#34;s2&#34;&gt;&amp;#34;print(&amp;#39;hello world&amp;#39;)&amp;#34;&lt;/span&gt; test.out  &lt;span class=&#34;c1&#34;&gt;# Save cmdline script&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; luajit -bl test.lua                         &lt;span class=&#34;c1&#34;&gt;# List to stdout&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; luajit -bl test.lua test.txt                &lt;span class=&#34;c1&#34;&gt;# List to test.txt&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; luajit -ble &lt;span class=&#34;s2&#34;&gt;&amp;#34;print(&amp;#39;hello world&amp;#39;)&amp;#34;&lt;/span&gt;          &lt;span class=&#34;c1&#34;&gt;# List cmdline script&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; luajit -b test.lua test.obj                 &lt;span class=&#34;c1&#34;&gt;# Generate object file&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# Link test.obj with your application and load it with require(&amp;#34;test&amp;#34;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;ffi-사용례&#34;&gt;FFI 사용례&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;LuaJIT는 C함수를 손쉽게 가져와 사용할 수 있다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; cat&amp;lt;&amp;lt;EOF &amp;gt; test-ffi.lua
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;local ffi = require(&amp;#34;ffi&amp;#34;)
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;ffi.cdef[[int printf(const char *fmt, ...);]]
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;ffi.C.printf(&amp;#34;Hello %s!\n&amp;#34;, &amp;#34;wiki&amp;#34;)
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;EOF
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; luajit test-ffi.lua
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;Hello wiki!
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;link&#34;&gt;Link&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Lua Jit Introduction - 한글번역
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://m.blog.naver.com/milennium9/20120034562&#34;&gt;https://m.blog.naver.com/milennium9/20120034562&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Usage - 사용법
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://luajit.org/running.html&#34;&gt;https://luajit.org/running.html&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;LuaJIT Wiki 문서 - 공부의 시작
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://wiki.luajit.org/Home&#34;&gt;http://wiki.luajit.org/Home&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;</description>
+&lt;p&gt;nginx에 LuaJIT을 포함시켜서 커스터마이징을 한 OpenResty 웹 서버도 있다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Luarocks - lua 패키지 관리</title>
@@ -862,7 +899,6 @@ block comments
 &lt;li&gt;hello-world.lua&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-lua&#34; data-lang=&#34;lua&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#!/usr/bin/env lua&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;Hello World!&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;실행&lt;/li&gt;
@@ -949,7 +985,7 @@ block comments
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;../luajit&#34;&gt;luaJit&lt;/a&gt; - LuaJit, Just in Time Compiler&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;../lfs-ffi&#34;&gt;luajit lfs-ffi&lt;/a&gt; - LuaJit lua file system 모듈&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../%ED%99%95%EC%9E%A5%EB%AA%A8%EB%93%88&#34;&gt;luafun&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../luafun&#34;&gt;luafun&lt;/a&gt; - LuaJit Functions Module (확장모듈)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;graphic--game&#34;&gt;Graphic &amp;amp; Game&lt;/h2&gt;
 &lt;ul&gt;

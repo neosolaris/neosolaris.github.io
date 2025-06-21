@@ -22,7 +22,7 @@
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;../fits&#34;&gt;FITS&lt;/a&gt; 데이터 분석 및 이미지 처리 도구 집합&lt;/li&gt;
 &lt;li&gt;NOAO(National Optical astronomy Observatory)에서 개발&lt;/li&gt;
-&lt;li&gt;현재 오픈소스로 공개하여 &lt;a href=&#34;https://iraf-community.github.io&#34;&gt;iraf community&lt;/a&gt; 가 관리하고 있다.&lt;/li&gt;
+&lt;li&gt;현재 오픈소스로 공개하여 &lt;a href=&#34;../https://iraf-community.github.io&#34;&gt;iraf community&lt;/a&gt; 가 관리하고 있다.&lt;/li&gt;
 &lt;li&gt;주로 관측천문학 분야에서 활용되고 있다.&lt;/li&gt;
 &lt;li&gt;파이썬으로 랩핑한 &lt;a href=&#34;../pyraf&#34;&gt;pyraf&lt;/a&gt;가 있다.&lt;/li&gt;
 &lt;li&gt;컴파일과 패키지 설치 두 가지가 있다. (패키지 설치 권장)&lt;/li&gt;
@@ -39,7 +39,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;install-from-source&#34;&gt;Install From Source&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/iraf-community/iraf/archive/refs/tags/v2.17.tar.gz&#34;&gt;Download Source&lt;/a&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;a href=&#34;../https://github.com/iraf-community/iraf/archive/refs/tags/v2.17.tar.gz&#34;&gt;Download Source&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Fits-Liberator</title>
@@ -58,7 +58,7 @@
 &lt;h2 id=&#34;install&#34;&gt;Install&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;a href=&#34;https://noirlab.edu/public/products/fitsliberator&#34;&gt;홈페이지&lt;/a&gt;에서 다운로드 및 설치 가능하다.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;../https://noirlab.edu/public/products/fitsliberator&#34;&gt;홈페이지&lt;/a&gt;에서 다운로드 및 설치 가능하다.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Ubuntu, Debian&lt;/p&gt;
@@ -109,7 +109,7 @@
 &lt;li&gt;이런 것이 있었다 하고 넘어가자.&lt;/li&gt;
 &lt;li&gt;파이썬 사용자라면 astropy를 사용하는 것이 좋겠다.&lt;/li&gt;
 &lt;li&gt;아 루아로는 갈길이 멀다.&lt;/li&gt;
-&lt;li&gt;하지만 현재 &lt;a href=&#34;../fits-liberator&#34;&gt;astropy&lt;/a&gt;도 내부에는 이 라이브러리를 쓴다.&lt;/li&gt;
+&lt;li&gt;하지만 현재 &lt;a href=&#34;../astropy&#34;&gt;astropy&lt;/a&gt;나 &lt;a href=&#34;../fits-liberator&#34;&gt;fits liberator&lt;/a&gt;도 내부에는 이 라이브러리를 쓴다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;
 &lt;ul&gt;

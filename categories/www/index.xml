@@ -21,7 +21,7 @@
       <description>&lt;h2 id=&#34;intro&#34;&gt;INTRO&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;openresty는 nginx와 lua 기반의 웹개발 플랫폼이다.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../luajit&#34;&gt;lua&lt;/a&gt; 을 사용하고 엔진이 포함되어 있다.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../lua&#34;&gt;lua&lt;/a&gt;는 &lt;a href=&#34;../luajit&#34;&gt;luajit&lt;/a&gt; 을 사용하고 엔진이 포함되어 있다.&lt;/li&gt;
 &lt;li&gt;서버에서 동작한다.&lt;/li&gt;
 &lt;li&gt;대부분의 리눅스 배포판은 패키지를 지원한다.&lt;/li&gt;
 &lt;li&gt;여기에서는 &lt;a href=&#34;../docker&#34;&gt;docker&lt;/a&gt; 이미지로 설치하고 사용하는 방법을 정리한다.&lt;/li&gt;
@@ -634,7 +634,7 @@ delete= 히스토리 리스트
 &lt;/ul&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;theme: &amp;#34;PaperMod&amp;#34;&amp;#39;&lt;/span&gt; &amp;gt;&amp;gt; config.yml
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
-&lt;li&gt;또는 &lt;a href=&#34;https://github.com/adityatelange/hugo-PaperMod/wiki/Installation&#34;&gt;PaperMod&lt;/a&gt; 홈에 가서 config.yml을 복사한다.&lt;/li&gt;
+&lt;li&gt;또는 &lt;a href=&#34;../https://github.com/adityatelange/hugo-PaperMod/wiki/Installation&#34;&gt;PaperMod&lt;/a&gt; 홈에 가서 config.yml을 복사한다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;sample-page-만들기&#34;&gt;Sample Page 만들기&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;---
@@ -792,7 +792,7 @@ delete= 히스토리 리스트
 &lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://devinlife.com/howto&#34;&gt;https://devinlife.com/howto&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://jekyllrb.com/&#34;&gt;Jekill 홈페이지&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../https://jekyllrb.com/&#34;&gt;Jekill 홈페이지&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
     <item>
@@ -802,8 +802,8 @@ delete= 히스토리 리스트
       <guid>https://neosolaris.github.io/posts/markdown-viewer-webtext/</guid>
       <description>&lt;h1 id=&#34;firefox-markdown-viewer-플러그인&#34;&gt;firefox: markdown viewer 플러그인&lt;/h1&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;../%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4&#34;&gt;firefox&lt;/a&gt;을 html 페이지로 보여준다.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4&#34;&gt;vim&lt;/a&gt;파일을 작성하고 실시간으로 볼 때 유용하다.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../firefox&#34;&gt;firefox&lt;/a&gt;의 플러그인으로 로컬내에서 &lt;a href=&#34;../%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4&#34;&gt;마크다운&lt;/a&gt;을 html 페이지로 보여준다.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../vim&#34;&gt;vim&lt;/a&gt;과 연동하여 &lt;a href=&#34;../%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4&#34;&gt;마크다운&lt;/a&gt;파일을 작성하고 실시간으로 볼 때 유용하다.&lt;/li&gt;
 &lt;li&gt;Laste Updated: 2022.08.11&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;설치-및-설정&#34;&gt;설치 및 설정&lt;/h2&gt;

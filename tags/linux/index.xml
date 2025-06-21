@@ -426,11 +426,11 @@
 &lt;/ul&gt;
 &lt;h2 id=&#34;reference&#34;&gt;REFERENCE&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/Riey/kime&#34;&gt;Github Kime&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://shanepark.tistory.com/318&#34;&gt;설치&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.linuxcapable.com/how-to-install-wine-on-debian-11-bullseye&#34;&gt;설치2&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://dawoum.tistory.com/88&#34;&gt;설치3&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://no1linux.org/board_WEnl84/39530&#34;&gt;설치4&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../https://github.com/Riey/kime&#34;&gt;Github Kime&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../https://shanepark.tistory.com/318&#34;&gt;설치&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../https://www.linuxcapable.com/how-to-install-wine-on-debian-11-bullseye&#34;&gt;설치2&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../https://dawoum.tistory.com/88&#34;&gt;설치3&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../http://no1linux.org/board_WEnl84/39530&#34;&gt;설치4&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
     <item>
@@ -455,7 +455,7 @@
 &lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;내용이 더 있는데 아래 참고해서 정리&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://linuxhint.com/tree-command-in-ubuntu/&#34;&gt;Waht is Tree Command in Ubuntu&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../https://linuxhint.com/tree-command-in-ubuntu/&#34;&gt;Waht is Tree Command in Ubuntu&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
     <item>
@@ -493,12 +493,12 @@
 &lt;/ul&gt;
 &lt;h2 id=&#34;패키지-설치&#34;&gt;패키지 설치&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;devel tools: build essential, &lt;a href=&#34;../%EA%B8%B0%EB%B3%B8%EC%84%A4%EC%B9%98&#34;&gt;rust&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;utils: rsync, curl, wget, &lt;a href=&#34;../nvim&#34;&gt;vim&lt;/a&gt;, fd-find, batcat &amp;hellip;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../PPA&#34;&gt;blender&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../PPA&#34;&gt;firefox&lt;/a&gt; + plugins&lt;/li&gt;
-&lt;li&gt;[freecad](../default apt)&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../PPA&#34;&gt;sketchup&lt;/a&gt; + sketchup2017make + plugins&lt;/li&gt;
+&lt;li&gt;devel tools: build essential, &lt;a href=&#34;../rust&#34;&gt;rust&lt;/a&gt;, python3(기본설치)&lt;/li&gt;
+&lt;li&gt;utils: rsync, curl, wget, &lt;a href=&#34;../vim&#34;&gt;vim&lt;/a&gt;, &lt;a href=&#34;../nvim&#34;&gt;nvim&lt;/a&gt;, fd-find, batcat &amp;hellip;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../blender&#34;&gt;blender&lt;/a&gt;: 최신패키지로 설치(PPA)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../firefox&#34;&gt;firefox&lt;/a&gt;: 최신패키지로 재설치(PPA) + plugins&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../freecad&#34;&gt;freecad&lt;/a&gt;: 최신패키지로 설치(default apt)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../sketchup&#34;&gt;sketchup&lt;/a&gt;: winehq(PPA) + sketchup2017make + plugins&lt;/li&gt;
 &lt;li&gt;vim, nvim plugins 설치 및 설정&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>

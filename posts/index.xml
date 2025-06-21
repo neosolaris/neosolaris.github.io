@@ -11,7 +11,7 @@
     </image>
     <generator>Hugo -- 0.147.2</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 19 Jun 2025 19:04:41 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 21 Jun 2025 02:18:56 +0900</lastBuildDate>
     <atom:link href="https://neosolaris.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>music - The Windmills Of Your Mind</title>
@@ -159,11 +159,108 @@ vi는 단순하고 일관성이 있다.
 작고 가볍게라는 말이 무색해진다.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>Zig로 gcc/clang 컴파일러 대체하기</title>
+      <link>https://neosolaris.github.io/posts/zig-cc/</link>
+      <pubDate>Wed, 03 Apr 2024 09:07:32 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/zig-cc/</guid>
+      <description>&lt;p&gt;last updated: {{ &amp;ldquo;1712680347&amp;rdquo; | date: &amp;ldquo;%Y-%m-%d %H:%M&amp;rdquo; }}&lt;/p&gt;
+&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;zig로 c 소스를 컴파일할 수 있다.&lt;/li&gt;
+&lt;li&gt;zig의 장점은 여러 플랫폼과 아키텍처용 컴파일이 가능하다는 것이다.&lt;/li&gt;
+&lt;li&gt;static, dynamic 모두 가능하다.&lt;/li&gt;
+&lt;li&gt;Linux, iOS, Windows 등 여러 OS 환경 지원.&lt;/li&gt;
+&lt;li&gt;x86, , x86-64, aarch64 등 아키텍처 지원&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;target-list&#34;&gt;Target List&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;다음 방법으로 원하는 플랫폼, 아키텍쳐를 먼저 찾는다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; zig targets
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; zig targets &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; grep x86
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; zig targets &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; grep x86-64
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; zig targets &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; grep aarch64
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; zig targets &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; grep linux
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; zig targets &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; grep windows
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; zig targets &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; grep macos
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;x86, x86_64 - intel 계열&lt;/li&gt;
+&lt;li&gt;aarch64 - arm 계열 (raspberrypi)&lt;/li&gt;
+&lt;li&gt;linux - Linux&lt;/li&gt;
+&lt;li&gt;windows - Ms Windows&lt;/li&gt;
+&lt;li&gt;macos - Mac OS&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;local-compile&#34;&gt;Local Compile&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;dynamic: Alpine Linux (x86_64)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; zig cc -o hello_dynamic hello.c
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; file hello_dynamic
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;hello: ELF 64-bit LSB executable, x86-64, version 1 (SYSV), dynamically linked, 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;interpreter /lib/ld-musl-x86_64.so.1, with debug_info, not stripped
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;&lt;/span&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; ./hello
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;Hello World!
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;static: Alpine Linux (x86_64)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; zig cc -o hello hello.c -target x86_64-linux-musl
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; file hello
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;./hello: ELF 64-bit LSB executable, x86-64, version 1 (SYSV), statically linked,
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;with debug_info, not stripped
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;&lt;/span&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; ./hello
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;Hello World!
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;cross-compile&#34;&gt;Cross Compile&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;For windows&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; zig cc -o hello.exe hello.c -target x86_64-windows-gnu
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; file ./hello.exe
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;hello: PE32+ executable (console) x86-64, for MS Windows, 7 sections
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;go&#34;&gt;Windows c:&amp;gt; .\hello.exe
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;Hello World!
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;For Linux dynamic with Gnu Libs&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; zig cc -o hello hello.c -target x86_64-linux-gnu
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; file ./hello.exe
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;./hello: ELF 64-bit LSB executable, x86-64, version 1 (SYSV), dynamically linked, 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;interpreter /lib64/ld-linux-x86-64.so.2, for GNU/Linux 2.0.0, with debug_info,
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;not stripped
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;go&#34;&gt;gnu-linux$ ./hello
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;Hello World!
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;For Linux Static with musl&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; zig cc -o hello.exe hello.c -target x86_64-linux-gnu
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; file ./hello.exe
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;./hello: ELF 64-bit LSB executable, x86-64, version 1 (SYSV), statically linked,
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;with debug_info, not stripped
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;go&#34;&gt;any-linux$ ./hello
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;Hello World!
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;makefile-or-buildsh&#34;&gt;Makefile or Build.sh&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;해당 파일에서 gcc, clang 부분을 &lt;code&gt;zig cc&lt;/code&gt;로 수정한다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;make&lt;/code&gt; 또는 &lt;code&gt;./Build.sh&lt;/code&gt; 실행&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;zig cc&lt;/code&gt;: a Powerful Drop-In Replacement for GCC/Clang
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://andrewkelley.me/post/zig-cc-powerful-drop-in-replacement-gcc-clang.html&#34;&gt;https://andrewkelley.me/post/zig-cc-powerful-drop-in-replacement-gcc-clang.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
       <title>Zig &#43; Nvim 설정</title>
       <link>https://neosolaris.github.io/posts/zig-nvim/</link>
       <pubDate>Tue, 12 Mar 2024 03:46:08 +0900</pubDate>
       <guid>https://neosolaris.github.io/posts/zig-nvim/</guid>
-      <description>&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
+      <description>&lt;p&gt;last updated: {{ &amp;ldquo;1710903265&amp;rdquo; | date: &amp;ldquo;%Y-%m-%d %H:%M&amp;rdquo; }}&lt;/p&gt;
+&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;neovim에서 zig 설정 방법을 설명한다.&lt;/li&gt;
 &lt;/ul&gt;
@@ -171,41 +268,43 @@ vi는 단순하고 일관성이 있다.
 &lt;ul&gt;
 &lt;li&gt;설치하기&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;doas apk add zig zls neovim
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;nvim ~/.local/nvim/init.lua
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;    require &amp;#39;lspconfig&amp;#39;.zls.setup{}
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; doas apk add zig zls neovim
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; nvim ~/.local/nvim/init.lua
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;    require &amp;#39;lspconfig&amp;#39;.zls.setup{}
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
-&lt;li&gt;다른 어떤 언어보다도 간단하다.&lt;/li&gt;
+&lt;li&gt;다른 어떤 언어보다도 설정이 간단하다.&lt;/li&gt;
 &lt;li&gt;zls는 zig language server&lt;/li&gt;
 &lt;li&gt;lspconfig는 neovim에 내장된 LSP 설정을 말한다.&lt;/li&gt;
 &lt;li&gt;nvim 설정 후 zig파일을 열고 코딩하면 도움말이 나타난다.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;tab&lt;/code&gt;으로 이동하고 &lt;code&gt;Enter&lt;/code&gt;로 선택한다.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;install-zls-from-source-최신-버전-소스-컴파일&#34;&gt;Install zls from Source (최신 버전 소스 컴파일)&lt;/h2&gt;
+&lt;h2 id=&#34;install-zls-from-source&#34;&gt;Install zls from Source&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;최신 버전의 zig(현재 0.12)여야 git 소스로 컴파일 된다.&lt;/li&gt;
+&lt;li&gt;소스를 컴파일하는 방법.&lt;/li&gt;
+&lt;li&gt;최신 버전의 zig(현재 0.12)이어야 git 소스로 컴파일 된다.&lt;/li&gt;
 &lt;li&gt;zig 최신 버전은 zig 홈에서 다운로드할 수 있다.&lt;/li&gt;
 &lt;li&gt;다음 절차에 따라 빌드한다.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;git clone https://github.com/zigtools/zls
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;cd zls
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;zig build -Doptimize=ReleaseSafe
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;mkdir ~/bin &amp;amp;&amp;amp; cp zig-out/bin/zls ~/bin
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;echo &amp;#39;export PATH=$HOME/bin:$PATH&amp;#39; &amp;gt;&amp;gt; ~/.bash_profile
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;source ~/.bash_profile
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;zls --version
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; git clone https://github.com/zigtools/zls
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; zls
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; zig build -Doptimize&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;ReleaseSafe
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; mkdir ~/bin &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; cp zig-out/bin/zls ~/bin
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;export PATH=$HOME/bin:$PATH&amp;#39;&lt;/span&gt; &amp;gt;&amp;gt; ~/.bash_profile
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;source&lt;/span&gt; ~/.bash_profile
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; zls --version
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Neovim setup for Zig&lt;br&gt;
 &lt;a href=&#34;https://terminalprogrammer.com/neovim-setup-for-zig&#34;&gt;https://terminalprogrammer.com/neovim-setup-for-zig&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
     <item>
-      <title>Zig</title>
+      <title>Zig Programming Language</title>
       <link>https://neosolaris.github.io/posts/zig/</link>
       <pubDate>Tue, 12 Mar 2024 03:21:08 +0900</pubDate>
       <guid>https://neosolaris.github.io/posts/zig/</guid>
-      <description>&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
+      <description>&lt;p&gt;last updated: {{ &amp;ldquo;1712202776&amp;rdquo; | date: &amp;ldquo;%Y-%m-%d %H:%M&amp;rdquo; }}&lt;/p&gt;
+&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;a general-purpose programming language and toolchain for maintaining robust, optimal and reusable software.&lt;/li&gt;
 &lt;/ul&gt;
@@ -215,25 +314,74 @@ vi는 단순하고 일관성이 있다.
 &lt;/ul&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo apt install zig
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
-&lt;li&gt;Alpine&lt;/li&gt;
+&lt;li&gt;Alpine Linux&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; doas apk add zig
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
-&lt;li&gt;최신 리눅스 버전 설치&lt;/li&gt;
-&lt;/ul&gt;
+&lt;li&gt;최신 리눅스 버전 설치
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://ziglang.org/download/&#34;&gt;https://ziglang.org/download/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;os와 아키텍쳐에 맞는 파일을 다운로드한다.&lt;/li&gt;
 &lt;li&gt;압축을 푼 후 &lt;code&gt;PATH&lt;/code&gt;를 설정해주면 바로 사용 가능하다.&lt;/li&gt;
+&lt;li&gt;현재 사용 버전: 0.12&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; tar xJf zig-linux-x86_64-0.12.0-dev.3212+40e64245f.tar.xz
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; ln -s zig-linux-x86_64-0.12.0-dev.3212+40e64245f/ zig
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; zig&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; ls 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; ./zig version
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; ./zig &lt;span class=&#34;nb&#34;&gt;help&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;hello-world&#34;&gt;Hello World&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;hello-world.zig&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-zig&#34; data-lang=&#34;zig&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kr&#34;&gt;const&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;std&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;@import&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;std&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;kr&#34;&gt;pub&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;fn&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;!&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;std&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;debug&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Hello, World!&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.{});&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;run / test&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; zig run hello-world.zig
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; zig &lt;span class=&#34;nb&#34;&gt;test&lt;/span&gt; hello-world.zig
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;build (default=debug, small, fast, safe)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; zig build-exe hello.zig
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; ./hello
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; zig build-exe --name hello-small -O ReleaseSmall hello.zig
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; zig build-exe --name hello-fast -O ReleaseFast hello.zig
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; zig build-exe --name hello-safe -O ReleaseSafe hello.zig
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; zig build-exe --name hello-debug -O Debug hello.zig
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; ls -l 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; ./hello-small
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;more-docs&#34;&gt;More Docs&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;../zig-nvim.md&#34;&gt;zig-nvim&lt;/a&gt; - neovim에 zig 개발 환경 설정하기&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../zig-cc.md&#34;&gt;zig-cc&lt;/a&gt; - Zig로 gcc/clang 컴파일러 대체하기&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;home - &lt;a href=&#34;https://ziglang.org/&#34;&gt;https://ziglang.org/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;awesome zig - &lt;a href=&#34;https://www.trackawesomelist.com/catdevnull/awesome-zig/readme/&#34;&gt;https://www.trackawesomelist.com/catdevnull/awesome-zig/readme/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;study-and-docs&#34;&gt;Study and Docs&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;zig-guide - &lt;a href=&#34;https://zig.guide/&#34;&gt;https://zig.guide/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;reference - &lt;a href=&#34;https://ziglang.org/documentation/0.11.0/&#34;&gt;https://ziglang.org/documentation/0.11.0/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;zig-by-example - &lt;a href=&#34;https://zig-by-example.com/&#34;&gt;https://zig-by-example.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;zig std - &lt;a href=&#34;https://ziglang.org/documentation/master/std/&#34;&gt;https://ziglang.org/documentation/master/std/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;exercises - &lt;a href=&#34;https://exercism.org/tracks/zig/exercises&#34;&gt;https://exercism.org/tracks/zig/exercises&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;learn x in y minutes - &lt;a href=&#34;https://learnxinyminutes.com/docs/zig/&#34;&gt;https://learnxinyminutes.com/docs/zig/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;compile-and-build&#34;&gt;Compile and Build&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;zig-cc - &lt;a href=&#34;https://andrewkelley.me/post/zig-cc-powerful-drop-in-replacement-gcc-clang.html&#34;&gt;https://andrewkelley.me/post/zig-cc-powerful-drop-in-replacement-gcc-clang.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Zig Build System Internals - &lt;a href=&#34;https://mitchellh.com/zig/build-internals&#34;&gt;https://mitchellh.com/zig/build-internals&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
     <item>
@@ -277,7 +425,8 @@ vi는 단순하고 일관성이 있다.
       <link>https://neosolaris.github.io/posts/redis/</link>
       <pubDate>Mon, 01 Jan 2024 02:08:34 +0900</pubDate>
       <guid>https://neosolaris.github.io/posts/redis/</guid>
-      <description>&lt;h1 id=&#34;intro&#34;&gt;INTRO&lt;/h1&gt;
+      <description>&lt;p&gt;last updated: {{ &amp;ldquo;1710725585&amp;rdquo; | date: &amp;ldquo;%Y-%m-%d %H:%M&amp;rdquo; }}&lt;/p&gt;
+&lt;h2 id=&#34;intro&#34;&gt;INTRO&lt;/h2&gt;
 &lt;p&gt;레디스(Redis)는 Remote Dictionary Server의 약자로서[4], &amp;ldquo;키-값&amp;rdquo; 구조의 비정형 데이터를 저장하고 관리하기 위한 오픈 소스 기반의 비관계형 데이터베이스 관리 시스템(DBMS)이다. 2009년 살바토르 산필리포(Salvatore Sanfilippo)가 처음 개발했다. 2015년부터 Redis Labs가 지원하고 있다. 모든 데이터를 메모리로 불러와서 처리하는 메모리 기반 DBMS이다. BSD 라이선스를 따른다. DB-Engines.com의 월간 랭킹에 따르면, 레디스는 가장 인기 있는 키-값 저장소이다.&lt;/p&gt;
 &lt;h2 id=&#34;install---alpine-linux&#34;&gt;INSTALL - alpine linux&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;#&lt;/span&gt; Install Redis
@@ -292,7 +441,7 @@ vi는 단순하고 일관성이 있다.
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;gp&#34;&gt;#&lt;/span&gt; Connect to redis
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;redis-cli
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;reference&#34;&gt;REFERENCE&lt;/h2&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Redis - &lt;a href=&#34;https://redis.io&#34;&gt;https://redis.io&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Install - &lt;a href=&#34;https://redis.io/docs/install&#34;&gt;https://redis.io/docs/install&lt;/a&gt;&lt;/li&gt;
@@ -637,7 +786,7 @@ make --version
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;ESP32
-&lt;img alt=&#34;ESP32&#34; loading=&#34;lazy&#34; src=&#34;https://makeradvisor.com/wp-content/uploads/2018/04/ESP32-DOIT-DEVKIT-V1-Board-Pinout-36-GPIOs-Copy.jpg&#34;&gt;&lt;/p&gt;</description>
+&lt;img alt=&#34;ESP32&#34; loading=&#34;lazy&#34; src=&#34;../https://makeradvisor.com/wp-content/uploads/2018/04/ESP32-DOIT-DEVKIT-V1-Board-Pinout-36-GPIOs-Copy.jpg&#34;&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Fritzing</title>
@@ -782,7 +931,7 @@ make --version
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img alt=&#34;ESP8266&#34; loading=&#34;lazy&#34; src=&#34;https://makeradvisor.com/wp-content/uploads/2020/05/ESP8266-NodeMCU-kit-12-E-pinout-gpio-pin.png&#34;&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;img alt=&#34;ESP8266&#34; loading=&#34;lazy&#34; src=&#34;../https://makeradvisor.com/wp-content/uploads/2020/05/ESP8266-NodeMCU-kit-12-E-pinout-gpio-pin.png&#34;&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>NodeMCU</title>
@@ -869,7 +1018,7 @@ Linino One                       arduino:avr:one
 &lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;소프트웨어-설치&#34;&gt;소프트웨어 설치&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;arduino-ide - 아두이노 홈페이지에 OS별로 다운로드 및 설치 가능&lt;/li&gt;
-&lt;li&gt;[arduino cli](../Linux, Win용)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../arduino-cli&#34;&gt;arduino cli&lt;/a&gt; - Command Line Interface (Linux, Win용)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;reference&#34;&gt;REFERENCE&lt;/h2&gt;
 &lt;ul&gt;
@@ -1112,7 +1261,7 @@ Wed Sep 27 07:24:31 UTC 2023 custom event
       <description>&lt;h2 id=&#34;intro&#34;&gt;INTRO&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;openresty는 nginx와 lua 기반의 웹개발 플랫폼이다.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../luajit&#34;&gt;lua&lt;/a&gt; 을 사용하고 엔진이 포함되어 있다.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../lua&#34;&gt;lua&lt;/a&gt;는 &lt;a href=&#34;../luajit&#34;&gt;luajit&lt;/a&gt; 을 사용하고 엔진이 포함되어 있다.&lt;/li&gt;
 &lt;li&gt;서버에서 동작한다.&lt;/li&gt;
 &lt;li&gt;대부분의 리눅스 배포판은 패키지를 지원한다.&lt;/li&gt;
 &lt;li&gt;여기에서는 &lt;a href=&#34;../docker&#34;&gt;docker&lt;/a&gt; 이미지로 설치하고 사용하는 방법을 정리한다.&lt;/li&gt;
@@ -2178,7 +2327,7 @@ local level = 2
 &lt;h2 id=&#34;문서작성시-수학식-표현&#34;&gt;문서작성시 수학식 표현&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;관련 프로그램(스크립트)를 작성한 후 도움말이나 문서를 작성할 때 가장 좋은 방법은 마크다운(markdown) 문서에 latex 문법으로 작성하는 것이다.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions&#34;&gt;사용방법&lt;/a&gt;을 참조한다.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions&#34;&gt;사용방법&lt;/a&gt;을 참조한다.&lt;/li&gt;
 &lt;li&gt;즉, 문장 중에는 &lt;code&gt;$수식$&lt;/code&gt; 으로 표현하고 독립적인 수식은 &lt;code&gt;$$수식$$&lt;/code&gt;으로 표현하는 것이다.&lt;/li&gt;
 &lt;li&gt;깃허브나 기타 웹페이지에서 이를 잘 지원한다.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;vscode&lt;/code&gt;에서는 &lt;code&gt;markdown all in one&lt;/code&gt; 플러그인을 설치하면 미리보기로 실시간으로 확인할 수 있다. 물론 수학표현식도 지원한다.&lt;/li&gt;
@@ -2212,7 +2361,7 @@ local level = 2
 &lt;/ul&gt;
 &lt;h2 id=&#34;이미지-사이즈-변경&#34;&gt;이미지 사이즈 변경&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;[APOD](../The Horsehead Nebula in Infrared) 사진을 받아온다. &lt;a href=&#34;https://apod.nasa.gov/apod/ap130422.html&#34;&gt;https://apod.nasa.gov/apod/ap130422.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../https://apod.nasa.gov/apod/astropix.html&#34;&gt;APOD&lt;/a&gt;(Astronomy Picture of the Day) 사이트에서 말머리성운(The Horsehead Nebula in Infrared) 사진을 받아온다. &lt;a href=&#34;https://apod.nasa.gov/apod/ap130422.html&#34;&gt;https://apod.nasa.gov/apod/ap130422.html&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;파일을 열고 정보를 확인한 다음 필요한 사이즈로 변경한다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;ol&gt;
@@ -2329,7 +2478,7 @@ local level = 2
 &lt;li&gt;
 &lt;p&gt;Study&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;../flip&#34;&gt;gimp quickies&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../gimp-quickies&#34;&gt;gimp quickies&lt;/a&gt; - 이미지 사이즈(size/scale), 자르기(crop), 회전(rotate)과 반전(flip)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;
@@ -2644,7 +2793,7 @@ ZZ — save session and close window.
       <description>&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;vi를 계승하면서도 현재적이고 새로운 코드, 심플하면서도 효과적인 에디터를 지향&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://sam.cat-v.org/&#34;&gt;sam&lt;/a&gt; 과 structual regular expression 을 도입&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../http://sam.cat-v.org/&#34;&gt;sam&lt;/a&gt; 과 structual regular expression 을 도입&lt;/li&gt;
 &lt;li&gt;효과적인 코드 하이라이팅 - Parsing Expression Grammars (Lua LPeg)&lt;/li&gt;
 &lt;li&gt;lua Api 제공으로 확장가능 - vim, &lt;a href=&#34;../nvim&#34;&gt;nvim&lt;/a&gt;과는 다르게 vim 설정법을 사용하지 않음&lt;/li&gt;
 &lt;li&gt;vimscipt 사용하지 않음, luajit도 사용하지 않음&lt;/li&gt;
@@ -3614,7 +3763,7 @@ RUN \
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;../fits&#34;&gt;FITS&lt;/a&gt; 데이터 분석 및 이미지 처리 도구 집합&lt;/li&gt;
 &lt;li&gt;NOAO(National Optical astronomy Observatory)에서 개발&lt;/li&gt;
-&lt;li&gt;현재 오픈소스로 공개하여 &lt;a href=&#34;https://iraf-community.github.io&#34;&gt;iraf community&lt;/a&gt; 가 관리하고 있다.&lt;/li&gt;
+&lt;li&gt;현재 오픈소스로 공개하여 &lt;a href=&#34;../https://iraf-community.github.io&#34;&gt;iraf community&lt;/a&gt; 가 관리하고 있다.&lt;/li&gt;
 &lt;li&gt;주로 관측천문학 분야에서 활용되고 있다.&lt;/li&gt;
 &lt;li&gt;파이썬으로 랩핑한 &lt;a href=&#34;../pyraf&#34;&gt;pyraf&lt;/a&gt;가 있다.&lt;/li&gt;
 &lt;li&gt;컴파일과 패키지 설치 두 가지가 있다. (패키지 설치 권장)&lt;/li&gt;
@@ -3631,7 +3780,7 @@ RUN \
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;install-from-source&#34;&gt;Install From Source&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/iraf-community/iraf/archive/refs/tags/v2.17.tar.gz&#34;&gt;Download Source&lt;/a&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;a href=&#34;../https://github.com/iraf-community/iraf/archive/refs/tags/v2.17.tar.gz&#34;&gt;Download Source&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Astropy - 파이썬 천문학 모듈</title>
@@ -3647,7 +3796,7 @@ RUN \
 &lt;/ul&gt;
 &lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://himbopsa.tistory.com/33&#34;&gt;천문학 데이터 파일 형식 FITS 파일형식 다루기&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../https://himbopsa.tistory.com/33&#34;&gt;천문학 데이터 파일 형식 FITS 파일형식 다루기&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
     <item>
@@ -3667,7 +3816,7 @@ RUN \
 &lt;h2 id=&#34;install&#34;&gt;Install&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;a href=&#34;https://noirlab.edu/public/products/fitsliberator&#34;&gt;홈페이지&lt;/a&gt;에서 다운로드 및 설치 가능하다.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;../https://noirlab.edu/public/products/fitsliberator&#34;&gt;홈페이지&lt;/a&gt;에서 다운로드 및 설치 가능하다.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Ubuntu, Debian&lt;/p&gt;
@@ -3755,7 +3904,7 @@ RUN \
 &lt;li&gt;이런 것이 있었다 하고 넘어가자.&lt;/li&gt;
 &lt;li&gt;파이썬 사용자라면 astropy를 사용하는 것이 좋겠다.&lt;/li&gt;
 &lt;li&gt;아 루아로는 갈길이 멀다.&lt;/li&gt;
-&lt;li&gt;하지만 현재 &lt;a href=&#34;../fits-liberator&#34;&gt;astropy&lt;/a&gt;도 내부에는 이 라이브러리를 쓴다.&lt;/li&gt;
+&lt;li&gt;하지만 현재 &lt;a href=&#34;../astropy&#34;&gt;astropy&lt;/a&gt;나 &lt;a href=&#34;../fits-liberator&#34;&gt;fits liberator&lt;/a&gt;도 내부에는 이 라이브러리를 쓴다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;
 &lt;ul&gt;
@@ -3793,16 +3942,16 @@ RUN \
 &lt;h2 id=&#34;편집-소프트웨어&#34;&gt;편집 소프트웨어&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;../siril&#34;&gt;siril&lt;/a&gt; - FITS Edit: 천문사진 전처리 또는 이미지 프로세싱 소프트웨어&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../NOAO&#34;&gt;iraf&lt;/a&gt;의 천문사진 프로세싱: clang&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../iraf&#34;&gt;iraf&lt;/a&gt;, - 미국 천문관측기관(NOAO)의 천문사진 프로세싱: clang&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;../gimp&#34;&gt;gimp&lt;/a&gt; - 그래픽툴, FITS 편집 가능&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;../photoshop&#34;&gt;photoshop&lt;/a&gt; - 그래픽툴, FITS 편집 가능, 유료, 윈도우즈 전용&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;../imagej&#34;&gt;imagej&lt;/a&gt; - FIT 편집 통합 툴&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../ubuntu:libfitsio&#34;&gt;fits liberator&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../fits-liberator&#34;&gt;fits liberator&lt;/a&gt; - 유럽, 나사에서 사용하는 전처리 툴(ubuntu:libfitsio)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;fits-library&#34;&gt;FITS LIBRARY&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;../astropy&#34;&gt;astropy&lt;/a&gt; - pyfits 포함 천문관측 모듈: anaconda 기본 모듈&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../NOAO&#34;&gt;pyraf&lt;/a&gt;의 천문사진 프로세싱: python&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../pyraf&#34;&gt;pyraf&lt;/a&gt; - 미국 천문관측기관(NOAO)의 천문사진 프로세싱: python&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;../pyfits&#34;&gt;pyfits&lt;/a&gt; - fits 편집 모듈: python&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;../fitsio&#34;&gt;fitsio&lt;/a&gt; - fits 라이브러리: clang&lt;/li&gt;
 &lt;/ul&gt;
@@ -3810,7 +3959,7 @@ RUN \
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;../fv&#34;&gt;fv&lt;/a&gt; - FITS Viewer: 오래된 툴, 조금 촌스럽다.&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;../gimp&#34;&gt;gimp&lt;/a&gt; - 그래픽툴, 파일보기 및 다른 포맷 변환&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../ubuntu:saods9&#34;&gt;ds9&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../ds9&#34;&gt;ds9&lt;/a&gt; - FITS Viewer (ubuntu:saods9)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;guides&#34;&gt;Guides&lt;/h2&gt;
 &lt;ul&gt;
@@ -3846,7 +3995,7 @@ RUN \
       <guid>https://neosolaris.github.io/posts/fv/</guid>
       <description>&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;[FITS](../Flexible Image Transport System) 파일 포맷을 보거나 편집할 수 있는 프로그램&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../fits&#34;&gt;FITS&lt;/a&gt; (Flexible Image Transport System) 파일 포맷을 보거나 편집할 수 있는 프로그램&lt;/li&gt;
 &lt;li&gt;fits 포맷은 주로 천문사진에서 사용되는 포맷이다.&lt;/li&gt;
 &lt;li&gt;리눅스의 경우 직접 다운로드 받는 것보다 패키지로 설치하는 것이 좋다.&lt;/li&gt;
 &lt;/ul&gt;
@@ -3993,9 +4142,7 @@ RUN \
 01:10 평화롭게 (Peacefully)
 03:53 신비롭게 (Mysteriously)
 05:36 익살스럽게 (Humorously)
-&lt;/code&gt;&lt;/pre&gt;&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
-      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/Ts2SOQBbTPs?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;
-    &lt;/div&gt;</description>
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;a href=&#34;http://www.youtube.com/watch?v=Ts2SOQBbTPs&#34; title=&#34;춘설-황병기&#34;&gt;&lt;img alt=&#34;춘설-황병기&#34; loading=&#34;lazy&#34; src=&#34;../http://img.youtube.com/vi/Ts2SOQBbTPs/0.jpg&#34;&gt;&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>아리랑 - Bruskers Guitar Duo</title>
@@ -4007,9 +4154,7 @@ RUN \
 &lt;li&gt;Youtube에서 발견한 가장 아름다운 아리랑 연주가 아닐까 한다.&lt;/li&gt;
 &lt;li&gt;선별 기준은 역시 내게 감동을 주는가이다.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
-      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/JCEQkaUBIaM?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;
-    &lt;/div&gt;</description>
+&lt;p&gt;&lt;a href=&#34;http://www.youtube.com/watch?v=Ts2SOQBbTPs&#34; title=&#34;Arirang Bruskers Guitar Duo&#34;&gt;&lt;img alt=&#34;Arirang Bruskers Guitar Duo&#34; loading=&#34;lazy&#34; src=&#34;../http://img.youtube.com/vi/JCEQkaUBIaM/0.jpg&#34;&gt;&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Lua - Interactive Mode</title>
@@ -4127,7 +4272,7 @@ hello world                -- 결과: hello world
       <pubDate>Sun, 18 Sep 2022 00:14:15 +0900</pubDate>
       <guid>https://neosolaris.github.io/posts/%EC%96%BC%EA%B5%B4/</guid>
       <description>&lt;ul&gt;
-&lt;li&gt;이 곡의 사연은 &lt;a href=&#34;https://namu.wiki/w/%EC%96%BC%EA%B5%B4#s-3&#34;&gt;나무위키&lt;/a&gt; 에 잘 나와 있다.&lt;/li&gt;
+&lt;li&gt;이 곡의 사연은 &lt;a href=&#34;../https://namu.wiki/w/%EC%96%BC%EA%B5%B4#s-3&#34;&gt;나무위키&lt;/a&gt; 에 잘 나와 있다.&lt;/li&gt;
 &lt;li&gt;정말 많은 사람이 불렀지만 내 마음에 깊은 울림을 주는 것을 정리해 본다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;얼굴 - 심봉석 시/ 신귀복 곡
@@ -4790,7 +4935,7 @@ block comments
       <guid>https://neosolaris.github.io/posts/yadm/</guid>
       <description>&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;dotfiles를 백업 및 관리해 주는 툴은 많이 있다. &lt;a href=&#34;https://dotfiles.github.io/utilities/&#34;&gt;참조&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;dotfiles를 백업 및 관리해 주는 툴은 많이 있다. &lt;a href=&#34;../https://dotfiles.github.io/utilities/&#34;&gt;참조&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;나중에 재설치하거나 다른 컴퓨터에서 이 설정들을 복원하려면 매우 번거롭다.&lt;/li&gt;
 &lt;li&gt;yadm은 그 중 git 외에 의존성이 매우 적으며, 사용하기 쉽고 편리하다.&lt;/li&gt;
 &lt;li&gt;데비안이나 우분투 사용자라면 패키지로 쉽게 설치할 수 있다.&lt;/li&gt;
@@ -5136,7 +5281,8 @@ sudo make install
       <link>https://neosolaris.github.io/posts/luajit/</link>
       <pubDate>Tue, 30 Aug 2022 14:51:27 +0900</pubDate>
       <guid>https://neosolaris.github.io/posts/luajit/</guid>
-      <description>&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
+      <description>&lt;p&gt;last updated: {{ &amp;ldquo;1736305941&amp;rdquo; | date: &amp;ldquo;%Y-%m-%d %H:%M&amp;rdquo; }}&lt;/p&gt;
+&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;함수들이 처음 실행 될 때 필요에 의해 컴파일된다.&lt;/p&gt;
@@ -5157,67 +5303,7 @@ sudo make install
 &lt;p&gt;네이티브에 견줄만큼 속도가 빠르고, 메모리 사용량이 매우 적다.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;nginx에 LuaJIT을 포함시켜서 커스터마이징을 한 OpenResty 웹 서버도 있다.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;lua vs luaJIT&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;* PUC Lua (the &amp;#34;normal interpreter&amp;#34;) is more stable, i.e. bugs are more frequently found in LuaJIT.
-* PUC Lua is smaller, i.e. it takes less memory.
-* PUC Lua is much easier to understand if you want to customize it.
-* PUC Lua has been ported to way more platforms and is easier to port.
-* Like @lhf said, LuaJIT does not support all of Lua 5.2 features yet.
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;install&#34;&gt;Install&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo apt update
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo apt install luajit
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; luajit -h
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;usage&#34;&gt;Usage&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;-b&lt;/code&gt; 옵션은 컴파일 바이너리 코드를 생성한다.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;./luajit: unknown luaJIT command or jit.* modules not installed&lt;/code&gt; 에러가
-발생하는 경우는 $LUA_PATH 설정이 잘못되어 있는 경우이므로 &lt;code&gt;unset LUA_PATH&lt;/code&gt;해주거나 $LUA_PATH에 luajit의 올바른 모듈경로를 추가해 준다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; luajit -b test.lua test.out                 &lt;span class=&#34;c1&#34;&gt;# Save bytecode to test.out&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; luajit -bg test.lua test.out                &lt;span class=&#34;c1&#34;&gt;# Keep debug info&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; luajit -be &lt;span class=&#34;s2&#34;&gt;&amp;#34;print(&amp;#39;hello world&amp;#39;)&amp;#34;&lt;/span&gt; test.out  &lt;span class=&#34;c1&#34;&gt;# Save cmdline script&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; luajit -bl test.lua                         &lt;span class=&#34;c1&#34;&gt;# List to stdout&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; luajit -bl test.lua test.txt                &lt;span class=&#34;c1&#34;&gt;# List to test.txt&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; luajit -ble &lt;span class=&#34;s2&#34;&gt;&amp;#34;print(&amp;#39;hello world&amp;#39;)&amp;#34;&lt;/span&gt;          &lt;span class=&#34;c1&#34;&gt;# List cmdline script&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; luajit -b test.lua test.obj                 &lt;span class=&#34;c1&#34;&gt;# Generate object file&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# Link test.obj with your application and load it with require(&amp;#34;test&amp;#34;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;ffi-사용례&#34;&gt;FFI 사용례&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;LuaJIT는 C함수를 손쉽게 가져와 사용할 수 있다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; cat&amp;lt;&amp;lt;EOF &amp;gt; test-ffi.lua
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;local ffi = require(&amp;#34;ffi&amp;#34;)
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;ffi.cdef[[int printf(const char *fmt, ...);]]
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;ffi.C.printf(&amp;#34;Hello %s!\n&amp;#34;, &amp;#34;wiki&amp;#34;)
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;EOF
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; luajit test-ffi.lua
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;Hello wiki!
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;link&#34;&gt;Link&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Lua Jit Introduction - 한글번역
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://m.blog.naver.com/milennium9/20120034562&#34;&gt;https://m.blog.naver.com/milennium9/20120034562&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Usage - 사용법
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://luajit.org/running.html&#34;&gt;https://luajit.org/running.html&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;LuaJIT Wiki 문서 - 공부의 시작
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://wiki.luajit.org/Home&#34;&gt;http://wiki.luajit.org/Home&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;</description>
+&lt;p&gt;nginx에 LuaJIT을 포함시켜서 커스터마이징을 한 OpenResty 웹 서버도 있다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Luarocks - lua 패키지 관리</title>
@@ -5364,7 +5450,6 @@ sudo make install
 &lt;li&gt;hello-world.lua&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-lua&#34; data-lang=&#34;lua&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#!/usr/bin/env lua&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;Hello World!&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;실행&lt;/li&gt;
@@ -5604,7 +5689,7 @@ WineHQ 최신버전
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;../luajit&#34;&gt;luaJit&lt;/a&gt; - LuaJit, Just in Time Compiler&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;../lfs-ffi&#34;&gt;luajit lfs-ffi&lt;/a&gt; - LuaJit lua file system 모듈&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../%ED%99%95%EC%9E%A5%EB%AA%A8%EB%93%88&#34;&gt;luafun&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../luafun&#34;&gt;luafun&lt;/a&gt; - LuaJit Functions Module (확장모듈)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;graphic--game&#34;&gt;Graphic &amp;amp; Game&lt;/h2&gt;
 &lt;ul&gt;
@@ -5701,14 +5786,14 @@ WineHQ 최신버전
 &lt;p&gt;vim이 터미널에서 동작하므로 아이콘을 표시하기가 좋지 않다. 색깔과 모양을 미려하게 바꾸어 준다. 개인적인 관점에서 보면 상당히 매력적이다. 삭막한 검은 배경에 글씨만 보이다가 꽃이 피고 그림이 여기 저기 있는 느낌이다. 거기에다 아름다우면서도 절제된 것이 작업 집중력을 결코 떨어 뜨리는 것도 아니다. 적극 추천한다.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/ryanoasis/vim-devicons&#34;&gt;https://github.com/ryanoasis/vim-devicons&lt;/a&gt; 이 곳에 가면 샘플 사진과 설치법이 자세히 나와있다.&lt;/li&gt;
-&lt;li&gt;적용되는 플러그인: &lt;a href=&#34;../startify&#34;&gt;NERDTree&lt;/a&gt;, vimfiler, vim-buffet and flagship.&lt;/li&gt;
+&lt;li&gt;적용되는 플러그인: &lt;a href=&#34;../NERDTree&#34;&gt;NERDTree&lt;/a&gt;,&lt;a href=&#34;../vim-airline&#34;&gt;vim airline&lt;/a&gt;, CtrlP, powerline, denite, unite, lightline.vim, &lt;a href=&#34;../startify&#34;&gt;vim startify&lt;/a&gt;, vimfiler, vim-buffet and flagship.&lt;/li&gt;
 &lt;li&gt;물론 폰트를 설치하면 zsh, bash 등에서도 프롬프트 표시를 지원한다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;폰트-설치&#34;&gt;폰트 설치&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;vim-devicons를 설치하기 전에 먼저 Nerd Patched 폰트를 설치해야 한다.&lt;/li&gt;
 &lt;li&gt;폰트는 다양한데 모두 설치한다면 많은 용량을 차지하므로 여기에서는 &lt;code&gt;Noto Nerd Font&lt;/code&gt; 폰트만 설치했다.&lt;/li&gt;
-&lt;li&gt;참고로 폰트를 받을 수 있는 사이트이다. &lt;a href=&#34;https://www.nerdfonts.com/font-downloads&#34;&gt;nerd-fonts&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;참고로 폰트를 받을 수 있는 사이트이다. &lt;a href=&#34;../https://www.nerdfonts.com/font-downloads&#34;&gt;nerd-fonts&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;깃허브 사이트와 설치 안내도 있다. &lt;a href=&#34;https://github.com/ryanoasis/nerd-fonts&#34;&gt;https://github.com/ryanoasis/nerd-fonts&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;모두 설치하면 용량이 약 1.2GB로 매우 크므로 다음 스크립트에서 Noto와 Hack만 설치한다.&lt;/li&gt;
 &lt;li&gt;실행하면 &lt;code&gt;~/.local/share/fonts&lt;/code&gt;에 설치된다.&lt;/li&gt;
@@ -5768,7 +5853,7 @@ WineHQ 최신버전
 &lt;/ul&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;nvim +plugInstall  +qall
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
-&lt;li&gt;터미널 설정에서 폰트를 &lt;code&gt;Noto Nerd Font&lt;/code&gt;를 설정해 주고 &lt;a href=&#34;../nvim&#34;&gt;vim&lt;/a&gt; 을 사용하면 된다.&lt;/li&gt;
+&lt;li&gt;터미널 설정에서 폰트를 &lt;code&gt;Noto Nerd Font&lt;/code&gt;를 설정해 주고 &lt;a href=&#34;../vim&#34;&gt;vim&lt;/a&gt; 또는 &lt;a href=&#34;../nvim&#34;&gt;nvim&lt;/a&gt; 을 사용하면 된다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;
 &lt;ul&gt;
@@ -6109,6 +6194,80 @@ WineHQ 최신버전
 &lt;p&gt;그러나 실제로 적용해도 페이지는 변화하지 않는다.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>TODO</title>
+      <link>https://neosolaris.github.io/posts/todo/</link>
+      <pubDate>Wed, 24 Aug 2022 02:35:08 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/todo/</guid>
+      <description>&lt;h2 id=&#34;2023-08&#34;&gt;2023-08&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 2023-08-07: openrc, doas 문서 정리, 업로드&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 2023-08-06: &lt;a href=&#34;../vimwiki-hugo-github&#34;&gt;vimwiki hugo github&lt;/a&gt;: 프로젝트를 자동 업데이트하도록 nvim 추가&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 2023-08-06: blogen.lua: 수정: vimwiki-hugo와 githubio 모두 git push 하도록 수정 nvim에 &lt;!-- raw HTML omitted --&gt; 등록, &lt;!-- raw HTML omitted --&gt;는 ~/git/* git pull&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 2023-08-05: blogen.lua 스크립트 nvim내 실행시 출력 깨지는 문제 해결&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 2023-08-03: windows wsl + alpine + docker + git 설치 완료 및 문서 정리&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;2022-09&#34;&gt;2022-09&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 2022-09-08
+&lt;ul&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; nvim에서 왜 autosave가 되지 않는가&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;a href=&#34;../nvim-lua&#34;&gt;nvim lua&lt;/a&gt; 공부&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;a href=&#34;../lua&#34;&gt;lua&lt;/a&gt; 공부 계속&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 2022-09-02
+&lt;ul&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;a href=&#34;../nvim-lua&#34;&gt;nvim lua&lt;/a&gt; 공부&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;a href=&#34;../lua&#34;&gt;lua&lt;/a&gt; 공부 계속&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;a href=&#34;../ssh-keygen&#34;&gt;ssh keygen&lt;/a&gt; 문서 정리&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 2022-09-01
+&lt;ul&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;a href=&#34;../yadm&#34;&gt;yadm&lt;/a&gt; 설치 및 설정, 문서 정리&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;a href=&#34;../lua&#34;&gt;lua&lt;/a&gt; 공부 계속&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;2022-08&#34;&gt;2022-08&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 2022-08-31
+&lt;ul&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;a href=&#34;../rclone&#34;&gt;rclone&lt;/a&gt; 설치 및 설정 그리고 문서 정리&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 2022-08-26
+&lt;ul&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; nvim lua 공부&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; www 프로젝트 문서 업데이트&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; hugo project: blog.sh 링크 필터링 부분 수정&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 2022-08-25
+&lt;ul&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; nvim 플러그인 공부&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; www 프로젝트 문서 업데이트&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 2022-08-24
+&lt;ul&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; vim 공부&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; www 프로젝트 문서 업데이트&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; generate.sh 파일명 수정: blog.sh {gen|push} 그리고 ~/bin 링크&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 2022-08-23
+&lt;ul&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;a href=&#34;../vimwiki&#34;&gt;vimwiki&lt;/a&gt; 문서 정리&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 깃허브에 만든 블로그 올리고 테스트&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; www 프로젝트 정리하고 수정 보완&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;a href=&#34;../hugo-papermod&#34;&gt;papermod&lt;/a&gt; 에 lastmod 표시하기&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;a href=&#34;../vim&#34;&gt;vim&lt;/a&gt; 에 abbr 추가 및 설정: generate.sh 실행&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
       <title>Markdown</title>
       <link>https://neosolaris.github.io/posts/markdown/</link>
       <pubDate>Wed, 24 Aug 2022 02:08:51 +0900</pubDate>
@@ -6205,7 +6364,7 @@ WineHQ 최신버전
 [usermanual]: https://github.com/myproject/wiki/목차3
 &lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://ruby-kim.github.io/2022/04/07/Hexo/Install/&#34;&gt;Github Wiki에서 TOC 만들기&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../https://ruby-kim.github.io/2022/04/07/Hexo/Install/&#34;&gt;Github Wiki에서 TOC 만들기&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
     <item>
@@ -6218,7 +6377,7 @@ WineHQ 최신버전
 &lt;/ul&gt;
 &lt;h2 id=&#34;깃허브-가입과-설정&#34;&gt;깃허브 가입과 설정&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com&#34;&gt;GitHub Home&lt;/a&gt; 에 가입한다.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../https://github.com&#34;&gt;GitHub Home&lt;/a&gt; 에 가입한다.&lt;/li&gt;
 &lt;li&gt;새로운 저장소(Repository)를 만든다.&lt;/li&gt;
 &lt;li&gt;저장소의 주소를 확인한다.(Code 아이콘를 클릭)&lt;/li&gt;
 &lt;/ul&gt;
@@ -6272,7 +6431,7 @@ Readme를 생성하지 말고&lt;/p&gt;</description>
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;ls ~/.ssh/id_rsa      #private key
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;ls ~/.ssh/id_rsa.pub  #public key
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
-&lt;li&gt;[ed25519](../추천: 보다 간결하고 강화된 방식)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../ed25519&#34;&gt;ed25519&lt;/a&gt;로 키를 만들 경우 (추천: 보다 간결하고 강화된 방식)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;ssh-keygen -t ed25519 -C “yourmail@mail.com”
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;ls ~/.ssh/id_ed25519      #private key
@@ -6341,7 +6500,7 @@ Readme를 생성하지 말고&lt;/p&gt;</description>
 &lt;/ul&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;theme: &amp;#34;PaperMod&amp;#34;&amp;#39;&lt;/span&gt; &amp;gt;&amp;gt; config.yml
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
-&lt;li&gt;또는 &lt;a href=&#34;https://github.com/adityatelange/hugo-PaperMod/wiki/Installation&#34;&gt;PaperMod&lt;/a&gt; 홈에 가서 config.yml을 복사한다.&lt;/li&gt;
+&lt;li&gt;또는 &lt;a href=&#34;../https://github.com/adityatelange/hugo-PaperMod/wiki/Installation&#34;&gt;PaperMod&lt;/a&gt; 홈에 가서 config.yml을 복사한다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;sample-page-만들기&#34;&gt;Sample Page 만들기&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;---
@@ -6499,7 +6658,7 @@ Readme를 생성하지 말고&lt;/p&gt;</description>
 &lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://devinlife.com/howto&#34;&gt;https://devinlife.com/howto&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://jekyllrb.com/&#34;&gt;Jekill 홈페이지&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../https://jekyllrb.com/&#34;&gt;Jekill 홈페이지&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
     <item>
@@ -6550,11 +6709,11 @@ Readme를 생성하지 말고&lt;/p&gt;</description>
 &lt;/ul&gt;
 &lt;h2 id=&#34;reference&#34;&gt;REFERENCE&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/Riey/kime&#34;&gt;Github Kime&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://shanepark.tistory.com/318&#34;&gt;설치&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.linuxcapable.com/how-to-install-wine-on-debian-11-bullseye&#34;&gt;설치2&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://dawoum.tistory.com/88&#34;&gt;설치3&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://no1linux.org/board_WEnl84/39530&#34;&gt;설치4&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../https://github.com/Riey/kime&#34;&gt;Github Kime&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../https://shanepark.tistory.com/318&#34;&gt;설치&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../https://www.linuxcapable.com/how-to-install-wine-on-debian-11-bullseye&#34;&gt;설치2&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../https://dawoum.tistory.com/88&#34;&gt;설치3&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../http://no1linux.org/board_WEnl84/39530&#34;&gt;설치4&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
     <item>
@@ -6564,8 +6723,8 @@ Readme를 생성하지 말고&lt;/p&gt;</description>
       <guid>https://neosolaris.github.io/posts/markdown-viewer-webtext/</guid>
       <description>&lt;h1 id=&#34;firefox-markdown-viewer-플러그인&#34;&gt;firefox: markdown viewer 플러그인&lt;/h1&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;../%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4&#34;&gt;firefox&lt;/a&gt;을 html 페이지로 보여준다.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4&#34;&gt;vim&lt;/a&gt;파일을 작성하고 실시간으로 볼 때 유용하다.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../firefox&#34;&gt;firefox&lt;/a&gt;의 플러그인으로 로컬내에서 &lt;a href=&#34;../%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4&#34;&gt;마크다운&lt;/a&gt;을 html 페이지로 보여준다.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../vim&#34;&gt;vim&lt;/a&gt;과 연동하여 &lt;a href=&#34;../%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4&#34;&gt;마크다운&lt;/a&gt;파일을 작성하고 실시간으로 볼 때 유용하다.&lt;/li&gt;
 &lt;li&gt;Laste Updated: 2022.08.11&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;설치-및-설정&#34;&gt;설치 및 설정&lt;/h2&gt;
@@ -6607,8 +6766,8 @@ Readme를 생성하지 말고&lt;/p&gt;</description>
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;vim _posts/my-first-post.md
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://devinlife.com/howto%20github%20pages/new-blog-from-template/&#34;&gt;minimal-mistakes Install Setup&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/&#34;&gt;Quick Start Guide&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../https://devinlife.com/howto%20github%20pages/new-blog-from-template/&#34;&gt;minimal-mistakes Install Setup&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/&#34;&gt;Quick Start Guide&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
     <item>
@@ -6654,8 +6813,8 @@ ctrl+u: empty search query
 escape: quit serching mode and empty query
 &lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/figsoda/mmtc&#34;&gt;mmtc github page&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.linuxlinks.com/mmtc-minimal-mpd-terminal-client/&#34;&gt;mmtc-minimal mpd terminal client&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../https://github.com/figsoda/mmtc&#34;&gt;mmtc github page&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../https://www.linuxlinks.com/mmtc-minimal-mpd-terminal-client/&#34;&gt;mmtc-minimal mpd terminal client&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
     <item>
@@ -6666,7 +6825,7 @@ escape: quit serching mode and empty query
       <description>&lt;h2 id=&#34;소개&#34;&gt;소개&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;../mpd&#34;&gt;mpd&lt;/a&gt;의 client 프로그램으로 간결하다.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../ncmpcpp&#34;&gt;mmtc&lt;/a&gt; 도 있으니 참고.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../mmtc&#34;&gt;mmtc&lt;/a&gt;, &lt;a href=&#34;../ncmpcpp&#34;&gt;ncmpcpp&lt;/a&gt; 도 있으니 참고.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;사용법&#34;&gt;사용법&lt;/h2&gt;
 &lt;ul&gt;
@@ -6678,7 +6837,7 @@ escape: quit serching mode and empty query
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; mpc play	&lt;span class=&#34;c1&#34;&gt;# 현재 리스트를 플레이 &lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.musicpd.org/doc/mpc/html&#34;&gt;Mpc Manual&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../https://www.musicpd.org/doc/mpc/html&#34;&gt;Mpc Manual&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
     <item>
@@ -6689,7 +6848,7 @@ escape: quit serching mode and empty query
       <description>&lt;h2 id=&#34;mpd-clients-cli&#34;&gt;Mpd Clients CLI&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;../mpc&#34;&gt;mpc&lt;/a&gt; : 가장 간단한 프로그램&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../rust&#34;&gt;mmtc&lt;/a&gt; 로 작성된 심플한 프로그램&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../mmtc&#34;&gt;mmtc&lt;/a&gt; : &lt;a href=&#34;../rust&#34;&gt;rust&lt;/a&gt; 로 작성된 심플한 프로그램&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;../ncmpc&#34;&gt;ncmpc&lt;/a&gt; : c++로 작성, ncurse를 이용한 프로그램&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;../ncmpcpp&#34;&gt;ncmpcpp&lt;/a&gt; : ncmpc를 더욱 발전시킴, 제일 기능이 많고 편하고 마음에 든다.&lt;/li&gt;
 &lt;/ul&gt;</description>
@@ -6757,8 +6916,8 @@ visualizer_look = &amp;#34;●▮&amp;#34;
 &lt;/ul&gt;
 &lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://wiki.archlinux.org/title/Ncmpcpp&#34;&gt;AchiLinux Ncmpcpp Wiki&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/ncmpcpp/ncmpcpp&#34;&gt;Ncmpcpp GitHub&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../https://wiki.archlinux.org/title/Ncmpcpp&#34;&gt;AchiLinux Ncmpcpp Wiki&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../https://github.com/ncmpcpp/ncmpcpp&#34;&gt;Ncmpcpp GitHub&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
     <item>
@@ -6831,7 +6990,7 @@ visualizer_look = &amp;#34;●▮&amp;#34;
 &lt;/ul&gt;
 &lt;h2 id=&#34;linux-일반&#34;&gt;Linux 일반&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 우분투에서 default shell을 &lt;a href=&#34;../kime&#34;&gt;zsh&lt;/a&gt;이 작동하지 않는다.&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 우분투에서 default shell을 &lt;a href=&#34;../zsh&#34;&gt;zsh&lt;/a&gt;로 바꾼 후 한글입력(kime)이 작동하지 않는다.&lt;/li&gt;
 &lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 리눅스에서 폴더를 구조적 계층적으로 볼 수 있는 방법은?
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;../tree&#34;&gt;tree&lt;/a&gt; 명령어를 사용하면 된다.&lt;/li&gt;
@@ -6885,7 +7044,7 @@ visualizer_look = &amp;#34;●▮&amp;#34;
 &lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;내용이 더 있는데 아래 참고해서 정리&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://linuxhint.com/tree-command-in-ubuntu/&#34;&gt;Waht is Tree Command in Ubuntu&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../https://linuxhint.com/tree-command-in-ubuntu/&#34;&gt;Waht is Tree Command in Ubuntu&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
     <item>
@@ -6992,12 +7151,12 @@ extension &amp;gt; hide top bar 검색 후 설치(Click to change: ON)&lt;/li&gt
 &lt;/ul&gt;
 &lt;h2 id=&#34;패키지-설치&#34;&gt;패키지 설치&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;devel tools: build essential, &lt;a href=&#34;../%EA%B8%B0%EB%B3%B8%EC%84%A4%EC%B9%98&#34;&gt;rust&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;utils: rsync, curl, wget, &lt;a href=&#34;../nvim&#34;&gt;vim&lt;/a&gt;, fd-find, batcat &amp;hellip;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../PPA&#34;&gt;blender&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../PPA&#34;&gt;firefox&lt;/a&gt; + plugins&lt;/li&gt;
-&lt;li&gt;[freecad](../default apt)&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../PPA&#34;&gt;sketchup&lt;/a&gt; + sketchup2017make + plugins&lt;/li&gt;
+&lt;li&gt;devel tools: build essential, &lt;a href=&#34;../rust&#34;&gt;rust&lt;/a&gt;, python3(기본설치)&lt;/li&gt;
+&lt;li&gt;utils: rsync, curl, wget, &lt;a href=&#34;../vim&#34;&gt;vim&lt;/a&gt;, &lt;a href=&#34;../nvim&#34;&gt;nvim&lt;/a&gt;, fd-find, batcat &amp;hellip;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../blender&#34;&gt;blender&lt;/a&gt;: 최신패키지로 설치(PPA)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../firefox&#34;&gt;firefox&lt;/a&gt;: 최신패키지로 재설치(PPA) + plugins&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../freecad&#34;&gt;freecad&lt;/a&gt;: 최신패키지로 설치(default apt)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../sketchup&#34;&gt;sketchup&lt;/a&gt;: winehq(PPA) + sketchup2017make + plugins&lt;/li&gt;
 &lt;li&gt;vim, nvim plugins 설치 및 설정&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
@@ -7049,12 +7208,12 @@ extension &amp;gt; hide top bar 검색 후 설치(Click to change: ON)&lt;/li&gt
 &lt;/ul&gt;
 &lt;h2 id=&#34;문제점&#34;&gt;문제점&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;../vimwiki&#34;&gt;vim&lt;/a&gt; 자동저장이 안되는 문제가 있다.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../vim&#34;&gt;vim&lt;/a&gt; 에서는 잘 되는데 &lt;a href=&#34;../nvim&#34;&gt;nvim&lt;/a&gt; 에서는 구버전(0.6.x), 최신버전(0.7.x) 모두 &lt;a href=&#34;../vimwiki&#34;&gt;vimwiki&lt;/a&gt; 자동저장이 안되는 문제가 있다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/mhinz/vim-startify&#34;&gt;Github home&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://ricostacruz.com/til/project-switcher-using-startify&#34;&gt;Project Switcher Using Startify&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../https://github.com/mhinz/vim-startify&#34;&gt;Github home&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../https://ricostacruz.com/til/project-switcher-using-startify&#34;&gt;Project Switcher Using Startify&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
     <item>

@@ -121,7 +121,7 @@ $ git-crypt unlock &amp;lt;path_to_your_keyfile&amp;gt;   # 백업해둔 키파�
 &lt;/ul&gt;
 &lt;h2 id=&#34;깃허브-가입과-설정&#34;&gt;깃허브 가입과 설정&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com&#34;&gt;GitHub Home&lt;/a&gt; 에 가입한다.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../https://github.com&#34;&gt;GitHub Home&lt;/a&gt; 에 가입한다.&lt;/li&gt;
 &lt;li&gt;새로운 저장소(Repository)를 만든다.&lt;/li&gt;
 &lt;li&gt;저장소의 주소를 확인한다.(Code 아이콘를 클릭)&lt;/li&gt;
 &lt;/ul&gt;
@@ -175,7 +175,7 @@ Readme를 생성하지 말고&lt;/p&gt;</description>
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;ls ~/.ssh/id_rsa      #private key
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;ls ~/.ssh/id_rsa.pub  #public key
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
-&lt;li&gt;[ed25519](../추천: 보다 간결하고 강화된 방식)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../ed25519&#34;&gt;ed25519&lt;/a&gt;로 키를 만들 경우 (추천: 보다 간결하고 강화된 방식)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;ssh-keygen -t ed25519 -C “yourmail@mail.com”
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;ls ~/.ssh/id_ed25519      #private key

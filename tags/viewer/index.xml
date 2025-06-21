@@ -20,7 +20,7 @@
       <guid>https://neosolaris.github.io/posts/fv/</guid>
       <description>&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;[FITS](../Flexible Image Transport System) 파일 포맷을 보거나 편집할 수 있는 프로그램&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../fits&#34;&gt;FITS&lt;/a&gt; (Flexible Image Transport System) 파일 포맷을 보거나 편집할 수 있는 프로그램&lt;/li&gt;
 &lt;li&gt;fits 포맷은 주로 천문사진에서 사용되는 포맷이다.&lt;/li&gt;
 &lt;li&gt;리눅스의 경우 직접 다운로드 받는 것보다 패키지로 설치하는 것이 좋다.&lt;/li&gt;
 &lt;/ul&gt;

@@ -94,7 +94,7 @@ $ manim --help
 &lt;/ul&gt;
 &lt;h2 id=&#34;이미지-사이즈-변경&#34;&gt;이미지 사이즈 변경&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;[APOD](../The Horsehead Nebula in Infrared) 사진을 받아온다. &lt;a href=&#34;https://apod.nasa.gov/apod/ap130422.html&#34;&gt;https://apod.nasa.gov/apod/ap130422.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../https://apod.nasa.gov/apod/astropix.html&#34;&gt;APOD&lt;/a&gt;(Astronomy Picture of the Day) 사이트에서 말머리성운(The Horsehead Nebula in Infrared) 사진을 받아온다. &lt;a href=&#34;https://apod.nasa.gov/apod/ap130422.html&#34;&gt;https://apod.nasa.gov/apod/ap130422.html&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;파일을 열고 정보를 확인한 다음 필요한 사이즈로 변경한다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;ol&gt;
@@ -211,7 +211,7 @@ $ manim --help
 &lt;li&gt;
 &lt;p&gt;Study&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;../flip&#34;&gt;gimp quickies&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../gimp-quickies&#34;&gt;gimp quickies&lt;/a&gt; - 이미지 사이즈(size/scale), 자르기(crop), 회전(rotate)과 반전(flip)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;
@@ -238,7 +238,7 @@ $ manim --help
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;../fits&#34;&gt;FITS&lt;/a&gt; 데이터 분석 및 이미지 처리 도구 집합&lt;/li&gt;
 &lt;li&gt;NOAO(National Optical astronomy Observatory)에서 개발&lt;/li&gt;
-&lt;li&gt;현재 오픈소스로 공개하여 &lt;a href=&#34;https://iraf-community.github.io&#34;&gt;iraf community&lt;/a&gt; 가 관리하고 있다.&lt;/li&gt;
+&lt;li&gt;현재 오픈소스로 공개하여 &lt;a href=&#34;../https://iraf-community.github.io&#34;&gt;iraf community&lt;/a&gt; 가 관리하고 있다.&lt;/li&gt;
 &lt;li&gt;주로 관측천문학 분야에서 활용되고 있다.&lt;/li&gt;
 &lt;li&gt;파이썬으로 랩핑한 &lt;a href=&#34;../pyraf&#34;&gt;pyraf&lt;/a&gt;가 있다.&lt;/li&gt;
 &lt;li&gt;컴파일과 패키지 설치 두 가지가 있다. (패키지 설치 권장)&lt;/li&gt;
@@ -255,7 +255,7 @@ $ manim --help
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;install-from-source&#34;&gt;Install From Source&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/iraf-community/iraf/archive/refs/tags/v2.17.tar.gz&#34;&gt;Download Source&lt;/a&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;a href=&#34;../https://github.com/iraf-community/iraf/archive/refs/tags/v2.17.tar.gz&#34;&gt;Download Source&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Astropy - 파이썬 천문학 모듈</title>
@@ -271,7 +271,7 @@ $ manim --help
 &lt;/ul&gt;
 &lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://himbopsa.tistory.com/33&#34;&gt;천문학 데이터 파일 형식 FITS 파일형식 다루기&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../https://himbopsa.tistory.com/33&#34;&gt;천문학 데이터 파일 형식 FITS 파일형식 다루기&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
     <item>
@@ -291,7 +291,7 @@ $ manim --help
 &lt;h2 id=&#34;install&#34;&gt;Install&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;a href=&#34;https://noirlab.edu/public/products/fitsliberator&#34;&gt;홈페이지&lt;/a&gt;에서 다운로드 및 설치 가능하다.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;../https://noirlab.edu/public/products/fitsliberator&#34;&gt;홈페이지&lt;/a&gt;에서 다운로드 및 설치 가능하다.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Ubuntu, Debian&lt;/p&gt;
@@ -368,7 +368,7 @@ $ manim --help
 &lt;li&gt;이런 것이 있었다 하고 넘어가자.&lt;/li&gt;
 &lt;li&gt;파이썬 사용자라면 astropy를 사용하는 것이 좋겠다.&lt;/li&gt;
 &lt;li&gt;아 루아로는 갈길이 멀다.&lt;/li&gt;
-&lt;li&gt;하지만 현재 &lt;a href=&#34;../fits-liberator&#34;&gt;astropy&lt;/a&gt;도 내부에는 이 라이브러리를 쓴다.&lt;/li&gt;
+&lt;li&gt;하지만 현재 &lt;a href=&#34;../astropy&#34;&gt;astropy&lt;/a&gt;나 &lt;a href=&#34;../fits-liberator&#34;&gt;fits liberator&lt;/a&gt;도 내부에는 이 라이브러리를 쓴다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;
 &lt;ul&gt;
@@ -406,16 +406,16 @@ $ manim --help
 &lt;h2 id=&#34;편집-소프트웨어&#34;&gt;편집 소프트웨어&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;../siril&#34;&gt;siril&lt;/a&gt; - FITS Edit: 천문사진 전처리 또는 이미지 프로세싱 소프트웨어&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../NOAO&#34;&gt;iraf&lt;/a&gt;의 천문사진 프로세싱: clang&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../iraf&#34;&gt;iraf&lt;/a&gt;, - 미국 천문관측기관(NOAO)의 천문사진 프로세싱: clang&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;../gimp&#34;&gt;gimp&lt;/a&gt; - 그래픽툴, FITS 편집 가능&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;../photoshop&#34;&gt;photoshop&lt;/a&gt; - 그래픽툴, FITS 편집 가능, 유료, 윈도우즈 전용&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;../imagej&#34;&gt;imagej&lt;/a&gt; - FIT 편집 통합 툴&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../ubuntu:libfitsio&#34;&gt;fits liberator&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../fits-liberator&#34;&gt;fits liberator&lt;/a&gt; - 유럽, 나사에서 사용하는 전처리 툴(ubuntu:libfitsio)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;fits-library&#34;&gt;FITS LIBRARY&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;../astropy&#34;&gt;astropy&lt;/a&gt; - pyfits 포함 천문관측 모듈: anaconda 기본 모듈&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../NOAO&#34;&gt;pyraf&lt;/a&gt;의 천문사진 프로세싱: python&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../pyraf&#34;&gt;pyraf&lt;/a&gt; - 미국 천문관측기관(NOAO)의 천문사진 프로세싱: python&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;../pyfits&#34;&gt;pyfits&lt;/a&gt; - fits 편집 모듈: python&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;../fitsio&#34;&gt;fitsio&lt;/a&gt; - fits 라이브러리: clang&lt;/li&gt;
 &lt;/ul&gt;
@@ -423,7 +423,7 @@ $ manim --help
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;../fv&#34;&gt;fv&lt;/a&gt; - FITS Viewer: 오래된 툴, 조금 촌스럽다.&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;../gimp&#34;&gt;gimp&lt;/a&gt; - 그래픽툴, 파일보기 및 다른 포맷 변환&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../ubuntu:saods9&#34;&gt;ds9&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../ds9&#34;&gt;ds9&lt;/a&gt; - FITS Viewer (ubuntu:saods9)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;guides&#34;&gt;Guides&lt;/h2&gt;
 &lt;ul&gt;
@@ -459,7 +459,7 @@ $ manim --help
       <guid>https://neosolaris.github.io/posts/fv/</guid>
       <description>&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;[FITS](../Flexible Image Transport System) 파일 포맷을 보거나 편집할 수 있는 프로그램&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../fits&#34;&gt;FITS&lt;/a&gt; (Flexible Image Transport System) 파일 포맷을 보거나 편집할 수 있는 프로그램&lt;/li&gt;
 &lt;li&gt;fits 포맷은 주로 천문사진에서 사용되는 포맷이다.&lt;/li&gt;
 &lt;li&gt;리눅스의 경우 직접 다운로드 받는 것보다 패키지로 설치하는 것이 좋다.&lt;/li&gt;
 &lt;/ul&gt;

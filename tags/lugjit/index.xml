@@ -18,7 +18,8 @@
       <link>https://neosolaris.github.io/posts/luajit/</link>
       <pubDate>Tue, 30 Aug 2022 14:51:27 +0900</pubDate>
       <guid>https://neosolaris.github.io/posts/luajit/</guid>
-      <description>&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
+      <description>&lt;p&gt;last updated: {{ &amp;ldquo;1736305941&amp;rdquo; | date: &amp;ldquo;%Y-%m-%d %H:%M&amp;rdquo; }}&lt;/p&gt;
+&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;함수들이 처음 실행 될 때 필요에 의해 컴파일된다.&lt;/p&gt;
@@ -39,67 +40,7 @@
 &lt;p&gt;네이티브에 견줄만큼 속도가 빠르고, 메모리 사용량이 매우 적다.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;nginx에 LuaJIT을 포함시켜서 커스터마이징을 한 OpenResty 웹 서버도 있다.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;lua vs luaJIT&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;* PUC Lua (the &amp;#34;normal interpreter&amp;#34;) is more stable, i.e. bugs are more frequently found in LuaJIT.
-* PUC Lua is smaller, i.e. it takes less memory.
-* PUC Lua is much easier to understand if you want to customize it.
-* PUC Lua has been ported to way more platforms and is easier to port.
-* Like @lhf said, LuaJIT does not support all of Lua 5.2 features yet.
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;install&#34;&gt;Install&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo apt update
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; sudo apt install luajit
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; luajit -h
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;usage&#34;&gt;Usage&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;-b&lt;/code&gt; 옵션은 컴파일 바이너리 코드를 생성한다.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;./luajit: unknown luaJIT command or jit.* modules not installed&lt;/code&gt; 에러가
-발생하는 경우는 $LUA_PATH 설정이 잘못되어 있는 경우이므로 &lt;code&gt;unset LUA_PATH&lt;/code&gt;해주거나 $LUA_PATH에 luajit의 올바른 모듈경로를 추가해 준다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; luajit -b test.lua test.out                 &lt;span class=&#34;c1&#34;&gt;# Save bytecode to test.out&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; luajit -bg test.lua test.out                &lt;span class=&#34;c1&#34;&gt;# Keep debug info&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; luajit -be &lt;span class=&#34;s2&#34;&gt;&amp;#34;print(&amp;#39;hello world&amp;#39;)&amp;#34;&lt;/span&gt; test.out  &lt;span class=&#34;c1&#34;&gt;# Save cmdline script&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; luajit -bl test.lua                         &lt;span class=&#34;c1&#34;&gt;# List to stdout&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; luajit -bl test.lua test.txt                &lt;span class=&#34;c1&#34;&gt;# List to test.txt&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; luajit -ble &lt;span class=&#34;s2&#34;&gt;&amp;#34;print(&amp;#39;hello world&amp;#39;)&amp;#34;&lt;/span&gt;          &lt;span class=&#34;c1&#34;&gt;# List cmdline script&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; luajit -b test.lua test.obj                 &lt;span class=&#34;c1&#34;&gt;# Generate object file&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# Link test.obj with your application and load it with require(&amp;#34;test&amp;#34;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;ffi-사용례&#34;&gt;FFI 사용례&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;LuaJIT는 C함수를 손쉽게 가져와 사용할 수 있다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; cat&amp;lt;&amp;lt;EOF &amp;gt; test-ffi.lua
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;local ffi = require(&amp;#34;ffi&amp;#34;)
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;ffi.cdef[[int printf(const char *fmt, ...);]]
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;ffi.C.printf(&amp;#34;Hello %s!\n&amp;#34;, &amp;#34;wiki&amp;#34;)
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;EOF
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; luajit test-ffi.lua
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;Hello wiki!
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;link&#34;&gt;Link&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Lua Jit Introduction - 한글번역
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://m.blog.naver.com/milennium9/20120034562&#34;&gt;https://m.blog.naver.com/milennium9/20120034562&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Usage - 사용법
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://luajit.org/running.html&#34;&gt;https://luajit.org/running.html&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;LuaJIT Wiki 문서 - 공부의 시작
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://wiki.luajit.org/Home&#34;&gt;http://wiki.luajit.org/Home&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;</description>
+&lt;p&gt;nginx에 LuaJIT을 포함시켜서 커스터마이징을 한 OpenResty 웹 서버도 있다.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

@@ -539,14 +539,14 @@ sudo make install
 &lt;p&gt;vim이 터미널에서 동작하므로 아이콘을 표시하기가 좋지 않다. 색깔과 모양을 미려하게 바꾸어 준다. 개인적인 관점에서 보면 상당히 매력적이다. 삭막한 검은 배경에 글씨만 보이다가 꽃이 피고 그림이 여기 저기 있는 느낌이다. 거기에다 아름다우면서도 절제된 것이 작업 집중력을 결코 떨어 뜨리는 것도 아니다. 적극 추천한다.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/ryanoasis/vim-devicons&#34;&gt;https://github.com/ryanoasis/vim-devicons&lt;/a&gt; 이 곳에 가면 샘플 사진과 설치법이 자세히 나와있다.&lt;/li&gt;
-&lt;li&gt;적용되는 플러그인: &lt;a href=&#34;../startify&#34;&gt;NERDTree&lt;/a&gt;, vimfiler, vim-buffet and flagship.&lt;/li&gt;
+&lt;li&gt;적용되는 플러그인: &lt;a href=&#34;../NERDTree&#34;&gt;NERDTree&lt;/a&gt;,&lt;a href=&#34;../vim-airline&#34;&gt;vim airline&lt;/a&gt;, CtrlP, powerline, denite, unite, lightline.vim, &lt;a href=&#34;../startify&#34;&gt;vim startify&lt;/a&gt;, vimfiler, vim-buffet and flagship.&lt;/li&gt;
 &lt;li&gt;물론 폰트를 설치하면 zsh, bash 등에서도 프롬프트 표시를 지원한다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;폰트-설치&#34;&gt;폰트 설치&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;vim-devicons를 설치하기 전에 먼저 Nerd Patched 폰트를 설치해야 한다.&lt;/li&gt;
 &lt;li&gt;폰트는 다양한데 모두 설치한다면 많은 용량을 차지하므로 여기에서는 &lt;code&gt;Noto Nerd Font&lt;/code&gt; 폰트만 설치했다.&lt;/li&gt;
-&lt;li&gt;참고로 폰트를 받을 수 있는 사이트이다. &lt;a href=&#34;https://www.nerdfonts.com/font-downloads&#34;&gt;nerd-fonts&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;참고로 폰트를 받을 수 있는 사이트이다. &lt;a href=&#34;../https://www.nerdfonts.com/font-downloads&#34;&gt;nerd-fonts&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;깃허브 사이트와 설치 안내도 있다. &lt;a href=&#34;https://github.com/ryanoasis/nerd-fonts&#34;&gt;https://github.com/ryanoasis/nerd-fonts&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;모두 설치하면 용량이 약 1.2GB로 매우 크므로 다음 스크립트에서 Noto와 Hack만 설치한다.&lt;/li&gt;
 &lt;li&gt;실행하면 &lt;code&gt;~/.local/share/fonts&lt;/code&gt;에 설치된다.&lt;/li&gt;
@@ -606,7 +606,7 @@ sudo make install
 &lt;/ul&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;nvim +plugInstall  +qall
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
-&lt;li&gt;터미널 설정에서 폰트를 &lt;code&gt;Noto Nerd Font&lt;/code&gt;를 설정해 주고 &lt;a href=&#34;../nvim&#34;&gt;vim&lt;/a&gt; 을 사용하면 된다.&lt;/li&gt;
+&lt;li&gt;터미널 설정에서 폰트를 &lt;code&gt;Noto Nerd Font&lt;/code&gt;를 설정해 주고 &lt;a href=&#34;../vim&#34;&gt;vim&lt;/a&gt; 또는 &lt;a href=&#34;../nvim&#34;&gt;nvim&lt;/a&gt; 을 사용하면 된다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;
 &lt;ul&gt;
@@ -741,12 +741,12 @@ sudo make install
 &lt;/ul&gt;
 &lt;h2 id=&#34;문제점&#34;&gt;문제점&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;../vimwiki&#34;&gt;vim&lt;/a&gt; 자동저장이 안되는 문제가 있다.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../vim&#34;&gt;vim&lt;/a&gt; 에서는 잘 되는데 &lt;a href=&#34;../nvim&#34;&gt;nvim&lt;/a&gt; 에서는 구버전(0.6.x), 최신버전(0.7.x) 모두 &lt;a href=&#34;../vimwiki&#34;&gt;vimwiki&lt;/a&gt; 자동저장이 안되는 문제가 있다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/mhinz/vim-startify&#34;&gt;Github home&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://ricostacruz.com/til/project-switcher-using-startify&#34;&gt;Project Switcher Using Startify&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../https://github.com/mhinz/vim-startify&#34;&gt;Github home&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../https://ricostacruz.com/til/project-switcher-using-startify&#34;&gt;Project Switcher Using Startify&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
     <item>

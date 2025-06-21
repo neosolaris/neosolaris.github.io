@@ -230,12 +230,12 @@ extension &amp;gt; hide top bar 검색 후 설치(Click to change: ON)&lt;/li&gt
 &lt;/ul&gt;
 &lt;h2 id=&#34;패키지-설치&#34;&gt;패키지 설치&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;devel tools: build essential, &lt;a href=&#34;../%EA%B8%B0%EB%B3%B8%EC%84%A4%EC%B9%98&#34;&gt;rust&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;utils: rsync, curl, wget, &lt;a href=&#34;../nvim&#34;&gt;vim&lt;/a&gt;, fd-find, batcat &amp;hellip;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../PPA&#34;&gt;blender&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../PPA&#34;&gt;firefox&lt;/a&gt; + plugins&lt;/li&gt;
-&lt;li&gt;[freecad](../default apt)&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../PPA&#34;&gt;sketchup&lt;/a&gt; + sketchup2017make + plugins&lt;/li&gt;
+&lt;li&gt;devel tools: build essential, &lt;a href=&#34;../rust&#34;&gt;rust&lt;/a&gt;, python3(기본설치)&lt;/li&gt;
+&lt;li&gt;utils: rsync, curl, wget, &lt;a href=&#34;../vim&#34;&gt;vim&lt;/a&gt;, &lt;a href=&#34;../nvim&#34;&gt;nvim&lt;/a&gt;, fd-find, batcat &amp;hellip;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../blender&#34;&gt;blender&lt;/a&gt;: 최신패키지로 설치(PPA)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../firefox&#34;&gt;firefox&lt;/a&gt;: 최신패키지로 재설치(PPA) + plugins&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../freecad&#34;&gt;freecad&lt;/a&gt;: 최신패키지로 설치(default apt)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../sketchup&#34;&gt;sketchup&lt;/a&gt;: winehq(PPA) + sketchup2017make + plugins&lt;/li&gt;
 &lt;li&gt;vim, nvim plugins 설치 및 설정&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>

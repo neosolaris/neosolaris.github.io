@@ -77,7 +77,7 @@ local level = 2
 &lt;h2 id=&#34;문서작성시-수학식-표현&#34;&gt;문서작성시 수학식 표현&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;관련 프로그램(스크립트)를 작성한 후 도움말이나 문서를 작성할 때 가장 좋은 방법은 마크다운(markdown) 문서에 latex 문법으로 작성하는 것이다.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions&#34;&gt;사용방법&lt;/a&gt;을 참조한다.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions&#34;&gt;사용방법&lt;/a&gt;을 참조한다.&lt;/li&gt;
 &lt;li&gt;즉, 문장 중에는 &lt;code&gt;$수식$&lt;/code&gt; 으로 표현하고 독립적인 수식은 &lt;code&gt;$$수식$$&lt;/code&gt;으로 표현하는 것이다.&lt;/li&gt;
 &lt;li&gt;깃허브나 기타 웹페이지에서 이를 잘 지원한다.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;vscode&lt;/code&gt;에서는 &lt;code&gt;markdown all in one&lt;/code&gt; 플러그인을 설치하면 미리보기로 실시간으로 확인할 수 있다. 물론 수학표현식도 지원한다.&lt;/li&gt;
