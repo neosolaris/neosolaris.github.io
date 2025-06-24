@@ -11,8 +11,36 @@
     </image>
     <generator>Hugo -- 0.147.2</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 21 Jun 2025 02:18:56 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 24 Jun 2025 08:47:29 +0900</lastBuildDate>
     <atom:link href="https://neosolaris.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Docker</title>
+      <link>https://neosolaris.github.io/tags/docker/</link>
+      <pubDate>Tue, 24 Jun 2025 08:47:29 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/docker/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Git</title>
+      <link>https://neosolaris.github.io/tags/git/</link>
+      <pubDate>Tue, 24 Jun 2025 08:47:29 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/git/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Windos</title>
+      <link>https://neosolaris.github.io/tags/windos/</link>
+      <pubDate>Tue, 24 Jun 2025 08:47:29 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/windos/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Wsl</title>
+      <link>https://neosolaris.github.io/tags/wsl/</link>
+      <pubDate>Tue, 24 Jun 2025 08:47:29 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/wsl/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Pop</title>
       <link>https://neosolaris.github.io/tags/pop/</link>
@@ -329,13 +357,6 @@
       <description></description>
     </item>
     <item>
-      <title>Docker</title>
-      <link>https://neosolaris.github.io/tags/docker/</link>
-      <pubDate>Wed, 27 Sep 2023 16:25:49 +0900</pubDate>
-      <guid>https://neosolaris.github.io/tags/docker/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Entrypoint</title>
       <link>https://neosolaris.github.io/tags/entrypoint/</link>
       <pubDate>Wed, 27 Sep 2023 16:25:49 +0900</pubDate>
@@ -497,13 +518,6 @@
       <description></description>
     </item>
     <item>
-      <title>Git</title>
-      <link>https://neosolaris.github.io/tags/git/</link>
-      <pubDate>Sun, 27 Aug 2023 22:36:46 +0900</pubDate>
-      <guid>https://neosolaris.github.io/tags/git/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Git-Crypt</title>
       <link>https://neosolaris.github.io/tags/git-crypt/</link>
       <pubDate>Sun, 27 Aug 2023 22:36:46 +0900</pubDate>
@@ -592,13 +606,6 @@
       <link>https://neosolaris.github.io/tags/prgramming/</link>
       <pubDate>Thu, 10 Aug 2023 17:03:38 +0900</pubDate>
       <guid>https://neosolaris.github.io/tags/prgramming/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Wsl</title>
-      <link>https://neosolaris.github.io/tags/wsl/</link>
-      <pubDate>Thu, 03 Aug 2023 17:04:47 +0900</pubDate>
-      <guid>https://neosolaris.github.io/tags/wsl/</guid>
       <description></description>
     </item>
     <item>

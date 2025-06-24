@@ -2,11 +2,38 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://neosolaris.github.io/categories/alpine/</loc>
+    <lastmod>2025-06-24T08:47:29+09:00</lastmod>
+  </url><url>
     <loc>https://neosolaris.github.io/</loc>
-    <lastmod>2025-06-21T02:18:56+09:00</lastmod>
+    <lastmod>2025-06-24T08:50:33+09:00</lastmod>
   </url><url>
     <loc>https://neosolaris.github.io/categories/</loc>
-    <lastmod>2025-06-21T02:18:56+09:00</lastmod>
+    <lastmod>2025-06-24T08:47:29+09:00</lastmod>
+  </url><url>
+    <loc>https://neosolaris.github.io/tags/docker/</loc>
+    <lastmod>2025-06-24T08:47:29+09:00</lastmod>
+  </url><url>
+    <loc>https://neosolaris.github.io/tags/git/</loc>
+    <lastmod>2025-06-24T08:47:29+09:00</lastmod>
+  </url><url>
+    <loc>https://neosolaris.github.io/categories/linux/</loc>
+    <lastmod>2025-06-24T08:47:29+09:00</lastmod>
+  </url><url>
+    <loc>https://neosolaris.github.io/posts/</loc>
+    <lastmod>2025-06-24T08:50:33+09:00</lastmod>
+  </url><url>
+    <loc>https://neosolaris.github.io/tags/</loc>
+    <lastmod>2025-06-24T08:47:29+09:00</lastmod>
+  </url><url>
+    <loc>https://neosolaris.github.io/tags/windos/</loc>
+    <lastmod>2025-06-24T08:47:29+09:00</lastmod>
+  </url><url>
+    <loc>https://neosolaris.github.io/posts/wsl_alpine_docker_git/</loc>
+    <lastmod>2025-06-24T08:47:29+09:00</lastmod>
+  </url><url>
+    <loc>https://neosolaris.github.io/tags/wsl/</loc>
+    <lastmod>2025-06-24T08:47:29+09:00</lastmod>
   </url><url>
     <loc>https://neosolaris.github.io/categories/music/</loc>
     <lastmod>2025-06-17T23:40:39+09:00</lastmod>
@@ -16,12 +43,6 @@
   </url><url>
     <loc>https://neosolaris.github.io/tags/pop/</loc>
     <lastmod>2025-06-17T23:40:39+09:00</lastmod>
-  </url><url>
-    <loc>https://neosolaris.github.io/posts/</loc>
-    <lastmod>2025-06-21T02:18:56+09:00</lastmod>
-  </url><url>
-    <loc>https://neosolaris.github.io/tags/</loc>
-    <lastmod>2025-06-21T02:18:56+09:00</lastmod>
   </url><url>
     <loc>https://neosolaris.github.io/tags/%EC%84%B8%EB%B8%8C%EB%9E%80%EC%8A%A4%EB%8B%A8%EC%A0%88/</loc>
     <lastmod>2025-06-17T23:40:39+09:00</lastmod>
@@ -58,9 +79,6 @@
   </url><url>
     <loc>https://neosolaris.github.io/tags/%ED%95%9C%EA%B0%95/</loc>
     <lastmod>2025-06-15T09:15:01+09:00</lastmod>
-  </url><url>
-    <loc>https://neosolaris.github.io/categories/alpine/</loc>
-    <lastmod>2025-06-21T02:18:56+09:00</lastmod>
   </url><url>
     <loc>https://neosolaris.github.io/tags/alpine/</loc>
     <lastmod>2025-06-21T02:18:56+09:00</lastmod>
@@ -156,9 +174,6 @@
     <lastmod>2024-01-01T02:08:34+09:00</lastmod>
   </url><url>
     <loc>https://neosolaris.github.io/tags/install/</loc>
-    <lastmod>2025-06-21T02:18:56+09:00</lastmod>
-  </url><url>
-    <loc>https://neosolaris.github.io/categories/linux/</loc>
     <lastmod>2025-06-21T02:18:56+09:00</lastmod>
   </url><url>
     <loc>https://neosolaris.github.io/tags/windows/</loc>
@@ -269,9 +284,6 @@
     <loc>https://neosolaris.github.io/categories/devel/</loc>
     <lastmod>2025-06-15T07:18:21+09:00</lastmod>
   </url><url>
-    <loc>https://neosolaris.github.io/tags/docker/</loc>
-    <lastmod>2025-06-19T19:04:41+09:00</lastmod>
-  </url><url>
     <loc>https://neosolaris.github.io/posts/docker-run-cmd-entrypoint/</loc>
     <lastmod>2023-10-13T17:43:29+09:00</lastmod>
   </url><url>
@@ -377,9 +389,6 @@
     <loc>https://neosolaris.github.io/tags/ssh/</loc>
     <lastmod>2023-09-08T14:32:57+09:00</lastmod>
   </url><url>
-    <loc>https://neosolaris.github.io/tags/git/</loc>
-    <lastmod>2023-08-27T22:38:00+09:00</lastmod>
-  </url><url>
     <loc>https://neosolaris.github.io/tags/git-crypt/</loc>
     <lastmod>2023-08-27T22:38:00+09:00</lastmod>
   </url><url>
@@ -450,9 +459,6 @@
     <lastmod>2025-06-19T19:04:41+09:00</lastmod>
   </url><url>
     <loc>https://neosolaris.github.io/posts/docker-windows/</loc>
-    <lastmod>2025-06-19T19:04:41+09:00</lastmod>
-  </url><url>
-    <loc>https://neosolaris.github.io/tags/wsl/</loc>
     <lastmod>2025-06-19T19:04:41+09:00</lastmod>
   </url><url>
     <loc>https://neosolaris.github.io/categories/books/</loc>

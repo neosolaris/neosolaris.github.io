@@ -11,8 +11,22 @@
     </image>
     <generator>Hugo -- 0.147.2</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 21 Jun 2025 02:18:56 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 24 Jun 2025 08:47:29 +0900</lastBuildDate>
     <atom:link href="https://neosolaris.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Alpine</title>
+      <link>https://neosolaris.github.io/categories/alpine/</link>
+      <pubDate>Tue, 24 Jun 2025 08:47:29 +0900</pubDate>
+      <guid>https://neosolaris.github.io/categories/alpine/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Linux</title>
+      <link>https://neosolaris.github.io/categories/linux/</link>
+      <pubDate>Tue, 24 Jun 2025 08:47:29 +0900</pubDate>
+      <guid>https://neosolaris.github.io/categories/linux/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Music</title>
       <link>https://neosolaris.github.io/categories/music/</link>
@@ -32,13 +46,6 @@
       <link>https://neosolaris.github.io/categories/%EC%83%9D%EA%B0%81%ED%95%98%EA%B8%B0/</link>
       <pubDate>Tue, 10 Dec 2024 14:46:16 +0900</pubDate>
       <guid>https://neosolaris.github.io/categories/%EC%83%9D%EA%B0%81%ED%95%98%EA%B8%B0/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Alpine</title>
-      <link>https://neosolaris.github.io/categories/alpine/</link>
-      <pubDate>Thu, 20 Jun 2024 03:06:58 +0900</pubDate>
-      <guid>https://neosolaris.github.io/categories/alpine/</guid>
       <description></description>
     </item>
     <item>
@@ -88,13 +95,6 @@
       <link>https://neosolaris.github.io/categories/db/</link>
       <pubDate>Mon, 01 Jan 2024 02:08:34 +0900</pubDate>
       <guid>https://neosolaris.github.io/categories/db/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Linux</title>
-      <link>https://neosolaris.github.io/categories/linux/</link>
-      <pubDate>Sat, 30 Dec 2023 06:15:32 +0900</pubDate>
-      <guid>https://neosolaris.github.io/categories/linux/</guid>
       <description></description>
     </item>
     <item>
