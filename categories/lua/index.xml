@@ -11,8 +11,45 @@
     </image>
     <generator>Hugo -- 0.147.2</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 11 Aug 2023 17:38:11 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 26 Jun 2025 16:49:56 +0900</lastBuildDate>
     <atom:link href="https://neosolaris.github.io/categories/lua/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Lua Emoji - 루아 이모지</title>
+      <link>https://neosolaris.github.io/posts/lua_emoji/</link>
+      <pubDate>Thu, 26 Jun 2025 16:49:56 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/lua_emoji/</guid>
+      <description>&lt;h2 id=&#34;소개-tea&#34;&gt;소개 &amp;#x1f375;&lt;/h2&gt;
+&lt;p&gt;GPT-4o mini의 설명을 인용한다.&lt;/p&gt;
+&lt;p&gt;이모지는 감정, 사물, 동물, 음식, 확동 등을 표현하는 작은 그림 문자이다. 주로 디지털 커뮤니케이션에서 사용되면, 텍스트 메시지, 소셜 미디어, 이메일 등에서 감정을 전달하거나 내용을 강조하는 데 도움을 준다.&lt;/p&gt;
+&lt;h3 id=&#34;1-역사&#34;&gt;1. 역사&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;이모지는 1990년대 일본에서 처음 사용되었으며, &amp;ldquo;이모지&amp;quot;라는 용어는 일본어로 &amp;ldquo;그림 문자&amp;quot;를 의미한다.&lt;/li&gt;
+&lt;li&gt;2010년, 이모지는 Unicode 표준에 포함되어 전 세계적으로 사용될 수 있게 되었다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;2-종류&#34;&gt;2. 종류&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;감정 이모지&lt;/strong&gt;: 😊, 😂, 😢 등 감정을 표현하는 이모지.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;사물 이모지&lt;/strong&gt;: 📱 (휴대폰), 🍎 (사과) 등 물체를 나타내는 이모지.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;동물 이모지&lt;/strong&gt;: 🐶 (강아지), 🐱 (고양이) 등 동물을 나타내는 이모지.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;음식 이모지&lt;/strong&gt;: 🍕 (피자), 🍣 (초밥) 등 음식을 나타내는 이모지.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;활동 이모지&lt;/strong&gt;: ⚽ (축구공), 🎉 (축하) 등 활동이나 이벤트를 나타내는 이모지.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;3-사용&#34;&gt;3. 사용&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;이모지는 감정을 시각적으로 표현하여 텍스트의 의미를 강화한다.&lt;/li&gt;
+&lt;li&gt;대화의 분위기를 부드럽게 하거나, 유머를 추가하는 데 사용된다.&lt;/li&gt;
+&lt;li&gt;이모지는 다양한 플랫폼과 기기에서 동일한 방식으로 표시되도록 설계되었지만, 각 플랫폼에 따라 디자인이 다를 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;4-문화적-차이&#34;&gt;4. 문화적 차이&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;이모지는 문화에 따라 다르게 해석될 수 있다. 예를 들어, 특정 이모지가 한 문화에서는 긍정적인 의미를 가질 수 있지만, 다른 문화에서는 부정적인 의미를 가질 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;5-최신-동향&#34;&gt;5. 최신 동향&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;이모지는 지속적으로 업데이트되고 있으며, 새로운 이모지가 매년 추가된다. Unicode Consortium은 새로운 이모지를 제안하고 승인하는 역할을 한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;이모지는 현대 커뮤니케이션에서 중요한 역할을 하며, 사람들 간의 감정과 생각을 효과적으로 전달하는 도구로 자리 잡고 있다.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Lua - Interactive Mode</title>
       <link>https://neosolaris.github.io/posts/lua-interactive/</link>
