@@ -41,6 +41,9 @@
     <loc>https://neosolaris.github.io/categories/music/</loc>
     <lastmod>2025-06-25T16:01:45+09:00</lastmod>
   </url><url>
+    <loc>https://neosolaris.github.io/tags/music/</loc>
+    <lastmod>2025-06-25T16:01:45+09:00</lastmod>
+  </url><url>
     <loc>https://neosolaris.github.io/posts/once_again/</loc>
     <lastmod>2025-06-25T16:01:45+09:00</lastmod>
   </url><url>
@@ -1300,9 +1303,6 @@
   </url><url>
     <loc>https://neosolaris.github.io/posts/mpd/</loc>
     <lastmod>2022-08-24T03:52:09+09:00</lastmod>
-  </url><url>
-    <loc>https://neosolaris.github.io/tags/music/</loc>
-    <lastmod>2022-08-24T03:53:45+09:00</lastmod>
   </url><url>
     <loc>https://neosolaris.github.io/tags/ncmpcpp/</loc>
     <lastmod>2022-08-24T03:53:45+09:00</lastmod>
