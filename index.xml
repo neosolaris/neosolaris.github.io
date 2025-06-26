@@ -11,7 +11,7 @@
     </image>
     <generator>Hugo -- 0.147.2</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 26 Jun 2025 16:49:56 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 26 Jun 2025 17:25:03 +0900</lastBuildDate>
     <atom:link href="https://neosolaris.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Lua Emoji - 루아 이모지</title>
@@ -4363,9 +4363,11 @@ hello world                -- 결과: hello world
       <link>https://neosolaris.github.io/posts/%EC%96%BC%EA%B5%B4/</link>
       <pubDate>Sun, 18 Sep 2022 00:14:15 +0900</pubDate>
       <guid>https://neosolaris.github.io/posts/%EC%96%BC%EA%B5%B4/</guid>
-      <description>&lt;ul&gt;
+      <description>&lt;p&gt;&lt;a href=&#34;&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
 &lt;li&gt;이 곡의 사연은 &lt;a href=&#34;../https://namu.wiki/w/%EC%96%BC%EA%B5%B4#s-3&#34;&gt;나무위키&lt;/a&gt; 에 잘 나와 있다.&lt;/li&gt;
 &lt;li&gt;정말 많은 사람이 불렀지만 내 마음에 깊은 울림을 주는 것을 정리해 본다.&lt;/li&gt;
+&lt;li&gt;이 곡을 들으면 왜 눈물이 나는지 모르겠다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;얼굴 - 심봉석 시/ 신귀복 곡
 
@@ -4378,13 +4380,35 @@ hello world                -- 결과: hello world
 무지개 따라 올라갔던 오색빛 하늘나래
 구름 속에 나비처럼 나르던 지난날
 동그랗게 동그랗게 맴돌곤 하는 얼굴
-&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;소프라노 - 정지원
+&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;소프라노 - 정지원
 &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
       &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/QUViVJwlGLI?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;
     &lt;/div&gt;
-&lt;/p&gt;</description>
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;바리톤 - 김재섭
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/wz17ItZ_KoQ?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;소프라노 - 신영옥
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/u6WGSj3z2mc?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;소프라노 - 이해원
+{{ &amp;lt; youtube 9At3BSoBCDo &amp;gt;}}&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
     <item>
       <title>나의 외로움이 너를 부를 때 - 장필순</title>
