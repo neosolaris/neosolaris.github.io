@@ -11,7 +11,7 @@
     </image>
     <generator>Hugo -- 0.147.2</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 15 Jun 2025 07:18:21 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 27 Jun 2025 02:53:44 +0900</lastBuildDate>
     <atom:link href="https://neosolaris.github.io/categories/devel/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Dockerfile - run, cmd, entrypoint 차이</title>
@@ -301,9 +301,10 @@ Wed Sep 27 07:24:31 UTC 2023 custom event
       <link>https://neosolaris.github.io/posts/hugo_papermod/</link>
       <pubDate>Wed, 24 Aug 2022 17:43:38 +0900</pubDate>
       <guid>https://neosolaris.github.io/posts/hugo_papermod/</guid>
-      <description>&lt;h2 id=&#34;todo&#34;&gt;TODO&lt;/h2&gt;
+      <description>&lt;h2 id=&#34;history&#34;&gt;History&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 2022-09-08 - 내용 수정, 그림파일 링크 관련 추가&lt;/li&gt;
+&lt;li&gt;2025-06-27 - tip 추가: tags, categories list에 cover image 표시하기&lt;/li&gt;
+&lt;li&gt;2022-09-08 - 내용 수정, 그림파일 링크 관련 추가&lt;/li&gt;
 &lt;/ul&gt;
 &lt;figure&gt;
     &lt;img loading=&#34;lazy&#34; src=&#34;https://user-images.githubusercontent.com/21258296/114303440-bfc0ae80-9aeb-11eb-8cfa-48a4bb385a6d.png&#34;/&gt; &lt;figcaption&gt;
