@@ -11,8 +11,36 @@
     </image>
     <generator>Hugo -- 0.147.2</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 29 Jun 2025 07:30:09 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 02 Jul 2025 08:50:11 +0900</lastBuildDate>
     <atom:link href="https://neosolaris.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Command</title>
+      <link>https://neosolaris.github.io/tags/command/</link>
+      <pubDate>Wed, 02 Jul 2025 08:50:11 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/command/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Image</title>
+      <link>https://neosolaris.github.io/tags/image/</link>
+      <pubDate>Wed, 02 Jul 2025 08:50:11 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/image/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Terminal</title>
+      <link>https://neosolaris.github.io/tags/terminal/</link>
+      <pubDate>Wed, 02 Jul 2025 08:50:11 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/terminal/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Viewer</title>
+      <link>https://neosolaris.github.io/tags/viewer/</link>
+      <pubDate>Wed, 02 Jul 2025 08:50:11 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/viewer/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Emoji</title>
       <link>https://neosolaris.github.io/tags/emoji/</link>
@@ -102,13 +130,6 @@
       <link>https://neosolaris.github.io/tags/program/</link>
       <pubDate>Mon, 16 Jun 2025 16:27:08 +0900</pubDate>
       <guid>https://neosolaris.github.io/tags/program/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Terminal</title>
-      <link>https://neosolaris.github.io/tags/terminal/</link>
-      <pubDate>Mon, 16 Jun 2025 16:27:08 +0900</pubDate>
-      <guid>https://neosolaris.github.io/tags/terminal/</guid>
       <description></description>
     </item>
     <item>
@@ -1127,13 +1148,6 @@
       <description></description>
     </item>
     <item>
-      <title>Image</title>
-      <link>https://neosolaris.github.io/tags/image/</link>
-      <pubDate>Wed, 12 Oct 2022 16:02:55 +0900</pubDate>
-      <guid>https://neosolaris.github.io/tags/image/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Iraf</title>
       <link>https://neosolaris.github.io/tags/iraf/</link>
       <pubDate>Wed, 12 Oct 2022 16:02:55 +0900</pubDate>
@@ -1187,13 +1201,6 @@
       <link>https://neosolaris.github.io/tags/fv/</link>
       <pubDate>Sun, 09 Oct 2022 18:00:34 +0900</pubDate>
       <guid>https://neosolaris.github.io/tags/fv/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Viewer</title>
-      <link>https://neosolaris.github.io/tags/viewer/</link>
-      <pubDate>Sun, 09 Oct 2022 18:00:34 +0900</pubDate>
-      <guid>https://neosolaris.github.io/tags/viewer/</guid>
       <description></description>
     </item>
     <item>
@@ -1628,13 +1635,6 @@
       <link>https://neosolaris.github.io/tags/vimwiki/</link>
       <pubDate>Wed, 24 Aug 2022 00:39:08 +0900</pubDate>
       <guid>https://neosolaris.github.io/tags/vimwiki/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Command</title>
-      <link>https://neosolaris.github.io/tags/command/</link>
-      <pubDate>Tue, 23 Aug 2022 18:35:04 +0900</pubDate>
-      <guid>https://neosolaris.github.io/tags/command/</guid>
       <description></description>
     </item>
     <item>

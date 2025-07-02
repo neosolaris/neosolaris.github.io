@@ -11,8 +11,53 @@
     </image>
     <generator>Hugo -- 0.147.2</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 17 Jun 2025 14:29:18 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 02 Jul 2025 08:50:11 +0900</lastBuildDate>
     <atom:link href="https://neosolaris.github.io/tags/terminal/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Feh - 터미널 이미지뷰어</title>
+      <link>https://neosolaris.github.io/posts/feh/</link>
+      <pubDate>Wed, 02 Jul 2025 08:50:11 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/feh/</guid>
+      <description>&lt;p&gt;&lt;code&gt;feh&lt;/code&gt;는 Linux 환경에서 이미지 뷰어로 널리 사용되는 경량의 프로그램입니다. 다양한 기능을 제공하며, 특히 스크립트와 함께 사용하기에 적합합니다. 아래에 &lt;code&gt;feh&lt;/code&gt;의 기본 사용법과 몇 가지 응용 예제를 소개합니다.&lt;/p&gt;
+&lt;h3 id=&#34;기본-사용법&#34;&gt;기본 사용법&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;설치&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Debian/Ubuntu 계열: &lt;code&gt;sudo apt install feh&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Red Hat 계열: &lt;code&gt;sudo dnf install feh&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Arch Linux: &lt;code&gt;sudo pacman -S feh&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Alpine Linux: &lt;code&gt;doas apk add feh&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;기본 명령어&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;단일 이미지 열기:
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;feh image.jpg
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;여러 이미지 열기:
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;feh image1.jpg image2.jpg image3.jpg
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;feh *.jpg
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;디렉토리 내 모든 이미지 열기:
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;feh /path/to/directory
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;하위 폴더까지 재귀적으로 열기
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;feh --recursive /path/to/directory
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;이미지 정보 출력 (단, exiftool 먼저 설치)
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;feh --info &lt;span class=&#34;s2&#34;&gt;&amp;#34;exifgrep DateTime %f&amp;#34;&lt;/span&gt; /path/to/images
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;feh --info &lt;span class=&#34;s2&#34;&gt;&amp;#34;exiftool %f | grep DateTime&amp;#34;&lt;/span&gt; ~/path/to/images
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;주요-옵션&#34;&gt;주요 옵션&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;슬라이드쇼 모드&lt;/strong&gt;:&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Wezterm - Terminal Emulator</title>
       <link>https://neosolaris.github.io/posts/wezterm/</link>
