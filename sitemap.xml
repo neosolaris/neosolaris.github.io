@@ -3,10 +3,34 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://neosolaris.github.io/</loc>
-    <lastmod>2025-07-02T09:07:19+09:00</lastmod>
+    <lastmod>2025-07-09T07:02:17+09:00</lastmod>
   </url><url>
     <loc>https://neosolaris.github.io/categories/</loc>
-    <lastmod>2025-07-02T08:50:11+09:00</lastmod>
+    <lastmod>2025-07-09T07:02:17+09:00</lastmod>
+  </url><url>
+    <loc>https://neosolaris.github.io/tags/hugo/</loc>
+    <lastmod>2025-07-09T07:02:17+09:00</lastmod>
+  </url><url>
+    <loc>https://neosolaris.github.io/posts/hugo_include/</loc>
+    <lastmod>2025-07-09T07:02:17+09:00</lastmod>
+  </url><url>
+    <loc>https://neosolaris.github.io/tags/include/</loc>
+    <lastmod>2025-07-09T07:02:17+09:00</lastmod>
+  </url><url>
+    <loc>https://neosolaris.github.io/tags/markdown/</loc>
+    <lastmod>2025-07-09T07:02:17+09:00</lastmod>
+  </url><url>
+    <loc>https://neosolaris.github.io/posts/</loc>
+    <lastmod>2025-07-09T07:02:17+09:00</lastmod>
+  </url><url>
+    <loc>https://neosolaris.github.io/tags/shortcode/</loc>
+    <lastmod>2025-07-09T07:02:17+09:00</lastmod>
+  </url><url>
+    <loc>https://neosolaris.github.io/tags/</loc>
+    <lastmod>2025-07-09T07:02:17+09:00</lastmod>
+  </url><url>
+    <loc>https://neosolaris.github.io/categories/www/</loc>
+    <lastmod>2025-07-09T07:02:17+09:00</lastmod>
   </url><url>
     <loc>https://neosolaris.github.io/tags/command/</loc>
     <lastmod>2025-07-02T08:50:11+09:00</lastmod>
@@ -15,12 +39,6 @@
     <lastmod>2025-07-02T08:50:11+09:00</lastmod>
   </url><url>
     <loc>https://neosolaris.github.io/tags/image/</loc>
-    <lastmod>2025-07-02T08:50:11+09:00</lastmod>
-  </url><url>
-    <loc>https://neosolaris.github.io/posts/</loc>
-    <lastmod>2025-07-02T09:07:19+09:00</lastmod>
-  </url><url>
-    <loc>https://neosolaris.github.io/tags/</loc>
     <lastmod>2025-07-02T08:50:11+09:00</lastmod>
   </url><url>
     <loc>https://neosolaris.github.io/tags/terminal/</loc>
@@ -355,9 +373,6 @@
   </url><url>
     <loc>https://neosolaris.github.io/tags/web/</loc>
     <lastmod>2023-09-27T18:06:49+09:00</lastmod>
-  </url><url>
-    <loc>https://neosolaris.github.io/categories/www/</loc>
-    <lastmod>2025-06-27T02:53:44+09:00</lastmod>
   </url><url>
     <loc>https://neosolaris.github.io/tags/minimal/</loc>
     <lastmod>2023-09-16T16:33:33+09:00</lastmod>
@@ -1217,9 +1232,6 @@
     <loc>https://neosolaris.github.io/categories/hugo/</loc>
     <lastmod>2025-06-27T02:53:44+09:00</lastmod>
   </url><url>
-    <loc>https://neosolaris.github.io/tags/hugo/</loc>
-    <lastmod>2025-06-27T02:53:44+09:00</lastmod>
-  </url><url>
     <loc>https://neosolaris.github.io/tags/papermod/</loc>
     <lastmod>2025-06-27T02:53:44+09:00</lastmod>
   </url><url>
@@ -1285,9 +1297,6 @@
   </url><url>
     <loc>https://neosolaris.github.io/posts/kime/</loc>
     <lastmod>2022-08-24T03:59:21+09:00</lastmod>
-  </url><url>
-    <loc>https://neosolaris.github.io/tags/markdown/</loc>
-    <lastmod>2023-09-01T00:26:02+09:00</lastmod>
   </url><url>
     <loc>https://neosolaris.github.io/posts/markdown-viewer-webtext/</loc>
     <lastmod>2022-08-23T18:35:04+09:00</lastmod>

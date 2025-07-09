@@ -11,8 +11,51 @@
     </image>
     <generator>Hugo -- 0.147.2</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 02 Jul 2025 08:50:11 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 09 Jul 2025 07:02:17 +0900</lastBuildDate>
     <atom:link href="https://neosolaris.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo Include - 파일을 포함시키기</title>
+      <link>https://neosolaris.github.io/posts/hugo_include/</link>
+      <pubDate>Wed, 09 Jul 2025 07:02:17 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/hugo_include/</guid>
+      <description>&lt;h2 id=&#34;소개&#34;&gt;소개&lt;/h2&gt;
+&lt;p&gt;Hugo로 홈페이지를 제작할 때 주로 마크다운(markdown)으로 작업을 한다.
+코드블럭을 사용할 때 원래 소스파일이 변경되면 다시 마크다운 문서도 수정을 해야한다.
+이 때 직접 소스 파일을 읽어서 페이지를 만든다면 해당 소스파일만 관리하면 문서에 일관성이 생기고 변경하더라도 즉시 반영된다.
+Hugo에서는 &lt;code&gt;shortcode&lt;/code&gt;라는 방법을 제공하여 사용자만의 &lt;code&gt;shortcode&lt;/code&gt;를 작성할 수 있다.&lt;/p&gt;
+&lt;h2 id=&#34;shortcode-include---마크다운-파일-포함하기&#34;&gt;Shortcode Include - 마크다운 파일 포함하기&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Hugo Project 내에 다음 파일을 작성: &lt;code&gt;layouts/shortcodes/include.html&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{{- $relPath := .Get 0 -}}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{{- $baseDir := .Page.File.Dir -}}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{{- $fullPath := path.Join $baseDir $relPath -}}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{{- readFile $fullPath | markdownify -}}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;작성된 shortcode 사용하기: &lt;code&gt;content/posts/mypost.md&lt;/code&gt;에 &lt;code&gt;foo.md&lt;/code&gt;를 포함하기&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;{{&amp;lt; include &amp;#34;foo.md&amp;#34; &amp;gt;}}
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;shortcode-code---코드-파일-포함하기&#34;&gt;Shortcode Code - 코드 파일 포함하기&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Hugo Project 내에 다음 파일을 작성: &lt;code&gt;layouts/shortcodes/code.html&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{{ $language := .Get &amp;#34;language&amp;#34; }}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{{ $source := .Get &amp;#34;source&amp;#34; }}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{{ $options := .Get &amp;#34;options&amp;#34; }}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{{ with $source | readFile }}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  {{ highlight (trim . &amp;#34;\n\r&amp;#34;) $language $options }}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{{ end }}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;작성된 shortcode 사용하기: &lt;code&gt;content/posts/mypost.md&lt;/code&gt;에 &lt;code&gt;foo.c&lt;/code&gt;를 포함하기&lt;/li&gt;
+&lt;li&gt;코드블럭 내에 아래 코드를 넣으면 foo.c를 채워 넣고 language옵션에 따라 컬러가 지원된다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;{{&amp;lt; code source=&amp;#34;example/foo.c&amp;#34; &amp;gt;}}
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;reference&#34;&gt;REFERENCE&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;How to include code examples from file with hugo: &lt;a href=&#34;https://marcusolsson.dev/how-to-include-code-examples-from-file-with-hugo/&#34;&gt;https://marcusolsson.dev/how-to-include-code-examples-from-file-with-hugo/&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Feh - 터미널 이미지뷰어</title>
       <link>https://neosolaris.github.io/posts/feh/</link>

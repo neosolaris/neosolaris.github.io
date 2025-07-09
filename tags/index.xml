@@ -11,8 +11,36 @@
     </image>
     <generator>Hugo -- 0.147.2</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 02 Jul 2025 08:50:11 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 09 Jul 2025 07:02:17 +0900</lastBuildDate>
     <atom:link href="https://neosolaris.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo</title>
+      <link>https://neosolaris.github.io/tags/hugo/</link>
+      <pubDate>Wed, 09 Jul 2025 07:02:17 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/hugo/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Include</title>
+      <link>https://neosolaris.github.io/tags/include/</link>
+      <pubDate>Wed, 09 Jul 2025 07:02:17 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/include/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Markdown</title>
+      <link>https://neosolaris.github.io/tags/markdown/</link>
+      <pubDate>Wed, 09 Jul 2025 07:02:17 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/markdown/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Shortcode</title>
+      <link>https://neosolaris.github.io/tags/shortcode/</link>
+      <pubDate>Wed, 09 Jul 2025 07:02:17 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/shortcode/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Command</title>
       <link>https://neosolaris.github.io/tags/command/</link>
@@ -1603,13 +1631,6 @@
       <description></description>
     </item>
     <item>
-      <title>Hugo</title>
-      <link>https://neosolaris.github.io/tags/hugo/</link>
-      <pubDate>Wed, 24 Aug 2022 17:43:38 +0900</pubDate>
-      <guid>https://neosolaris.github.io/tags/hugo/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Papermod</title>
       <link>https://neosolaris.github.io/tags/papermod/</link>
       <pubDate>Wed, 24 Aug 2022 17:43:38 +0900</pubDate>
@@ -1656,13 +1677,6 @@
       <link>https://neosolaris.github.io/tags/kime/</link>
       <pubDate>Tue, 23 Aug 2022 18:35:04 +0900</pubDate>
       <guid>https://neosolaris.github.io/tags/kime/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Markdown</title>
-      <link>https://neosolaris.github.io/tags/markdown/</link>
-      <pubDate>Tue, 23 Aug 2022 18:35:04 +0900</pubDate>
-      <guid>https://neosolaris.github.io/tags/markdown/</guid>
       <description></description>
     </item>
     <item>
