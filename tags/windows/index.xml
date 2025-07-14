@@ -11,8 +11,47 @@
     </image>
     <generator>Hugo -- 0.147.2</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 21 Jun 2025 02:18:56 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 14 Jul 2025 08:23:45 +0900</lastBuildDate>
     <atom:link href="https://neosolaris.github.io/tags/windows/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>WSL에서 Windows 폴더 마운트 시 파일 권한 문제 해결</title>
+      <link>https://neosolaris.github.io/posts/wsl_automount/</link>
+      <pubDate>Mon, 14 Jul 2025 08:23:45 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/wsl_automount/</guid>
+      <description>&lt;h2 id=&#34;문제-설명&#34;&gt;문제 설명:&lt;/h2&gt;
+&lt;p&gt;WSL에서 Windows의 폴더를 마운트할 때, 파일 권한이 기본적으로 755로 설정되는 문제 발생.
+Windows에서 파일을 복사하면 755 권한으로 설정되고, WSL에서는 644로 설정됨.&lt;/p&gt;
+&lt;h2 id=&#34;해결-방법&#34;&gt;해결 방법:&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;WSL의 설정 파일인 /etc/wsl.conf를 수정하여 마운트 시 기본 권한을 설정.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;etcwslconf-파일-수정&#34;&gt;/etc/wsl.conf 파일 수정:&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-ini&#34; data-lang=&#34;ini&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;[automount]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#options = &amp;#34;metadata,umask=000&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;options&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;metadata,uid=1000,gid=1000,umask=022&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;설정 후 WSL을 재시작&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;gt; wsl --shutdown
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;git-설정-변경&#34;&gt;Git 설정 변경:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;특정 리포지토리에서만 core.fileMode를 false로 설정하여 파일 권한 변경을 무시하도록 설정.&lt;/li&gt;
+&lt;li&gt;리포지토리 디렉토리에서 다음 명령어 실행:
+bash&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git config core.fileMode &lt;span class=&#34;nb&#34;&gt;false&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;# 설정&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git config --get core.fileMode  &lt;span class=&#34;c1&#34;&gt;# 확인&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;또는 .git/config 파일을 직접 수정하여 [core] 섹션에 fileMode = false 추가.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;파일-권한-일괄-변경-스크립트&#34;&gt;파일 권한 일괄 변경 스크립트:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;파일을 복사한 후 권한을 일괄적으로 변경하는 스크립트를 작성하여 사용.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#!/bin/bash
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;find /mnt/c/path/to/your/folder -type f -exec chmod &lt;span class=&#34;m&#34;&gt;644&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{}&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
     <item>
       <title>Windows WSL2 Alpine Install</title>
       <link>https://neosolaris.github.io/posts/alpine_wsl2/</link>

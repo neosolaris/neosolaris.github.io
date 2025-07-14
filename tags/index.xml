@@ -11,8 +11,43 @@
     </image>
     <generator>Hugo -- 0.147.2</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 13 Jul 2025 05:27:57 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 14 Jul 2025 08:23:45 +0900</lastBuildDate>
     <atom:link href="https://neosolaris.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Automount</title>
+      <link>https://neosolaris.github.io/tags/automount/</link>
+      <pubDate>Mon, 14 Jul 2025 08:23:45 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/automount/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Umask</title>
+      <link>https://neosolaris.github.io/tags/umask/</link>
+      <pubDate>Mon, 14 Jul 2025 08:23:45 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/umask/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Windows</title>
+      <link>https://neosolaris.github.io/tags/windows/</link>
+      <pubDate>Mon, 14 Jul 2025 08:23:45 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/windows/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Wsl</title>
+      <link>https://neosolaris.github.io/tags/wsl/</link>
+      <pubDate>Mon, 14 Jul 2025 08:23:45 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/wsl/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>권한</title>
+      <link>https://neosolaris.github.io/tags/%EA%B6%8C%ED%95%9C/</link>
+      <pubDate>Mon, 14 Jul 2025 08:23:45 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/%EA%B6%8C%ED%95%9C/</guid>
+      <description></description>
+    </item>
     <item>
       <title>김수영</title>
       <link>https://neosolaris.github.io/tags/%EA%B9%80%EC%88%98%EC%98%81/</link>
@@ -179,13 +214,6 @@
       <link>https://neosolaris.github.io/tags/windos/</link>
       <pubDate>Tue, 24 Jun 2025 08:47:29 +0900</pubDate>
       <guid>https://neosolaris.github.io/tags/windos/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Wsl</title>
-      <link>https://neosolaris.github.io/tags/wsl/</link>
-      <pubDate>Tue, 24 Jun 2025 08:47:29 +0900</pubDate>
-      <guid>https://neosolaris.github.io/tags/wsl/</guid>
       <description></description>
     </item>
     <item>
@@ -361,13 +389,6 @@
       <link>https://neosolaris.github.io/tags/install/</link>
       <pubDate>Sat, 30 Dec 2023 06:15:32 +0900</pubDate>
       <guid>https://neosolaris.github.io/tags/install/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Windows</title>
-      <link>https://neosolaris.github.io/tags/windows/</link>
-      <pubDate>Sat, 30 Dec 2023 06:15:32 +0900</pubDate>
-      <guid>https://neosolaris.github.io/tags/windows/</guid>
       <description></description>
     </item>
     <item>
