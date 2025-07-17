@@ -11,8 +11,85 @@
     </image>
     <generator>Hugo -- 0.147.2</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 14 Jul 2025 09:18:19 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 17 Jul 2025 07:03:22 +0900</lastBuildDate>
     <atom:link href="https://neosolaris.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>exiftool - 이미지, 오디오 파일 메타데이터 편집 툴</title>
+      <link>https://neosolaris.github.io/posts/exiftool/</link>
+      <pubDate>Thu, 17 Jul 2025 07:03:22 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/exiftool/</guid>
+      <description>&lt;h2 id=&#34;소개&#34;&gt;소개&lt;/h2&gt;
+&lt;p&gt;ExifTool은 이미지, 비디오 및 오디오 파일의 메타데이터를 읽고 쓰고 편집할 수 있는 강력한 도구이다. 다양한 파일 형식을 지원하며, exif, iptc, xmp, gps 및 기타 메터데이터 형식을 처리할 수 있다. ExifTool은 주로 사진 작가, 디지털 아카이브 관리자 및 데이터 분석가들이 메타데이터를 관리하는 데 사용된다.&lt;/p&gt;
+&lt;h2 id=&#34;주요-기능&#34;&gt;주요 기능&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;메타데이터 읽기: 이미지 파일에서 메타데이터를 추출하여 표시합니다.&lt;/li&gt;
+&lt;li&gt;메타데이터 쓰기: 메타데이터를 수정하거나 새로 추가할 수 있습니다.&lt;/li&gt;
+&lt;li&gt;메타데이터 삭제: 특정 메타데이터 항목을 삭제할 수 있습니다.&lt;/li&gt;
+&lt;li&gt;배치 처리: 여러 파일에 대해 동시에 작업할 수 있습니다.&lt;/li&gt;
+&lt;li&gt;다양한 형식 지원: JPEG, PNG, TIFF, RAW 파일 등 다양한 형식의 메타데이터를 처리합니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;설치&#34;&gt;설치&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;doas apk add exiftool
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;사용법&#34;&gt;사용법&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 메타데이터 읽기&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;exiftool foo.jpg
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 특정 메타데이터 항목 읽기&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;exiftool -Model foo.jpg
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 메타데이터 쓰기(원본은 foo.jpg_original로 자동 백업)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;exiftool -Artist&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;Your Name&amp;#34;&lt;/span&gt; foo.jpg
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 메타데이터 쓰기(원본에 덮어쓰기)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;exiftool -overwrite_original -Artist&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;Your Name&amp;#34;&lt;/span&gt; foo.jpg
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 메타데이터 쓰기(원본에 덮어쓰기+ 원본 파일 크기 유지)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;exiftool -overwrite_original_in_place -Artist&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;Your Name&amp;#34;&lt;/span&gt; foo.jpg
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 메타데이터 삭제&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;exiftool -all&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; foo.jpg
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 배치 처리&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;exiftool -Artist&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;Your Name&amp;#34;&lt;/span&gt; *.jpg
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;응용&#34;&gt;응용&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;메타데이터 필터링&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;exiftool -Model -DateTimeOriginal foo.jpg
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;메타데이터를 CSV 파일로 보내기&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;exiftool -csv -r . &amp;gt; metadata.csv
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;메타데이터 일괄 수정&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;exiftool -Artist&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;New Artist&amp;#34;&lt;/span&gt; *.jpg
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;GPS 정보 추가 및 수정&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;exiftool -GPSLatitude&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;37.7749 -GPSLongitude&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-122.4194 image.jpg
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;파일 이름 변경 (촬영 날짜를 기반으로 파일 이름 변경)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;exiftool &lt;span class=&#34;s1&#34;&gt;&amp;#39;-FileName&amp;lt;${DateTimeOriginal}.jpg&amp;#39;&lt;/span&gt; -d %Y%m%d_%H%M%S *.jpg
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;메타데이터 백업 및 복원&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;exiftool -Model -DateTimeOriginal foo.jpg
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;특정 메타데이터 삭제&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;exiftool -GPSLatitude&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; -GPSLongitude&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; image.jpg
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;메타데이터 비교&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;exiftool -diff file1.jpg file2.jpg
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;사용자 정의 메타데이터 추가&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;exiftool -UserDefinedTag&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;Custom Info&amp;#34;&lt;/span&gt; image.jpg
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;위 명령과 옵션을 이용하여 스크립트를 목적에 맞게 작성해 두면 매우 유용하다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;reference&#34;&gt;REFERENCE&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;ExifTool Command-Line Examples - &lt;a href=&#34;https://exiftool.org/examples.html&#34;&gt;https://exiftool.org/examples.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
     <item>
       <title>WSL에서 Windows 폴더 마운트 시 파일 권한 문제 해결</title>
       <link>https://neosolaris.github.io/posts/wsl_automount/</link>
