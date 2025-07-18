@@ -11,8 +11,64 @@
     </image>
     <generator>Hugo -- 0.147.2</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 17 Jul 2025 07:03:22 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 18 Jul 2025 08:20:45 +0900</lastBuildDate>
     <atom:link href="https://neosolaris.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Batterries</title>
+      <link>https://neosolaris.github.io/tags/batterries/</link>
+      <pubDate>Fri, 18 Jul 2025 08:20:45 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/batterries/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Lua</title>
+      <link>https://neosolaris.github.io/tags/lua/</link>
+      <pubDate>Fri, 18 Jul 2025 08:20:45 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/lua/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Luafun</title>
+      <link>https://neosolaris.github.io/tags/luafun/</link>
+      <pubDate>Fri, 18 Jul 2025 08:20:45 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/luafun/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Luajit</title>
+      <link>https://neosolaris.github.io/tags/luajit/</link>
+      <pubDate>Fri, 18 Jul 2025 08:20:45 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/luajit/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Microlight</title>
+      <link>https://neosolaris.github.io/tags/microlight/</link>
+      <pubDate>Fri, 18 Jul 2025 08:20:45 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/microlight/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Moses</title>
+      <link>https://neosolaris.github.io/tags/moses/</link>
+      <pubDate>Fri, 18 Jul 2025 08:20:45 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/moses/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Penlight</title>
+      <link>https://neosolaris.github.io/tags/penlight/</link>
+      <pubDate>Fri, 18 Jul 2025 08:20:45 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/penlight/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Stdlib</title>
+      <link>https://neosolaris.github.io/tags/stdlib/</link>
+      <pubDate>Fri, 18 Jul 2025 08:20:45 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/stdlib/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Exif</title>
       <link>https://neosolaris.github.io/tags/exif/</link>
@@ -172,13 +228,6 @@
       <link>https://neosolaris.github.io/tags/emoji/</link>
       <pubDate>Thu, 26 Jun 2025 16:49:56 +0900</pubDate>
       <guid>https://neosolaris.github.io/tags/emoji/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Lua</title>
-      <link>https://neosolaris.github.io/tags/lua/</link>
-      <pubDate>Thu, 26 Jun 2025 16:49:56 +0900</pubDate>
-      <guid>https://neosolaris.github.io/tags/lua/</guid>
       <description></description>
     </item>
     <item>
@@ -882,13 +931,6 @@
       <description></description>
     </item>
     <item>
-      <title>Luajit</title>
-      <link>https://neosolaris.github.io/tags/luajit/</link>
-      <pubDate>Wed, 01 Feb 2023 15:58:52 +0900</pubDate>
-      <guid>https://neosolaris.github.io/tags/luajit/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Science</title>
       <link>https://neosolaris.github.io/tags/science/</link>
       <pubDate>Wed, 01 Feb 2023 15:58:52 +0900</pubDate>
@@ -1208,13 +1250,6 @@
       <link>https://neosolaris.github.io/tags/library/</link>
       <pubDate>Wed, 12 Oct 2022 17:27:21 +0900</pubDate>
       <guid>https://neosolaris.github.io/tags/library/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Luafun</title>
-      <link>https://neosolaris.github.io/tags/luafun/</link>
-      <pubDate>Wed, 12 Oct 2022 17:27:21 +0900</pubDate>
-      <guid>https://neosolaris.github.io/tags/luafun/</guid>
       <description></description>
     </item>
     <item>

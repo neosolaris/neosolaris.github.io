@@ -11,8 +11,100 @@
     </image>
     <generator>Hugo -- 0.147.2</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 17 Jul 2025 07:03:22 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 18 Jul 2025 08:20:45 +0900</lastBuildDate>
     <atom:link href="https://neosolaris.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Lua Batteries - 루아 베터리 확장 라이브러리</title>
+      <link>https://neosolaris.github.io/posts/lua_batteries/</link>
+      <pubDate>Fri, 18 Jul 2025 08:20:45 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/lua_batteries/</guid>
+      <description>&lt;h1 id=&#34;lua---batteries&#34;&gt;lua - batteries&lt;/h1&gt;
+&lt;p&gt;lua 확장 베터리 라이브러리에 대해 정리해 본다.&lt;/p&gt;
+&lt;h2 id=&#34;lua-fun&#34;&gt;Lua Fun&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;2100stars &lt;a href=&#34;https://github.com/luafun/luafun&#34;&gt;https://github.com/luafun/luafun&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;High-performance functional programming library designed for Luajit&lt;/li&gt;
+&lt;li&gt;3달전&lt;/li&gt;
+&lt;li&gt;Basic Functions&lt;/li&gt;
+&lt;li&gt;Generators&lt;/li&gt;
+&lt;li&gt;Slicing&lt;/li&gt;
+&lt;li&gt;Indexing&lt;/li&gt;
+&lt;li&gt;Filtering&lt;/li&gt;
+&lt;li&gt;Reducing&lt;/li&gt;
+&lt;li&gt;Transformations&lt;/li&gt;
+&lt;li&gt;Compositions&lt;/li&gt;
+&lt;li&gt;Operators&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;moses&#34;&gt;Moses&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;634stars &lt;a href=&#34;https://github.com/Yonaba/Moses&#34;&gt;https://github.com/Yonaba/Moses&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Utility library for functional programming in Lua&lt;/li&gt;
+&lt;li&gt;fun과 유사하나 더 많은 라이브러리가 있는 듯, moses.lua 파일 하나.&lt;/li&gt;
+&lt;li&gt;6년전&lt;/li&gt;
+&lt;li&gt;Table, Array, Utility, Object, Chaining, Import&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;lua-stdlib&#34;&gt;lua-stdlib&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;289stars &lt;a href=&#34;https://github.com/lua-stdlib/lua-stdlib&#34;&gt;https://github.com/lua-stdlib/lua-stdlib&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;document - &lt;a href=&#34;https://lua-stdlib.github.io/lua-stdlib/&#34;&gt;https://lua-stdlib.github.io/lua-stdlib/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;8년전&lt;/li&gt;
+&lt;li&gt;modules(std)
+- debug, functional, io, math, operator, package, strict, string, table&lt;/li&gt;
+&lt;li&gt;Classes
+- tree, container, object, list, optparse, set, strbuf&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;microlight&#34;&gt;Microlight&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;169stars &lt;a href=&#34;https://github.com/stevedonovan/Microlight&#34;&gt;https://github.com/stevedonovan/Microlight&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;말 그대로 경량 penlight, 달랑 ml.lua 파일 하나&lt;/li&gt;
+&lt;li&gt;13년전&lt;/li&gt;
+&lt;li&gt;Strings - tstring, table.concat, table.split, expand, escape&lt;/li&gt;
+&lt;li&gt;Files and Paths - access, exist, readfile, splitpath, splitext&lt;/li&gt;
+&lt;li&gt;Inserting and Extendig - update, extend, insertvalues, import&lt;/li&gt;
+&lt;li&gt;Extracting and Mapping
+- sub, indexby, imap, indexof, ifind, ifilter, imapfilter, collect, removerange&lt;/li&gt;
+&lt;li&gt;Sets and Maps
+- indexof, invert, issubset, makemap&lt;/li&gt;
+&lt;li&gt;Higher-order Functions
+- compose, bind1, bind2&lt;/li&gt;
+&lt;li&gt;Classes&lt;/li&gt;
+&lt;li&gt;Array Class&lt;/li&gt;
+&lt;li&gt;Experiments&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;penlight&#34;&gt;Penlight&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;371stars &lt;a href=&#34;https://github.com/lunarmodules/Penlight&#34;&gt;https://github.com/lunarmodules/Penlight&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Python에서 제공하는 여러 라이브러리와 유사한 타입으로 제공한다.&lt;/li&gt;
+&lt;li&gt;3 month 계속 업데이트 및 개선&lt;/li&gt;
+&lt;li&gt;Paths, Files and Directories
+- path, isdir, isfile, exists, dirname, basename
+- dir, getfiles, getallfiles
+- file: copy, move, read, write&lt;/li&gt;
+&lt;li&gt;Application Support
+- app, lapp, config, strict, utils, compat, types&lt;/li&gt;
+&lt;li&gt;Extra String Operations
+- utils, stringx, stringio, lexer, text, template, sip&lt;/li&gt;
+&lt;li&gt;Extra Table Operations
+- tablex, pretty, List, Map, Set, OrderMap, data, array2d, permute&lt;/li&gt;
+&lt;li&gt;Iterators, OOP and Functional
+- seq, class, func, utils, compression&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;batteries-for-lua&#34;&gt;Batteries for Lua&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/1bardesign/batteries&#34;&gt;https://github.com/1bardesign/batteries&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;love에 특화된 확장 라이브러리이다.&lt;/li&gt;
+&lt;li&gt;하지만 범용으로 사용해도 문제 없다.&lt;/li&gt;
+&lt;li&gt;더구나 Penlight보다 경량이고 빠르다.&lt;/li&gt;
+&lt;li&gt;Lua Core Extensions
+- mathx, tablex, stringx&lt;/li&gt;
+&lt;li&gt;General Utility
+- class, functional, sequence, set, sort, state_machine, timer, pubsub, pretty&lt;/li&gt;
+&lt;li&gt;Geometry
+- intersect, vec2, vec3&lt;/li&gt;
+&lt;li&gt;Special Interest
+- async, colour(color), manual_gc, measure, make_pooled&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
     <item>
       <title>exiftool - 이미지, 오디오 파일 메타데이터 편집 툴</title>
       <link>https://neosolaris.github.io/posts/exiftool/</link>

@@ -2,8 +2,47 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://neosolaris.github.io/tags/batterries/</loc>
+    <lastmod>2025-07-18T08:20:45+09:00</lastmod>
+  </url><url>
     <loc>https://neosolaris.github.io/</loc>
-    <lastmod>2025-07-17T07:03:22+09:00</lastmod>
+    <lastmod>2025-07-18T08:20:45+09:00</lastmod>
+  </url><url>
+    <loc>https://neosolaris.github.io/categories/</loc>
+    <lastmod>2025-07-18T08:20:45+09:00</lastmod>
+  </url><url>
+    <loc>https://neosolaris.github.io/tags/lua/</loc>
+    <lastmod>2025-07-18T08:20:45+09:00</lastmod>
+  </url><url>
+    <loc>https://neosolaris.github.io/posts/lua_batteries/</loc>
+    <lastmod>2025-07-18T08:20:45+09:00</lastmod>
+  </url><url>
+    <loc>https://neosolaris.github.io/tags/luafun/</loc>
+    <lastmod>2025-07-18T08:20:45+09:00</lastmod>
+  </url><url>
+    <loc>https://neosolaris.github.io/tags/luajit/</loc>
+    <lastmod>2025-07-18T08:20:45+09:00</lastmod>
+  </url><url>
+    <loc>https://neosolaris.github.io/tags/microlight/</loc>
+    <lastmod>2025-07-18T08:20:45+09:00</lastmod>
+  </url><url>
+    <loc>https://neosolaris.github.io/tags/moses/</loc>
+    <lastmod>2025-07-18T08:20:45+09:00</lastmod>
+  </url><url>
+    <loc>https://neosolaris.github.io/tags/penlight/</loc>
+    <lastmod>2025-07-18T08:20:45+09:00</lastmod>
+  </url><url>
+    <loc>https://neosolaris.github.io/posts/</loc>
+    <lastmod>2025-07-18T08:20:45+09:00</lastmod>
+  </url><url>
+    <loc>https://neosolaris.github.io/categories/programming/</loc>
+    <lastmod>2025-07-18T08:20:45+09:00</lastmod>
+  </url><url>
+    <loc>https://neosolaris.github.io/tags/stdlib/</loc>
+    <lastmod>2025-07-18T08:20:45+09:00</lastmod>
+  </url><url>
+    <loc>https://neosolaris.github.io/tags/</loc>
+    <lastmod>2025-07-18T08:20:45+09:00</lastmod>
   </url><url>
     <loc>https://neosolaris.github.io/tags/exif/</loc>
     <lastmod>2025-07-17T07:03:22+09:00</lastmod>
@@ -14,12 +53,6 @@
     <loc>https://neosolaris.github.io/tags/image/</loc>
     <lastmod>2025-07-17T07:03:22+09:00</lastmod>
   </url><url>
-    <loc>https://neosolaris.github.io/posts/</loc>
-    <lastmod>2025-07-17T07:03:22+09:00</lastmod>
-  </url><url>
-    <loc>https://neosolaris.github.io/tags/</loc>
-    <lastmod>2025-07-17T07:03:22+09:00</lastmod>
-  </url><url>
     <loc>https://neosolaris.github.io/tags/tool/</loc>
     <lastmod>2025-07-17T07:03:22+09:00</lastmod>
   </url><url>
@@ -28,9 +61,6 @@
   </url><url>
     <loc>https://neosolaris.github.io/tags/automount/</loc>
     <lastmod>2025-07-14T08:23:45+09:00</lastmod>
-  </url><url>
-    <loc>https://neosolaris.github.io/categories/</loc>
-    <lastmod>2025-07-14T09:18:19+09:00</lastmod>
   </url><url>
     <loc>https://neosolaris.github.io/tags/umask/</loc>
     <lastmod>2025-07-14T08:23:45+09:00</lastmod>
@@ -125,13 +155,7 @@
     <loc>https://neosolaris.github.io/categories/lua/</loc>
     <lastmod>2025-06-26T16:49:56+09:00</lastmod>
   </url><url>
-    <loc>https://neosolaris.github.io/tags/lua/</loc>
-    <lastmod>2025-06-26T16:49:56+09:00</lastmod>
-  </url><url>
     <loc>https://neosolaris.github.io/posts/lua_emoji/</loc>
-    <lastmod>2025-06-26T16:49:56+09:00</lastmod>
-  </url><url>
-    <loc>https://neosolaris.github.io/categories/programming/</loc>
     <lastmod>2025-06-26T16:49:56+09:00</lastmod>
   </url><url>
     <loc>https://neosolaris.github.io/tags/www/</loc>
@@ -644,9 +668,6 @@
     <loc>https://neosolaris.github.io/posts/gsl-shell/</loc>
     <lastmod>2023-02-01T15:58:52+09:00</lastmod>
   </url><url>
-    <loc>https://neosolaris.github.io/tags/luajit/</loc>
-    <lastmod>2023-08-11T17:38:11+09:00</lastmod>
-  </url><url>
     <loc>https://neosolaris.github.io/tags/science/</loc>
     <lastmod>2023-02-01T15:58:52+09:00</lastmod>
   </url><url>
@@ -888,9 +909,6 @@
     <lastmod>2022-10-12T17:27:21+09:00</lastmod>
   </url><url>
     <loc>https://neosolaris.github.io/tags/library/</loc>
-    <lastmod>2022-10-12T17:27:21+09:00</lastmod>
-  </url><url>
-    <loc>https://neosolaris.github.io/tags/luafun/</loc>
     <lastmod>2022-10-12T17:27:21+09:00</lastmod>
   </url><url>
     <loc>https://neosolaris.github.io/posts/luafun/</loc>
