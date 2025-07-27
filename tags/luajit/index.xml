@@ -258,6 +258,7 @@ local level = 2
       <pubDate>Mon, 21 Nov 2022 01:09:54 +0900</pubDate>
       <guid>https://neosolaris.github.io/posts/alpine-lua-language-server/</guid>
       <description>&lt;ul&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 25-07-27: Alpine Linux 3.2x 기준으로 &lt;a href=&#34;../luajit-nvim-lspconfig&#34;&gt;luajit-nvim-lspconfig&lt;/a&gt; 참고&lt;/li&gt;
 &lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 23-08-08: nvim 버전이 3.18대로 올라오고, Community Repository를 추가하면 패키지로 간단히
 설치할 수가 있다. 최적화나 컴파일 자체에 의미를 두지 않는다면 패키지로 설치하자.&lt;/li&gt;
 &lt;/ul&gt;
