@@ -1,0 +1,126 @@
+<!doctype html><html lang=en dir=auto><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>lua - Lazy Loading 지연 로딩 | Borisu Wiki Home</title>
+<meta name=keywords content="lau,lazy,module"><meta name=description content='지연 로딩(lazy loading)은 필요할 때만 리소스를 로드하는 기법으로, 초기 로딩 시간을 줄이고 메모리 사용을 최적화하는 데 유용하다. Lua에서 지연 로딩을 구현하는 방법은 다음과 같다.
+지연 로딩 구현 방법
+
+
+함수로 모듈 로드: 모듈을 직접 로드하는 대신, 필요할 때 호출되는 함수를 정의하여 모듈을 로드한다.
+
+
+변수로 모듈 저장: 모듈을 로드한 후, 그 결과를 변수에 저장하여 이후에 재사용할 수 있도록 한다.
+
+
+예제
+mymodule.lua (모듈 파일)
+local M = {}
+
+function M.hello()
+    print("Hello from mymodule!")
+end
+
+function M.goodbye()
+    print("Goodbye from mymodule!")
+end
+
+return M
+main.lua (메인 프로그램)
+local mymodule -- 모듈을 미리 선언하지만 로드하지 않음
+
+local function loadModule()
+    if not mymodule then
+        mymodule = require &#39;mymodule&#39; -- 필요할 때 모듈 로드
+    end
+end
+
+-- 특정 조건에 따라 모듈의 함수를 호출
+local condition = true
+
+if condition then
+    loadModule() -- 모듈 로드
+    mymodule.hello() -- 모듈의 함수 사용
+else
+    print("모듈을 로드하지 않았습니다.")
+end
+설명
+
+
+모듈 파일: mymodule.lua 파일에는 두 개의 함수 hello와 goodbye가 정의되어 있다.'><meta name=author content="Me"><link rel=canonical href=https://neosolaris.github.io/posts/lua_laze_loading/><meta name=google-site-verification content="XYZabc"><meta name=yandex-verification content="XYZabc"><meta name=msvalidate.01 content="XYZabc"><link crossorigin=anonymous href=/assets/css/stylesheet.98051510d3ce4f1414ca9c506c282de4eb161c1b4f4f9d3cbaaf0173d5c84923.css integrity="sha256-mAUVENPOTxQUypxQbCgt5OsWHBtPT508uq8Bc9XISSM=" rel="preload stylesheet" as=style><link rel=icon href=https://neosolaris.github.io/favicon.ico><link rel=icon type=image/png sizes=16x16 href=https://neosolaris.github.io/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=https://neosolaris.github.io/favicon-32x32.png><link rel=apple-touch-icon href=https://neosolaris.github.io/apple-touch-icon.png><link rel=mask-icon href=https://neosolaris.github.io/safari-pinned-tab.svg><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><link rel=alternate hreflang=en href=https://neosolaris.github.io/posts/lua_laze_loading/><noscript><style>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--code-block-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51)}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style></noscript><meta property="og:url" content="https://neosolaris.github.io/posts/lua_laze_loading/"><meta property="og:site_name" content="Borisu Wiki Home"><meta property="og:title" content="lua - Lazy Loading 지연 로딩"><meta property="og:description" content='지연 로딩(lazy loading)은 필요할 때만 리소스를 로드하는 기법으로, 초기 로딩 시간을 줄이고 메모리 사용을 최적화하는 데 유용하다. Lua에서 지연 로딩을 구현하는 방법은 다음과 같다.
+지연 로딩 구현 방법 함수로 모듈 로드: 모듈을 직접 로드하는 대신, 필요할 때 호출되는 함수를 정의하여 모듈을 로드한다.
+변수로 모듈 저장: 모듈을 로드한 후, 그 결과를 변수에 저장하여 이후에 재사용할 수 있도록 한다.
+예제 mymodule.lua (모듈 파일) local M = {} function M.hello() print("Hello from mymodule!") end function M.goodbye() print("Goodbye from mymodule!") end return M main.lua (메인 프로그램) local mymodule -- 모듈을 미리 선언하지만 로드하지 않음 local function loadModule() if not mymodule then mymodule = require &#39;mymodule&#39; -- 필요할 때 모듈 로드 end end -- 특정 조건에 따라 모듈의 함수를 호출 local condition = true if condition then loadModule() -- 모듈 로드 mymodule.hello() -- 모듈의 함수 사용 else print("모듈을 로드하지 않았습니다.") end 설명 모듈 파일: mymodule.lua 파일에는 두 개의 함수 hello와 goodbye가 정의되어 있다.'><meta property="og:locale" content="en"><meta property="og:type" content="article"><meta property="article:section" content="posts"><meta property="article:published_time" content="2025-07-22T05:45:09+09:00"><meta property="article:modified_time" content="2025-07-22T05:45:09+09:00"><meta property="article:tag" content="Lau"><meta property="article:tag" content="Lazy"><meta property="article:tag" content="Module"><meta property="og:image" content="https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E"><meta name=twitter:title content="lua - Lazy Loading 지연 로딩"><meta name=twitter:description content='지연 로딩(lazy loading)은 필요할 때만 리소스를 로드하는 기법으로, 초기 로딩 시간을 줄이고 메모리 사용을 최적화하는 데 유용하다. Lua에서 지연 로딩을 구현하는 방법은 다음과 같다.
+지연 로딩 구현 방법
+
+
+함수로 모듈 로드: 모듈을 직접 로드하는 대신, 필요할 때 호출되는 함수를 정의하여 모듈을 로드한다.
+
+
+변수로 모듈 저장: 모듈을 로드한 후, 그 결과를 변수에 저장하여 이후에 재사용할 수 있도록 한다.
+
+
+예제
+mymodule.lua (모듈 파일)
+local M = {}
+
+function M.hello()
+    print("Hello from mymodule!")
+end
+
+function M.goodbye()
+    print("Goodbye from mymodule!")
+end
+
+return M
+main.lua (메인 프로그램)
+local mymodule -- 모듈을 미리 선언하지만 로드하지 않음
+
+local function loadModule()
+    if not mymodule then
+        mymodule = require &#39;mymodule&#39; -- 필요할 때 모듈 로드
+    end
+end
+
+-- 특정 조건에 따라 모듈의 함수를 호출
+local condition = true
+
+if condition then
+    loadModule() -- 모듈 로드
+    mymodule.hello() -- 모듈의 함수 사용
+else
+    print("모듈을 로드하지 않았습니다.")
+end
+설명
+
+
+모듈 파일: mymodule.lua 파일에는 두 개의 함수 hello와 goodbye가 정의되어 있다.'><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://neosolaris.github.io/posts/"},{"@type":"ListItem","position":2,"name":"lua - Lazy Loading 지연 로딩","item":"https://neosolaris.github.io/posts/lua_laze_loading/"}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"lua - Lazy Loading 지연 로딩","name":"lua - Lazy Loading 지연 로딩","description":"지연 로딩(lazy loading)은 필요할 때만 리소스를 로드하는 기법으로, 초기 로딩 시간을 줄이고 메모리 사용을 최적화하는 데 유용하다. Lua에서 지연 로딩을 구현하는 방법은 다음과 같다.\n지연 로딩 구현 방법 함수로 모듈 로드: 모듈을 직접 로드하는 대신, 필요할 때 호출되는 함수를 정의하여 모듈을 로드한다.\n변수로 모듈 저장: 모듈을 로드한 후, 그 결과를 변수에 저장하여 이후에 재사용할 수 있도록 한다.\n예제 mymodule.lua (모듈 파일) local M = {} function M.hello() print(\u0026#34;Hello from mymodule!\u0026#34;) end function M.goodbye() print(\u0026#34;Goodbye from mymodule!\u0026#34;) end return M main.lua (메인 프로그램) local mymodule -- 모듈을 미리 선언하지만 로드하지 않음 local function loadModule() if not mymodule then mymodule = require \u0026#39;mymodule\u0026#39; -- 필요할 때 모듈 로드 end end -- 특정 조건에 따라 모듈의 함수를 호출 local condition = true if condition then loadModule() -- 모듈 로드 mymodule.hello() -- 모듈의 함수 사용 else print(\u0026#34;모듈을 로드하지 않았습니다.\u0026#34;) end 설명 모듈 파일: mymodule.lua 파일에는 두 개의 함수 hello와 goodbye가 정의되어 있다.\n","keywords":["lau","lazy","module"],"articleBody":"지연 로딩(lazy loading)은 필요할 때만 리소스를 로드하는 기법으로, 초기 로딩 시간을 줄이고 메모리 사용을 최적화하는 데 유용하다. Lua에서 지연 로딩을 구현하는 방법은 다음과 같다.\n지연 로딩 구현 방법 함수로 모듈 로드: 모듈을 직접 로드하는 대신, 필요할 때 호출되는 함수를 정의하여 모듈을 로드한다.\n변수로 모듈 저장: 모듈을 로드한 후, 그 결과를 변수에 저장하여 이후에 재사용할 수 있도록 한다.\n예제 mymodule.lua (모듈 파일) local M = {} function M.hello() print(\"Hello from mymodule!\") end function M.goodbye() print(\"Goodbye from mymodule!\") end return M main.lua (메인 프로그램) local mymodule -- 모듈을 미리 선언하지만 로드하지 않음 local function loadModule() if not mymodule then mymodule = require 'mymodule' -- 필요할 때 모듈 로드 end end -- 특정 조건에 따라 모듈의 함수를 호출 local condition = true if condition then loadModule() -- 모듈 로드 mymodule.hello() -- 모듈의 함수 사용 else print(\"모듈을 로드하지 않았습니다.\") end 설명 모듈 파일: mymodule.lua 파일에는 두 개의 함수 hello와 goodbye가 정의되어 있다.\n메인 프로그램: main.lua 파일에서는 mymodule 변수를 미리 선언하지만, require를 사용하여 모듈을 즉시 로드하지 않는다.\n지연 로딩 함수: loadModule 함수는 mymodule 변수가 nil일 때만 모듈을 로드합니다. 이렇게 하면 조건에 따라 모듈을 필요할 때만 로드할 수 있다.\n조건에 따른 호출: condition 변수가 true일 경우에만 모듈을 로드하고, 그 후에 hello 함수를 호출한다.\n이와 같은 방식으로 지연 로딩을 구현하면, 프로그램의 초기 메모리 사용량을 줄이고, 실제로 필요한 경우에만 모듈을 로드하여 메모리 효율성을 높일 수 있다.\n","wordCount":"218","inLanguage":"en","image":"https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E","datePublished":"2025-07-22T05:45:09+09:00","dateModified":"2025-07-22T05:45:09+09:00","author":{"@type":"Person","name":"Me"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://neosolaris.github.io/posts/lua_laze_loading/"},"publisher":{"@type":"Organization","name":"Borisu Wiki Home","logo":{"@type":"ImageObject","url":"https://neosolaris.github.io/favicon.ico"}}}</script></head><body id=top><script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add("dark"):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove("dark"):window.matchMedia("(prefers-color-scheme: dark)").matches&&document.body.classList.add("dark")</script><header class=header><nav class=nav><div class=logo><a href=https://neosolaris.github.io/ accesskey=h title="Home (Alt + H)"><img src=https://neosolaris.github.io/apple-touch-icon.png alt aria-label=logo height=35>Home</a><div class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)" aria-label="Toggle theme"><svg id="moon" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></div></div><ul id=menu><li><a href=https://neosolaris.github.io/archive/ title="📜 Archive"><span>📜 Archive</span></a></li><li><a href=https://neosolaris.github.io/categories/ title="🏷️ Categories"><span>🏷️ Categories</span></a></li><li><a href=https://neosolaris.github.io/posts/windex title="📇 Index"><span>📇 Index</span></a></li><li><a href=https://neosolaris.github.io/search/ title="🔍 Search (Alt + /)" accesskey=/><span>🔍 Search</span></a></li><li><a href=https://neosolaris.github.io/about/ title="👨‍💻 About"><span>👨‍💻 About</span></a></li></ul></nav></header><main class=main><article class=post-single><header class=post-header><div class=breadcrumbs><a href=https://neosolaris.github.io/>Home</a>&nbsp;»&nbsp;<a href=https://neosolaris.github.io/posts/>Posts</a></div><h1 class="post-title entry-hint-parent">lua - Lazy Loading 지연 로딩</h1><div class=post-meta><span title='2025-07-22 05:45:09 +0900 KST'>2025-07-22</span>&nbsp;·&nbsp;218 words</div></header><div class=toc><details open><summary accesskey=c title="(Alt + C)"><span class=details>Table of Contents</span></summary><div class=inner><nav id=TableOfContents><ul><li><a href=#지연-로딩-구현-방법>지연 로딩 구현 방법</a></li><li><a href=#예제>예제</a><ul><li><a href=#mymodulelua-모듈-파일>mymodule.lua (모듈 파일)</a></li><li><a href=#mainlua-메인-프로그램>main.lua (메인 프로그램)</a></li></ul></li><li><a href=#설명>설명</a></li></ul></nav></div></details></div><div class=post-content><p>지연 로딩(lazy loading)은 필요할 때만 리소스를 로드하는 기법으로, 초기 로딩 시간을 줄이고 메모리 사용을 최적화하는 데 유용하다. Lua에서 지연 로딩을 구현하는 방법은 다음과 같다.</p><h2 id=지연-로딩-구현-방법>지연 로딩 구현 방법<a hidden class=anchor aria-hidden=true href=#지연-로딩-구현-방법>#</a></h2><ol><li><p><strong>함수로 모듈 로드</strong>: 모듈을 직접 로드하는 대신, 필요할 때 호출되는 함수를 정의하여 모듈을 로드한다.</p></li><li><p><strong>변수로 모듈 저장</strong>: 모듈을 로드한 후, 그 결과를 변수에 저장하여 이후에 재사용할 수 있도록 한다.</p></li></ol><h2 id=예제>예제<a hidden class=anchor aria-hidden=true href=#예제>#</a></h2><h3 id=mymodulelua-모듈-파일>mymodule.lua (모듈 파일)<a hidden class=anchor aria-hidden=true href=#mymodulelua-모듈-파일>#</a></h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-lua data-lang=lua><span class=line><span class=cl><span class=kd>local</span> <span class=n>M</span> <span class=o>=</span> <span class=p>{}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kr>function</span> <span class=nc>M</span><span class=p>.</span><span class=nf>hello</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>    <span class=n>print</span><span class=p>(</span><span class=s2>&#34;Hello from mymodule!&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=kr>end</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kr>function</span> <span class=nc>M</span><span class=p>.</span><span class=nf>goodbye</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>    <span class=n>print</span><span class=p>(</span><span class=s2>&#34;Goodbye from mymodule!&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=kr>end</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kr>return</span> <span class=n>M</span>
+</span></span></code></pre></div><h3 id=mainlua-메인-프로그램>main.lua (메인 프로그램)<a hidden class=anchor aria-hidden=true href=#mainlua-메인-프로그램>#</a></h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-lua data-lang=lua><span class=line><span class=cl><span class=kd>local</span> <span class=n>mymodule</span> <span class=c1>-- 모듈을 미리 선언하지만 로드하지 않음</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kd>local</span> <span class=kr>function</span> <span class=nf>loadModule</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>    <span class=kr>if</span> <span class=ow>not</span> <span class=n>mymodule</span> <span class=kr>then</span>
+</span></span><span class=line><span class=cl>        <span class=n>mymodule</span> <span class=o>=</span> <span class=n>require</span> <span class=s1>&#39;mymodule&#39;</span> <span class=c1>-- 필요할 때 모듈 로드</span>
+</span></span><span class=line><span class=cl>    <span class=kr>end</span>
+</span></span><span class=line><span class=cl><span class=kr>end</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>-- 특정 조건에 따라 모듈의 함수를 호출</span>
+</span></span><span class=line><span class=cl><span class=kd>local</span> <span class=n>condition</span> <span class=o>=</span> <span class=kc>true</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kr>if</span> <span class=n>condition</span> <span class=kr>then</span>
+</span></span><span class=line><span class=cl>    <span class=n>loadModule</span><span class=p>()</span> <span class=c1>-- 모듈 로드</span>
+</span></span><span class=line><span class=cl>    <span class=n>mymodule.hello</span><span class=p>()</span> <span class=c1>-- 모듈의 함수 사용</span>
+</span></span><span class=line><span class=cl><span class=kr>else</span>
+</span></span><span class=line><span class=cl>    <span class=n>print</span><span class=p>(</span><span class=s2>&#34;모듈을 로드하지 않았습니다.&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=kr>end</span>
+</span></span></code></pre></div><h2 id=설명>설명<a hidden class=anchor aria-hidden=true href=#설명>#</a></h2><ol><li><p><strong>모듈 파일</strong>: <code>mymodule.lua</code> 파일에는 두 개의 함수 <code>hello</code>와 <code>goodbye</code>가 정의되어 있다.</p></li><li><p><strong>메인 프로그램</strong>: <code>main.lua</code> 파일에서는 <code>mymodule</code> 변수를 미리 선언하지만, <code>require</code>를 사용하여 모듈을 즉시 로드하지 않는다.</p></li><li><p><strong>지연 로딩 함수</strong>: <code>loadModule</code> 함수는 <code>mymodule</code> 변수가 <code>nil</code>일 때만 모듈을 로드합니다. 이렇게 하면 조건에 따라 모듈을 필요할 때만 로드할 수 있다.</p></li><li><p><strong>조건에 따른 호출</strong>: <code>condition</code> 변수가 <code>true</code>일 경우에만 모듈을 로드하고, 그 후에 <code>hello</code> 함수를 호출한다.</p></li></ol><p>이와 같은 방식으로 지연 로딩을 구현하면, 프로그램의 초기 메모리 사용량을 줄이고, 실제로 필요한 경우에만 모듈을 로드하여 메모리 효율성을 높일 수 있다.</p></div><footer class=post-footer><ul class=post-tags><li><a href=https://neosolaris.github.io/tags/lau/>Lau</a></li><li><a href=https://neosolaris.github.io/tags/lazy/>Lazy</a></li><li><a href=https://neosolaris.github.io/tags/module/>Module</a></li></ul><nav class=paginav><a class=prev href=https://neosolaris.github.io/posts/luajit-nvim-lspconfig/><span class=title>« Prev</span><br><span>Luajit - Nvim Lsp Config</span>
+</a><a class=next href=https://neosolaris.github.io/posts/lua_batteries/><span class=title>Next »</span><br><span>Lua Batteries - 루아 베터리 확장 라이브러리</span></a></nav></footer></article></main><footer class=footer><span>&copy; 2025 <a href=https://neosolaris.github.io/>Borisu Wiki Home</a></span> ·
+<span>Powered by
+<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
+        <a href=https://github.com/adityatelange/hugo-PaperMod/ rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg>
+</a><script>let menu=document.getElementById("menu");menu&&(menu.scrollLeft=localStorage.getItem("menu-scroll-position"),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}),document.querySelectorAll('a[href^="#"]').forEach(e=>{e.addEventListener("click",function(e){e.preventDefault();var t=this.getAttribute("href").substr(1);window.matchMedia("(prefers-reduced-motion: reduce)").matches?document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView({behavior:"smooth"}),t==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${t}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove("dark"),localStorage.setItem("pref-theme","light")):(document.body.classList.add("dark"),localStorage.setItem("pref-theme","dark"))})</script></body></html>

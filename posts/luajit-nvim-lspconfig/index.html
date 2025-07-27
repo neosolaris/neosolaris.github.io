@@ -1,0 +1,171 @@
+<!doctype html><html lang=en dir=auto><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>Luajit - Nvim Lsp Config | Borisu Wiki Home</title>
+<meta name=keywords content="luajit,lua,alpine,nvim,lsp,lua-language-server"><meta name=description content="소개
+리눅스 환경(Alpine Linux)에서 lua-language-server 설치하고 nvim에서 설정 및 활용하는 방법을 정리해 본다.
+alpine 3.2x 기준으로 설명한다. 과거 alpine 버전들은 lua-language-server가 없거나 nvim의 버전이 낮아 플러그인 지원에 문제가 있었다. 현재 시점을 기준으로 모두 적절한 버전을 지원하고 패키지도 되어 있기 때문에 소스 컴파일 등의 부담이 없어졌다.
+설치
+
+luajit및 lua-language-server 그리고 neovim관련 패키지 설치
+아래의 경우 nvim(neovim) 설치시 lfs.so,penlight등이 기본 포함하게 된다. (추가 설치 불필요)
+
+apk add --no-cache luajit luajit-dev lua-language-server ldoc
+apk add --no-cache neovim neovim-doc nvim-treesitter \
+        tree-sitter tree-sitter-cli tree-sitter-lua tree-sitter-bash \
+        tree-sitter-c tree-sitter-markdown tree-sitter-vimdoc
+설정
+
+~/.config/nvim/init.lua에 다음 설정을 추가
+my_project_path는 개별 모듈을 추가하는 경우이다.
+workspace의 library 범위가 크면 부하가 커지므로 적당히 조절해 주어야 nvim에서 무리가 없다.
+아래 주석 표시된 부분을 주의해서 확인하고 자신에게 맞는 환경을 설정한다.
+그리고 과거 sumneko라는 식으로 설정했는데 현재 lspconfig.lua_ls.setup으로 바뀌었다.
+
+-- Now set capabilities on your LSP servers
+local lspconfig = require'lspconfig'
+local my_project_path = os.getenv('HOME') .. '/.local/lib/lua'
+print(my_project_path)
+lspconfig.lua_ls.setup {
+    --capabilities = capabilities,
+	root_dir = lspconfig.util.root_pattern(&#34;.git&#34;, &#34;.luarc.json&#34;, &#34;.luarc.js&#34;),
+	settings = {
+		Lua = {
+			runtime = {
+				version = 'Luajit',
+				path = vim.split(package.path, &#34;;&#34;),
+			},
+			diagnostics = {
+				globals = {'vim'},
+				update_in_insert = false,
+			},
+			workspace = {
+				library = {
+                    --// 기본 vim 런타임 환경 모듈 추가
+					[vim.env.VIMRUNTIME] = true,
+                    --// 모든 vim의 런타임 환경 모듈 추가
+					--[vim.api.nvim_get_runtime_file(&#34;&#34;, true)] = true,
+                    --// my project 모듈 추가
+					[vim.fn.expand(my_project_path)] = true,
+				},
+                --// 제3의 모듈 제외
+				checkThirdParty = false,
+			},
+			telemetry = {
+				enable = false,
+			},
+		},
+	},
+}
+참고
+
+lua-language-server - Getting Started
+
+https://github.com/sumneko/lua-language-server/wiki/Getting-Started#command-line
+
+
+"><meta name=author content="Me"><link rel=canonical href=https://neosolaris.github.io/posts/luajit-nvim-lspconfig/><meta name=google-site-verification content="XYZabc"><meta name=yandex-verification content="XYZabc"><meta name=msvalidate.01 content="XYZabc"><link crossorigin=anonymous href=/assets/css/stylesheet.98051510d3ce4f1414ca9c506c282de4eb161c1b4f4f9d3cbaaf0173d5c84923.css integrity="sha256-mAUVENPOTxQUypxQbCgt5OsWHBtPT508uq8Bc9XISSM=" rel="preload stylesheet" as=style><link rel=icon href=https://neosolaris.github.io/favicon.ico><link rel=icon type=image/png sizes=16x16 href=https://neosolaris.github.io/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=https://neosolaris.github.io/favicon-32x32.png><link rel=apple-touch-icon href=https://neosolaris.github.io/apple-touch-icon.png><link rel=mask-icon href=https://neosolaris.github.io/safari-pinned-tab.svg><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><link rel=alternate hreflang=en href=https://neosolaris.github.io/posts/luajit-nvim-lspconfig/><noscript><style>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--code-block-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51)}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style></noscript><meta property="og:url" content="https://neosolaris.github.io/posts/luajit-nvim-lspconfig/"><meta property="og:site_name" content="Borisu Wiki Home"><meta property="og:title" content="Luajit - Nvim Lsp Config"><meta property="og:description" content="소개 리눅스 환경(Alpine Linux)에서 lua-language-server 설치하고 nvim에서 설정 및 활용하는 방법을 정리해 본다. alpine 3.2x 기준으로 설명한다. 과거 alpine 버전들은 lua-language-server가 없거나 nvim의 버전이 낮아 플러그인 지원에 문제가 있었다. 현재 시점을 기준으로 모두 적절한 버전을 지원하고 패키지도 되어 있기 때문에 소스 컴파일 등의 부담이 없어졌다.
+설치 luajit및 lua-language-server 그리고 neovim관련 패키지 설치 아래의 경우 nvim(neovim) 설치시 lfs.so,penlight등이 기본 포함하게 된다. (추가 설치 불필요) apk add --no-cache luajit luajit-dev lua-language-server ldoc apk add --no-cache neovim neovim-doc nvim-treesitter \ tree-sitter tree-sitter-cli tree-sitter-lua tree-sitter-bash \ tree-sitter-c tree-sitter-markdown tree-sitter-vimdoc 설정 ~/.config/nvim/init.lua에 다음 설정을 추가 my_project_path는 개별 모듈을 추가하는 경우이다. workspace의 library 범위가 크면 부하가 커지므로 적당히 조절해 주어야 nvim에서 무리가 없다. 아래 주석 표시된 부분을 주의해서 확인하고 자신에게 맞는 환경을 설정한다. 그리고 과거 sumneko라는 식으로 설정했는데 현재 lspconfig.lua_ls.setup으로 바뀌었다. -- Now set capabilities on your LSP servers local lspconfig = require'lspconfig' local my_project_path = os.getenv('HOME') .. '/.local/lib/lua' print(my_project_path) lspconfig.lua_ls.setup { --capabilities = capabilities, root_dir = lspconfig.util.root_pattern(&#34;.git&#34;, &#34;.luarc.json&#34;, &#34;.luarc.js&#34;), settings = { Lua = { runtime = { version = 'Luajit', path = vim.split(package.path, &#34;;&#34;), }, diagnostics = { globals = {'vim'}, update_in_insert = false, }, workspace = { library = { --// 기본 vim 런타임 환경 모듈 추가 [vim.env.VIMRUNTIME] = true, --// 모든 vim의 런타임 환경 모듈 추가 --[vim.api.nvim_get_runtime_file(&#34;&#34;, true)] = true, --// my project 모듈 추가 [vim.fn.expand(my_project_path)] = true, }, --// 제3의 모듈 제외 checkThirdParty = false, }, telemetry = { enable = false, }, }, }, } 참고 lua-language-server - Getting Started https://github.com/sumneko/lua-language-server/wiki/Getting-Started#command-line "><meta property="og:locale" content="en"><meta property="og:type" content="article"><meta property="article:section" content="posts"><meta property="article:published_time" content="2025-07-27T06:26:19+09:00"><meta property="article:modified_time" content="2025-07-27T06:26:19+09:00"><meta property="article:tag" content="Luajit"><meta property="article:tag" content="Lua"><meta property="article:tag" content="Alpine"><meta property="article:tag" content="Nvim"><meta property="article:tag" content="Lsp"><meta property="article:tag" content="Lua-Language-Server"><meta property="og:image" content="https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E"><meta name=twitter:title content="Luajit - Nvim Lsp Config"><meta name=twitter:description content="소개
+리눅스 환경(Alpine Linux)에서 lua-language-server 설치하고 nvim에서 설정 및 활용하는 방법을 정리해 본다.
+alpine 3.2x 기준으로 설명한다. 과거 alpine 버전들은 lua-language-server가 없거나 nvim의 버전이 낮아 플러그인 지원에 문제가 있었다. 현재 시점을 기준으로 모두 적절한 버전을 지원하고 패키지도 되어 있기 때문에 소스 컴파일 등의 부담이 없어졌다.
+설치
+
+luajit및 lua-language-server 그리고 neovim관련 패키지 설치
+아래의 경우 nvim(neovim) 설치시 lfs.so,penlight등이 기본 포함하게 된다. (추가 설치 불필요)
+
+apk add --no-cache luajit luajit-dev lua-language-server ldoc
+apk add --no-cache neovim neovim-doc nvim-treesitter \
+        tree-sitter tree-sitter-cli tree-sitter-lua tree-sitter-bash \
+        tree-sitter-c tree-sitter-markdown tree-sitter-vimdoc
+설정
+
+~/.config/nvim/init.lua에 다음 설정을 추가
+my_project_path는 개별 모듈을 추가하는 경우이다.
+workspace의 library 범위가 크면 부하가 커지므로 적당히 조절해 주어야 nvim에서 무리가 없다.
+아래 주석 표시된 부분을 주의해서 확인하고 자신에게 맞는 환경을 설정한다.
+그리고 과거 sumneko라는 식으로 설정했는데 현재 lspconfig.lua_ls.setup으로 바뀌었다.
+
+-- Now set capabilities on your LSP servers
+local lspconfig = require'lspconfig'
+local my_project_path = os.getenv('HOME') .. '/.local/lib/lua'
+print(my_project_path)
+lspconfig.lua_ls.setup {
+    --capabilities = capabilities,
+	root_dir = lspconfig.util.root_pattern(&#34;.git&#34;, &#34;.luarc.json&#34;, &#34;.luarc.js&#34;),
+	settings = {
+		Lua = {
+			runtime = {
+				version = 'Luajit',
+				path = vim.split(package.path, &#34;;&#34;),
+			},
+			diagnostics = {
+				globals = {'vim'},
+				update_in_insert = false,
+			},
+			workspace = {
+				library = {
+                    --// 기본 vim 런타임 환경 모듈 추가
+					[vim.env.VIMRUNTIME] = true,
+                    --// 모든 vim의 런타임 환경 모듈 추가
+					--[vim.api.nvim_get_runtime_file(&#34;&#34;, true)] = true,
+                    --// my project 모듈 추가
+					[vim.fn.expand(my_project_path)] = true,
+				},
+                --// 제3의 모듈 제외
+				checkThirdParty = false,
+			},
+			telemetry = {
+				enable = false,
+			},
+		},
+	},
+}
+참고
+
+lua-language-server - Getting Started
+
+https://github.com/sumneko/lua-language-server/wiki/Getting-Started#command-line
+
+
+"><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://neosolaris.github.io/posts/"},{"@type":"ListItem","position":2,"name":"Luajit - Nvim Lsp Config","item":"https://neosolaris.github.io/posts/luajit-nvim-lspconfig/"}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"Luajit - Nvim Lsp Config","name":"Luajit - Nvim Lsp Config","description":"소개 리눅스 환경(Alpine Linux)에서 lua-language-server 설치하고 nvim에서 설정 및 활용하는 방법을 정리해 본다. alpine 3.2x 기준으로 설명한다. 과거 alpine 버전들은 lua-language-server가 없거나 nvim의 버전이 낮아 플러그인 지원에 문제가 있었다. 현재 시점을 기준으로 모두 적절한 버전을 지원하고 패키지도 되어 있기 때문에 소스 컴파일 등의 부담이 없어졌다.\n설치 luajit및 lua-language-server 그리고 neovim관련 패키지 설치 아래의 경우 nvim(neovim) 설치시 lfs.so,penlight등이 기본 포함하게 된다. (추가 설치 불필요) apk add --no-cache luajit luajit-dev lua-language-server ldoc apk add --no-cache neovim neovim-doc nvim-treesitter \\ tree-sitter tree-sitter-cli tree-sitter-lua tree-sitter-bash \\ tree-sitter-c tree-sitter-markdown tree-sitter-vimdoc 설정 ~/.config/nvim/init.lua에 다음 설정을 추가 my_project_path는 개별 모듈을 추가하는 경우이다. workspace의 library 범위가 크면 부하가 커지므로 적당히 조절해 주어야 nvim에서 무리가 없다. 아래 주석 표시된 부분을 주의해서 확인하고 자신에게 맞는 환경을 설정한다. 그리고 과거 sumneko라는 식으로 설정했는데 현재 lspconfig.lua_ls.setup으로 바뀌었다. -- Now set capabilities on your LSP servers local lspconfig = require\u0026#39;lspconfig\u0026#39; local my_project_path = os.getenv(\u0026#39;HOME\u0026#39;) .. \u0026#39;/.local/lib/lua\u0026#39; print(my_project_path) lspconfig.lua_ls.setup { --capabilities = capabilities, root_dir = lspconfig.util.root_pattern(\u0026#34;.git\u0026#34;, \u0026#34;.luarc.json\u0026#34;, \u0026#34;.luarc.js\u0026#34;), settings = { Lua = { runtime = { version = \u0026#39;Luajit\u0026#39;, path = vim.split(package.path, \u0026#34;;\u0026#34;), }, diagnostics = { globals = {\u0026#39;vim\u0026#39;}, update_in_insert = false, }, workspace = { library = { --// 기본 vim 런타임 환경 모듈 추가 [vim.env.VIMRUNTIME] = true, --// 모든 vim의 런타임 환경 모듈 추가 --[vim.api.nvim_get_runtime_file(\u0026#34;\u0026#34;, true)] = true, --// my project 모듈 추가 [vim.fn.expand(my_project_path)] = true, }, --// 제3의 모듈 제외 checkThirdParty = false, }, telemetry = { enable = false, }, }, }, } 참고 lua-language-server - Getting Started https://github.com/sumneko/lua-language-server/wiki/Getting-Started#command-line ","keywords":["luajit","lua","alpine","nvim","lsp","lua-language-server"],"articleBody":"소개 리눅스 환경(Alpine Linux)에서 lua-language-server 설치하고 nvim에서 설정 및 활용하는 방법을 정리해 본다. alpine 3.2x 기준으로 설명한다. 과거 alpine 버전들은 lua-language-server가 없거나 nvim의 버전이 낮아 플러그인 지원에 문제가 있었다. 현재 시점을 기준으로 모두 적절한 버전을 지원하고 패키지도 되어 있기 때문에 소스 컴파일 등의 부담이 없어졌다.\n설치 luajit및 lua-language-server 그리고 neovim관련 패키지 설치 아래의 경우 nvim(neovim) 설치시 lfs.so,penlight등이 기본 포함하게 된다. (추가 설치 불필요) apk add --no-cache luajit luajit-dev lua-language-server ldoc apk add --no-cache neovim neovim-doc nvim-treesitter \\ tree-sitter tree-sitter-cli tree-sitter-lua tree-sitter-bash \\ tree-sitter-c tree-sitter-markdown tree-sitter-vimdoc 설정 ~/.config/nvim/init.lua에 다음 설정을 추가 my_project_path는 개별 모듈을 추가하는 경우이다. workspace의 library 범위가 크면 부하가 커지므로 적당히 조절해 주어야 nvim에서 무리가 없다. 아래 주석 표시된 부분을 주의해서 확인하고 자신에게 맞는 환경을 설정한다. 그리고 과거 sumneko라는 식으로 설정했는데 현재 lspconfig.lua_ls.setup으로 바뀌었다. -- Now set capabilities on your LSP servers local lspconfig = require'lspconfig' local my_project_path = os.getenv('HOME') .. '/.local/lib/lua' print(my_project_path) lspconfig.lua_ls.setup { --capabilities = capabilities, root_dir = lspconfig.util.root_pattern(\".git\", \".luarc.json\", \".luarc.js\"), settings = { Lua = { runtime = { version = 'Luajit', path = vim.split(package.path, \";\"), }, diagnostics = { globals = {'vim'}, update_in_insert = false, }, workspace = { library = { --// 기본 vim 런타임 환경 모듈 추가 [vim.env.VIMRUNTIME] = true, --// 모든 vim의 런타임 환경 모듈 추가 --[vim.api.nvim_get_runtime_file(\"\", true)] = true, --// my project 모듈 추가 [vim.fn.expand(my_project_path)] = true, }, --// 제3의 모듈 제외 checkThirdParty = false, }, telemetry = { enable = false, }, }, }, } 참고 lua-language-server - Getting Started https://github.com/sumneko/lua-language-server/wiki/Getting-Started#command-line ","wordCount":"241","inLanguage":"en","image":"https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E","datePublished":"2025-07-27T06:26:19+09:00","dateModified":"2025-07-27T06:26:19+09:00","author":{"@type":"Person","name":"Me"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://neosolaris.github.io/posts/luajit-nvim-lspconfig/"},"publisher":{"@type":"Organization","name":"Borisu Wiki Home","logo":{"@type":"ImageObject","url":"https://neosolaris.github.io/favicon.ico"}}}</script></head><body id=top><script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add("dark"):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove("dark"):window.matchMedia("(prefers-color-scheme: dark)").matches&&document.body.classList.add("dark")</script><header class=header><nav class=nav><div class=logo><a href=https://neosolaris.github.io/ accesskey=h title="Home (Alt + H)"><img src=https://neosolaris.github.io/apple-touch-icon.png alt aria-label=logo height=35>Home</a><div class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)" aria-label="Toggle theme"><svg id="moon" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></div></div><ul id=menu><li><a href=https://neosolaris.github.io/archive/ title="📜 Archive"><span>📜 Archive</span></a></li><li><a href=https://neosolaris.github.io/categories/ title="🏷️ Categories"><span>🏷️ Categories</span></a></li><li><a href=https://neosolaris.github.io/posts/windex title="📇 Index"><span>📇 Index</span></a></li><li><a href=https://neosolaris.github.io/search/ title="🔍 Search (Alt + /)" accesskey=/><span>🔍 Search</span></a></li><li><a href=https://neosolaris.github.io/about/ title="👨‍💻 About"><span>👨‍💻 About</span></a></li></ul></nav></header><main class=main><article class=post-single><header class=post-header><div class=breadcrumbs><a href=https://neosolaris.github.io/>Home</a>&nbsp;»&nbsp;<a href=https://neosolaris.github.io/posts/>Posts</a></div><h1 class="post-title entry-hint-parent">Luajit - Nvim Lsp Config</h1><div class=post-meta><span title='2025-07-27 06:26:19 +0900 KST'>2025-07-27</span>&nbsp;·&nbsp;241 words</div></header><div class=toc><details><summary accesskey=c title="(Alt + C)"><span class=details>Table of Contents</span></summary><div class=inner><nav id=TableOfContents><ul><li><a href=#소개>소개</a></li><li><a href=#설치>설치</a></li><li><a href=#설정>설정</a></li><li><a href=#참고>참고</a></li></ul></nav></div></details></div><div class=post-content><h2 id=소개>소개<a hidden class=anchor aria-hidden=true href=#소개>#</a></h2><p>리눅스 환경(Alpine Linux)에서 lua-language-server 설치하고 nvim에서 설정 및 활용하는 방법을 정리해 본다.
+alpine 3.2x 기준으로 설명한다. 과거 alpine 버전들은 lua-language-server가 없거나 nvim의 버전이 낮아 플러그인 지원에 문제가 있었다. 현재 시점을 기준으로 모두 적절한 버전을 지원하고 패키지도 되어 있기 때문에 소스 컴파일 등의 부담이 없어졌다.</p><h2 id=설치>설치<a hidden class=anchor aria-hidden=true href=#설치>#</a></h2><ul><li>luajit및 lua-language-server 그리고 neovim관련 패키지 설치</li><li>아래의 경우 nvim(neovim) 설치시 <code>lfs.so</code>,<code>penlight</code>등이 기본 포함하게 된다. (추가 설치 불필요)</li></ul><div class=highlight><pre tabindex=0 class=chroma><code class=language-sh data-lang=sh><span class=line><span class=cl>apk add --no-cache luajit luajit-dev lua-language-server ldoc
+</span></span><span class=line><span class=cl>apk add --no-cache neovim neovim-doc nvim-treesitter <span class=se>\
+</span></span></span><span class=line><span class=cl><span class=se></span>        tree-sitter tree-sitter-cli tree-sitter-lua tree-sitter-bash <span class=se>\
+</span></span></span><span class=line><span class=cl><span class=se></span>        tree-sitter-c tree-sitter-markdown tree-sitter-vimdoc
+</span></span></code></pre></div><h2 id=설정>설정<a hidden class=anchor aria-hidden=true href=#설정>#</a></h2><ul><li><code>~/.config/nvim/init.lua</code>에 다음 설정을 추가</li><li><code>my_project_path</code>는 개별 모듈을 추가하는 경우이다.</li><li><code>workspace</code>의 library 범위가 크면 부하가 커지므로 적당히 조절해 주어야 nvim에서 무리가 없다.</li><li>아래 주석 표시된 부분을 주의해서 확인하고 자신에게 맞는 환경을 설정한다.</li><li>그리고 과거 <code>sumneko</code>라는 식으로 설정했는데 현재 <code>lspconfig.lua_ls.setup</code>으로 바뀌었다.</li></ul><div class=highlight><pre tabindex=0 class=chroma><code class=language-lua data-lang=lua><span class=line><span class=cl><span class=c1>-- Now set capabilities on your LSP servers</span>
+</span></span><span class=line><span class=cl><span class=kd>local</span> <span class=n>lspconfig</span> <span class=o>=</span> <span class=n>require</span><span class=s1>&#39;lspconfig&#39;</span>
+</span></span><span class=line><span class=cl><span class=kd>local</span> <span class=n>my_project_path</span> <span class=o>=</span> <span class=n>os.getenv</span><span class=p>(</span><span class=s1>&#39;HOME&#39;</span><span class=p>)</span> <span class=o>..</span> <span class=s1>&#39;/.local/lib/lua&#39;</span>
+</span></span><span class=line><span class=cl><span class=n>print</span><span class=p>(</span><span class=n>my_project_path</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=n>lspconfig.lua_ls</span><span class=p>.</span><span class=n>setup</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=c1>--capabilities = capabilities,</span>
+</span></span><span class=line><span class=cl>	<span class=n>root_dir</span> <span class=o>=</span> <span class=n>lspconfig.util</span><span class=p>.</span><span class=n>root_pattern</span><span class=p>(</span><span class=s2>&#34;.git&#34;</span><span class=p>,</span> <span class=s2>&#34;.luarc.json&#34;</span><span class=p>,</span> <span class=s2>&#34;.luarc.js&#34;</span><span class=p>),</span>
+</span></span><span class=line><span class=cl>	<span class=n>settings</span> <span class=o>=</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>		<span class=n>Lua</span> <span class=o>=</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>			<span class=n>runtime</span> <span class=o>=</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>				<span class=n>version</span> <span class=o>=</span> <span class=s1>&#39;Luajit&#39;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>				<span class=n>path</span> <span class=o>=</span> <span class=n>vim.split</span><span class=p>(</span><span class=n>package.path</span><span class=p>,</span> <span class=s2>&#34;;&#34;</span><span class=p>),</span>
+</span></span><span class=line><span class=cl>			<span class=p>},</span>
+</span></span><span class=line><span class=cl>			<span class=n>diagnostics</span> <span class=o>=</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>				<span class=n>globals</span> <span class=o>=</span> <span class=p>{</span><span class=s1>&#39;vim&#39;</span><span class=p>},</span>
+</span></span><span class=line><span class=cl>				<span class=n>update_in_insert</span> <span class=o>=</span> <span class=kc>false</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>			<span class=p>},</span>
+</span></span><span class=line><span class=cl>			<span class=n>workspace</span> <span class=o>=</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>				<span class=n>library</span> <span class=o>=</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>                    <span class=c1>--// 기본 vim 런타임 환경 모듈 추가</span>
+</span></span><span class=line><span class=cl>					<span class=p>[</span><span class=n>vim.env</span><span class=p>.</span><span class=n>VIMRUNTIME</span><span class=p>]</span> <span class=o>=</span> <span class=kc>true</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>                    <span class=c1>--// 모든 vim의 런타임 환경 모듈 추가</span>
+</span></span><span class=line><span class=cl>					<span class=c1>--[vim.api.nvim_get_runtime_file(&#34;&#34;, true)] = true,</span>
+</span></span><span class=line><span class=cl>                    <span class=c1>--// my project 모듈 추가</span>
+</span></span><span class=line><span class=cl>					<span class=p>[</span><span class=n>vim.fn</span><span class=p>.</span><span class=n>expand</span><span class=p>(</span><span class=n>my_project_path</span><span class=p>)]</span> <span class=o>=</span> <span class=kc>true</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>				<span class=p>},</span>
+</span></span><span class=line><span class=cl>                <span class=c1>--// 제3의 모듈 제외</span>
+</span></span><span class=line><span class=cl>				<span class=n>checkThirdParty</span> <span class=o>=</span> <span class=kc>false</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>			<span class=p>},</span>
+</span></span><span class=line><span class=cl>			<span class=n>telemetry</span> <span class=o>=</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>				<span class=n>enable</span> <span class=o>=</span> <span class=kc>false</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>			<span class=p>},</span>
+</span></span><span class=line><span class=cl>		<span class=p>},</span>
+</span></span><span class=line><span class=cl>	<span class=p>},</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></div><h2 id=참고>참고<a hidden class=anchor aria-hidden=true href=#참고>#</a></h2><ul><li>lua-language-server - Getting Started<ul><li><a href=https://github.com/sumneko/lua-language-server/wiki/Getting-Started#command-line>https://github.com/sumneko/lua-language-server/wiki/Getting-Started#command-line</a></li></ul></li></ul></div><footer class=post-footer><ul class=post-tags><li><a href=https://neosolaris.github.io/tags/luajit/>Luajit</a></li><li><a href=https://neosolaris.github.io/tags/lua/>Lua</a></li><li><a href=https://neosolaris.github.io/tags/alpine/>Alpine</a></li><li><a href=https://neosolaris.github.io/tags/nvim/>Nvim</a></li><li><a href=https://neosolaris.github.io/tags/lsp/>Lsp</a></li><li><a href=https://neosolaris.github.io/tags/lua-language-server/>Lua-Language-Server</a></li></ul><nav class=paginav><a class=next href=https://neosolaris.github.io/posts/lua_laze_loading/><span class=title>Next »</span><br><span>lua - Lazy Loading 지연 로딩</span></a></nav></footer></article></main><footer class=footer><span>&copy; 2025 <a href=https://neosolaris.github.io/>Borisu Wiki Home</a></span> ·
+<span>Powered by
+<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
+        <a href=https://github.com/adityatelange/hugo-PaperMod/ rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg>
+</a><script>let menu=document.getElementById("menu");menu&&(menu.scrollLeft=localStorage.getItem("menu-scroll-position"),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}),document.querySelectorAll('a[href^="#"]').forEach(e=>{e.addEventListener("click",function(e){e.preventDefault();var t=this.getAttribute("href").substr(1);window.matchMedia("(prefers-reduced-motion: reduce)").matches?document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView({behavior:"smooth"}),t==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${t}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove("dark"),localStorage.setItem("pref-theme","light")):(document.body.classList.add("dark"),localStorage.setItem("pref-theme","dark"))})</script></body></html>
