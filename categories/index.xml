@@ -11,8 +11,15 @@
     </image>
     <generator>Hugo -- 0.147.2</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 27 Jul 2025 07:04:32 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 28 Jul 2025 05:57:07 +0900</lastBuildDate>
     <atom:link href="https://neosolaris.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Music</title>
+      <link>https://neosolaris.github.io/categories/music/</link>
+      <pubDate>Mon, 28 Jul 2025 05:57:07 +0900</pubDate>
+      <guid>https://neosolaris.github.io/categories/music/</guid>
+      <description></description>
+    </item>
     <item>
       <title>인물</title>
       <link>https://neosolaris.github.io/categories/%EC%9D%B8%EB%AC%BC/</link>
@@ -81,13 +88,6 @@
       <link>https://neosolaris.github.io/categories/lua/</link>
       <pubDate>Thu, 26 Jun 2025 16:49:56 +0900</pubDate>
       <guid>https://neosolaris.github.io/categories/lua/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Music</title>
-      <link>https://neosolaris.github.io/categories/music/</link>
-      <pubDate>Thu, 26 Jun 2025 00:11:28 +0900</pubDate>
-      <guid>https://neosolaris.github.io/categories/music/</guid>
       <description></description>
     </item>
     <item>
