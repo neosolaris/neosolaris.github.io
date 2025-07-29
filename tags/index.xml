@@ -11,8 +11,36 @@
     </image>
     <generator>Hugo -- 0.147.2</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 28 Jul 2025 05:57:07 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 29 Jul 2025 07:47:25 +0900</lastBuildDate>
     <atom:link href="https://neosolaris.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Function</title>
+      <link>https://neosolaris.github.io/tags/function/</link>
+      <pubDate>Tue, 29 Jul 2025 06:48:50 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/function/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Lua</title>
+      <link>https://neosolaris.github.io/tags/lua/</link>
+      <pubDate>Tue, 29 Jul 2025 06:48:50 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/lua/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Mode</title>
+      <link>https://neosolaris.github.io/tags/mode/</link>
+      <pubDate>Tue, 29 Jul 2025 06:48:50 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/mode/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Nvim</title>
+      <link>https://neosolaris.github.io/tags/nvim/</link>
+      <pubDate>Tue, 29 Jul 2025 06:48:50 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/nvim/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Guitar</title>
       <link>https://neosolaris.github.io/tags/guitar/</link>
@@ -98,13 +126,6 @@
       <description></description>
     </item>
     <item>
-      <title>Lua</title>
-      <link>https://neosolaris.github.io/tags/lua/</link>
-      <pubDate>Sun, 27 Jul 2025 06:26:19 +0900</pubDate>
-      <guid>https://neosolaris.github.io/tags/lua/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Lua-Language-Server</title>
       <link>https://neosolaris.github.io/tags/lua-language-server/</link>
       <pubDate>Sun, 27 Jul 2025 06:26:19 +0900</pubDate>
@@ -116,13 +137,6 @@
       <link>https://neosolaris.github.io/tags/luajit/</link>
       <pubDate>Sun, 27 Jul 2025 06:26:19 +0900</pubDate>
       <guid>https://neosolaris.github.io/tags/luajit/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Nvim</title>
-      <link>https://neosolaris.github.io/tags/nvim/</link>
-      <pubDate>Sun, 27 Jul 2025 06:26:19 +0900</pubDate>
-      <guid>https://neosolaris.github.io/tags/nvim/</guid>
       <description></description>
     </item>
     <item>

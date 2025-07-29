@@ -11,8 +11,15 @@
     </image>
     <generator>Hugo -- 0.147.2</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 28 Jul 2025 05:57:07 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 29 Jul 2025 07:47:25 +0900</lastBuildDate>
     <atom:link href="https://neosolaris.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Programming</title>
+      <link>https://neosolaris.github.io/categories/programming/</link>
+      <pubDate>Tue, 29 Jul 2025 06:48:50 +0900</pubDate>
+      <guid>https://neosolaris.github.io/categories/programming/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Music</title>
       <link>https://neosolaris.github.io/categories/music/</link>
@@ -32,13 +39,6 @@
       <link>https://neosolaris.github.io/categories/linux/</link>
       <pubDate>Sun, 27 Jul 2025 06:26:19 +0900</pubDate>
       <guid>https://neosolaris.github.io/categories/linux/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Programming</title>
-      <link>https://neosolaris.github.io/categories/programming/</link>
-      <pubDate>Sun, 27 Jul 2025 06:26:19 +0900</pubDate>
-      <guid>https://neosolaris.github.io/categories/programming/</guid>
       <description></description>
     </item>
     <item>
