@@ -8211,6 +8211,25 @@ extension &amp;gt; hide top bar 검색 후 설치(Click to change: ON)&lt;/li&gt
     </item>
     <item>
       <title></title>
+      <link>https://neosolaris.github.io/posts/lpeg/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://neosolaris.github.io/posts/lpeg/</guid>
+      <description>&lt;h2 id=&#34;lpeg-소개&#34;&gt;LPeg 소개&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;LPeg&lt;/strong&gt;는 Lua 프로그래밍 언어를 위한 패턴 매칭 라이브러리다. LPeg는 PEG(Parsing Expression Grammar) 기반으로 작동하며, 문자열을 분석하고 조작하는 데 매우 유용다. LPeg는 정규 표현식보다 더 강력하고 유연한 패턴 매칭 기능을 제공한다.&lt;/p&gt;
+&lt;p&gt;LPeg의 주요 특징은 다음과 같다:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;유연한 패턴 정의&lt;/strong&gt;: 복잡한 패턴을 쉽게 정의할 수 있다.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;재귀적 패턴&lt;/strong&gt;: 재귀를 사용하여 중첩된 구조를 처리할 수 있다.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;성능&lt;/strong&gt;: LPeg는 매우 빠르며, 대량의 데이터를 처리하는 데 적합하다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;설치&#34;&gt;설치&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;apk add lua5.1-lpeg
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;lpeg-사용-예제&#34;&gt;LPeg 사용 예제&lt;/h2&gt;
+&lt;h3 id=&#34;예제-숫자와-연산자-파싱&#34;&gt;예제: 숫자와 연산자 파싱&lt;/h3&gt;
+&lt;p&gt;이 예제에서는 간단한 수식(예: &lt;code&gt;3 + 5 * 2&lt;/code&gt;)을 파싱하는 패턴을 정의한다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title></title>
       <link>https://neosolaris.github.io/posts/modes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://neosolaris.github.io/posts/modes/</guid>
