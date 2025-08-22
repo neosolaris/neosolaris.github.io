@@ -11,7 +11,7 @@
     </image>
     <generator>Hugo -- 0.147.2</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 25 Jun 2025 13:57:58 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 22 Aug 2025 08:17:18 +0900</lastBuildDate>
     <atom:link href="https://neosolaris.github.io/tags/docker/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Windows WSL Alpine Linux - Docker - Git 설치 및 환경</title>
@@ -241,6 +241,64 @@ Wed Sep 27 07:24:31 UTC 2023 custom event
 &lt;li&gt;결론적으로 이것에 대한 활용은 개발환경이나 큰규모의 실행환경보다는 작고 가벼운 환경에서 효율적인 운용이 필요할 때 사용하면 좋을 것 같다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;How to Use th Busybox Docker Official Image
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.docker.com/blog/use-cases-and-tips-for-using-the-busybox-docker-official-image/&#34;&gt;https://www.docker.com/blog/use-cases-and-tips-for-using-the-busybox-docker-official-image/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Using the BusyBox Docker Image for Building Applications : A Complete Guide
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.sohamkamani.com/docker/busybox-guide/&#34;&gt;https://www.sohamkamani.com/docker/busybox-guide/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>Docker-Busybox</title>
+      <link>https://neosolaris.github.io/posts/docker_busybox/</link>
+      <pubDate>Mon, 21 Nov 2022 14:53:47 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/docker_busybox/</guid>
+      <description>&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;../busybox&#34;&gt;busybox&lt;/a&gt; 는 작고 가볍고 빠른 POSIX 표준 유틸 모음이다.&lt;/li&gt;
+&lt;li&gt;docker에서 여러 가지로 응용해서 사용할 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;응용&#34;&gt;응용&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;임베디드 시스템에 빌드하기&lt;/li&gt;
+&lt;li&gt;Kubernates에 init container로 사용하기&lt;/li&gt;
+&lt;li&gt;HTTP 웹서버로 돌리기&lt;/li&gt;
+&lt;li&gt;가상컨테이너 볼륨서버(스토리지)로 사용하기&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;기본-사용례&#34;&gt;기본 사용례&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;busybox 최신버전 이미지 받고 실행&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; docker run -it --rm busybox
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;busybox + myapp : myapp은 리눅스환경에서 정적컴파일한 바이너리&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; cat Dockerfile  &lt;span class=&#34;c1&#34;&gt;# Write Dockerfile&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;FROM busybox
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;COPY ./my-static-binary /my-static-binary
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;CMD [&amp;#34;/my-static-binary&amp;#34;]
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; docker build -t busybox-myapp .  &lt;span class=&#34;c1&#34;&gt;# Build Image&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; docker run -t --rm busybox-myapp  &lt;span class=&#34;c1&#34;&gt;# Run Container&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;busybox + httpserver : 웹서버동작(httpserver는 static compile binary)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; cat Dockerfile  &lt;span class=&#34;c1&#34;&gt;# Write Dockerfile&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;FROM busybox
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;COPY ./httpserver /home/
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;CMD /home/httpserver
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; docker build -t go-server .  &lt;span class=&#34;c1&#34;&gt;# Build Image&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; docker run -p 8080:8080 --rm -it go-server &lt;span class=&#34;c1&#34;&gt;# Run Container&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; curl -v http://localhost:8080/  &lt;span class=&#34;c1&#34;&gt;# Test&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;How to Use th Busybox Docker Official Image
 &lt;ul&gt;

@@ -11,8 +11,29 @@
     </image>
     <generator>Hugo -- 0.147.2</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 29 Jul 2025 07:47:25 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 22 Aug 2025 08:17:18 +0900</lastBuildDate>
     <atom:link href="https://neosolaris.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Busybox</title>
+      <link>https://neosolaris.github.io/tags/busybox/</link>
+      <pubDate>Fri, 22 Aug 2025 08:06:39 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/busybox/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tool</title>
+      <link>https://neosolaris.github.io/tags/tool/</link>
+      <pubDate>Fri, 22 Aug 2025 08:06:39 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/tool/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Unix</title>
+      <link>https://neosolaris.github.io/tags/unix/</link>
+      <pubDate>Fri, 22 Aug 2025 08:06:39 +0900</pubDate>
+      <guid>https://neosolaris.github.io/tags/unix/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Function</title>
       <link>https://neosolaris.github.io/tags/function/</link>
@@ -214,13 +235,6 @@
       <link>https://neosolaris.github.io/tags/image/</link>
       <pubDate>Thu, 17 Jul 2025 07:03:22 +0900</pubDate>
       <guid>https://neosolaris.github.io/tags/image/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Tool</title>
-      <link>https://neosolaris.github.io/tags/tool/</link>
-      <pubDate>Thu, 17 Jul 2025 07:03:22 +0900</pubDate>
-      <guid>https://neosolaris.github.io/tags/tool/</guid>
       <description></description>
     </item>
     <item>
@@ -1159,13 +1173,6 @@
       <link>https://neosolaris.github.io/tags/remove/</link>
       <pubDate>Mon, 21 Nov 2022 15:46:59 +0900</pubDate>
       <guid>https://neosolaris.github.io/tags/remove/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Busybox</title>
-      <link>https://neosolaris.github.io/tags/busybox/</link>
-      <pubDate>Mon, 21 Nov 2022 14:53:47 +0900</pubDate>
-      <guid>https://neosolaris.github.io/tags/busybox/</guid>
       <description></description>
     </item>
     <item>
