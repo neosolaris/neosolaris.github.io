@@ -121,7 +121,7 @@ $ git-crypt unlock &amp;lt;path_to_your_keyfile&amp;gt;   # 백업해둔 키파�
 &lt;/ul&gt;
 &lt;h2 id=&#34;깃허브-가입과-설정&#34;&gt;깃허브 가입과 설정&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;../https://github.com&#34;&gt;GitHub Home&lt;/a&gt; 에 가입한다.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com&#34;&gt;GitHub Home&lt;/a&gt; 에 가입한다.&lt;/li&gt;
 &lt;li&gt;새로운 저장소(Repository)를 만든다.&lt;/li&gt;
 &lt;li&gt;저장소의 주소를 확인한다.(Code 아이콘를 클릭)&lt;/li&gt;
 &lt;/ul&gt;

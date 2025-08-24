@@ -11,8 +11,53 @@
     </image>
     <generator>Hugo -- 0.147.2</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 22 Aug 2025 08:17:18 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 24 Aug 2025 08:43:51 +0900</lastBuildDate>
     <atom:link href="https://neosolaris.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Bash History Command</title>
+      <link>https://neosolaris.github.io/posts/bash_history/</link>
+      <pubDate>Sat, 23 Aug 2025 08:36:55 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/bash_history/</guid>
+      <description>&lt;h2 id=&#34;history-기본-사용법&#34;&gt;History 기본 사용법&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ &lt;span class=&#34;nb&#34;&gt;history&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# history 목록 보기&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ !!      &lt;span class=&#34;c1&#34;&gt;# 이전 명령 실행&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ !&amp;lt;번호&amp;gt; &lt;span class=&#34;c1&#34;&gt;# 해당 번호 명령 실행&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;bash-히스토리-활용법&#34;&gt;Bash 히스토리 활용법&lt;/h2&gt;
+&lt;h3 id=&#34;1-문자열로-최근-명령어-재실행&#34;&gt;1. &lt;code&gt;!문자열&lt;/code&gt;로 최근 명령어 재실행&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;!ls&lt;/code&gt; → 최근에 실행한 &lt;code&gt;ls&lt;/code&gt;로 시작하는 명령어를 재실행&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;!git&lt;/code&gt; → 최근에 실행한 &lt;code&gt;git&lt;/code&gt;으로 시작하는 명령어 실행&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;2-로-바로-이전-명령어-재실행&#34;&gt;2. &lt;code&gt;!!&lt;/code&gt;로 바로 이전 명령어 재실행&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;!!&lt;/code&gt; → 직전에 실행한 명령어를 다시 실행&lt;/li&gt;
+&lt;li&gt;예: &lt;code&gt;sudo !!&lt;/code&gt; → 직전 명령어를 &lt;code&gt;sudo&lt;/code&gt;로 실행 (권한 부족 시 유용)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;3-history--grep-키워드로-검색&#34;&gt;3. &lt;code&gt;history | grep 키워드&lt;/code&gt;로 검색&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;history&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; grep ssh
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;원하는 명령어를 찾고 &lt;code&gt;!번호&lt;/code&gt;로 실행&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;4-ctrl--r로-히스토리-검색-가장-강력한-기능&#34;&gt;4. &lt;code&gt;Ctrl + r&lt;/code&gt;로 히스토리 검색 (가장 강력한 기능!)&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Ctrl + r&lt;/code&gt; 누르고 키워드 입력 → 실시간으로 과거 명령어 검색&lt;/li&gt;
+&lt;li&gt;원하는 명령어가 나오면 &lt;code&gt;Enter&lt;/code&gt;로 실행&lt;/li&gt;
+&lt;li&gt;예: &lt;code&gt;Ctrl + r&lt;/code&gt; → &lt;code&gt;docker&lt;/code&gt; 입력 → &lt;code&gt;docker ps&lt;/code&gt; 명령어 자동 완성&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;5-fc-명령어로-히스토리-편집-후-실행&#34;&gt;5. &lt;code&gt;fc&lt;/code&gt; 명령어로 히스토리 편집 후 실행&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;fc&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;가장 최근 명령어를 편집기로 열고 수정 후 실행&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;fc -s&lt;/code&gt;로 특정 명령어를 바로 실행할 수도 있음&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;6-bashrc에-alias-등록해서-자주-쓰는-명령어-단축&#34;&gt;6. &lt;code&gt;.bashrc&lt;/code&gt;에 alias 등록해서 자주 쓰는 명령어 단축&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;alias&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;gs&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;git status&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;alias&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;ll&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;ls -alF&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;자주 쓰는 명령어를 짧게 등록해두면 히스토리보다 빠르다&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;** 팁**: &lt;code&gt;HISTCONTROL=ignoredups:erasedups&lt;/code&gt;를 &lt;code&gt;.bashrc&lt;/code&gt;에 설정하면 중복된 명령어가 히스토리에 남지 않아서 검색이 훨씬 깔끔해진다.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Alpine Linux Upgrade</title>
       <link>https://neosolaris.github.io/posts/alpine_upgrade/</link>
@@ -485,11 +530,11 @@
 &lt;/ul&gt;
 &lt;h2 id=&#34;reference&#34;&gt;REFERENCE&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;../https://github.com/Riey/kime&#34;&gt;Github Kime&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../https://shanepark.tistory.com/318&#34;&gt;설치&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../https://www.linuxcapable.com/how-to-install-wine-on-debian-11-bullseye&#34;&gt;설치2&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../https://dawoum.tistory.com/88&#34;&gt;설치3&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../http://no1linux.org/board_WEnl84/39530&#34;&gt;설치4&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/Riey/kime&#34;&gt;Github Kime&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://shanepark.tistory.com/318&#34;&gt;설치&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.linuxcapable.com/how-to-install-wine-on-debian-11-bullseye&#34;&gt;설치2&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://dawoum.tistory.com/88&#34;&gt;설치3&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://no1linux.org/board_WEnl84/39530&#34;&gt;설치4&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
     <item>
@@ -514,7 +559,7 @@
 &lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;내용이 더 있는데 아래 참고해서 정리&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../https://linuxhint.com/tree-command-in-ubuntu/&#34;&gt;Waht is Tree Command in Ubuntu&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://linuxhint.com/tree-command-in-ubuntu/&#34;&gt;Waht is Tree Command in Ubuntu&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
     <item>

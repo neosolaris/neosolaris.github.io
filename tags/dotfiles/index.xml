@@ -20,7 +20,7 @@
       <guid>https://neosolaris.github.io/posts/yadm/</guid>
       <description>&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;dotfiles를 백업 및 관리해 주는 툴은 많이 있다. &lt;a href=&#34;../https://dotfiles.github.io/utilities/&#34;&gt;참조&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;dotfiles를 백업 및 관리해 주는 툴은 많이 있다. &lt;a href=&#34;https://dotfiles.github.io/utilities/&#34;&gt;참조&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;나중에 재설치하거나 다른 컴퓨터에서 이 설정들을 복원하려면 매우 번거롭다.&lt;/li&gt;
 &lt;li&gt;yadm은 그 중 git 외에 의존성이 매우 적으며, 사용하기 쉽고 편리하다.&lt;/li&gt;
 &lt;li&gt;데비안이나 우분투 사용자라면 패키지로 쉽게 설치할 수 있다.&lt;/li&gt;

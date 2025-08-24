@@ -1,0 +1,118 @@
+<!doctype html><html lang=en dir=auto><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>Hugo - Youttube URL | Borisu Wiki Home</title>
+<meta name=keywords content="hugo,youtube,url"><meta name=description content='소개
+
+hugo에서 지원되는 youtube 영상 포함 문법은 다음과 같다.
+
+
+      
+    
+
+
+문제는 브라우저에서 동영상 URL을 복사하면 Youtube-ID만 추출하여 넣어 주는 것이 무척 번거롭다.
+이를 해결하기 위해서는 다음의 세가지 방법이 있다.
+
+브라우저 주소창에서 직접 ID부분만 영역 복사하기
+브라우저의 북마클릿(Bookmarklet)을 javascript로 만들어 ID 복사하기
+복사한 URL을 입력하면 자동 추출해주는 프로그램 만들기
+
+
+
+Brave(또는 Chrome)에서 북마클릿을 이용한 유튜브 URL ID복사
+
+Brave 브라우저에서 북마크 추가
+Name: Youtube-ID-Copy
+URL: 다음 코드 입력 후 저장
+
+javascript:(function(){
+  const url = window.location.href;
+  const match = url.match(/(?:v=|youtu\.be\/)([A-Za-z0-9_\-]{11})/);
+  if(match){
+    const id = match[1];
+    navigator.clipboard.writeText(id);
+    alert("영상 ID 복사됨: " + id);
+  } else {
+    alert("영상 ID를 찾을 수 없습니다.");
+  }
+})();
+Nvim에서 복사한 URL에서 ID 추출
+
+아래 예제를 기반으로 실행 함수를 만들어도 좋다.
+
+:let url = input("YouTube URL: ")
+:let id = matchstr(url, &#39;\v(v=|youtu\.be/)([A-Za-z0-9_-]{11})&#39;)
+:execute "normal i
+      
+    
+"
+'><meta name=author content="Me"><link rel=canonical href=https://neosolaris.github.io/posts/hugo-youtube-url/><meta name=google-site-verification content="XYZabc"><meta name=yandex-verification content="XYZabc"><meta name=msvalidate.01 content="XYZabc"><link crossorigin=anonymous href=/assets/css/stylesheet.98051510d3ce4f1414ca9c506c282de4eb161c1b4f4f9d3cbaaf0173d5c84923.css integrity="sha256-mAUVENPOTxQUypxQbCgt5OsWHBtPT508uq8Bc9XISSM=" rel="preload stylesheet" as=style><link rel=icon href=https://neosolaris.github.io/favicon.ico><link rel=icon type=image/png sizes=16x16 href=https://neosolaris.github.io/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=https://neosolaris.github.io/favicon-32x32.png><link rel=apple-touch-icon href=https://neosolaris.github.io/apple-touch-icon.png><link rel=mask-icon href=https://neosolaris.github.io/safari-pinned-tab.svg><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><link rel=alternate hreflang=en href=https://neosolaris.github.io/posts/hugo-youtube-url/><noscript><style>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--code-block-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51)}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style></noscript><meta property="og:url" content="https://neosolaris.github.io/posts/hugo-youtube-url/"><meta property="og:site_name" content="Borisu Wiki Home"><meta property="og:title" content="Hugo - Youttube URL"><meta property="og:description" content='소개 hugo에서 지원되는 youtube 영상 포함 문법은 다음과 같다. 문제는 브라우저에서 동영상 URL을 복사하면 Youtube-ID만 추출하여 넣어 주는 것이 무척 번거롭다. 이를 해결하기 위해서는 다음의 세가지 방법이 있다. 브라우저 주소창에서 직접 ID부분만 영역 복사하기 브라우저의 북마클릿(Bookmarklet)을 javascript로 만들어 ID 복사하기 복사한 URL을 입력하면 자동 추출해주는 프로그램 만들기 Brave(또는 Chrome)에서 북마클릿을 이용한 유튜브 URL ID복사 Brave 브라우저에서 북마크 추가 Name: Youtube-ID-Copy URL: 다음 코드 입력 후 저장 javascript:(function(){ const url = window.location.href; const match = url.match(/(?:v=|youtu\.be\/)([A-Za-z0-9_\-]{11})/); if(match){ const id = match[1]; navigator.clipboard.writeText(id); alert("영상 ID 복사됨: " + id); } else { alert("영상 ID를 찾을 수 없습니다."); } })(); Nvim에서 복사한 URL에서 ID 추출 아래 예제를 기반으로 실행 함수를 만들어도 좋다. :let url = input("YouTube URL: ") :let id = matchstr(url, &#39;\v(v=|youtu\.be/)([A-Za-z0-9_-]{11})&#39;) :execute "normal i " '><meta property="og:locale" content="en"><meta property="og:type" content="article"><meta property="article:section" content="posts"><meta property="article:published_time" content="2025-07-27T08:35:21+09:00"><meta property="article:modified_time" content="2025-07-27T08:35:21+09:00"><meta property="article:tag" content="Hugo"><meta property="article:tag" content="Youtube"><meta property="article:tag" content="Url"><meta property="og:image" content="https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E"><meta name=twitter:title content="Hugo - Youttube URL"><meta name=twitter:description content='소개
+
+hugo에서 지원되는 youtube 영상 포함 문법은 다음과 같다.
+
+
+      
+    
+
+
+문제는 브라우저에서 동영상 URL을 복사하면 Youtube-ID만 추출하여 넣어 주는 것이 무척 번거롭다.
+이를 해결하기 위해서는 다음의 세가지 방법이 있다.
+
+브라우저 주소창에서 직접 ID부분만 영역 복사하기
+브라우저의 북마클릿(Bookmarklet)을 javascript로 만들어 ID 복사하기
+복사한 URL을 입력하면 자동 추출해주는 프로그램 만들기
+
+
+
+Brave(또는 Chrome)에서 북마클릿을 이용한 유튜브 URL ID복사
+
+Brave 브라우저에서 북마크 추가
+Name: Youtube-ID-Copy
+URL: 다음 코드 입력 후 저장
+
+javascript:(function(){
+  const url = window.location.href;
+  const match = url.match(/(?:v=|youtu\.be\/)([A-Za-z0-9_\-]{11})/);
+  if(match){
+    const id = match[1];
+    navigator.clipboard.writeText(id);
+    alert("영상 ID 복사됨: " + id);
+  } else {
+    alert("영상 ID를 찾을 수 없습니다.");
+  }
+})();
+Nvim에서 복사한 URL에서 ID 추출
+
+아래 예제를 기반으로 실행 함수를 만들어도 좋다.
+
+:let url = input("YouTube URL: ")
+:let id = matchstr(url, &#39;\v(v=|youtu\.be/)([A-Za-z0-9_-]{11})&#39;)
+:execute "normal i
+      
+    
+"
+'><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://neosolaris.github.io/posts/"},{"@type":"ListItem","position":2,"name":"Hugo - Youttube URL","item":"https://neosolaris.github.io/posts/hugo-youtube-url/"}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"Hugo - Youttube URL","name":"Hugo - Youttube URL","description":"소개 hugo에서 지원되는 youtube 영상 포함 문법은 다음과 같다. 문제는 브라우저에서 동영상 URL을 복사하면 Youtube-ID만 추출하여 넣어 주는 것이 무척 번거롭다. 이를 해결하기 위해서는 다음의 세가지 방법이 있다. 브라우저 주소창에서 직접 ID부분만 영역 복사하기 브라우저의 북마클릿(Bookmarklet)을 javascript로 만들어 ID 복사하기 복사한 URL을 입력하면 자동 추출해주는 프로그램 만들기 Brave(또는 Chrome)에서 북마클릿을 이용한 유튜브 URL ID복사 Brave 브라우저에서 북마크 추가 Name: Youtube-ID-Copy URL: 다음 코드 입력 후 저장 javascript:(function(){ const url = window.location.href; const match = url.match(/(?:v=|youtu\\.be\\/)([A-Za-z0-9_\\-]{11})/); if(match){ const id = match[1]; navigator.clipboard.writeText(id); alert(\u0026#34;영상 ID 복사됨: \u0026#34; + id); } else { alert(\u0026#34;영상 ID를 찾을 수 없습니다.\u0026#34;); } })(); Nvim에서 복사한 URL에서 ID 추출 아래 예제를 기반으로 실행 함수를 만들어도 좋다. :let url = input(\u0026#34;YouTube URL: \u0026#34;) :let id = matchstr(url, \u0026#39;\\v(v=|youtu\\.be/)([A-Za-z0-9_-]{11})\u0026#39;) :execute \u0026#34;normal i \u0026#34; ","keywords":["hugo","youtube","url"],"articleBody":"소개 hugo에서 지원되는 youtube 영상 포함 문법은 다음과 같다. 문제는 브라우저에서 동영상 URL을 복사하면 Youtube-ID만 추출하여 넣어 주는 것이 무척 번거롭다. 이를 해결하기 위해서는 다음의 세가지 방법이 있다. 브라우저 주소창에서 직접 ID부분만 영역 복사하기 브라우저의 북마클릿(Bookmarklet)을 javascript로 만들어 ID 복사하기 복사한 URL을 입력하면 자동 추출해주는 프로그램 만들기 Brave(또는 Chrome)에서 북마클릿을 이용한 유튜브 URL ID복사 Brave 브라우저에서 북마크 추가 Name: Youtube-ID-Copy URL: 다음 코드 입력 후 저장 javascript:(function(){ const url = window.location.href; const match = url.match(/(?:v=|youtu\\.be\\/)([A-Za-z0-9_\\-]{11})/); if(match){ const id = match[1]; navigator.clipboard.writeText(id); alert(\"영상 ID 복사됨: \" + id); } else { alert(\"영상 ID를 찾을 수 없습니다.\"); } })(); Nvim에서 복사한 URL에서 ID 추출 아래 예제를 기반으로 실행 함수를 만들어도 좋다. :let url = input(\"YouTube URL: \") :let id = matchstr(url, '\\v(v=|youtu\\.be/)([A-Za-z0-9_-]{11})') :execute \"normal i \" ","wordCount":"124","inLanguage":"en","image":"https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E","datePublished":"2025-07-27T08:35:21+09:00","dateModified":"2025-07-27T08:35:21+09:00","author":{"@type":"Person","name":"Me"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://neosolaris.github.io/posts/hugo-youtube-url/"},"publisher":{"@type":"Organization","name":"Borisu Wiki Home","logo":{"@type":"ImageObject","url":"https://neosolaris.github.io/favicon.ico"}}}</script></head><body id=top><script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add("dark"):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove("dark"):window.matchMedia("(prefers-color-scheme: dark)").matches&&document.body.classList.add("dark")</script><header class=header><nav class=nav><div class=logo><a href=https://neosolaris.github.io/ accesskey=h title="Home (Alt + H)"><img src=https://neosolaris.github.io/apple-touch-icon.png alt aria-label=logo height=35>Home</a><div class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)" aria-label="Toggle theme"><svg id="moon" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></div></div><ul id=menu><li><a href=https://neosolaris.github.io/archive/ title="📜 Archive"><span>📜 Archive</span></a></li><li><a href=https://neosolaris.github.io/categories/ title="🏷️ Categories"><span>🏷️ Categories</span></a></li><li><a href=https://neosolaris.github.io/posts/windex title="📇 Index"><span>📇 Index</span></a></li><li><a href=https://neosolaris.github.io/search/ title="🔍 Search (Alt + /)" accesskey=/><span>🔍 Search</span></a></li><li><a href=https://neosolaris.github.io/about/ title="👨‍💻 About"><span>👨‍💻 About</span></a></li></ul></nav></header><main class=main><article class=post-single><header class=post-header><div class=breadcrumbs><a href=https://neosolaris.github.io/>Home</a>&nbsp;»&nbsp;<a href=https://neosolaris.github.io/posts/>Posts</a></div><h1 class="post-title entry-hint-parent">Hugo - Youttube URL</h1><div class=post-meta><span title='2025-07-27 08:35:21 +0900 KST'>2025-07-27</span>&nbsp;·&nbsp;124 words</div></header><div class=toc><details><summary accesskey=c title="(Alt + C)"><span class=details>Table of Contents</span></summary><div class=inner><nav id=TableOfContents><ul><li><a href=#소개>소개</a></li><li><a href=#brave또는-chrome에서-북마클릿을-이용한-유튜브-url-id복사>Brave(또는 Chrome)에서 북마클릿을 이용한 유튜브 URL ID복사</a></li><li><a href=#nvim에서-복사한-url에서-id-추출>Nvim에서 복사한 URL에서 ID 추출</a></li></ul></nav></div></details></div><div class=post-content><h2 id=소개>소개<a hidden class=anchor aria-hidden=true href=#소개>#</a></h2><ul><li>hugo에서 지원되는 youtube 영상 포함 문법은 다음과 같다.</li></ul><div class=highlight><pre tabindex=0 class=chroma><code class=language-markdown data-lang=markdown><span class=line><span class=cl><div style=position:relative;padding-bottom:56.25%;height:0;overflow:hidden>
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading=eager referrerpolicy=strict-origin-when-cross-origin src="https://www.youtube.com/embed/Youtbue-ID?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style=position:absolute;top:0;left:0;width:100%;height:100%;border:0 title="YouTube video"></iframe>
+    </div>
+
+</span></span></code></pre></div><ul><li>문제는 브라우저에서 동영상 URL을 복사하면 Youtube-ID만 추출하여 넣어 주는 것이 무척 번거롭다.</li><li>이를 해결하기 위해서는 다음의 세가지 방법이 있다.<ol><li>브라우저 주소창에서 직접 ID부분만 영역 복사하기</li><li>브라우저의 북마클릿(Bookmarklet)을 javascript로 만들어 ID 복사하기</li><li>복사한 URL을 입력하면 자동 추출해주는 프로그램 만들기</li></ol></li></ul><h2 id=brave또는-chrome에서-북마클릿을-이용한-유튜브-url-id복사>Brave(또는 Chrome)에서 북마클릿을 이용한 유튜브 URL ID복사<a hidden class=anchor aria-hidden=true href=#brave또는-chrome에서-북마클릿을-이용한-유튜브-url-id복사>#</a></h2><ol><li>Brave 브라우저에서 북마크 추가</li><li>Name: Youtube-ID-Copy</li><li>URL: 다음 코드 입력 후 저장</li></ol><div class=highlight><pre tabindex=0 class=chroma><code class=language-javascript data-lang=javascript><span class=line><span class=cl><span class=nx>javascript</span><span class=o>:</span><span class=p>(</span><span class=kd>function</span><span class=p>(){</span>
+</span></span><span class=line><span class=cl>  <span class=kr>const</span> <span class=nx>url</span> <span class=o>=</span> <span class=nb>window</span><span class=p>.</span><span class=nx>location</span><span class=p>.</span><span class=nx>href</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=kr>const</span> <span class=nx>match</span> <span class=o>=</span> <span class=nx>url</span><span class=p>.</span><span class=nx>match</span><span class=p>(</span><span class=sr>/(?:v=|youtu\.be\/)([A-Za-z0-9_\-]{11})/</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>  <span class=k>if</span><span class=p>(</span><span class=nx>match</span><span class=p>){</span>
+</span></span><span class=line><span class=cl>    <span class=kr>const</span> <span class=nx>id</span> <span class=o>=</span> <span class=nx>match</span><span class=p>[</span><span class=mi>1</span><span class=p>];</span>
+</span></span><span class=line><span class=cl>    <span class=nx>navigator</span><span class=p>.</span><span class=nx>clipboard</span><span class=p>.</span><span class=nx>writeText</span><span class=p>(</span><span class=nx>id</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=nx>alert</span><span class=p>(</span><span class=s2>&#34;영상 ID 복사됨: &#34;</span> <span class=o>+</span> <span class=nx>id</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>  <span class=p>}</span> <span class=k>else</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nx>alert</span><span class=p>(</span><span class=s2>&#34;영상 ID를 찾을 수 없습니다.&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>  <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>})();</span>
+</span></span></code></pre></div><h2 id=nvim에서-복사한-url에서-id-추출>Nvim에서 복사한 URL에서 ID 추출<a hidden class=anchor aria-hidden=true href=#nvim에서-복사한-url에서-id-추출>#</a></h2><ul><li>아래 예제를 기반으로 실행 함수를 만들어도 좋다.</li></ul><div class=highlight><pre tabindex=0 class=chroma><code class=language-vim data-lang=vim><span class=line><span class=cl><span class=p>:</span><span class=k>let</span> <span class=nx>url</span> <span class=p>=</span> <span class=nx>input</span><span class=p>(</span><span class=s2>&#34;YouTube URL: &#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=p>:</span><span class=k>let</span> <span class=nx>id</span> <span class=p>=</span> <span class=nx>matchstr</span><span class=p>(</span><span class=nx>url</span><span class=p>,</span> <span class=s1>&#39;\v(v=|youtu\.be/)([A-Za-z0-9_-]{11})&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=p>:</span><span class=k>execute</span> <span class=s2>&#34;normal i<div style=position:relative;padding-bottom:56.25%;height:0;overflow:hidden>
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading=eager referrerpolicy=strict-origin-when-cross-origin src="https://www.youtube.com/embed/%20.%20id%20.%20?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style=position:absolute;top:0;left:0;width:100%;height:100%;border:0 title="YouTube video"></iframe>
+    </div>
+&#34;</span>
+</span></span></code></pre></div></div><footer class=post-footer><ul class=post-tags><li><a href=https://neosolaris.github.io/tags/hugo/>Hugo</a></li><li><a href=https://neosolaris.github.io/tags/youtube/>Youtube</a></li><li><a href=https://neosolaris.github.io/tags/url/>Url</a></li></ul><nav class=paginav><a class=prev href=https://neosolaris.github.io/posts/un_sueno_en_la_floresta/><span class=title>« Prev</span><br><span>Un Sueno en la Floresta - 숲속의 꿈</span>
+</a><a class=next href=https://neosolaris.github.io/posts/%EB%B3%B4%EC%9A%B0-%EC%82%BC%EB%82%AD/><span class=title>Next »</span><br><span>보우 삼낭 - 아름다운 꼴지</span></a></nav></footer></article></main><footer class=footer><span>&copy; 2025 <a href=https://neosolaris.github.io/>Borisu Wiki Home</a></span> ·
+<span>Powered by
+<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
+        <a href=https://github.com/adityatelange/hugo-PaperMod/ rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg>
+</a><script>let menu=document.getElementById("menu");menu&&(menu.scrollLeft=localStorage.getItem("menu-scroll-position"),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}),document.querySelectorAll('a[href^="#"]').forEach(e=>{e.addEventListener("click",function(e){e.preventDefault();var t=this.getAttribute("href").substr(1);window.matchMedia("(prefers-reduced-motion: reduce)").matches?document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView({behavior:"smooth"}),t==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${t}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove("dark"),localStorage.setItem("pref-theme","light")):(document.body.classList.add("dark"),localStorage.setItem("pref-theme","dark"))})</script></body></html>

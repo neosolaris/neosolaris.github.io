@@ -11,8 +11,53 @@
     </image>
     <generator>Hugo -- 0.147.2</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 22 Aug 2025 08:17:18 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 24 Aug 2025 08:43:51 +0900</lastBuildDate>
     <atom:link href="https://neosolaris.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Bash History Command</title>
+      <link>https://neosolaris.github.io/posts/bash_history/</link>
+      <pubDate>Sat, 23 Aug 2025 08:36:55 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/bash_history/</guid>
+      <description>&lt;h2 id=&#34;history-기본-사용법&#34;&gt;History 기본 사용법&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ &lt;span class=&#34;nb&#34;&gt;history&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# history 목록 보기&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ !!      &lt;span class=&#34;c1&#34;&gt;# 이전 명령 실행&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ !&amp;lt;번호&amp;gt; &lt;span class=&#34;c1&#34;&gt;# 해당 번호 명령 실행&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;bash-히스토리-활용법&#34;&gt;Bash 히스토리 활용법&lt;/h2&gt;
+&lt;h3 id=&#34;1-문자열로-최근-명령어-재실행&#34;&gt;1. &lt;code&gt;!문자열&lt;/code&gt;로 최근 명령어 재실행&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;!ls&lt;/code&gt; → 최근에 실행한 &lt;code&gt;ls&lt;/code&gt;로 시작하는 명령어를 재실행&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;!git&lt;/code&gt; → 최근에 실행한 &lt;code&gt;git&lt;/code&gt;으로 시작하는 명령어 실행&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;2-로-바로-이전-명령어-재실행&#34;&gt;2. &lt;code&gt;!!&lt;/code&gt;로 바로 이전 명령어 재실행&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;!!&lt;/code&gt; → 직전에 실행한 명령어를 다시 실행&lt;/li&gt;
+&lt;li&gt;예: &lt;code&gt;sudo !!&lt;/code&gt; → 직전 명령어를 &lt;code&gt;sudo&lt;/code&gt;로 실행 (권한 부족 시 유용)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;3-history--grep-키워드로-검색&#34;&gt;3. &lt;code&gt;history | grep 키워드&lt;/code&gt;로 검색&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;history&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; grep ssh
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;원하는 명령어를 찾고 &lt;code&gt;!번호&lt;/code&gt;로 실행&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;4-ctrl--r로-히스토리-검색-가장-강력한-기능&#34;&gt;4. &lt;code&gt;Ctrl + r&lt;/code&gt;로 히스토리 검색 (가장 강력한 기능!)&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Ctrl + r&lt;/code&gt; 누르고 키워드 입력 → 실시간으로 과거 명령어 검색&lt;/li&gt;
+&lt;li&gt;원하는 명령어가 나오면 &lt;code&gt;Enter&lt;/code&gt;로 실행&lt;/li&gt;
+&lt;li&gt;예: &lt;code&gt;Ctrl + r&lt;/code&gt; → &lt;code&gt;docker&lt;/code&gt; 입력 → &lt;code&gt;docker ps&lt;/code&gt; 명령어 자동 완성&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;5-fc-명령어로-히스토리-편집-후-실행&#34;&gt;5. &lt;code&gt;fc&lt;/code&gt; 명령어로 히스토리 편집 후 실행&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;fc&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;가장 최근 명령어를 편집기로 열고 수정 후 실행&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;fc -s&lt;/code&gt;로 특정 명령어를 바로 실행할 수도 있음&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;6-bashrc에-alias-등록해서-자주-쓰는-명령어-단축&#34;&gt;6. &lt;code&gt;.bashrc&lt;/code&gt;에 alias 등록해서 자주 쓰는 명령어 단축&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;alias&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;gs&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;git status&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;alias&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;ll&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;ls -alF&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;자주 쓰는 명령어를 짧게 등록해두면 히스토리보다 빠르다&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;** 팁**: &lt;code&gt;HISTCONTROL=ignoredups:erasedups&lt;/code&gt;를 &lt;code&gt;.bashrc&lt;/code&gt;에 설정하면 중복된 명령어가 히스토리에 남지 않아서 검색이 훨씬 깔끔해진다.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>busybox - unix command tools</title>
       <link>https://neosolaris.github.io/posts/busybox/</link>
@@ -139,6 +184,58 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>Hugo - Youttube URL</title>
+      <link>https://neosolaris.github.io/posts/hugo-youtube-url/</link>
+      <pubDate>Sun, 27 Jul 2025 08:35:21 +0900</pubDate>
+      <guid>https://neosolaris.github.io/posts/hugo-youtube-url/</guid>
+      <description>&lt;h2 id=&#34;소개&#34;&gt;소개&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;hugo에서 지원되는 youtube 영상 포함 문법은 다음과 같다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/Youtbue-ID?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;문제는 브라우저에서 동영상 URL을 복사하면 Youtube-ID만 추출하여 넣어 주는 것이 무척 번거롭다.&lt;/li&gt;
+&lt;li&gt;이를 해결하기 위해서는 다음의 세가지 방법이 있다.
+&lt;ol&gt;
+&lt;li&gt;브라우저 주소창에서 직접 ID부분만 영역 복사하기&lt;/li&gt;
+&lt;li&gt;브라우저의 북마클릿(Bookmarklet)을 javascript로 만들어 ID 복사하기&lt;/li&gt;
+&lt;li&gt;복사한 URL을 입력하면 자동 추출해주는 프로그램 만들기&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;brave또는-chrome에서-북마클릿을-이용한-유튜브-url-id복사&#34;&gt;Brave(또는 Chrome)에서 북마클릿을 이용한 유튜브 URL ID복사&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Brave 브라우저에서 북마크 추가&lt;/li&gt;
+&lt;li&gt;Name: Youtube-ID-Copy&lt;/li&gt;
+&lt;li&gt;URL: 다음 코드 입력 후 저장&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;javascript&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;function&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(){&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;kr&#34;&gt;const&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;url&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;window&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;location&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;href&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;kr&#34;&gt;const&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;match&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;url&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;match&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;sr&#34;&gt;/(?:v=|youtu\.be\/)([A-Za-z0-9_\-]{11})/&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;match&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;){&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kr&#34;&gt;const&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;id&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;match&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;];&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nx&#34;&gt;navigator&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;clipboard&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;writeText&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;id&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nx&#34;&gt;alert&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;영상 ID 복사됨: &amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;id&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;else&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nx&#34;&gt;alert&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;영상 ID를 찾을 수 없습니다.&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;})();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;nvim에서-복사한-url에서-id-추출&#34;&gt;Nvim에서 복사한 URL에서 ID 추출&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;아래 예제를 기반으로 실행 함수를 만들어도 좋다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;let&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;url&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;input&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;YouTube URL: &amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;let&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;id&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;matchstr&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;url&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;\v(v=|youtu\.be/)([A-Za-z0-9_-]{11})&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;execute&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;normal i&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/%20.%20id%20.%20?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     <item>
       <title>보우 삼낭 - 아름다운 꼴지</title>
@@ -1547,7 +1644,7 @@ make --version
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;ESP32
-&lt;img alt=&#34;ESP32&#34; loading=&#34;lazy&#34; src=&#34;../https://makeradvisor.com/wp-content/uploads/2018/04/ESP32-DOIT-DEVKIT-V1-Board-Pinout-36-GPIOs-Copy.jpg&#34;&gt;&lt;/p&gt;</description>
+&lt;img alt=&#34;ESP32&#34; loading=&#34;lazy&#34; src=&#34;https://makeradvisor.com/wp-content/uploads/2018/04/ESP32-DOIT-DEVKIT-V1-Board-Pinout-36-GPIOs-Copy.jpg&#34;&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Fritzing</title>
@@ -1692,7 +1789,7 @@ make --version
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img alt=&#34;ESP8266&#34; loading=&#34;lazy&#34; src=&#34;../https://makeradvisor.com/wp-content/uploads/2020/05/ESP8266-NodeMCU-kit-12-E-pinout-gpio-pin.png&#34;&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;img alt=&#34;ESP8266&#34; loading=&#34;lazy&#34; src=&#34;https://makeradvisor.com/wp-content/uploads/2020/05/ESP8266-NodeMCU-kit-12-E-pinout-gpio-pin.png&#34;&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>NodeMCU</title>
@@ -3088,7 +3185,7 @@ local level = 2
 &lt;h2 id=&#34;문서작성시-수학식-표현&#34;&gt;문서작성시 수학식 표현&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;관련 프로그램(스크립트)를 작성한 후 도움말이나 문서를 작성할 때 가장 좋은 방법은 마크다운(markdown) 문서에 latex 문법으로 작성하는 것이다.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions&#34;&gt;사용방법&lt;/a&gt;을 참조한다.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions&#34;&gt;사용방법&lt;/a&gt;을 참조한다.&lt;/li&gt;
 &lt;li&gt;즉, 문장 중에는 &lt;code&gt;$수식$&lt;/code&gt; 으로 표현하고 독립적인 수식은 &lt;code&gt;$$수식$$&lt;/code&gt;으로 표현하는 것이다.&lt;/li&gt;
 &lt;li&gt;깃허브나 기타 웹페이지에서 이를 잘 지원한다.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;vscode&lt;/code&gt;에서는 &lt;code&gt;markdown all in one&lt;/code&gt; 플러그인을 설치하면 미리보기로 실시간으로 확인할 수 있다. 물론 수학표현식도 지원한다.&lt;/li&gt;
@@ -3122,7 +3219,7 @@ local level = 2
 &lt;/ul&gt;
 &lt;h2 id=&#34;이미지-사이즈-변경&#34;&gt;이미지 사이즈 변경&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;../https://apod.nasa.gov/apod/astropix.html&#34;&gt;APOD&lt;/a&gt;(Astronomy Picture of the Day) 사이트에서 말머리성운(The Horsehead Nebula in Infrared) 사진을 받아온다. &lt;a href=&#34;https://apod.nasa.gov/apod/ap130422.html&#34;&gt;https://apod.nasa.gov/apod/ap130422.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://apod.nasa.gov/apod/astropix.html&#34;&gt;APOD&lt;/a&gt;(Astronomy Picture of the Day) 사이트에서 말머리성운(The Horsehead Nebula in Infrared) 사진을 받아온다. &lt;a href=&#34;https://apod.nasa.gov/apod/ap130422.html&#34;&gt;https://apod.nasa.gov/apod/ap130422.html&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;파일을 열고 정보를 확인한 다음 필요한 사이즈로 변경한다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;ol&gt;
@@ -3554,7 +3651,7 @@ ZZ — save session and close window.
       <description>&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;vi를 계승하면서도 현재적이고 새로운 코드, 심플하면서도 효과적인 에디터를 지향&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../http://sam.cat-v.org/&#34;&gt;sam&lt;/a&gt; 과 structual regular expression 을 도입&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://sam.cat-v.org/&#34;&gt;sam&lt;/a&gt; 과 structual regular expression 을 도입&lt;/li&gt;
 &lt;li&gt;효과적인 코드 하이라이팅 - Parsing Expression Grammars (Lua LPeg)&lt;/li&gt;
 &lt;li&gt;lua Api 제공으로 확장가능 - vim, &lt;a href=&#34;../nvim&#34;&gt;nvim&lt;/a&gt;과는 다르게 vim 설정법을 사용하지 않음&lt;/li&gt;
 &lt;li&gt;vimscipt 사용하지 않음, luajit도 사용하지 않음&lt;/li&gt;
@@ -4583,7 +4680,7 @@ RUN \
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;../fits&#34;&gt;FITS&lt;/a&gt; 데이터 분석 및 이미지 처리 도구 집합&lt;/li&gt;
 &lt;li&gt;NOAO(National Optical astronomy Observatory)에서 개발&lt;/li&gt;
-&lt;li&gt;현재 오픈소스로 공개하여 &lt;a href=&#34;../https://iraf-community.github.io&#34;&gt;iraf community&lt;/a&gt; 가 관리하고 있다.&lt;/li&gt;
+&lt;li&gt;현재 오픈소스로 공개하여 &lt;a href=&#34;https://iraf-community.github.io&#34;&gt;iraf community&lt;/a&gt; 가 관리하고 있다.&lt;/li&gt;
 &lt;li&gt;주로 관측천문학 분야에서 활용되고 있다.&lt;/li&gt;
 &lt;li&gt;파이썬으로 랩핑한 &lt;a href=&#34;../pyraf&#34;&gt;pyraf&lt;/a&gt;가 있다.&lt;/li&gt;
 &lt;li&gt;컴파일과 패키지 설치 두 가지가 있다. (패키지 설치 권장)&lt;/li&gt;
@@ -4600,7 +4697,7 @@ RUN \
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;install-from-source&#34;&gt;Install From Source&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;a href=&#34;../https://github.com/iraf-community/iraf/archive/refs/tags/v2.17.tar.gz&#34;&gt;Download Source&lt;/a&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;a href=&#34;https://github.com/iraf-community/iraf/archive/refs/tags/v2.17.tar.gz&#34;&gt;Download Source&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Astropy - 파이썬 천문학 모듈</title>
@@ -4616,7 +4713,7 @@ RUN \
 &lt;/ul&gt;
 &lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;../https://himbopsa.tistory.com/33&#34;&gt;천문학 데이터 파일 형식 FITS 파일형식 다루기&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://himbopsa.tistory.com/33&#34;&gt;천문학 데이터 파일 형식 FITS 파일형식 다루기&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
     <item>
@@ -4636,7 +4733,7 @@ RUN \
 &lt;h2 id=&#34;install&#34;&gt;Install&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;a href=&#34;../https://noirlab.edu/public/products/fitsliberator&#34;&gt;홈페이지&lt;/a&gt;에서 다운로드 및 설치 가능하다.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://noirlab.edu/public/products/fitsliberator&#34;&gt;홈페이지&lt;/a&gt;에서 다운로드 및 설치 가능하다.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Ubuntu, Debian&lt;/p&gt;
@@ -5097,7 +5194,7 @@ hello world                -- 결과: hello world
       <guid>https://neosolaris.github.io/posts/%EC%96%BC%EA%B5%B4/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;&#34;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;이 곡의 사연은 &lt;a href=&#34;../https://namu.wiki/w/%EC%96%BC%EA%B5%B4#s-3&#34;&gt;나무위키&lt;/a&gt; 에 잘 나와 있다.&lt;/li&gt;
+&lt;li&gt;이 곡의 사연은 &lt;a href=&#34;https://namu.wiki/w/%EC%96%BC%EA%B5%B4#s-3&#34;&gt;나무위키&lt;/a&gt; 에 잘 나와 있다.&lt;/li&gt;
 &lt;li&gt;정말 많은 사람이 불렀지만 내 마음에 깊은 울림을 주는 것을 정리해 본다.&lt;/li&gt;
 &lt;li&gt;이 곡을 들으면 왜 눈물이 나는지 모르겠다.&lt;/li&gt;
 &lt;/ul&gt;
@@ -5785,7 +5882,7 @@ block comments
       <guid>https://neosolaris.github.io/posts/yadm/</guid>
       <description>&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;dotfiles를 백업 및 관리해 주는 툴은 많이 있다. &lt;a href=&#34;../https://dotfiles.github.io/utilities/&#34;&gt;참조&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;dotfiles를 백업 및 관리해 주는 툴은 많이 있다. &lt;a href=&#34;https://dotfiles.github.io/utilities/&#34;&gt;참조&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;나중에 재설치하거나 다른 컴퓨터에서 이 설정들을 복원하려면 매우 번거롭다.&lt;/li&gt;
 &lt;li&gt;yadm은 그 중 git 외에 의존성이 매우 적으며, 사용하기 쉽고 편리하다.&lt;/li&gt;
 &lt;li&gt;데비안이나 우분투 사용자라면 패키지로 쉽게 설치할 수 있다.&lt;/li&gt;
@@ -6643,7 +6740,7 @@ WineHQ 최신버전
 &lt;ul&gt;
 &lt;li&gt;vim-devicons를 설치하기 전에 먼저 Nerd Patched 폰트를 설치해야 한다.&lt;/li&gt;
 &lt;li&gt;폰트는 다양한데 모두 설치한다면 많은 용량을 차지하므로 여기에서는 &lt;code&gt;Noto Nerd Font&lt;/code&gt; 폰트만 설치했다.&lt;/li&gt;
-&lt;li&gt;참고로 폰트를 받을 수 있는 사이트이다. &lt;a href=&#34;../https://www.nerdfonts.com/font-downloads&#34;&gt;nerd-fonts&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;참고로 폰트를 받을 수 있는 사이트이다. &lt;a href=&#34;https://www.nerdfonts.com/font-downloads&#34;&gt;nerd-fonts&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;깃허브 사이트와 설치 안내도 있다. &lt;a href=&#34;https://github.com/ryanoasis/nerd-fonts&#34;&gt;https://github.com/ryanoasis/nerd-fonts&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;모두 설치하면 용량이 약 1.2GB로 매우 크므로 다음 스크립트에서 Noto와 Hack만 설치한다.&lt;/li&gt;
 &lt;li&gt;실행하면 &lt;code&gt;~/.local/share/fonts&lt;/code&gt;에 설치된다.&lt;/li&gt;
@@ -7215,7 +7312,7 @@ WineHQ 최신버전
 [usermanual]: https://github.com/myproject/wiki/목차3
 &lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;../https://ruby-kim.github.io/2022/04/07/Hexo/Install/&#34;&gt;Github Wiki에서 TOC 만들기&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://ruby-kim.github.io/2022/04/07/Hexo/Install/&#34;&gt;Github Wiki에서 TOC 만들기&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
     <item>
@@ -7228,7 +7325,7 @@ WineHQ 최신버전
 &lt;/ul&gt;
 &lt;h2 id=&#34;깃허브-가입과-설정&#34;&gt;깃허브 가입과 설정&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;../https://github.com&#34;&gt;GitHub Home&lt;/a&gt; 에 가입한다.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com&#34;&gt;GitHub Home&lt;/a&gt; 에 가입한다.&lt;/li&gt;
 &lt;li&gt;새로운 저장소(Repository)를 만든다.&lt;/li&gt;
 &lt;li&gt;저장소의 주소를 확인한다.(Code 아이콘를 클릭)&lt;/li&gt;
 &lt;/ul&gt;
@@ -7351,7 +7448,7 @@ Readme를 생성하지 말고&lt;/p&gt;</description>
 &lt;/ul&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;theme: &amp;#34;PaperMod&amp;#34;&amp;#39;&lt;/span&gt; &amp;gt;&amp;gt; config.yml
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
-&lt;li&gt;또는 &lt;a href=&#34;../https://github.com/adityatelange/hugo-PaperMod/wiki/Installation&#34;&gt;PaperMod&lt;/a&gt; 홈에 가서 config.yml을 복사한다.&lt;/li&gt;
+&lt;li&gt;또는 &lt;a href=&#34;https://github.com/adityatelange/hugo-PaperMod/wiki/Installation&#34;&gt;PaperMod&lt;/a&gt; 홈에 가서 config.yml을 복사한다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;sample-page-만들기&#34;&gt;Sample Page 만들기&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;---
@@ -7509,7 +7606,7 @@ Readme를 생성하지 말고&lt;/p&gt;</description>
 &lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://devinlife.com/howto&#34;&gt;https://devinlife.com/howto&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../https://jekyllrb.com/&#34;&gt;Jekill 홈페이지&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://jekyllrb.com/&#34;&gt;Jekill 홈페이지&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
     <item>
@@ -7560,11 +7657,11 @@ Readme를 생성하지 말고&lt;/p&gt;</description>
 &lt;/ul&gt;
 &lt;h2 id=&#34;reference&#34;&gt;REFERENCE&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;../https://github.com/Riey/kime&#34;&gt;Github Kime&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../https://shanepark.tistory.com/318&#34;&gt;설치&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../https://www.linuxcapable.com/how-to-install-wine-on-debian-11-bullseye&#34;&gt;설치2&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../https://dawoum.tistory.com/88&#34;&gt;설치3&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../http://no1linux.org/board_WEnl84/39530&#34;&gt;설치4&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/Riey/kime&#34;&gt;Github Kime&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://shanepark.tistory.com/318&#34;&gt;설치&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.linuxcapable.com/how-to-install-wine-on-debian-11-bullseye&#34;&gt;설치2&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://dawoum.tistory.com/88&#34;&gt;설치3&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://no1linux.org/board_WEnl84/39530&#34;&gt;설치4&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
     <item>
@@ -7617,8 +7714,8 @@ Readme를 생성하지 말고&lt;/p&gt;</description>
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;vim _posts/my-first-post.md
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;../https://devinlife.com/howto%20github%20pages/new-blog-from-template/&#34;&gt;minimal-mistakes Install Setup&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/&#34;&gt;Quick Start Guide&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://devinlife.com/howto%20github%20pages/new-blog-from-template/&#34;&gt;minimal-mistakes Install Setup&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/&#34;&gt;Quick Start Guide&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
     <item>
@@ -7664,8 +7761,8 @@ ctrl+u: empty search query
 escape: quit serching mode and empty query
 &lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;../https://github.com/figsoda/mmtc&#34;&gt;mmtc github page&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../https://www.linuxlinks.com/mmtc-minimal-mpd-terminal-client/&#34;&gt;mmtc-minimal mpd terminal client&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/figsoda/mmtc&#34;&gt;mmtc github page&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.linuxlinks.com/mmtc-minimal-mpd-terminal-client/&#34;&gt;mmtc-minimal mpd terminal client&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
     <item>
@@ -7688,7 +7785,7 @@ escape: quit serching mode and empty query
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; mpc play	&lt;span class=&#34;c1&#34;&gt;# 현재 리스트를 플레이 &lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;../https://www.musicpd.org/doc/mpc/html&#34;&gt;Mpc Manual&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.musicpd.org/doc/mpc/html&#34;&gt;Mpc Manual&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
     <item>
@@ -7767,8 +7864,8 @@ visualizer_look = &amp;#34;●▮&amp;#34;
 &lt;/ul&gt;
 &lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;../https://wiki.archlinux.org/title/Ncmpcpp&#34;&gt;AchiLinux Ncmpcpp Wiki&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../https://github.com/ncmpcpp/ncmpcpp&#34;&gt;Ncmpcpp GitHub&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://wiki.archlinux.org/title/Ncmpcpp&#34;&gt;AchiLinux Ncmpcpp Wiki&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/ncmpcpp/ncmpcpp&#34;&gt;Ncmpcpp GitHub&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
     <item>
@@ -7895,7 +7992,7 @@ visualizer_look = &amp;#34;●▮&amp;#34;
 &lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;내용이 더 있는데 아래 참고해서 정리&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../https://linuxhint.com/tree-command-in-ubuntu/&#34;&gt;Waht is Tree Command in Ubuntu&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://linuxhint.com/tree-command-in-ubuntu/&#34;&gt;Waht is Tree Command in Ubuntu&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
     <item>
@@ -8063,8 +8160,8 @@ extension &amp;gt; hide top bar 검색 후 설치(Click to change: ON)&lt;/li&gt
 &lt;/ul&gt;
 &lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;../https://github.com/mhinz/vim-startify&#34;&gt;Github home&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../https://ricostacruz.com/til/project-switcher-using-startify&#34;&gt;Project Switcher Using Startify&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/mhinz/vim-startify&#34;&gt;Github home&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://ricostacruz.com/til/project-switcher-using-startify&#34;&gt;Project Switcher Using Startify&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
     <item>

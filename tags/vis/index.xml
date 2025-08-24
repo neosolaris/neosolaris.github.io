@@ -34,7 +34,7 @@
       <description>&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;vi를 계승하면서도 현재적이고 새로운 코드, 심플하면서도 효과적인 에디터를 지향&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../http://sam.cat-v.org/&#34;&gt;sam&lt;/a&gt; 과 structual regular expression 을 도입&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://sam.cat-v.org/&#34;&gt;sam&lt;/a&gt; 과 structual regular expression 을 도입&lt;/li&gt;
 &lt;li&gt;효과적인 코드 하이라이팅 - Parsing Expression Grammars (Lua LPeg)&lt;/li&gt;
 &lt;li&gt;lua Api 제공으로 확장가능 - vim, &lt;a href=&#34;../nvim&#34;&gt;nvim&lt;/a&gt;과는 다르게 vim 설정법을 사용하지 않음&lt;/li&gt;
 &lt;li&gt;vimscipt 사용하지 않음, luajit도 사용하지 않음&lt;/li&gt;

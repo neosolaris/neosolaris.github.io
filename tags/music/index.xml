@@ -211,7 +211,7 @@
       <guid>https://neosolaris.github.io/posts/%EC%96%BC%EA%B5%B4/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;&#34;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;이 곡의 사연은 &lt;a href=&#34;../https://namu.wiki/w/%EC%96%BC%EA%B5%B4#s-3&#34;&gt;나무위키&lt;/a&gt; 에 잘 나와 있다.&lt;/li&gt;
+&lt;li&gt;이 곡의 사연은 &lt;a href=&#34;https://namu.wiki/w/%EC%96%BC%EA%B5%B4#s-3&#34;&gt;나무위키&lt;/a&gt; 에 잘 나와 있다.&lt;/li&gt;
 &lt;li&gt;정말 많은 사람이 불렀지만 내 마음에 깊은 울림을 주는 것을 정리해 본다.&lt;/li&gt;
 &lt;li&gt;이 곡을 들으면 왜 눈물이 나는지 모르겠다.&lt;/li&gt;
 &lt;/ul&gt;
@@ -367,8 +367,8 @@ visualizer_look = &amp;#34;●▮&amp;#34;
 &lt;/ul&gt;
 &lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;../https://wiki.archlinux.org/title/Ncmpcpp&#34;&gt;AchiLinux Ncmpcpp Wiki&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../https://github.com/ncmpcpp/ncmpcpp&#34;&gt;Ncmpcpp GitHub&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://wiki.archlinux.org/title/Ncmpcpp&#34;&gt;AchiLinux Ncmpcpp Wiki&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/ncmpcpp/ncmpcpp&#34;&gt;Ncmpcpp GitHub&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
   </channel>

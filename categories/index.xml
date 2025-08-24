@@ -11,8 +11,15 @@
     </image>
     <generator>Hugo -- 0.147.2</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 22 Aug 2025 08:17:18 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 24 Aug 2025 08:43:51 +0900</lastBuildDate>
     <atom:link href="https://neosolaris.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Shell</title>
+      <link>https://neosolaris.github.io/categories/shell/</link>
+      <pubDate>Sat, 23 Aug 2025 08:36:55 +0900</pubDate>
+      <guid>https://neosolaris.github.io/categories/shell/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Os</title>
       <link>https://neosolaris.github.io/categories/os/</link>
@@ -32,6 +39,13 @@
       <link>https://neosolaris.github.io/categories/music/</link>
       <pubDate>Mon, 28 Jul 2025 05:57:07 +0900</pubDate>
       <guid>https://neosolaris.github.io/categories/music/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Www</title>
+      <link>https://neosolaris.github.io/categories/www/</link>
+      <pubDate>Sun, 27 Jul 2025 08:35:21 +0900</pubDate>
+      <guid>https://neosolaris.github.io/categories/www/</guid>
       <description></description>
     </item>
     <item>
@@ -74,13 +88,6 @@
       <link>https://neosolaris.github.io/categories/poem/</link>
       <pubDate>Sat, 12 Jul 2025 07:59:08 +0900</pubDate>
       <guid>https://neosolaris.github.io/categories/poem/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Www</title>
-      <link>https://neosolaris.github.io/categories/www/</link>
-      <pubDate>Wed, 09 Jul 2025 07:02:17 +0900</pubDate>
-      <guid>https://neosolaris.github.io/categories/www/</guid>
       <description></description>
     </item>
     <item>
@@ -277,13 +284,6 @@
       <link>https://neosolaris.github.io/categories/utils/</link>
       <pubDate>Wed, 26 Oct 2022 18:13:39 +0900</pubDate>
       <guid>https://neosolaris.github.io/categories/utils/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Shell</title>
-      <link>https://neosolaris.github.io/categories/shell/</link>
-      <pubDate>Fri, 02 Sep 2022 15:13:12 +0900</pubDate>
-      <guid>https://neosolaris.github.io/categories/shell/</guid>
       <description></description>
     </item>
     <item>

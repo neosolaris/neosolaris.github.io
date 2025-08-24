@@ -254,7 +254,7 @@ V       enter visual line mode
 &lt;ul&gt;
 &lt;li&gt;vim-devicons를 설치하기 전에 먼저 Nerd Patched 폰트를 설치해야 한다.&lt;/li&gt;
 &lt;li&gt;폰트는 다양한데 모두 설치한다면 많은 용량을 차지하므로 여기에서는 &lt;code&gt;Noto Nerd Font&lt;/code&gt; 폰트만 설치했다.&lt;/li&gt;
-&lt;li&gt;참고로 폰트를 받을 수 있는 사이트이다. &lt;a href=&#34;../https://www.nerdfonts.com/font-downloads&#34;&gt;nerd-fonts&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;참고로 폰트를 받을 수 있는 사이트이다. &lt;a href=&#34;https://www.nerdfonts.com/font-downloads&#34;&gt;nerd-fonts&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;깃허브 사이트와 설치 안내도 있다. &lt;a href=&#34;https://github.com/ryanoasis/nerd-fonts&#34;&gt;https://github.com/ryanoasis/nerd-fonts&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;모두 설치하면 용량이 약 1.2GB로 매우 크므로 다음 스크립트에서 Noto와 Hack만 설치한다.&lt;/li&gt;
 &lt;li&gt;실행하면 &lt;code&gt;~/.local/share/fonts&lt;/code&gt;에 설치된다.&lt;/li&gt;
@@ -422,8 +422,8 @@ V       enter visual line mode
 &lt;/ul&gt;
 &lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;../https://github.com/mhinz/vim-startify&#34;&gt;Github home&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../https://ricostacruz.com/til/project-switcher-using-startify&#34;&gt;Project Switcher Using Startify&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/mhinz/vim-startify&#34;&gt;Github home&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://ricostacruz.com/til/project-switcher-using-startify&#34;&gt;Project Switcher Using Startify&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
     <item>
