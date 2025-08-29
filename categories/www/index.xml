@@ -11,7 +11,7 @@
     </image>
     <generator>Hugo -- 0.147.2</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 27 Jul 2025 08:35:21 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 29 Aug 2025 08:53:53 +0900</lastBuildDate>
     <atom:link href="https://neosolaris.github.io/categories/www/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hugo - Youttube URL</title>
@@ -638,36 +638,15 @@ delete= 히스토리 리스트
     </item>
     <item>
       <title>Vimwiki Hugo Github.io 연동하기</title>
-      <link>https://neosolaris.github.io/posts/vimwik_hugo_github/</link>
+      <link>https://neosolaris.github.io/posts/vimwiki_hugo_github/</link>
       <pubDate>Wed, 24 Aug 2022 00:39:08 +0900</pubDate>
-      <guid>https://neosolaris.github.io/posts/vimwik_hugo_github/</guid>
+      <guid>https://neosolaris.github.io/posts/vimwiki_hugo_github/</guid>
       <description>&lt;h2 id=&#34;소개&#34;&gt;소개&lt;/h2&gt;
 &lt;p&gt;마크다운 문서를 vimwiki로 작성하여 간단한 메모에서 부터 블로그, 리포트, 기술 문서에 이르기까지 손쉽게 만들 수 있다. 이를 기반으로 하여 깃허브에서 제공하는 무료 웹사이트에 올리는 방법을 설명하고자 한다. 아래는 간략한 개요이다.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;vimwiki + hugo + github.io&lt;/code&gt; 를 연결하는 프로젝트이다.&lt;/li&gt;
 &lt;li&gt;vim의 vimwiki 플러그인을 사용하여 위키문서를 작성한다.&lt;/li&gt;
 &lt;li&gt;위키문서의 작성은 마크다운(&lt;a href=&#34;../markdown&#34;&gt;markdown&lt;/a&gt;) 문법으로 한다.&lt;/li&gt;
-&lt;li&gt;hugo를 사용하여 임시 로컬웹서버를 띄우고 위키문서를 html로 변환하고 브라우저에서 확인한다.&lt;/li&gt;
-&lt;li&gt;변환된 정적 html 문서를 깃허브에 올린다.&lt;/li&gt;
-&lt;li&gt;깃허브 페이지에서 이를 확인한다.&lt;/li&gt;
-&lt;li&gt;UTF-8인코딩이라면 한글도 특별히 문제가 없고 잘 된다. 다만 마크다운 파일명에 공백이 들어가면 관리가 좋지 않으니 &lt;code&gt;-&lt;/code&gt;등으로 연결해서 쓴다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;설치-환경&#34;&gt;설치 환경&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;OS 및 프로그램 버전&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Vimwiki Hugo Github.io 연동하기</title>
-      <link>https://neosolaris.github.io/posts/vimwiki-hugo-github/</link>
-      <pubDate>Wed, 24 Aug 2022 00:39:08 +0900</pubDate>
-      <guid>https://neosolaris.github.io/posts/vimwiki-hugo-github/</guid>
-      <description>&lt;h2 id=&#34;소개&#34;&gt;소개&lt;/h2&gt;
-&lt;p&gt;마크다운 문서를 vimwiki로 작성하여 간단한 메모에서 부터 블로그, 리포트, 기술 문서에 이르기까지 손쉽게 만들 수 있다. 이를 기반으로 하여 깃허브에서 제공하는 무료 웹사이트에 올리는 방법을 설명하고자 한다. 아래는 간략한 개요이다.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;vimwiki + hugo + github.io&lt;/code&gt; 를 연결하는 프로젝트이다.&lt;/li&gt;
-&lt;li&gt;vim의 vimwiki 플러그인을 사용하여 위키문서를 작성한다.&lt;/li&gt;
-&lt;li&gt;위키문서의 작성은 마크다운(../markdown) 문법으로 한다.&lt;/li&gt;
 &lt;li&gt;hugo를 사용하여 임시 로컬웹서버를 띄우고 위키문서를 html로 변환하고 브라우저에서 확인한다.&lt;/li&gt;
 &lt;li&gt;변환된 정적 html 문서를 깃허브에 올린다.&lt;/li&gt;
 &lt;li&gt;깃허브 페이지에서 이를 확인한다.&lt;/li&gt;

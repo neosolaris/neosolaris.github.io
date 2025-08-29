@@ -11,8 +11,15 @@
     </image>
     <generator>Hugo -- 0.147.2</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 28 Aug 2025 08:14:01 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 29 Aug 2025 08:57:05 +0900</lastBuildDate>
     <atom:link href="https://neosolaris.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Lua</title>
+      <link>https://neosolaris.github.io/categories/lua/</link>
+      <pubDate>Fri, 29 Aug 2025 08:57:05 +0900</pubDate>
+      <guid>https://neosolaris.github.io/categories/lua/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Linux</title>
       <link>https://neosolaris.github.io/categories/linux/</link>
@@ -95,13 +102,6 @@
       <link>https://neosolaris.github.io/categories/tools/</link>
       <pubDate>Wed, 02 Jul 2025 08:50:11 +0900</pubDate>
       <guid>https://neosolaris.github.io/categories/tools/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Lua</title>
-      <link>https://neosolaris.github.io/categories/lua/</link>
-      <pubDate>Thu, 26 Jun 2025 16:49:56 +0900</pubDate>
-      <guid>https://neosolaris.github.io/categories/lua/</guid>
       <description></description>
     </item>
     <item>

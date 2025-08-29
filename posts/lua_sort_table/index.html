@@ -1,0 +1,169 @@
+<!doctype html><html lang=en dir=auto><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>Lua Table Sort | Borisu Wiki Home</title>
+<meta name=keywords content="lua,table,sort,정렬"><meta name=description content='lua의 table 정렬
+lua에서 table.sort(t,func) 함수를 이용하여 정렬한다. t는 테이블, func는 함수이다.
+table.sort(t) 했을 경우 요소가 문자,숫자를 기본 정렬한다. 하지만 오름차순, 내림차순, 대소문자 구별 등
+다양한 제어를 하기 위해서는 아래 함수를 만들어 활용하면 편리하다.
+주의할 점은 원본 table의 위치가 정렬상태로 바뀌게 된다. 원본을 유지하고 싶다면 복사본을 만든 다음 정렬해야 한다.
+필터 함수 정의
+-- *sort.asc* : 숫자,문자,UTF8 모두 가능
+local function ascending(a,b)
+	return a < b  -- a가 b보다 작으면 true
+end
+
+-- *sort.desc* : 숫자,문자,UTF8 모두 가능
+local function descending(a,b)
+	return a > b  -- a가 b보다 크면 true
+end
+
+-- *sort.bylength*
+local function bylength(a,b)
+	return #a < #b  -- 문자열의 길이에 따라 오름차순 정렬
+end
+
+-- *sort.iascendig* - 대소문자 구분 없이 오름차순 정렬
+local function iascendig(a,b)
+	return string.lower(a) < string.lower(b) 
+end
+
+-- *sort.idescending* - 대소문자 구분 없이 정렬
+local function idescending(a,b)
+	return string.lower(a) > string.lower(b) 
+end
+
+-- *sort.bykey*
+local function bykey(key)
+	return function(a,b)
+		return a[key] < b[key]
+	end
+end
+활용
+local numbers = {5, 3, 8, 1, 2}
+table.sort(numbers, ascending)  -- 오름차순 정렬
+
+local strings = {"banana", "apple", "cherry"}
+table.sort(strings, alphabetical)  -- 알파벳 순 정렬
+
+local objects = {
+    {name = "Alice", age = 30},
+    {name = "Bob", age = 25},
+    {name = "Charlie", age = 35}
+}
+table.sort(objects, byKey("age"))  -- 나이에 따라 오름차순 정렬
+REFERENCE
+
+duck.ai
+Quick Guide to Lua Table Sort: Mastering Order with Ease
+
+https://luascripts.com/lua-table-sort
+
+
+'><meta name=author content="Me"><link rel=canonical href=https://neosolaris.github.io/posts/lua_sort_table/><meta name=google-site-verification content="XYZabc"><meta name=yandex-verification content="XYZabc"><meta name=msvalidate.01 content="XYZabc"><link crossorigin=anonymous href=/assets/css/stylesheet.98051510d3ce4f1414ca9c506c282de4eb161c1b4f4f9d3cbaaf0173d5c84923.css integrity="sha256-mAUVENPOTxQUypxQbCgt5OsWHBtPT508uq8Bc9XISSM=" rel="preload stylesheet" as=style><link rel=icon href=https://neosolaris.github.io/favicon.ico><link rel=icon type=image/png sizes=16x16 href=https://neosolaris.github.io/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=https://neosolaris.github.io/favicon-32x32.png><link rel=apple-touch-icon href=https://neosolaris.github.io/apple-touch-icon.png><link rel=mask-icon href=https://neosolaris.github.io/safari-pinned-tab.svg><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><link rel=alternate hreflang=en href=https://neosolaris.github.io/posts/lua_sort_table/><noscript><style>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--code-block-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51)}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style></noscript><meta property="og:url" content="https://neosolaris.github.io/posts/lua_sort_table/"><meta property="og:site_name" content="Borisu Wiki Home"><meta property="og:title" content="Lua Table Sort"><meta property="og:description" content='lua의 table 정렬 lua에서 table.sort(t,func) 함수를 이용하여 정렬한다. t는 테이블, func는 함수이다. table.sort(t) 했을 경우 요소가 문자,숫자를 기본 정렬한다. 하지만 오름차순, 내림차순, 대소문자 구별 등 다양한 제어를 하기 위해서는 아래 함수를 만들어 활용하면 편리하다. 주의할 점은 원본 table의 위치가 정렬상태로 바뀌게 된다. 원본을 유지하고 싶다면 복사본을 만든 다음 정렬해야 한다.
+필터 함수 정의 -- *sort.asc* : 숫자,문자,UTF8 모두 가능 local function ascending(a,b) return a < b -- a가 b보다 작으면 true end -- *sort.desc* : 숫자,문자,UTF8 모두 가능 local function descending(a,b) return a > b -- a가 b보다 크면 true end -- *sort.bylength* local function bylength(a,b) return #a < #b -- 문자열의 길이에 따라 오름차순 정렬 end -- *sort.iascendig* - 대소문자 구분 없이 오름차순 정렬 local function iascendig(a,b) return string.lower(a) < string.lower(b) end -- *sort.idescending* - 대소문자 구분 없이 정렬 local function idescending(a,b) return string.lower(a) > string.lower(b) end -- *sort.bykey* local function bykey(key) return function(a,b) return a[key] < b[key] end end 활용 local numbers = {5, 3, 8, 1, 2} table.sort(numbers, ascending) -- 오름차순 정렬 local strings = {"banana", "apple", "cherry"} table.sort(strings, alphabetical) -- 알파벳 순 정렬 local objects = { {name = "Alice", age = 30}, {name = "Bob", age = 25}, {name = "Charlie", age = 35} } table.sort(objects, byKey("age")) -- 나이에 따라 오름차순 정렬 REFERENCE duck.ai Quick Guide to Lua Table Sort: Mastering Order with Ease https://luascripts.com/lua-table-sort '><meta property="og:locale" content="en"><meta property="og:type" content="article"><meta property="article:section" content="posts"><meta property="article:published_time" content="2025-08-29T08:57:05+09:00"><meta property="article:modified_time" content="2025-08-29T08:57:05+09:00"><meta property="article:tag" content="Lua"><meta property="article:tag" content="Table"><meta property="article:tag" content="Sort"><meta property="article:tag" content="정렬"><meta property="og:image" content="https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E"><meta name=twitter:title content="Lua Table Sort"><meta name=twitter:description content='lua의 table 정렬
+lua에서 table.sort(t,func) 함수를 이용하여 정렬한다. t는 테이블, func는 함수이다.
+table.sort(t) 했을 경우 요소가 문자,숫자를 기본 정렬한다. 하지만 오름차순, 내림차순, 대소문자 구별 등
+다양한 제어를 하기 위해서는 아래 함수를 만들어 활용하면 편리하다.
+주의할 점은 원본 table의 위치가 정렬상태로 바뀌게 된다. 원본을 유지하고 싶다면 복사본을 만든 다음 정렬해야 한다.
+필터 함수 정의
+-- *sort.asc* : 숫자,문자,UTF8 모두 가능
+local function ascending(a,b)
+	return a < b  -- a가 b보다 작으면 true
+end
+
+-- *sort.desc* : 숫자,문자,UTF8 모두 가능
+local function descending(a,b)
+	return a > b  -- a가 b보다 크면 true
+end
+
+-- *sort.bylength*
+local function bylength(a,b)
+	return #a < #b  -- 문자열의 길이에 따라 오름차순 정렬
+end
+
+-- *sort.iascendig* - 대소문자 구분 없이 오름차순 정렬
+local function iascendig(a,b)
+	return string.lower(a) < string.lower(b) 
+end
+
+-- *sort.idescending* - 대소문자 구분 없이 정렬
+local function idescending(a,b)
+	return string.lower(a) > string.lower(b) 
+end
+
+-- *sort.bykey*
+local function bykey(key)
+	return function(a,b)
+		return a[key] < b[key]
+	end
+end
+활용
+local numbers = {5, 3, 8, 1, 2}
+table.sort(numbers, ascending)  -- 오름차순 정렬
+
+local strings = {"banana", "apple", "cherry"}
+table.sort(strings, alphabetical)  -- 알파벳 순 정렬
+
+local objects = {
+    {name = "Alice", age = 30},
+    {name = "Bob", age = 25},
+    {name = "Charlie", age = 35}
+}
+table.sort(objects, byKey("age"))  -- 나이에 따라 오름차순 정렬
+REFERENCE
+
+duck.ai
+Quick Guide to Lua Table Sort: Mastering Order with Ease
+
+https://luascripts.com/lua-table-sort
+
+
+'><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://neosolaris.github.io/posts/"},{"@type":"ListItem","position":2,"name":"Lua Table Sort","item":"https://neosolaris.github.io/posts/lua_sort_table/"}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"Lua Table Sort","name":"Lua Table Sort","description":"lua의 table 정렬 lua에서 table.sort(t,func) 함수를 이용하여 정렬한다. t는 테이블, func는 함수이다. table.sort(t) 했을 경우 요소가 문자,숫자를 기본 정렬한다. 하지만 오름차순, 내림차순, 대소문자 구별 등 다양한 제어를 하기 위해서는 아래 함수를 만들어 활용하면 편리하다. 주의할 점은 원본 table의 위치가 정렬상태로 바뀌게 된다. 원본을 유지하고 싶다면 복사본을 만든 다음 정렬해야 한다.\n필터 함수 정의 -- *sort.asc* : 숫자,문자,UTF8 모두 가능 local function ascending(a,b) return a \u0026lt; b -- a가 b보다 작으면 true end -- *sort.desc* : 숫자,문자,UTF8 모두 가능 local function descending(a,b) return a \u0026gt; b -- a가 b보다 크면 true end -- *sort.bylength* local function bylength(a,b) return #a \u0026lt; #b -- 문자열의 길이에 따라 오름차순 정렬 end -- *sort.iascendig* - 대소문자 구분 없이 오름차순 정렬 local function iascendig(a,b) return string.lower(a) \u0026lt; string.lower(b) end -- *sort.idescending* - 대소문자 구분 없이 정렬 local function idescending(a,b) return string.lower(a) \u0026gt; string.lower(b) end -- *sort.bykey* local function bykey(key) return function(a,b) return a[key] \u0026lt; b[key] end end 활용 local numbers = {5, 3, 8, 1, 2} table.sort(numbers, ascending) -- 오름차순 정렬 local strings = {\u0026#34;banana\u0026#34;, \u0026#34;apple\u0026#34;, \u0026#34;cherry\u0026#34;} table.sort(strings, alphabetical) -- 알파벳 순 정렬 local objects = { {name = \u0026#34;Alice\u0026#34;, age = 30}, {name = \u0026#34;Bob\u0026#34;, age = 25}, {name = \u0026#34;Charlie\u0026#34;, age = 35} } table.sort(objects, byKey(\u0026#34;age\u0026#34;)) -- 나이에 따라 오름차순 정렬 REFERENCE duck.ai Quick Guide to Lua Table Sort: Mastering Order with Ease https://luascripts.com/lua-table-sort ","keywords":["lua","table","sort","정렬"],"articleBody":"lua의 table 정렬 lua에서 table.sort(t,func) 함수를 이용하여 정렬한다. t는 테이블, func는 함수이다. table.sort(t) 했을 경우 요소가 문자,숫자를 기본 정렬한다. 하지만 오름차순, 내림차순, 대소문자 구별 등 다양한 제어를 하기 위해서는 아래 함수를 만들어 활용하면 편리하다. 주의할 점은 원본 table의 위치가 정렬상태로 바뀌게 된다. 원본을 유지하고 싶다면 복사본을 만든 다음 정렬해야 한다.\n필터 함수 정의 -- *sort.asc* : 숫자,문자,UTF8 모두 가능 local function ascending(a,b) return a \u003c b -- a가 b보다 작으면 true end -- *sort.desc* : 숫자,문자,UTF8 모두 가능 local function descending(a,b) return a \u003e b -- a가 b보다 크면 true end -- *sort.bylength* local function bylength(a,b) return #a \u003c #b -- 문자열의 길이에 따라 오름차순 정렬 end -- *sort.iascendig* - 대소문자 구분 없이 오름차순 정렬 local function iascendig(a,b) return string.lower(a) \u003c string.lower(b) end -- *sort.idescending* - 대소문자 구분 없이 정렬 local function idescending(a,b) return string.lower(a) \u003e string.lower(b) end -- *sort.bykey* local function bykey(key) return function(a,b) return a[key] \u003c b[key] end end 활용 local numbers = {5, 3, 8, 1, 2} table.sort(numbers, ascending) -- 오름차순 정렬 local strings = {\"banana\", \"apple\", \"cherry\"} table.sort(strings, alphabetical) -- 알파벳 순 정렬 local objects = { {name = \"Alice\", age = 30}, {name = \"Bob\", age = 25}, {name = \"Charlie\", age = 35} } table.sort(objects, byKey(\"age\")) -- 나이에 따라 오름차순 정렬 REFERENCE duck.ai Quick Guide to Lua Table Sort: Mastering Order with Ease https://luascripts.com/lua-table-sort ","wordCount":"220","inLanguage":"en","image":"https://neosolaris.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E","datePublished":"2025-08-29T08:57:05+09:00","dateModified":"2025-08-29T08:57:05+09:00","author":{"@type":"Person","name":"Me"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://neosolaris.github.io/posts/lua_sort_table/"},"publisher":{"@type":"Organization","name":"Borisu Wiki Home","logo":{"@type":"ImageObject","url":"https://neosolaris.github.io/favicon.ico"}}}</script></head><body id=top><script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add("dark"):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove("dark"):window.matchMedia("(prefers-color-scheme: dark)").matches&&document.body.classList.add("dark")</script><header class=header><nav class=nav><div class=logo><a href=https://neosolaris.github.io/ accesskey=h title="Home (Alt + H)"><img src=https://neosolaris.github.io/apple-touch-icon.png alt aria-label=logo height=35>Home</a><div class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)" aria-label="Toggle theme"><svg id="moon" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></div></div><ul id=menu><li><a href=https://neosolaris.github.io/archive/ title="📜 Archive"><span>📜 Archive</span></a></li><li><a href=https://neosolaris.github.io/categories/ title="🏷️ Categories"><span>🏷️ Categories</span></a></li><li><a href=https://neosolaris.github.io/posts/windex title="📇 Index"><span>📇 Index</span></a></li><li><a href=https://neosolaris.github.io/search/ title="🔍 Search (Alt + /)" accesskey=/><span>🔍 Search</span></a></li><li><a href=https://neosolaris.github.io/about/ title="👨‍💻 About"><span>👨‍💻 About</span></a></li></ul></nav></header><main class=main><article class=post-single><header class=post-header><div class=breadcrumbs><a href=https://neosolaris.github.io/>Home</a>&nbsp;»&nbsp;<a href=https://neosolaris.github.io/posts/>Posts</a></div><h1 class="post-title entry-hint-parent">Lua Table Sort</h1><div class=post-meta><span title='2025-08-29 08:57:05 +0900 KST'>2025-08-29</span>&nbsp;·&nbsp;220 words</div></header><div class=toc><details open><summary accesskey=c title="(Alt + C)"><span class=details>Table of Contents</span></summary><div class=inner><nav id=TableOfContents><ul><li><a href=#lua의-table-정렬>lua의 table 정렬</a></li><li><a href=#필터-함수-정의>필터 함수 정의</a></li><li><a href=#활용>활용</a></li><li><a href=#reference>REFERENCE</a></li></ul></nav></div></details></div><div class=post-content><h2 id=lua의-table-정렬>lua의 table 정렬<a hidden class=anchor aria-hidden=true href=#lua의-table-정렬>#</a></h2><p>lua에서 <code>table.sort(t,func)</code> 함수를 이용하여 정렬한다. t는 테이블, func는 함수이다.
+<code>table.sort(t)</code> 했을 경우 요소가 문자,숫자를 기본 정렬한다. 하지만 오름차순, 내림차순, 대소문자 구별 등
+다양한 제어를 하기 위해서는 아래 함수를 만들어 활용하면 편리하다.
+주의할 점은 원본 table의 위치가 정렬상태로 바뀌게 된다. 원본을 유지하고 싶다면 복사본을 만든 다음 정렬해야 한다.</p><h2 id=필터-함수-정의>필터 함수 정의<a hidden class=anchor aria-hidden=true href=#필터-함수-정의>#</a></h2><div class=highlight><pre tabindex=0 class=chroma><code class=language-lua data-lang=lua><span class=line><span class=cl><span class=c1>-- *sort.asc* : 숫자,문자,UTF8 모두 가능</span>
+</span></span><span class=line><span class=cl><span class=kd>local</span> <span class=kr>function</span> <span class=nf>ascending</span><span class=p>(</span><span class=n>a</span><span class=p>,</span><span class=n>b</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>	<span class=kr>return</span> <span class=n>a</span> <span class=o>&lt;</span> <span class=n>b</span>  <span class=c1>-- a가 b보다 작으면 true</span>
+</span></span><span class=line><span class=cl><span class=kr>end</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>-- *sort.desc* : 숫자,문자,UTF8 모두 가능</span>
+</span></span><span class=line><span class=cl><span class=kd>local</span> <span class=kr>function</span> <span class=nf>descending</span><span class=p>(</span><span class=n>a</span><span class=p>,</span><span class=n>b</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>	<span class=kr>return</span> <span class=n>a</span> <span class=o>&gt;</span> <span class=n>b</span>  <span class=c1>-- a가 b보다 크면 true</span>
+</span></span><span class=line><span class=cl><span class=kr>end</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>-- *sort.bylength*</span>
+</span></span><span class=line><span class=cl><span class=kd>local</span> <span class=kr>function</span> <span class=nf>bylength</span><span class=p>(</span><span class=n>a</span><span class=p>,</span><span class=n>b</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>	<span class=kr>return</span> <span class=o>#</span><span class=n>a</span> <span class=o>&lt;</span> <span class=o>#</span><span class=n>b</span>  <span class=c1>-- 문자열의 길이에 따라 오름차순 정렬</span>
+</span></span><span class=line><span class=cl><span class=kr>end</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>-- *sort.iascendig* - 대소문자 구분 없이 오름차순 정렬</span>
+</span></span><span class=line><span class=cl><span class=kd>local</span> <span class=kr>function</span> <span class=nf>iascendig</span><span class=p>(</span><span class=n>a</span><span class=p>,</span><span class=n>b</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>	<span class=kr>return</span> <span class=n>string.lower</span><span class=p>(</span><span class=n>a</span><span class=p>)</span> <span class=o>&lt;</span> <span class=n>string.lower</span><span class=p>(</span><span class=n>b</span><span class=p>)</span> 
+</span></span><span class=line><span class=cl><span class=kr>end</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>-- *sort.idescending* - 대소문자 구분 없이 정렬</span>
+</span></span><span class=line><span class=cl><span class=kd>local</span> <span class=kr>function</span> <span class=nf>idescending</span><span class=p>(</span><span class=n>a</span><span class=p>,</span><span class=n>b</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>	<span class=kr>return</span> <span class=n>string.lower</span><span class=p>(</span><span class=n>a</span><span class=p>)</span> <span class=o>&gt;</span> <span class=n>string.lower</span><span class=p>(</span><span class=n>b</span><span class=p>)</span> 
+</span></span><span class=line><span class=cl><span class=kr>end</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>-- *sort.bykey*</span>
+</span></span><span class=line><span class=cl><span class=kd>local</span> <span class=kr>function</span> <span class=nf>bykey</span><span class=p>(</span><span class=n>key</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>	<span class=kr>return</span> <span class=kr>function</span><span class=p>(</span><span class=n>a</span><span class=p>,</span><span class=n>b</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>		<span class=kr>return</span> <span class=n>a</span><span class=p>[</span><span class=n>key</span><span class=p>]</span> <span class=o>&lt;</span> <span class=n>b</span><span class=p>[</span><span class=n>key</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>	<span class=kr>end</span>
+</span></span><span class=line><span class=cl><span class=kr>end</span>
+</span></span></code></pre></div><h2 id=활용>활용<a hidden class=anchor aria-hidden=true href=#활용>#</a></h2><div class=highlight><pre tabindex=0 class=chroma><code class=language-lua data-lang=lua><span class=line><span class=cl><span class=kd>local</span> <span class=n>numbers</span> <span class=o>=</span> <span class=p>{</span><span class=mi>5</span><span class=p>,</span> <span class=mi>3</span><span class=p>,</span> <span class=mi>8</span><span class=p>,</span> <span class=mi>1</span><span class=p>,</span> <span class=mi>2</span><span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=n>table.sort</span><span class=p>(</span><span class=n>numbers</span><span class=p>,</span> <span class=n>ascending</span><span class=p>)</span>  <span class=c1>-- 오름차순 정렬</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kd>local</span> <span class=n>strings</span> <span class=o>=</span> <span class=p>{</span><span class=s2>&#34;banana&#34;</span><span class=p>,</span> <span class=s2>&#34;apple&#34;</span><span class=p>,</span> <span class=s2>&#34;cherry&#34;</span><span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=n>table.sort</span><span class=p>(</span><span class=n>strings</span><span class=p>,</span> <span class=n>alphabetical</span><span class=p>)</span>  <span class=c1>-- 알파벳 순 정렬</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kd>local</span> <span class=n>objects</span> <span class=o>=</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span><span class=n>name</span> <span class=o>=</span> <span class=s2>&#34;Alice&#34;</span><span class=p>,</span> <span class=n>age</span> <span class=o>=</span> <span class=mi>30</span><span class=p>},</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span><span class=n>name</span> <span class=o>=</span> <span class=s2>&#34;Bob&#34;</span><span class=p>,</span> <span class=n>age</span> <span class=o>=</span> <span class=mi>25</span><span class=p>},</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span><span class=n>name</span> <span class=o>=</span> <span class=s2>&#34;Charlie&#34;</span><span class=p>,</span> <span class=n>age</span> <span class=o>=</span> <span class=mi>35</span><span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=n>table.sort</span><span class=p>(</span><span class=n>objects</span><span class=p>,</span> <span class=n>byKey</span><span class=p>(</span><span class=s2>&#34;age&#34;</span><span class=p>))</span>  <span class=c1>-- 나이에 따라 오름차순 정렬</span>
+</span></span></code></pre></div><h2 id=reference>REFERENCE<a hidden class=anchor aria-hidden=true href=#reference>#</a></h2><ul><li>duck.ai</li><li>Quick Guide to Lua Table Sort: Mastering Order with Ease<ul><li><a href=https://luascripts.com/lua-table-sort>https://luascripts.com/lua-table-sort</a></li></ul></li></ul></div><footer class=post-footer><ul class=post-tags><li><a href=https://neosolaris.github.io/tags/lua/>Lua</a></li><li><a href=https://neosolaris.github.io/tags/table/>Table</a></li><li><a href=https://neosolaris.github.io/tags/sort/>Sort</a></li><li><a href=https://neosolaris.github.io/tags/%EC%A0%95%EB%A0%AC/>정렬</a></li></ul><nav class=paginav><a class=next href=https://neosolaris.github.io/posts/wsl_alpine_podman/><span class=title>Next »</span><br><span>WSL Alpine Podman 설치 및 구성</span></a></nav></footer></article></main><footer class=footer><span>&copy; 2025 <a href=https://neosolaris.github.io/>Borisu Wiki Home</a></span> ·
+<span>Powered by
+<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
+        <a href=https://github.com/adityatelange/hugo-PaperMod/ rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg>
+</a><script>let menu=document.getElementById("menu");menu&&(menu.scrollLeft=localStorage.getItem("menu-scroll-position"),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}),document.querySelectorAll('a[href^="#"]').forEach(e=>{e.addEventListener("click",function(e){e.preventDefault();var t=this.getAttribute("href").substr(1);window.matchMedia("(prefers-reduced-motion: reduce)").matches?document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView({behavior:"smooth"}),t==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${t}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove("dark"),localStorage.setItem("pref-theme","light")):(document.body.classList.add("dark"),localStorage.setItem("pref-theme","dark"))})</script></body></html>
