@@ -11,7 +11,7 @@
     </image>
     <generator>Hugo -- 0.147.2</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 29 Aug 2025 08:57:05 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 06 Jan 2026 17:38:11 +0900</lastBuildDate>
     <atom:link href="https://neosolaris.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Lua Table Sort</title>
@@ -5178,6 +5178,7 @@ RUN \
       <pubDate>Thu, 22 Sep 2022 15:08:09 +0900</pubDate>
       <guid>https://neosolaris.github.io/posts/lua-interactive/</guid>
       <description>&lt;ul&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 2026-01-06: rlwrap에서 vi mode 설정 및 활용&lt;/li&gt;
 &lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 2023-08-11: rlwarp + readline을 활용한 키워드 완성 기능 추가&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
@@ -5256,7 +5257,18 @@ hello world                -- 결과: hello world
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;alias&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;luajit&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;rlwrap -b &amp;#34;&amp;#34; -f $HOME/.luadic -pRed -ca -e &amp;#34;&amp;#34; luajit&amp;#39;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; luajit
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;&amp;gt;&lt;/span&gt; ass&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;-&amp;gt; Press Tab Key anc Check&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;ilua--with-jupyter&#34;&gt;iLua : with Jupyter&lt;/h2&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;vi mode 설정: rlwrap에서 Bash 쉘의 명령라인 vi 모드처럼 사용 가능
+&lt;ul&gt;
+&lt;li&gt;다음 저장 후 다시 로그인하고 alias된 luajit 실행&lt;/li&gt;
+&lt;li&gt;명령모드 전환:&lt;code&gt;esc&lt;/code&gt;, 이동:&lt;code&gt;hjkl&lt;/code&gt;, 입력모드:&lt;code&gt;ia&lt;/code&gt; 등으로 명령라인 편집 가능&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; vi ~/.inputrc
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;set editing-mode vi
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;set keymap vi
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;ilua--with-jupyter&#34;&gt;iLua : with Jupyter&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Jupyter의 막강한 지원아래 콘솔형 인터엑티브를 사용할 수 있다.&lt;/li&gt;
 &lt;li&gt;코드완성 및 vi edit mode 그리고 변수를 직접 출력가능하다.&lt;/li&gt;
